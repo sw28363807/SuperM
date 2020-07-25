@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":33,
-    "selecteID":36,
+    "selecteID":51,
     "searchKey":"Box,JoyStick",
     "props":{"y":0,"x":0,"width":200,"presetID":1,"preset":"laya/pages/prefab/JoyStick.prefab","name":"JoyStick","isPresetRoot":true,"height":200},
     "nodeParent":-1,
-    "maxID":50,
+    "maxID":52,
     "label":"JoyStick",
     "isOpen":true,
     "isDirectory":true,
@@ -165,6 +165,37 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":49,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/JoyStick.js",
+            "searchKey":"Script,JoyStick",
+            "removeAble":true,
+            "props":{"presetID":14,"preset":"laya/pages/prefab/JoyStick.prefab"},
+            "nodeParent":33,
+            "label":"JoyStick",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":50,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "searchKey":"Box,centerPos",
+            "props":{"y":100,"x":100,"width":100,"presetID":15,"preset":"laya/pages/prefab/JoyStick.prefab","pivotY":50,"pivotX":50,"name":"centerPos","height":100},
+            "nodeParent":33,
+            "label":"centerPos",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":51,
             "child":[
                 ]
         }],
