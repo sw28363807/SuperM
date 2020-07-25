@@ -24,7 +24,7 @@ GameConfig.startScene = "scene/GameScene.scene";
 GameConfig.sceneRoot = "";
 GameConfig.debug = false;
 GameConfig.stat = false;
-GameConfig.physicsDebug = false;
+GameConfig.physicsDebug = true;
 GameConfig.exportSceneToJson = true;
 
 GameConfig.init();
