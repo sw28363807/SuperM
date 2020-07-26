@@ -3,13 +3,15 @@ export default class JoyStickButton extends Laya.Script {
     constructor() { 
         super();
     }
-    
-    onEnable() {
+
+    onAwake() {
         this.buttonA = this.owner.getChildByName("A");
         this.buttonB = this.owner.getChildByName("B");
-        this.aHandler = null;
-        this.bHandler = null;
+    }
+    
+    onEnable() {
         this.buttonA.on(Laya.Event.CLICK, this, function(){
+            console.debug(this.aHandler);
             if(this.aHandler) {
                 this.aHandler.run();
             }
@@ -22,7 +24,7 @@ export default class JoyStickButton extends Laya.Script {
         });
     }
 
-    setFunc(handlerA, handlerB) {
+    setHandler(handlerA, handlerB) {
         this.aHandler = handlerA;
         this.bHandler = handlerB;
     }

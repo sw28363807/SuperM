@@ -1,32 +1,51 @@
 {
     "x":0,
-    "type":"Panel",
-    "selectedBox":8,
-    "selecteID":11,
-    "searchKey":"Panel",
-    "props":{"y":0,"x":0,"width":120,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","isPresetRoot":true,"height":120},
+    "type":"Box",
+    "selectedBox":54,
+    "selecteID":57,
+    "searchKey":"Box,Role",
+    "props":{"y":0,"x":0,"width":120,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","name":"Role","isPresetRoot":true,"height":120},
     "nodeParent":-1,
-    "maxID":12,
-    "label":"Panel(Role)",
+    "maxID":58,
+    "label":"Role",
     "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
-    "compId":8,
+    "compId":54,
     "child":[
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite",
-            "props":{"y":-88,"x":-61,"texture":"role/role.png","presetID":2,"preset":"laya/pages/prefab/Role.prefab"},
-            "nodeParent":8,
-            "label":"Sprite(Role)",
+            "searchKey":"Sprite,roleSpr,roleSpr",
+            "props":{"y":60,"x":60,"width":105,"var":"roleSpr","texture":"role/role.png","presetID":2,"preset":"laya/pages/prefab/Role.prefab","pivotY":58,"pivotX":52,"name":"roleSpr","height":115},
+            "nodeParent":54,
+            "label":"roleSpr",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":9,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/Role.js",
+            "searchKey":"Script,Role",
+            "removeAble":true,
+            "props":{"presetID":5,"preset":"laya/pages/prefab/Role.prefab"},
+            "nodeParent":54,
+            "label":"Role",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":55,
+            "child":[
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -34,15 +53,16 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"width":120,"presetID":3,"preset":"laya/pages/prefab/Role.prefab","height":120},
-            "nodeParent":8,
+            "props":{"y":57.5,"x":0,"width":120,"presetID":6,"preset":"laya/pages/prefab/Role.prefab","height":60},
+            "nodeParent":54,
             "label":"BoxCollider(Role)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":10,
+            "compId":56,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -50,15 +70,16 @@
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"presetID":4,"preset":"laya/pages/prefab/Role.prefab","gravityScale":5,"allowRotation":false},
-            "nodeParent":8,
+            "props":{"presetID":7,"preset":"laya/pages/prefab/Role.prefab","gravityScale":3},
+            "nodeParent":54,
             "label":"RigidBody(Role)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":11,
+            "compId":57,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         }],
     "animations":[
         {
