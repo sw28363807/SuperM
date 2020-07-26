@@ -34,7 +34,7 @@ import Scene=Laya.Scene;]]>   </codeImportsTS>
    <screenMode>none   </screenMode>
    <alignV>top   </alignV>
    <alignH>left   </alignH>
-   <designWidth>1136   </designWidth>
+   <designWidth>1336   </designWidth>
    <designHeight>750   </designHeight>
    <codeViewExportPath>src/view   </codeViewExportPath>
    <picType>0   </picType>

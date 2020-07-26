@@ -32,6 +32,31 @@ export default class GameLogic extends Laya.Script {
         joyStickButton.setHandler(this.aButtonHandler, this.bButtonHandler);
     }
 
+    onStart() {
+        this.createLevel();
+    }
+
+    createLevel() {
+        Laya.loader.create("prefab/Level_1.prefab", Laya.Handler.create(this, function (prefabDef) {
+            let level = prefabDef.create();
+            this.level = level;
+            this.owner.addChild(level);
+
+            Laya.loader.create("prefab/Role.prefab", Laya.Handler.create(this, function (prefabDef) {
+                let role = prefabDef.create();
+                level.addChild(role);    
+                role.x = 100;        
+            }));
+
+        }));
+    }
+
+    onUpdate() {
+        if (this.level) {
+            this.level.x = this.level.x - 1;
+        }
+    }
+
     onDisable() {
     }
 }

@@ -2,11 +2,12 @@
 import JoyStick from "./script/JoyStick"
 import JoyStickButton from "./script/JoyStickButton"
 import GameLogic from "./script/GameLogic"
-import Role from "./script/Role"
+import AdjustScene from "./script/AdjustScene"
 import GameUI from "./script/GameUI"
 import GameControl from "./script/GameControl"
 import Bullet from "./script/Bullet"
 import DropBox from "./script/DropBox"
+import Role from "./script/Role"
 
 export default class GameConfig {
     static init() {
@@ -15,14 +16,15 @@ export default class GameConfig {
 		reg("script/JoyStick.js",JoyStick);
 		reg("script/JoyStickButton.js",JoyStickButton);
 		reg("script/GameLogic.js",GameLogic);
-		reg("script/Role.js",Role);
+		reg("script/AdjustScene.js",AdjustScene);
 		reg("script/GameUI.js",GameUI);
 		reg("script/GameControl.js",GameControl);
 		reg("script/Bullet.js",Bullet);
 		reg("script/DropBox.js",DropBox);
+		reg("script/Role.js",Role);
     }
 }
-GameConfig.width = 1136;
+GameConfig.width = 1336;
 GameConfig.height = 750;
 GameConfig.scaleMode ="fixedwidth";
 GameConfig.screenMode = "none";

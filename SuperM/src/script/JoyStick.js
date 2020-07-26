@@ -44,7 +44,7 @@ export default class JoyStick extends Laya.Script {
         this.centerPos = {x: temp.x, y: temp.x};
 
         this.touch.on(Laya.Event.MOUSE_DOWN, this, function(e) {
-            console.debug(e);
+            this.touchId = e.touchId;
             if(this.canCommand == false) {
                 this.canCommand = true;
                 this.startPoint = {x: e.stageX, y: e.stageY};
@@ -53,12 +53,15 @@ export default class JoyStick extends Laya.Script {
         });
 
         this.touch.on(Laya.Event.MOUSE_MOVE, this, function(e) {
-            if(this.canCommand) {
+            if(this.canCommand && this.touchId == e.touchId) {
                 let x = e.stageX;
                 let y = e.stageY;
                 let p = this.owner.globalToLocal(new Laya.Point(x, y));
                 let curX = p.x;
                 let curY = p.y;
+
+                let minX = p.x - this.centerPos.x;
+                let miny = p.y - this.centerPos.y;
                 if(curX < 0) {
                     curX = 0;
                 }
@@ -73,33 +76,41 @@ export default class JoyStick extends Laya.Script {
                 }
                 this.center.x = curX;
                 this.center.y = curY;
-                let direct = this.processDirect(this.center.x, this.center.y);
-                if(direct != this.direct) {
-                    this.direct = direct;
-                    if(this.directChangeHandler) {
-                        let name =  this.direct.name;
-                        let dir = this.dirMap[Number(name)];
-                        this.directChangeHandler.runWith(this.dirMap[Number(name) - 1]);
+                if (Math.sqrt(minX*minX + miny * miny) > 20) {
+                    let direct = this.processDirect(this.center.x, this.center.y);
+                    if(direct != this.direct) {
+                        this.direct = direct;
+                        if(this.directChangeHandler) {
+                            let name =  this.direct.name;
+                            let dir = this.dirMap[Number(name)];
+                            this.directChangeHandler.runWith(this.dirMap[Number(name) - 1]);
+                        }
+                    }  
+                } else {
+                    if(this.touchId == e.touchId) {
+                        if(this.stopHandler) {
+                            this.stopHandler.run();
+                        }
+                        this.direct = null;
                     }
                 }
             }
         });
         
         this.touch.on(Laya.Event.MOUSE_UP, this, function(e) {
-            console.debug(this.canCommand);
-            if(this.canCommand) {                
+            if(this.canCommand && this.touchId == e.touchId) {                
                 this.center.x = this.centerPos.x;
                 this.center.y = this.centerPos.y;
                 this.canCommand = false;
                 if(this.stopHandler) {
                     this.stopHandler.run();
                 }
+                this.direct = null;
             }
-            this.direct = null;
         });
 
         this.touch.on(Laya.Event.MOUSE_OUT, this, function(e) {
-            if(this.canCommand) {                
+            if(this.canCommand && this.touchId == e.touchId) {                
                 this.center.x = this.centerPos.x;
                 this.center.y = this.centerPos.y;
                 this.canCommand = false;
@@ -107,8 +118,8 @@ export default class JoyStick extends Laya.Script {
                 if(this.stopHandler) {
                     this.stopHandler.run();
                 }
+                this.direct = null;
             }
-            this.direct = null;
         });
     }
     

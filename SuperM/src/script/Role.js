@@ -6,8 +6,10 @@ export default class Role extends Laya.Script {
     constructor() { 
         super();
         this.walkDirect = null;
-        this.speed = 12;
-        this.jumpSpeed = 20;
+        this.commandWalk = false;
+        this.speed = 9;
+        this.jumpSpeed = 35;
+        this.isInGround = false;
     }
     
     onEnable() {
@@ -26,13 +28,18 @@ export default class Role extends Laya.Script {
     }
 
     onRoleWalk(data) {
+        this.commandWalk = true;
         this.walkDirect = data;
         this.processRoleWalk();
     }
 
     onRoleStopWalk() {
-        this.walkDirect = {x: 0, y: 0};
-        this.setMove(0, 0);
+        this.commandWalk = false;
+        if (this.isInGround == true) {
+            this.walkDirect = {x: 0, y: 0};
+            let linearVelocity = this.rigidBody.linearVelocity;
+            this.setMove(0, linearVelocity.y);
+        }
     }
 
     onUpdate() {
@@ -60,9 +67,27 @@ export default class Role extends Laya.Script {
         }
     }
 
+    onTriggerEnter(other, self, contact) {
+        let mine = null;
+        if (contact.m_fixtureA.collider.label == "RoleFoot") {
+            mine = contact.m_nodeA;
+        } else if (contact.m_fixtureB.collider.label == "RoleFoot") {
+            mine = contact.m_nodeB;
+        }
+        if (mine.contact.m_manifold.localNormal.y < 0) {
+            this.isInGround = true;
+            if (this.commandWalk == false) {
+                this.setMove(0, 0);
+            }
+        }
+    }
+
     onRoleAButton() {
-        let linearVelocity = this.rigidBody.linearVelocity;
-        this.setMove(linearVelocity.x, -this.jumpSpeed);
+        if (this.isInGround == true) {
+            this.isInGround = false;
+            let linearVelocity = this.rigidBody.linearVelocity;
+            this.setMove(linearVelocity.x, -this.jumpSpeed);
+        }
     }
 
     onRoleBButton() {
