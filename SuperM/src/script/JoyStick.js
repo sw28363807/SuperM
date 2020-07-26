@@ -30,6 +30,7 @@ export default class JoyStick extends Laya.Script {
         this.center = this.owner.getChildByName("center");
         let temp = this.owner.getChildByName("centerPos");
         this.centerPos = {x: temp.x, y: temp.x};
+        this.direct = null;
 
         this.touch.on(Laya.Event.MOUSE_DOWN, this, function(e) {
             if(this.canCommand == false) {
@@ -44,13 +45,31 @@ export default class JoyStick extends Laya.Script {
                 let x = e.stageX;
                 let y = e.stageY;
                 let p = this.owner.globalToLocal(new Laya.Point(x, y));
-                this.center.x = p.x;
-                this.center.y = p.y;
+                let curX = p.x;
+                let curY = p.y;
+                if(curX < 0) {
+                    curX = 0;
+                }
+                if(curX > 200) {
+                    curX = 200;
+                }
+                if(curY < 0) {
+                    curY = 0;
+                }
+                if(curY > 200) {
+                    curY = 200;
+                }
+                this.center.x = curX;
+                this.center.y = curY;
+                let direct = this.processDirect(this.center.x, this.center.y);
+                if(direct != this.direct) {
+                    this.direct = direct;
+                }
             }
         });
 
         this.touch.on(Laya.Event.MOUSE_UP, this, function(e) {
-            if(this.canCommand) {
+            if(this.canCommand) {                
                 this.center.x = this.centerPos.x;
                 this.center.y = this.centerPos.y;
                 this.canCommand = false;
@@ -58,7 +77,65 @@ export default class JoyStick extends Laya.Script {
         });
 
         this.touch.on(Laya.Event.MOUSE_OUT, this, function(e) {
+            if(this.canCommand) {                
+                this.center.x = this.centerPos.x;
+                this.center.y = this.centerPos.y;
+                this.canCommand = false;
+                this.startPoint = null;
+            }
         });
+    }
+
+    processDirect(curX, curY) {
+        let d1 = this.getDistance(curX, curY, this.p1);
+        let d2 = this.getDistance(curX, curY, this.p2);
+        let d3 = this.getDistance(curX, curY, this.p3);
+        let d4 = this.getDistance(curX, curY, this.p4);
+        let d5 = this.getDistance(curX, curY, this.p5);
+        let d6 = this.getDistance(curX, curY, this.p6);
+        let d7 = this.getDistance(curX, curY, this.p7);
+        let d8 = this.getDistance(curX, curY, this.p8);
+        let d = 9999999;
+        let r = null;
+        if(d1 < d) {
+            d = d1;
+            r = this.d1;
+        }
+        if(d2 < d) {
+            d = d2;
+            r = this.d2;
+        }
+        if(d3 < d) {
+            d = d3;
+            r = this.d3;
+        }
+        if(d4 < d) {
+            d = d4;
+            r = this.d4;
+        }
+        if(d5 < d) {
+            d = d5;
+            r = this.d5;
+        }
+        if(d6 < d) {
+            d = d6;
+            r = this.d6;
+        }
+        if(d7 < d) {
+            d = d7;
+            r = this.d7;
+        }
+        if(d8 < d) {
+            d = d8;
+            r = this.d8;
+        }
+        return r
+    }
+
+    getDistance(x, y, p) {
+        let dx = x - p.x;
+        let dy = y - p.y;
+        return Math.sqrt(dx*dx + dy*dy);
     }
 
     onDisable() {
