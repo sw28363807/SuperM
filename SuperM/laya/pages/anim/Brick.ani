@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"zhuan/zhuan (1).png0",
+                                "value":"zhuan/zhuan (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -72,23 +72,6 @@
                                 "target":3,
                                 "key":"skin",
                                 "index":20
-                            }],
-                        "name":[
-                            {
-                                "value":"",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"name",
-                                "index":0
-                            },
-                            {
-                                "value":"ani1",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"name",
-                                "index":10
                             }]
                     }
                 }],
