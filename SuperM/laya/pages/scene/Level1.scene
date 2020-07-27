@@ -2,11 +2,10 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":119,
     "searchKey":"Scene",
     "props":{"width":5000,"sceneColor":"#9557cd","height":750},
     "nodeParent":-1,
-    "maxID":130,
+    "maxID":144,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -557,14 +556,13 @@
             "props":{"y":249,"x":1759,"presetID":1,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
             "nodeParent":2,
             "label":"TanLiBrick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":127,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -580,7 +578,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -592,6 +589,83 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":129,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "searchKey":"Box",
+            "props":{"y":631,"x":1093,"presetID":1,"preset":"laya/pages/prefab/Dog.prefab"},
+            "nodeParent":2,
+            "label":"Dog",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":138,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Dog.prefab"},
+                    "nodeParent":138,
+                    "label":"BoxCollider(Dog)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":140,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Dog.prefab"},
+                    "nodeParent":138,
+                    "label":"RigidBody(Dog)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":141,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/Dog.prefab"},
+                    "nodeParent":138,
+                    "label":"ani",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":142,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/AILeftOrRight.js",
+                    "searchKey":"Script,AILeftOrRight",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/Dog.prefab"},
+                    "nodeParent":138,
+                    "label":"AILeftOrRight",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":143,
                     "child":[
                         ]
                 }]
