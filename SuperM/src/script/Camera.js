@@ -20,6 +20,17 @@ export default class Camera extends Laya.Script {
     }
     
     onEnable() {
+        // let anim = this.owner.getChildByName("anim");
+        // console.debug(anim);
+        // Laya.Animation
+        // anim.play();
+
+        // this.roleAni = new Laya.Animation();
+        // this.roleAni.loadAnimation("anim/Brick.ani");
+        // this.owner.addChild(this.roleAni);
+        // this.roleAni.x = 1372;
+        // this.roleAni.y = 564;
+        // this.roleAni.play(0,true,"ani1");
     }
 
     onDisable() {

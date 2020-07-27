@@ -6,7 +6,7 @@
     "searchKey":"Box,Role",
     "props":{"y":0,"x":0,"width":120,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","name":"Role","isPresetRoot":true,"height":120},
     "nodeParent":-1,
-    "maxID":62,
+    "maxID":63,
     "label":"Role",
     "isOpen":true,
     "isDirectory":true,

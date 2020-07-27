@@ -85,8 +85,10 @@ export default class Role extends Laya.Script {
     onRoleAButton() {
         if (this.isInGround == true) {
             this.isInGround = false;
-            let linearVelocity = this.rigidBody.linearVelocity;
-            this.setMove(linearVelocity.x, -this.jumpSpeed);
+            
+            // let linearVelocity = this.rigidBody.linearVelocity;
+            this.rigidBody.applyLinearImpulseToCenter({x: 0, y: -2000});
+            // this.setMove(linearVelocity.x, -this.jumpSpeed);
         }
     }
 

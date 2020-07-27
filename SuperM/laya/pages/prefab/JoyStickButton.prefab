@@ -2,11 +2,10 @@
     "x":0,
     "type":"Box",
     "selectedBox":48,
-    "selecteID":50,
     "searchKey":"Box,JoyStickButton",
     "props":{"y":0,"x":0,"presetID":1,"preset":"laya/pages/prefab/JoyStickButton.prefab","name":"JoyStickButton","isPresetRoot":true},
     "nodeParent":-1,
-    "maxID":51,
+    "maxID":52,
     "label":"JoyStickButton",
     "isOpen":true,
     "isDirectory":true,
@@ -39,6 +38,23 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":50,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/JoyStickButton.js",
+            "searchKey":"Script,JoyStickButton",
+            "removeAble":true,
+            "props":{"presetID":4,"preset":"laya/pages/prefab/JoyStickButton.prefab"},
+            "nodeParent":48,
+            "label":"JoyStickButton",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":51,
             "child":[
                 ]
         }],
