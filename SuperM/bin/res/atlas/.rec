@@ -38,7 +38,11 @@ P 0587871F vscroll$up.png
 P 5FD17798 vscroll.png
 P DDDDFB9E vslider$bar.png
 P 01BAE7F5 vslider.png
-D grass
+D joystick
+P 6E235040 DP1.png
+P 7C5FFE97 feedback_btn.png
+P F39C4E44 yangan.png
+D other
 P CB63EF11 grass (1).png
 P E2D2D168 grass (2).png
 P 1C758754 grass (3).png
@@ -46,7 +50,6 @@ P E4F69FB6 grass (4).png
 P 953C46E4 grass (5).png
 R 3C10770F grass (6).png
 R F09FC651 grass (7).png
-D jinbi
 P 79B4E213 jb (1).png
 P EF6A1239 jb (11).png
 P 5081154B jb (13).png
@@ -58,10 +61,11 @@ P 79B4E213 jb (3).png
 P FC96D6D9 jb (5).png
 P 29FEC5F9 jb (7).png
 P 016BDACD jb (9).png
-D joystick
-P 6E235040 DP1.png
-P 7C5FFE97 feedback_btn.png
-P F39C4E44 yangan.png
+P 956EB188 zhuan (1).png
+P 6CFF0122 zhuan (2).png
+P 7C622836 zhuan (3).png
+P 3B46225F zhuan (4).png
+P A1D62BA9 zhuan (5).png
 D role
 P 3D5AE556 role.png
 D sound
@@ -76,9 +80,3 @@ P 4D16AC06 c2.png
 P 39B957DA p1.png
 P 2E1973F5 t1.png
 P F8700A3B tra.png
-D zhuan
-P 956EB188 zhuan (1).png
-P 6CFF0122 zhuan (2).png
-P 7C622836 zhuan (3).png
-P 3B46225F zhuan (4).png
-P A1D62BA9 zhuan (5).png
