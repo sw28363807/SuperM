@@ -11,7 +11,6 @@ export default class JoyStickButton extends Laya.Script {
     
     onEnable() {
         this.buttonA.on(Laya.Event.CLICK, this, function(){
-            console.debug(this.aHandler);
             if(this.aHandler) {
                 this.aHandler.run();
             }

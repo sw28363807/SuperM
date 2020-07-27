@@ -7,6 +7,7 @@ import GameUI from "./script/GameUI"
 import GameControl from "./script/GameControl"
 import Bullet from "./script/Bullet"
 import DropBox from "./script/DropBox"
+import Camera from "./script/Camera"
 import Role from "./script/Role"
 
 export default class GameConfig {
@@ -21,6 +22,7 @@ export default class GameConfig {
 		reg("script/GameControl.js",GameControl);
 		reg("script/Bullet.js",Bullet);
 		reg("script/DropBox.js",DropBox);
+		reg("script/Camera.js",Camera);
 		reg("script/Role.js",Role);
     }
 }
@@ -30,11 +32,11 @@ GameConfig.scaleMode ="fixedwidth";
 GameConfig.screenMode = "none";
 GameConfig.alignV = "top";
 GameConfig.alignH = "left";
-GameConfig.startScene = "scene/GameScene1.scene";
+GameConfig.startScene = "scene/GameScene.scene";
 GameConfig.sceneRoot = "";
 GameConfig.debug = false;
 GameConfig.stat = false;
-GameConfig.physicsDebug = true;
+GameConfig.physicsDebug = false;
 GameConfig.exportSceneToJson = true;
 
 GameConfig.init();

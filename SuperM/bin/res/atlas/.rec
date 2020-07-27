@@ -38,8 +38,17 @@ P 0587871F vscroll$up.png
 P 5FD17798 vscroll.png
 P DDDDFB9E vslider$bar.png
 P 01BAE7F5 vslider.png
+D grass
+P CB63EF11 grass (1).png
+P E2D2D168 grass (2).png
+P 1C758754 grass (3).png
+P E4F69FB6 grass (4).png
+P 953C46E4 grass (5).png
+R 3C10770F grass (6).png
+R F09FC651 grass (7).png
 D joystick
 P 6E235040 DP1.png
+P 7C5FFE97 feedback_btn.png
 P F39C4E44 yangan.png
 D role
 P 3D5AE556 role.png

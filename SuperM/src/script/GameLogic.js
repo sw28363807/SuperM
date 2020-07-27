@@ -41,11 +41,14 @@ export default class GameLogic extends Laya.Script {
             let level = prefabDef.create();
             this.level = level;
             this.owner.addChild(level);
+            Laya.Physics.I.worldRoot = this.level;
+
 
             Laya.loader.create("prefab/Role.prefab", Laya.Handler.create(this, function (prefabDef) {
                 let role = prefabDef.create();
-                level.addChild(role);    
-                role.x = 100;        
+                level.addChild(role);
+                role.x = 1400;   
+                role.y = -900;     
             }));
 
         }));
@@ -53,7 +56,8 @@ export default class GameLogic extends Laya.Script {
 
     onUpdate() {
         if (this.level) {
-            this.level.x = this.level.x - 1;
+            // let camera = this.owner.getComponent(Cameara);
+            // EventMgr.getInstance().postEvent(Events.Camera_Move);
         }
     }
 

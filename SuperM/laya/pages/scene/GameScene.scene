@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":48,
+    "selecteID":33,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750},
     "nodeParent":-1,
-    "maxID":76,
+    "maxID":83,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -18,16 +18,17 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box,joyStick,joyStick",
-            "props":{"zOrder":2,"y":523,"x":26,"var":"joyStick","presetID":1,"preset":"laya/pages/prefab/JoyStick.prefab","name":"joyStick"},
+            "props":{"zOrder":2,"y":512,"x":39,"var":"joyStick","presetID":1,"preset":"laya/pages/prefab/JoyStick.prefab","name":"joyStick"},
             "nodeParent":2,
             "label":"joyStick",
-            "isOpen":null,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":33,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -41,6 +42,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":3,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -54,6 +56,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -67,6 +70,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -80,6 +84,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":7,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -93,6 +98,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":8,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -106,6 +112,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":9,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -119,6 +126,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":10,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -132,6 +140,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":11,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -145,6 +154,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":12,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -158,6 +168,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":13,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -171,6 +182,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/JoyStick.js",
@@ -187,6 +199,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":15,"preset":"laya/pages/prefab/JoyStick.prefab"},
@@ -204,7 +217,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box,joyStickButton,joyStickButton",
-            "props":{"zOrder":2,"y":676,"x":1008,"var":"joyStickButton","presetID":1,"preset":"laya/pages/prefab/JoyStickButton.prefab","name":"joyStickButton"},
+            "props":{"zOrder":2,"y":612,"x":956,"var":"joyStickButton","presetID":1,"preset":"laya/pages/prefab/JoyStickButton.prefab","name":"joyStickButton"},
             "nodeParent":2,
             "label":"joyStickButton",
             "isOpen":false,
@@ -286,152 +299,9 @@
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":64,
+            "compId":82,
             "child":[
                 ]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "searchKey":"Box",
-            "props":{"presetID":1,"preset":"laya/pages/prefab/Level_1.prefab"},
-            "nodeParent":2,
-            "label":"Level_1",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":65,
-            "child":[
-                {
-                    "type":"Panel",
-                    "searchKey":"Panel",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/Level_1.prefab"},
-                    "nodeParent":65,
-                    "label":"bottom",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":4,
-                    "child":[
-                        {
-                            "type":"BoxCollider",
-                            "switchAble":true,
-                            "searchKey":"BoxCollider",
-                            "removeAble":true,
-                            "props":{"presetID":6,"preset":"laya/pages/prefab/Level_1.prefab"},
-                            "nodeParent":4,
-                            "label":"BoxCollider(Level_1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":66,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"RigidBody",
-                            "switchAble":true,
-                            "searchKey":"RigidBody",
-                            "removeAble":true,
-                            "props":{"presetID":7,"preset":"laya/pages/prefab/Level_1.prefab"},
-                            "nodeParent":4,
-                            "label":"RigidBody(Level_1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":67,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Panel",
-                    "searchKey":"Panel",
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/Level_1.prefab"},
-                    "nodeParent":65,
-                    "label":"left",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":15,
-                    "child":[
-                        {
-                            "type":"BoxCollider",
-                            "switchAble":true,
-                            "searchKey":"BoxCollider",
-                            "removeAble":true,
-                            "props":{"presetID":8,"preset":"laya/pages/prefab/Level_1.prefab"},
-                            "nodeParent":15,
-                            "label":"BoxCollider(Level_1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":68,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"RigidBody",
-                            "switchAble":true,
-                            "searchKey":"RigidBody",
-                            "removeAble":true,
-                            "props":{"presetID":9,"preset":"laya/pages/prefab/Level_1.prefab"},
-                            "nodeParent":15,
-                            "label":"RigidBody(Level_1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":69,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Panel",
-                    "searchKey":"Panel",
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/Level_1.prefab"},
-                    "nodeParent":65,
-                    "label":"right",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":70,
-                    "child":[
-                        {
-                            "type":"BoxCollider",
-                            "switchAble":true,
-                            "searchKey":"BoxCollider",
-                            "removeAble":true,
-                            "props":{"presetID":11,"preset":"laya/pages/prefab/Level_1.prefab"},
-                            "nodeParent":70,
-                            "label":"BoxCollider(Level_1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":71,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"RigidBody",
-                            "switchAble":true,
-                            "searchKey":"RigidBody",
-                            "removeAble":true,
-                            "props":{"presetID":12,"preset":"laya/pages/prefab/Level_1.prefab"},
-                            "nodeParent":70,
-                            "label":"RigidBody(Level_1)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":72,
-                            "child":[
-                                ]
-                        }]
-                }]
         }],
     "animations":[
         {
