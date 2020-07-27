@@ -33,7 +33,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"jinbi/jb (1).png",
+                                "value":"other/jb (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -41,7 +41,7 @@
                                 "index":0
                             },
                             {
-                                "value":"jinbi/jb (3).png",
+                                "value":"other/jb (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -49,7 +49,7 @@
                                 "index":2
                             },
                             {
-                                "value":"jinbi/jb (5).png",
+                                "value":"other/jb (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -57,7 +57,7 @@
                                 "index":4
                             },
                             {
-                                "value":"jinbi/jb (7).png",
+                                "value":"other/jb (7).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -65,7 +65,7 @@
                                 "index":6
                             },
                             {
-                                "value":"jinbi/jb (9).png",
+                                "value":"other/jb (9).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -73,7 +73,7 @@
                                 "index":8
                             },
                             {
-                                "value":"jinbi/jb (11).png",
+                                "value":"other/jb (11).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -81,7 +81,7 @@
                                 "index":10
                             },
                             {
-                                "value":"jinbi/jb (13).png",
+                                "value":"other/jb (13).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -89,7 +89,7 @@
                                 "index":12
                             },
                             {
-                                "value":"jinbi/jb (15).png",
+                                "value":"other/jb (15).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -97,7 +97,7 @@
                                 "index":14
                             },
                             {
-                                "value":"jinbi/jb (17).png",
+                                "value":"other/jb (17).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -105,7 +105,7 @@
                                 "index":16
                             },
                             {
-                                "value":"jinbi/jb (19).png",
+                                "value":"other/jb (19).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -113,7 +113,7 @@
                                 "index":18
                             },
                             {
-                                "value":"jinbi/jb (21).png",
+                                "value":"other/jb (21).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
