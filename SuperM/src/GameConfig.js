@@ -6,13 +6,14 @@ import GameJoyStick from "./script/GameJoyStick"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import BrickLogic from "./script/BrickLogic"
+import GoldLogic from "./script/GoldLogic"
+import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import GroundImageLogic from "./script/GroundImageLogic"
-import GameUI from "./script/GameUI"
-import GameControl from "./script/GameControl"
+import WenhaoLogic from "./script/WenhaoLogic"
 import BrokenBrick from "./script/BrokenBrick"
-import Bullet from "./script/Bullet"
-import DropBox from "./script/DropBox"
+import BulletLogic from "./script/BulletLogic"
+import HanbaoLogic from "./script/HanbaoLogic"
 import Role from "./script/Role"
 
 export default class GameConfig {
@@ -26,13 +27,14 @@ export default class GameConfig {
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/BrickLogic.js",BrickLogic);
+		reg("script/GoldLogic.js",GoldLogic);
+		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
-		reg("script/GameUI.js",GameUI);
-		reg("script/GameControl.js",GameControl);
+		reg("script/WenhaoLogic.js",WenhaoLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
-		reg("script/Bullet.js",Bullet);
-		reg("script/DropBox.js",DropBox);
+		reg("script/BulletLogic.js",BulletLogic);
+		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/Role.js",Role);
     }
 }

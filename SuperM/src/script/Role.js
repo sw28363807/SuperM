@@ -10,6 +10,7 @@ export default class Role extends Laya.Script {
         this.speed = 9;
         this.jumpSpeed = 35;
         this.isInGround = false;
+        this.hasBullet = false;
     }
     
     onEnable() {
@@ -17,6 +18,8 @@ export default class Role extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Role_Move_Stop, this, this.onRoleStopWalk);
         EventMgr.getInstance().registEvent(Events.Role_A_Button, this, this.onRoleAButton);
         EventMgr.getInstance().registEvent(Events.Role_B_Button, this, this.onRoleBButton);
+        EventMgr.getInstance().registEvent(Events.Role_Give_Speed, this, this.onRoleGiveSpeed);
+        EventMgr.getInstance().registEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
         // let a = new Laya.RigidBody();
         // a.linearVelocity
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
@@ -74,7 +77,7 @@ export default class Role extends Laya.Script {
         } else if (contact.m_fixtureB.collider.label == "RoleFoot") {
             foot = contact.m_nodeB;
         }
-        if (foot && foot.contact.m_manifold.localNormal.y < 0) {
+        if (foot && foot.contact.m_manifold.localNormal.y < 0 && other.label != "TanLiBrick") {
             this.isInGround = true;
             if (this.commandWalk == false) {
                 this.setMove(0, 0);
@@ -85,11 +88,17 @@ export default class Role extends Laya.Script {
     onRoleAButton() {
         if (this.isInGround == true) {
             this.isInGround = false;
-            
-            // let linearVelocity = this.rigidBody.linearVelocity;
             this.rigidBody.applyLinearImpulseToCenter({x: 0, y: -800});
-            // this.setMove(linearVelocity.x, -this.jumpSpeed);
         }
+    }
+
+    onRoleGiveSpeed(speedData) {
+        this.isInGround = false;
+        this.rigidBody.applyLinearImpulseToCenter(speedData);
+    }
+
+    onRoleHasBullet() {
+        this.hasBullet = true;
     }
 
     onRoleBButton() {

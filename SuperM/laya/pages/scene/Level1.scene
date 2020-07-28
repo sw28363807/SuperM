@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":148,
+    "selecteID":185,
     "searchKey":"Scene",
     "props":{"width":5000,"sceneColor":"#9557cd","height":750},
     "nodeParent":-1,
-    "maxID":166,
+    "maxID":187,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -388,6 +388,22 @@
                     "compId":104,
                     "child":[
                         ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":108,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":166,
+                    "child":[
+                        ]
                 }],
             "$HIDDEN":false
         },
@@ -433,6 +449,22 @@
                     "compId":114,
                     "child":[
                         ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":112,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":167,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -475,6 +507,22 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":117,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":115,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":168,
                     "child":[
                         ]
                 }]
@@ -543,7 +591,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation",
-            "props":{"y":583,"x":2199,"presetID":1,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
+            "props":{"y":651.5,"x":1399,"presetID":1,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
             "nodeParent":2,
             "label":"TanLiBrick",
             "isOpen":false,
@@ -579,6 +627,37 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":126,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
+                    "nodeParent":122,
+                    "label":"BoxCollider(TanLiBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":169,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/TanLiBrickLogic.js",
+                    "searchKey":"Script,TanLiBrickLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
+                    "nodeParent":122,
+                    "label":"TanLiBrickLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":171,
                     "child":[
                         ]
                 }]
@@ -623,6 +702,37 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":129,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
+                    "nodeParent":127,
+                    "label":"BoxCollider(TanLiBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":170,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/TanLiBrickLogic.js",
+                    "searchKey":"Script,TanLiBrickLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
+                    "nodeParent":127,
+                    "label":"TanLiBrickLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":172,
                     "child":[
                         ]
                 }]
@@ -716,6 +826,78 @@
             "compId":147,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":173,
+            "selecteID":175,
+            "searchKey":"Animation",
+            "props":{"zOrder":2,"y":477,"x":1074,"presetID":1,"preset":"laya/pages/prefab/Wenhao.prefab"},
+            "nodeParent":2,
+            "maxID":176,
+            "label":"Wenhao",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":176,
+            "child":[
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Wenhao.prefab"},
+                    "nodeParent":176,
+                    "label":"BoxCollider(Wenhao)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":174,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Wenhao.prefab","enabled":false},
+                    "nodeParent":176,
+                    "label":"RigidBody(Wenhao)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":175,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/WenhaoLogic.js",
+                    "searchKey":"Script,WenhaoLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Wenhao.prefab","enabled":true},
+                    "nodeParent":176,
+                    "label":"WenhaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":177,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
         }],
     "animations":[
         {
