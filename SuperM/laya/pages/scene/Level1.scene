@@ -2,10 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
+    "selecteID":148,
     "searchKey":"Scene",
     "props":{"width":5000,"sceneColor":"#9557cd","height":750},
     "nodeParent":-1,
-    "maxID":148,
+    "maxID":166,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -327,6 +328,22 @@
                     "compId":91,
                     "child":[
                         ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/BrickLogic.js",
+                    "searchKey":"Script,BrickLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Brick.prefab"},
+                    "nodeParent":101,
+                    "label":"BrickLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":164,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -377,7 +394,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation",
-            "props":{"y":654,"x":1509,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "props":{"y":663,"x":422,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
             "nodeParent":2,
             "label":"Gold",
             "isOpen":false,
@@ -421,7 +438,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation",
-            "props":{"y":654,"x":1294,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "props":{"y":652,"x":600,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
             "nodeParent":2,
             "label":"Gold",
             "isOpen":false,
@@ -501,6 +518,22 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":121,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/BrickLogic.js",
+                    "searchKey":"Script,BrickLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Brick.prefab"},
+                    "nodeParent":119,
+                    "label":"BrickLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":165,
                     "child":[
                         ]
                 }]
@@ -597,7 +630,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box",
-            "props":{"y":631,"x":1093,"presetID":1,"preset":"laya/pages/prefab/Dog.prefab"},
+            "props":{"y":632,"x":2442,"presetID":1,"preset":"laya/pages/prefab/Dog.prefab"},
             "nodeParent":2,
             "label":"Dog",
             "isOpen":false,
@@ -682,6 +715,348 @@
             "compId":147,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":61,
+            "searchKey":"Box",
+            "props":{"y":440,"x":1067,"presetID":1,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+            "nodeParent":2,
+            "maxID":84,
+            "label":"BrokenBrick",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":148,
+            "child":[
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"b1",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":62,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"presetID":3,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":62,
+                            "label":"BoxCollider(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":149,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"presetID":4,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":62,
+                            "label":"RigidBody(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":150,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"b2",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":63,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"presetID":6,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":63,
+                            "label":"BoxCollider(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":151,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"presetID":7,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":63,
+                            "label":"RigidBody(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":152,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"b3",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":64,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"presetID":9,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":64,
+                            "label":"BoxCollider(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":73,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"presetID":10,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":64,
+                            "label":"RigidBody(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":74,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":11,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"b4",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":65,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"presetID":12,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":65,
+                            "label":"BoxCollider(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":75,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"presetID":13,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":65,
+                            "label":"RigidBody(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":153,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":14,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"b5",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":154,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"presetID":15,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":154,
+                            "label":"BoxCollider(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":155,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"presetID":16,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":154,
+                            "label":"RigidBody(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":156,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":17,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"b6",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":157,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"presetID":18,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":157,
+                            "label":"BoxCollider(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":158,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"presetID":19,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":157,
+                            "label":"RigidBody(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":159,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":20,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"b7",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":160,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"presetID":21,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":160,
+                            "label":"BoxCollider(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":161,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"presetID":22,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                            "nodeParent":160,
+                            "label":"RigidBody(BrokenBrick)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":162,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/BrokenBrick.js",
+                    "searchKey":"Script,BrokenBrick",
+                    "removeAble":true,
+                    "props":{"presetID":23,"preset":"laya/pages/prefab/BrokenBrick.prefab"},
+                    "nodeParent":148,
+                    "label":"BrokenBrick",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":163,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
         }],
     "animations":[
         {

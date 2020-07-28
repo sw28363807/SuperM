@@ -68,13 +68,13 @@ export default class Role extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        let mine = null;
+        let foot = null;
         if (contact.m_fixtureA.collider.label == "RoleFoot") {
-            mine = contact.m_nodeA;
+            foot = contact.m_nodeA;
         } else if (contact.m_fixtureB.collider.label == "RoleFoot") {
-            mine = contact.m_nodeB;
+            foot = contact.m_nodeB;
         }
-        if (mine.contact.m_manifold.localNormal.y < 0) {
+        if (foot && foot.contact.m_manifold.localNormal.y < 0) {
             this.isInGround = true;
             if (this.commandWalk == false) {
                 this.setMove(0, 0);
@@ -87,7 +87,7 @@ export default class Role extends Laya.Script {
             this.isInGround = false;
             
             // let linearVelocity = this.rigidBody.linearVelocity;
-            this.rigidBody.applyLinearImpulseToCenter({x: 0, y: -2000});
+            this.rigidBody.applyLinearImpulseToCenter({x: 0, y: -800});
             // this.setMove(linearVelocity.x, -this.jumpSpeed);
         }
     }

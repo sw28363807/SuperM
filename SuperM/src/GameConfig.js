@@ -5,8 +5,10 @@ import AdjustScene from "./script/AdjustScene"
 import GameJoyStick from "./script/GameJoyStick"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
+import BrickLogic from "./script/BrickLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import GroundImageLogic from "./script/GroundImageLogic"
+import BrokenBrick from "./script/BrokenBrick"
 import GameUI from "./script/GameUI"
 import GameControl from "./script/GameControl"
 import Bullet from "./script/Bullet"
@@ -23,8 +25,10 @@ export default class GameConfig {
 		reg("script/GameJoyStick.js",GameJoyStick);
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
+		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
+		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/GameUI.js",GameUI);
 		reg("script/GameControl.js",GameControl);
 		reg("script/Bullet.js",Bullet);
