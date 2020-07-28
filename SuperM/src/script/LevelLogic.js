@@ -5,9 +5,6 @@ export default class LevelLogic extends Laya.Script {
     }
     
     onEnable() {
-        Laya.Physics.I.positionIterations = 3;
-        Laya.Physics.I.worldRoot = this.owner;
-        Laya.Physics.I.worldRoot.y = -100;
         Laya.View.open("scene/GameJoyStick.scene", false, function(view) {
         });
         Laya.loader.create("prefab/Role.prefab", Laya.Handler.create(this, function (prefabDef) {

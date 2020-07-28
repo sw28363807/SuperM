@@ -20,6 +20,14 @@ export default class Camera extends Laya.Script {
     }
     
     onEnable() {
+        Laya.Physics.I.positionIterations = 3;
+        Laya.Physics.I.worldRoot = this.owner;
+        Laya.Physics.I.worldRoot.y = -100;
+        let w =  Laya.Browser.width;
+        let h =  Laya.Browser.height;
+        if(w/h > 2.0) {
+            Laya.Physics.I.worldRoot.y = -250; 
+        }
         // let anim = this.owner.getChildByName("anim");
         // console.debug(anim);
         // Laya.Animation

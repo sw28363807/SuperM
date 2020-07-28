@@ -55,6 +55,7 @@ P E4F69FB6 grass (4).png
 P 953C46E4 grass (5).png
 R 3C10770F grass (6).png
 R F09FC651 grass (7).png
+P E72D5BAE ground.png
 P 79B4E213 jb (1).png
 P EF6A1239 jb (11).png
 P 5081154B jb (13).png
@@ -74,6 +75,23 @@ P 6CFF0122 zhuan (2).png
 P 7C622836 zhuan (3).png
 P 3B46225F zhuan (4).png
 P A1D62BA9 zhuan (5).png
+D other1
+R 0792582D some (1).png
+R ED7021B0 some (10).png
+P 8E1F178A some (11).png
+P F37E3107 some (12).png
+P A2284BD4 some (13).png
+P 66B44473 some (14).png
+R CB0C78D7 some (15).png
+R B4C5F0B4 some (16).png
+R E7B0A430 some (2).png
+R 85753132 some (3).png
+R 97C6BB82 some (4).png
+P DDA1BC33 some (5).png
+P 9354F7AC some (6).png
+R E1AF6A72 some (7).png
+P B721063A some (8).png
+R 24FF362D some (9).png
 D role
 P 3D5AE556 role.png
 D sound

@@ -6,6 +6,7 @@ import GameJoyStick from "./script/GameJoyStick"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
+import GroundImageLogic from "./script/GroundImageLogic"
 import GameUI from "./script/GameUI"
 import GameControl from "./script/GameControl"
 import Bullet from "./script/Bullet"
@@ -23,6 +24,7 @@ export default class GameConfig {
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
+		reg("script/GroundImageLogic.js",GroundImageLogic);
 		reg("script/GameUI.js",GameUI);
 		reg("script/GameControl.js",GameControl);
 		reg("script/Bullet.js",Bullet);

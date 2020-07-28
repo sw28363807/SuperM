@@ -10,6 +10,11 @@ export default class GameJoyStick extends Laya.Script {
     }
     
     onEnable() {
+        let w =  Laya.Browser.width;
+        let h =  Laya.Browser.height;
+        if(w/h > 2.0) {
+            this.owner.y = -100; 
+        }
         this.changeDirectHandler = Laya.Handler.create(this, function(data){
             EventMgr.getInstance().postEvent(Events.Role_Move, data);
         }, null, false);
