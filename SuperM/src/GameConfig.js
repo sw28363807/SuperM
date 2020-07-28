@@ -8,9 +8,9 @@ import LevelLogic from "./script/LevelLogic"
 import BrickLogic from "./script/BrickLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import GroundImageLogic from "./script/GroundImageLogic"
-import BrokenBrick from "./script/BrokenBrick"
 import GameUI from "./script/GameUI"
 import GameControl from "./script/GameControl"
+import BrokenBrick from "./script/BrokenBrick"
 import Bullet from "./script/Bullet"
 import DropBox from "./script/DropBox"
 import Role from "./script/Role"
@@ -28,9 +28,9 @@ export default class GameConfig {
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
-		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/GameUI.js",GameUI);
 		reg("script/GameControl.js",GameControl);
+		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/Bullet.js",Bullet);
 		reg("script/DropBox.js",DropBox);
 		reg("script/Role.js",Role);

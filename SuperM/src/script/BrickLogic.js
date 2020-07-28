@@ -19,20 +19,22 @@ export default class BrickLogic extends Laya.Script {
         }
     }
 
-    onCreateBrokenBrick() {
+    createBrokenCell(path) {
         let x = this.owner.x;
         let y = this.owner.y;
         let parent = this.owner.parent;
-        Laya.loader.create("prefab/BrokenBrick.prefab", Laya.Handler.create(this, function (prefabDef) {
-            console.debug(x);
-            console.debug(y);
-            console.debug(parent);
+        Laya.loader.create(path, Laya.Handler.create(this, function (prefabDef) {
             let brokenBrick = prefabDef.create();
             parent.addChild(brokenBrick);
             brokenBrick.x = x;   
             brokenBrick.y = y;
-            console.debug(brokenBrick);
         }));
+    }
+
+    onCreateBrokenBrick() {
+        for (let index = 0; index < 7; index++) {
+            this.createBrokenCell("prefab/b"+ String(index + 1)+".prefab");
+        }
         this.owner.removeSelf();
     }
     
