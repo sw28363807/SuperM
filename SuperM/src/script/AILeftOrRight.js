@@ -1,3 +1,6 @@
+import Events from "./Events";
+import EventMgr from "./EventMgr";
+
 export default class AILeftOrRight extends Laya.Script {
 
     constructor() { 
@@ -10,9 +13,12 @@ export default class AILeftOrRight extends Laya.Script {
         this.speed = 5;
 
         this.faceup = 0;
+        this.currentVelocity = null;
     }
     
     onEnable() {
+        // EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
+
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.ani = this.owner.getChildByName("ani");
         Laya.timer.loop(this.time, this, this.onTimeCallback);
@@ -21,16 +27,31 @@ export default class AILeftOrRight extends Laya.Script {
     onTimeCallback() {
         if (this.faceup == 0 || this.faceup == 1) {
             this.faceup = 1;
-            this.rigidBody.setVelocity({x: this.speed, y: 0});
+            this.currentVelocity = {x: this.speed, y: 0};
             this.ani.scaleX = Math.abs(this.ani.scaleX);
         } else {
-            this.rigidBody.setVelocity({x: -this.speed, y: 0});
+            this.currentVelocity = {x: -this.speed, y: 0};
             this.ani.scaleX = -1 * Math.abs(this.ani.scaleX);
         }
         this.faceup = -1 * this.faceup;
     }
 
+    onUpdate() {
+        if (this.currentVelocity) {
+            let linearVelocity = this.rigidBody.linearVelocity;
+            this.rigidBody.setVelocity({x: this.currentVelocity.x, y: linearVelocity.y});
+        }
+    }
+
     onDisable() {
-        Laya.timer.clearAll(this);
+        Laya.timer.clear(this, this.onTimeCallback);
+    }
+
+    onMonsterFootDead(data) {
+        if (data.owner != this.owner) {
+            return;
+        }
+        this.rigidBody.enabled = false;
+        Laya.timer.clear(this, this.onTimeCallback);
     }
 }

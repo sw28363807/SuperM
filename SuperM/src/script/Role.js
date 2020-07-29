@@ -83,12 +83,32 @@ export default class Role extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         let foot = null;
+        let body = null;
+        let collider = null;
         if (contact.m_fixtureA.collider.label == "RoleFoot") {
             foot = contact.m_nodeA;
+            collider = contact.m_fixtureA.collider;
         } else if (contact.m_fixtureB.collider.label == "RoleFoot") {
             foot = contact.m_nodeB;
+            collider = contact.m_fixtureB.collider;
         }
-        if (foot && foot.contact.m_manifold.localNormal.y < 0 && other.label != "TanLiBrick") {
+        if (!foot) {
+            if (contact.m_fixtureA.collider.label == "RoleBody") {
+                body = contact.m_nodeA;
+                collider = contact.m_fixtureA.collider;
+            } else if (contact.m_fixtureB.collider.label == "RoleBody") {
+                body = contact.m_nodeB;
+                collider = contact.m_fixtureB.collider;
+            }   
+        }
+        if (foot && collider.label == "RoleFoot" && 
+            (other.label == "MonsterHead")) {
+            this.onRoleGiveSpeed({x: this.getFaceup() * 200, y: -400});
+            EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
+        } else if (body && collider.label == "RoleBody" && (other.label == "MonsterBody")) {
+            this.onRoleGiveSpeed({x: -this.getFaceup() * 300, y: -400});
+        }
+        else if (foot && foot.contact.m_manifold.localNormal.y < 0 && other.label != "TanLiBrick") {
             this.isInGround = true;
             if (this.commandWalk == false) {
                 this.setMove(0, 0);
@@ -99,7 +119,7 @@ export default class Role extends Laya.Script {
     onRoleAButton() {
         if (this.isInGround == true) {
             this.isInGround = false;
-            this.rigidBody.applyLinearImpulseToCenter({x: 0, y: -800});
+            this.rigidBody.applyLinearImpulseToCenter({x: 0, y: -1200});
         }
     }
 
@@ -118,18 +138,23 @@ export default class Role extends Laya.Script {
         let parent = this.owner.parent;
         Laya.loader.create("prefab/Bullet.prefab", Laya.Handler.create(this, function (prefabDef) {
             let bullet = prefabDef.create();
-            let faceup = 0;
+            let faceup = this.getFaceup();
             parent.addChild(bullet);
-            if (this.roleSpr.scaleX > 0) {
+            if (faceup > 0) {
                 bullet.x = x + 110;
-                faceup = 1;
-            } else if (this.roleSpr.scaleX < 0) {
+            } else if (faceup < 0) {
                 bullet.x = x - 40;
-                faceup = -1;
             }
             bullet.y = y + 30;
-            EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: faceup, y: 0});
+            EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: this.getFaceup(), y: 0});
         }));
+    }
+
+    getFaceup() {
+        if (this.roleSpr.scaleX > 0) {
+            return 1
+        }
+        return -1;
     }
 
     onDisable() {

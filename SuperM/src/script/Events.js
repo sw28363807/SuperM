@@ -12,4 +12,5 @@ Events.Role_A_Button = "Role_A_Button";
 Events.Role_B_Button = "Role_B_Button";
 Events.Role_Give_Speed = "Role_Give_Speed";
 Events.Bullet_Shoot = "Bullet_Shoot";
+Events.Monster_Foot_Dead = "Monster_Foot_Dead";
 Events.Camera_Move = "Camera_Move";

@@ -8,6 +8,7 @@ import LevelLogic from "./script/LevelLogic"
 import BrickLogic from "./script/BrickLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
+import MonsterLogic from "./MonsterLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BulletLogic from "./script/BulletLogic"
@@ -29,6 +30,7 @@ export default class GameConfig {
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
+		reg("MonsterLogic.js",MonsterLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BulletLogic.js",BulletLogic);

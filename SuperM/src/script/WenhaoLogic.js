@@ -34,8 +34,6 @@ export default class WenhaoLogic extends Laya.Script {
     
     onEnable() {
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        // this.rigidBody.category = 2;
-        // this.rigidBody.mask = 1;
     }
 
     onDisable() {
