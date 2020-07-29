@@ -11,5 +11,6 @@ export default class BrokenBrick extends Laya.Script {
     }
 
     onDisable() {
+        Laya.timer.clearAll(this);
     }
 }

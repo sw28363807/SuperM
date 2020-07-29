@@ -31,5 +31,6 @@ export default class AILeftOrRight extends Laya.Script {
     }
 
     onDisable() {
+        Laya.timer.clearAll(this);
     }
 }

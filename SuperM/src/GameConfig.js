@@ -6,15 +6,15 @@ import GameJoyStick from "./script/GameJoyStick"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import BrickLogic from "./script/BrickLogic"
-import GoldLogic from "./script/GoldLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import GroundImageLogic from "./script/GroundImageLogic"
-import WenhaoLogic from "./script/WenhaoLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BulletLogic from "./script/BulletLogic"
+import GoldLogic from "./script/GoldLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 import Role from "./script/Role"
+import WenhaoLogic from "./script/WenhaoLogic"
 
 export default class GameConfig {
     static init() {
@@ -27,15 +27,15 @@ export default class GameConfig {
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/BrickLogic.js",BrickLogic);
-		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
-		reg("script/WenhaoLogic.js",WenhaoLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BulletLogic.js",BulletLogic);
+		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/Role.js",Role);
+		reg("script/WenhaoLogic.js",WenhaoLogic);
     }
 }
 GameConfig.width = 1336;

@@ -2,7 +2,7 @@ export default class Camera extends Laya.Script {
 
     constructor() { 
         super();
-        
+        this.zeroY = 0;
     }
 
     lookAt(x, y) {
@@ -10,6 +10,7 @@ export default class Camera extends Laya.Script {
         // let widthScale = width/1336;
         // console.debug(widthScale);
         this.owner.x = 1136/2 - x;
+        // this.owner.y = this.owner.y
     }
 
     onUpdate() {
@@ -20,25 +21,15 @@ export default class Camera extends Laya.Script {
     }
     
     onEnable() {
-        Laya.Physics.I.positionIterations = 3;
-        Laya.Physics.I.worldRoot = this.owner;
-        Laya.Physics.I.worldRoot.y = -100;
         let w =  Laya.Browser.width;
         let h =  Laya.Browser.height;
+        Laya.Physics.I.positionIterations = 3;
+        Laya.Physics.I.worldRoot = this.owner;
+        this.zeroY = -100;
         if(w/h > 2.0) {
-            Laya.Physics.I.worldRoot.y = -250; 
+            this.zeroY = -250; 
         }
-        // let anim = this.owner.getChildByName("anim");
-        // console.debug(anim);
-        // Laya.Animation
-        // anim.play();
-
-        // this.roleAni = new Laya.Animation();
-        // this.roleAni.loadAnimation("anim/Brick.ani");
-        // this.owner.addChild(this.roleAni);
-        // this.roleAni.x = 1372;
-        // this.roleAni.y = 564;
-        // this.roleAni.play(0,true,"ani1");
+        Laya.Physics.I.worldRoot.y = this.zeroY;
     }
 
     onDisable() {
