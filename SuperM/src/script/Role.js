@@ -10,7 +10,8 @@ export default class Role extends Laya.Script {
         this.speed = 9;
         this.jumpSpeed = 35;
         this.isInGround = false;
-        this.hasBullet = false;
+        this.faceup = 1;
+        this.setRoleState(0);
     }
     
     onEnable() {
@@ -24,6 +25,16 @@ export default class Role extends Laya.Script {
         // a.linearVelocity
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.roleSpr = this.owner.getChildByName("roleSpr");
+    }
+
+    // 0 正常 1子弹 2待定
+    setRoleState(state) {
+        this.state = state;
+        if (this.state == 0) {
+            // this.colorCom.hue = 0;
+        } else if (this.state == 1) {
+            // this.colorCom.hue = 180;
+        }
     }
 
     setMove(px, py) {
@@ -98,11 +109,27 @@ export default class Role extends Laya.Script {
     }
 
     onRoleHasBullet() {
-        this.hasBullet = true;
+        this.setRoleState(1);
     }
 
     onRoleBButton() {
-
+        let x =  this.owner.x;
+        let y =  this.owner.y;
+        let parent = this.owner.parent;
+        Laya.loader.create("prefab/Bullet.prefab", Laya.Handler.create(this, function (prefabDef) {
+            let bullet = prefabDef.create();
+            let faceup = 0;
+            parent.addChild(bullet);
+            if (this.roleSpr.scaleX > 0) {
+                bullet.x = x + 110;
+                faceup = 1;
+            } else if (this.roleSpr.scaleX < 0) {
+                bullet.x = x - 40;
+                faceup = -1;
+            }
+            bullet.y = y + 30;
+            EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: faceup, y: 0});
+        }));
     }
 
     onDisable() {

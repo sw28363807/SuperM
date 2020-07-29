@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":185,
+    "selectedBox":70,
+    "selecteID":71,
     "searchKey":"Scene",
     "props":{"width":5000,"sceneColor":"#9557cd","height":750},
     "nodeParent":-1,
@@ -47,7 +47,7 @@
                     "switchAble":true,
                     "searchKey":"RigidBody",
                     "removeAble":true,
-                    "props":{"type":"static"},
+                    "props":{"type":"static","mask":62,"category":1},
                     "nodeParent":4,
                     "label":"RigidBody",
                     "isDirectory":false,
@@ -76,7 +76,7 @@
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"width":400,"height":1800},
+                    "props":{"width":400,"label":"Wall","height":1800},
                     "nodeParent":15,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -91,7 +91,7 @@
                     "switchAble":true,
                     "searchKey":"RigidBody",
                     "removeAble":true,
-                    "props":{"type":"static"},
+                    "props":{"type":"static","mask":62,"category":1},
                     "nodeParent":15,
                     "label":"RigidBody",
                     "isDirectory":false,
@@ -109,18 +109,19 @@
             "props":{"y":-435,"x":4600,"width":400,"name":"right","height":1800},
             "nodeParent":2,
             "label":"right",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":70,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"width":400,"height":1800},
+                    "props":{"width":400,"label":"Wall","height":1800},
                     "nodeParent":70,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -131,11 +132,12 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
                     "removeAble":true,
-                    "props":{"type":"static"},
+                    "props":{"type":"static","mask":62,"category":1},
                     "nodeParent":70,
                     "label":"RigidBody",
                     "isDirectory":false,
@@ -601,21 +603,6 @@
             "compId":122,
             "child":[
                 {
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
-                    "nodeParent":122,
-                    "label":"BoxCollider(TanLiBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":125,
-                    "child":[
-                        ]
-                },
-                {
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -675,21 +662,6 @@
             "hasChild":true,
             "compId":127,
             "child":[
-                {
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/TanLiBrick.prefab"},
-                    "nodeParent":127,
-                    "label":"BoxCollider(TanLiBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":128,
-                    "child":[
-                        ]
-                },
                 {
                     "type":"RigidBody",
                     "switchAble":true,
