@@ -2,6 +2,7 @@
     "x":0,
     "type":"Animation",
     "selectedBox":102,
+    "selecteID":103,
     "searchKey":"Animation,Gold",
     "props":{"y":0,"x":0,"width":100,"source":"anim/JinBi.ani","presetID":1,"preset":"laya/pages/prefab/Gold.prefab","name":"Gold","isPresetRoot":true,"height":93,"autoPlay":true},
     "nodeParent":-1,

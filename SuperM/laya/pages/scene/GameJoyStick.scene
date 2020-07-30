@@ -20,7 +20,7 @@
             "selectedBox":33,
             "selecteID":46,
             "searchKey":"Box,joyStick,joyStick",
-            "props":{"y":484,"x":49,"var":"joyStick","presetID":1,"preset":"laya/pages/prefab/JoyStick.prefab","name":"joyStick"},
+            "props":{"y":484,"x":49,"var":"joyStick","presetID":1,"preset":"laya/pages/prefab/menu/JoyStick.prefab","name":"joyStick"},
             "nodeParent":2,
             "maxID":52,
             "label":"joyStick",
@@ -33,7 +33,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"Sprite(JoyStick)",
                     "isDirectory":false,
@@ -46,7 +46,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"center",
                     "isDirectory":false,
@@ -59,7 +59,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"1",
                     "isDirectory":false,
@@ -72,7 +72,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":6,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"2",
                     "isDirectory":false,
@@ -85,7 +85,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":7,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"4",
                     "isDirectory":false,
@@ -98,7 +98,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"6",
                     "isDirectory":false,
@@ -111,7 +111,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":9,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"8",
                     "isDirectory":false,
@@ -124,7 +124,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"3",
                     "isDirectory":false,
@@ -137,7 +137,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":11,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":11,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"7",
                     "isDirectory":false,
@@ -150,7 +150,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":12,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":12,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"5",
                     "isDirectory":false,
@@ -163,7 +163,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":13,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":13,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"touch",
                     "isDirectory":false,
@@ -181,7 +181,7 @@
                     "source":"src/script/JoyStick.js",
                     "searchKey":"Script,JoyStick",
                     "removeAble":true,
-                    "props":{"presetID":14,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":14,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"JoyStick",
                     "isDirectory":false,
@@ -195,7 +195,7 @@
                 {
                     "type":"Box",
                     "searchKey":"Box",
-                    "props":{"presetID":15,"preset":"laya/pages/prefab/JoyStick.prefab"},
+                    "props":{"presetID":15,"preset":"laya/pages/prefab/menu/JoyStick.prefab"},
                     "nodeParent":3,
                     "label":"centerPos",
                     "isDirectory":false,
@@ -222,7 +222,7 @@
             "selectedBox":48,
             "selecteID":50,
             "searchKey":"Box,joyStickButton,joyStickButton",
-            "props":{"y":545,"x":924,"var":"joyStickButton","presetID":1,"preset":"laya/pages/prefab/JoyStickButton.prefab","name":"joyStickButton"},
+            "props":{"y":545,"x":924,"var":"joyStickButton","presetID":1,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab","name":"joyStickButton"},
             "nodeParent":2,
             "maxID":51,
             "label":"joyStickButton",
@@ -235,7 +235,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/JoyStickButton.prefab"},
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
                     "nodeParent":52,
                     "label":"A",
                     "isDirectory":false,
@@ -248,7 +248,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/JoyStickButton.prefab"},
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
                     "nodeParent":52,
                     "label":"B",
                     "isDirectory":false,
@@ -264,7 +264,7 @@
                     "source":"src/script/JoyStickButton.js",
                     "searchKey":"Script,JoyStickButton",
                     "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/JoyStickButton.prefab"},
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
                     "nodeParent":52,
                     "label":"JoyStickButton",
                     "isDirectory":false,

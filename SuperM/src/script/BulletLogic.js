@@ -25,6 +25,10 @@ export default class BulletLogic extends Laya.Script {
         other.label == "TanLiBrick" ||
          other.label == "Wall") {
             this.owner.removeSelf();
+        } else if(other.label == "MonsterHead" || other.label == "MonsterBody") {
+            EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
+            this.owner.removeSelf();
+            return
         }
     }
 }

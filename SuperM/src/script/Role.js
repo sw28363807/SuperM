@@ -1,5 +1,6 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import GameContext from "../GameContext";
 
 export default class Role extends Laya.Script {
 
@@ -15,6 +16,7 @@ export default class Role extends Laya.Script {
     }
     
     onEnable() {
+        GameContext.role = this.owner;
         EventMgr.getInstance().registEvent(Events.Role_Move, this, this.onRoleWalk);
         EventMgr.getInstance().registEvent(Events.Role_Move_Stop, this, this.onRoleStopWalk);
         EventMgr.getInstance().registEvent(Events.Role_A_Button, this, this.onRoleAButton);
@@ -158,6 +160,6 @@ export default class Role extends Laya.Script {
     }
 
     onDisable() {
-
+        GameContext.role = null;
     }
 }

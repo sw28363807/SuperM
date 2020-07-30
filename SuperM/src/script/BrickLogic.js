@@ -33,7 +33,7 @@ export default class BrickLogic extends Laya.Script {
 
     onCreateBrokenBrick() {
         for (let index = 0; index < 7; index++) {
-            this.createBrokenCell("prefab/b"+ String(index + 1)+".prefab");
+            this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
         }
         this.owner.removeSelf();
     }

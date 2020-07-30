@@ -7,12 +7,14 @@ import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import BrickLogic from "./script/BrickLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
-import AILeftOrRight from "./script/AILeftOrRight"
-import MonsterLogic from "./MonsterLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
+import MonsterLogic from "./MonsterLogic"
+import AIFlyMonster from "./AIFlyMonster"
 import BrokenBrick from "./script/BrokenBrick"
 import BulletLogic from "./script/BulletLogic"
+import AILeftOrRight from "./script/AILeftOrRight"
 import GoldLogic from "./script/GoldLogic"
+import MoreTimeBrick from "./script/MoreTimeBrick"
 import HanbaoLogic from "./script/HanbaoLogic"
 import Role from "./script/Role"
 import WenhaoLogic from "./script/WenhaoLogic"
@@ -29,12 +31,14 @@ export default class GameConfig {
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
-		reg("script/AILeftOrRight.js",AILeftOrRight);
-		reg("MonsterLogic.js",MonsterLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
+		reg("MonsterLogic.js",MonsterLogic);
+		reg("AIFlyMonster.js",AIFlyMonster);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BulletLogic.js",BulletLogic);
+		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/GoldLogic.js",GoldLogic);
+		reg("script/MoreTimeBrick.js",MoreTimeBrick);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/Role.js",Role);
 		reg("script/WenhaoLogic.js",WenhaoLogic);
