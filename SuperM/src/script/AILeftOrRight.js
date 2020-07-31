@@ -20,7 +20,7 @@ export default class AILeftOrRight extends Laya.Script {
         // EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
 
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.ani = this.owner.getChildByName("ani");
+        this.render = this.owner.getChildByName("render");
         Laya.timer.loop(this.time, this, this.onTimeCallback);
     }
 
@@ -28,10 +28,10 @@ export default class AILeftOrRight extends Laya.Script {
         if (this.faceup == 0 || this.faceup == 1) {
             this.faceup = 1;
             this.currentVelocity = {x: this.speed, y: 0};
-            this.ani.scaleX = Math.abs(this.ani.scaleX);
+            this.render.scaleX = Math.abs(this.render.scaleX);
         } else {
             this.currentVelocity = {x: -this.speed, y: 0};
-            this.ani.scaleX = -1 * Math.abs(this.ani.scaleX);
+            this.render.scaleX = -1 * Math.abs(this.render.scaleX);
         }
         this.faceup = -1 * this.faceup;
     }

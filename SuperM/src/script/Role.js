@@ -11,6 +11,7 @@ export default class Role extends Laya.Script {
         this.speed = 9;
         this.jumpSpeed = 35;
         this.isInGround = false;
+        this.isShuiguan = false;
         this.faceup = 1;
         this.setRoleState(0);
     }
@@ -21,6 +22,7 @@ export default class Role extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Role_Move_Stop, this, this.onRoleStopWalk);
         EventMgr.getInstance().registEvent(Events.Role_A_Button, this, this.onRoleAButton);
         EventMgr.getInstance().registEvent(Events.Role_B_Button, this, this.onRoleBButton);
+        EventMgr.getInstance().registEvent(Events.Role_C_Button, this, this.onRoleCButton);
         EventMgr.getInstance().registEvent(Events.Role_Give_Speed, this, this.onRoleGiveSpeed);
         EventMgr.getInstance().registEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
         // let a = new Laya.RigidBody();
@@ -63,10 +65,17 @@ export default class Role extends Laya.Script {
     }
 
     processRoleWalk() {
-        if (this.walkDirect && this.walkDirect.x != 0) {
-            let linearVelocity = this.rigidBody.linearVelocity;
-            this.setMove(this.walkDirect.x * this.speed, linearVelocity.y);
+        if (this.walkDirect) {
+            if (this.walkDirect.x != 0) {
+                let linearVelocity = this.rigidBody.linearVelocity;
+                this.setMove(this.walkDirect.x * this.speed, linearVelocity.y);
+            } else {
+                if (this.isInGround && this.isShuiguan && this.walkDirect.y > 0) {
+                    EventMgr.getInstance().postEvent(Events.Role_Enter_Shuiguan);
+                }
+            }
         }
+
     }
 
     processFaceUp() {
@@ -103,7 +112,7 @@ export default class Role extends Laya.Script {
                 collider = contact.m_fixtureB.collider;
             }   
         }
-        if (foot && collider.label == "RoleFoot" && 
+        if (foot && collider.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
             this.onRoleGiveSpeed({x: this.getFaceup() * 200, y: -400});
             EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
@@ -111,10 +120,19 @@ export default class Role extends Laya.Script {
             this.onRoleGiveSpeed({x: -this.getFaceup() * 300, y: -400});
         }
         else if (foot && foot.contact.m_manifold.localNormal.y < 0 && other.label != "TanLiBrick") {
+            if (other.label == "ShuiguanHead") {
+                this.isShuiguan = true;
+            }
             this.isInGround = true;
             if (this.commandWalk == false) {
                 this.setMove(0, 0);
             }
+        }
+    }
+
+    onTriggerExit(other, self, contact) {
+        if (this.isShuiguan && self.label == "RoleFoot" && other.label == "ShuiguanHead") {
+            this.isShuiguan = false;
         }
     }
 
@@ -150,6 +168,9 @@ export default class Role extends Laya.Script {
             bullet.y = y + 30;
             EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: this.getFaceup(), y: 0});
         }));
+    }
+
+    onRoleCButton() {
     }
 
     getFaceup() {

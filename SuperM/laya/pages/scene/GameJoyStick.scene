@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":87,
+    "selectedBox":52,
+    "selecteID":60,
     "searchKey":"View",
     "props":{"width":1336,"height":750},
     "nodeParent":-1,
@@ -222,17 +222,18 @@
             "selectedBox":48,
             "selecteID":50,
             "searchKey":"Box,joyStickButton,joyStickButton",
-            "props":{"y":545,"x":924,"var":"joyStickButton","presetID":1,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab","name":"joyStickButton"},
+            "props":{"y":529,"x":1050,"var":"joyStickButton","presetID":1,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab","name":"joyStickButton"},
             "nodeParent":2,
             "maxID":51,
             "label":"joyStickButton",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":52,
             "child":[
                 {
+                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
@@ -246,6 +247,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"presetID":3,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
@@ -259,6 +261,21 @@
                         ]
                 },
                 {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"y":69,"x":132,"presetID":5,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
+                    "nodeParent":52,
+                    "label":"C",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":60,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/JoyStickButton.js",

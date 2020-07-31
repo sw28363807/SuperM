@@ -52,7 +52,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":0,"width":221,"presetID":6,"preset":"laya/pages/prefab/Shuiguan.prefab","label":"Shuiguan","height":28},
+            "props":{"y":0,"x":0,"width":221,"presetID":6,"preset":"laya/pages/prefab/Shuiguan.prefab","label":"ShuiguanHead","height":28},
             "nodeParent":266,
             "label":"BoxCollider(Shuiguan)",
             "isDirectory":false,

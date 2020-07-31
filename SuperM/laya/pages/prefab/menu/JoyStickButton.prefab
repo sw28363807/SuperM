@@ -2,10 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":48,
+    "selecteID":52,
     "searchKey":"Box,JoyStickButton",
     "props":{"y":0,"x":0,"presetID":1,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab","name":"JoyStickButton","isPresetRoot":true},
     "nodeParent":-1,
-    "maxID":52,
+    "maxID":53,
     "label":"JoyStickButton",
     "isOpen":true,
     "isDirectory":true,
@@ -38,6 +39,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":50,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,C",
+            "props":{"y":69,"x":131.5,"stateNum":"2","skin":"joystick/feedback_btn.png","presetID":5,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab","name":"C","labelSize":48,"label":"C"},
+            "nodeParent":48,
+            "label":"C",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":52,
             "child":[
                 ]
         },
