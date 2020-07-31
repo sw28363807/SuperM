@@ -1,6 +1,5 @@
-import EventMgr from "./script/EventMgr";
-import Events from "./script/Events";
-import AILeftOrRight from "./script/AILeftOrRight";
+import EventMgr from "./EventMgr";
+import Events from "./Events";
 
 export default class MonsterLogic extends Laya.Script {
 

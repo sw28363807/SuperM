@@ -2,18 +2,20 @@
     "x":0,
     "type":"Box",
     "selectedBox":303,
+    "selecteID":308,
     "searchKey":"Box,FlyMonsterRed",
     "props":{"y":0,"x":0,"width":172,"presetID":1,"preset":"laya/pages/prefab/monster/FlyMonsterRed.prefab","name":"FlyMonsterRed","isPresetRoot":true,"height":117},
     "nodeParent":-1,
     "maxID":312,
     "label":"FlyMonsterRed",
-    "isOpen":false,
+    "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
     "compId":303,
     "child":[
         {
+            "x":15,
             "type":"Animation",
             "searchKey":"Animation,render",
             "props":{"y":58,"x":86,"source":"anim/FlyMonsterRed.ani","presetID":2,"preset":"laya/pages/prefab/monster/FlyMonsterRed.prefab","name":"render","autoPlay":true,"autoAnimation":"ani1"},
@@ -27,6 +29,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -42,6 +45,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"RigidBody",
             "switchAble":true,
             "searchKey":"RigidBody",
@@ -57,6 +61,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -73,38 +78,7 @@
                 ]
         },
         {
-            "type":"Script",
-            "switchAble":true,
-            "source":"src/MonsterLogic.js",
-            "searchKey":"Script,MonsterLogic(lost)",
-            "removeAble":true,
-            "props":{"presetID":6,"preset":"laya/pages/prefab/monster/FlyMonsterRed.prefab"},
-            "nodeParent":303,
-            "label":"MonsterLogic(lost)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":308,
-            "child":[
-                ]
-        },
-        {
-            "type":"Script",
-            "switchAble":true,
-            "source":"src/AIFlyMonster.js",
-            "searchKey":"Script,AIFlyMonster(lost)",
-            "removeAble":true,
-            "props":{"presetID":7,"preset":"laya/pages/prefab/monster/FlyMonsterRed.prefab"},
-            "nodeParent":303,
-            "label":"AIFlyMonster(lost)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":309,
-            "child":[
-                ]
-        },
-        {
+            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/AIFlyMonster.js",
@@ -121,6 +95,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/MonsterLogic.js",

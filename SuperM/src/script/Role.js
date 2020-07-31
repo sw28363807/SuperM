@@ -116,10 +116,12 @@ export default class Role extends Laya.Script {
             (other.label == "MonsterHead")) {
             this.onRoleGiveSpeed({x: this.getFaceup() * 200, y: -400});
             EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
+        }
+        else if (foot && other.label == "KeBody") {
+            EventMgr.getInstance().postEvent(Events.Role_Shoot_Ke, {owner: other.owner});
         } else if (body && collider.label == "RoleBody" && (other.label == "MonsterBody")) {
             this.onRoleGiveSpeed({x: -this.getFaceup() * 300, y: -400});
-        }
-        else if (foot && foot.contact.m_manifold.localNormal.y < 0 && other.label != "TanLiBrick") {
+        } else if (foot && foot.contact.m_manifold.localNormal.y < 0 && other.label != "TanLiBrick") {
             if (other.label == "ShuiguanHead") {
                 this.isShuiguan = true;
             }

@@ -1,5 +1,5 @@
+import GameContext from "../GameContext";
 import Utils from "./Utils";
-import GameContext from "./GameContext";
 
 export default class AIFlyMonster extends Laya.Script {
 
