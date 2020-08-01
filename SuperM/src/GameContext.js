@@ -12,3 +12,4 @@ export default class GameContext extends Laya.Script {
 }
 
 GameContext.role = null;
+GameContext.joyStickScene = null;

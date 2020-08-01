@@ -1,3 +1,5 @@
+import GameContext from "../GameContext";
+
 export default class LevelLogic extends Laya.Script {
 
     constructor() { 
@@ -5,8 +7,12 @@ export default class LevelLogic extends Laya.Script {
     }
     
     onEnable() {
-        Laya.View.open("scene/GameJoyStick.scene", false, function(view) {
-        });
+        if (!GameContext.joyStickScene) {
+            Laya.View.open("scene/GameJoyStick.scene", false, function(scene) {
+                GameContext.joyStickScene = scene;
+                scene.zOrder = 999;
+            });
+        }
     }
 
     onDisable() {

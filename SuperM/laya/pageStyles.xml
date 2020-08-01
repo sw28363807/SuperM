@@ -1,5 +1,5 @@
 <page>
    <item name="scene/Level11.scene" props="" ifExport="默认" aName="Level1"/>
    <item name="scene/GameJoyStick.scene" props="" ifExport="默认" aName="GameControl"/>
-   <item name="scene/Level1.scene" props="" ifExport="默认" aName="Level1"/>
+   <item name="scene/Level1_1.scene" props="" ifExport="默认" aName="Level1"/>
 </page>

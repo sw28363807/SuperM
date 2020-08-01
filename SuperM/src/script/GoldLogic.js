@@ -5,7 +5,7 @@ export default class GoldLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other && other.label == "RoleHead" || other.label == "RoleFoot" ) {
+        if (other && other.label == "RoleHead" || other.label == "RoleFoot" || other.label == "RoleBody" ) {
             let gold = null;
             if (contact.m_fixtureA.collider.label == "Gold") {
                 gold = contact.m_nodeA;

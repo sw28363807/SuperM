@@ -5,6 +5,7 @@ export default class BrickLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
+        console.debug(other);
         if (other && other.label == "RoleHead") {
             let brick = null;
             if (contact.m_fixtureA.collider.label == "Brick") {
@@ -13,7 +14,6 @@ export default class BrickLogic extends Laya.Script {
                 brick = contact.m_nodeB;
             }
             if (brick && brick.contact.m_manifold.localNormal.y > 0) {
-
                 this.onCreateBrokenBrick();
             }
         }

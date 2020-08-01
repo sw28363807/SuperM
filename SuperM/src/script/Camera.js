@@ -11,7 +11,7 @@ export default class Camera extends Laya.Script {
         // console.debug(widthScale);
         this.owner.x = 1136/2 - x;
         // this.owner.y = this.owner.y
-        this.owner.y =  750/1.5 - y + this.zeroY;
+        this.owner.y =  750/2.3 - y; + this.zeroY;
     }
 
     onUpdate() {
