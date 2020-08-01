@@ -1,5 +1,6 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import GameContext from "../GameContext";
 
 export default class KeLogic extends Laya.Script {
 
@@ -8,13 +9,13 @@ export default class KeLogic extends Laya.Script {
     }
     
     onEnable() {
-        EventMgr.getInstance().registEvent(Events.Role_Shoot_Ke, this, this.onRoleShootKe);
+        EventMgr.getInstance().registEvent(Events.Role_Get_Ke, this, this.onRoleGetKe);
     }
 
     onDisable() {
     }
 
-    onRoleShootKe(data) {
-        console.debug("+++++++++++++++++++");
+    onRoleGetKe(data) {
+        this.owner.removeSelf();
     }
 }

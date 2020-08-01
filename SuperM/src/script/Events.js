@@ -13,6 +13,7 @@ Events.Role_B_Button = "Role_B_Button";
 Events.Role_C_Button = "Role_C_Button";
 Events.Role_Enter_Shuiguan = "Role_Enter_Shuiguan";
 Events.Role_Give_Speed = "Role_Give_Speed";
+Events.Role_Get_Ke = "Role_Get_Ke";
 Events.Role_Shoot_Ke = "Role_Shoot_Ke";
 Events.Bullet_Shoot = "Bullet_Shoot";
 Events.Monster_Foot_Dead = "Monster_Foot_Dead";

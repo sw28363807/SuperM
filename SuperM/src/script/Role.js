@@ -29,6 +29,8 @@ export default class Role extends Laya.Script {
         // a.linearVelocity
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.roleSpr = this.owner.getChildByName("roleSpr");
+        this.keSpr = this.roleSpr.getChildByName("ke");
+        this.keSpr.visible = false;
     }
 
     // 0 正常 1子弹 2待定
@@ -112,13 +114,13 @@ export default class Role extends Laya.Script {
                 collider = contact.m_fixtureB.collider;
             }   
         }
-        if (foot && collider.label == "RoleFoot" &&
+        if (other.label == "KeBody") {
+            EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+            this.keSpr.visible = true;
+        } else if (foot && collider.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
             this.onRoleGiveSpeed({x: this.getFaceup() * 200, y: -400});
             EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
-        }
-        else if (foot && other.label == "KeBody") {
-            EventMgr.getInstance().postEvent(Events.Role_Shoot_Ke, {owner: other.owner});
         } else if (body && collider.label == "RoleBody" && (other.label == "MonsterBody")) {
             this.onRoleGiveSpeed({x: -this.getFaceup() * 300, y: -400});
         } else if (foot && foot.contact.m_manifold.localNormal.y < 0 && other.label != "TanLiBrick") {
@@ -158,7 +160,14 @@ export default class Role extends Laya.Script {
         let x =  this.owner.x;
         let y =  this.owner.y;
         let parent = this.owner.parent;
-        Laya.loader.create("prefab/Bullet.prefab", Laya.Handler.create(this, function (prefabDef) {
+        let bulletType = 1;
+        let path = "prefab/Bullet.prefab";
+        if (this.keSpr.visible) {
+            path = "prefab/KeBullet.prefab";
+            this.keSpr.visible = false;
+            bulletType = 2;
+        }
+        Laya.loader.create(path, Laya.Handler.create(this, function (prefabDef) {
             let bullet = prefabDef.create();
             let faceup = this.getFaceup();
             parent.addChild(bullet);
@@ -168,7 +177,7 @@ export default class Role extends Laya.Script {
                 bullet.x = x - 40;
             }
             bullet.y = y + 30;
-            EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: this.getFaceup(), y: 0});
+            EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: this.getFaceup(), y: 0, bulletType: bulletType, owner: bullet});
         }));
     }
 

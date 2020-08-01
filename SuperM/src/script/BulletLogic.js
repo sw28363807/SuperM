@@ -17,7 +17,17 @@ export default class BulletLogic extends Laya.Script {
     }
 
     onBulletShot(data) {
-        this.rigidBody.setVelocity({x: data.x * 30, y: 10});
+        if (data.owner != this.owner) {
+            return;
+        }
+        this.bulletType = data.bulletType;
+        if (this.bulletType == 1) {
+            this.rigidBody.setVelocity({x: data.x * 30, y: 10});
+        } else if (this.bulletType == 2) {
+            this.rigidBody.setVelocity({x: data.x * 30, y: 3});
+            new Laya.RigidBody()
+            this.rigidBody.angularVelocity = 10;
+        }
     }
 
     onTriggerEnter(other, self, contact) {
