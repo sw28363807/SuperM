@@ -1,3 +1,5 @@
+import GameContext from "../GameContext";
+
 export default class Camera extends Laya.Script {
 
     constructor() { 
@@ -15,13 +17,18 @@ export default class Camera extends Laya.Script {
     }
 
     onUpdate() {
-        let role =  this.owner.getChildByName("Role");
-        if (role) {
-            this.lookAt(role.x, role.y);
+        if (this.role) {
+            this.lookAt(this.role.x, this.role.y);
         }
     }
     
     onEnable() {
+        this.role =  this.owner.getChildByName("Role");
+        if (GameContext.initRolePoint && this.owner.name == "gameScene") {
+            this.role.x = GameContext.initRolePoint.x;
+            this.role.y = GameContext.initRolePoint.y;
+        }
+        GameContext.initRolePoint
         let w =  Laya.Browser.width;
         let h =  Laya.Browser.height;
         Laya.Physics.I.positionIterations = 8;

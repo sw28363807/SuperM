@@ -1,8 +1,11 @@
+import GameContext from "../GameContext";
+
 export default class JoyStick extends Laya.Script {
 
     constructor() { 
         super();
         this.direct = null;
+        GameContext.joyStickDirect = null;
         this.directChangeHandler = null;
         this.stopHandler = null;
         this.canCommand = false;
@@ -50,6 +53,7 @@ export default class JoyStick extends Laya.Script {
                 this.startPoint = {x: e.stageX, y: e.stageY};
             }
             this.direct = null;
+            GameContext.joyStickDirect = null;
         });
 
         this.touch.on(Laya.Event.MOUSE_MOVE, this, function(e) {
@@ -80,18 +84,20 @@ export default class JoyStick extends Laya.Script {
                     let direct = this.processDirect(this.center.x, this.center.y);
                     if(direct != this.direct) {
                         this.direct = direct;
+                        GameContext.joyStickDirect = direct;
                         if(this.directChangeHandler) {
                             let name =  this.direct.name;
                             let dir = this.dirMap[Number(name)];
                             this.directChangeHandler.runWith(this.dirMap[Number(name) - 1]);
                         }
-                    }  
+                    }
                 } else {
                     if(this.touchId == e.touchId) {
                         if(this.stopHandler) {
                             this.stopHandler.run();
                         }
                         this.direct = null;
+                        GameContext.joyStickDirect = null;
                     }
                 }
             }
@@ -106,6 +112,7 @@ export default class JoyStick extends Laya.Script {
                     this.stopHandler.run();
                 }
                 this.direct = null;
+                GameContext.joyStickDirect = null;
             }
         });
 
@@ -119,6 +126,7 @@ export default class JoyStick extends Laya.Script {
                     this.stopHandler.run();
                 }
                 this.direct = null;
+                GameContext.joyStickDirect = null;
             }
         });
     }

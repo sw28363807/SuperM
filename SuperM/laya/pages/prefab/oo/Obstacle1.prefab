@@ -35,7 +35,7 @@
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"type":"static","presetID":3,"preset":"laya/pages/prefab/oo/Obstacle1.prefab","mask":62,"category":1},
+            "props":{"type":"static","presetID":3,"preset":"laya/pages/prefab/oo/Obstacle1.prefab","mask":62,"label":"Ground","category":1},
             "nodeParent":187,
             "label":"RigidBody(Obstacle1)",
             "isDirectory":false,

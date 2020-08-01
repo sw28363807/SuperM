@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":738,
+    "selecteID":4,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750},
     "nodeParent":-1,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel,bottom",
-            "props":{"y":750,"x":0,"width":1336,"name":"bottom","height":1000,"bgColor":"#3d3636"},
+            "props":{"y":750,"x":-1684,"width":5000,"name":"bottom","height":1000,"bgColor":"#3d3636"},
             "nodeParent":2,
             "label":"bottom",
             "isOpen":false,
@@ -32,7 +32,7 @@
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"y":0,"x":0,"width":1336,"height":1000},
+                    "props":{"y":0,"x":0,"width":5000,"height":1000},
                     "nodeParent":4,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -359,24 +359,25 @@
             "selectedBox":266,
             "selecteID":269,
             "searchKey":"Sprite",
-            "props":{"y":529,"x":1115,"presetID":1,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+            "props":{"y":529,"x":1115,"presetID":1,"preset":"laya/pages/prefab/ShuiguanExit.prefab"},
             "nodeParent":2,
             "maxID":270,
-            "label":"Shuiguan",
-            "isOpen":false,
+            "label":"ShuiguanExit",
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":523,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ShuiguanExit.prefab"},
                     "nodeParent":523,
-                    "label":"BoxCollider(Shuiguan)",
+                    "label":"BoxCollider(ShuiguanExit)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -385,13 +386,14 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
                     "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ShuiguanExit.prefab"},
                     "nodeParent":523,
-                    "label":"RigidBody(Shuiguan)",
+                    "label":"RigidBody(ShuiguanExit)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -400,13 +402,14 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"presetID":6,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/ShuiguanExit.prefab"},
                     "nodeParent":523,
-                    "label":"BoxCollider(Shuiguan)",
+                    "label":"BoxCollider(ShuiguanExit)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -489,14 +492,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":660,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -512,7 +514,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -528,7 +529,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -564,14 +564,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":661,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -587,7 +586,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -603,7 +601,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -639,14 +636,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":665,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -662,7 +658,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -678,7 +673,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -714,14 +708,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":669,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -737,7 +730,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -753,7 +745,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -789,14 +780,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":673,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -812,7 +802,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -828,7 +817,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -864,14 +852,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":677,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -887,7 +874,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -903,7 +889,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -939,14 +924,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":678,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -962,7 +946,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -978,7 +961,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1014,14 +996,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":682,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1037,7 +1018,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1053,7 +1033,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1089,14 +1068,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":686,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1112,7 +1090,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1128,7 +1105,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1164,14 +1140,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":690,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1187,7 +1162,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1203,7 +1177,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1239,14 +1212,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":694,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1262,7 +1234,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1278,7 +1249,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1314,14 +1284,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":698,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1337,7 +1306,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1353,7 +1321,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1389,14 +1356,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":702,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1412,7 +1378,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1428,7 +1393,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1464,14 +1428,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":706,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1487,7 +1450,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1503,7 +1465,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1539,14 +1500,13 @@
             "nodeParent":2,
             "maxID":93,
             "label":"Brick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":710,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1562,7 +1522,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1578,7 +1537,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickLogic.js",
@@ -1614,14 +1572,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":714,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1637,7 +1594,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1653,7 +1609,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -1689,14 +1644,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":718,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1712,7 +1666,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1728,7 +1681,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -1764,14 +1716,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":722,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1787,7 +1738,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1803,7 +1753,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -1839,14 +1788,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":726,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1862,7 +1810,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1878,7 +1825,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -1914,14 +1860,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":730,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1937,7 +1882,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1953,7 +1897,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -1989,14 +1932,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":734,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2012,7 +1954,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2028,7 +1969,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -2064,14 +2004,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":738,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2087,7 +2026,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2103,7 +2041,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",

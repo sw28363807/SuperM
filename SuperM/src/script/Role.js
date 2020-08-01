@@ -11,7 +11,8 @@ export default class Role extends Laya.Script {
         this.speed = 9;
         this.jumpSpeed = 35;
         this.isInGround = false;
-        this.isShuiguan = false;
+        this.isHurting = false;
+        this.shuiguanState = 0; // 0 不在水管 1 进水管 2 出水管
         this.faceup = 1;
         this.setRoleState(0);
     }
@@ -53,10 +54,16 @@ export default class Role extends Laya.Script {
     }
 
     setMove(px, py) {
-        this.rigidBody.setVelocity({x: px, y: py});
+        if (this.isHurting) {
+            return;
+        }
+        this.rigidBody.setVelocity({x: px, y: py});        
     }
 
     onRoleWalk(data) {
+        if (this.isHurting) {
+            return;
+        }
         this.commandWalk = true;
         this.walkDirect = data;
         this.processRoleWalk();
@@ -77,14 +84,13 @@ export default class Role extends Laya.Script {
     }
 
     processRoleWalk() {
+        if (this.isHurting) {
+            return;
+        }
         if (this.walkDirect) {
             if (this.walkDirect.x != 0) {
                 let linearVelocity = this.rigidBody.linearVelocity;
                 this.setMove(this.walkDirect.x * this.speed, linearVelocity.y);
-            } else {
-                if (this.isInGround && this.isShuiguan && this.walkDirect.y > 0) {
-                    EventMgr.getInstance().postEvent(Events.Role_Enter_Shuiguan);
-                }
             }
         }
         let linearVelocity = this.rigidBody.linearVelocity;
@@ -136,15 +142,22 @@ export default class Role extends Laya.Script {
             this.keSpr.visible = true;
         } else if (foot && collider.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
-            this.onRoleGiveSpeed({x: this.getFaceup() * 200, y: -400});
+            this.onRoleGiveSpeed({x: this.getFaceup() * 400, y: -500});
             EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
         } else if (body && collider.label == "RoleBody" && (other.label == "MonsterBody")) {
-            this.onRoleGiveSpeed({x: -this.getFaceup() * 400, y: -400});
+            this.setMove(0, 0);
+            this.onRoleGiveSpeed({x: -this.getFaceup() * 400, y: -500});
             this.showHurtEffect();
+            this.isHurting = true;
+            this.playAni("stand");
+            this.isInGround = false;
+            this.walkDirect = null;
         } else if (foot && other.label != "TanLiBrick") {
             if (other.label == "ShuiguanHead") {
-                this.isShuiguan = true;
-                Laya.Scene.open("scene/Level1_x.scene");
+                this.shuiguanState = 1;
+                GameContext.initRolePoint = {x: this.owner.x, y: this.owner.y};
+            } else if (other.label == "ShuiguanHeadExit") {
+                this.shuiguanState = 2;
             }
             this.isInGround = true;
             if (this.commandWalk == false) {
@@ -152,6 +165,12 @@ export default class Role extends Laya.Script {
                 this.playAni("stand");
             } else {
                 this.playAni("run");
+            }
+            if (this.isHurting) {
+                this.isHurting = false;
+                this.walkDirect = GameContext.joyStickDirect;
+                this.setMove(0, 0);
+                this.playAni("stand");
             }
             
         }
@@ -173,34 +192,44 @@ export default class Role extends Laya.Script {
                 }) );
             }) );
         }) );
-
     }
 
     onTriggerExit(other, self, contact) {
-        if (this.isShuiguan && self.label == "RoleFoot" && other.label == "ShuiguanHead") {
-            this.isShuiguan = false;
+        if (self.label == "RoleFoot") {
+            this.playAni("jump");
+            this.shuiguanState = 0;
         }
-        this.playAni("jump");
     }
 
     onRoleAButton() {
         if (this.isInGround == true) {
             this.isInGround = false;
             this.playAni("jump");
+            this.shuiguanState = 0;
             this.rigidBody.applyLinearImpulseToCenter({x: 0, y: -800});
         }
     }
 
     onRoleGiveSpeed(speedData) {
+        if (this.isHurting) {
+            return;
+        }
         this.isInGround = false;
+        this.shuiguanState = 0;
         this.rigidBody.applyLinearImpulseToCenter(speedData);
     }
 
     onRoleHasBullet() {
+        if (this.isHurting) {
+            return;
+        }
         this.setRoleState(1);
     }
 
     onRoleBButton() {
+        if (this.isHurting) {
+            return;
+        }
         let x =  this.owner.x;
         let y =  this.owner.y;
         let parent = this.owner.parent;
@@ -226,6 +255,16 @@ export default class Role extends Laya.Script {
     }
 
     onRoleCButton() {
+        if (this.isHurting) {
+            return;
+        }
+        if (this.shuiguanState == 1) {
+            this.shuiguanState = 0;
+            Laya.Scene.open("scene/LevelX.scene");
+        } else if (this.shuiguanState == 2) {
+            this.shuiguanState = 0;
+            Laya.Scene.open("scene/Level1_1.scene");
+        }
     }
 
     getFaceup() {
