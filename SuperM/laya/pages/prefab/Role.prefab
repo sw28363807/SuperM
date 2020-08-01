@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Box",
-    "selectedBox":9,
-    "selecteID":68,
+    "selectedBox":54,
+    "selecteID":80,
     "searchKey":"Box,Role",
     "props":{"y":0,"x":0,"width":120,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","name":"Role","isPresetRoot":true,"height":120},
     "nodeParent":-1,
-    "maxID":69,
+    "maxID":83,
     "label":"Role",
     "isOpen":true,
     "isDirectory":true,
@@ -14,35 +14,6 @@
     "hasChild":true,
     "compId":54,
     "child":[
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,roleSpr,roleSpr",
-            "props":{"y":60,"x":60,"width":105,"var":"roleSpr","texture":"role/role.png","presetID":2,"preset":"laya/pages/prefab/Role.prefab","pivotY":58,"pivotX":52,"name":"roleSpr","height":115},
-            "nodeParent":54,
-            "label":"roleSpr",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":9,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite,ke",
-                    "props":{"zOrder":2,"y":41,"x":83,"texture":"monster/ke.png","presetID":10,"preset":"laya/pages/prefab/Role.prefab","name":"ke"},
-                    "nodeParent":9,
-                    "label":"ke",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":68,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
-        },
         {
             "x":15,
             "type":"Script",
@@ -57,23 +28,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":55,
-            "child":[
-                ],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"BoxCollider",
-            "switchAble":true,
-            "searchKey":"BoxCollider",
-            "removeAble":true,
-            "props":{"y":99,"x":8,"width":105,"presetID":6,"preset":"laya/pages/prefab/Role.prefab","label":"RoleFoot","height":20,"friction":0},
-            "nodeParent":54,
-            "label":"BoxCollider(Role)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":56,
             "child":[
                 ],
             "$HIDDEN":false
@@ -97,17 +51,45 @@
         },
         {
             "x":15,
-            "type":"BoxCollider",
-            "switchAble":true,
-            "searchKey":"BoxCollider",
-            "removeAble":true,
-            "props":{"y":4,"x":40,"width":40,"presetID":8,"preset":"laya/pages/prefab/Role.prefab","label":"RoleHead","height":10,"friction":0},
+            "type":"Animation",
+            "searchKey":"Animation,roleSpr",
+            "props":{"y":47,"x":60,"width":100,"source":"anim/Role1.ani","scaleX":1,"presetID":10,"preset":"laya/pages/prefab/Role.prefab","name":"roleSpr","height":100},
             "nodeParent":54,
-            "label":"BoxCollider(Role)",
+            "label":"roleSpr",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":69,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite,ke",
+                    "props":{"y":-12,"x":29,"texture":"monster/ke.png","presetID":11,"preset":"laya/pages/prefab/Role.prefab","name":"ke"},
+                    "nodeParent":69,
+                    "label":"ke",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":70,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"PolygonCollider",
+            "switchAble":true,
+            "searchKey":"PolygonCollider",
+            "removeAble":true,
+            "props":{"y":-3.75,"x":12.25,"presetID":14,"preset":"laya/pages/prefab/Role.prefab","friction":0},
+            "nodeParent":54,
+            "label":"PolygonCollider(Role)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":63,
+            "compId":75,
             "child":[
                 ]
         },
@@ -117,13 +99,45 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":29,"x":7,"width":105,"presetID":9,"preset":"laya/pages/prefab/Role.prefab","label":"RoleBody","height":59,"density":10},
+            "props":{"y":0,"x":38,"width":53,"presetID":15,"preset":"laya/pages/prefab/Role.prefab","label":"RoleHead","height":34,"friction":0},
             "nodeParent":54,
             "label":"BoxCollider(Role)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":67,
+            "compId":80,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":34,"x":37,"width":54,"presetID":16,"preset":"laya/pages/prefab/Role.prefab","label":"RoleBody","height":42,"friction":0},
+            "nodeParent":54,
+            "label":"BoxCollider(Role)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":81,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":77,"x":29,"width":69,"presetID":17,"preset":"laya/pages/prefab/Role.prefab","label":"RoleFoot","height":43,"friction":0},
+            "nodeParent":54,
+            "label":"BoxCollider(Role)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":82,
             "child":[
                 ]
         }],

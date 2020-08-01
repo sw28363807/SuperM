@@ -11,6 +11,7 @@ export default class Camera extends Laya.Script {
         // console.debug(widthScale);
         this.owner.x = 1136/2 - x;
         // this.owner.y = this.owner.y
+        this.owner.y =  750/1.5 - y + this.zeroY;
     }
 
     onUpdate() {
@@ -23,7 +24,7 @@ export default class Camera extends Laya.Script {
     onEnable() {
         let w =  Laya.Browser.width;
         let h =  Laya.Browser.height;
-        Laya.Physics.I.positionIterations = 3;
+        Laya.Physics.I.positionIterations = 8;
         Laya.Physics.I.worldRoot = this.owner;
         this.zeroY = -100;
         if(w/h > 2.0) {
