@@ -1,5 +1,6 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import GameContext from "../GameContext";
 
 export default class HanbaoLogic extends Laya.Script {
 
@@ -26,7 +27,7 @@ export default class HanbaoLogic extends Laya.Script {
                 reward = contact.m_nodeB;
             }
             if (reward) {
-                EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
+                EventMgr.getInstance().postEvent(Events.Role_Change_Big);
                 this.owner.removeSelf();
             }
         }

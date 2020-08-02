@@ -7,6 +7,12 @@ export default class LevelLogic extends Laya.Script {
     }
     
     onEnable() {
+        if (!GameContext.gameTopScene) {
+            Laya.View.open("scene/GameTop.scene", false, function(scene) {
+                GameContext.gameTopScene = scene;
+                scene.zOrder = 999;
+            });
+        }
         if (!GameContext.joyStickScene) {
             Laya.View.open("scene/GameJoyStick.scene", false, function(scene) {
                 GameContext.joyStickScene = scene;

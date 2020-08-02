@@ -1,3 +1,7 @@
+import EventMgr from "./EventMgr";
+import Events from "./Events";
+import GameContext from "../GameContext";
+
 export default class GoldLogic extends Laya.Script {
 
     constructor() {
@@ -14,6 +18,8 @@ export default class GoldLogic extends Laya.Script {
             }
             if (gold) {
                 this.owner.removeSelf();
+                GameContext.gameGoldNumber++;
+                EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
             }
         }
     }

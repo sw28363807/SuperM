@@ -3,16 +3,18 @@ import JoyStick from "./script/JoyStick"
 import JoyStickButton from "./script/JoyStickButton"
 import AdjustScene from "./script/AdjustScene"
 import GameJoyStick from "./script/GameJoyStick"
+import GameTopLogic from "./script/GameTopLogic"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
 import BrickLogic from "./script/BrickLogic"
 import GoldLogic from "./script/GoldLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
-import Role from "./script/Role"
 import AILeftOrRight from "./script/AILeftOrRight"
 import MonsterLogic from "./script/MonsterLogic"
 import FlyWoniuLogic from "./script/FlyWoniuLogic"
+import WenhaoLogic from "./script/WenhaoLogic"
+import Role from "./script/Role"
 import BrokenBrick from "./script/BrokenBrick"
 import BulletLogic from "./script/BulletLogic"
 import AIFlyMonster from "./script/AIFlyMonster"
@@ -20,7 +22,6 @@ import WoniuLogic from "./script/WoniuLogic"
 import KeLogic from "./script/KeLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
-import WenhaoLogic from "./script/WenhaoLogic"
 
 export default class GameConfig {
     static init() {
@@ -30,16 +31,18 @@ export default class GameConfig {
 		reg("script/JoyStickButton.js",JoyStickButton);
 		reg("script/AdjustScene.js",AdjustScene);
 		reg("script/GameJoyStick.js",GameJoyStick);
+		reg("script/GameTopLogic.js",GameTopLogic);
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);
-		reg("script/Role.js",Role);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/MonsterLogic.js",MonsterLogic);
 		reg("script/FlyWoniuLogic.js",FlyWoniuLogic);
+		reg("script/WenhaoLogic.js",WenhaoLogic);
+		reg("script/Role.js",Role);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/AIFlyMonster.js",AIFlyMonster);
@@ -47,7 +50,6 @@ export default class GameConfig {
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
-		reg("script/WenhaoLogic.js",WenhaoLogic);
     }
 }
 GameConfig.width = 1336;

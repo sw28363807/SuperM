@@ -1,3 +1,7 @@
+import GameContext from "../GameContext";
+import EventMgr from "./EventMgr";
+import Events from "./Events";
+
 export default class MoreTimeBrick extends Laya.Script {
 
     constructor() { 
@@ -53,12 +57,15 @@ export default class MoreTimeBrick extends Laya.Script {
         this.gold.y = y;
         this.gold.visible = true;
         this.gold.alpha = 0;
-        Laya.Tween.to(this.gold, {alpha: 1}, 200, Laya.Ease.linearIn, Laya.Handler.create(this, function(){
+        Laya.Tween.to(this.gold, {alpha: 1}, 500, Laya.Ease.linearIn, Laya.Handler.create(this, function(){
             
         }), 0);
-        Laya.Tween.to(this.gold, {y: -100}, 200, Laya.Ease.linearIn, Laya.Handler.create(this, function() {
+        Laya.Tween.to(this.gold, {y: -100}, 500, Laya.Ease.linearIn, Laya.Handler.create(this, function() {
             this.gold.visible = false;
         }), 0);
+
+        GameContext.gameGoldNumber++;
+        EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
     }
 
     onDisable() {

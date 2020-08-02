@@ -5,7 +5,6 @@ export default class BrickLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        console.debug(other);
         if (other && other.label == "RoleHead") {
             let brick = null;
             if (contact.m_fixtureA.collider.label == "Brick") {

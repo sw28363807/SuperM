@@ -123,6 +123,7 @@ P C649CCF0 posui (5).png
 P 1D6EEDFB posui (6).png
 P A63DCF1F posui (7).png
 P 68749DDD reward.png
+P AB0386F2 rewardFrame.png
 P 6A4D1EB4 Shuiguan.png
 P D3338000 tlzhuan (1).png
 P C99AC8AF tlzhuan (2).png
@@ -139,7 +140,6 @@ P 6CFF0122 zhuan (2).png
 P 7C622836 zhuan (3).png
 P 3B46225F zhuan (4).png
 P A1D62BA9 zhuan (5).png
-P AB0386F2 奖励框.png
 D other1
 R 0792582D some (1).png
 R ED7021B0 some (10).png
@@ -158,10 +158,10 @@ R E1AF6A72 some (7).png
 R B721063A some (8).png
 R 24FF362D some (9).png
 D role
-P 33B6E9EB ground_run (1).png
-P 4D829523 ground_run (2).png
-P 33B6E9EB ground_run (3).png
-P 8B3091E7 jump (1).png
-P 9270ADC9 jump (2).png
+P AF9AD827 ground_run (1).png
+P CF9DAD4A ground_run (2).png
+P AF9AD827 ground_run (3).png
+P C174B90A jump (1).png
+P B6B335AD jump (2).png
 P 3D5AE556 role.png
-P 33665CE9 stand (1).png
+P 39D8AD65 stand (1).png
