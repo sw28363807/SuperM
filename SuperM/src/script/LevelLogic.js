@@ -19,6 +19,8 @@ export default class LevelLogic extends Laya.Script {
                 scene.zOrder = 999;
             });
         }
+
+        GameContext.gameScene = this.owner;
     }
 
     onDisable() {

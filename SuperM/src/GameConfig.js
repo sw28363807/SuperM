@@ -3,26 +3,27 @@ import JoyStick from "./script/JoyStick"
 import JoyStickButton from "./script/JoyStickButton"
 import AdjustScene from "./script/AdjustScene"
 import GameJoyStick from "./script/GameJoyStick"
+import GameLogoScene from "./script/GameLogoScene"
 import GameTopLogic from "./script/GameTopLogic"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
 import Role from "./script/Role"
-import BrickGoldLogic from "./script/BrickGoldLogic"
 import GoldLogic from "./script/GoldLogic"
-import BrickLogic from "./script/BrickLogic"
-import BrokenBrick from "./script/BrokenBrick"
-import BulletLogic from "./script/BulletLogic"
+import MoreTimeBrick from "./script/MoreTimeBrick"
 import AILeftOrRight from "./script/AILeftOrRight"
 import MonsterLogic from "./script/MonsterLogic"
+import BrickLogic from "./script/BrickLogic"
+import WenhaoLogic from "./script/WenhaoLogic"
+import WoniuLogic from "./script/WoniuLogic"
+import BrickGoldLogic from "./script/BrickGoldLogic"
+import BrokenBrick from "./script/BrokenBrick"
+import BulletLogic from "./script/BulletLogic"
 import AIFlyMonster from "./script/AIFlyMonster"
 import FlyWoniuLogic from "./script/FlyWoniuLogic"
-import WoniuLogic from "./script/WoniuLogic"
-import MoreTimeBrick from "./script/MoreTimeBrick"
 import KeLogic from "./script/KeLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
-import WenhaoLogic from "./script/WenhaoLogic"
 
 export default class GameConfig {
     static init() {
@@ -32,26 +33,27 @@ export default class GameConfig {
 		reg("script/JoyStickButton.js",JoyStickButton);
 		reg("script/AdjustScene.js",AdjustScene);
 		reg("script/GameJoyStick.js",GameJoyStick);
+		reg("script/GameLogoScene.js",GameLogoScene);
 		reg("script/GameTopLogic.js",GameTopLogic);
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
 		reg("script/Role.js",Role);
-		reg("script/BrickGoldLogic.js",BrickGoldLogic);
 		reg("script/GoldLogic.js",GoldLogic);
-		reg("script/BrickLogic.js",BrickLogic);
-		reg("script/BrokenBrick.js",BrokenBrick);
-		reg("script/BulletLogic.js",BulletLogic);
+		reg("script/MoreTimeBrick.js",MoreTimeBrick);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/MonsterLogic.js",MonsterLogic);
+		reg("script/BrickLogic.js",BrickLogic);
+		reg("script/WenhaoLogic.js",WenhaoLogic);
+		reg("script/WoniuLogic.js",WoniuLogic);
+		reg("script/BrickGoldLogic.js",BrickGoldLogic);
+		reg("script/BrokenBrick.js",BrokenBrick);
+		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/AIFlyMonster.js",AIFlyMonster);
 		reg("script/FlyWoniuLogic.js",FlyWoniuLogic);
-		reg("script/WoniuLogic.js",WoniuLogic);
-		reg("script/MoreTimeBrick.js",MoreTimeBrick);
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
-		reg("script/WenhaoLogic.js",WenhaoLogic);
     }
 }
 GameConfig.width = 1336;
@@ -60,7 +62,7 @@ GameConfig.scaleMode ="fixedwidth";
 GameConfig.screenMode = "none";
 GameConfig.alignV = "top";
 GameConfig.alignH = "left";
-GameConfig.startScene = "scene/Level1_1.scene";
+GameConfig.startScene = "scene/GameLogoScene.scene";
 GameConfig.sceneRoot = "";
 GameConfig.debug = false;
 GameConfig.stat = false;

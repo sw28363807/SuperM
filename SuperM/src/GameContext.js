@@ -21,3 +21,7 @@ GameContext.gameRoleNumber = 3;
 GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 0;
 GameContext.gameRoleState = 0;
+GameContext.gameDebugMonsterNotRun = true;
+
+
+GameContext.gameScene = null;

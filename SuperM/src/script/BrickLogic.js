@@ -12,7 +12,7 @@ export default class BrickLogic extends Laya.Script {
             } else if (contact.m_fixtureB.collider.label == "Brick") {
                 brick = contact.m_nodeB;
             }
-            if (brick && brick.contact.m_manifold.localNormal.y < 0) {
+            if (brick) {
                 this.onCreateBrokenBrick();
             }
         }

@@ -2,9 +2,8 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":4,
     "searchKey":"Scene",
-    "props":{"width":1336,"height":750},
+    "props":{"width":1336,"height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
     "maxID":742,
     "label":"Scene",
@@ -363,14 +362,13 @@
             "nodeParent":2,
             "maxID":270,
             "label":"ShuiguanExit",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":523,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -386,7 +384,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -402,7 +399,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",

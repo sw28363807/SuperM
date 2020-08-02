@@ -1,5 +1,6 @@
 import Events from "./Events";
 import EventMgr from "./EventMgr";
+import GameContext from "../GameContext";
 
 export default class AILeftOrRight extends Laya.Script {
 
@@ -17,8 +18,10 @@ export default class AILeftOrRight extends Laya.Script {
     }
     
     onEnable() {
+        if (GameContext.gameDebugMonsterNotRun) {
+            this.enabled = false;
+        }
         // EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
-
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.render = this.owner.getChildByName("render");
         Laya.timer.loop(this.time, this, this.onTimeCallback);
