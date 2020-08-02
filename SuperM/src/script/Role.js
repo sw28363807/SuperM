@@ -222,20 +222,24 @@ export default class Role extends Laya.Script {
             }   
         }
         if (other.label == "KeBody") {
-            if (GameContext.bodyState == 1 && self.label == "RoleBody") {
-                EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
-                this.keSpr.visible = true;
+            if (GameContext.bodyState == 1) {
+                if (self.label == "RoleBody") {
+                    EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+                    this.keSpr.visible = true;
+                }
             } else {
-                if (self.label == "RoleFoot") {
-                    this.shootKe();
-                    EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
-                    this.notHurtRole = true;
-                    Laya.timer.once(500, this, function() {
-                        this.notHurtRole = false;
-                    });
-                } else {
-                    this.hurtRole();
-                    EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+                if (this.keSpr.visible == false) {
+                    if (self.label == "RoleFoot") {
+                        this.shootKe();
+                        EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+                        this.notHurtRole = true;
+                        Laya.timer.once(500, this, function() {
+                            this.notHurtRole = false;
+                        });
+                    } else {
+                        this.hurtRole();
+                        EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+                    }
                 }
             }
         } else if (foot && collider.label == "RoleFoot" &&
@@ -304,7 +308,11 @@ export default class Role extends Laya.Script {
             this.isInGround = false;
             this.playAni("jump");
             this.shuiguanState = 0;
-            this.rigidBody.setVelocity({x: 0, y: this.roleJumpPower});
+            let xSpeed = 0;
+            if (this.walkDirect) {
+                xSpeed = this.walkDirect.x * 10;
+            }
+            this.rigidBody.setVelocity({x: xSpeed, y: this.roleJumpPower});
         }
     }
 

@@ -31,7 +31,7 @@ export default class Camera extends Laya.Script {
         GameContext.initRolePoint
         let w =  Laya.Browser.width;
         let h =  Laya.Browser.height;
-        Laya.Physics.I.positionIterations = 8;
+        Laya.Physics.I.positionIterations = 3;
         Laya.Physics.I.worldRoot = this.owner;
         this.zeroY = -100;
         if(w/h > 2.0) {
