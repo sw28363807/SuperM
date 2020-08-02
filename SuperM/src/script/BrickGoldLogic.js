@@ -1,4 +1,8 @@
-export default class BrickLogic extends Laya.Script {
+import GameContext from "../GameContext";
+import EventMgr from "./EventMgr";
+import Events from "./Events";
+
+export default class BrickGoldLogic extends Laya.Script {
 
     constructor() { 
         super();
@@ -34,7 +38,12 @@ export default class BrickLogic extends Laya.Script {
         for (let index = 0; index < 7; index++) {
             this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
         }
-        this.owner.removeSelf();
+        this.owner.play(0, false, "ani2");
+        this.owner.on(Laya.Event.COMPLETE, this, function() {
+            this.owner.removeSelf();
+            GameContext.gameGoldNumber++;
+            EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
+        });
     }
     
     onEnable() {
