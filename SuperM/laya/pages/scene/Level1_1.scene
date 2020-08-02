@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":527,
+    "selecteID":495,
     "searchKey":"Scene,gameScene",
     "props":{"width":20000,"name":"gameScene","height":750},
     "nodeParent":-1,
-    "maxID":530,
+    "maxID":534,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -2410,7 +2410,7 @@
             "selectedBox":138,
             "selecteID":147,
             "searchKey":"Box",
-            "props":{"y":488,"x":2099.5,"presetID":1,"preset":"laya/pages/prefab/monster/Dog.prefab"},
+            "props":{"y":630,"x":2926,"presetID":1,"preset":"laya/pages/prefab/monster/Dog.prefab"},
             "nodeParent":2,
             "maxID":148,
             "label":"Dog",
@@ -3395,6 +3395,81 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":82,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":173,
+            "selecteID":175,
+            "searchKey":"Animation",
+            "props":{"y":525,"x":1579,"presetID":1,"preset":"laya/pages/prefab/Wenhao.prefab"},
+            "nodeParent":2,
+            "maxID":177,
+            "label":"Wenhao",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":530,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Wenhao.prefab"},
+                    "nodeParent":530,
+                    "label":"BoxCollider(Wenhao)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":531,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Wenhao.prefab"},
+                    "nodeParent":530,
+                    "label":"RigidBody(Wenhao)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":532,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/WenhaoLogic.js",
+                    "searchKey":"Script,WenhaoLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Wenhao.prefab"},
+                    "nodeParent":530,
+                    "label":"WenhaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":533,
                     "child":[
                         ]
                 }],

@@ -66,17 +66,12 @@ export default class Role extends Laya.Script {
         this.roleSpr.play(0, loop, ani);
     }
 
-    // 0 正常 1子弹 2待定
+    // 0 正常 1子弹
     setRoleState(state) {
         if (this.isDie) {
             return;
         }
-        this.state = state;
-        if (this.state == 0) {
-            // this.colorCom.hue = 0;
-        } else if (this.state == 1) {
-            // this.colorCom.hue = 180;
-        }
+        GameContext.gameRoleState = state;
     }
 
     // 0 小孩 1长大
@@ -84,9 +79,9 @@ export default class Role extends Laya.Script {
         if (this.isDie) {
             return;
         }
-        this.bodyState = bodyState;
-        GameContext.gameRoleBodyState = this.bodyState;
-        if (this.bodyState == 0) {
+        GameContext.bodyState = bodyState;
+        GameContext.gameRoleBodyState = GameContext.bodyState;
+        if (GameContext.bodyState == 0) {
             this.curScaleFactor = this.bodySmallScale;
             this.curPowerScaleFactor = this.powerScaleSmallFactor;
         } else {
@@ -101,7 +96,7 @@ export default class Role extends Laya.Script {
         if (this.isDie) {
             return;
         }
-        if (this.bodyState == 1) {
+        if (GameContext.bodyState == 1) {
             return;
         }
         Laya.Tween.to(this.owner, {scaleX: this.bodyBigScale, scaleY: this.bodyBigScale}, 1500, Laya.Ease.elasticOut, Laya.Handler.create(this, function() {
@@ -113,7 +108,7 @@ export default class Role extends Laya.Script {
         if (this.isDie) {
             return;
         }
-        if (this.bodyState == 0) {
+        if (GameContext.bodyState == 0) {
             return;
         }
         Laya.Tween.to(this.owner, {scaleX: this.bodySmallScale, scaleY: this.bodySmallScale}, 1500, Laya.Ease.elasticOut, Laya.Handler.create(this, function() {
@@ -233,7 +228,7 @@ export default class Role extends Laya.Script {
             }   
         }
         if (other.label == "KeBody") {
-            if (this.bodyState == 1 && self.label == "RoleBody") {
+            if (GameContext.bodyState == 1 && self.label == "RoleBody") {
                 EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
                 this.keSpr.visible = true;
             } else {
@@ -369,6 +364,9 @@ export default class Role extends Laya.Script {
         if (this.isDie) {
             return;
         }
+        if (GameContext.gameRoleState != 1) {
+            return;
+        }
         let x =  this.owner.x;
         let y =  this.owner.y;
         let parent = this.owner.parent;
@@ -393,7 +391,7 @@ export default class Role extends Laya.Script {
         if (this.isHurting) {
             return;
         }
-        if (this.bodyState != 1) {
+        if (GameContext.bodyState != 1) {
             return;
         }
         if (this.keSpr.visible) {
