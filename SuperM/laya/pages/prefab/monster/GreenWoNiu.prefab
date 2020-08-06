@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":324,
-    "selecteID":332,
+    "selecteID":333,
     "searchKey":"Box,GreenWoNiu",
     "props":{"y":71,"x":40,"width":80,"presetID":1,"preset":"laya/pages/prefab/monster/GreenWoNiu.prefab","pivotY":71,"pivotX":40,"name":"GreenWoNiu","isPresetRoot":true,"height":71},
     "nodeParent":-1,
-    "maxID":333,
+    "maxID":334,
     "label":"GreenWoNiu",
     "isOpen":true,
     "isDirectory":true,
@@ -123,6 +123,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":332,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Text",
+            "searchKey":"Text,deadMove",
+            "props":{"y":-32,"x":-45,"visible":false,"text":"prefab/monster/GreenWoNiuDead.prefab","presetID":11,"preset":"laya/pages/prefab/monster/GreenWoNiu.prefab","name":"deadMove"},
+            "nodeParent":324,
+            "label":"deadMove",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":333,
             "child":[
                 ]
         }],

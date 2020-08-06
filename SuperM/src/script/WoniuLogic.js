@@ -14,6 +14,7 @@ export default class WoniuLogic extends Laya.Script {
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
+        EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
         let label = this.owner.getChildByName("prefab");
         if (label) {
             this.prefab = label.text;
@@ -83,5 +84,35 @@ export default class WoniuLogic extends Laya.Script {
             let linearVelocity = this.rigidBody.linearVelocity;
             this.rigidBody.setVelocity({x: this.currentVelocity.x, y: linearVelocity.y});
         }
+    }
+
+    onMonsterKeBulletDead(data) {
+        if (data.owner != this.owner) {
+            return;
+        }
+        let deadMove = this.owner.getChildByName("deadMove");
+        if (deadMove) {
+            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
+            let x = this.owner.x;
+            let y = this.owner.y;
+            let parent = this.owner.parent;
+            let faceUp = data.dx;
+            Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
+                let dead = prefabDef.create();
+                dead.x = x;
+                dead.y = y;
+                dead.scaleX = faceUp * Math.abs(dead.scaleX);
+                parent.addChild(dead);
+                Laya.Tween.to(dead, {x: x + faceUp*1000, y: y - 1000, rotation: 2500}, 4000, Laya.Ease.expoOut, Laya.Handler.create(this, function () {
+                    Laya.timer.once(500, this, function() {
+                        dead.removeSelf();
+                    });
+                }));
+            }));
+        }
+        this.owner.removeSelf();
+        // Laya.Tween.to(this.owner, {x: 0.5, y: }, 300, null, Laya.Handler.create(this, function () {
+        //     this.owner.removeSelf();
+        // }));
     }
 }
