@@ -21,10 +21,19 @@ export default class AILeftOrRight extends Laya.Script {
         if (GameContext.gameDebugMonsterNotRun) {
             this.enabled = false;
         }
-        // EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
+        EventMgr.getInstance().registEvent(Events.Monster_Stop_AI, this, this.onStopAI);
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.render = this.owner.getChildByName("render");
         Laya.timer.loop(this.time, this, this.onTimeCallback);
+    }
+
+    onStopAI(data) {
+        if (this.owner != data.owner) {
+            return;
+        }
+        Laya.timer.clear(this, this.onTimeCallback);
+        this.currentVelocity = null;
+        this.rigidBody.setVelocity({x: 0, y: 0});
     }
 
     onTimeCallback() {

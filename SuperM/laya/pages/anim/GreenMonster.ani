@@ -3,7 +3,7 @@
     "type":"View",
     "selectedBox":2,
     "searchKey":"View",
-    "props":{"sceneWidth":172,"sceneHeight":117,"sceneColor":"#000000"},
+    "props":{"sceneWidth":69,"sceneHeight":47,"sceneColor":"#000000"},
     "nodeParent":-1,
     "maxID":3,
     "label":"View",
@@ -33,7 +33,7 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":-58.5,
+                                "value":-23.5,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -42,7 +42,7 @@
                             }],
                         "x":[
                             {
-                                "value":-86,
+                                "value":-34.5,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -51,7 +51,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/gmonster (1).png",
+                                "value":"monster/new_green_monster (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -59,7 +59,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/gmonster (2).png",
+                                "value":"monster/new_green_monster (2).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -67,7 +67,7 @@
                                 "index":5
                             },
                             {
-                                "value":"monster/gmonster (3).png",
+                                "value":"monster/new_green_monster (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -75,7 +75,7 @@
                                 "index":10
                             },
                             {
-                                "value":"monster/gmonster (4).png",
+                                "value":"monster/new_green_monster (4).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -83,7 +83,7 @@
                                 "index":15
                             },
                             {
-                                "value":"monster/gmonster (5).png",
+                                "value":"monster/new_green_monster (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

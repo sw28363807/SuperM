@@ -3,7 +3,7 @@
     "type":"Sprite",
     "selectedBox":222,
     "searchKey":"Sprite,Obstacle14",
-    "props":{"y":0,"x":0,"texture":"other1/some (14).png","presetID":1,"preset":"laya/pages/prefab/oo/Obstacle14.prefab","name":"Obstacle14","isPresetRoot":true},
+    "props":{"y":0,"x":0,"texture":"other1/some (14).png","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/oo/Obstacle14.prefab","name":"Obstacle14","isPresetRoot":true},
     "nodeParent":-1,
     "maxID":237,
     "label":"Obstacle14",

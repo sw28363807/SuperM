@@ -2,18 +2,20 @@
     "x":0,
     "type":"Sprite",
     "selectedBox":64,
+    "selecteID":74,
     "searchKey":"Sprite,b3,b3",
-    "props":{"y":0,"x":0,"var":"b3","texture":"other/posui (3).png","presetID":1,"preset":"laya/pages/prefab/bb/b3.prefab","name":"b3","isPresetRoot":true},
+    "props":{"y":0,"x":0,"var":"b3","texture":"other/posui (3).png","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/bb/b3.prefab","name":"b3","isPresetRoot":true},
     "nodeParent":-1,
     "maxID":76,
     "label":"b3",
-    "isOpen":false,
+    "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
     "compId":64,
     "child":[
         {
+            "x":15,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -30,11 +32,12 @@
                 ]
         },
         {
+            "x":15,
             "type":"RigidBody",
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"presetID":3,"preset":"laya/pages/prefab/bb/b3.prefab","linearVelocity":[-13,-34],"linearDamping":5,"gravityScale":12,"enabled":true,"angularVelocity":7},
+            "props":{"presetID":3,"preset":"laya/pages/prefab/bb/b3.prefab","linearVelocity":[20,-45],"linearDamping":5,"gravityScale":12,"enabled":true,"angularVelocity":7},
             "nodeParent":64,
             "label":"RigidBody(b3)",
             "isDirectory":false,
@@ -46,6 +49,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/BrokenBrick.js",

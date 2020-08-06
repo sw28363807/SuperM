@@ -18,6 +18,7 @@ Events.Role_Shoot_Ke = "Role_Shoot_Ke";
 Events.Bullet_Shoot = "Bullet_Shoot";
 Events.Monster_Foot_Dead = "Monster_Foot_Dead";
 Events.Monster_Bullet_Dead = "Monster_Bullet_Dead";
+Events.Monster_Stop_AI = "Monster_Stop_AI";
 Events.Camera_Move = "Camera_Move";
 Events.Refresh_Role_Number = "Refresh_Role_Number";
 Events.Refresh_Gold_Number = "Refresh_Gold_Number";

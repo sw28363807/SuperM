@@ -17,11 +17,11 @@ GameContext.gameTopScene = null;
 GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
 
-GameContext.gameRoleNumber = 3;
+GameContext.gameRoleNumber = 998;
 GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 0;
 GameContext.gameRoleState = 0;
-GameContext.gameDebugMonsterNotRun = true;
+GameContext.gameDebugMonsterNotRun = false;
 
 
 GameContext.gameScene = null;

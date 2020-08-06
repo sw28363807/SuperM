@@ -48,24 +48,24 @@ P 402E9C33 chibang (2).png
 P 9210858F chibang (3).png
 P 402E9C33 chibang (4).png
 P 9210858F chibang (5).png
-P 804B0161 dog (1).png
-P 03917C8A dog (2).png
-P E9C4DC2F dog (3).png
-P 04CA5EF0 dog (4).png
 P A6216F02 gmonster (1).png
 P C367F24D gmonster (2).png
 P 1E046E21 gmonster (3).png
 P 7D6AC025 gmonster (4).png
 P EA2C4A92 gmonster (5).png
-P BFEA1E28 greenwoniu (1).png
-P 820C3978 greenwoniu (2).png
-P C8F526EA greenwoniu (3).png
-P 820C3978 greenwoniu (4).png
-P 55EA23C0 ke.png
-P A0A88DED redwoniu (1).png
-P 41DC4042 redwoniu (2).png
-P F7E264E8 redwoniu (3).png
-P 41DC4042 redwoniu (4).png
+P 3B204743 gou (1).png
+P DA6C833E gou (2).png
+P 4B36A2A5 gou (3).png
+P E8010905 gou (4).png
+P E9EA17A1 ke.png
+P 1BB27F95 new_green_woniu (1).png
+P 3F7CC08F new_green_woniu (2).png
+P 860D5808 new_green_woniu (3).png
+P 66163B56 new_green_woniu (4).png
+P F7967456 new_red_woniu (1).png
+P 61CAA987 new_red_woniu (2).png
+P 22598160 new_red_woniu (3).png
+P B84970AE new_red_woniu (4).png
 P 37C61F71 rmonster (1).png
 P F70C8CFE rmonster (2).png
 P D12A08A6 rmonster (3).png
@@ -115,6 +115,7 @@ P FC96D6D9 jb (5).png
 P 29FEC5F9 jb (7).png
 P 016BDACD jb (9).png
 P 1EC77A66 mu.png
+P 37A71BB5 pass.png
 P 50157026 posui (1).png
 P B3797641 posui (2).png
 P 3D048BAE posui (3).png
@@ -158,10 +159,14 @@ R E1AF6A72 some (7).png
 R B721063A some (8).png
 R 24FF362D some (9).png
 D role
-P AF9AD827 ground_run (1).png
-P CF9DAD4A ground_run (2).png
-P AF9AD827 ground_run (3).png
-P C174B90A jump (1).png
+P 16FD743A groudnstand.png
+P EB8EBCED ground_run (1).png
+P FE3E6FA6 ground_run (2).png
+P 937EEB0B jump (1).png
 P B6B335AD jump (2).png
-P 3D5AE556 role.png
-P 39D8AD65 stand (1).png
+P F1E1CDE0 stand2.png
+P 7C151965 stand3.png
+P 40AAEB14 zhuajump.png
+P 2758C5E8 zhuarun1.png
+P 2D5D6F68 zhuarun2.png
+P D832B22D zhuastand.png

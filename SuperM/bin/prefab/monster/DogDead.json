@@ -1,0 +1,1 @@
+{"type":"Box","props":{"y":82,"x":40,"width":81,"presetID":1,"name":"DogDead","isPresetRoot":true,"height":83,"anchorY":1,"anchorX":0.5},"compId":1431,"child":[{"type":"Animation","props":{"y":46,"x":41.5,"width":0,"var":"ani","source":"anim/Dog.ani","presetID":4,"name":"render","height":0,"autoPlay":true},"compId":142}],"loadList":["anim/Dog.ani"],"loadList3D":[]}

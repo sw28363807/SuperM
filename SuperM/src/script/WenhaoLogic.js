@@ -23,8 +23,8 @@ export default class WenhaoLogic extends Laya.Script {
                     Laya.loader.create("prefab/Reward.prefab", Laya.Handler.create(this, function (prefabDef) {
                         let wenhao = prefabDef.create();
                         parent.addChild(wenhao);
-                        wenhao.x = x;
-                        wenhao.y = y - wenhao.height;
+                        wenhao.x = x + 5;
+                        wenhao.y = y - wenhao.height * wenhao.scaleX;
                         wenhao.zOrder = this.owner.zOrder + 1;
                     }));
                 }

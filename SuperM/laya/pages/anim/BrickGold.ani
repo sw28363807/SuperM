@@ -95,28 +95,29 @@
                                 "index":0
                             },
                             {
-                                "value":-150,
+                                "value":-300,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"y",
-                                "index":2
+                                "index":11
                             },
                             {
-                                "value":-150,
+                                "value":-50,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"y",
-                                "index":3
-                            },
+                                "index":19
+                            }],
+                        "x":[
                             {
-                                "value":-150,
+                                "value":38,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
-                                "key":"y",
-                                "index":10
+                                "key":"x",
+                                "index":0
                             }],
                         "skin":[
                             {
@@ -152,7 +153,7 @@
                                 "index":3
                             },
                             {
-                                "value":"other/goldBrick (5).png",
+                                "value":"other/goldBrick (6).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -160,7 +161,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/goldBrick (6).png",
+                                "value":"other/goldBrick (7).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -168,7 +169,7 @@
                                 "index":5
                             },
                             {
-                                "value":"other/goldBrick (7).png",
+                                "value":"other/goldBrick (8).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -176,7 +177,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/goldBrick (8).png",
+                                "value":"other/goldBrick (9).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -184,20 +185,12 @@
                                 "index":7
                             },
                             {
-                                "value":"other/goldBrick (9).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":8
-                            },
-                            {
                                 "value":"other/goldBrick (10).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":9
+                                "index":8
                             },
                             {
                                 "value":"other/goldBrick (11).png",
@@ -205,48 +198,105 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
+                                "index":9
+                            },
+                            {
+                                "value":"other/goldBrick (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
                                 "index":10
+                            },
+                            {
+                                "value":"other/goldBrick (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":11
+                            },
+                            {
+                                "value":"other/goldBrick (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":12
+                            },
+                            {
+                                "value":"other/goldBrick (4).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":13
+                            },
+                            {
+                                "value":"other/goldBrick (5).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":14
+                            },
+                            {
+                                "value":"other/goldBrick (6).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":15
+                            },
+                            {
+                                "value":"other/goldBrick (7).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":16
+                            },
+                            {
+                                "value":"other/goldBrick (8).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":17
+                            },
+                            {
+                                "value":"other/goldBrick (10).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":18
+                            },
+                            {
+                                "value":"other/goldBrick (11).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":19
                             }],
-                        "alpha":[
+                        "scaleY":[
                             {
-                                "value":0,
+                                "value":0.5,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
-                                "key":"alpha",
+                                "key":"scaleY",
                                 "index":0
-                            },
+                            }],
+                        "scaleX":[
                             {
-                                "value":1,
+                                "value":0.4,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
-                                "key":"alpha",
-                                "index":2
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"alpha",
-                                "index":3
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"alpha",
-                                "index":8
-                            },
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"alpha",
-                                "index":10
+                                "key":"scaleX",
+                                "index":0
                             }]
                     }
                 }],

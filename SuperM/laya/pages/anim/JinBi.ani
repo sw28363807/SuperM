@@ -5,11 +5,11 @@
     "searchKey":"View",
     "props":{"sceneWidth":101,"sceneHeight":94,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":3,
+    "maxID":4,
     "label":"View",
-    "isDirectory":false,
+    "isDirectory":true,
     "isAniNode":true,
-    "hasChild":false,
+    "hasChild":true,
     "compId":2,
     "child":[
         {
@@ -46,7 +46,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":2
+                                "index":1
                             },
                             {
                                 "value":"other/jb (5).png",
@@ -54,7 +54,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":4
+                                "index":2
                             },
                             {
                                 "value":"other/jb (7).png",
@@ -62,7 +62,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":6
+                                "index":3
                             },
                             {
                                 "value":"other/jb (9).png",
@@ -70,7 +70,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":8
+                                "index":4
                             },
                             {
                                 "value":"other/jb (11).png",
@@ -78,7 +78,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":10
+                                "index":5
                             },
                             {
                                 "value":"other/jb (13).png",
@@ -86,7 +86,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":12
+                                "index":6
                             },
                             {
                                 "value":"other/jb (15).png",
@@ -94,7 +94,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":14
+                                "index":7
                             },
                             {
                                 "value":"other/jb (17).png",
@@ -102,7 +102,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":16
+                                "index":8
                             },
                             {
                                 "value":"other/jb (19).png",
@@ -110,7 +110,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":18
+                                "index":9
                             },
                             {
                                 "value":"other/jb (21).png",
@@ -118,7 +118,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":20
+                                "index":10
                             }]
                     }
                 }],

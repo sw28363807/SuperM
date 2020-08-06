@@ -5,7 +5,7 @@ export default class BrickLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other && other.label == "RoleHead") {
+        if (other && (other.label == "RoleHead" || other.label == "KeBullet")) {
             let brick = null;
             if (contact.m_fixtureA.collider.label == "Brick") {
                 brick = contact.m_nodeA;
@@ -25,13 +25,13 @@ export default class BrickLogic extends Laya.Script {
         Laya.loader.create(path, Laya.Handler.create(this, function (prefabDef) {
             let brokenBrick = prefabDef.create();
             parent.addChild(brokenBrick);
-            brokenBrick.x = x;   
+            brokenBrick.x = x + 10;   
             brokenBrick.y = y;
         }));
     }
 
     onCreateBrokenBrick() {
-        for (let index = 0; index < 7; index++) {
+        for (let index = 0; index < 4; index++) {
             this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
         }
         this.owner.removeSelf();

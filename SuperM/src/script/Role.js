@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import GameContext from "../GameContext";
+import Utils from "./Utils";
 
 export default class Role extends Laya.Script {
 
@@ -18,15 +19,16 @@ export default class Role extends Laya.Script {
 
         this.footMonsterPower = {x: 10, y: -10};
         this.roleHurtPower = {x: 10, y: -10};
-        this.roleJumpPower = -30;
+        this.roleJumpPower = -25;
         this.bodyBigScale = 1;
-        this.bodySmallScale = 0.5;
+        this.bodySmallScale = 0.6;
 
         this.curScaleFactor = this.bodySmallScale;
         this.isDie = false;
     }
     
     onEnable() {
+        this.owner.zOrder = 65535;
         GameContext.role = this.owner;
         EventMgr.getInstance().registEvent(Events.Role_Move, this, this.onRoleWalk);
         EventMgr.getInstance().registEvent(Events.Role_Move_Stop, this, this.onRoleStopWalk);
@@ -40,10 +42,9 @@ export default class Role extends Laya.Script {
         this.curAni = "";
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.roleSpr = this.owner.getChildByName("roleSpr");
-        this.keSpr = this.roleSpr.getChildByName("ke");
+        this.keSpr = this.owner.getChildByName("ke");
         this.keSpr.visible = false;
         this.setBodyState(GameContext.gameRoleBodyState);
-
         this.protectedRole = false;
         this.notHurtRole = false;
     }
@@ -59,7 +60,23 @@ export default class Role extends Laya.Script {
             loop = true;
         }
         this.curAni = ani;
-        this.roleSpr.play(0, loop, ani);
+        // console.debug(this.curAni);
+        if (this.keSpr.visible) {
+            if (this.curAni =="stand") {
+                this.roleSpr.play(0, loop, "zhuastand");
+            } else if (this.curAni =="run") {
+                this.roleSpr.play(0, loop, "zhuarun");
+            } else if (this.curAni =="jump") {
+                this.roleSpr.play(0, loop, "zhuajump");
+            }
+        } else {
+            this.roleSpr.play(0, loop, ani);
+        }
+        Laya.timer.once(500, this, function() {
+            if (this.curAni == "stand" && this.isInGround == true && this.commandWalk == false && this.keSpr.visible == false) {
+                this.playAni("kong1", true);
+            }
+        });
     }
 
     // 0 正常 1子弹
@@ -93,8 +110,17 @@ export default class Role extends Laya.Script {
         if (GameContext.bodyState == 1) {
             return;
         }
-        Laya.Tween.to(this.owner, {scaleX: this.bodyBigScale, scaleY: this.bodyBigScale}, 1500, Laya.Ease.elasticOut, Laya.Handler.create(this, function() {
-            this.setBodyState(1);
+        GameContext.bodyState = 1;
+        Laya.Tween.to(this.owner, {scaleX: this.bodyBigScale * 0.7, scaleY: this.bodyBigScale * 0.7}, 100, null, Laya.Handler.create(this, function() {
+            Laya.Tween.to(this.owner, {scaleX: this.bodyBigScale * 0.5, scaleY: this.bodyBigScale * 0.5}, 100, null, Laya.Handler.create(this, function() {
+                Laya.Tween.to(this.owner, {scaleX: this.bodyBigScale * 0.9, scaleY: this.bodyBigScale * 0.9}, 100,null, Laya.Handler.create(this, function() {
+                    Laya.Tween.to(this.owner, {scaleX: this.bodyBigScale * 0.7, scaleY: this.bodyBigScale * 0.7}, 100,null, Laya.Handler.create(this, function() {
+                        Laya.Tween.to(this.owner, {scaleX: this.bodyBigScale, scaleY: this.bodyBigScale}, 100,null, Laya.Handler.create(this, function() {
+                            this.setBodyState(1);
+                        }));
+                    }));
+                }));
+            }));
         }));
     }
 
@@ -105,6 +131,7 @@ export default class Role extends Laya.Script {
         if (GameContext.bodyState == 0) {
             return;
         }
+        GameContext.bodyState = 0;
         Laya.Tween.to(this.owner, {scaleX: this.bodySmallScale, scaleY: this.bodySmallScale}, 1500, Laya.Ease.elasticOut, Laya.Handler.create(this, function() {
             this.setBodyState(0);
         }));        
@@ -190,10 +217,15 @@ export default class Role extends Laya.Script {
             if (x > 0) {
                let scaleX =  Math.abs(this.roleSpr.scaleX);
                this.roleSpr.scaleX = scaleX;
+               scaleX =  Math.abs(this.keSpr.scaleX);
+               this.keSpr.scaleX = scaleX;
             }
             else if (x < 0) {
                 let scaleX =  -1 * Math.abs(this.roleSpr.scaleX);
                 this.roleSpr.scaleX = scaleX;
+
+                scaleX =  -1 * Math.abs(this.keSpr.scaleX);
+                this.keSpr.scaleX = scaleX;
             }
         }
     }
@@ -222,26 +254,31 @@ export default class Role extends Laya.Script {
             }   
         }
         if (other.label == "KeBody") {
-            if (GameContext.bodyState == 1) {
-                if (self.label == "RoleBody") {
-                    EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
-                    this.keSpr.visible = true;
-                }
-            } else {
-                if (this.keSpr.visible == false) {
-                    if (self.label == "RoleFoot") {
-                        this.shootKe();
-                        EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
-                        this.notHurtRole = true;
-                        Laya.timer.once(500, this, function() {
-                            this.notHurtRole = false;
-                        });
-                    } else {
-                        this.hurtRole();
-                        EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
-                    }
-                }
-            }
+            EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+            this.keSpr.visible = true;
+            this.curAni = "";
+            this.playAni(this.curAni);
+            // if (GameContext.bodyState == 1) {
+            //     if (self.label == "RoleBody") {
+
+            //     }
+
+            // } 
+            // else {
+            //     if (this.keSpr.visible == false) {
+            //         if (self.label == "RoleFoot") {
+            //             this.shootKe();
+            //             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+            //             this.notHurtRole = true;
+            //             Laya.timer.once(500, this, function() {
+            //                 this.notHurtRole = false;
+            //             });
+            //         } else {
+            //             this.hurtRole();
+            //             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
+            //         }
+            //     }
+            // }
         } else if (foot && collider.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
             this.onRoleGiveSpeed({x: this.getFaceup() * this.footMonsterPower.x, y: this.footMonsterPower.y});
@@ -366,6 +403,9 @@ export default class Role extends Laya.Script {
             bullet.y = y + 30;
             EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: this.getFaceup(), y: 0, bulletType: 2, owner: bullet});
         }));
+        let ani = this.curAni;
+        this.curAni = "";
+        this.playAni(ani);
     }
 
     shootBullet() {
@@ -399,9 +439,9 @@ export default class Role extends Laya.Script {
         if (this.isHurting) {
             return;
         }
-        if (GameContext.bodyState != 1) {
-            return;
-        }
+        // if (GameContext.bodyState != 1) {
+        //     return;
+        // }
         if (this.keSpr.visible) {
             this.shootKe();
         } else {

@@ -10,6 +10,13 @@ export default class Utils extends Laya.Script {
     onDisable() {
     }
 
+    static getFaceUp(owner) {
+        if (owner.scaleX > 0) {
+            return 1;
+        }
+        return -1;
+    }
+
     static randomSign() {
         let ret = Math.random();
         if (ret > 0.5) {

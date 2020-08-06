@@ -9,14 +9,14 @@ export default class BrickGoldLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other && other.label == "RoleHead") {
+        if (other && (other.label == "RoleHead" || other.label == "KeBullet")) {
             let brick = null;
             if (contact.m_fixtureA.collider.label == "Brick") {
                 brick = contact.m_nodeA;
             } else if (contact.m_fixtureB.collider.label == "Brick") {
                 brick = contact.m_nodeB;
             }
-            if (brick && brick.contact.m_manifold.localNormal.y < 0) {
+            if (brick) {
                 this.onCreateBrokenBrick();
             }
         }
@@ -35,11 +35,25 @@ export default class BrickGoldLogic extends Laya.Script {
     }
 
     onCreateBrokenBrick() {
-        for (let index = 0; index < 7; index++) {
+        for (let index = 0; index < 4; index++) {
             this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
         }
         this.owner.play(0, false, "ani2");
+        Laya.Animation
         this.owner.on(Laya.Event.COMPLETE, this, function() {
+
+            let label = new Laya.Text();
+            label.text = String(100);
+            label.color = "#dbdb2b";
+            label.fontSize = 24;
+            this.owner.parent.addChild(label);
+            label.x = this.owner.x + 20;
+            label.y = this.owner.y - 50;
+
+            Laya.Tween.to(label, {y: label.y - 60}, 1000, null, Laya.Handler.create(this, function() {
+                label.removeSelf();
+            }));
+
             this.owner.removeSelf();
             GameContext.gameGoldNumber++;
             EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);

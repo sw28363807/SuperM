@@ -3,14 +3,13 @@
     "type":"View",
     "selectedBox":2,
     "searchKey":"View",
-    "props":{"sceneWidth":150,"sceneHeight":137,"sceneColor":"#000000"},
+    "props":{"sceneWidth":80,"sceneHeight":71,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":4,
+    "maxID":3,
     "label":"View",
-    "isOpen":null,
-    "isDirectory":true,
+    "isDirectory":false,
     "isAniNode":true,
-    "hasChild":true,
+    "hasChild":false,
     "compId":2,
     "child":[
         {
@@ -34,7 +33,7 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":-68.5,
+                                "value":-35.5,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -43,7 +42,7 @@
                             }],
                         "x":[
                             {
-                                "value":-75,
+                                "value":-40,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -52,7 +51,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/greenwoniu (1).png",
+                                "value":"monster/new_green_woniu (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -60,28 +59,28 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/greenwoniu (2).png",
+                                "value":"monster/new_green_woniu (2).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":5
+                                "index":1
                             },
                             {
-                                "value":"monster/greenwoniu (3).png",
+                                "value":"monster/new_green_woniu (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":10
+                                "index":2
                             },
                             {
-                                "value":"monster/greenwoniu (4).png",
+                                "value":"monster/new_green_woniu (4).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":15
+                                "index":3
                             }]
                     }
                 }],
