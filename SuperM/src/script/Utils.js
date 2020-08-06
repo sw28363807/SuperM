@@ -17,6 +17,13 @@ export default class Utils extends Laya.Script {
         return -1;
     }
 
+    static getSign(x) {
+        if (x > 0) {
+            return 1;
+        }
+        return -1;
+    }
+
     static randomSign() {
         let ret = Math.random();
         if (ret > 0.5) {

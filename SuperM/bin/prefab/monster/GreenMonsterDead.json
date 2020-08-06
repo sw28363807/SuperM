@@ -1,0 +1,1 @@
+{"type":"Box","props":{"y":0,"x":0,"width":69,"pivotY":47,"pivotX":35,"name":"GreenMonsterDead","height":47,"presetID":1,"isPresetRoot":true},"child":[{"type":"Animation","props":{"y":23.5,"x":35,"var":"ani","source":"anim/GreenMonster.ani","name":"render","height":0,"autoPlay":true,"presetID":2},"compId":1521}],"compId":1518,"loadList":["anim/GreenMonster.ani"],"loadList3D":[]}

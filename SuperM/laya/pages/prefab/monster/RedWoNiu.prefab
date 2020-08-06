@@ -2,18 +2,20 @@
     "x":0,
     "type":"Box",
     "selectedBox":1483,
+    "selecteID":1484,
     "searchKey":"Box,RedWoNiu",
     "props":{"y":71,"x":40,"width":80,"presetID":1,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","pivotY":71,"pivotX":40,"name":"RedWoNiu","isPresetRoot":true,"height":71},
     "nodeParent":-1,
-    "maxID":1484,
+    "maxID":1485,
     "label":"RedWoNiu",
-    "isOpen":false,
+    "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
     "compId":1483,
     "child":[
         {
+            "x":15,
             "type":"Animation",
             "searchKey":"Animation,render",
             "props":{"y":71,"x":41,"width":1,"source":"anim/RedWoNiu.ani","rotation":0,"presetID":2,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","pivotY":35,"name":"render","height":1,"autoPlay":true,"autoAnimation":"ani1"},
@@ -27,11 +29,12 @@
                 ]
         },
         {
+            "x":15,
             "type":"RigidBody",
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"presetID":3,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","mask":31,"category":32,"allowRotation":false},
+            "props":{"presetID":3,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","mask":31,"category":32,"bullet":true,"allowRotation":false},
             "nodeParent":1483,
             "label":"RigidBody(RedWoNiu)",
             "isDirectory":false,
@@ -43,6 +46,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -59,12 +63,13 @@
                 ]
         },
         {
+            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/WoniuLogic.js",
             "searchKey":"Script,WoniuLogic",
             "removeAble":true,
-            "props":{"presetID":5,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","enabled":true},
+            "props":{"presetID":5,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","prefab":"prefab/monster/RedWonNiu.prefab","enabled":true},
             "nodeParent":1483,
             "label":"WoniuLogic",
             "isDirectory":false,
@@ -76,6 +81,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"CircleCollider",
             "switchAble":true,
             "searchKey":"CircleCollider",
@@ -91,6 +97,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -102,6 +109,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":331,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Text",
+            "searchKey":"Text,prefab",
+            "props":{"y":-37,"x":-15.3916015625,"visible":false,"text":"prefab/monster/RedWoNiu.prefab","presetID":8,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","name":"prefab"},
+            "nodeParent":1483,
+            "label":"prefab",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1484,
             "child":[
                 ]
         }],

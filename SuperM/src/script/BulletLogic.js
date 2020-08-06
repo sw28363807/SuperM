@@ -1,5 +1,6 @@
 import Events from "./Events";
 import EventMgr from "./EventMgr";
+import Utils from "./Utils";
 
 export default class BulletLogic extends Laya.Script {
 
@@ -46,7 +47,11 @@ export default class BulletLogic extends Laya.Script {
                 this.owner.removeSelf();
              }
         } else if(other.label == "MonsterHead" || other.label == "MonsterBody") {
-            EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
+            if (self.label == "KeBullet") {
+                EventMgr.getInstance().postEvent(Events.Monster_KeBullet_Dead, {owner: other.owner, dx: Utils.getSign(this.rigidBody.linearVelocity.x)});
+            } else {
+                EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
+            }
             this.owner.removeSelf();
             return
         }

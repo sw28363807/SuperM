@@ -258,27 +258,6 @@ export default class Role extends Laya.Script {
             this.keSpr.visible = true;
             this.curAni = "";
             this.playAni(this.curAni);
-            // if (GameContext.bodyState == 1) {
-            //     if (self.label == "RoleBody") {
-
-            //     }
-
-            // } 
-            // else {
-            //     if (this.keSpr.visible == false) {
-            //         if (self.label == "RoleFoot") {
-            //             this.shootKe();
-            //             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
-            //             this.notHurtRole = true;
-            //             Laya.timer.once(500, this, function() {
-            //                 this.notHurtRole = false;
-            //             });
-            //         } else {
-            //             this.hurtRole();
-            //             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
-            //         }
-            //     }
-            // }
         } else if (foot && collider.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
             this.onRoleGiveSpeed({x: this.getFaceup() * this.footMonsterPower.x, y: this.footMonsterPower.y});

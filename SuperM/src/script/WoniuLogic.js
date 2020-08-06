@@ -5,25 +5,23 @@ export default class WoniuLogic extends Laya.Script {
 
     constructor() { 
         super();
-        /** @prop {name:time, tips:"巡逻时间", type:Number, default:3000}*/
-        this.time = 3000;
-        /** @prop {name:area, tips:"巡逻范围", type:Number, default:200}*/
-        this.area = 200;
-        /** @prop {name:speed, tips:"移动速度", type:Number, default:5}*/
         this.speed = 3;
-
         this.faceup = 0;
         this.currentVelocity = null;
-        
         this.monsterCount = 2;
     }
     
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
+        let label = this.owner.getChildByName("prefab");
+        if (label) {
+            this.prefab = label.text;
+        }
+        console.debug(this.prefab);
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.render = this.owner.getChildByName("render");
-        Laya.timer.loop(this.time, this, this.onTimeCallback);
+        Laya.timer.loop(3000, this, this.onTimeCallback);
     }
 
     onDisable() {
@@ -59,9 +57,10 @@ export default class WoniuLogic extends Laya.Script {
 
             Laya.loader.create("prefab/oo/Ke.prefab", Laya.Handler.create(this, function (prefabDef) {
                 let ke = prefabDef.create();
+                ke.prefab = this.prefab;
                 parent.addChild(ke);
                 ke.x = x;
-                ke.y = y + height/2;
+                ke.y = y - height/2;
             }));
         }
     }

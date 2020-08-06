@@ -11,7 +11,7 @@ export default class AILeftOrRight extends Laya.Script {
         /** @prop {name:area, tips:"巡逻范围", type:Number, default:200}*/
         this.area = 200;
         /** @prop {name:speed, tips:"移动速度", type:Number, default:5}*/
-        this.speed = 5;
+        this.speed = 2;
 
         this.faceup = 0;
         this.currentVelocity = null;

@@ -11,6 +11,7 @@ export default class MonsterLogic extends Laya.Script {
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
+        EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
     }
 
     onDisable() {
@@ -20,23 +21,27 @@ export default class MonsterLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
-        EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
-        let x = this.owner.x;
-        let y = this.owner.y;
-        let parent = this.owner.parent;
-        let faceUp = Utils.getFaceUp(this.owner);
-        Laya.loader.create("prefab/monster/DogDead.prefab", Laya.Handler.create(this, function (prefabDef) {
-            let dog = prefabDef.create();
-            dog.x = x;
-            dog.y = y;
-            dog.scaleX = faceUp * Math.abs(dog.scaleX);
-            parent.addChild(dog);
-            Laya.Tween.to(dog, {scaleY: 0.2}, 100, null, Laya.Handler.create(this, function () {
-                Laya.timer.once(500, this, function() {
-                    dog.removeSelf();
-                });
+        let deadMove = this.owner.getChildByName("deadMove");
+        if (deadMove) {
+            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
+            let x = this.owner.x;
+            let y = this.owner.y;
+            let parent = this.owner.parent;
+            let faceUp = Utils.getFaceUp(this.owner);
+            console.debug(deadMove.text);
+            Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
+                let dead = prefabDef.create();
+                dead.x = x;
+                dead.y = y;
+                dead.scaleX = faceUp * Math.abs(dead.scaleX);
+                parent.addChild(dead);
+                Laya.Tween.to(dead, {scaleY: 0.2}, 100, null, Laya.Handler.create(this, function () {
+                    Laya.timer.once(500, this, function() {
+                        dead.removeSelf();
+                    });
+                }));
             }));
-        }));
+        }
         this.owner.removeSelf();
     }
 
@@ -47,5 +52,35 @@ export default class MonsterLogic extends Laya.Script {
         Laya.Tween.to(this.owner, {scaleY: 0.5}, 300, null, Laya.Handler.create(this, function () {
             this.owner.removeSelf();
         }));
+    }
+
+    onMonsterKeBulletDead(data) {
+        if (data.owner != this.owner) {
+            return;
+        }
+        let deadMove = this.owner.getChildByName("deadMove");
+        if (deadMove) {
+            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
+            let x = this.owner.x;
+            let y = this.owner.y;
+            let parent = this.owner.parent;
+            let faceUp = data.dx;
+            Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
+                let dead = prefabDef.create();
+                dead.x = x;
+                dead.y = y;
+                dead.scaleX = faceUp * Math.abs(dead.scaleX);
+                parent.addChild(dead);
+                Laya.Tween.to(dead, {x: x + faceUp*1000, y: y - 1000, rotation: 2500}, 4000, Laya.Ease.expoOut, Laya.Handler.create(this, function () {
+                    Laya.timer.once(500, this, function() {
+                        dead.removeSelf();
+                    });
+                }));
+            }));
+        }
+        this.owner.removeSelf();
+        // Laya.Tween.to(this.owner, {x: 0.5, y: }, 300, null, Laya.Handler.create(this, function () {
+        //     this.owner.removeSelf();
+        // }));
     }
 }
