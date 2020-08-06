@@ -16,12 +16,12 @@ export default class GroundImageLogic extends Laya.Script {
     
     onEnable() {
         let spr = new Laya.Sprite();
-        spr.x = 0;
+        spr.x = -400;
         spr.y = this.owner.height;
         let tex = Laya.loader.getRes(this.imagePath);
         let num = Math.ceil(this.owner.width/this.renderWidth);
-        for (let index = 0; index < num; index++) {
-            spr.graphics.drawImage(tex, index * this.renderWidth, 0);
+        for (let index = 0; index < num + 25; index++) {
+            spr.graphics.drawImage(tex, spr.x + index * this.renderWidth, 0);
         }
         this.owner.addChild(spr);
     }

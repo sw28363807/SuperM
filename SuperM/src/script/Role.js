@@ -25,6 +25,8 @@ export default class Role extends Laya.Script {
 
         this.curScaleFactor = this.bodySmallScale;
         this.isDie = false;
+
+        this.shuiguanTime = 0;
     }
     
     onEnable() {
@@ -177,7 +179,37 @@ export default class Role extends Laya.Script {
             this.processRoleDie();
             return;
         }
+        this.processGotoShuiguan();
         this.processFaceUp();
+    }
+
+    processGotoShuiguan() {
+        if (this.isDie) {
+            this.shuiguanTime = 0;
+            return;
+        }
+        if (this.isHurting) {
+            this.shuiguanTime = 0;
+            return;
+        }
+        if (this.shuiguanState == 1 || this.shuiguanState == 2) {
+            this.shuiguanTime++;
+            if (this.shuiguanTime >= 100 && this.walkDirect.y > 0 && this.commandWalk) {
+                if (this.shuiguanState == 1) {
+                    this.shuiguanState = 0;
+                    GameContext.gameScene.removeChildren();
+                    GameContext.gameScene.close();
+                    Laya.Scene.open("scene/LevelX.scene");
+                } else if (this.shuiguanState == 2) {
+                    GameContext.gameScene.removeChildren();
+                    GameContext.gameScene.close();
+                    this.shuiguanState = 0;
+                    Laya.Scene.open("scene/Level1_1.scene");
+                }
+            }
+        } else {
+            this.shuiguanTime = 0;
+        }
     }
 
     processRoleDie() {
@@ -461,23 +493,6 @@ export default class Role extends Laya.Script {
     }
 
     onRoleCButton() {
-        if (this.isDie) {
-            return;
-        }
-        if (this.isHurting) {
-            return;
-        }
-        if (this.shuiguanState == 1) {
-            this.shuiguanState = 0;
-            GameContext.gameScene.removeChildren();
-            GameContext.gameScene.close();
-            Laya.Scene.open("scene/LevelX.scene");
-        } else if (this.shuiguanState == 2) {
-            GameContext.gameScene.removeChildren();
-            GameContext.gameScene.close();
-            this.shuiguanState = 0;
-            Laya.Scene.open("scene/Level1_1.scene");
-        }
     }
 
     getFaceup() {
