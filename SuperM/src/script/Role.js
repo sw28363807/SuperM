@@ -17,9 +17,9 @@ export default class Role extends Laya.Script {
         this.faceup = 1;
         this.setRoleState(0);
 
-        this.footMonsterPower = {x: 10, y: -10};
-        this.roleHurtPower = {x: 10, y: -10};
-        this.roleJumpPower = -25;
+        this.footMonsterPower = {x: 10, y: -20};
+        this.roleHurtPower = {x: 10, y: -20};
+        this.roleJumpPower = -30;
         this.bodyBigScale = 1;
         this.bodySmallScale = 0.6;
 
@@ -43,6 +43,7 @@ export default class Role extends Laya.Script {
         
         this.curAni = "";
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        
         this.roleSpr = this.owner.getChildByName("roleSpr");
         this.keSpr = this.owner.getChildByName("ke");
         this.keSpr.visible = false;
@@ -199,6 +200,7 @@ export default class Role extends Laya.Script {
                     this.shuiguanState = 0;
                     GameContext.gameScene.removeChildren();
                     GameContext.gameScene.close();
+                    // Laya.Scene.close("scene/Level1_1.scene");
                     Laya.Scene.open("scene/LevelX.scene");
                 } else if (this.shuiguanState == 2) {
                     GameContext.gameScene.removeChildren();

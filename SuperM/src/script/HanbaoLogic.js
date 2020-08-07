@@ -53,5 +53,6 @@ export default class HanbaoLogic extends Laya.Script {
 
 
     onDisable() {
+    
     }
 }

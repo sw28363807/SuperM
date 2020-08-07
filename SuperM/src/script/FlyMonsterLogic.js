@@ -25,15 +25,13 @@ export default class FlyMonsterLogic extends Laya.Script {
         let x = this.owner.x;
         let y = this.owner.y;
         let parent = this.owner.parent;
-        console.debug("+++++++++++++++++++++");
-        console.debug(this.prefabText);
-        // Laya.loader.create(this.prefabText, Laya.Handler.create(this, function (prefabDef) {
-        //     let monster = prefabDef.create();
-        //     parent.addChild(monster);
-        //     monster.x = x;
-        //     monster.y = y;
-        //     this.owner.removeSelf();
-        // }));
+        Laya.loader.create(this.prefabText, Laya.Handler.create(this, function (prefabDef) {
+            let monster = prefabDef.create();
+            parent.addChild(monster);
+            monster.x = x;
+            monster.y = y;
+            this.owner.removeSelf();
+        }));
     }
 
     onDisable() {

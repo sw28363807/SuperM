@@ -5,11 +5,12 @@
     "searchKey":"View",
     "props":{"sceneWidth":80,"sceneHeight":71,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":3,
+    "maxID":4,
     "label":"View",
-    "isDirectory":false,
+    "isOpen":null,
+    "isDirectory":true,
     "isAniNode":true,
-    "hasChild":false,
+    "hasChild":true,
     "compId":2,
     "child":[
         {
@@ -22,6 +23,19 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":3,
+            "child":[
+                ]
+        },
+        {
+            "type":"GraphicNode",
+            "searchKey":"GraphicNode",
+            "props":{},
+            "nodeParent":2,
+            "label":"GraphicNode",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":5,
             "child":[
                 ]
         }],
@@ -64,7 +78,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":1
+                                "index":5
                             },
                             {
                                 "value":"monster/new_green_woniu (3).png",
@@ -72,7 +86,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":2
+                                "index":10
                             },
                             {
                                 "value":"monster/new_green_woniu (4).png",
@@ -80,11 +94,149 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":3
+                                "index":15
                             }]
                     }
                 }],
             "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        },
+        {
+            "nodes":[
+                {
+                    "target":3,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":-35.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":0
+                            }],
+                        "x":[
+                            {
+                                "value":-40,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"x",
+                                "index":0
+                            }],
+                        "skin":[
+                            {
+                                "value":"monster/new_green_woniu (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"monster/new_green_woniu (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":5
+                            },
+                            {
+                                "value":"monster/new_green_woniu (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":10
+                            },
+                            {
+                                "value":"monster/new_green_woniu (4).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":15
+                            }]
+                    }
+                },
+                {
+                    "target":5,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":-43,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":5,
+                                "key":"y",
+                                "index":0
+                            }],
+                        "x":[
+                            {
+                                "value":-38,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":5,
+                                "key":"x",
+                                "index":0
+                            }],
+                        "skin":[
+                            {
+                                "value":"monster/new_woniu_chibang (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":5,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"monster/new_woniu_chibang (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":5,
+                                "key":"skin",
+                                "index":3
+                            },
+                            {
+                                "value":"monster/new_woniu_chibang (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":5,
+                                "key":"skin",
+                                "index":6
+                            },
+                            {
+                                "value":"monster/new_woniu_chibang (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":5,
+                                "label":null,
+                                "key":"skin",
+                                "index":9
+                            },
+                            {
+                                "value":"monster/new_woniu_chibang (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":5,
+                                "label":null,
+                                "key":"skin",
+                                "index":12
+                            },
+                            {
+                                "value":"monster/new_woniu_chibang (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":5,
+                                "label":null,
+                                "key":"skin",
+                                "index":15
+                            }]
+                    }
+                }],
+            "name":"ani2",
             "id":1,
             "frameRate":24,
             "action":0
