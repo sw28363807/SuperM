@@ -21,28 +21,7 @@ export default class MonsterLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
-        let deadMove = this.owner.getChildByName("deadMove");
-        if (deadMove) {
-            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
-            let x = this.owner.x;
-            let y = this.owner.y;
-            let parent = this.owner.parent;
-            let faceUp = Utils.getFaceUp(this.owner);
-            console.debug(deadMove.text);
-            Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
-                let dead = prefabDef.create();
-                dead.x = x;
-                dead.y = y;
-                dead.scaleX = faceUp * Math.abs(dead.scaleX);
-                parent.addChild(dead);
-                Laya.Tween.to(dead, {scaleY: 0.2}, 100, null, Laya.Handler.create(this, function () {
-                    Laya.timer.once(500, this, function() {
-                        dead.removeSelf();
-                    });
-                }));
-            }));
-        }
-        this.owner.removeSelf();
+        this.createFootEffect();
     }
 
     onMonsterBulletDead(data) {
@@ -58,6 +37,11 @@ export default class MonsterLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
+        this.createkeBulletEffect(data);
+    }
+
+
+    createkeBulletEffect(data) {
         let deadMove = this.owner.getChildByName("deadMove");
         if (deadMove) {
             EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
@@ -79,8 +63,29 @@ export default class MonsterLogic extends Laya.Script {
             }));
         }
         this.owner.removeSelf();
-        // Laya.Tween.to(this.owner, {x: 0.5, y: }, 300, null, Laya.Handler.create(this, function () {
-        //     this.owner.removeSelf();
-        // }));
+    }
+
+    createFootEffect() {
+        let deadMove = this.owner.getChildByName("deadMove");
+        if (deadMove) {
+            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
+            let x = this.owner.x;
+            let y = this.owner.y;
+            let parent = this.owner.parent;
+            let faceUp = Utils.getFaceUp(this.owner);
+            Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
+                let dead = prefabDef.create();
+                dead.x = x;
+                dead.y = y;
+                dead.scaleX = faceUp * Math.abs(dead.scaleX);
+                parent.addChild(dead);
+                Laya.Tween.to(dead, {scaleY: 0.2}, 100, null, Laya.Handler.create(this, function () {
+                    Laya.timer.once(500, this, function() {
+                        dead.removeSelf();
+                    });
+                }));
+            }));
+        }
+        this.owner.removeSelf();
     }
 }

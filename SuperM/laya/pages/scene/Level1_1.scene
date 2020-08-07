@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1455,
+    "selecteID":1538,
     "searchKey":"Scene,gameScene",
     "props":{"width":20000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1538,
+    "maxID":1542,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -884,14 +884,13 @@
             "nodeParent":2,
             "maxID":177,
             "label":"Wenhao",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":1537,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -907,7 +906,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -923,7 +921,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -936,6 +933,161 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":176,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1491,
+            "selecteID":1497,
+            "searchKey":"Box",
+            "props":{"y":727.5,"x":1307,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+            "nodeParent":2,
+            "maxID":1500,
+            "label":"GreenMonsterFly",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":1538,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"BoxCollider(GreenMonsterFly)",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1492,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"RigidBody(GreenMonsterFly)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1493,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"render",
+                    "isOpen":null,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1494,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"BoxCollider(GreenMonsterFly)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1496,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"CircleCollider(GreenMonsterFly)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1498,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/AIFlyMonster.js",
+                    "searchKey":"Script,AIFlyMonster",
+                    "removeAble":true,
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"AIFlyMonster",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1539,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/FlyMonsterLogic.js",
+                    "searchKey":"Script,FlyMonsterLogic",
+                    "removeAble":true,
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"FlyMonsterLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1540,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Text",
+                    "searchKey":"Text",
+                    "props":{"presetID":11,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab"},
+                    "nodeParent":1538,
+                    "label":"createPrefab",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1541,
                     "child":[
                         ]
                 }],

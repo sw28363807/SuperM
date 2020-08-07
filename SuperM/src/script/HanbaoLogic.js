@@ -1,24 +1,28 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import GameContext from "../GameContext";
+import Utils from "./Utils";
 
 export default class HanbaoLogic extends Laya.Script {
 
     constructor() { 
         super();
+        this.speed = 7;
     }
     
     onEnable() {
+        this.direct = {x: -1, y: 0};
         this.owner.play(0, false, "ani1");
-        let rigidBody = this.owner.getComponent(Laya.RigidBody);
-        rigidBody.enabled = false;
+        this.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.rigidBody.enabled = false;
         this.owner.on(Laya.Event.COMPLETE, this, function(){
-            rigidBody.enabled = true;
+            this.rigidBody.enabled = true;
             this.owner.play(0, false, "ani2");
         });
     }
 
     onTriggerEnter(other, self, contact) {
+        this.direct.x = -1 * Utils.getSign(this.direct.x);
         if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
@@ -39,8 +43,13 @@ export default class HanbaoLogic extends Laya.Script {
                 this.owner.removeSelf();
             }
         }
+        this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: 0}); 
     }
 
+    onUpdate() {
+        let linearVelocity = this.rigidBody.linearVelocity;
+        this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: linearVelocity.y});
+    }
 
 
     onDisable() {

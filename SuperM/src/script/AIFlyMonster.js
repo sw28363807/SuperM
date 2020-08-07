@@ -43,12 +43,11 @@ export default class AIFlyMonster extends Laya.Script {
     onUpdate() {
         let speed = 0;
         if (this.state == 0) {
-            speed = 2;
+            speed = 1;
         } else if (this.state == 1) {
-            speed = 5;
+            speed = 2;
         }
         if (this.direct) {
-            let speed = 2;
             let v = {x: this.direct.x * speed, y: this.direct.y * speed};
             this.rigidBody.setVelocity(v);
         }
