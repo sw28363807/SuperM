@@ -19,6 +19,7 @@ export default class HanbaoLogic extends Laya.Script {
             this.rigidBody.enabled = true;
             this.owner.play(0, false, "ani2");
         });
+        console.debug(this.owner.getComponents(Laya.ColliderBase));
     }
 
     onTriggerEnter(other, self, contact) {
@@ -40,7 +41,8 @@ export default class HanbaoLogic extends Laya.Script {
                         EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
                     }
                 }
-                this.owner.removeSelf();
+                Utils.removeThis(this.owner);
+                return;
             }
         }
         this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: 0}); 

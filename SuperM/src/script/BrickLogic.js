@@ -1,3 +1,5 @@
+import Utils from "./Utils";
+
 export default class BrickLogic extends Laya.Script {
 
     constructor() { 
@@ -34,7 +36,7 @@ export default class BrickLogic extends Laya.Script {
         for (let index = 0; index < 4; index++) {
             this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
         }
-        this.owner.removeSelf();
+        Utils.removeThis(this.owner);
     }
     
     onEnable() {

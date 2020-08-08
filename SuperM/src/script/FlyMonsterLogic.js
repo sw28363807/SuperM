@@ -1,5 +1,6 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import Utils from "./Utils";
 
 export default class FlyMonsterLogic extends Laya.Script {
 
@@ -30,7 +31,7 @@ export default class FlyMonsterLogic extends Laya.Script {
             parent.addChild(monster);
             monster.x = x;
             monster.y = y;
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
         }));
     }
 

@@ -1,5 +1,6 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import Utils from "./Utils";
 
 export default class WoniuLogic extends Laya.Script {
 
@@ -54,7 +55,7 @@ export default class WoniuLogic extends Laya.Script {
             let parent = this.owner.parent;
             this.rigidBody.enabled = false;
             Laya.timer.clear(this, this.onTimeCallback);
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
 
             Laya.loader.create("prefab/oo/Ke.prefab", Laya.Handler.create(this, function (prefabDef) {
                 let ke = prefabDef.create();
@@ -105,14 +106,11 @@ export default class WoniuLogic extends Laya.Script {
                 parent.addChild(dead);
                 Laya.Tween.to(dead, {x: x + faceUp*1000, y: y - 1000, rotation: 2500}, 4000, Laya.Ease.expoOut, Laya.Handler.create(this, function () {
                     Laya.timer.once(500, this, function() {
-                        dead.removeSelf();
+                        Utils.removeThis(dead);
                     });
                 }));
             }));
         }
-        this.owner.removeSelf();
-        // Laya.Tween.to(this.owner, {x: 0.5, y: }, 300, null, Laya.Handler.create(this, function () {
-        //     this.owner.removeSelf();
-        // }));
+        Utils.removeThis(this.owner);
     }
 }

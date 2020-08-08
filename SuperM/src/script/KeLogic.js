@@ -24,7 +24,7 @@ export default class KeLogic extends Laya.Script {
                     parent.addChild(woniu);
                     woniu.x = x;
                     woniu.y = y + this.owner.height;
-                    this.owner.removeSelf();
+                    Utils.removeThis(this.owner);
                 }));
             }
         }
@@ -38,6 +38,6 @@ export default class KeLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
-        this.owner.removeSelf();
+        Utils.removeThis(this.owner);
     }
 }

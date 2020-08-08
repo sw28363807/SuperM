@@ -1,6 +1,7 @@
 import GameContext from "../GameContext";
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import Utils from "./Utils";
 
 export default class BrickGoldLogic extends Laya.Script {
 
@@ -51,10 +52,9 @@ export default class BrickGoldLogic extends Laya.Script {
             label.y = this.owner.y - 50;
 
             Laya.Tween.to(label, {y: label.y - 60}, 1000, null, Laya.Handler.create(this, function() {
-                label.removeSelf();
+                Utils.removeThis(label);
             }));
-
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
             GameContext.gameGoldNumber++;
             EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
         });

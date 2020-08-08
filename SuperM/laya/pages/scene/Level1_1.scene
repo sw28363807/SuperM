@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1556,
+    "selecteID":1583,
     "searchKey":"Scene,gameScene",
     "props":{"width":20000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1565,
+    "maxID":1584,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -655,7 +655,7 @@
                     "$LOCKED":false,
                     "$HIDDEN":false
                 }],
-            "$LOCKED":false,
+            "$LOCKED":true,
             "$HIDDEN":false
         },
         {
@@ -787,7 +787,8 @@
                     "hasChild":false,
                     "compId":1536,
                     "child":[
-                        ]
+                        ],
+                    "$LOCKED":false
                 }],
             "animations":[
                 {
@@ -830,6 +831,7 @@
                     "compId":188,
                     "child":[
                         ],
+                    "$LOCKED":false,
                     "$HIDDEN":false
                 },
                 {
@@ -846,6 +848,7 @@
                     "compId":189,
                     "child":[
                         ],
+                    "$LOCKED":false,
                     "$HIDDEN":false
                 },
                 {
@@ -862,6 +865,7 @@
                     "compId":269,
                     "child":[
                         ],
+                    "$LOCKED":false,
                     "$HIDDEN":false
                 }],
             "animations":[
@@ -873,6 +877,7 @@
                     "frameRate":24,
                     "action":0
                 }],
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -903,7 +908,8 @@
                     "hasChild":false,
                     "compId":174,
                     "child":[
-                        ]
+                        ],
+                    "$LOCKED":false
                 },
                 {
                     "type":"RigidBody",
@@ -918,7 +924,8 @@
                     "hasChild":false,
                     "compId":175,
                     "child":[
-                        ]
+                        ],
+                    "$LOCKED":false
                 },
                 {
                     "type":"Script",
@@ -934,7 +941,8 @@
                     "hasChild":false,
                     "compId":176,
                     "child":[
-                        ]
+                        ],
+                    "$LOCKED":false
                 }],
             "animations":[
                 {
@@ -944,7 +952,268 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$LOCKED":false
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "searchKey":"Box",
+            "props":{"y":-886,"x":2562,"presetID":1,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+            "nodeParent":2,
+            "label":"PassLevel",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":1565,
+            "child":[
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1566,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1567,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1569,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1570,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1571,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1572,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1573,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1574,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1576,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":11,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1575,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":12,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1577,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":13,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1578,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":14,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1579,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":15,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1580,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":16,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1581,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":17,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1582,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":18,"preset":"laya/pages/prefab/oo/PassLevel.prefab"},
+                    "nodeParent":1565,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1583,
+                    "child":[
+                        ]
+                }],
+            "$LOCKED":false
         }],
     "animations":[
         {

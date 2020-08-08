@@ -32,7 +32,7 @@ export default class BulletLogic extends Laya.Script {
 
     onUpdate() {
         if (this.count > 3 && this.owner.name != "KeBullet") {
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
         }
     }
 
@@ -44,7 +44,7 @@ export default class BulletLogic extends Laya.Script {
         other.label == "TanLiBrick" ||
          other.label == "Wall") {
              if (self.label != "KeBullet") {
-                this.owner.removeSelf();
+                 Utils.removeThis(this.owner);
              }
         } else if(other.label == "MonsterHead" || other.label == "MonsterBody") {
             if (self.label == "KeBullet") {
@@ -52,7 +52,7 @@ export default class BulletLogic extends Laya.Script {
             } else {
                 EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
             }
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
             return
         }
     }

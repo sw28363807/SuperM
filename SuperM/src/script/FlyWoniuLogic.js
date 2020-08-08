@@ -50,7 +50,7 @@ export default class FlyWoniuLogic extends Laya.Script {
             let parent = this.owner.parent;
             this.rigidBody.enabled = false;
             Laya.timer.clear(this, this.onMakeIdea);
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
 
             Laya.loader.create("prefab/oo/Ke.prefab", Laya.Handler.create(this, function (prefabDef) {
                 let ke = prefabDef.create();

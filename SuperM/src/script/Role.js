@@ -107,6 +107,9 @@ export default class Role extends Laya.Script {
     }
 
     changeBigEffect() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -141,16 +144,24 @@ export default class Role extends Laya.Script {
     }
 
     setMove(px, py) {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
         if (this.isHurting) {
             return;
         }
-        this.rigidBody.setVelocity({x: px, y: py});        
+        if (this.rigidBody) {
+            this.rigidBody.setVelocity({x: px, y: py});
+        }        
     }
 
     onRoleWalk(data) {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -163,19 +174,28 @@ export default class Role extends Laya.Script {
     }
 
     onRoleStopWalk() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
+            return;
+        }
+        if (!this.rigidBody) {
             return;
         }
         this.commandWalk = false;
         if (this.isInGround == true) {
             this.walkDirect = {x: 0, y: 0};
-            let linearVelocity = this.rigidBody.linearVelocity;
+            let linearVelocity = this.getLineSpeed();
             this.setMove(0, linearVelocity.y);
             this.playAni("stand");
         }
     }
 
     onUpdate() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             this.processRoleDie();
             return;
@@ -185,6 +205,9 @@ export default class Role extends Laya.Script {
     }
 
     processGotoShuiguan() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             this.shuiguanTime = 0;
             return;
@@ -198,13 +221,12 @@ export default class Role extends Laya.Script {
             if (this.shuiguanTime >= 100 && this.walkDirect.y > 0 && this.commandWalk) {
                 if (this.shuiguanState == 1) {
                     this.shuiguanState = 0;
-                    GameContext.gameScene.removeChildren();
-                    GameContext.gameScene.close();
-                    // Laya.Scene.close("scene/Level1_1.scene");
+                    // GameContext.gameScene.removeChildren();
+                    // GameContext.gameScene.close();
+                    Laya.Scene.close("scene/Level1_1.scene");
                     Laya.Scene.open("scene/LevelX.scene");
                 } else if (this.shuiguanState == 2) {
-                    GameContext.gameScene.removeChildren();
-                    GameContext.gameScene.close();
+                    Laya.Scene.close("scene/LevelX.scene");
                     this.shuiguanState = 0;
                     Laya.Scene.open("scene/Level1_1.scene");
                 }
@@ -215,11 +237,19 @@ export default class Role extends Laya.Script {
     }
 
     processRoleDie() {
-        let linearVelocity = this.rigidBody.linearVelocity;
-        this.rigidBody.setVelocity({x: 0, y: linearVelocity.y}); 
+        if (!this.owner) {
+            return;
+        }
+        if (this.rigidBody) {
+            let linearVelocity = this.getLineSpeed();
+            this.rigidBody.setVelocity({x: 0, y: linearVelocity.y}); 
+        }
     }
 
     processRoleWalk() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -228,11 +258,13 @@ export default class Role extends Laya.Script {
         }
         if (this.walkDirect) {
             if (this.walkDirect.x != 0) {
-                let linearVelocity = this.rigidBody.linearVelocity;
-                this.setMove(this.walkDirect.x * this.speed, linearVelocity.y);
+                if (this.rigidBody) {
+                    let linearVelocity = this.getLineSpeed();
+                    this.setMove(this.walkDirect.x * this.speed, linearVelocity.y);
+                }
             }
         }
-        let linearVelocity = this.rigidBody.linearVelocity;
+        let linearVelocity = this.getLineSpeed();
         if (this.isInGround && linearVelocity.x == 0) {
             this.playAni("stand");
         }
@@ -240,9 +272,23 @@ export default class Role extends Laya.Script {
             this.playAni("run");
         }
     }
+
+    getLineSpeed() {
+        if (!this.owner) {
+            return;
+        }
+        if (this.rigidBody) {
+            let linearVelocity = this.rigidBody.linearVelocity;
+            return linearVelocity;
+        }   
+        return {x: 0, y: 0};
+    }
     
 
     processFaceUp() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -265,6 +311,9 @@ export default class Role extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -318,15 +367,20 @@ export default class Role extends Laya.Script {
                 this.setMove(0, 0);
                 this.playAni("stand");
             }
-            
         }
     }
 
     alphaEffect(alpha, handler) {
+        if (!this.owner) {
+            return;
+        }
         Laya.Tween.to(this.roleSpr, {alpha: alpha}, 100, Laya.Ease.elasticOut, handler, 0);
     }
     
     showHurtEffect() {
+        if (!this.owner) {
+            return;
+        }
         this.alphaEffect(0, Laya.Handler.create(this, function() {
             this.alphaEffect(1, Laya.Handler.create(this, function() {
                 this.alphaEffect(1, Laya.Handler.create(this, function() {
@@ -341,6 +395,9 @@ export default class Role extends Laya.Script {
     }
 
     onTriggerExit(other, self, contact) {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -351,6 +408,9 @@ export default class Role extends Laya.Script {
     }
 
     onRoleAButton() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -362,11 +422,16 @@ export default class Role extends Laya.Script {
             if (this.walkDirect) {
                 xSpeed = this.walkDirect.x * 10;
             }
-            this.rigidBody.setVelocity({x: xSpeed, y: this.roleJumpPower});
+            if (this.rigidBody) {
+                this.rigidBody.setVelocity({x: xSpeed, y: this.roleJumpPower}); 
+            }
         }
     }
 
     onRoleGiveSpeed(speedData) {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -379,6 +444,9 @@ export default class Role extends Laya.Script {
     }
 
     onRoleHasBullet() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -389,6 +457,9 @@ export default class Role extends Laya.Script {
     }
 
     onRoleChangeBig() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -397,6 +468,9 @@ export default class Role extends Laya.Script {
     }
 
     shootKe() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -422,6 +496,9 @@ export default class Role extends Laya.Script {
     }
 
     shootBullet() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -446,6 +523,9 @@ export default class Role extends Laya.Script {
     }
 
     onRoleBButton() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -463,6 +543,9 @@ export default class Role extends Laya.Script {
     }
 
     hurtRole() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -495,9 +578,14 @@ export default class Role extends Laya.Script {
     }
 
     onRoleCButton() {
+        console.debug(Laya.Physics.I.getBodyCount());
+        console.debug(Laya.Physics.I);
     }
 
     getFaceup() {
+        if (!this.owner) {
+            return;
+        }
         if (this.isDie) {
             return;
         }
@@ -508,6 +596,22 @@ export default class Role extends Laya.Script {
     }
 
     onDisable() {
+        EventMgr.getInstance().removeEvent(Events.Role_Move, this, this.onRoleWalk);
+        EventMgr.getInstance().removeEvent(Events.Role_Move_Stop, this, this.onRoleStopWalk);
+        EventMgr.getInstance().removeEvent(Events.Role_A_Button, this, this.onRoleAButton);
+        EventMgr.getInstance().removeEvent(Events.Role_B_Button, this, this.onRoleBButton);
+        EventMgr.getInstance().removeEvent(Events.Role_C_Button, this, this.onRoleCButton);
+        EventMgr.getInstance().removeEvent(Events.Role_Give_Speed, this, this.onRoleGiveSpeed);
+        EventMgr.getInstance().removeEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
+        EventMgr.getInstance().removeEvent(Events.Role_Change_Big, this, this.onRoleChangeBig);
+        if (this.rigidBody) {
+            this.rigidBody.enabled = false;
+            this.rigidBody.destroy();
+        }
+        this.rigidBody = null;
         GameContext.role = null;
+        this.owner.destroy();
+        this.destroy();
+        this.owner = null;
     }
 }

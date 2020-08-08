@@ -1,3 +1,5 @@
+import Utils from "./Utils";
+
 export default class BrokenBrick extends Laya.Script {
 
     constructor() { 
@@ -6,7 +8,7 @@ export default class BrokenBrick extends Laya.Script {
     
     onEnable() {
         Laya.timer.once(1000, this, function() {
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
         })
     }
 

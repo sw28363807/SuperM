@@ -29,7 +29,7 @@ export default class MonsterLogic extends Laya.Script {
             return;
         }
         Laya.Tween.to(this.owner, {scaleY: 0.5}, 300, null, Laya.Handler.create(this, function () {
-            this.owner.removeSelf();
+            Utils.removeThis(this.owner);
         }));
     }
 
@@ -57,12 +57,12 @@ export default class MonsterLogic extends Laya.Script {
                 parent.addChild(dead);
                 Laya.Tween.to(dead, {x: x + faceUp*1000, y: y - 1000, rotation: 2500}, 4000, Laya.Ease.expoOut, Laya.Handler.create(this, function () {
                     Laya.timer.once(500, this, function() {
-                        dead.removeSelf();
+                        Utils.removeThis(dead);
                     });
                 }));
             }));
         }
-        this.owner.removeSelf();
+        Utils.removeThis(this.owner);
     }
 
     createFootEffect() {
@@ -81,11 +81,11 @@ export default class MonsterLogic extends Laya.Script {
                 parent.addChild(dead);
                 Laya.Tween.to(dead, {scaleY: 0.2}, 100, null, Laya.Handler.create(this, function () {
                     Laya.timer.once(500, this, function() {
-                        dead.removeSelf();
+                        Utils.removeThis(dead);
                     });
                 }));
             }));
         }
-        this.owner.removeSelf();
+        Utils.removeThis(this.owner);
     }
 }

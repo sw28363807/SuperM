@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import GameContext from "../GameContext";
+import Utils from "./Utils";
 
 export default class GoldLogic extends Laya.Script {
 
@@ -17,7 +18,7 @@ export default class GoldLogic extends Laya.Script {
                 gold = contact.m_nodeB;
             }
             if (gold) {
-                this.owner.removeSelf();
+                Utils.removeThis(this.owner);
                 GameContext.gameGoldNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
             }
