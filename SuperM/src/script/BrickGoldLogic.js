@@ -18,7 +18,11 @@ export default class BrickGoldLogic extends Laya.Script {
                 brick = contact.m_nodeB;
             }
             if (brick) {
-                this.onCreateBrokenBrick();
+                if (GameContext.gameRoleBodyState == 1) {
+                    this.onCreateBrokenBrick();
+                } else {
+                    this.render.play(0, false, "ani3");
+                }
             }
         }
     }
@@ -39,9 +43,9 @@ export default class BrickGoldLogic extends Laya.Script {
         for (let index = 0; index < 4; index++) {
             this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
         }
-        this.owner.play(0, false, "ani2");
+        this.render.play(0, false, "ani2");
         Laya.Animation
-        this.owner.on(Laya.Event.COMPLETE, this, function() {
+        this.render.on(Laya.Event.COMPLETE, this, function() {
 
             let label = new Laya.Text();
             label.text = String(100);
@@ -61,6 +65,7 @@ export default class BrickGoldLogic extends Laya.Script {
     }
     
     onEnable() {
+        this.render = this.owner.getChildByName("render");
     }
 
     onDisable() {

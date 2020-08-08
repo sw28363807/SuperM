@@ -24,9 +24,9 @@ export default class BulletLogic extends Laya.Script {
         }
         this.bulletType = data.bulletType;
         if (this.bulletType == 1) {
-            this.rigidBody.setVelocity({x: data.x * 30, y: 3});
+            this.rigidBody.setVelocity({x: data.x * 20, y: 8});
         } else if (this.bulletType == 2) {
-            this.rigidBody.setVelocity({x: data.x * 30, y: 0});
+            this.rigidBody.setVelocity({x: data.x * 20, y: 0});
         }
     }
 

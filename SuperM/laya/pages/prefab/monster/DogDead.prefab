@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":1431,
-    "selecteID":142,
+    "selecteID":1433,
     "searchKey":"Box,DogDead",
     "props":{"y":82,"x":40,"width":81,"presetID":1,"preset":"laya/pages/prefab/monster/DogDead.prefab","name":"DogDead","isPresetRoot":true,"height":83,"anchorY":1,"anchorX":0.5},
     "nodeParent":-1,
-    "maxID":1432,
+    "maxID":1434,
     "label":"DogDead",
     "isOpen":true,
     "isDirectory":true,
@@ -26,6 +26,38 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":142,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"width":81,"presetID":5,"preset":"laya/pages/prefab/monster/DogDead.prefab","isSensor":true,"height":83},
+            "nodeParent":1431,
+            "label":"BoxCollider(DogDead)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1432,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"RigidBody",
+            "switchAble":true,
+            "searchKey":"RigidBody",
+            "removeAble":true,
+            "props":{"type":"dynamic","presetID":6,"preset":"laya/pages/prefab/monster/DogDead.prefab","gravityScale":3},
+            "nodeParent":1431,
+            "label":"RigidBody(DogDead)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1433,
             "child":[
                 ]
         }],

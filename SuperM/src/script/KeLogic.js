@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import GameContext from "../GameContext";
+import Utils from "./Utils";
 
 export default class KeLogic extends Laya.Script {
 

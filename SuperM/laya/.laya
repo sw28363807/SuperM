@@ -47,7 +47,7 @@ import Scene=Laya.Scene;]]>   </codeImportsTS>
    <idePath/>
    <ver>2.0   </ver>
    <stat>false   </stat>
-   <physicsDebug>true   </physicsDebug>
+   <physicsDebug>false   </physicsDebug>
    <toJsonScene>true   </toJsonScene>
    <compressTexture>false   </compressTexture>
    <libProjectPath/>

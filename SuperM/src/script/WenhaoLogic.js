@@ -15,18 +15,21 @@ export default class WenhaoLogic extends Laya.Script {
             }
             if (wenhao) {
                 if (this.state == 0) {
-                    this.owner.play(0, true, "ani2");
                     this.state = 1;
-                    let x = this.owner.x;
-                    let y = this.owner.y;
-                    let parent = this.owner.parent;
-                    Laya.loader.create("prefab/Reward.prefab", Laya.Handler.create(this, function (prefabDef) {
-                        let wenhao = prefabDef.create();
-                        parent.addChild(wenhao);
-                        wenhao.x = x + 5;
-                        wenhao.y = y - wenhao.height * wenhao.scaleX;
-                        wenhao.zOrder = this.owner.zOrder + 1;
-                    }));
+                    this.render.play(0, false, "ani3");
+                    Laya.timer.once(100, this, function() {
+                        this.render.play(0, true, "ani2");
+                        let x = this.owner.x;
+                        let y = this.owner.y;
+                        let parent = this.owner.parent;
+                        Laya.loader.create("prefab/Reward.prefab", Laya.Handler.create(this, function (prefabDef) {
+                            let wenhao = prefabDef.create();
+                            parent.addChild(wenhao);
+                            wenhao.x = x + 5;
+                            wenhao.y = y - wenhao.height * wenhao.scaleX;
+                            wenhao.zOrder = this.owner.zOrder + 1;
+                        }));
+                    });
                 }
             }
         }
@@ -34,6 +37,7 @@ export default class WenhaoLogic extends Laya.Script {
     
     onEnable() {
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.render = this.owner.getChildByName("render");
     }
 
     onDisable() {

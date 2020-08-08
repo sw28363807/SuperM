@@ -24,6 +24,7 @@ export default class Utils extends Laya.Script {
             rigidBody.enabled = false;
             rigidBody.destroy();
         }
+        owner.removeSelf();
         owner.destroy();
     }
 

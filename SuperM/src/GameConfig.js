@@ -9,11 +9,12 @@ import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
 import Role from "./script/Role"
+import PassLevelLogic from "./script/PassLevelLogic"
 import WenhaoLogic from "./script/WenhaoLogic"
+import BrickGoldLogic from "./script/BrickGoldLogic"
 import GoldLogic from "./script/GoldLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
-import BrickGoldLogic from "./script/BrickGoldLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import BulletLogic from "./script/BulletLogic"
@@ -39,11 +40,12 @@ export default class GameConfig {
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
 		reg("script/Role.js",Role);
+		reg("script/PassLevelLogic.js",PassLevelLogic);
 		reg("script/WenhaoLogic.js",WenhaoLogic);
+		reg("script/BrickGoldLogic.js",BrickGoldLogic);
 		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
-		reg("script/BrickGoldLogic.js",BrickGoldLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/BulletLogic.js",BulletLogic);
@@ -66,7 +68,7 @@ GameConfig.startScene = "scene/GameLogoScene.scene";
 GameConfig.sceneRoot = "";
 GameConfig.debug = false;
 GameConfig.stat = false;
-GameConfig.physicsDebug = true;
+GameConfig.physicsDebug = false;
 GameConfig.exportSceneToJson = true;
 
 GameConfig.init();

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":1483,
-    "selecteID":1485,
+    "selecteID":1487,
     "searchKey":"Box,RedWoNiuDead",
     "props":{"y":71,"x":40,"width":80,"presetID":1,"preset":"laya/pages/prefab/monster/RedWoNiuDead.prefab","pivotY":71,"pivotX":40,"name":"RedWoNiuDead","isPresetRoot":true,"height":71},
     "nodeParent":-1,
-    "maxID":1486,
+    "maxID":1488,
     "label":"RedWoNiuDead",
     "isOpen":true,
     "isDirectory":true,
@@ -25,6 +25,38 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":315,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"width":80,"presetID":3,"preset":"laya/pages/prefab/monster/RedWoNiuDead.prefab","isSensor":true,"height":71},
+            "nodeParent":1483,
+            "label":"BoxCollider(RedWoNiuDead)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1486,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"RigidBody",
+            "switchAble":true,
+            "searchKey":"RigidBody",
+            "removeAble":true,
+            "props":{"presetID":4,"preset":"laya/pages/prefab/monster/RedWoNiuDead.prefab","gravityScale":3},
+            "nodeParent":1483,
+            "label":"RigidBody(RedWoNiuDead)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1487,
             "child":[
                 ]
         }],

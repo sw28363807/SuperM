@@ -218,7 +218,7 @@ export default class Role extends Laya.Script {
         }
         if (this.shuiguanState == 1 || this.shuiguanState == 2) {
             this.shuiguanTime++;
-            if (this.shuiguanTime >= 100 && this.walkDirect.y > 0 && this.commandWalk) {
+            if (this.shuiguanTime >= 100 && this.walkDirect && this.walkDirect.y > 0 && this.commandWalk) {
                 if (this.shuiguanState == 1) {
                     this.shuiguanState = 0;
                     // GameContext.gameScene.removeChildren();
@@ -315,6 +315,11 @@ export default class Role extends Laya.Script {
             return;
         }
         if (this.isDie) {
+            return;
+        }
+        if (other.label == "PassLevelBeick") {
+            Laya.Scene.close("scene/Level1_1.scene");
+            Laya.Scene.open("scene/Level1_1.scene");
             return;
         }
         let foot = null;
@@ -419,7 +424,7 @@ export default class Role extends Laya.Script {
             this.playAni("jump");
             this.shuiguanState = 0;
             let xSpeed = 0;
-            if (this.walkDirect) {
+            if (this.walkDirect && this.commandWalk) {
                 xSpeed = this.walkDirect.x * 10;
             }
             if (this.rigidBody) {
@@ -513,11 +518,11 @@ export default class Role extends Laya.Script {
             let faceup = this.getFaceup();
             parent.addChild(bullet);
             if (faceup > 0) {
-                bullet.x = x + 110;
+                bullet.x = x + 80;
             } else if (faceup < 0) {
-                bullet.x = x - 40;
+                bullet.x = x + 80;
             }
-            bullet.y = y + 30;
+            bullet.y = y + 60;
             EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: this.getFaceup(), y: 0, bulletType: 1, owner: bullet});
         }));
     }

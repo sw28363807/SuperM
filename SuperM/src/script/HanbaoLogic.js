@@ -7,7 +7,7 @@ export default class HanbaoLogic extends Laya.Script {
 
     constructor() { 
         super();
-        this.speed = 7;
+        this.speed = 5;
     }
     
     onEnable() {

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":324,
-    "selecteID":333,
+    "selecteID":334,
     "searchKey":"Box,GreenWoNiuDead",
     "props":{"y":71,"x":40,"width":80,"preset":"laya/pages/prefab/monster/GreenWoNiuDead.prefab","pivotY":71,"pivotX":40,"name":"GreenWoNiuDead","height":71},
     "nodeParent":-1,
-    "maxID":334,
+    "maxID":336,
     "label":"GreenWoNiuDead",
     "isOpen":true,
     "isDirectory":true,
@@ -25,6 +25,38 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":315,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"width":80,"presetID":1,"preset":"laya/pages/prefab/monster/GreenWoNiuDead.prefab","isSensor":true,"height":71},
+            "nodeParent":324,
+            "label":"BoxCollider(GreenWoNiuDead)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":334,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"RigidBody",
+            "switchAble":true,
+            "searchKey":"RigidBody",
+            "removeAble":true,
+            "props":{"presetID":2,"preset":"laya/pages/prefab/monster/GreenWoNiuDead.prefab","gravityScale":3},
+            "nodeParent":324,
+            "label":"RigidBody(GreenWoNiuDead)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":335,
             "child":[
                 ]
         }],
