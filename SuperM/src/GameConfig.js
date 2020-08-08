@@ -12,6 +12,7 @@ import Role from "./script/Role"
 import PassLevelLogic from "./script/PassLevelLogic"
 import WenhaoLogic from "./script/WenhaoLogic"
 import BrickGoldLogic from "./script/BrickGoldLogic"
+import SingleObsLogic from "./script/SingleObsLogic"
 import GoldLogic from "./script/GoldLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -43,6 +44,7 @@ export default class GameConfig {
 		reg("script/PassLevelLogic.js",PassLevelLogic);
 		reg("script/WenhaoLogic.js",WenhaoLogic);
 		reg("script/BrickGoldLogic.js",BrickGoldLogic);
+		reg("script/SingleObsLogic.js",SingleObsLogic);
 		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
@@ -68,7 +70,7 @@ GameConfig.startScene = "scene/GameLogoScene.scene";
 GameConfig.sceneRoot = "";
 GameConfig.debug = false;
 GameConfig.stat = false;
-GameConfig.physicsDebug = false;
+GameConfig.physicsDebug = true;
 GameConfig.exportSceneToJson = true;
 
 GameConfig.init();

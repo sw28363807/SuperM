@@ -11,7 +11,7 @@ export default class Role extends Laya.Script {
         this.commandWalk = false;
         this.speed = 9;
         this.jumpSpeed = 35;
-        this.isInGround = false;
+        GameContext.roleInGround = false;
         this.isHurting = false;
         this.shuiguanState = 0; // 0 不在水管 1 进水管 2 出水管
         this.faceup = 1;
@@ -43,6 +43,8 @@ export default class Role extends Laya.Script {
         
         this.curAni = "";
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
+
+        this.initRoleColl();
         
         this.roleSpr = this.owner.getChildByName("roleSpr");
         this.keSpr = this.owner.getChildByName("ke");
@@ -50,6 +52,20 @@ export default class Role extends Laya.Script {
         this.setBodyState(GameContext.gameRoleBodyState);
         this.protectedRole = false;
         this.notHurtRole = false;
+    }
+
+    initRoleColl() {
+        let colls =  this.owner.getComponents(Laya.ColliderBase);
+        for (let index = 0; index < colls.length; index++) {
+            let coll = colls[index];
+            if (coll.label == "RoleFoot") {
+                GameContext.roleFoot = coll;
+            } else if(coll.label == "RoleBody")  {
+                GameContext.roleBody = coll;
+            } else if (coll.label == "RoleHead") {
+                GameContext.roleHead = coll;
+            }
+        }
     }
 
     playAni(ani, loop) {
@@ -76,7 +92,7 @@ export default class Role extends Laya.Script {
             this.roleSpr.play(0, loop, ani);
         }
         Laya.timer.once(500, this, function() {
-            if (this.curAni == "stand" && this.isInGround == true && this.commandWalk == false && this.keSpr.visible == false) {
+            if (this.curAni == "stand" && GameContext.roleInGround == true && this.commandWalk == false && this.keSpr.visible == false) {
                 this.playAni("kong1", true);
             }
         });
@@ -184,7 +200,7 @@ export default class Role extends Laya.Script {
             return;
         }
         this.commandWalk = false;
-        if (this.isInGround == true) {
+        if (GameContext.roleInGround == true) {
             this.walkDirect = {x: 0, y: 0};
             let linearVelocity = this.getLineSpeed();
             this.setMove(0, linearVelocity.y);
@@ -223,10 +239,8 @@ export default class Role extends Laya.Script {
                     this.shuiguanState = 0;
                     // GameContext.gameScene.removeChildren();
                     // GameContext.gameScene.close();
-                    Laya.Scene.close("scene/Level1_1.scene");
                     Laya.Scene.open("scene/LevelX.scene");
                 } else if (this.shuiguanState == 2) {
-                    Laya.Scene.close("scene/LevelX.scene");
                     this.shuiguanState = 0;
                     Laya.Scene.open("scene/Level1_1.scene");
                 }
@@ -265,10 +279,10 @@ export default class Role extends Laya.Script {
             }
         }
         let linearVelocity = this.getLineSpeed();
-        if (this.isInGround && linearVelocity.x == 0) {
+        if (GameContext.roleInGround && linearVelocity.x == 0) {
             this.playAni("stand");
         }
-        if (this.isInGround) {
+        if (GameContext.roleInGround) {
             this.playAni("run");
         }
     }
@@ -322,6 +336,9 @@ export default class Role extends Laya.Script {
             Laya.Scene.open("scene/Level1_1.scene");
             return;
         }
+        if (other.label == "obsDown" || other.label == "obsUp") {
+            return;
+        }
         let foot = null;
         let body = null;
         let collider = null;
@@ -353,13 +370,16 @@ export default class Role extends Laya.Script {
         } else if (body && collider.label == "RoleBody" && (other.label == "MonsterBody")) {
             this.hurtRole();
         } else if (foot && other.label != "TanLiBrick") {
+            if (other.label == "obsGround" && other.isSensor == true) {
+                return;
+            }
             if (other.label == "ShuiguanHead") {
                 this.shuiguanState = 1;
                 GameContext.initRolePoint = {x: this.owner.x, y: this.owner.y};
             } else if (other.label == "ShuiguanHeadExit") {
                 this.shuiguanState = 2;
             }
-            this.isInGround = true;
+            GameContext.roleInGround = true;
             if (this.commandWalk == false) {
                 this.setMove(0, 0);
                 this.playAni("stand");
@@ -419,8 +439,8 @@ export default class Role extends Laya.Script {
         if (this.isDie) {
             return;
         }
-        if (this.isInGround == true) {
-            this.isInGround = false;
+        if (GameContext.roleInGround == true) {
+            GameContext.roleInGround = false;
             this.playAni("jump");
             this.shuiguanState = 0;
             let xSpeed = 0;
@@ -443,7 +463,7 @@ export default class Role extends Laya.Script {
         if (this.isHurting) {
             return;
         }
-        this.isInGround = false;
+        GameContext.roleInGround = false;
         this.shuiguanState = 0;
         this.rigidBody.setVelocity(speedData);
     }
@@ -565,7 +585,7 @@ export default class Role extends Laya.Script {
         this.showHurtEffect();
         this.isHurting = true;
         this.playAni("stand");
-        this.isInGround = false;
+        GameContext.roleInGround = false;
         this.walkDirect = null;
         if (this.protectedRole == false) {
             this.changeSmallEffect();
@@ -618,5 +638,9 @@ export default class Role extends Laya.Script {
         this.owner.destroy();
         this.destroy();
         this.owner = null;
+        GameContext.roleHead = null;
+        GameContext.roleBody = null;
+        GameContext.roleFoot = null;
+        GameContext.roleInGround = false;
     }
 }
