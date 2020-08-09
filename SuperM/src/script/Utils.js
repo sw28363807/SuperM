@@ -11,6 +11,9 @@ export default class Utils extends Laya.Script {
     }
 
     static removeThis(owner) {
+        if (!owner) {
+            return;
+        }
         let colls = owner.getComponents(Laya.ColliderBase);
         if (colls) {
             for (let index = 0; index < colls.length; index++) {

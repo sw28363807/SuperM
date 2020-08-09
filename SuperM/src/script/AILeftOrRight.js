@@ -18,9 +18,6 @@ export default class AILeftOrRight extends Laya.Script {
     }
     
     onEnable() {
-        if (GameContext.gameDebugMonsterNotRun) {
-            this.enabled = false;
-        }
         EventMgr.getInstance().registEvent(Events.Monster_Stop_AI, this, this.onStopAI);
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.render = this.owner.getChildByName("render");

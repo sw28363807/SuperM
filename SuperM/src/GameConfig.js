@@ -9,22 +9,21 @@ import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
 import Role from "./script/Role"
-import PassLevelLogic from "./script/PassLevelLogic"
-import WenhaoLogic from "./script/WenhaoLogic"
-import BrickGoldLogic from "./script/BrickGoldLogic"
-import SingleObsLogic from "./script/SingleObsLogic"
+import WoniuLogic from "./script/WoniuLogic"
 import GoldLogic from "./script/GoldLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
+import BrickGoldLogic from "./script/BrickGoldLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
+import WenhaoLogic from "./script/WenhaoLogic"
 import BulletLogic from "./script/BulletLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import MonsterLogic from "./script/MonsterLogic"
 import AIFlyMonster from "./script/AIFlyMonster"
 import FlyMonsterLogic from "./script/FlyMonsterLogic"
-import WoniuLogic from "./script/WoniuLogic"
 import KeLogic from "./script/KeLogic"
+import SingleObsLogic from "./script/SingleObsLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 
 export default class GameConfig {
@@ -41,22 +40,21 @@ export default class GameConfig {
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
 		reg("script/Role.js",Role);
-		reg("script/PassLevelLogic.js",PassLevelLogic);
-		reg("script/WenhaoLogic.js",WenhaoLogic);
-		reg("script/BrickGoldLogic.js",BrickGoldLogic);
-		reg("script/SingleObsLogic.js",SingleObsLogic);
+		reg("script/WoniuLogic.js",WoniuLogic);
 		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
+		reg("script/BrickGoldLogic.js",BrickGoldLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
+		reg("script/WenhaoLogic.js",WenhaoLogic);
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/MonsterLogic.js",MonsterLogic);
 		reg("script/AIFlyMonster.js",AIFlyMonster);
 		reg("script/FlyMonsterLogic.js",FlyMonsterLogic);
-		reg("script/WoniuLogic.js",WoniuLogic);
 		reg("script/KeLogic.js",KeLogic);
+		reg("script/SingleObsLogic.js",SingleObsLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
     }
 }

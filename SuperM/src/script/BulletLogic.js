@@ -7,11 +7,13 @@ export default class BulletLogic extends Laya.Script {
     constructor() { 
         super();
         this.count = 0;
+        this.isDrop = false;
     }
     
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Bullet_Shoot, this, this.onBulletShot);
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.coll = this.owner.getComponent(Laya.ColliderBase);
     }
 
     onDisable() {
@@ -39,6 +41,15 @@ export default class BulletLogic extends Laya.Script {
 
 
     onTriggerEnter(other, self, contact) {
+        if (this.isDrop == true) {
+            return;
+        }
+        if (this.owner.name == "KeBullet" && other.label == "Hole") {
+            this.coll.isSensor = true;
+            this.isDrop = true;
+            this.rigidBody.setVelocity({x: 3, y: 0});
+            return;
+        }
         this.count++;
         if (other && other.label == "Brick" || 
         other.label == "TanLiBrick" ||
@@ -58,6 +69,9 @@ export default class BulletLogic extends Laya.Script {
     }
 
     onTriggerExit(other, self, contact) {
+        if (this.isDrop == true) {
+            return;
+        }
         if (other && other.label == "Ground"  || other.label == "Brick"
         || other.label == "TanLiBrick" || other.label == "Wall") {
             if (self.label == "KeBullet") {
