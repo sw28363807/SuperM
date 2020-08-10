@@ -6,7 +6,7 @@ export default class WoniuLogic extends Laya.Script {
 
     constructor() { 
         super();
-        this.speed = 3;
+        this.speed = 2;
         this.faceup = 0;
         this.currentVelocity = null;
         this.monsterCount = 2;

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1650,
+    "selecteID":1671,
     "searchKey":"Scene,gameScene",
     "props":{"width":20000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1664,
+    "maxID":1672,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -244,25 +244,13 @@
             "props":{"y":0,"x":0,"width":20000,"height":750},
             "nodeParent":2,
             "label":"Box",
-            "isOpen":false,
-            "isDirectory":true,
+            "isOpen":true,
+            "isDirectory":false,
             "isAniNode":true,
-            "hasChild":true,
+            "hasChild":false,
             "compId":370,
             "child":[
-                {
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":334,"x":1984,"texture":"other/grass (7).png"},
-                    "nodeParent":370,
-                    "label":"Sprite",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1649,
-                    "child":[
-                        ]
-                }],
+                ],
             "$LOCKED":false,
             "$HIDDEN":false
         },
@@ -270,7 +258,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box,Hole1",
-            "props":{"zOrder":2,"y":749,"x":2363,"width":400,"name":"Hole1","height":1000,"bgColor":"#060101"},
+            "props":{"zOrder":2,"y":750,"x":4893,"width":400,"name":"Hole1","height":1000,"bgColor":"#060101"},
             "nodeParent":2,
             "label":"Hole1",
             "isOpen":false,
@@ -308,7 +296,8 @@
                     "compId":1652,
                     "child":[
                         ]
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -316,7 +305,7 @@
             "selectedBox":54,
             "selecteID":83,
             "searchKey":"Box",
-            "props":{"y":638,"x":1396,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":638,"x":961,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":89,
             "label":"Role",
@@ -327,7 +316,6 @@
             "compId":1660,
             "child":[
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/Role.js",
@@ -345,7 +333,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -362,7 +349,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":11,"preset":"laya/pages/prefab/Role.prefab"},
@@ -376,7 +362,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":10,"preset":"laya/pages/prefab/Role.prefab"},
@@ -391,7 +376,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"CircleCollider",
                     "switchAble":true,
                     "searchKey":"CircleCollider",
@@ -407,7 +391,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"CircleCollider",
                     "switchAble":true,
                     "searchKey":"CircleCollider",
@@ -423,7 +406,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"CircleCollider",
                     "switchAble":true,
                     "searchKey":"CircleCollider",
@@ -451,29 +433,347 @@
         {
             "x":15,
             "type":"Box",
-            "selectedBox":1483,
+            "selectedBox":1565,
+            "selecteID":1583,
             "searchKey":"Box",
-            "props":{"y":749,"x":1726,"presetID":1,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
+            "props":{"y":-896,"x":6586,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":2,
-            "maxID":1486,
-            "label":"RedWoNiu",
+            "maxID":1584,
+            "label":"PassLevel",
             "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":1663,
+            "compId":1665,
             "child":[
                 {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"render",
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":315,
+                    "compId":1566,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1567,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1569,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1570,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1571,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1572,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1573,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1574,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1576,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":11,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1575,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":12,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1577,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":13,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1578,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":14,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1579,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":15,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1580,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":16,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1581,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":17,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+                    "nodeParent":1665,
+                    "label":"Sprite(PassLevel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1582,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":1584,
+            "selecteID":1585,
+            "searchKey":"Sprite",
+            "props":{"y":528,"x":7084,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1587,
+            "label":"PassLevelBrick",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":1667,
+            "child":[
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":1667,
+                    "label":"BoxCollider(PassLevelBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1585,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":1667,
+                    "label":"RigidBody(PassLevelBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1586,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":266,
+            "selecteID":269,
+            "searchKey":"Sprite",
+            "props":{"y":595,"x":1150,"presetID":1,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+            "nodeParent":2,
+            "maxID":270,
+            "label":"Shuiguan",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":1671,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+                    "nodeParent":1671,
+                    "label":"BoxCollider(Shuiguan)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":188,
                     "child":[
                         ]
                 },
@@ -483,14 +783,13 @@
                     "switchAble":true,
                     "searchKey":"RigidBody",
                     "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"RigidBody(RedWoNiu)",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+                    "nodeParent":1671,
+                    "label":"RigidBody(Shuiguan)",
                     "isDirectory":false,
-                    "isClose":true,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":319,
+                    "compId":189,
                     "child":[
                         ]
                 },
@@ -500,92 +799,13 @@
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"BoxCollider(RedWoNiu)",
-                    "isDirectory":false,
-                    "isClose":true,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":320,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/WoniuLogic.js",
-                    "searchKey":"Script,WoniuLogic",
-                    "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"WoniuLogic",
-                    "isDirectory":false,
-                    "isClose":true,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":328,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"CircleCollider",
-                    "switchAble":true,
-                    "searchKey":"CircleCollider",
-                    "removeAble":true,
-                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"CircleCollider(RedWoNiu)",
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/Shuiguan.prefab"},
+                    "nodeParent":1671,
+                    "label":"BoxCollider(Shuiguan)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":330,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"BoxCollider(RedWoNiu)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":331,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Text",
-                    "searchKey":"Text",
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"prefab",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1484,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Text",
-                    "searchKey":"Text",
-                    "props":{"presetID":9,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab"},
-                    "nodeParent":1663,
-                    "label":"deadMove",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1485,
+                    "compId":269,
                     "child":[
                         ]
                 }],

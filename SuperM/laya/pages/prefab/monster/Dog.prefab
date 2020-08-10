@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":138,
-    "selecteID":144,
+    "selecteID":140,
     "searchKey":"Box,Dog",
     "props":{"zOrder":1,"y":69,"x":33,"width":67,"presetID":1,"preset":"laya/pages/prefab/monster/Dog.prefab","pivotY":69,"pivotX":33,"name":"Dog","isPresetRoot":true,"height":69},
     "nodeParent":-1,
@@ -20,7 +20,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":21.5,"x":-8,"width":83,"presetID":3,"preset":"laya/pages/prefab/monster/Dog.prefab","label":"MonsterBody","isSensor":true,"height":13,"friction":0},
+            "props":{"y":41,"x":-17,"width":100,"presetID":3,"preset":"laya/pages/prefab/monster/Dog.prefab","label":"MonsterBody","isSensor":true,"height":6,"friction":0},
             "nodeParent":138,
             "label":"BoxCollider(Dog)",
             "isDirectory":false,
@@ -60,7 +60,8 @@
             "hasChild":false,
             "compId":142,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -85,7 +86,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":-1.5,"width":70,"presetID":7,"preset":"laya/pages/prefab/monster/Dog.prefab","label":"MonsterHead","isSensor":true,"height":11},
+            "props":{"y":0,"x":-1,"width":68,"presetID":7,"preset":"laya/pages/prefab/monster/Dog.prefab","label":"MonsterHead","isSensor":true,"height":41},
             "nodeParent":138,
             "label":"BoxCollider(Dog)",
             "isDirectory":false,

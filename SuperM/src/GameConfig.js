@@ -9,7 +9,6 @@ import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
 import Role from "./script/Role"
-import WoniuLogic from "./script/WoniuLogic"
 import GoldLogic from "./script/GoldLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -22,6 +21,7 @@ import AILeftOrRight from "./script/AILeftOrRight"
 import MonsterLogic from "./script/MonsterLogic"
 import AIFlyMonster from "./script/AIFlyMonster"
 import FlyMonsterLogic from "./script/FlyMonsterLogic"
+import WoniuLogic from "./script/WoniuLogic"
 import KeLogic from "./script/KeLogic"
 import SingleObsLogic from "./script/SingleObsLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
@@ -40,7 +40,6 @@ export default class GameConfig {
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
 		reg("script/Role.js",Role);
-		reg("script/WoniuLogic.js",WoniuLogic);
 		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
@@ -53,6 +52,7 @@ export default class GameConfig {
 		reg("script/MonsterLogic.js",MonsterLogic);
 		reg("script/AIFlyMonster.js",AIFlyMonster);
 		reg("script/FlyMonsterLogic.js",FlyMonsterLogic);
+		reg("script/WoniuLogic.js",WoniuLogic);
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/SingleObsLogic.js",SingleObsLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);

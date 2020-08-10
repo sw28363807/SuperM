@@ -47,7 +47,10 @@ export default class BulletLogic extends Laya.Script {
         if (this.owner.name == "KeBullet" && other.label == "Hole") {
             this.coll.isSensor = true;
             this.isDrop = true;
-            this.rigidBody.setVelocity({x: 3, y: 0});
+            this.rigidBody.gravityScale = 15;
+            Laya.timer.once(1000, null, function() {
+                Utils.removeThis(this.owner);
+            });
             return;
         }
         this.count++;
