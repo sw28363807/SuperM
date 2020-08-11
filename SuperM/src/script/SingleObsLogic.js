@@ -27,7 +27,11 @@ export default class SingleObsLogic extends Laya.Script {
             }
         } else if (other.label == "RoleFoot") {
             if (self.label == "obsUp") {
-                this.ground.isSensor = false;
+                if (GameContext.role) {
+                    if (GameContext.role.y < self.owner.y) {
+                        this.ground.isSensor = false;
+                    }   
+                }
             }
         }
     }

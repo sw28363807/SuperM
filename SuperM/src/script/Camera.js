@@ -15,7 +15,13 @@ export default class Camera extends Laya.Script {
             this.owner.x = 1136/2 - x;
         }
         // this.owner.y = this.owner.y
-        this.owner.y =  750/2.3 - 660 + this.zeroY;
+        // let rp = this.role.parent.localToGlobal(new Laya.Point(this.role.x, this.role.y));
+        if (this.role.y < 300) {
+            this.owner.y = this.standY - (this.role.y - 300);
+        } else {
+            this.owner.y =  this.standY;
+        }
+        
     }
 
     onUpdate() {
@@ -39,7 +45,7 @@ export default class Camera extends Laya.Script {
         if(w/h > 2.0) {
             this.zeroY = 160; 
         }
-        Laya.Physics.I.worldRoot.y = this.zeroY;
+        this.standY = 750/2.3 - 660 + this.zeroY;
     }
 
     onDisable() {

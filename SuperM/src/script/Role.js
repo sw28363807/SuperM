@@ -47,6 +47,13 @@ export default class Role extends Laya.Script {
         GameContext.protectedRole = false;
     }
 
+    onStart() {
+        if (GameContext.initRoleByShuiGuan == true) {
+            GameContext.initRoleByShuiGuan = false;
+            EventMgr.getInstance().postEvent(Events.Role_Exit_Shuiguan);
+        }
+    }
+
     initRoleColl() {
         let colls =  this.owner.getComponents(Laya.ColliderBase);
         for (let index = 0; index < colls.length; index++) {
@@ -97,7 +104,6 @@ export default class Role extends Laya.Script {
         }
         GameContext.commandWalk = true;
         GameContext.walkDirect = data;
-        this.processRoleWalk();
     }
 
     onRoleStopWalk() {
@@ -111,11 +117,13 @@ export default class Role extends Laya.Script {
             return;
         }
         GameContext.commandWalk = false;
+        GameContext.walkDirect = null;
+        let linearVelocity = GameContext.getLineSpeed();
         if (GameContext.roleInGround == true) {
-            GameContext.walkDirect = {x: 0, y: 0};
-            let linearVelocity = GameContext.getLineSpeed();
-            GameContext.setRoleMove(0, linearVelocity.y);
             GameContext.playRoleAni("stand");
+            GameContext.setRoleMove(0, linearVelocity.y);
+        } else {
+            GameContext.setRoleMove(linearVelocity.x, linearVelocity.y);
         }
     }
 
@@ -127,6 +135,7 @@ export default class Role extends Laya.Script {
             this.processRoleDie();
             return;
         }
+        this.processRoleWalk();
         this.processGotoShuiguan();
         this.processFaceUp();
     }
@@ -146,19 +155,8 @@ export default class Role extends Laya.Script {
         if (GameContext.roleShuiGuanState == 1 || GameContext.roleShuiGuanState == 2) {
             this.shuiguanTime++;
             if (this.shuiguanTime >= 100 && GameContext.walkDirect && GameContext.walkDirect.y > 0 && GameContext.commandWalk) {
-                let state = GameContext.roleShuiGuanState;
-                GameContext.roleShuiGuanState = 3;
-                GameContext.roleRigidBody.enabled = false;
-                GameContext.roleShuiGuan.owner.zOrder = GameContext.role.zOrder + 1;
-                Laya.Tween.to(GameContext.role, {y: GameContext.role.y + 150} ,1000, null, Laya.Handler.create(null, function() {
-                    if (state == 1) {
-                        GameContext.roleShuiGuanState = 0;
-                        Laya.Scene.open("scene/LevelX.scene");
-                    } else if (state == 2) {
-                        GameContext.roleShuiGuanState = 0;
-                        Laya.Scene.open("scene/Level1_1.scene");
-                    }
-                }));
+                EventMgr.getInstance().postEvent(Events.Role_Enter_Shuiguan);
+                GameContext.roleShuiGuanState = 0;
             }
         } else {
             this.shuiguanTime = 0;
@@ -194,11 +192,17 @@ export default class Role extends Laya.Script {
             }
         }
         let linearVelocity = GameContext.getLineSpeed();
-        if (GameContext.roleInGround && linearVelocity.x == 0) {
-            GameContext.playRoleAni("stand");
-        }
         if (GameContext.roleInGround) {
-            GameContext.playRoleAni("run");
+            if (Math.abs(linearVelocity.x) <= 0.0000001) {
+                GameContext.playRoleAni("stand");
+            } else {
+                if (Math.abs(linearVelocity.y) < 1) {
+                    GameContext.playRoleAni("run");
+                } else {
+                    GameContext.roleInGround = false;
+                    GameContext.playRoleAni("jump");
+                }
+            }
         }
     }
 
@@ -234,6 +238,9 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
+        if (other.label == "Gold") {
+            return;
+        }
         if (other.label == "PassLevelBrick") {
             GameContext.triggerRoleWin();
             return;
@@ -250,53 +257,31 @@ export default class Role extends Laya.Script {
             GameContext.roleIsDrop = true;
             return;
         }
-        let foot = null;
-        let body = null;
-        let collider = null;
-        if (contact.m_fixtureA.collider.label == "RoleFoot") {
-            foot = contact.m_nodeA;
-            collider = contact.m_fixtureA.collider;
-        } else if (contact.m_fixtureB.collider.label == "RoleFoot") {
-            foot = contact.m_nodeB;
-            collider = contact.m_fixtureB.collider;
-        }
-        if (!foot) {
-            if (contact.m_fixtureA.collider.label == "RoleBody") {
-                body = contact.m_nodeA;
-                collider = contact.m_fixtureA.collider;
-            } else if (contact.m_fixtureB.collider.label == "RoleBody") {
-                body = contact.m_nodeB;
-                collider = contact.m_fixtureB.collider;
-            }   
-        }
         if (other.label == "KeBody") {
             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
             GameContext.keSpr.visible = true;
             GameContext.roleCurAni = "";
             GameContext.playRoleAni(GameContext.roleCurAni);
-        } else if (foot && collider.label == "RoleFoot" &&
+        } else if (self.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
                 GameContext.footMonster(other);
-        } else if (body && collider.label == "RoleBody" && (other.label == "MonsterBody")) {
+        } else if (self.label == "RoleBody" && (other.label == "MonsterBody")) {
             GameContext.hurtRole();
-        } else if (foot && other.label != "TanLiBrick" || other.label != "Hole") {
-            if (other.label == "obsGround" && other.isSensor == true) {
+        } else if ((other.label != "TanLiBrick" || other.label != "Hole") && self.label =="RoleFoot") {
+            if (contact.m_manifold.localNormal >= 0) {
                 return;
             }
-            if (other.label == "ShuiguanHead") {
-                GameContext.roleShuiGuanState = 1;
-                GameContext.initRolePoint = {x: this.owner.x, y: this.owner.y};
-                GameContext.roleShuiGuan = other;
-            } else if (other.label == "ShuiguanHeadExit") {
-                GameContext.roleShuiGuanState = 2;
-                GameContext.roleShuiGuan = other;
+            if (other.label == "obsGround") {
+                if (other.isSensor == true) {
+                    return;
+                }
+
             }
+
             GameContext.roleInGround = true;
             if (GameContext.commandWalk == false) {
                 GameContext.setRoleMove(0, 0);
-                GameContext.playRoleAni("stand");
-            } else {
-                GameContext.playRoleAni("run");
+                GameContext.playRoleAni("");
             }
             if (GameContext.roleHurting) {
                 GameContext.roleHurting = false;
@@ -307,16 +292,6 @@ export default class Role extends Laya.Script {
             if (GameContext.isWin) {
                 GameContext.triggerRoleWinGotoDoor();
             }
-        }
-    }
-
-    onTriggerExit(other, self, contact) {
-        if (!this.owner) {
-            return;
-        }
-        if (self.label == "RoleFoot") {
-            // GameContext.playRoleAni("jump");
-            GameContext.roleShuiGuanState = 0;
         }
     }
 

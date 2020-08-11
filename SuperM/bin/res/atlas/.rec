@@ -39,9 +39,11 @@ P 5FD17798 vscroll.png
 P DDDDFB9E vslider$bar.png
 P 01BAE7F5 vslider.png
 D joystick
-P 6E235040 DP1.png
+P B31F2F57 btn1.png
+P 4D71BC1E btn2.png
+P E06F1AD0 DP1.png
 P 7C5FFE97 feedback_btn.png
-P F39C4E44 yangan.png
+P 576A263A yangan.png
 D monster
 P 3B204743 gou (1).png
 P DA6C833E gou (2).png
@@ -76,11 +78,12 @@ P 9DBC62EF new_woniu_chibang (2).png
 P E8829B14 new_woniu_chibang (3).png
 D other
 P 2CFEAA96 blue.png
-P DCF7A4FC bullet.png
+P EC63A357 bullet.png
 P 9C943681 cloud (1).png
 P 0F98E955 cloud (2).png
 P 5B41889C cloud (3).png
 P 2CF3D241 cloud (4).png
+P 381B485C cloud.png
 P 74E5BAA1 goldBrick (1).png
 P 2D84AE1C goldBrick (10).png
 P 65EC531F goldBrick (11).png
@@ -156,6 +159,8 @@ R C52C888C some (6).png
 P 89F08C92 some (7).png
 R 7715F4C0 some (8).png
 P E79ED536 some (9).png
+D review
+S FEA43D64 mission.jpg
 D role
 P 16FD743A groudnstand.png
 P EB8EBCED ground_run (1).png

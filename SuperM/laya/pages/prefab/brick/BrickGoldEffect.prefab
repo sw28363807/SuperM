@@ -1,0 +1,1 @@
+{"type":"Animation","props":{"source":"anim/BrickGoldEffect.ani","x":0,"y":0,"name":"BrickGoldEffect","preset":"laya/pages/prefab/brick/BrickGoldEffect.prefab","presetID":1,"isPresetRoot":true},"compId":2954,"child":[],"isAniNode":true,"nodeParent":2,"searchKey":"Animation,BrickGoldEffect","label":"BrickGoldEffect","isDirectory":false,"hasChild":false,"x":15}

@@ -3,7 +3,7 @@
         "../bin/**/*.*"
     ],
     "openDataZone": false,
-    "compressJson": false,
+    "compressJson": true,
     "compressJsonFilter": [
         "$basePath/**/*.{json,atlas}"
     ],
@@ -19,9 +19,11 @@
     ],
     "compressJs": true,
     "compressJsFilter": [
-        "$basePath/**/*.js"
+        "$basePath/**/*.js",
+        "!$basePath/libs/min/**/*.js"
     ],
     "compressJsNoteList": [
+        "",
         ""
     ],
     "version": false,
@@ -64,9 +66,10 @@
     "compile": false,
     "forceCompile": false,
     "onlyIndexJS": true,
+    "useMinJsLibs": true,
     "es6toes5": false,
     "projectType": "js",
-    "pubTime": 1596474527779,
+    "pubTime": 1597140405304,
     "uesEnginePlugin": false,
     "wxOptimize": {
         "useOptimizeOpen": false,

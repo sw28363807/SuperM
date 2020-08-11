@@ -40,6 +40,8 @@ export default class GameContext extends Laya.Script {
     static setRolePosition(x, y) {
         if (GameContext.roleRigidBody) {
             GameContext.roleRigidBody.getBody().SetPositionXY(x/50, y/50);
+            GameContext.role.x = x;
+            GameContext.role.y = y;
         }
     }
 
@@ -47,8 +49,6 @@ export default class GameContext extends Laya.Script {
         if (GameContext.role) {
             GameContext.initRolePoint = GameContext.initConstRolePoint;
             GameContext.isWin = true;
-            // Laya.Scene.close("scene/Level1_1.scene");
-            // Laya.Scene.open("scene/Level1_1.scene");
         }
     }
 
@@ -90,11 +90,13 @@ export default class GameContext extends Laya.Script {
         } else {
             GameContext.roleSpr.play(0, loop, ani);
         }
-        Laya.timer.once(500, null, function() {
+
+        Laya.timer.once(1000, null, function() {
             if (GameContext.roleCurAni == "stand" && GameContext.roleInGround == true && GameContext.commandWalk == false && GameContext.keSpr.visible == false) {
                 GameContext.playRoleAni("kong1", true);
             }
         });
+
     }
 
     static triggerRoleWinGotoDoor() {
@@ -255,6 +257,14 @@ export default class GameContext extends Laya.Script {
         GameContext.gameRoleState = state;
     }
 
+    static upShuiGuan(owner) {
+        
+    }
+
+    static downShuiGuan(owner) {
+
+    }
+
     onEnable() {
     }
 
@@ -270,7 +280,7 @@ GameContext.roleInGround = false;
 GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
 GameContext.roleShuiGuanState = 0; // 0 不在水管 1 进水管 2 出水管 3正在播放过度动画
-GameContext.roleShuiGuan = null;
+GameContext.ShuiguanIndex = 0;
 GameContext.roleRigidBody = null;
 GameContext.commandWalk = false;
 GameContext.isDie = false;
@@ -292,7 +302,8 @@ GameContext.joyStickScene = null;
 GameContext.gameTopScene = null;
 GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
-GameContext.initConstRolePoint = {x: 961, y: 638}
+GameContext.initConstRolePoint = {x: 961, y: 638};
+GameContext.initRoleByShuiGuan = false;
 
 GameContext.gameRoleNumber = 998;
 GameContext.gameGoldNumber = 0;

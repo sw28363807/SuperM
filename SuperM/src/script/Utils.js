@@ -1,3 +1,5 @@
+import GameContext from "../GameContext";
+
 export default class Utils extends Laya.Script {
 
     constructor() { 
@@ -8,6 +10,18 @@ export default class Utils extends Laya.Script {
     }
 
     onDisable() {
+    }
+
+    static roleInFloor(brick) {
+        if (GameContext.role) {
+            let offx = 20;
+            let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
+            let myY = GameContext.role.y;
+            if (myX > brick.x - offx && myX < brick.x + brick.width * brick.scaleX + offx && myY > brick.y) {
+                return true;
+            }
+        }
+        return false;
     }
 
     static removeThis(owner) {

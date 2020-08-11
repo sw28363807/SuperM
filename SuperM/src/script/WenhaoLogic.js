@@ -1,43 +1,46 @@
+import Utils from "./Utils";
+
 export default class WenhaoLogic extends Laya.Script {
 
     constructor() { 
         super();
-        this.state = 0; //0 未出蘑菇 1 出蘑菇
     }
 
     onTriggerEnter(other, self, contact) {
+        if (!Utils.roleInFloor(self.owner)) {
+            return;
+        }
+        
         if (other && other.label == "RoleHead") {
-            let wenhao = null;
-            if (contact.m_fixtureA.collider.label == "Wenhao") {
-                wenhao = contact.m_nodeA;
-            } else if (contact.m_fixtureB.collider.label == "Wenhao") {
-                wenhao = contact.m_nodeB;
-            }
-            if (wenhao) {
-                if (this.state == 0) {
-                    this.state = 1;
-                    this.render.play(0, false, "ani3");
-                    Laya.timer.once(100, this, function() {
-                        this.render.play(0, true, "ani2");
-                        let x = this.owner.x;
-                        let y = this.owner.y;
-                        let parent = this.owner.parent;
-                        Laya.loader.create("prefab/Reward.prefab", Laya.Handler.create(this, function (prefabDef) {
+            let owner = this.owner;
+            let render = owner.getChildByName("render");
+            let x = owner.x;
+            let y = owner.y;
+            let parent = owner.parent;
+            let zOrder = this.owner.zOrder;
+            if (this.owner.state == 0 && render) {
+                this.owner.state = 1;
+                render.play(0, false, "ani3");
+                Laya.timer.once(100, null, function() {
+                    if (render) {
+                        render.play(0, true, "ani2");
+                    }
+                    Laya.loader.create("prefab/Reward.prefab", Laya.Handler.create(null, function (prefabDef) {
+                        if (parent && owner) {
                             let wenhao = prefabDef.create();
                             parent.addChild(wenhao);
                             wenhao.x = x + 5;
                             wenhao.y = y - wenhao.height * wenhao.scaleX;
-                            wenhao.zOrder = this.owner.zOrder + 1;
-                        }));
-                    });
-                }
+                            wenhao.zOrder = zOrder + 1;
+                        }
+                    }));
+                });
             }
         }
     }
     
     onEnable() {
-        this.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.render = this.owner.getChildByName("render");
+        this.owner.state = 0; //0 未出蘑菇 1 出蘑菇
     }
 
     onDisable() {
