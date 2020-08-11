@@ -14,7 +14,7 @@ export default class Utils extends Laya.Script {
 
     static roleInFloor(brick) {
         if (GameContext.role) {
-            let offx = 20;
+            let offx = 5;
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y;
             if (myX > brick.x - offx && myX < brick.x + brick.width * brick.scaleX + offx && myY > brick.y) {

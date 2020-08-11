@@ -1,12 +1,10 @@
 {
-    "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1682,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1683,
+    "maxID":1686,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -15,7 +13,6 @@
     "compId":2,
     "child":[
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,bottom",
             "props":{"y":750,"x":-1684,"width":5000,"name":"bottom","height":1000,"bgColor":"#3d3636"},
@@ -62,7 +59,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,left",
             "props":{"zOrder":1,"y":-472,"x":-524,"width":600,"name":"left","height":2000},
@@ -110,7 +106,6 @@
             "$HIDDEN":true
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,right",
             "props":{"zOrder":1,"y":-472,"x":1423,"width":600,"name":"right","height":2000},
@@ -158,7 +153,6 @@
             "$HIDDEN":true
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/Camera.js",
@@ -176,7 +170,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/LevelLogic.js",
@@ -194,7 +187,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel",
             "props":{"y":-1250,"x":-1684,"width":5000,"height":2000,"bgColor":"#1a1a27"},
@@ -208,7 +200,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":54,
             "selecteID":88,
@@ -327,6 +318,21 @@
                     "compId":1681,
                     "child":[
                         ]
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":24,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":748,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1685,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {
@@ -339,7 +345,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":-84,"x":67},
@@ -509,7 +514,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":1619,"x":66},
@@ -679,7 +683,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":-84,"x":2752},
@@ -849,7 +852,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":1616,"x":2751},
@@ -1019,7 +1021,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":1217,"x":1414},
@@ -1189,7 +1190,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "selecteID":103,
@@ -1198,14 +1198,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":924,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1221,7 +1220,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1237,7 +1235,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -1265,7 +1262,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1673,
             "selecteID":269,
@@ -1274,14 +1270,13 @@
             "nodeParent":2,
             "maxID":1678,
             "label":"ShuiguanEnter",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":1682,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1297,7 +1292,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1313,7 +1307,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1329,7 +1322,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -1343,7 +1335,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -1359,7 +1350,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/ShuiGuanLogic.js",
@@ -1376,7 +1366,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1388,6 +1377,32 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":1677,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Text",
+                    "searchKey":"Text",
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
+                    "nodeParent":1682,
+                    "label":"index",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1683,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Text",
+                    "searchKey":"Text",
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
+                    "nodeParent":1682,
+                    "label":"outIndex",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1684,
                     "child":[
                         ]
                 }],

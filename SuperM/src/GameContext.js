@@ -91,11 +91,11 @@ export default class GameContext extends Laya.Script {
             GameContext.roleSpr.play(0, loop, ani);
         }
 
-        Laya.timer.once(1000, null, function() {
-            if (GameContext.roleCurAni == "stand" && GameContext.roleInGround == true && GameContext.commandWalk == false && GameContext.keSpr.visible == false) {
-                GameContext.playRoleAni("kong1", true);
-            }
-        });
+        // Laya.timer.once(1000, null, function() {
+        //     if (GameContext.roleCurAni == "stand" && GameContext.roleInGround == true && GameContext.commandWalk == false && GameContext.keSpr.visible == false) {
+        //         GameContext.playRoleAni("kong1", true);
+        //     }
+        // });
 
     }
 

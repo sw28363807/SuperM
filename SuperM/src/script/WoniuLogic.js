@@ -20,10 +20,9 @@ export default class WoniuLogic extends Laya.Script {
         if (label) {
             this.prefab = label.text;
         }
-        console.debug(this.prefab);
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.render = this.owner.getChildByName("render");
-        Laya.timer.loop(3000, this, this.onTimeCallback);
+        Laya.timer.loop(1000, this, this.onTimeCallback);
     }
 
     onDisable() {

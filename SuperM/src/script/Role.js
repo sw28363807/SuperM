@@ -116,6 +116,9 @@ export default class Role extends Laya.Script {
         if (!GameContext.roleRigidBody) {
             return;
         }
+        if (GameContext.roleHurting) {
+            return;
+        }
         GameContext.commandWalk = false;
         GameContext.walkDirect = null;
         let linearVelocity = GameContext.getLineSpeed();
@@ -183,11 +186,20 @@ export default class Role extends Laya.Script {
         if (GameContext.roleHurting) {
             return;
         }
+        if (GameContext.roleFooting) {
+            return;
+        }
         if (GameContext.walkDirect) {
             if (GameContext.walkDirect.x != 0) {
                 if (GameContext.roleRigidBody) {
                     let linearVelocity = GameContext.getLineSpeed();
-                    GameContext.setRoleMove(GameContext.walkDirect.x * GameContext.roleSpeed, linearVelocity.y);
+                    let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
+                    // console.debug("===========================");
+                    // console.debug("GameContext.roleSpeed: " + String(GameContext.roleSpeed));
+                    // console.debug("GameContext.walkDirect.x: " + String(GameContext.walkDirect.x));
+                    // console.debug("speedX: " + String(speedX));
+                    // console.debug("+++++++++++++++++++++++++++");
+                    GameContext.setRoleMove(speedX, linearVelocity.y);
                 }
             }
         }
@@ -196,11 +208,13 @@ export default class Role extends Laya.Script {
             if (Math.abs(linearVelocity.x) <= 0.0000001) {
                 GameContext.playRoleAni("stand");
             } else {
-                if (Math.abs(linearVelocity.y) < 1) {
-                    GameContext.playRoleAni("run");
-                } else {
-                    GameContext.roleInGround = false;
-                    GameContext.playRoleAni("jump");
+                if (GameContext.commandWalk) {
+                    if (Math.abs(linearVelocity.y) < 1) {
+                        GameContext.playRoleAni("run");
+                    } else {
+                        GameContext.roleInGround = false;
+                        GameContext.playRoleAni("jump");
+                    }
                 }
             }
         }
@@ -264,6 +278,9 @@ export default class Role extends Laya.Script {
             GameContext.playRoleAni(GameContext.roleCurAni);
         } else if (self.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
+                if (contact.m_manifold.localNormal >= 0) {
+                    return;
+                }
                 GameContext.footMonster(other);
         } else if (self.label == "RoleBody" && (other.label == "MonsterBody")) {
             GameContext.hurtRole();
@@ -275,9 +292,7 @@ export default class Role extends Laya.Script {
                 if (other.isSensor == true) {
                     return;
                 }
-
             }
-
             GameContext.roleInGround = true;
             if (GameContext.commandWalk == false) {
                 GameContext.setRoleMove(0, 0);
@@ -285,7 +300,6 @@ export default class Role extends Laya.Script {
             }
             if (GameContext.roleHurting) {
                 GameContext.roleHurting = false;
-                GameContext.walkDirect = GameContext.joyStickDirect;
                 GameContext.setRoleMove(0, 0);
                 GameContext.playRoleAni("stand");
             }

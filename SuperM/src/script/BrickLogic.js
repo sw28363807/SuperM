@@ -7,16 +7,12 @@ export default class BrickLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other && (other.label == "RoleHead" || other.label == "KeBullet")) {
-            let brick = null;
-            if (contact.m_fixtureA.collider.label == "Brick") {
-                brick = contact.m_nodeA;
-            } else if (contact.m_fixtureB.collider.label == "Brick") {
-                brick = contact.m_nodeB;
-            }
-            if (brick) {
+        if (other.label == "RoleHead") {
+            if (Utils.roleInFloor(this.owner)) {
                 this.onCreateBrokenBrick();
             }
+        } else if (other.label == "KeBullet") {
+            this.onCreateBrokenBrick();
         }
     }
 

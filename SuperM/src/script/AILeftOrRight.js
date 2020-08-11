@@ -7,7 +7,7 @@ export default class AILeftOrRight extends Laya.Script {
     constructor() { 
         super();
         /** @prop {name:time, tips:"巡逻时间", type:Number, default:3000}*/
-        this.time = 3000;
+        this.time = 1000;
         /** @prop {name:area, tips:"巡逻范围", type:Number, default:200}*/
         this.area = 200;
         /** @prop {name:speed, tips:"移动速度", type:Number, default:5}*/

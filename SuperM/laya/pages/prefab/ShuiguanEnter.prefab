@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":1673,
-    "selecteID":269,
+    "selecteID":1680,
     "searchKey":"Box,ShuiguanEnter",
     "props":{"y":0,"x":0,"width":177,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab","name":"ShuiguanEnter","isPresetRoot":true,"height":177},
     "nodeParent":-1,
-    "maxID":1678,
+    "maxID":1681,
     "label":"ShuiguanEnter",
     "isOpen":true,
     "isDirectory":true,
@@ -122,6 +122,48 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1677,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Text",
+            "searchKey":"Text,index",
+            "props":{"text":"111","presetID":9,"preset":"laya/pages/prefab/ShuiguanEnter.prefab","name":"index"},
+            "nodeParent":1673,
+            "label":"index",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1678,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Text",
+            "searchKey":"Text,outIndex",
+            "props":{"text":"333","presetID":10,"preset":"laya/pages/prefab/ShuiguanEnter.prefab","name":"outIndex"},
+            "nodeParent":1673,
+            "label":"outIndex",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1679,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Text",
+            "searchKey":"Text,inIndex",
+            "props":{"text":"text","presetID":11,"preset":"laya/pages/prefab/ShuiguanEnter.prefab","name":"inIndex"},
+            "nodeParent":1673,
+            "label":"inIndex",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1680,
             "child":[
                 ]
         }],
