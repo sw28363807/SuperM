@@ -59,9 +59,6 @@ export default class GameContext extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        if (GameContext.roleHurting) {
-            return;
-        }
         GameContext.setRoleSpeed(x, y);
     }
 
@@ -132,37 +129,24 @@ export default class GameContext extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        if (GameContext.roleHurting) {
-            return;
-        }
-        if (GameContext.protectedRole) {
-            return;
-        }
-        Laya.timer.once(500, null, function() {
-            GameContext.roleHurting = false;
-        });
         GameContext.setRoleMove(0, 0);
         GameContext.roleInGround = false;
         GameContext.roleShuiGuanState = 0;
         GameContext.setRoleSpeed(-GameContext.getRoleFaceup() * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
         GameContext.showHurtEffect();
-        GameContext.roleHurting = true;
         GameContext.playRoleAni("stand");
         GameContext.roleInGround = false;
         GameContext.walkDirect = null;
-        if (GameContext.protectedRole == false) {
-            GameContext.changeSmallEffect();
-            GameContext.gameRoleNumber--;
-            if (GameContext.gameRoleNumber == 0) {
-                GameContext.playRoleAni("die", false);
-                GameContext.isDie = true;
-            }
-            EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
-            GameContext.protectedRole = true;
-            Laya.timer.once(1500, null, function() {
-                GameContext.protectedRole = false;
-            });
+        GameContext.roleHurting = true;
+
+        GameContext.changeSmallEffect();
+        GameContext.gameRoleNumber--;
+        if (GameContext.gameRoleNumber == 0) {
+            GameContext.playRoleAni("die", false);
+            GameContext.isDie = true;
         }
+        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+
     }
 
     static changeSmallEffect() {
@@ -285,7 +269,6 @@ GameContext.roleRigidBody = null;
 GameContext.commandWalk = false;
 GameContext.isDie = false;
 GameContext.walkDirect = null;
-GameContext.protectedRole = false;
 GameContext.isWin = false;
 GameContext.roleSpeed = 9;
 GameContext.roleCurAni = "";

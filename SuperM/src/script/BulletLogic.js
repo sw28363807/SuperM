@@ -60,7 +60,7 @@ export default class BulletLogic extends Laya.Script {
              if (self.label != "KeBullet") {
                  Utils.removeThis(this.owner);
              }
-        } else if(other.label == "MonsterHead" || other.label == "MonsterBody") {
+        } else if(other.label == "MonsterBody") {
             if (self.label == "KeBullet") {
                 EventMgr.getInstance().postEvent(Events.Monster_KeBullet_Dead, {owner: other.owner, dx: Utils.getSign(this.rigidBody.linearVelocity.x)});
             } else {

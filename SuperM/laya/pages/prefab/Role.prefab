@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":54,
-    "selecteID":96,
+    "selecteID":92,
     "searchKey":"Box,Role",
     "props":{"y":0,"x":0,"width":88,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","name":"Role","isPresetRoot":true,"height":112},
     "nodeParent":-1,
@@ -107,22 +107,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":90,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"BoxCollider",
-            "switchAble":true,
-            "searchKey":"BoxCollider",
-            "removeAble":true,
-            "props":{"y":45,"x":-10,"width":105,"presetID":23,"preset":"laya/pages/prefab/Role.prefab","label":"RoleBody","isSensor":true,"height":51,"friction":0},
-            "nodeParent":54,
-            "label":"BoxCollider(Role)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":92,
             "child":[
                 ]
         },

@@ -6,10 +6,10 @@ export default class WoniuLogic extends Laya.Script {
 
     constructor() { 
         super();
-        this.speed = 2;
-        this.faceup = 0;
-        this.currentVelocity = null;
-        this.monsterCount = 2;
+        /** @prop {name:time, tips:"巡逻时间", type:Number, default:3000}*/
+        this.time = 1000;
+        /** @prop {name:speed, tips:"移动速度", type:Number, default:5}*/
+        this.speed = 1;
     }
     
     onEnable() {
@@ -20,9 +20,27 @@ export default class WoniuLogic extends Laya.Script {
         if (label) {
             this.prefab = label.text;
         }
-        this.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.render = this.owner.getChildByName("render");
-        Laya.timer.loop(1000, this, this.onTimeCallback);
+
+        let script = this.owner.getComponent(WoniuLogic);
+        if (script.time) {
+            this.owner.time = script.time;
+        } else {
+            this.owner.time = this.time;
+        }
+
+        if (script.speed) {
+            this.owner.speed = script.speed;
+        } else {
+            this.owner.speed = this.owner.speed;
+        }
+
+        this.owner.faceup = 0;
+        this.owner.currentVelocity = null;
+        this.owner.monsterCount = 2;
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.renderMonster = this.owner.getChildByName("render");
+
+        Laya.timer.loop(this.owner.time, this, this.onTimeCallback);
     }
 
     onDisable() {
@@ -44,15 +62,15 @@ export default class WoniuLogic extends Laya.Script {
     }
 
     removeThisMonster() {
-        if (this.monsterCount > 0) {
-            this.monsterCount--;
+        if (this.owner.monsterCount > 0) {
+            this.owner.monsterCount--;
         }
-        if (this.monsterCount == 1) {
+        if (this.owner.monsterCount == 1) {
             let x = this.owner.x;
             let y = this.owner.y;
             let height = this.owner.height
             let parent = this.owner.parent;
-            this.rigidBody.enabled = false;
+            this.owner.rigidBody.enabled = false;
             Laya.timer.clear(this, this.onTimeCallback);
             Utils.removeThis(this.owner);
 
@@ -68,21 +86,21 @@ export default class WoniuLogic extends Laya.Script {
 
     
     onTimeCallback() {
-        if (this.faceup == 0 || this.faceup == 1) {
-            this.faceup = 1;
-            this.currentVelocity = {x: this.speed, y: 0};
-            this.render.scaleX = Math.abs(this.render.scaleX);
+        if (this.owner.faceup == 0 || this.owner.faceup == 1) {
+            this.owner.faceup = 1;
+            this.owner.currentVelocity = {x: this.owner.speed, y: 0};
+            this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
         } else {
-            this.currentVelocity = {x: -this.speed, y: 0};
-            this.render.scaleX = -1 * Math.abs(this.render.scaleX);
+            this.owner.currentVelocity = {x: -this.owner.speed, y: 0};
+            this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
         }
-        this.faceup = -1 * this.faceup;
+        this.owner.faceup = -1 * this.owner.faceup;
     }
 
     onUpdate() {
-        if (this.currentVelocity) {
-            let linearVelocity = this.rigidBody.linearVelocity;
-            this.rigidBody.setVelocity({x: this.currentVelocity.x, y: linearVelocity.y});
+        if (this.owner.currentVelocity) {
+            let linearVelocity = this.owner.rigidBody.linearVelocity;
+            this.owner.rigidBody.setVelocity({x: this.owner.currentVelocity.x, y: linearVelocity.y});
         }
     }
 

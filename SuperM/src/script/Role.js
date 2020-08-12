@@ -12,8 +12,8 @@ export default class Role extends Laya.Script {
         GameContext.roleSpeed = 9;
         GameContext.roleIsDrop = false;
         GameContext.roleInGround = false;
-        GameContext.roleHurting = false;
         GameContext.roleShuiGuanState = 0;
+        GameContext.roleHurting = true;
         GameContext.setRoleState(0);
         GameContext.bodyBigScale = 1;
         GameContext.bodySmallScale = 0.6;
@@ -44,7 +44,6 @@ export default class Role extends Laya.Script {
         GameContext.keSpr = this.owner.getChildByName("ke");
         GameContext.keSpr.visible = false;
         GameContext.setBodyState(GameContext.gameRoleBodyState);
-        GameContext.protectedRole = false;
     }
 
     onStart() {
@@ -99,9 +98,6 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        if (GameContext.roleHurting) {
-            return;
-        }
         GameContext.commandWalk = true;
         GameContext.walkDirect = data;
     }
@@ -114,9 +110,6 @@ export default class Role extends Laya.Script {
             return;
         }
         if (!GameContext.roleRigidBody) {
-            return;
-        }
-        if (GameContext.roleHurting) {
             return;
         }
         GameContext.commandWalk = false;
@@ -151,10 +144,6 @@ export default class Role extends Laya.Script {
             this.shuiguanTime = 0;
             return;
         }
-        if (GameContext.roleHurting) {
-            this.shuiguanTime = 0;
-            return;
-        }
         if (GameContext.roleShuiGuanState == 1 || GameContext.roleShuiGuanState == 2) {
             this.shuiguanTime++;
             if (this.shuiguanTime >= 100 && GameContext.walkDirect && GameContext.walkDirect.y > 0 && GameContext.commandWalk) {
@@ -183,37 +172,36 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        if (GameContext.roleHurting) {
-            return;
-        }
         if (GameContext.roleFooting) {
             return;
         }
-        if (GameContext.walkDirect) {
-            if (GameContext.walkDirect.x != 0) {
-                if (GameContext.roleRigidBody) {
-                    let linearVelocity = GameContext.getLineSpeed();
-                    let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
-                    // console.debug("===========================");
-                    // console.debug("GameContext.roleSpeed: " + String(GameContext.roleSpeed));
-                    // console.debug("GameContext.walkDirect.x: " + String(GameContext.walkDirect.x));
-                    // console.debug("speedX: " + String(speedX));
-                    // console.debug("+++++++++++++++++++++++++++");
-                    GameContext.setRoleMove(speedX, linearVelocity.y);
+        if (GameContext.roleHurting == false) {
+            if (GameContext.walkDirect) {
+                if (GameContext.walkDirect.x != 0) {
+                    if (GameContext.roleRigidBody) {
+                        let linearVelocity = GameContext.getLineSpeed();
+                        let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
+                        // console.debug("===========================");
+                        // console.debug("GameContext.roleSpeed: " + String(GameContext.roleSpeed));
+                        // console.debug("GameContext.walkDirect.x: " + String(GameContext.walkDirect.x));
+                        // console.debug("speedX: " + String(speedX));
+                        // console.debug("+++++++++++++++++++++++++++");
+                        GameContext.setRoleMove(speedX, linearVelocity.y);
+                    }
                 }
             }
-        }
-        let linearVelocity = GameContext.getLineSpeed();
-        if (GameContext.roleInGround) {
-            if (Math.abs(linearVelocity.x) <= 0.0000001) {
-                GameContext.playRoleAni("stand");
-            } else {
-                if (GameContext.commandWalk) {
-                    if (Math.abs(linearVelocity.y) < 1) {
-                        GameContext.playRoleAni("run");
-                    } else {
-                        GameContext.roleInGround = false;
-                        GameContext.playRoleAni("jump");
+            let linearVelocity = GameContext.getLineSpeed();
+            if (GameContext.roleInGround) {
+                if (Math.abs(linearVelocity.x) <= 0.0000001) {
+                    GameContext.playRoleAni("stand");
+                } else {
+                    if (GameContext.commandWalk) {
+                        if (Math.abs(linearVelocity.y) < 1) {
+                            GameContext.playRoleAni("run");
+                        } else {
+                            GameContext.roleInGround = false;
+                            GameContext.playRoleAni("jump");
+                        }
                     }
                 }
             }
@@ -249,6 +237,12 @@ export default class Role extends Laya.Script {
         if (!this.owner) {
             return;
         }
+        if (!self || !self.owner) {
+            return;
+        }
+        if (!other || !other.owner) {
+            return;
+        }
         if (GameContext.isDie) {
             return;
         }
@@ -277,10 +271,12 @@ export default class Role extends Laya.Script {
             GameContext.roleCurAni = "";
             GameContext.playRoleAni(GameContext.roleCurAni);
         } else if (self.label == "RoleFoot" &&
-            (other.label == "MonsterHead")) {
+            (other.label == "MonsterBody") && self.owner.y + self.owner.height * self.owner.scaleY < other.owner.y - 10) {
                 GameContext.footMonster(other);
         } else if (self.label == "RoleBody" && (other.label == "MonsterBody")) {
-            GameContext.hurtRole();
+            if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
+                GameContext.hurtRole();
+            }
         } else if ((other.label != "TanLiBrick" || other.label != "Hole") && self.label =="RoleFoot") {
             if (contact.m_manifold.localNormal >= 0) {
                 return;
@@ -291,14 +287,15 @@ export default class Role extends Laya.Script {
                 }
             }
             GameContext.roleInGround = true;
-            if (GameContext.commandWalk == false) {
-                GameContext.setRoleMove(0, 0);
-                GameContext.playRoleAni("");
-            }
-            if (GameContext.roleHurting) {
+            if (GameContext.roleHurting == true) {
                 GameContext.roleHurting = false;
                 GameContext.setRoleMove(0, 0);
                 GameContext.playRoleAni("stand");
+            } else {
+                if (GameContext.commandWalk == false) {
+                    GameContext.setRoleMove(0, 0);
+                    GameContext.playRoleAni("");
+                }
             }
             if (GameContext.isWin) {
                 GameContext.triggerRoleWinGotoDoor();
@@ -329,9 +326,6 @@ export default class Role extends Laya.Script {
             return;
         }
         if (GameContext.isDie) {
-            return;
-        }
-        if (GameContext.roleHurting) {
             return;
         }
         GameContext.setRoleState(1);
@@ -409,12 +403,6 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        if (GameContext.roleHurting) {
-            return;
-        }
-        // if (GameContext.bodyState != 1) {
-        //     return;
-        // }
         if (GameContext.keSpr.visible) {
             this.shootKe();
         } else {
