@@ -65,9 +65,8 @@ export default class BulletLogic extends Laya.Script {
                 EventMgr.getInstance().postEvent(Events.Monster_KeBullet_Dead, {owner: other.owner, dx: Utils.getSign(this.rigidBody.linearVelocity.x)});
             } else {
                 EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
+                Utils.removeThis(this.owner);
             }
-            Utils.removeThis(this.owner);
-            return
         }
     }
 

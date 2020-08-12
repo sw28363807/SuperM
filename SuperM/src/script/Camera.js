@@ -4,15 +4,22 @@ export default class Camera extends Laya.Script {
 
     constructor() { 
         super();
-        this.zeroY = 0;
     }
 
     lookAt(x, y) {
         // let width = Laya.Browser.width;
         // let widthScale = width/1336;
         // console.debug(widthScale);
+        let OffX = 1000;
+        if (x >= GameContext.mapMaxX) {
+            GameContext.mapMaxX = x;
+        }
+        if (x < GameContext.mapMaxX - OffX) {
+            GameContext.setRolePositionX(GameContext.mapMaxX - OffX);
+        }
+        let curX = 1136/2.3 - x;
         if (!GameContext.isDie && !GameContext.isWin ) {
-            this.owner.x = 1136/2 - x;
+            this.owner.x = curX;
         }
         // this.owner.y = this.owner.y
         // let rp = this.role.parent.localToGlobal(new Laya.Point(this.role.x, this.role.y));
@@ -31,7 +38,9 @@ export default class Camera extends Laya.Script {
     }
     
     onEnable() {
+        this.zeroY = 0;
         this.role =  this.owner.getChildByName("Role");
+        GameContext.mapMaxX = this.role.x;
         if (GameContext.initRolePoint && this.owner.name == "gameScene") {
             this.role.x = GameContext.initRolePoint.x;
             this.role.y = GameContext.initRolePoint.y;

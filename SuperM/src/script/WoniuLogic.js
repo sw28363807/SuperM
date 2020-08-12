@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import Utils from "./Utils";
+import GameContext from "../GameContext";
 
 export default class WoniuLogic extends Laya.Script {
 
@@ -13,34 +14,7 @@ export default class WoniuLogic extends Laya.Script {
     }
     
     onEnable() {
-        EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
-        EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
-        EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
-        let label = this.owner.getChildByName("prefab");
-        if (label) {
-            this.prefab = label.text;
-        }
-
-        let script = this.owner.getComponent(WoniuLogic);
-        if (script.time) {
-            this.owner.time = script.time;
-        } else {
-            this.owner.time = this.time;
-        }
-
-        if (script.speed) {
-            this.owner.speed = script.speed;
-        } else {
-            this.owner.speed = this.owner.speed;
-        }
-
-        this.owner.faceup = 0;
-        this.owner.currentVelocity = null;
-        this.owner.monsterCount = 2;
-        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.renderMonster = this.owner.getChildByName("render");
-
-        Laya.timer.loop(this.owner.time, this, this.onTimeCallback);
+        this.owner.isStartAI = false;
     }
 
     onDisable() {
@@ -97,15 +71,61 @@ export default class WoniuLogic extends Laya.Script {
         this.owner.faceup = -1 * this.owner.faceup;
     }
 
+    startAI() {
+        EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
+        EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
+        EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
+        let label = this.owner.getChildByName("prefab");
+        if (label) {
+            this.prefab = label.text;
+        }
+
+        let script = this.owner.getComponent(WoniuLogic);
+        if (script.time) {
+            this.owner.time = script.time;
+        } else {
+            this.owner.time = this.time;
+        }
+
+        if (script.speed) {
+            this.owner.speed = script.speed;
+        } else {
+            this.owner.speed = this.owner.speed;
+        }
+
+        this.owner.faceup = 0;
+        this.owner.currentVelocity = null;
+        this.owner.monsterCount = 2;
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.renderMonster = this.owner.getChildByName("render");
+
+        Laya.timer.loop(this.owner.time, this, this.onTimeCallback);
+    }
+
     onUpdate() {
-        if (this.owner.currentVelocity) {
-            let linearVelocity = this.owner.rigidBody.linearVelocity;
-            this.owner.rigidBody.setVelocity({x: this.owner.currentVelocity.x, y: linearVelocity.y});
+        if (this.owner.isStartAI == false) {
+            if (this.owner && GameContext.role) {
+                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
+                    this.owner.isStartAI = true;
+                    this.startAI();
+                    return;
+                }
+            }
+        }
+        if (this.owner.isStartAI == true) {
+            if (this.owner.currentVelocity) {
+                let linearVelocity = this.owner.rigidBody.linearVelocity;
+                this.owner.rigidBody.setVelocity({x: this.owner.currentVelocity.x, y: linearVelocity.y});
+            }
         }
     }
 
-    onMonsterKeBulletDead(data) {
+
+    createBulletEffect(data) {
         if (data.owner != this.owner) {
+            return;
+        }
+        if (!this.owner) {
             return;
         }
         let deadMove = this.owner.getChildByName("deadMove");
@@ -114,20 +134,26 @@ export default class WoniuLogic extends Laya.Script {
             let x = this.owner.x;
             let y = this.owner.y;
             let parent = this.owner.parent;
-            let faceUp = data.dx;
-            Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
+            Laya.loader.create(deadMove.text, Laya.Handler.create(null, function (prefabDef) {
                 let dead = prefabDef.create();
                 dead.x = x;
                 dead.y = y;
-                dead.scaleX = faceUp * Math.abs(dead.scaleX);
                 parent.addChild(dead);
-                Laya.Tween.to(dead, {x: x + faceUp*1000, y: y - 1000, rotation: 2500}, 4000, Laya.Ease.expoOut, Laya.Handler.create(this, function () {
-                    Laya.timer.once(500, this, function() {
-                        Utils.removeThis(dead);
-                    });
-                }));
+                let rigid = dead.getComponent(Laya.RigidBody);
+                rigid.setAngle(180);
+                rigid.setVelocity({x: 3, y: -15});
+                rigid.gravityScale = 5;
+                // rigid.angularVelocity = 5;
+                Laya.timer.once(3000, this, function() {
+                    Utils.removeThis(dead);
+                });
             }));
         }
         Utils.removeThis(this.owner);
+    }
+
+
+    onMonsterKeBulletDead(data) {
+        this.createBulletEffect(data);
     }
 }

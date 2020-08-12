@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import Utils from "./Utils";
+import GameContext from "../GameContext";
 
 export default class MonsterLogic extends Laya.Script {
 
@@ -15,6 +16,9 @@ export default class MonsterLogic extends Laya.Script {
     }
 
     onDisable() {
+        EventMgr.getInstance().removeEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
+        EventMgr.getInstance().removeEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
+        EventMgr.getInstance().removeEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
     }
 
     onMonsterFootDead(data) {
@@ -36,6 +40,15 @@ export default class MonsterLogic extends Laya.Script {
             return;
         }
         this.createKeBulletEffect(data);
+    }
+
+    onUpdate() {
+        if (this.owner && GameContext.role) {
+            if (this.owner.x < GameContext.role.x - 2000) {
+                Utils.removeThis(this.owner);
+                return;
+            }
+        }
     }
 
     createBulletEffect(data) {

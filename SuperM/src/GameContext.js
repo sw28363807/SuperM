@@ -45,6 +45,14 @@ export default class GameContext extends Laya.Script {
         }
     }
 
+    static setRolePositionX(x) {
+        if (GameContext.roleRigidBody) {
+            let y = GameContext.roleRigidBody.getBody().GetPosition().y;
+            GameContext.roleRigidBody.getBody().SetPositionXY(x/50, y);
+            GameContext.role.x = x;
+        }
+    }
+
     static triggerRoleWin() {
         if (GameContext.role) {
             GameContext.initRolePoint = GameContext.initConstRolePoint;
@@ -287,7 +295,7 @@ GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
 GameContext.initConstRolePoint = {x: 961, y: 638};
 GameContext.initRoleByShuiGuan = false;
-
+GameContext.mapMaxX = 0;
 GameContext.gameRoleNumber = 998;
 GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 0;

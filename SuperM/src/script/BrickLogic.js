@@ -16,6 +16,16 @@ export default class BrickLogic extends Laya.Script {
         }
     }
 
+    onUpdate() {
+        if (this.owner && GameContext.role) {
+            if (this.owner.x < GameContext.role.x - 2000) {
+                Utils.removeThis(this.owner);
+                return;
+            }
+        }
+    }
+    
+
     createBrokenCell(path) {
         let x = this.owner.x;
         let y = this.owner.y;

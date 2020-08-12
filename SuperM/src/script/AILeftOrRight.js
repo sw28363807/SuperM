@@ -13,25 +13,7 @@ export default class AILeftOrRight extends Laya.Script {
     }
     
     onEnable() {
-        let script = this.owner.getComponent(AILeftOrRight);
-        if (script.time) {
-            this.owner.time = script.time;
-        } else {
-            this.owner.time = this.time;
-        }
-
-        if (script.speed) {
-            this.owner.speed = script.speed;
-        } else {
-            this.owner.speed = this.speed;
-        }
-
-        EventMgr.getInstance().registEvent(Events.Monster_Stop_AI, this, this.onStopAI);
-        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.faceup = 0;
-        this.owner.currentVelocity = null;
-        this.owner.renderMonster = this.owner.getChildByName("render");
-        Laya.timer.loop(this.owner.time, this, this.onTimeCallback);
+        this.owner.isStartAI = false;
     }
 
     onStopAI(data) {
@@ -56,6 +38,43 @@ export default class AILeftOrRight extends Laya.Script {
     }
 
     onUpdate() {
+        if (this.owner.isStartAI == false) {
+            if (this.owner && GameContext.role) {
+                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
+                    this.owner.isStartAI = true;
+                    this.startAI();
+                    return;
+                }
+            }
+        }
+        if (this.owner.isStartAI) {
+            this.processMove();
+        }
+    }
+
+
+    startAI() {
+        let script = this.owner.getComponent(AILeftOrRight);
+        if (script.time) {
+            this.owner.time = script.time;
+        } else {
+            this.owner.time = this.time;
+        }
+
+        if (script.speed) {
+            this.owner.speed = script.speed;
+        } else {
+            this.owner.speed = this.speed;
+        }
+
+        EventMgr.getInstance().registEvent(Events.Monster_Stop_AI, this, this.onStopAI);
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.faceup = 0;
+        this.owner.currentVelocity = null;
+        this.owner.renderMonster = this.owner.getChildByName("render");
+        Laya.timer.loop(this.owner.time, this, this.onTimeCallback);
+    }
+    processMove() {
         if (this.owner.currentVelocity) {
             let linearVelocity = this.owner.rigidBody.linearVelocity;
             this.owner.rigidBody.setVelocity({x: this.owner.currentVelocity.x, y: linearVelocity.y});

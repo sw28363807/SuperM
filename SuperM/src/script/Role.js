@@ -159,10 +159,8 @@ export default class Role extends Laya.Script {
         if (!this.owner) {
             return;
         }
-        if (GameContext.roleRigidBody) {
-            let linearVelocity = GameContext.getLineSpeed();
-            GameContext.roleRigidBody.setVelocity({x: 0, y: linearVelocity.y}); 
-        }
+        let linearVelocity = GameContext.getLineSpeed();
+        GameContext.setRoleSpeed(0, linearVelocity.y);
     }
 
     processRoleWalk() {
@@ -315,9 +313,8 @@ export default class Role extends Laya.Script {
             if (GameContext.walkDirect && GameContext.commandWalk) {
                 xSpeed = GameContext.walkDirect.x * 10;
             }
-            if (GameContext.roleRigidBody) {
-                GameContext.roleRigidBody.setVelocity({x: xSpeed, y: GameContext.roleJumpSpeed}); 
-            }
+            GameContext.setRoleSpeed(xSpeed, GameContext.roleJumpSpeed);
+
         }
     }
 
