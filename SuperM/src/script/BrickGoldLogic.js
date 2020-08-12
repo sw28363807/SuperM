@@ -10,17 +10,24 @@ export default class BrickGoldLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (!Utils.roleInFloor(self.owner)) {
+        if (!this.owner) {
             return;
         }
-        if (other && (other.label == "RoleHead" || other.label == "KeBullet")) {
+        if (other && (other.label == "RoleHead")) {
             if (self) {
-                if (GameContext.gameRoleBodyState == 1 || true) {
+                if (!Utils.roleInFloor(self.owner)) {
+                    return;
+                }
+                if (GameContext.gameRoleBodyState == 1) {
                     this.onCreateBrokenBrick();
                 } else {
                     let render = this.owner.getChildByName("render");
-                    this.render.play(0, false, "ani3");
+                    render.play(0, false, "ani3");
                 }
+            }
+        } else if (other && other.label == "KeBullet") {
+            if (self) {
+                this.onCreateBrokenBrick();
             }
         }
     }
@@ -38,6 +45,9 @@ export default class BrickGoldLogic extends Laya.Script {
     }
 
     onCreateBrokenBrick() {
+        if (!this.owner) {
+           return; 
+        }
         for (let index = 0; index < 4; index++) {
             this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
         }
@@ -45,31 +55,33 @@ export default class BrickGoldLogic extends Laya.Script {
         let x = this.owner.x;
         let y = this.owner.y;
         let parent = this.owner.parent;
-        Laya.loader.create("prefab/brick/BrickGoldEffect.prefab", Laya.Handler.create(this, function (prefabDef) {
-            let BrickGoldEffect = prefabDef.create();
-            parent.addChild(BrickGoldEffect);
-            BrickGoldEffect.x = x;   
-            BrickGoldEffect.y = y;
-            BrickGoldEffect.play(0, false, "ani2");
-            BrickGoldEffect.on(Laya.Event.COMPLETE, this, function() {
-    
-                let label = new Laya.Text();
-                label.text = String(100);
-                label.color = "#dbdb2b";
-                label.fontSize = 24;
-                parent.addChild(label);
-                label.x = x + 20;
-                label.y = y - 50;
-    
-                Laya.Tween.to(label, {y: label.y - 60}, 1000, null, Laya.Handler.create(this, function() {
-                    Utils.removeThis(label);
-                }));
-                GameContext.gameGoldNumber++;
-                EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
-                Utils.removeThis(BrickGoldEffect);
-            });
-        }));
-        Utils.removeThis(this.owner);
+        if (parent) {
+            Laya.loader.create("prefab/brick/BrickGoldEffect.prefab", Laya.Handler.create(this, function (prefabDef) {
+                let BrickGoldEffect = prefabDef.create();
+                parent.addChild(BrickGoldEffect);
+                BrickGoldEffect.x = x;   
+                BrickGoldEffect.y = y;
+                BrickGoldEffect.play(0, false, "ani2");
+                BrickGoldEffect.on(Laya.Event.COMPLETE, this, function() {
+        
+                    let label = new Laya.Text();
+                    label.text = String(100);
+                    label.color = "#dbdb2b";
+                    label.fontSize = 24;
+                    parent.addChild(label);
+                    label.x = x + 20;
+                    label.y = y - 50;
+        
+                    Laya.Tween.to(label, {y: label.y - 60}, 1000, null, Laya.Handler.create(this, function() {
+                        Utils.removeThis(label);
+                    }));
+                    GameContext.gameGoldNumber++;
+                    EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
+                    Utils.removeThis(BrickGoldEffect);
+                });
+            }));
+            Utils.removeThis(this.owner);
+        }
     }
     
     onEnable() {

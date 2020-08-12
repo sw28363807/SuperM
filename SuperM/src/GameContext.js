@@ -112,7 +112,6 @@ export default class GameContext extends Laya.Script {
             Laya.timer.once(2000, null, function() {
                 GameContext.isWin = false;
                 GameContext.playRoleAni("stand");
-                Laya.Scene.close("scene/Level1_1.scene");
                 Laya.Scene.open("scene/Level1_1.scene");
             });
             GameContext.playRoleAni("run");
@@ -139,7 +138,9 @@ export default class GameContext extends Laya.Script {
         }
         GameContext.setRoleMove(0, 0);
         GameContext.roleInGround = false;
-        GameContext.roleShuiGuanState = 0;
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
         GameContext.setRoleSpeed(-GameContext.getRoleFaceup() * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
         GameContext.showHurtEffect();
         GameContext.playRoleAni("stand");
@@ -185,8 +186,10 @@ export default class GameContext extends Laya.Script {
     }
 
     static footMonster(other) {
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
         GameContext.roleInGround = false;
-        GameContext.roleShuiGuanState = 0;
         GameContext.setRoleSpeed(GameContext.getRoleFaceup() * GameContext.footMonsterSpeed.x, GameContext.footMonsterSpeed.y);
         EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
     }
@@ -271,7 +274,8 @@ GameContext.roleFoot = null;
 GameContext.roleInGround = false;
 GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
-GameContext.roleShuiGuanState = 0; // 0 不在水管 1 进水管 2 出水管 3正在播放过度动画
+GameContext.roleShuiGuanState = 0; // 0 不在水管 1 进水管 2 正在播放过度动画
+GameContext.sgOutIndex = 0;
 GameContext.ShuiguanIndex = 0;
 GameContext.roleRigidBody = null;
 GameContext.commandWalk = false;
@@ -283,7 +287,7 @@ GameContext.roleCurAni = "";
 GameContext.roleSpr = null;
 GameContext.keSpr = null;
 GameContext.roleHurtSpeed = {x: 9, y: -10};
-GameContext.footMonsterSpeed = {x: 9, y: -10};
+GameContext.footMonsterSpeed = {x: 9, y: -16};
 GameContext.bodyBigScale = 1;
 GameContext.bodySmallScale = 0.6;
 GameContext.curScaleFactor = GameContext.bodySmallScale;
@@ -294,12 +298,11 @@ GameContext.gameTopScene = null;
 GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
 GameContext.initConstRolePoint = {x: 961, y: 638};
-GameContext.initRoleByShuiGuan = false;
 GameContext.mapMaxX = 0;
 GameContext.gameRoleNumber = 998;
 GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 0;
 GameContext.gameRoleState = 0;
 
-
 GameContext.gameScene = null;
+GameContext.gameSceneType = 0;

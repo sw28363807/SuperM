@@ -10,13 +10,13 @@ export default class Camera extends Laya.Script {
         // let width = Laya.Browser.width;
         // let widthScale = width/1336;
         // console.debug(widthScale);
-        let OffX = 1000;
-        if (x >= GameContext.mapMaxX) {
-            GameContext.mapMaxX = x;
-        }
-        if (x < GameContext.mapMaxX - OffX) {
-            GameContext.setRolePositionX(GameContext.mapMaxX - OffX);
-        }
+        // let OffX = 1000;
+        // if (x >= GameContext.mapMaxX) {
+        //     GameContext.mapMaxX = x;
+        // }
+        // if (x < GameContext.mapMaxX - OffX) {
+        //     GameContext.setRolePositionX(GameContext.mapMaxX - OffX);
+        // }
         let curX = 1136/2.3 - x;
         if (!GameContext.isDie && !GameContext.isWin ) {
             this.owner.x = curX;

@@ -4,6 +4,9 @@ export default class LevelLogic extends Laya.Script {
 
     constructor() { 
         super();
+
+        /** @prop {name:sceneType, tips:"场景类型", type:Number, default:0}*/
+        let sceneType = 0;  //1 游戏场景 2 金币场景
     }
     
     onEnable() {
@@ -19,7 +22,8 @@ export default class LevelLogic extends Laya.Script {
                 scene.zOrder = 999;
             });
         }
-
+        let script = this.owner.getComponent(LevelLogic);
+        GameContext.gameSceneType = script.sceneType;
         GameContext.gameScene = this.owner;
     }
 

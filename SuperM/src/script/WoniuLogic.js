@@ -18,10 +18,16 @@ export default class WoniuLogic extends Laya.Script {
     }
 
     onDisable() {
+        EventMgr.getInstance().removeEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
+        EventMgr.getInstance().removeEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
+        EventMgr.getInstance().removeEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
         Laya.timer.clear(this, this.onTimeCallback);
     } 
 
     onMonsterFootDead(data) {
+        if (!this.owner) {
+            return;
+        }
         if (data.owner != this.owner) {
             return;
         }
@@ -72,6 +78,9 @@ export default class WoniuLogic extends Laya.Script {
     }
 
     startAI() {
+        if (!this.owner) {
+            return;
+        }
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
         EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
@@ -103,6 +112,9 @@ export default class WoniuLogic extends Laya.Script {
     }
 
     onUpdate() {
+        if (!this.owner) {
+            return;
+        }
         if (this.owner.isStartAI == false) {
             if (this.owner && GameContext.role) {
                 if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
@@ -122,10 +134,10 @@ export default class WoniuLogic extends Laya.Script {
 
 
     createBulletEffect(data) {
-        if (data.owner != this.owner) {
+        if (!this.owner) {
             return;
         }
-        if (!this.owner) {
+        if (data.owner != this.owner) {
             return;
         }
         let deadMove = this.owner.getChildByName("deadMove");
@@ -134,20 +146,24 @@ export default class WoniuLogic extends Laya.Script {
             let x = this.owner.x;
             let y = this.owner.y;
             let parent = this.owner.parent;
-            Laya.loader.create(deadMove.text, Laya.Handler.create(null, function (prefabDef) {
-                let dead = prefabDef.create();
-                dead.x = x;
-                dead.y = y;
-                parent.addChild(dead);
-                let rigid = dead.getComponent(Laya.RigidBody);
-                rigid.setAngle(180);
-                rigid.setVelocity({x: 3, y: -15});
-                rigid.gravityScale = 5;
-                // rigid.angularVelocity = 5;
-                Laya.timer.once(3000, this, function() {
-                    Utils.removeThis(dead);
-                });
-            }));
+            if (parent) {
+                Laya.loader.create(deadMove.text, Laya.Handler.create(null, function (prefabDef) {
+                    let dead = prefabDef.create();
+                    dead.x = x;
+                    dead.y = y;
+                    parent.addChild(dead);
+                    let rigid = dead.getComponent(Laya.RigidBody);
+                    if (rigid) {
+                        rigid.setAngle(180);
+                        rigid.setVelocity({x: 3, y: -15});
+                        rigid.gravityScale = 5;
+                        // rigid.angularVelocity = 5;
+                        Laya.timer.once(3000, this, function() {
+                            Utils.removeThis(dead);
+                        });     
+                    }
+                }));
+            }
         }
         Utils.removeThis(this.owner);
     }
