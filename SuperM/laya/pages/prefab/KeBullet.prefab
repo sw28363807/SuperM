@@ -20,7 +20,7 @@
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"type":"dynamic","presetID":3,"preset":"laya/pages/prefab/KeBullet.prefab","mask":37,"gravityScale":1,"category":16,"bullet":true,"allowRotation":false},
+            "props":{"type":"dynamic","presetID":3,"preset":"laya/pages/prefab/KeBullet.prefab","mask":37,"gravityScale":5,"category":16,"bullet":true,"allowRotation":false},
             "nodeParent":331,
             "label":"RigidBody(KeBullet)",
             "isDirectory":false,

@@ -278,9 +278,6 @@ export default class Role extends Laya.Script {
             GameContext.playRoleAni(GameContext.roleCurAni);
         } else if (self.label == "RoleFoot" &&
             (other.label == "MonsterHead")) {
-                if (contact.m_manifold.localNormal >= 0) {
-                    return;
-                }
                 GameContext.footMonster(other);
         } else if (self.label == "RoleBody" && (other.label == "MonsterBody")) {
             GameContext.hurtRole();
