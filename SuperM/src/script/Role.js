@@ -269,12 +269,25 @@ export default class Role extends Laya.Script {
             GameContext.roleCurAni = "";
             GameContext.playRoleAni(GameContext.roleCurAni);
         } else if (self.label == "RoleFoot" &&
-            (other.label == "MonsterBody") && self.owner.y + self.owner.height * self.owner.scaleY < other.owner.y - 10) {
-                GameContext.footMonster(other);
+            (other.label == "MonsterBody")) {
+                if (self.owner) {
+                    if (self.owner.y + self.owner.height * self.owner.scaleY < other.owner.y - 10) {
+                        if (other.owner && other.owner.name == "Flower") {
+                        } else {
+                            GameContext.footMonster(other);
+                        }
+                    }
+                }
         } else if (self.label == "RoleBody" && (other.label == "MonsterBody")) {
-            if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
-                GameContext.hurtRole();
+            if (other.owner && other.owner.name == "Flower") {
+            } else {
+                if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
+                    GameContext.hurtRole();
+                }
             }
+
+        } else if (other.label == "FlowerBullet") {
+            GameContext.hurtRole();
         } else if ((other.label != "TanLiBrick" || other.label != "Hole") && self.label =="RoleFoot") {
             if (contact.m_manifold.localNormal >= 0) {
                 return;

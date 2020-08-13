@@ -19,11 +19,13 @@ import MonsterLogic from "./script/MonsterLogic"
 import WoniuLogic from "./script/WoniuLogic"
 import AIFlyMonster from "./script/AIFlyMonster"
 import FlyMonsterLogic from "./script/FlyMonsterLogic"
+import FlowerLogic from "./script/FlowerLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import BulletLogic from "./script/BulletLogic"
+import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import KeLogic from "./script/KeLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 
@@ -51,11 +53,13 @@ export default class GameConfig {
 		reg("script/WoniuLogic.js",WoniuLogic);
 		reg("script/AIFlyMonster.js",AIFlyMonster);
 		reg("script/FlyMonsterLogic.js",FlyMonsterLogic);
+		reg("script/FlowerLogic.js",FlowerLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/BulletLogic.js",BulletLogic);
+		reg("script/FlowerBulletLogic.js",FlowerBulletLogic);
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
     }
@@ -70,7 +74,7 @@ GameConfig.startScene = "scene/GameLogoScene.scene";
 GameConfig.sceneRoot = "";
 GameConfig.debug = false;
 GameConfig.stat = false;
-GameConfig.physicsDebug = false;
+GameConfig.physicsDebug = true;
 GameConfig.exportSceneToJson = true;
 
 GameConfig.init();

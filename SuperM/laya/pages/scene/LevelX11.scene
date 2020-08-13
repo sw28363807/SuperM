@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":4,
+    "selecteID":1687,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1687,
+    "maxID":1694,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -1271,14 +1271,13 @@
             "nodeParent":2,
             "maxID":1681,
             "label":"ShuiguanEnter",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":1686,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1294,7 +1293,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1310,7 +1308,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1326,7 +1323,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -1340,7 +1336,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -1356,7 +1351,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/ShuiGuanLogic.js",
@@ -1373,7 +1367,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",

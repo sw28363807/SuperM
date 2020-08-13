@@ -39,9 +39,10 @@ export default class CollisionType extends Laya.Script {
 // MasterGroundCategory = 128;
 
 // GroundMask = RoleCategory + BrickCategory + RewardCategory + RoleBulletCategory + MonsterCategory;
-// RoleMask = GroundCategory + BrickCategory + RewardCategory + MonsterCategory;
+// RoleMask = GroundCategory + BrickCategory + RewardCategory + MonsterCategory + MasterBulletCategory;
 // BrickMask = RoleCategory + RewardCategory + RoleBulletCategory + MonsterCategory;
 // RewardMask = RoleCategory + GroundCategory + BrickCategory;
 // RoleBulletMask = GroundCategory + BrickCategory + MonsterCategory;
 // MonsterMask = GroundCategory + BrickCategory + RewardCategory + RoleBulletCategory + MasterGroundCategory + RoleCategory; 159
 // MasterGroundMask = RoleBulletCategory + MonsterCategory + MasterBulletCategory 128 112
+// MasterBulletMask = RoleCategory

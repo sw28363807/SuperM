@@ -52,7 +52,7 @@ export default class Camera extends Laya.Script {
         Laya.Physics.I.worldRoot = this.owner;
         this.zeroY = 250;
         if(w/h > 2.0) {
-            this.zeroY = 160; 
+            this.zeroY = 160;
         }
         this.standY = 750/2.3 - 660 + this.zeroY;
     }
