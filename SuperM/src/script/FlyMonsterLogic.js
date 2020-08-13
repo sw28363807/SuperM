@@ -6,7 +6,6 @@ export default class FlyMonsterLogic extends Laya.Script {
 
     constructor() { 
         super();
-
     }
     
     onEnable() {
