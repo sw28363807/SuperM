@@ -60,6 +60,31 @@ export default class GameContext extends Laya.Script {
         }
     }
 
+    static processFaceUp() {
+        if (!GameContext.role) {
+            return;
+        }
+        if (GameContext.isDie) {
+            return;
+        }
+        if (GameContext.walkDirect) {
+            let x = GameContext.walkDirect.x;
+            if (x > 0) {
+               let scaleX =  Math.abs(GameContext.roleSpr.scaleX);
+               GameContext.roleSpr.scaleX = scaleX;
+               scaleX =  Math.abs(GameContext.keSpr.scaleX);
+               GameContext.keSpr.scaleX = scaleX;
+            }
+            else if (x < 0) {
+                let scaleX =  -1 * Math.abs(GameContext.roleSpr.scaleX);
+                GameContext.roleSpr.scaleX = scaleX;
+
+                scaleX =  -1 * Math.abs(GameContext.keSpr.scaleX);
+                GameContext.keSpr.scaleX = scaleX;
+            }
+        }
+    }
+
     static setRoleMove(x, y) {
         if (!GameContext.role) {
             return;
@@ -137,18 +162,23 @@ export default class GameContext extends Laya.Script {
             return;
         }
         GameContext.setRoleMove(0, 0);
+        GameContext.setRoleSpeed(-GameContext.getRoleFaceup() * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
+        GameContext.showHurtEffect();
+        if (GameContext.gameRoleState == 1) {
+            GameContext.setRoleState(0);
+            return;
+        } else if (GameContext.bodyState == 1) {
+            GameContext.setBodyState(0);
+            GameContext.changeSmallEffect();
+        }
         GameContext.roleInGround = false;
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
-        GameContext.setRoleSpeed(-GameContext.getRoleFaceup() * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
-        GameContext.showHurtEffect();
         GameContext.playRoleAni("stand");
         GameContext.roleInGround = false;
         GameContext.walkDirect = null;
         GameContext.roleHurting = true;
-
-        GameContext.changeSmallEffect();
         GameContext.gameRoleNumber--;
         if (GameContext.gameRoleNumber == 0) {
             GameContext.playRoleAni("die", false);
@@ -203,13 +233,11 @@ export default class GameContext extends Laya.Script {
                 GameContext.alphaEffect(1, Laya.Handler.create(null, function() {
                     GameContext.alphaEffect(0, Laya.Handler.create(null, function() {
                         GameContext.alphaEffect(1, Laya.Handler.create(null, function() {
-            
                         }) );
                     }) );
                 }) );
             }) );
         }) );
-        
     }
     
     static changeSmallEffect() {
@@ -250,6 +278,17 @@ export default class GameContext extends Laya.Script {
             return;
         }
         GameContext.gameRoleState = state;
+        GameContext.roleNormal.visible = false;
+        GameContext.roleLight.visible = false;
+        if (state == 0) {
+            GameContext.roleSpr = GameContext.roleNormal;
+        } else {
+            GameContext.roleSpr = GameContext.roleLight;
+        }
+        GameContext.roleSpr.visible = true;
+        let ani = GameContext.roleCurAni;
+        GameContext.roleCurAni = "";
+        GameContext.playRoleAni(ani);
     }
 
     static upShuiGuan(owner) {
@@ -275,6 +314,7 @@ GameContext.roleInGround = false;
 GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
 GameContext.roleShuiGuanState = 0; // 0 不在水管 1 进水管 2 正在播放过度动画
+GameContext.roleCurrentShuiguan = null;
 GameContext.sgOutIndex = 0;
 GameContext.ShuiguanIndex = 0;
 GameContext.roleRigidBody = null;
@@ -285,13 +325,15 @@ GameContext.isWin = false;
 GameContext.roleSpeed = 9;
 GameContext.roleCurAni = "";
 GameContext.roleSpr = null;
+GameContext.roleNormal = null;
+GameContext.roleLight = null;
 GameContext.keSpr = null;
 GameContext.roleHurtSpeed = {x: 9, y: -10};
 GameContext.footMonsterSpeed = {x: 9, y: -16};
 GameContext.bodyBigScale = 1;
 GameContext.bodySmallScale = 0.6;
 GameContext.curScaleFactor = GameContext.bodySmallScale;
-GameContext.roleJumpSpeed = -30;
+GameContext.roleJumpSpeed = -31;
 
 GameContext.joyStickScene = null;
 GameContext.gameTopScene = null;

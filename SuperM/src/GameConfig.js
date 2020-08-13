@@ -26,6 +26,7 @@ import MoreTimeBrick from "./script/MoreTimeBrick"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import BulletLogic from "./script/BulletLogic"
 import FlowerBulletLogic from "./script/FlowerBulletLogic"
+import HeadBulletLogic from "./script/HeadBulletLogic"
 import KeLogic from "./script/KeLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 
@@ -60,6 +61,7 @@ export default class GameConfig {
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/FlowerBulletLogic.js",FlowerBulletLogic);
+		reg("script/HeadBulletLogic.js",HeadBulletLogic);
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
     }
@@ -74,7 +76,7 @@ GameConfig.startScene = "scene/GameLogoScene.scene";
 GameConfig.sceneRoot = "";
 GameConfig.debug = false;
 GameConfig.stat = false;
-GameConfig.physicsDebug = true;
+GameConfig.physicsDebug = false;
 GameConfig.exportSceneToJson = true;
 
 GameConfig.init();

@@ -100,7 +100,13 @@ export default class FlowerLogic extends Laya.Script {
             this.owner.flowerState = 1;
             if (this.owner.canShootBullet == true) {
                 this.owner.canShootBullet = false;
-                this.shootBullet();
+                if (this.owner.flowerType == 2) {
+                    let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
+                    let flowerGlobalPos = this.owner.redFlower.localToGlobal(new Laya.Point(0, 0));
+                    if (Math.abs(roleGlobalPos.x - flowerGlobalPos.x) < 800) {
+                        this.shootBullet();
+                    }
+                }
             }
         } else if (y * 50 >= this.owner.downPos.y) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);

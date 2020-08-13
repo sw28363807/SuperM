@@ -1,4 +1,6 @@
 import GameContext from "../GameContext";
+import Events from "./Events";
+import EventMgr from "./EventMgr";
 
 export default class Utils extends Laya.Script {
 
@@ -86,5 +88,32 @@ export default class Utils extends Laya.Script {
         let p = new Laya.Point(dx, dy);
         let d =  p.distance(sx, sy);
         return d;
+    }
+
+    static createMonsterDropDeadEffect(owner) {
+        if (!owner) {
+            return;
+        }
+        let deadMove = owner.getChildByName("deadMove");
+        if (deadMove) {
+            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
+            let x = owner.x;
+            let y = owner.y;
+            let parent = owner.parent;
+            Laya.loader.create(deadMove.text, Laya.Handler.create(null, function (prefabDef) {
+                let dead = prefabDef.create();
+                dead.x = x;
+                dead.y = y;
+                parent.addChild(dead);
+                let rigid = dead.getComponent(Laya.RigidBody);
+                rigid.setAngle(180);
+                rigid.setVelocity({x: 3, y: -15});
+                rigid.gravityScale = 5;
+                Laya.timer.once(3000, null, function() {
+                    Utils.removeThis(dead);
+                });
+            }));
+        }
+        Utils.removeThis(owner);
     }
 }

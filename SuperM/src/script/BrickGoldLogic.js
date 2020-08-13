@@ -18,7 +18,8 @@ export default class BrickGoldLogic extends Laya.Script {
                 if (!Utils.roleInFloor(self.owner)) {
                     return;
                 }
-                if (GameContext.gameRoleBodyState == 1) {
+                if (GameContext.gameRoleBodyState == 1 || true) {
+                    this.createHeadBullet();
                     this.onCreateBrokenBrick();
                 } else {
                     let render = this.owner.getChildByName("render");
@@ -30,6 +31,22 @@ export default class BrickGoldLogic extends Laya.Script {
                 this.onCreateBrokenBrick();
             }
         }
+    }
+
+    createHeadBullet() {
+        if (!this.owner) {
+            return;
+        }
+        let x = this.owner.x;
+        let y = this.owner.y - this.owner.height;
+        let parent = this.owner.parent;
+        Laya.loader.create("prefab/HeadBullet.prefab", Laya.Handler.create(this, function (prefabDef) {
+            let headBullet = prefabDef.create();
+            parent.addChild(headBullet);
+            headBullet.x = x;   
+            headBullet.y = y;
+        }));
+
     }
 
     createBrokenCell(path) {

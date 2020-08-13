@@ -69,7 +69,7 @@ export default class BulletLogic extends Laya.Script {
                 } else if (other.label == "MonsterBody") {
                     EventMgr.getInstance().postEvent(Events.Monster_KeBullet_Dead, {owner: other.owner, dx: Utils.getSign(this.rigidBody.linearVelocity.x)}); 
                 }
-            } else if (self.label != "Bullet") {
+            } else if (self.label == "Bullet") {
                 if (other) {
                     this.count++;
                     if (other.label == "Brick" || other.label == "TanLiBrick" || other.label == "Wall") {

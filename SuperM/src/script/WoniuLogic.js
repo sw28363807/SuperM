@@ -131,45 +131,14 @@ export default class WoniuLogic extends Laya.Script {
             }
         }
     }
-
-
-    createBulletEffect(data) {
+    
+    onMonsterKeBulletDead(data) {
         if (!this.owner) {
             return;
         }
         if (data.owner != this.owner) {
             return;
         }
-        let deadMove = this.owner.getChildByName("deadMove");
-        if (deadMove) {
-            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
-            let x = this.owner.x;
-            let y = this.owner.y;
-            let parent = this.owner.parent;
-            if (parent) {
-                Laya.loader.create(deadMove.text, Laya.Handler.create(null, function (prefabDef) {
-                    let dead = prefabDef.create();
-                    dead.x = x;
-                    dead.y = y;
-                    parent.addChild(dead);
-                    let rigid = dead.getComponent(Laya.RigidBody);
-                    if (rigid) {
-                        rigid.setAngle(180);
-                        rigid.setVelocity({x: 3, y: -15});
-                        rigid.gravityScale = 5;
-                        // rigid.angularVelocity = 5;
-                        Laya.timer.once(3000, this, function() {
-                            Utils.removeThis(dead);
-                        });     
-                    }
-                }));
-            }
-        }
-        Utils.removeThis(this.owner);
-    }
-
-
-    onMonsterKeBulletDead(data) {
-        this.createBulletEffect(data);
+        Utils.createMonsterDropDeadEffect(this.owner);
     }
 }

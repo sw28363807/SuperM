@@ -29,10 +29,13 @@ export default class MonsterLogic extends Laya.Script {
     }
 
     onMonsterBulletDead(data) {
+        if (!this.owner) {
+            return;
+        }
         if (data.owner != this.owner) {
             return;
         }
-        this.createBulletEffect(data);
+        Utils.createMonsterDropDeadEffect(this.owner);
     }
 
     onMonsterKeBulletDead(data) {
@@ -51,57 +54,15 @@ export default class MonsterLogic extends Laya.Script {
         }
     }
 
-    createBulletEffect(data) {
-        let deadMove = this.owner.getChildByName("deadMove");
-        if (deadMove) {
-            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
-            let x = this.owner.x;
-            let y = this.owner.y;
-            let parent = this.owner.parent;
-            let faceUp = data.dx;
-            Laya.loader.create(deadMove.text, Laya.Handler.create(null, function (prefabDef) {
-                let dead = prefabDef.create();
-                dead.x = x;
-                dead.y = y;
-                // dead.scaleX = faceUp * Math.abs(dead.scaleX);
-                parent.addChild(dead);
-                let rigid = dead.getComponent(Laya.RigidBody);
-                rigid.setAngle(180);
-                rigid.setVelocity({x: 3, y: -15});
-                rigid.gravityScale = 5;
-                // rigid.angularVelocity = 5;
-                Laya.timer.once(3000, this, function() {
-                    Utils.removeThis(dead);
-                });
-            }));
-        }
-        Utils.removeThis(this.owner);
-    }
-
 
     createKeBulletEffect(data) {
-        // let deadMove = this.owner.getChildByName("deadMove");
-        // if (deadMove) {
-        //     EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
-        //     let x = this.owner.x;
-        //     let y = this.owner.y;
-        //     let parent = this.owner.parent;
-        //     let faceUp = data.dx;
-        //     Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
-        //         let dead = prefabDef.create();
-        //         dead.x = x;
-        //         dead.y = y;
-        //         dead.scaleX = faceUp * Math.abs(dead.scaleX);
-        //         parent.addChild(dead);
-        //         Laya.Tween.to(dead, {x: x + faceUp*1000, y: y - 1000, rotation: 2500}, 4000, Laya.Ease.expoOut, Laya.Handler.create(this, function () {
-        //             Laya.timer.once(500, this, function() {
-        //                 Utils.removeThis(dead);
-        //             });
-        //         }));
-        //     }));
-        // }
-        // Utils.removeThis(this.owner);
-        this.createBulletEffect(data);
+        if (!this.owner) {
+            return;
+        }
+        if (data.owner != this.owner) {
+            return;
+        }
+        Utils.createMonsterDropDeadEffect(this.owner);
     }
 
     createFootEffect() {

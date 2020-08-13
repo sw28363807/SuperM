@@ -19,7 +19,6 @@ export default class HanbaoLogic extends Laya.Script {
             this.rigidBody.enabled = true;
             this.owner.play(0, false, "ani2");
         });
-        console.debug(this.owner.getComponents(Laya.ColliderBase));
     }
 
     onTriggerEnter(other, self, contact) {

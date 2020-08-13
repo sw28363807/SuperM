@@ -20,7 +20,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":-15,"width":150,"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab","height":80},
+            "props":{"y":0,"x":-15,"width":150,"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab","height":80,"friction":0},
             "nodeParent":1818,
             "label":"BoxCollider(CloudBrick)",
             "isDirectory":false,

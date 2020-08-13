@@ -14,7 +14,6 @@ export default class Role extends Laya.Script {
         GameContext.roleInGround = false;
         GameContext.roleShuiGuanState = 0;
         GameContext.roleHurting = true;
-        GameContext.setRoleState(0);
         GameContext.bodyBigScale = 1;
         GameContext.bodySmallScale = 0.6;
 
@@ -39,11 +38,12 @@ export default class Role extends Laya.Script {
         GameContext.roleCurAni = "";
         GameContext.roleRigidBody = this.owner.getComponent(Laya.RigidBody);
         this.initRoleColl();
-        
-        GameContext.roleSpr = this.owner.getChildByName("roleSpr");
+        GameContext.roleNormal = this.owner.getChildByName("roleSpr");
+        GameContext.roleLight = this.owner.getChildByName("roleSprLight");
         GameContext.keSpr = this.owner.getChildByName("ke");
         GameContext.keSpr.visible = false;
         GameContext.setBodyState(GameContext.gameRoleBodyState);
+        GameContext.setRoleState(GameContext.gameRoleState);
     }
 
     onStart() {
@@ -131,9 +131,9 @@ export default class Role extends Laya.Script {
             this.processRoleDie();
             return;
         }
-        this.processRoleWalk();
+        this.processRoleMove();
         this.processGotoShuiguan();
-        this.processFaceUp();
+        GameContext.processFaceUp();
     }
 
     processGotoShuiguan() {
@@ -163,7 +163,7 @@ export default class Role extends Laya.Script {
         GameContext.setRoleSpeed(0, linearVelocity.y);
     }
 
-    processRoleWalk() {
+    processRoleMove() {
         if (!this.owner) {
             return;
         }
@@ -176,16 +176,9 @@ export default class Role extends Laya.Script {
         if (GameContext.roleHurting == false) {
             if (GameContext.walkDirect) {
                 if (GameContext.walkDirect.x != 0) {
-                    if (GameContext.roleRigidBody) {
-                        let linearVelocity = GameContext.getLineSpeed();
-                        let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
-                        // console.debug("===========================");
-                        // console.debug("GameContext.roleSpeed: " + String(GameContext.roleSpeed));
-                        // console.debug("GameContext.walkDirect.x: " + String(GameContext.walkDirect.x));
-                        // console.debug("speedX: " + String(speedX));
-                        // console.debug("+++++++++++++++++++++++++++");
-                        GameContext.setRoleMove(speedX, linearVelocity.y);
-                    }
+                    let linearVelocity = GameContext.getLineSpeed();
+                    let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
+                    GameContext.setRoleMove(speedX, linearVelocity.y);
                 }
             }
             let linearVelocity = GameContext.getLineSpeed();
@@ -202,31 +195,6 @@ export default class Role extends Laya.Script {
                         }
                     }
                 }
-            }
-        }
-    }
-
-    processFaceUp() {
-        if (!this.owner) {
-            return;
-        }
-        if (GameContext.isDie) {
-            return;
-        }
-        if (GameContext.walkDirect) {
-            let x = GameContext.walkDirect.x;
-            if (x > 0) {
-               let scaleX =  Math.abs(GameContext.roleSpr.scaleX);
-               GameContext.roleSpr.scaleX = scaleX;
-               scaleX =  Math.abs(GameContext.keSpr.scaleX);
-               GameContext.keSpr.scaleX = scaleX;
-            }
-            else if (x < 0) {
-                let scaleX =  -1 * Math.abs(GameContext.roleSpr.scaleX);
-                GameContext.roleSpr.scaleX = scaleX;
-
-                scaleX =  -1 * Math.abs(GameContext.keSpr.scaleX);
-                GameContext.keSpr.scaleX = scaleX;
             }
         }
     }

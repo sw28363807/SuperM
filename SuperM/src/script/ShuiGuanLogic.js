@@ -7,8 +7,8 @@ export default class ShuiGuanLogic extends Laya.Script {
     constructor() { 
         super();
 
-        /** @prop {name:sgIndex, tips:"索引", type:Number, default:0}*/
-        let sgIndex = 0;
+        /** @prop {name:sgIndex, tips:"索引", type:Number, default:-1}*/
+        let sgIndex = -1;
         /** @prop {name:sgType, tips:"类型", type:Number, default:0}*/
         let sgType = 0; // 0 正常 1 场景入口 2 金币场景入口 3场景出口
         /** @prop {name:sgOutIndex, tips:"出口", type:Number, default:0}*/
@@ -25,7 +25,7 @@ export default class ShuiGuanLogic extends Laya.Script {
         if (script.sgIndex) {
             this.owner.sgIndex = script.sgIndex;
         } else {
-            this.owner.sgIndex = 0;
+            this.owner.sgIndex = -1;
         }
 
         if (script.sgType) {
@@ -53,6 +53,9 @@ export default class ShuiGuanLogic extends Laya.Script {
 
     onEnterShuiguan() {
         if (!this.owner) {
+            return;
+        }
+        if (GameContext.roleCurrentShuiguan != this.owner) {
             return;
         }
         if (this.owner.sgType == 1) {
@@ -92,8 +95,6 @@ export default class ShuiGuanLogic extends Laya.Script {
         if (!this.owner) {
             return;
         }
-        // console.debug(GameContext.gameSceneType);
-        // this.owner.parent.numChildren
         if (GameContext.gameSceneType == 1) {
             if (this.owner.sgIndex == GameContext.sgOutIndex) {
                 this.outShuiguan();
@@ -104,6 +105,7 @@ export default class ShuiGuanLogic extends Laya.Script {
     onTriggerEnter(other, self, contact) {
         if (self.label == "ShuiguanHeadEnter" && other.label == "RoleFoot" && GameContext.roleShuiGuanState == 0) {
             GameContext.roleShuiGuanState = 1;
+            GameContext.roleCurrentShuiguan = self.owner;
         }
     }
 }
