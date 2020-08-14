@@ -20,7 +20,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":0,"width":120,"presetID":2,"preset":"laya/pages/prefab/brick/BrickGold.prefab","label":"Brick","height":80,"friction":0},
+            "props":{"y":0,"x":0,"width":120,"restitution":0,"presetID":2,"preset":"laya/pages/prefab/brick/BrickGold.prefab","label":"Brick","height":80,"friction":0,"density":0},
             "nodeParent":1602,
             "label":"BoxCollider(BrickGold)",
             "isDirectory":false,

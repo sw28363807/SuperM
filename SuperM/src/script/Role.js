@@ -13,7 +13,7 @@ export default class Role extends Laya.Script {
         GameContext.roleIsDrop = false;
         GameContext.roleInGround = false;
         GameContext.roleShuiGuanState = 0;
-        GameContext.roleHurting = true;
+        GameContext.roleHurting = false;
         GameContext.bodyBigScale = 1;
         GameContext.bodySmallScale = 0.6;
 
@@ -31,13 +31,12 @@ export default class Role extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Role_A_Button, this, this.onRoleAButton);
         EventMgr.getInstance().registEvent(Events.Role_B_Button, this, this.onRoleBButton);
         EventMgr.getInstance().registEvent(Events.Role_C_Button, this, this.onRoleCButton);
-        EventMgr.getInstance().registEvent(Events.Role_Give_Speed, this, this.onRoleGiveSpeed);
+        // EventMgr.getInstance().registEvent(Events.Role_Give_Speed, this, this.onRoleGiveSpeed);
         EventMgr.getInstance().registEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
         EventMgr.getInstance().registEvent(Events.Role_Change_Big, this, this.onRoleChangeBig);
         
         GameContext.roleCurAni = "";
         GameContext.roleRigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.initRoleColl();
         GameContext.roleNormal = this.owner.getChildByName("roleSpr");
         GameContext.roleLight = this.owner.getChildByName("roleSprLight");
         GameContext.keSpr = this.owner.getChildByName("ke");
@@ -53,18 +52,8 @@ export default class Role extends Laya.Script {
         }
     }
 
-    initRoleColl() {
-        let colls =  this.owner.getComponents(Laya.ColliderBase);
-        for (let index = 0; index < colls.length; index++) {
-            let coll = colls[index];
-            if (coll.label == "RoleFoot") {
-                GameContext.roleFoot = coll;
-            } else if(coll.label == "RoleBody")  {
-                GameContext.roleBody = coll;
-            } else if (coll.label == "RoleHead") {
-                GameContext.roleHead = coll;
-            }
-        }
+    onTriggerExit(other, self, contact) {
+
     }
 
     changeBigEffect() {
@@ -74,16 +63,11 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        if (GameContext.bodyState == 1) {
-            return;
-        }
-        GameContext.bodyState = 1;
         Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100, null, Laya.Handler.create(this, function() {
             Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.5, scaleY: GameContext.bodyBigScale * 0.5}, 100, null, Laya.Handler.create(this, function() {
                 Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.9, scaleY: GameContext.bodyBigScale * 0.9}, 100,null, Laya.Handler.create(this, function() {
                     Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100,null, Laya.Handler.create(this, function() {
                         Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale, scaleY: GameContext.bodyBigScale}, 100,null, Laya.Handler.create(this, function() {
-                            GameContext.setBodyState(1);
                         }));
                     }));
                 }));
@@ -126,6 +110,11 @@ export default class Role extends Laya.Script {
     onUpdate() {
         if (!this.owner) {
             return;
+        }
+
+        GameContext.brokenBrickTick--;
+        if (GameContext.brokenBrickTick < 0) {
+            GameContext.brokenBrickTick = 0;
         }
         if (GameContext.isDie) {
             this.processRoleDie();
@@ -242,7 +231,10 @@ export default class Role extends Laya.Script {
                     if (self.owner.y + self.owner.height * self.owner.scaleY < other.owner.y - 10) {
                         if (other.owner && other.owner.name == "Flower") {
                         } else {
-                            GameContext.footMonster(other);
+                            let lineSpeed =  GameContext.getLineSpeed();
+                            if (lineSpeed.y >= 0) {
+                                GameContext.footMonster(other);
+                            }
                         }
                     }
                 }
@@ -374,7 +366,7 @@ export default class Role extends Laya.Script {
             if (faceup > 0) {
                 bullet.x = x + 80;
             } else if (faceup < 0) {
-                bullet.x = x + 80;
+                bullet.x = x - 20;
             }
             bullet.y = y + 60;
             EventMgr.getInstance().postEvent(Events.Bullet_Shoot, {x: GameContext.getRoleFaceup(), y: 0, bulletType: 1, owner: bullet});
@@ -418,9 +410,6 @@ export default class Role extends Laya.Script {
         this.owner.destroy();
         this.destroy();
         this.owner = null;
-        GameContext.roleHead = null;
-        GameContext.roleBody = null;
-        GameContext.roleFoot = null;
         GameContext.roleInGround = false;
     }
 }

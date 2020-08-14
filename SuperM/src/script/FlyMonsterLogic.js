@@ -43,7 +43,7 @@ export default class FlyMonsterLogic extends Laya.Script {
                 if (monster) {
                     parent.addChild(monster);
                     monster.x = x;
-                    monster.y = y;
+                    monster.y = y + 100;
                     if (this.owner) {
                         Utils.removeThis(this.owner);
                     }

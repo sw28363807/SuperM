@@ -12,6 +12,12 @@ export default class FlowerLogic extends Laya.Script {
     }
     
     onEnable() {
+
+        this.owner.isStartAI = false;
+    }
+
+
+    startAI() {
         let script = this.owner.getComponent(FlowerLogic);
         if (script.flowerType) {
             this.owner.flowerType = script.flowerType;
@@ -32,7 +38,8 @@ export default class FlowerLogic extends Laya.Script {
         this.owner.canShootBullet = true;
         
         this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
-        Laya.timer.loop(3000, this, this.switchFlowerState);
+        Laya.timer.loop(5000, this, this.switchFlowerState);
+        this.owner.isStartAI
     }
 
     onTriggerEnter(other, self, contact) {
@@ -63,20 +70,21 @@ export default class FlowerLogic extends Laya.Script {
         }));
     }
 
-    getFaceUp() {
+    getFaceUp(flower) {
         let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
-        let flowerGlobalPos = this.owner.redFlower.localToGlobal(new Laya.Point(0, 0));
+        let flowerGlobalPos = flower.localToGlobal(new Laya.Point(0, 0));
         return Utils.getSign(roleGlobalPos.x - flowerGlobalPos.x);
     }
 
-    getFaceRoatation() {
+    getFaceRoatation(flower) {
         let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
-        let flowerGlobalPos = this.owner.redFlower.localToGlobal(new Laya.Point(0, 0));
+        let flowerGlobalPos = flower.localToGlobal(new Laya.Point(0, 0));
         let y = roleGlobalPos.y - flowerGlobalPos.y;
-        if (y <  -300) {
-            return -30;
-        } else if (y > 300) {
+        console.debug(y);
+        if (y < -200) {
             return 30;
+        } else if (y > 100) {
+            return -30;
         } else {
             return 0;
         }
@@ -94,6 +102,16 @@ export default class FlowerLogic extends Laya.Script {
     }
 
     onUpdate() {
+        if (this.owner.isStartAI == false) {
+            if (this.owner && GameContext.role) {
+                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
+                    this.owner.isStartAI = true;
+                    this.startAI();
+                    return;
+                }
+            }
+            return;
+        }
         let y = this.owner.rigidBody.getBody().GetPosition().y;
         if (y * 50 <= this.owner.upPos.y) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.upPos.x/50, this.owner.upPos.y/50);
@@ -108,6 +126,14 @@ export default class FlowerLogic extends Laya.Script {
                     }
                 }
             }
+            if (this.owner.flowerType == 1) {
+                this.owner.greenFlower.scaleX = Math.abs(this.owner.greenFlower.scaleX) * this.getFaceUp(this.owner.greenFlower);
+                this.owner.greenFlower.rotation = this.getFaceRoatation(this.owner.greenFlower);
+            } else {
+                this.owner.redFlower.scaleX = Math.abs(this.owner.redFlower.scaleX) * this.getFaceUp(this.owner.redFlower);
+                this.owner.redFlower.rotation = this.getFaceRoatation(this.owner.redFlower);
+            }
+
         } else if (y * 50 >= this.owner.downPos.y) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
             this.owner.flowerState = 2;
@@ -119,8 +145,7 @@ export default class FlowerLogic extends Laya.Script {
         if (this.owner.flowerState == 2) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
             this.owner.rigidBody.setVelocity({x: 0, y: -5});
-            this.owner.redFlower.scaleX = Math.abs(this.owner.redFlower.scaleX) * this.getFaceUp();
-            this.owner.redFlower.rotation = this.getFaceRoatation();
+            this.owner.redFlower.rotation = 0;
         } else {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.upPos.x/50, this.owner.upPos.y/50);
             this.owner.rigidBody.setVelocity({x: 0, y: 5});

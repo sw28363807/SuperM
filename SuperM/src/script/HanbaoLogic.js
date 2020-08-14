@@ -11,13 +11,25 @@ export default class HanbaoLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.direct = {x: -1, y: 0};
-        this.owner.play(0, false, "ani1");
+        if (GameContext.gameRoleBodyState == 0) {
+            this.direct = {x: -1, y: 0};
+        } else {
+            this.direct = {x: 0, y: 0};
+        }
+
+        let aniA = "ani1";
+        let aniB = "ani2";
+        if (GameContext.gameRoleBodyState == 0) {
+        } else {
+            aniA = "ani11";
+            aniB = "ani22";
+        }
+        this.owner.play(0, false, aniA);
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.rigidBody.enabled = false;
         this.owner.on(Laya.Event.COMPLETE, this, function(){
             this.rigidBody.enabled = true;
-            this.owner.play(0, false, "ani2");
+            this.owner.play(0, false, aniB);
         });
     }
 
@@ -34,22 +46,29 @@ export default class HanbaoLogic extends Laya.Script {
             }
             if (reward) {
                 if (GameContext.gameRoleBodyState == 0) {
+                    GameContext.setBodyState(1);
                     EventMgr.getInstance().postEvent(Events.Role_Change_Big);
                 } else if (GameContext.gameRoleBodyState == 1) {
-                    if (GameContext.gameRoleState == 0) {
-                        EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
-                    }
+                    EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
                 }
+                console.debug("---------------------");
+                console.debug(GameContext.gameRoleBodyState);
+                console.debug(GameContext.gameRoleState);
+                console.debug("----------------------");
                 Utils.removeThis(this.owner);
                 return;
             }
         }
-        this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: 0}); 
+        if (GameContext.gameRoleBodyState == 0) {
+            this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: 0}); 
+        }
     }
 
     onUpdate() {
-        let linearVelocity = this.rigidBody.linearVelocity;
-        this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: linearVelocity.y});
+        if (GameContext.gameRoleBodyState == 0) {
+            let linearVelocity = this.rigidBody.linearVelocity;
+            this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: linearVelocity.y});    
+        }
     }
 
 

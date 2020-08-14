@@ -13,6 +13,9 @@ export default class BrickGoldLogic extends Laya.Script {
         if (!this.owner) {
             return;
         }
+        if (GameContext.brokenBrickTick != 0) {
+            return;
+        }
         if (other && (other.label == "RoleHead")) {
             if (self) {
                 if (!Utils.roleInFloor(self.owner)) {
@@ -25,6 +28,7 @@ export default class BrickGoldLogic extends Laya.Script {
                     let render = this.owner.getChildByName("render");
                     render.play(0, false, "ani3");
                 }
+                GameContext.brokenBrickTick = 10;
             }
         } else if (other && other.label == "KeBullet") {
             if (self) {

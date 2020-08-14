@@ -21,8 +21,18 @@ export default class MonsterLogic extends Laya.Script {
         EventMgr.getInstance().removeEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
     }
 
+    onStart() {
+        let owner = this.owner;
+        Laya.timer.once(1000, null, function() {
+            owner.isStart = true;
+        });
+    }
+
     onMonsterFootDead(data) {
         if (data.owner != this.owner) {
+            return;
+        }
+        if (!this.owner.isStart) {
             return;
         }
         this.createFootEffect();
@@ -47,7 +57,7 @@ export default class MonsterLogic extends Laya.Script {
 
     onUpdate() {
         if (this.owner && GameContext.role) {
-            if (this.owner.x < GameContext.role.x - 2000) {
+            if (this.owner.x < GameContext.role.x - 2000 || Math.abs(this.owner.y - GameContext.y) > 3000) {
                 Utils.removeThis(this.owner);
                 return;
             }
@@ -63,6 +73,16 @@ export default class MonsterLogic extends Laya.Script {
             return;
         }
         Utils.createMonsterDropDeadEffect(this.owner);
+    }
+
+    onTriggerEnter(other, self, contact) {
+        if (other.label == "Hole") {
+            let colls = self.owner.getComponents(Laya.ColliderBase);
+            for (let index = 0; index < colls.length; index++) {
+                let coll = colls[index];
+                coll.isSensor = true;
+            }
+        }
     }
 
     createFootEffect() {

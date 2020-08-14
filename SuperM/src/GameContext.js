@@ -8,14 +8,16 @@ export default class GameContext extends Laya.Script {
     }
 
     static setRoleSensorEnabled(enabled) {
-        if (enabled == true) {
-            GameContext.roleHead.isSensor = true;
-            GameContext.roleFoot.isSensor = true;
-        } else {
-            GameContext.roleHead.isSensor = false;
-            GameContext.roleFoot.isSensor = false;
+        let colls =  GameContext.role.getComponents(Laya.ColliderBase);
+        for (let index = 0; index < colls.length; index++) {
+            let coll = colls[index];
+            if (enabled == true) {
+                coll.isSensor = true;
+            } else {
+                coll.isSensor = false;
+            }
+            
         }
-        GameContext.roleBody.isSensor = true;
     }
 
     static triggerGotoHole(hole) {
@@ -161,17 +163,19 @@ export default class GameContext extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        GameContext.setRoleMove(0, 0);
+        if (GameContext.roleHurting) {
+            return;
+        }
         GameContext.setRoleSpeed(-GameContext.getRoleFaceup() * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
         GameContext.showHurtEffect();
         if (GameContext.gameRoleState == 1) {
             GameContext.setRoleState(0);
-            return;
+            GameContext.setBodyState(1);
         } else if (GameContext.bodyState == 1) {
+            GameContext.setRoleState(0);
             GameContext.setBodyState(0);
             GameContext.changeSmallEffect();
         }
-        GameContext.roleInGround = false;
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
@@ -186,19 +190,6 @@ export default class GameContext extends Laya.Script {
         }
         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
 
-    }
-
-    static changeSmallEffect() {
-        if (GameContext.isDie) {
-            return;
-        }
-        if (GameContext.bodyState == 0) {
-            return;
-        }
-        GameContext.bodyState = 0;
-        Laya.Tween.to(GameContext.role, {scaleX: GameContext.bodySmallScale, scaleY: GameContext.bodySmallScale}, 1500, Laya.Ease.elasticOut, Laya.Handler.create(null, function() {
-            GameContext.setBodyState(0);
-        }));        
     }
 
     static getRoleFaceup() {
@@ -219,6 +210,13 @@ export default class GameContext extends Laya.Script {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
+        if (GameContext.curFootMonster == other.owner) {
+            return;
+        }
+        GameContext.curFootMonster = other.owner;
+        Laya.timer.once(100, this, function() {
+            GameContext.curFootMonster = null;
+        });
         GameContext.roleInGround = false;
         GameContext.setRoleSpeed(GameContext.getRoleFaceup() * GameContext.footMonsterSpeed.x, GameContext.footMonsterSpeed.y);
         EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
@@ -228,6 +226,8 @@ export default class GameContext extends Laya.Script {
         if (!GameContext.role) {
             return;
         }
+        GameContext.roleNormal.alpha = 1;
+        GameContext.roleLight.alpha = 1;
         GameContext.alphaEffect(0, Laya.Handler.create(null, function() {
             GameContext.alphaEffect(1, Laya.Handler.create(null, function() {
                 GameContext.alphaEffect(1, Laya.Handler.create(null, function() {
@@ -244,12 +244,7 @@ export default class GameContext extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        if (GameContext.bodyState == 0) {
-            return;
-        }
-        GameContext.bodyState = 0;
         Laya.Tween.to(GameContext.role, {scaleX: GameContext.bodySmallScale, scaleY: GameContext.bodySmallScale}, 1500, Laya.Ease.elasticOut, Laya.Handler.create(null, function() {
-            GameContext.setBodyState(0);
         })); 
     }
 
@@ -261,6 +256,8 @@ export default class GameContext extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
+        GameContext.roleNormal.alpha = 1;
+        GameContext.roleLight.alpha = 1;
         GameContext.bodyState = bodyState;
         GameContext.gameRoleBodyState = GameContext.bodyState;
         if (GameContext.bodyState == 0) {
@@ -280,6 +277,8 @@ export default class GameContext extends Laya.Script {
         GameContext.gameRoleState = state;
         GameContext.roleNormal.visible = false;
         GameContext.roleLight.visible = false;
+        GameContext.roleNormal.alpha = 1;
+        GameContext.roleLight.alpha = 1;
         if (state == 0) {
             GameContext.roleSpr = GameContext.roleNormal;
         } else {
@@ -307,9 +306,6 @@ export default class GameContext extends Laya.Script {
 }
 
 GameContext.role = null;
-GameContext.roleHead = null;
-GameContext.roleBody = null;
-GameContext.roleFoot = null;
 GameContext.roleInGround = false;
 GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
@@ -322,18 +318,18 @@ GameContext.commandWalk = false;
 GameContext.isDie = false;
 GameContext.walkDirect = null;
 GameContext.isWin = false;
-GameContext.roleSpeed = 9;
+GameContext.roleSpeed = 8;
 GameContext.roleCurAni = "";
 GameContext.roleSpr = null;
 GameContext.roleNormal = null;
 GameContext.roleLight = null;
 GameContext.keSpr = null;
-GameContext.roleHurtSpeed = {x: 9, y: -10};
-GameContext.footMonsterSpeed = {x: 9, y: -16};
+GameContext.roleHurtSpeed = {x: 9, y: -15};
+GameContext.footMonsterSpeed = {x: 5, y: -10};
 GameContext.bodyBigScale = 1;
 GameContext.bodySmallScale = 0.6;
 GameContext.curScaleFactor = GameContext.bodySmallScale;
-GameContext.roleJumpSpeed = -31;
+GameContext.roleJumpSpeed = -26;
 
 GameContext.joyStickScene = null;
 GameContext.gameTopScene = null;
@@ -348,3 +344,6 @@ GameContext.gameRoleState = 0;
 
 GameContext.gameScene = null;
 GameContext.gameSceneType = 0;
+
+GameContext.curFootMonster = null;
+GameContext.brokenBrickTick = 0;

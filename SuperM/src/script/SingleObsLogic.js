@@ -21,7 +21,7 @@ export default class SingleObsLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other == GameContext.roleHead) {
+        if (other.label == "RoleHead") {
             if (self.label == "obsDown") {
                 this.ground.isSensor = true;
             }
