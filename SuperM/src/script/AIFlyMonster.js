@@ -8,6 +8,10 @@ export default class AIFlyMonster extends Laya.Script {
     }
     
     onEnable() {
+        this.owner.isStartAI = false;
+    }
+
+    startAI() {
         this.owner.directY = 1;
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         Laya.timer.loop(1000, this, this.onMakeIdea);
@@ -18,11 +22,25 @@ export default class AIFlyMonster extends Laya.Script {
     }
 
     onMakeIdea() {
-        this.owner.directY = -1 * this.owner.directY;
+        if (this.owner.isStartAI == true) {
+            this.owner.directY = -1 * this.owner.directY;
+        }
     }
 
     onUpdate() {
-        let v = {x: 0, y: this.owner.directY};
-        this.owner.rigidBody.setVelocity(v);
+        if (this.owner.isStartAI == false) {
+            if (this.owner && GameContext.role) {
+                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
+                    this.owner.isStartAI = true;
+                    this.startAI();
+                    return;
+                }
+            }
+        }
+        if (this.owner.isStartAI == true) {
+            let v = {x: 0, y: this.owner.directY};
+            this.owner.rigidBody.setVelocity(v);
+        }
+
     }
 }

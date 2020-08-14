@@ -12,29 +12,30 @@ export default class HanbaoLogic extends Laya.Script {
     
     onEnable() {
         if (GameContext.gameRoleBodyState == 0) {
-            this.direct = {x: -1, y: 0};
+            this.owner.direct = {x: -1, y: 0};
         } else {
-            this.direct = {x: 0, y: 0};
+            this.owner.direct = {x: 0, y: 0};
         }
-
+        this.owner.isMove = true;
         let aniA = "ani1";
         let aniB = "ani2";
         if (GameContext.gameRoleBodyState == 0) {
         } else {
             aniA = "ani11";
             aniB = "ani22";
+            this.owner.isMove = false;
         }
         this.owner.play(0, false, aniA);
-        this.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.rigidBody.enabled = false;
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.rigidBody.enabled = false;
         this.owner.on(Laya.Event.COMPLETE, this, function(){
-            this.rigidBody.enabled = true;
+            this.owner.rigidBody.enabled = true;
             this.owner.play(0, false, aniB);
         });
     }
 
     onTriggerEnter(other, self, contact) {
-        this.direct.x = -1 * Utils.getSign(this.direct.x);
+        this.owner.direct.x = -1 * Utils.getSign(this.owner.direct.x);
         if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
@@ -51,23 +52,19 @@ export default class HanbaoLogic extends Laya.Script {
                 } else if (GameContext.gameRoleBodyState == 1) {
                     EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
                 }
-                console.debug("---------------------");
-                console.debug(GameContext.gameRoleBodyState);
-                console.debug(GameContext.gameRoleState);
-                console.debug("----------------------");
                 Utils.removeThis(this.owner);
                 return;
             }
         }
-        if (GameContext.gameRoleBodyState == 0) {
-            this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: 0}); 
+        if (this.owner.isMove == true) {
+            this.owner.rigidBody.setVelocity({x: this.owner.direct.x * this.speed, y: 0}); 
         }
     }
 
     onUpdate() {
-        if (GameContext.gameRoleBodyState == 0) {
-            let linearVelocity = this.rigidBody.linearVelocity;
-            this.rigidBody.setVelocity({x: this.direct.x * this.speed, y: linearVelocity.y});    
+        if (this.owner.isMove == true) {
+            let linearVelocity = this.owner.rigidBody.linearVelocity;
+            this.owner.rigidBody.setVelocity({x: this.owner.direct.x * this.speed, y: linearVelocity.y});   
         }
     }
 

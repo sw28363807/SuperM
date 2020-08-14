@@ -106,7 +106,20 @@ export default class BrickGoldLogic extends Laya.Script {
     }
     
     onEnable() {
+        this.owner.isStartAI = false;
+    }
 
+    onUpdate() {
+        if (this.owner.isStartAI == false) {
+            if (this.owner && GameContext.role) {
+                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
+                    this.owner.isStartAI = true;
+                    let render = this.owner.getChildByName("render");
+                    render.play(0, true, "ani1");
+                    return;
+                }
+            }
+        }
     }
 
     onDisable() {

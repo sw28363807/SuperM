@@ -80,7 +80,6 @@ export default class FlowerLogic extends Laya.Script {
         let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
         let flowerGlobalPos = flower.localToGlobal(new Laya.Point(0, 0));
         let y = roleGlobalPos.y - flowerGlobalPos.y;
-        console.debug(y);
         if (y < -200) {
             return 30;
         } else if (y > 100) {

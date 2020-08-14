@@ -262,8 +262,12 @@ export default class GameContext extends Laya.Script {
         GameContext.gameRoleBodyState = GameContext.bodyState;
         if (GameContext.bodyState == 0) {
             GameContext.curScaleFactor = GameContext.bodySmallScale;
+            GameContext.keSpr.scaleX = 1/GameContext.bodySmallScale;
+            GameContext.keSpr.scaleY = 1/GameContext.bodySmallScale;
         } else {
             GameContext.curScaleFactor = GameContext.bodyBigScale;
+            GameContext.keSpr.scaleX = 1;
+            GameContext.keSpr.scaleY = 1;
         }
         GameContext.role.scaleX = GameContext.curScaleFactor;
         GameContext.role.scaleY = GameContext.curScaleFactor;

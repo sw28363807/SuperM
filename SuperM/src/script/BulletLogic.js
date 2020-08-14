@@ -52,9 +52,6 @@ export default class BulletLogic extends Laya.Script {
             return;
         }
         if (other) {
-            console.debug("--------------------");
-            console.debug(other.label);
-            console.debug("=====================");
             if (self.label == "KeBullet") {
                 if (other.label == "Brick") {
                     this.owner.directX = -this.owner.directX;
