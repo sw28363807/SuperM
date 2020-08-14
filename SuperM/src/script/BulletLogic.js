@@ -52,6 +52,9 @@ export default class BulletLogic extends Laya.Script {
             return;
         }
         if (other) {
+            console.debug("--------------------");
+            console.debug(other.label);
+            console.debug("=====================");
             if (self.label == "KeBullet") {
                 if (other.label == "Brick") {
                     this.owner.directX = -this.owner.directX;
@@ -77,6 +80,13 @@ export default class BulletLogic extends Laya.Script {
                     } else if (other.label == "MonsterBody") {
                         EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
                         Utils.removeThis(this.owner);
+                    } else if (other.label == "KeBody") {
+                        if (other.owner) {
+                            Utils.removeThis(other.owner);
+                        }
+                        if (this.owner) {
+                            Utils.removeThis(this.owner);
+                        }
                     }
                 }
             }

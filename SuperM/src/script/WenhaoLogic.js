@@ -1,4 +1,5 @@
 import Utils from "./Utils";
+import GameContext from "../GameContext";
 
 export default class WenhaoLogic extends Laya.Script {
 
@@ -10,7 +11,9 @@ export default class WenhaoLogic extends Laya.Script {
         if (!Utils.roleInFloor(self.owner)) {
             return;
         }
-        
+        if (GameContext.brokenBrickTick != 0) {
+            return;
+        }
         if (other && other.label == "RoleHead") {
             let owner = this.owner;
             let render = owner.getChildByName("render");
@@ -36,6 +39,7 @@ export default class WenhaoLogic extends Laya.Script {
                     }));
                 });
             }
+            GameContext.brokenBrickTick = 10;
         }
     }
     
