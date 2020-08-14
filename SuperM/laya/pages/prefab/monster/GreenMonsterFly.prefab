@@ -52,7 +52,7 @@
             "switchAble":true,
             "searchKey":"CircleCollider",
             "removeAble":true,
-            "props":{"y":-24,"x":4,"radius":34.5,"presetID":8,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab","label":"MonsterBody"},
+            "props":{"y":-4,"x":10,"radius":25,"presetID":8,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab","label":"MonsterBody"},
             "nodeParent":1491,
             "label":"CircleCollider(GreenMonsterFly)",
             "isDirectory":false,
