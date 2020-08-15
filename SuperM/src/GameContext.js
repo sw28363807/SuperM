@@ -328,12 +328,13 @@ GameContext.roleSpr = null;
 GameContext.roleNormal = null;
 GameContext.roleLight = null;
 GameContext.keSpr = null;
-GameContext.roleHurtSpeed = {x: 9, y: -15};
+GameContext.roleHurtSpeed = {x: 5, y: -9};
 GameContext.footMonsterSpeed = {x: 5, y: -10};
 GameContext.bodyBigScale = 1;
 GameContext.bodySmallScale = 0.6;
 GameContext.curScaleFactor = GameContext.bodySmallScale;
 GameContext.roleJumpSpeed = -26;
+GameContext.roleSmallJumpSpeed = -26 * 0.9;
 
 GameContext.joyStickScene = null;
 GameContext.gameTopScene = null;

@@ -20,7 +20,7 @@
             "selectedBox":33,
             "selecteID":46,
             "searchKey":"Box,joyStick,joyStick",
-            "props":{"y":321,"x":164,"var":"joyStick","scaleY":1.3,"scaleX":1.3,"presetID":1,"preset":"laya/pages/prefab/menu/JoyStick.prefab","name":"joyStick"},
+            "props":{"y":434,"x":88,"var":"joyStick","scaleY":1.3,"scaleX":1.3,"presetID":1,"preset":"laya/pages/prefab/menu/JoyStick.prefab","name":"joyStick"},
             "nodeParent":2,
             "maxID":52,
             "label":"joyStick",

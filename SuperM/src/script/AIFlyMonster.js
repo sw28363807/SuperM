@@ -16,7 +16,7 @@ export default class AIFlyMonster extends Laya.Script {
         this.owner.renderMonster = this.owner.getChildByName("render");
         this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        Laya.timer.loop(1000, this, this.onMakeIdea);
+        Laya.timer.loop(2000, this, this.onMakeIdea);
     }
 
     onDisable() {
@@ -40,7 +40,7 @@ export default class AIFlyMonster extends Laya.Script {
             }
         }
         if (this.owner.isStartAI == true) {
-            let v = {x: 0, y: this.owner.directY};
+            let v = {x: 0, y: this.owner.directY * 2};
             this.owner.rigidBody.setVelocity(v);
         }
 

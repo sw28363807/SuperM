@@ -228,13 +228,10 @@ export default class Role extends Laya.Script {
         } else if (self.label == "RoleFoot" &&
             (other.label == "MonsterBody")) {
                 if (self.owner) {
-                    if (self.owner.y + self.owner.height * self.owner.scaleY < other.owner.y - 10) {
-                        if (other.owner && other.owner.name == "Flower") {
-                        } else {
-                            let lineSpeed =  GameContext.getLineSpeed();
-                            if (lineSpeed.y >= 0) {
-                                GameContext.footMonster(other);
-                            }
+                    if (other.owner.name == "Flower") {
+                    } else {
+                        if (Utils.roleInCeil(other.owner)) {
+                            GameContext.footMonster(other);
                         }
                     }
                 }
@@ -291,9 +288,16 @@ export default class Role extends Laya.Script {
             GameContext.roleShuiGuanState = 0;
             let xSpeed = 0;
             if (GameContext.walkDirect && GameContext.commandWalk) {
-                xSpeed = GameContext.walkDirect.x * 10;
+                xSpeed = GameContext.walkDirect.x * 7;
+                if (GameContext.gameRoleBodyState == 0) {
+                    xSpeed = xSpeed * 0.9;
+                }
             }
-            GameContext.setRoleSpeed(xSpeed, GameContext.roleJumpSpeed);
+            let ySpeed = GameContext.roleJumpSpeed;
+            if (GameContext.gameRoleBodyState == 0) {
+                ySpeed = GameContext.roleSmallJumpSpeed;
+            }
+            GameContext.setRoleSpeed(xSpeed, ySpeed);
 
         }
     }

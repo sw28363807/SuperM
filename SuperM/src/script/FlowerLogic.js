@@ -12,7 +12,6 @@ export default class FlowerLogic extends Laya.Script {
     }
     
     onEnable() {
-
         this.owner.isStartAI = false;
     }
 
@@ -38,8 +37,8 @@ export default class FlowerLogic extends Laya.Script {
         this.owner.canShootBullet = true;
         
         this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
-        Laya.timer.loop(5000, this, this.switchFlowerState);
-        this.owner.isStartAI
+        Laya.timer.loop(4000, this, this.switchFlowerState);
+        this.owner.shootTickCount = 0;
     }
 
     onTriggerEnter(other, self, contact) {
@@ -85,9 +84,17 @@ export default class FlowerLogic extends Laya.Script {
         let flowerGlobalPos = flower.localToGlobal(new Laya.Point(0, 0));
         let y = roleGlobalPos.y - flowerGlobalPos.y;
         if (y < -200) {
-            return 30;
+            let a = -1;
+            if (flower.scaleX < 0) {
+                a = 1;
+            }
+            return a * 30;
         } else if (y > 100) {
-            return -30;
+            let a = 1;
+            if (flower.scaleX < 0) {
+                a = -1;
+            }
+            return a * 30;
         } else {
             return 0;
         }
@@ -119,13 +126,17 @@ export default class FlowerLogic extends Laya.Script {
         if (y * 50 <= this.owner.upPos.y) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.upPos.x/50, this.owner.upPos.y/50);
             this.owner.flowerState = 1;
-            if (this.owner.canShootBullet == true) {
-                this.owner.canShootBullet = false;
-                if (this.owner.flowerType == 2) {
+            if (this.owner.flowerType == 2) {
+                this.owner.shootTickCount++;
+                if (this.owner.shootTickCount > 60) {
                     let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
                     let flowerGlobalPos = this.owner.redFlower.localToGlobal(new Laya.Point(0, 0));
                     if (Math.abs(roleGlobalPos.x - flowerGlobalPos.x) < 800) {
-                        this.shootBullet();
+                        if (this.owner.canShootBullet == true) {
+                            this.owner.canShootBullet = false;
+                            this.shootBullet();
+                            this.owner.shootTickCount == 0;
+                        }
                     }
                 }
             }
@@ -136,7 +147,6 @@ export default class FlowerLogic extends Laya.Script {
                 this.owner.redFlower.scaleX = Math.abs(this.owner.redFlower.scaleX) * this.getFaceUp(this.owner.redFlower);
                 this.owner.redFlower.rotation = this.getFaceRoatation(this.owner.redFlower);
             }
-
         } else if (y * 50 >= this.owner.downPos.y) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
             this.owner.flowerState = 2;
@@ -148,10 +158,22 @@ export default class FlowerLogic extends Laya.Script {
         if (this.owner.flowerState == 2) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
             this.owner.rigidBody.setVelocity({x: 0, y: -5});
-            this.owner.redFlower.rotation = 0;
+            let rotation = -90;
+            if (this.owner.redFlower.scaleX < 0) {
+                rotation = 90;
+            }
+            this.owner.redFlower.rotation = rotation;
+            this.owner.greenFlower.rotation = rotation;
         } else {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.upPos.x/50, this.owner.upPos.y/50);
             this.owner.rigidBody.setVelocity({x: 0, y: 5});
+            let rotation = -90;
+            if (this.owner.redFlower.scaleX < 0) {
+                rotation = 90;
+            }
+            this.owner.redFlower.rotation = rotation;
+            this.owner.greenFlower.rotation = rotation;
+            this.owner.shootTickCount = 0;
         }
     }
 }

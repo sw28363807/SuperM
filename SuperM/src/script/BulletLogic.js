@@ -26,9 +26,10 @@ export default class BulletLogic extends Laya.Script {
             return;
         }
         this.bulletType = data.bulletType;
+        this.owner.initDirectX = data.x;
         this.owner.directX = data.x;
         if (this.bulletType == 1) {
-            this.rigidBody.setVelocity({x: this.owner.directX * this.speed, y: 8});
+            this.rigidBody.setVelocity({x: this.owner.directX * this.speed, y: 5});
         } else if (this.bulletType == 2) {
             this.rigidBody.setVelocity({x: this.owner.directX * this.speed, y: 0});
         }
@@ -36,8 +37,14 @@ export default class BulletLogic extends Laya.Script {
 
     onUpdate() {
         if (this.owner.name == "Bullet") {
+            let linearVelocity = this.rigidBody.linearVelocity;
+            if (linearVelocity.x * this.owner.initDirectX < 0) {
+                Utils.removeThis(this.owner);
+                return;
+            }
             if (this.count > 3) {
                 Utils.removeThis(this.owner);
+                return;
             }
         } else if (this.owner.name == "KeBullet") {
             let linearVelocity = this.rigidBody.linearVelocity;

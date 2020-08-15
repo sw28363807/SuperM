@@ -14,9 +14,23 @@ export default class Utils extends Laya.Script {
     onDisable() {
     }
 
+    static roleInCeil(monster) {
+        if (GameContext.role) {
+            let offx = 30;
+            let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
+            let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
+            let monsterW = monster.width * monster.scaleX;
+            let monsterH = monster.height * monster.scaleY;
+            if (myX > monster.x - monsterW/2 - offx && myX < monster.x + monsterW/2 + offx && myY < monster.y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     static roleInFloor(brick) {
         if (GameContext.role) {
-            let offx = 5;
+            let offx = 10;
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y;
             if (myX > brick.x - offx && myX < brick.x + brick.width * brick.scaleX + offx && myY > brick.y) {
