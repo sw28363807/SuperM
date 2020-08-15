@@ -13,6 +13,8 @@ export default class AIFlyMonster extends Laya.Script {
 
     startAI() {
         this.owner.directY = 1;
+        this.owner.renderMonster = this.owner.getChildByName("render");
+        this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         Laya.timer.loop(1000, this, this.onMakeIdea);
     }

@@ -53,19 +53,23 @@ export default class FlowerLogic extends Laya.Script {
     }
 
     shootBullet() {
-        let parent = this.owner.parent;
-        let width = this.owner.width;
-        let x = this.owner.x;
-        let y = this.owner.y;
+        let owner = this.owner;
+        if (!owner) {
+            return;
+        }
+        let parent = owner.parent;
+        let width = owner.width;
+        let x = owner.x;
+        let y = owner.y;
 
         Laya.loader.create("prefab/FlowerBullet.prefab", Laya.Handler.create(this, function (prefabDef) {
             let bullet = prefabDef.create();
             parent.addChild(bullet);
-            bullet.x = x + width/2;
-            bullet.y = y + 20;
             let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, GameContext.role.height/2));
-            let flowerGlobalPos = this.owner.redFlower.localToGlobal(new Laya.Point(0, 0));
+            let flowerGlobalPos = owner.redFlower.localToGlobal(new Laya.Point(0, 0));
             let direct = Utils.getDirect(roleGlobalPos.x, roleGlobalPos.y, flowerGlobalPos.x, flowerGlobalPos.y);
+            bullet.x = x + Utils.getSign(direct.x) * width/2;
+            bullet.y = y + 20;
             EventMgr.getInstance().postEvent(Events.Monster_Shoot_Bullet, {direct: direct});
         }));
     }

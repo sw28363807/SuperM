@@ -20,7 +20,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":5,"width":410,"presetID":2,"preset":"laya/pages/prefab/oo/Hole2.prefab","label":"Hole","isSensor":true,"height":1000},
+            "props":{"y":-2,"x":5,"width":410,"presetID":2,"preset":"laya/pages/prefab/oo/Hole2.prefab","label":"Hole","isSensor":true,"height":1000},
             "nodeParent":2241,
             "label":"BoxCollider(Hole2)",
             "isDirectory":false,

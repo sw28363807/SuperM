@@ -52,20 +52,23 @@ export default class BulletLogic extends Laya.Script {
             return;
         }
         if (other) {
-            if (self.label == "KeBullet") {
+            if (self.label == "KeBulletFoot") {
+                if (other.label == "Hole") {
+                    this.coll.isSensor = true;
+                    this.isDrop = true;
+                    this.rigidBody.gravityScale = 5;
+                    let owner = this.owner;
+                    Laya.timer.once(1000, null, function() {
+                        Utils.removeThis(owner);
+                    });
+                }
+            } else if (self.label == "KeBullet") {
                 if (other.label == "Brick") {
                     this.owner.directX = -this.owner.directX;
                 } else if (other.label == "Wall") {
                     this.owner.directX = -this.owner.directX;
                 } else if (other.label == "Wenhao") {
                     this.owner.directX = -this.owner.directX;
-                } else if (other.label == "Hole") {
-                    this.coll.isSensor = true;
-                    this.isDrop = true;
-                    this.rigidBody.gravityScale = 15;
-                    Laya.timer.once(1000, null, function() {
-                        Utils.removeThis(this.owner);
-                    });
                 } else if (other.label == "MonsterBody") {
                     EventMgr.getInstance().postEvent(Events.Monster_KeBullet_Dead, {owner: other.owner, dx: Utils.getSign(this.rigidBody.linearVelocity.x)}); 
                 }

@@ -53,7 +53,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":0,"width":56,"presetID":6,"preset":"laya/pages/prefab/oo/Ke.prefab","label":"KeBody","height":41},
+            "props":{"y":0,"x":0,"width":56,"presetID":6,"preset":"laya/pages/prefab/oo/Ke.prefab","label":"KeBody","height":38},
             "nodeParent":328,
             "label":"BoxCollider(Ke)",
             "isDirectory":false,

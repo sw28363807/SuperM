@@ -9,7 +9,9 @@ export default class BrickLogic extends Laya.Script {
     onTriggerEnter(other, self, contact) {
         if (other.label == "RoleHead") {
             if (Utils.roleInFloor(this.owner)) {
-                this.onCreateBrokenBrick();
+                if (GameContext.roleHurting == false) {
+                    this.onCreateBrokenBrick();
+                }
             }
         } else if (other.label == "KeBullet") {
             this.onCreateBrokenBrick();

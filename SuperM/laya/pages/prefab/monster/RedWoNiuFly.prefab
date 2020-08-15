@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1556,
-    "selecteID":1561,
+    "selecteID":1563,
     "searchKey":"Box,RedWoNiuFly",
     "props":{"zOrder":100,"y":0,"x":0,"width":69,"presetID":1,"preset":"laya/pages/prefab/monster/RedWoNiuFly.prefab","pivotY":47,"pivotX":35,"name":"RedWoNiuFly","isPresetRoot":true,"height":47},
     "nodeParent":-1,
