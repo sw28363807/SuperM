@@ -78,8 +78,8 @@ export default class FlowerLogic extends Laya.Script {
             let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, GameContext.role.height/2));
             let flowerGlobalPos = owner.redFlower.localToGlobal(new Laya.Point(0, 0));
             let direct = Utils.getDirect(roleGlobalPos.x, roleGlobalPos.y, flowerGlobalPos.x, flowerGlobalPos.y);
-            bullet.x = x + Utils.getSign(direct.x) * width/2;
-            bullet.y = y + 20;
+            bullet.x = x + Utils.getSign(direct.x) * 25;
+            bullet.y = y + 60;
             EventMgr.getInstance().postEvent(Events.Monster_Shoot_Bullet, {owner: bullet, direct: direct});
         }));
     }
@@ -125,7 +125,7 @@ export default class FlowerLogic extends Laya.Script {
     onUpdate() {
         if (this.owner.isStartAI == false) {
             if (this.owner && GameContext.role) {
-                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
+                if (this.owner.x < GameContext.role.x + 600 && this.owner.x > GameContext.role.x) {
                     this.owner.isStartAI = true;
                     this.startAI();
                     return;
@@ -137,12 +137,12 @@ export default class FlowerLogic extends Laya.Script {
         if (y * 50 <= this.owner.upPos.y) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.upPos.x/50, this.owner.upPos.y/50);
             this.owner.flowerState = 1;
-            if (this.owner.flowerType == 2) {
+            if (this.owner.flowerType == 2 || this.owner.flowerType == 1) {
                 this.owner.shootTickCount++;
                 if (this.owner.shootTickCount > 60) {
                     let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
                     let flowerGlobalPos = this.owner.redFlower.localToGlobal(new Laya.Point(0, 0));
-                    if (Math.abs(roleGlobalPos.x - flowerGlobalPos.x) < 800) {
+                    if (Math.abs(roleGlobalPos.x - flowerGlobalPos.x) < 400) {
                         if (this.owner.canShootBullet == true) {
                             this.owner.canShootBullet = false;
                             this.shootBullet();

@@ -5,7 +5,7 @@
     "searchKey":"View",
     "props":{"sceneWidth":130,"sceneHeight":91,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":4,
+    "maxID":5,
     "label":"View",
     "isOpen":null,
     "isDirectory":true,
@@ -23,6 +23,19 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":3,
+            "child":[
+                ]
+        },
+        {
+            "type":"GraphicNode",
+            "searchKey":"GraphicNode",
+            "props":{},
+            "nodeParent":2,
+            "label":"GraphicNode",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":4,
             "child":[
                 ]
         }],
@@ -84,6 +97,12 @@
                                 "index":7
                             }]
                     }
+                },
+                {
+                    "target":4,
+                    "keyframes":{
+
+                    }
                 }],
             "name":"ani1",
             "id":1,
@@ -118,7 +137,7 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":91,
+                                "value":-128,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -126,7 +145,7 @@
                                 "index":0
                             },
                             {
-                                "value":-20,
+                                "value":-128,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -134,20 +153,63 @@
                                 "index":5
                             },
                             {
-                                "value":0,
+                                "value":-183,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"y",
                                 "index":7
                             }],
+                        "x":[
+                            {
+                                "value":-81,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"x",
+                                "index":0
+                            },
+                            {
+                                "value":-81,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"x",
+                                "index":5
+                            },
+                            {
+                                "value":-81,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"x",
+                                "index":7
+                            }],
                         "skin":[
                             {
-                                "value":"other/reward2.png",
+                                "value":"other/rewardpingzi (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
+                                "index":0
+                            }],
+                        "scaleY":[
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"scaleY",
+                                "index":0
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"scaleX",
                                 "index":0
                             }],
                         "alpha":[
@@ -168,6 +230,12 @@
                                 "index":7
                             }]
                     }
+                },
+                {
+                    "target":4,
+                    "keyframes":{
+
+                    }
                 }],
             "name":"ani11",
             "id":1,
@@ -179,13 +247,211 @@
                 {
                     "target":3,
                     "keyframes":{
+                        "y":[
+                            {
+                                "value":-183,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":-183,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":10
+                            }],
+                        "x":[
+                            {
+                                "value":-83.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"x",
+                                "index":0
+                            },
+                            {
+                                "value":-83.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"x",
+                                "index":10
+                            }],
                         "skin":[
                             {
-                                "value":"other/reward2.png",
+                                "value":"other/rewardpingzi (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"other/rewardpingzi (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":10
+                            }],
+                        "scaleY":[
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"scaleY",
+                                "index":0
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"scaleX",
+                                "index":0
+                            }]
+                    }
+                },
+                {
+                    "target":4,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":-183,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":-183,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"y",
+                                "index":10
+                            }],
+                        "x":[
+                            {
+                                "value":-83.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"x",
+                                "index":0
+                            }],
+                        "skin":[
+                            {
+                                "value":"other/effectpingzi (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"other/effectpingzi (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":1
+                            },
+                            {
+                                "value":"other/effectpingzi (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":2
+                            },
+                            {
+                                "value":"other/effectpingzi (4).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":3
+                            },
+                            {
+                                "value":"other/effectpingzi (5).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":4
+                            },
+                            {
+                                "value":"other/effectpingzi (6).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":5
+                            },
+                            {
+                                "value":"other/effectpingzi (7).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":6
+                            },
+                            {
+                                "value":"other/effectpingzi (9).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":7
+                            },
+                            {
+                                "value":"other/effectpingzi (10).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":8
+                            },
+                            {
+                                "value":"other/effectpingzi (11).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":9
+                            },
+                            {
+                                "value":"other/effectpingzi (12).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":10
+                            }],
+                        "scaleY":[
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"scaleY",
+                                "index":0
+                            }],
+                        "scaleX":[
+                            {
+                                "value":1.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"scaleX",
                                 "index":0
                             }]
                     }

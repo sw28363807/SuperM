@@ -23,6 +23,17 @@ export default class GameContext extends Laya.Script {
     static triggerGotoHole(hole) {
         GameContext.roleIsDrop = true;
         GameContext.setRoleSensorEnabled(true);
+        if (GameContext.gameRoleState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(1);
+        } else if (GameContext.bodyState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(0);
+            GameContext.changeSmallEffect();
+        }
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
         Laya.timer.once(1000, null, function() {
             if (GameContext.role) {
                 GameContext.roleIsDrop = false;
@@ -218,7 +229,7 @@ export default class GameContext extends Laya.Script {
             GameContext.curFootMonster = null;
         });
         GameContext.roleInGround = false;
-        GameContext.setRoleSpeed(GameContext.getRoleFaceup() * GameContext.footMonsterSpeed.x, GameContext.footMonsterSpeed.y);
+        GameContext.setRoleSpeed(0, GameContext.footMonsterSpeed.y);
         EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
     }
 

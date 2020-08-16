@@ -45,7 +45,7 @@ export default class MonsterLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
-        Utils.createMonsterDropDeadEffect(this.owner);
+        Utils.createMonsterDropDeadEffect(this.owner, 270);
     }
 
     onMonsterKeBulletDead(data) {

@@ -257,6 +257,10 @@ export default class Role extends Laya.Script {
                     return;
                 }
             }
+
+            if (other.label == "FlowerNoOut") {
+                return;
+            }
             if (other.label != "ShuiguanHeadEnter") {
                 GameContext.roleShuiGuanState = 0;
             }

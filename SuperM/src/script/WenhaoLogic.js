@@ -44,8 +44,8 @@ export default class WenhaoLogic extends Laya.Script {
                         let wenhao = prefabDef.create();
                         parent.addChild(wenhao);
                         wenhao.x = x + 5;
-                        wenhao.y = y - wenhao.height * wenhao.scaleX;
-                        wenhao.zOrder = zOrder + 1;
+                        wenhao.y = y - wenhao.height * wenhao.scaleX - 10;
+                        wenhao.zOrder = zOrder - 1;
                     }
                 }));
             });

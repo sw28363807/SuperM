@@ -104,9 +104,12 @@ export default class Utils extends Laya.Script {
         return d;
     }
 
-    static createMonsterDropDeadEffect(owner) {
+    static createMonsterDropDeadEffect(owner, angle) {
         if (!owner) {
             return;
+        }
+        if (angle == null || angle == undefined) {
+            angle = 180;
         }
         let deadMove = owner.getChildByName("deadMove");
         if (deadMove) {
@@ -120,7 +123,7 @@ export default class Utils extends Laya.Script {
                 dead.y = y;
                 parent.addChild(dead);
                 let rigid = dead.getComponent(Laya.RigidBody);
-                rigid.setAngle(180);
+                rigid.setAngle(angle);
                 rigid.setVelocity({x: 3, y: -15});
                 rigid.gravityScale = 5;
                 Laya.timer.once(3000, null, function() {

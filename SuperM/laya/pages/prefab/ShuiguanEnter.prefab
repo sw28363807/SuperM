@@ -3,7 +3,7 @@
     "type":"Box",
     "selectedBox":1673,
     "searchKey":"Box,ShuiguanEnter",
-    "props":{"zOrder":13,"y":0,"x":0,"width":177,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab","name":"ShuiguanEnter","isPresetRoot":true,"height":177},
+    "props":{"zOrder":65536,"y":0,"x":0,"width":177,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab","name":"ShuiguanEnter","isPresetRoot":true,"height":177},
     "nodeParent":-1,
     "maxID":1681,
     "label":"ShuiguanEnter",

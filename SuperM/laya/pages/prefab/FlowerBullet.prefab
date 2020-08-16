@@ -3,7 +3,7 @@
     "type":"Sprite",
     "selectedBox":84,
     "searchKey":"Sprite,FlowerBullet",
-    "props":{"zOrder":65535,"y":0,"x":0,"width":40,"texture":"other/bullet.png","presetID":1,"preset":"laya/pages/prefab/FlowerBullet.prefab","name":"FlowerBullet","isPresetRoot":true,"height":40},
+    "props":{"zOrder":65534,"y":0,"x":0,"width":40,"texture":"other/bullet.png","presetID":1,"preset":"laya/pages/prefab/FlowerBullet.prefab","name":"FlowerBullet","isPresetRoot":true,"height":40},
     "nodeParent":-1,
     "maxID":89,
     "label":"FlowerBullet",
@@ -14,7 +14,7 @@
     "compId":84,
     "child":[
         {
-            "x":15,
+            "x":0,
             "type":"CircleCollider",
             "switchAble":true,
             "searchKey":"CircleCollider",
@@ -30,7 +30,7 @@
                 ]
         },
         {
-            "x":15,
+            "x":0,
             "type":"RigidBody",
             "switchAble":true,
             "searchKey":"RigidBody",
@@ -46,7 +46,7 @@
                 ]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/FlowerBulletLogic.js",
