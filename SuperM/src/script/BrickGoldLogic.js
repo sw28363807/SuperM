@@ -21,8 +21,8 @@ export default class BrickGoldLogic extends Laya.Script {
                 if (!Utils.roleInFloor(self.owner)) {
                     return;
                 }
-                if (GameContext.gameRoleBodyState == 1 || true) {
-                    this.createHeadBullet();
+                this.createHeadBullet();
+                if (GameContext.gameRoleBodyState == 1) {
                     this.onCreateBrokenBrick();
                 } else {
                     let render = this.owner.getChildByName("render");

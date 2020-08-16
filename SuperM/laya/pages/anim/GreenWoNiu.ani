@@ -5,7 +5,7 @@
     "searchKey":"View",
     "props":{"sceneWidth":80,"sceneHeight":71,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":4,
+    "maxID":6,
     "label":"View",
     "isOpen":null,
     "isDirectory":true,
@@ -97,6 +97,12 @@
                                 "index":15
                             }]
                     }
+                },
+                {
+                    "target":5,
+                    "keyframes":{
+
+                    }
                 }],
             "name":"ani1",
             "id":1,
@@ -166,7 +172,7 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":-43,
+                                "value":-44,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":5,
@@ -175,7 +181,7 @@
                             }],
                         "x":[
                             {
-                                "value":-38,
+                                "value":3,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":5,
@@ -233,6 +239,24 @@
                                 "label":null,
                                 "key":"skin",
                                 "index":15
+                            }],
+                        "scaleX":[
+                            {
+                                "value":-1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":5,
+                                "key":"scaleX",
+                                "index":0
+                            }],
+                        "rotation":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":5,
+                                "key":"rotation",
+                                "index":0
                             }]
                     }
                 }],

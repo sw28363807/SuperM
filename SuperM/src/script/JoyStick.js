@@ -80,7 +80,7 @@ export default class JoyStick extends Laya.Script {
                 }
                 this.center.x = curX;
                 this.center.y = curY;
-                if (Math.sqrt(minX*minX + miny * miny) > 40) {
+                if (Math.sqrt(minX*minX + miny * miny) > 5) {
                     let direct = this.processDirect(this.center.x, this.center.y);
                     if(direct != this.direct) {
                         this.direct = direct;

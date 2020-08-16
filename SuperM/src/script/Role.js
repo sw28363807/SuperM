@@ -9,7 +9,6 @@ export default class Role extends Laya.Script {
         super();
         GameContext.walkDirect = null;
         GameContext.commandWalk = false;
-        GameContext.roleSpeed = 9;
         GameContext.roleIsDrop = false;
         GameContext.roleInGround = false;
         GameContext.roleShuiGuanState = 0;
@@ -96,6 +95,7 @@ export default class Role extends Laya.Script {
         if (!GameContext.roleRigidBody) {
             return;
         }
+        GameContext.resetRoleWalkSpeed();
         GameContext.commandWalk = false;
         GameContext.walkDirect = null;
         let linearVelocity = GameContext.getLineSpeed();
@@ -162,6 +162,7 @@ export default class Role extends Laya.Script {
         if (GameContext.roleFooting) {
             return;
         }
+        GameContext.processRoleWalkSpeed();
         if (GameContext.roleHurting == false) {
             if (GameContext.walkDirect) {
                 if (GameContext.walkDirect.x != 0) {
@@ -211,13 +212,15 @@ export default class Role extends Laya.Script {
         if (other.label == "obsDown" || other.label == "obsUp") {
             return;
         }
-        if (GameContext.roleIsDrop) {
-            GameContext.setRoleSensorEnabled(true);
+        if (GameContext.roleIsDrop == true) {
             return;
         }
         if (other.label == "Hole") {
             GameContext.triggerGotoHole(other.owner);
             GameContext.roleIsDrop = true;
+            return;
+        }
+        if (GameContext.roleIsDrop) {
             return;
         }
         if (other.label == "KeBody") {
@@ -235,7 +238,7 @@ export default class Role extends Laya.Script {
                         }
                     }
                 }
-        } else if (self.label == "RoleBody" && (other.label == "MonsterBody")) {
+        } else if (self.label == "RoleBody" && (other.label == "MonsterBody") && GameContext.curFootMonster == null) {
             if (other.owner && other.owner.name == "Flower") {
             } else {
                 if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
@@ -392,8 +395,7 @@ export default class Role extends Laya.Script {
     }
 
     onRoleCButton() {
-        console.debug(Laya.Physics.I.getBodyCount());
-        console.debug(Laya.Physics.I);
+        Laya.Scene.open("scene/Level1_1.scene");
     }
 
     onDisable() {

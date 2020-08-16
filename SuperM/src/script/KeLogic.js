@@ -11,7 +11,7 @@ export default class KeLogic extends Laya.Script {
     
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Role_Get_Ke, this, this.onRoleGetKe);
-        Laya.timer.once(3000, this, this.onCreateWoNiu);
+        Laya.timer.once(6000, this, this.onCreateWoNiu);
     }
 
     onCreateWoNiu() {

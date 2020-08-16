@@ -5,8 +5,9 @@
     "searchKey":"View",
     "props":{"sceneWidth":80,"sceneHeight":71,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":4,
+    "maxID":5,
     "label":"View",
+    "isOpen":null,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
@@ -96,6 +97,12 @@
                                 "index":15
                             }]
                     }
+                },
+                {
+                    "target":4,
+                    "keyframes":{
+
+                    }
                 }],
             "name":"ani1",
             "id":1,
@@ -174,7 +181,7 @@
                             }],
                         "x":[
                             {
-                                "value":-40,
+                                "value":3,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":4,
@@ -232,6 +239,15 @@
                                 "label":null,
                                 "key":"skin",
                                 "index":15
+                            }],
+                        "scaleX":[
+                            {
+                                "value":-1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"scaleX",
+                                "index":0
                             }]
                     }
                 }],

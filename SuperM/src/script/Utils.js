@@ -21,7 +21,7 @@ export default class Utils extends Laya.Script {
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
             let monsterH = monster.height * monster.scaleY;
-            if (myX > monster.x - monsterW/2 - offx && myX < monster.x + monsterW/2 + offx && myY < monster.y) {
+            if (myX > monster.x - monsterW/2 - offx && myX < monster.x + monsterW/2 + offx && myY < monster.y - monsterH/1.5) {
                 return true;
             }
         }

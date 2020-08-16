@@ -6,7 +6,7 @@
     "searchKey":"Box,RedMonster",
     "props":{"zOrder":100,"y":47,"x":35,"width":69,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonster.prefab","pivotY":47,"pivotX":35,"name":"RedMonster","isPresetRoot":true,"height":47},
     "nodeParent":-1,
-    "maxID":1509,
+    "maxID":1510,
     "label":"RedMonster",
     "isOpen":true,
     "isDirectory":true,
@@ -87,7 +87,7 @@
             "switchAble":true,
             "searchKey":"CircleCollider",
             "removeAble":true,
-            "props":{"y":-4,"x":11,"radius":25,"presetID":8,"preset":"laya/pages/prefab/monster/RedMonster.prefab","label":"MonsterBody"},
+            "props":{"y":4,"x":13,"radius":20,"presetID":8,"preset":"laya/pages/prefab/monster/RedMonster.prefab","label":"MonsterBody","friction":0},
             "nodeParent":1500,
             "label":"CircleCollider(RedMonster)",
             "isDirectory":false,
@@ -108,6 +108,22 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1508,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":-5.5,"x":-10,"width":90,"presetID":10,"preset":"laya/pages/prefab/monster/RedMonster.prefab","label":"MonsterBody","isSensor":true,"height":35,"friction":0},
+            "nodeParent":1500,
+            "label":"BoxCollider(RedMonster)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1509,
             "child":[
                 ]
         }],

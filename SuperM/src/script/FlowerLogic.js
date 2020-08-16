@@ -33,22 +33,33 @@ export default class FlowerLogic extends Laya.Script {
         this.owner.redFlower.visible = this.owner.flowerType == 2;
 
         this.owner.downPos = {x: this.owner.x, y: this.owner.y};
-        this.owner.upPos = {x: this.owner.x, y: this.owner.y - 107};
+        this.owner.upPos = {x: this.owner.x, y: this.owner.y - 110};
         this.owner.canShootBullet = true;
         
         this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
         Laya.timer.loop(4000, this, this.switchFlowerState);
         this.owner.shootTickCount = 0;
+        this.owner.inGround = false;
+        this.owner.outSpeed = -6;
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
+        if (self.label == "FlowerNoOut" && this.owner.inGround == true &&
+        other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
+            this.owner.outSpeed = 0;
+        } else if ((other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") && self.label != "FlowerNoOut") {
             GameContext.hurtRole();
         } else if (other.label == "Bullet" || other.label == "KeBullet") {
             if (this.owner) {
                 Utils.removeThis(this.owner);   
             }
         }
+    }
+
+    onTriggerExit(other, self, contact) {
+        if (self.label == "FlowerNoOut" && other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
+            this.owner.outSpeed = -6;
+        } 
     }
 
     shootBullet() {
@@ -69,7 +80,7 @@ export default class FlowerLogic extends Laya.Script {
             let direct = Utils.getDirect(roleGlobalPos.x, roleGlobalPos.y, flowerGlobalPos.x, flowerGlobalPos.y);
             bullet.x = x + Utils.getSign(direct.x) * width/2;
             bullet.y = y + 20;
-            EventMgr.getInstance().postEvent(Events.Monster_Shoot_Bullet, {direct: direct});
+            EventMgr.getInstance().postEvent(Events.Monster_Shoot_Bullet, {owner: bullet, direct: direct});
         }));
     }
 
@@ -151,22 +162,24 @@ export default class FlowerLogic extends Laya.Script {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
             this.owner.flowerState = 2;
             this.owner.canShootBullet = true;
+            this.owner.inGround = true;
         }
     }
 
     switchFlowerState() {
         if (this.owner.flowerState == 2) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
-            this.owner.rigidBody.setVelocity({x: 0, y: -5});
+            this.owner.rigidBody.setVelocity({x: 0, y: this.owner.outSpeed});
             let rotation = -90;
-            if (this.owner.redFlower.scaleX < 0) {
+            if (this.owner.greenFlower.scaleX < 0) {
                 rotation = 90;
             }
             this.owner.redFlower.rotation = rotation;
             this.owner.greenFlower.rotation = rotation;
+            this.owner.inGround = false;
         } else {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.upPos.x/50, this.owner.upPos.y/50);
-            this.owner.rigidBody.setVelocity({x: 0, y: 5});
+            this.owner.rigidBody.setVelocity({x: 0, y: 6});
             let rotation = -90;
             if (this.owner.redFlower.scaleX < 0) {
                 rotation = 90;

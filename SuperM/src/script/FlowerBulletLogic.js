@@ -26,6 +26,15 @@ export default class FlowerBulletLogic extends Laya.Script {
     }
 
     onMonsterShootBullet(data) {
+        if (!data) {
+            return;
+        }
+        if (!data.direct) {
+            return;
+        }
+        if (!data.owner) {
+            return;
+        }
         this.owner.direct = data.direct;
         let rigidBody = this.owner.getComponent(Laya.RigidBody);
         rigidBody.setVelocity({x: this.owner.direct.x * 5, y: this.owner.direct.y * 5});

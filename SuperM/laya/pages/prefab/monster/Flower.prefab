@@ -6,7 +6,7 @@
     "searchKey":"Box,Flower",
     "props":{"zOrder":10,"width":141,"presetID":1,"preset":"laya/pages/prefab/monster/Flower.prefab","name":"Flower","isPresetRoot":true,"height":107},
     "nodeParent":-1,
-    "maxID":1697,
+    "maxID":1698,
     "label":"Flower",
     "isOpen":true,
     "isDirectory":true,
@@ -28,7 +28,8 @@
             "hasChild":false,
             "compId":1692,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -45,7 +46,8 @@
             "hasChild":false,
             "compId":1694,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53,7 +55,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":12,"x":33,"width":77,"restitution":0,"presetID":9,"preset":"laya/pages/prefab/monster/Flower.prefab","label":"MonsterBody","isSensor":true,"height":90,"friction":0},
+            "props":{"y":10,"x":39,"width":60,"restitution":0,"presetID":9,"preset":"laya/pages/prefab/monster/Flower.prefab","label":"MonsterBody","isSensor":true,"height":60,"friction":0},
             "nodeParent":1687,
             "label":"BoxCollider(Flower)",
             "isDirectory":false,
@@ -61,7 +63,8 @@
             "hasChild":false,
             "compId":1696,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -76,27 +79,30 @@
             "hasChild":false,
             "compId":1689,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,red",
-            "props":{"y":63,"x":70,"width":60,"texture":"monster/hua (2).png","rotation":-90,"presetID":4,"preset":"laya/pages/prefab/monster/Flower.prefab","pivotY":32,"pivotX":8,"name":"red","height":64},
+            "props":{"y":63,"x":70,"width":60,"texture":"monster/hua (2).png","rotation":-90,"presetID":4,"preset":"laya/pages/prefab/monster/Flower.prefab","pivotY":32,"pivotX":15,"name":"red","height":64},
             "nodeParent":1687,
             "label":"red",
+            "isOpen":false,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
             "compId":1690,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite,green",
-            "props":{"y":63,"x":70,"width":60,"texture":"monster/hua (3).png","rotation":-90,"presetID":5,"preset":"laya/pages/prefab/monster/Flower.prefab","pivotY":32,"pivotX":8,"name":"green","height":64},
+            "props":{"y":63,"x":70,"width":60,"texture":"monster/hua (3).png","rotation":-90,"presetID":5,"preset":"laya/pages/prefab/monster/Flower.prefab","pivotY":32,"pivotX":15,"name":"green","height":64},
             "nodeParent":1687,
             "label":"green",
             "isDirectory":false,
@@ -104,7 +110,25 @@
             "hasChild":false,
             "compId":1693,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":-146.5,"x":-128,"width":400,"presetID":10,"preset":"laya/pages/prefab/monster/Flower.prefab","label":"FlowerNoOut","isSensor":true,"height":400},
+            "nodeParent":1687,
+            "label":"BoxCollider(Flower)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1697,
+            "child":[
+                ],
+            "$HIDDEN":false
         }],
     "animations":[
         {
@@ -114,5 +138,6 @@
             "id":1,
             "frameRate":24,
             "action":0
-        }]
+        }],
+    "$HIDDEN":false
 }

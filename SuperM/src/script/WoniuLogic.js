@@ -77,6 +77,16 @@ export default class WoniuLogic extends Laya.Script {
         this.owner.faceup = -1 * this.owner.faceup;
     }
 
+    onTriggerEnter(other, self, contact) {
+        if (other.label == "Hole") {
+            let colls = self.owner.getComponents(Laya.ColliderBase);
+            for (let index = 0; index < colls.length; index++) {
+                let coll = colls[index];
+                coll.isSensor = true;
+            }
+        }
+    }
+
     startAI() {
         if (!this.owner) {
             return;

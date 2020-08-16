@@ -294,12 +294,20 @@ export default class GameContext extends Laya.Script {
         GameContext.playRoleAni(ani);
     }
 
-    static upShuiGuan(owner) {
-        
+    static processRoleWalkSpeed() {
+        if (GameContext.roleSpeed == GameContext.roleSpeedMax) {
+            return GameContext.roleSpeedMax;
+        }
+        if (GameContext.roleSpeed > GameContext.roleSpeedMax) {
+            GameContext.roleSpeed = GameContext.roleSpeedMax;
+            return GameContext.roleSpeedMax;
+        }
+        GameContext.roleSpeed = GameContext.roleSpeed + GameContext.roleASpeed;
+        return GameContext.roleSpeed;
     }
 
-    static downShuiGuan(owner) {
-
+    static resetRoleWalkSpeed() {
+        GameContext.roleSpeed = GameContext.roleSpeedBase;
     }
 
     onEnable() {
@@ -322,7 +330,10 @@ GameContext.commandWalk = false;
 GameContext.isDie = false;
 GameContext.walkDirect = null;
 GameContext.isWin = false;
-GameContext.roleSpeed = 8;
+GameContext.roleSpeedBase = 4;
+GameContext.roleSpeed = 0;
+GameContext.roleSpeedMax = 8;
+GameContext.roleASpeed = 0.5;
 GameContext.roleCurAni = "";
 GameContext.roleSpr = null;
 GameContext.roleNormal = null;
@@ -334,7 +345,7 @@ GameContext.bodyBigScale = 1;
 GameContext.bodySmallScale = 0.6;
 GameContext.curScaleFactor = GameContext.bodySmallScale;
 GameContext.roleJumpSpeed = -26;
-GameContext.roleSmallJumpSpeed = -26 * 0.9;
+GameContext.roleSmallJumpSpeed = -26 * 0.96;
 
 GameContext.joyStickScene = null;
 GameContext.gameTopScene = null;
