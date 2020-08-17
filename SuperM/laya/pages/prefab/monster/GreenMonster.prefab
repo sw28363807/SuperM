@@ -2,11 +2,10 @@
     "x":0,
     "type":"Box",
     "selectedBox":1491,
-    "selecteID":1498,
     "searchKey":"Box,GreenMonster",
     "props":{"zOrder":100,"y":47,"x":35,"width":69,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab","pivotY":47,"pivotX":35,"name":"GreenMonster","isPresetRoot":true,"height":47},
     "nodeParent":-1,
-    "maxID":1501,
+    "maxID":1503,
     "label":"GreenMonster",
     "isOpen":true,
     "isDirectory":true,
@@ -71,7 +70,7 @@
             "source":"src/script/MonsterLogic.js",
             "searchKey":"Script,MonsterLogic",
             "removeAble":true,
-            "props":{"y":-87,"x":-40,"presetID":7,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
+            "props":{"y":-87,"x":-40,"presetID":7,"preset":"laya/pages/prefab/monster/GreenMonster.prefab","deadMove":"prefab/monster/GreenMonsterDead.prefab"},
             "nodeParent":1491,
             "label":"MonsterLogic",
             "isDirectory":false,
@@ -100,20 +99,6 @@
         },
         {
             "x":15,
-            "type":"Text",
-            "searchKey":"Text,deadMove",
-            "props":{"visible":false,"text":"prefab/monster/GreenMonsterDead.prefab","presetID":9,"preset":"laya/pages/prefab/monster/GreenMonster.prefab","name":"deadMove"},
-            "nodeParent":1491,
-            "label":"deadMove",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1499,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -125,6 +110,40 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1500,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/MonsterIdLogic.js",
+            "searchKey":"Script,MonsterIdLogic",
+            "removeAble":true,
+            "props":{"presetID":11,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
+            "nodeParent":1491,
+            "label":"MonsterIdLogic",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1501,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/MonsterIdLogic.js",
+            "searchKey":"Script,MonsterIdLogic",
+            "removeAble":true,
+            "props":{"presetID":12,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
+            "nodeParent":1491,
+            "label":"MonsterIdLogic",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1502,
             "child":[
                 ]
         }],

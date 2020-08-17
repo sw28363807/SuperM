@@ -59,6 +59,9 @@ export default class BulletLogic extends Laya.Script {
             return;
         }
         if (other) {
+            if (other.label == "AITop" || other.label == "AIBottom" || other.label == "AILeft" || other.label == "AIRight") {
+                return;
+            }
             if (self.label == "KeBulletFoot") {
                 if (other.label == "Hole") {
                     this.coll.isSensor = true;
@@ -73,7 +76,8 @@ export default class BulletLogic extends Laya.Script {
                 if (other.label == "Brick") {
                     this.owner.directX = -this.owner.directX;
                 } else if (other.label == "Wall") {
-                    this.owner.directX = -this.owner.directX;
+                    Utils.removeThis(this.owner);
+                    return;
                 } else if (other.label == "Wenhao") {
                     this.owner.directX = -this.owner.directX;
                 } else if (other.label == "MonsterBody") {

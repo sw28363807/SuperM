@@ -5,6 +5,9 @@ export default class WenhaoLogic extends Laya.Script {
 
     constructor() { 
         super();
+        // 1 蘑菇 2 金币
+        /** @prop {name:wenhaoType, tips:"问号类型1 蘑菇 2 金币", type:Number, default:1}*/
+        let wenhaoType = 1;
     }
 
     onTriggerEnter(other, self, contact) {
@@ -13,7 +16,19 @@ export default class WenhaoLogic extends Laya.Script {
                 if (!Utils.roleInFloor(self.owner)) {
                     return;
                 }
-                this.triggerMoGu();
+                if (this.owner.wenhaoType == 1) {
+                    this.triggerMoGu();
+                } else if (this.owner.wenhaoType == 2) {
+                    if (this.owner.state == 0) {
+                        this.owner.state = 1;
+                        let render = this.owner.getChildByName("render");
+                        if (render) {
+                            render.play(0, true, "ani2");
+                        }
+                        Utils.createGoldEffect(this.owner, false);
+                    }
+                }
+                Utils.createHeadBullet(this.owner);
             } else if (other.label == "KeBullet") {
                 this.triggerMoGu();
             }
@@ -54,7 +69,13 @@ export default class WenhaoLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.state = 0; //0 未出蘑菇 1 出蘑菇
+        this.owner.state = 0; //0 未出货 1 已经出货
+        let script = this.owner.getComponent(WenhaoLogic);
+        if (script && script.wenhaoType) {
+            this.owner.wenhaoType = script.wenhaoType;
+        } else {
+            this.owner.wenhaoType = 1;
+        }
     }
 
     onDisable() {

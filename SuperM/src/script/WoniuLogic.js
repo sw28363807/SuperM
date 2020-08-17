@@ -7,21 +7,42 @@ export default class WoniuLogic extends Laya.Script {
 
     constructor() { 
         super();
-        /** @prop {name:time, tips:"巡逻时间", type:Number, default:3000}*/
-        this.time = 1000;
-        /** @prop {name:speed, tips:"移动速度", type:Number, default:5}*/
-        this.speed = 1;
+        /** @prop {name:deadMove, tips:"死亡动画", type:String, default:""}*/
+        let deadMove = "";
+        /** @prop {name:prefab, tips:"变身动画", type:String, default:""}*/
+        let prefab = "";
+        /** @prop {name:deadAngle, tips:"死亡角度", type:Number, default:-3.14}*/
+        let deadAngle = -3.14;
     }
     
     onEnable() {
         this.owner.isStartAI = false;
+        let script = this.owner.getComponent(WoniuLogic);
+        if (script && script.deadMove) {
+            this.owner.deadMove = script.deadMove;
+        } else {
+            this.owner.deadMove = "";
+        }
+
+        if (script && script.prefab) {
+            this.owner.prefab = script.prefab;
+        } else {
+            this.owner.prefab = "";
+        }
+
+        if (script && script.deadAngle) {
+            this.owner.deadAngle = script.deadAngle;
+        } else {
+            this.owner.deadAngle = -3.14;
+        }
+
+        this.speed = 2;
     }
 
     onDisable() {
         EventMgr.getInstance().removeEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().removeEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
         EventMgr.getInstance().removeEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
-        Laya.timer.clear(this, this.onTimeCallback);
     } 
 
     onMonsterFootDead(data) {
@@ -42,21 +63,22 @@ export default class WoniuLogic extends Laya.Script {
     }
 
     removeThisMonster() {
+
         if (this.owner.monsterCount > 0) {
             this.owner.monsterCount--;
         }
         if (this.owner.monsterCount == 1) {
+            let prefab = this.owner.prefab;
             let x = this.owner.x;
             let y = this.owner.y;
-            let height = this.owner.height
+            let height = this.owner.height;
             let parent = this.owner.parent;
             this.owner.rigidBody.enabled = false;
-            Laya.timer.clear(this, this.onTimeCallback);
             Utils.removeThis(this.owner);
 
             Laya.loader.create("prefab/oo/Ke.prefab", Laya.Handler.create(this, function (prefabDef) {
                 let ke = prefabDef.create();
-                ke.prefab = this.prefab;
+                ke.prefab = prefab;
                 parent.addChild(ke);
                 ke.x = x;
                 ke.y = y - height/2;
@@ -64,21 +86,14 @@ export default class WoniuLogic extends Laya.Script {
         }
     }
 
-    
-    onTimeCallback() {
-        if (this.owner.faceup == 0 || this.owner.faceup == 1) {
-            this.owner.faceup = 1;
-            this.owner.currentVelocity = {x: this.owner.speed, y: 0};
-            this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
-        } else {
-            this.owner.currentVelocity = {x: -this.owner.speed, y: 0};
-            this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
-        }
-        this.owner.faceup = -1 * this.owner.faceup;
-    }
-
     onTriggerEnter(other, self, contact) {
-        if (other.label == "Hole") {
+        if (other.label == "AILeft") {
+            this.owner.currentVelocity = {x: this.speed, y: 0};
+            this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
+        } else if (other.label == "AIRight") {
+            this.owner.currentVelocity = {x: -this.speed, y: 0};
+            this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
+        } else if (other.label == "Hole") {
             let colls = self.owner.getComponents(Laya.ColliderBase);
             for (let index = 0; index < colls.length; index++) {
                 let coll = colls[index];
@@ -94,31 +109,11 @@ export default class WoniuLogic extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
         EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
-        let label = this.owner.getChildByName("prefab");
-        if (label) {
-            this.prefab = label.text;
-        }
 
-        let script = this.owner.getComponent(WoniuLogic);
-        if (script.time) {
-            this.owner.time = script.time;
-        } else {
-            this.owner.time = this.time;
-        }
-
-        if (script.speed) {
-            this.owner.speed = script.speed;
-        } else {
-            this.owner.speed = this.owner.speed;
-        }
-
-        this.owner.faceup = 0;
-        this.owner.currentVelocity = null;
+        this.owner.currentVelocity = {x: this.speed, y: 0};
         this.owner.monsterCount = 2;
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.renderMonster = this.owner.getChildByName("render");
-
-        Laya.timer.loop(this.owner.time, this, this.onTimeCallback);
     }
 
     onUpdate() {

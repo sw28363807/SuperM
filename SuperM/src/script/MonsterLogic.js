@@ -7,12 +7,31 @@ export default class MonsterLogic extends Laya.Script {
 
     constructor() { 
         super();
+        /** @prop {name:deadMove, tips:"死亡动画", type:String, default:""}*/
+        let deadMove = "";
+        /** @prop {name:deadAngle, tips:"死亡角度", type:Number, default:-3.14}*/
+        let deadAngle = -3.14;
     }
     
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
         EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
+
+        let script = this.owner.getComponent(MonsterLogic);
+        if (script && script.deadMove) {
+            this.owner.deadMove = script.deadMove;
+        } else {
+            this.owner.deadMove = "";
+        }
+
+
+        if (script && script.deadAngle) {
+            this.owner.deadAngle = script.deadAngle;
+        } else {
+            this.owner.deadAngle = -3.14;
+        }
+
     }
 
     onDisable() {
@@ -45,7 +64,7 @@ export default class MonsterLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
-        Utils.createMonsterDropDeadEffect(this.owner, 270);
+        Utils.createMonsterDropDeadEffect(this.owner);
     }
 
     onMonsterKeBulletDead(data) {
@@ -82,18 +101,20 @@ export default class MonsterLogic extends Laya.Script {
                 let coll = colls[index];
                 coll.isSensor = true;
             }
+        } else {
+            
         }
     }
 
     createFootEffect() {
-        let deadMove = this.owner.getChildByName("deadMove");
-        if (deadMove) {
+        let deadMove = this.owner.deadMove;
+        if (deadMove != "") {
             EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: this.owner});
             let x = this.owner.x;
             let y = this.owner.y;
             let parent = this.owner.parent;
             let faceUp = Utils.getFaceUp(this.owner);
-            Laya.loader.create(deadMove.text, Laya.Handler.create(this, function (prefabDef) {
+            Laya.loader.create(deadMove, Laya.Handler.create(this, function (prefabDef) {
                 let dead = prefabDef.create();
                 dead.x = x;
                 dead.y = y;

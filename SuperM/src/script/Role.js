@@ -36,8 +36,10 @@ export default class Role extends Laya.Script {
         
         GameContext.roleCurAni = "";
         GameContext.roleRigidBody = this.owner.getComponent(Laya.RigidBody);
-        GameContext.roleNormal = this.owner.getChildByName("roleSpr");
-        GameContext.roleLight = this.owner.getChildByName("roleSprLight");
+
+        GameContext.roleRoot = this.owner.getChildByName("root");
+        GameContext.roleNormal = GameContext.roleRoot.getChildByName("roleSpr");
+        GameContext.roleLight = GameContext.roleRoot.getChildByName("roleSprLight");
         GameContext.keSpr = this.owner.getChildByName("ke");
         GameContext.keSpr.visible = false;
         GameContext.setBodyState(GameContext.gameRoleBodyState);
@@ -62,11 +64,11 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100, null, Laya.Handler.create(this, function() {
-            Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.5, scaleY: GameContext.bodyBigScale * 0.5}, 100, null, Laya.Handler.create(this, function() {
-                Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.9, scaleY: GameContext.bodyBigScale * 0.9}, 100,null, Laya.Handler.create(this, function() {
-                    Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100,null, Laya.Handler.create(this, function() {
-                        Laya.Tween.to(this.owner, {scaleX: GameContext.bodyBigScale, scaleY: GameContext.bodyBigScale}, 100,null, Laya.Handler.create(this, function() {
+        Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100, null, Laya.Handler.create(this, function() {
+            Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.5, scaleY: GameContext.bodyBigScale * 0.5}, 100, null, Laya.Handler.create(this, function() {
+                Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.9, scaleY: GameContext.bodyBigScale * 0.9}, 100,null, Laya.Handler.create(this, function() {
+                    Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100,null, Laya.Handler.create(this, function() {
+                        Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale, scaleY: GameContext.bodyBigScale}, 100,null, Laya.Handler.create(this, function() {
                         }));
                     }));
                 }));
@@ -200,6 +202,9 @@ export default class Role extends Laya.Script {
             return;
         }
         if (GameContext.isDie) {
+            return;
+        }
+        if (other.label == "AITop" || other.label == "AIBottom" || other.label == "AILeft" || other.label == "AIRight") {
             return;
         }
         if (other.label == "Gold") {

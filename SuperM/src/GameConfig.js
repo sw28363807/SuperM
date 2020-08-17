@@ -8,7 +8,6 @@ import GameTopLogic from "./script/GameTopLogic"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
-import Role from "./script/Role"
 import BrickGoldLogic from "./script/BrickGoldLogic"
 import GoldLogic from "./script/GoldLogic"
 import WenhaoLogic from "./script/WenhaoLogic"
@@ -16,10 +15,13 @@ import SingleObsLogic from "./script/SingleObsLogic"
 import ShuiGuanLogic from "./script/ShuiGuanLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import MonsterLogic from "./script/MonsterLogic"
+import MonsterIdLogic from "./script/MonsterIdLogic"
 import WoniuLogic from "./script/WoniuLogic"
-import AIFlyMonster from "./script/AIFlyMonster"
 import FlyMonsterLogic from "./script/FlyMonsterLogic"
+import AITopOrBottom from "./script/AITopOrBottom"
 import FlowerLogic from "./script/FlowerLogic"
+import Role from "./script/Role"
+import MonsterCreater from "./script/MonsterCreater"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
@@ -43,7 +45,6 @@ export default class GameConfig {
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);
-		reg("script/Role.js",Role);
 		reg("script/BrickGoldLogic.js",BrickGoldLogic);
 		reg("script/GoldLogic.js",GoldLogic);
 		reg("script/WenhaoLogic.js",WenhaoLogic);
@@ -51,10 +52,13 @@ export default class GameConfig {
 		reg("script/ShuiGuanLogic.js",ShuiGuanLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/MonsterLogic.js",MonsterLogic);
+		reg("script/MonsterIdLogic.js",MonsterIdLogic);
 		reg("script/WoniuLogic.js",WoniuLogic);
-		reg("script/AIFlyMonster.js",AIFlyMonster);
 		reg("script/FlyMonsterLogic.js",FlyMonsterLogic);
+		reg("script/AITopOrBottom.js",AITopOrBottom);
 		reg("script/FlowerLogic.js",FlowerLogic);
+		reg("script/Role.js",Role);
+		reg("script/MonsterCreater.js",MonsterCreater);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);

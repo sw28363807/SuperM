@@ -14,6 +14,60 @@ export default class Utils extends Laya.Script {
     onDisable() {
     }
 
+    static createHeadBullet(owner) {
+        if (!owner) {
+            return;
+        }
+        let x = owner.x;
+        let y = owner.y - owner.height;
+        let parent = owner.parent;
+        Laya.loader.create("prefab/HeadBullet.prefab", Laya.Handler.create(null, function (prefabDef) {
+            let headBullet = prefabDef.create();
+            parent.addChild(headBullet);
+            headBullet.x = x;   
+            headBullet.y = y;
+        }));
+
+    }
+
+    static createGoldEffect(owner, removeThis) {
+        if (removeThis == null || removeThis == undefined) {
+            removeThis = true;
+        }
+        let x = owner.x;
+        let y = owner.y;
+        let parent = owner.parent;
+        if (parent && owner) {
+            Laya.loader.create("prefab/brick/BrickGoldEffect.prefab", Laya.Handler.create(null, function (prefabDef) {
+                let BrickGoldEffect = prefabDef.create();
+                parent.addChild(BrickGoldEffect);
+                BrickGoldEffect.x = x;   
+                BrickGoldEffect.y = y;
+                BrickGoldEffect.play(0, false, "ani2");
+                BrickGoldEffect.on(Laya.Event.COMPLETE, null, function() {
+        
+                    let label = new Laya.Text();
+                    label.text = String(100);
+                    label.color = "#dbdb2b";
+                    label.fontSize = 24;
+                    parent.addChild(label);
+                    label.x = x + 20;
+                    label.y = y - 50;
+        
+                    Laya.Tween.to(label, {y: label.y - 60}, 1000, null, Laya.Handler.create(null, function() {
+                        Utils.removeThis(label);
+                    }));
+                    GameContext.gameGoldNumber++;
+                    EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
+                    Utils.removeThis(BrickGoldEffect);
+                });
+            }));
+            if (removeThis) {
+                Utils.removeThis(owner);
+            }
+        }
+    }
+
     static roleInCeil(monster) {
         if (GameContext.role) {
             let offx = 30;
@@ -104,26 +158,23 @@ export default class Utils extends Laya.Script {
         return d;
     }
 
-    static createMonsterDropDeadEffect(owner, angle) {
+    static createMonsterDropDeadEffect(owner) {
         if (!owner) {
             return;
         }
-        if (angle == null || angle == undefined) {
-            angle = 180;
-        }
-        let deadMove = owner.getChildByName("deadMove");
-        if (deadMove) {
+        let deadMove = owner.deadMove;
+        if (deadMove != "") {
             EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
             let x = owner.x;
             let y = owner.y;
             let parent = owner.parent;
-            Laya.loader.create(deadMove.text, Laya.Handler.create(null, function (prefabDef) {
+            Laya.loader.create(deadMove, Laya.Handler.create(null, function (prefabDef) {
                 let dead = prefabDef.create();
                 dead.x = x;
                 dead.y = y;
                 parent.addChild(dead);
                 let rigid = dead.getComponent(Laya.RigidBody);
-                rigid.setAngle(angle);
+                rigid.setAngle(owner.deadAngle);
                 rigid.setVelocity({x: 3, y: -15});
                 rigid.gravityScale = 5;
                 Laya.timer.once(3000, null, function() {

@@ -346,6 +346,7 @@ GameContext.roleSpeed = 0;
 GameContext.roleSpeedMax = 8;
 GameContext.roleASpeed = 0.5;
 GameContext.roleCurAni = "";
+GameContext.roleRoot = null;
 GameContext.roleSpr = null;
 GameContext.roleNormal = null;
 GameContext.roleLight = null;
@@ -374,3 +375,5 @@ GameContext.gameSceneType = 0;
 
 GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
+
+GameContext.monsterid = 0;

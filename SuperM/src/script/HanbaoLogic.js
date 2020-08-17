@@ -37,6 +37,9 @@ export default class HanbaoLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
+        if (other.label == "AITop" || other.label == "AIBottom" || other.label == "AILeft" || other.label == "AIRight") {
+            return;
+        }
         if (other && other.label == "Hole") {
             this.owner.coll.isSensor = true;
             let owner = this.owner;
