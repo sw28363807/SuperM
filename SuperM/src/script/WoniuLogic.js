@@ -16,7 +16,6 @@ export default class WoniuLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.isStartAI = false;
         let script = this.owner.getComponent(WoniuLogic);
         if (script && script.deadMove) {
             this.owner.deadMove = script.deadMove;
@@ -102,6 +101,10 @@ export default class WoniuLogic extends Laya.Script {
         }
     }
 
+    onStart() {
+        this.startAI();
+    }
+
     startAI() {
         if (!this.owner) {
             return;
@@ -120,20 +123,9 @@ export default class WoniuLogic extends Laya.Script {
         if (!this.owner) {
             return;
         }
-        if (this.owner.isStartAI == false) {
-            if (this.owner && GameContext.role) {
-                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
-                    this.owner.isStartAI = true;
-                    this.startAI();
-                    return;
-                }
-            }
-        }
-        if (this.owner.isStartAI == true) {
-            if (this.owner.currentVelocity) {
-                let linearVelocity = this.owner.rigidBody.linearVelocity;
-                this.owner.rigidBody.setVelocity({x: this.owner.currentVelocity.x, y: linearVelocity.y});
-            }
+        if (this.owner.currentVelocity) {
+            let linearVelocity = this.owner.rigidBody.linearVelocity;
+            this.owner.rigidBody.setVelocity({x: this.owner.currentVelocity.x, y: linearVelocity.y});
         }
     }
     

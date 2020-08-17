@@ -74,16 +74,6 @@ export default class MonsterLogic extends Laya.Script {
         this.createKeBulletEffect(data);
     }
 
-    onUpdate() {
-        if (this.owner && GameContext.role) {
-            if (this.owner.x < GameContext.role.x - 2000 || Math.abs(this.owner.y - GameContext.y) > 3000) {
-                Utils.removeThis(this.owner);
-                return;
-            }
-        }
-    }
-
-
     createKeBulletEffect(data) {
         if (!this.owner) {
             return;

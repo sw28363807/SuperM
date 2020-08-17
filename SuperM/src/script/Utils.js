@@ -98,6 +98,13 @@ export default class Utils extends Laya.Script {
         if (!owner) {
             return;
         }
+        for (let index = 0; index < GameContext.monsters.length; index++) {
+            let cell = GameContext.monsters[index];
+            if (cell.monster == owner) {
+                cell.monster = null;
+                break;
+            }
+        }
         let colls = owner.getComponents(Laya.ColliderBase);
         if (colls) {
             for (let index = 0; index < colls.length; index++) {

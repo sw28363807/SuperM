@@ -376,4 +376,4 @@ GameContext.gameSceneType = 0;
 GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
 
-GameContext.monsterid = 0;
+GameContext.monsters = [];

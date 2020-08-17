@@ -76,8 +76,11 @@ export default class BulletLogic extends Laya.Script {
                 if (other.label == "Brick") {
                     this.owner.directX = -this.owner.directX;
                 } else if (other.label == "Wall") {
-                    Utils.removeThis(this.owner);
-                    return;
+                    if (other.owner.name != "ShuiguanEnter") {
+                        Utils.removeThis(this.owner);
+                    } else {
+                        this.owner.directX = -this.owner.directX;
+                    }
                 } else if (other.label == "Wenhao") {
                     this.owner.directX = -this.owner.directX;
                 } else if (other.label == "MonsterBody") {

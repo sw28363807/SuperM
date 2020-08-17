@@ -12,7 +12,6 @@ export default class FlowerLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.isStartAI = false;
     }
 
 
@@ -122,17 +121,11 @@ export default class FlowerLogic extends Laya.Script {
         Laya.timer.clear(this, this.shootBullet);
     }
 
+    onStart() {
+        this.startAI();
+    }
+
     onUpdate() {
-        if (this.owner.isStartAI == false) {
-            if (this.owner && GameContext.role) {
-                if (this.owner.x < GameContext.role.x + 600 && this.owner.x > GameContext.role.x) {
-                    this.owner.isStartAI = true;
-                    this.startAI();
-                    return;
-                }
-            }
-            return;
-        }
         let y = this.owner.rigidBody.getBody().GetPosition().y;
         if (y * 50 <= this.owner.upPos.y) {
             this.owner.rigidBody.getBody().SetPositionXY(this.owner.upPos.x/50, this.owner.upPos.y/50);

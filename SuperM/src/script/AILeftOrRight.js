@@ -9,7 +9,6 @@ export default class AILeftOrRight extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.isStartAI = false;
         this.speed = 2;
     }
 
@@ -21,19 +20,12 @@ export default class AILeftOrRight extends Laya.Script {
         this.owner.rigidBody.setVelocity({x: 0, y: 0});
     }
 
+    onStart() {
+        this.startAI();
+    }
+
     onUpdate() {
-        if (this.owner.isStartAI == false) {
-            if (this.owner && GameContext.role) {
-                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
-                    this.owner.isStartAI = true;
-                    this.startAI();
-                    return;
-                }
-            }
-        }
-        if (this.owner.isStartAI) {
-            this.processMove();
-        }
+        this.processMove();
     }
 
 
@@ -52,12 +44,14 @@ export default class AILeftOrRight extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other.label == "AILeft") {
-            this.owner.currentVelocity = {x: 2, y: 0};
-            this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
-        } else if (other.label == "AIRight") {
-            this.owner.currentVelocity = {x: -2, y: 0};
-            this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
+        if (this.owner.renderMonster) {
+            if (other.label == "AILeft") {
+                this.owner.currentVelocity = {x: 2, y: 0};
+                this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
+            } else if (other.label == "AIRight") {
+                this.owner.currentVelocity = {x: -2, y: 0};
+                this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
+            }
         }
     }
 

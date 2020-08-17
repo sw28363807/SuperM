@@ -28,12 +28,10 @@ export default class AIFlyMonster extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (this.owner.renderMonster) {
-            if (other.label == "AITop") {
-                this.owner.currentVelocity = {x: 0, y: this.speed};
-            } else if (other.label == "AIBottom") {
-                this.owner.currentVelocity = {x: 0, y: -this.speed};
-            }
+        if (other.label == "AITop") {
+            this.owner.currentVelocity = {x: 0, y: this.speed};
+        } else if (other.label == "AIBottom") {
+            this.owner.currentVelocity = {x: 0, y: -this.speed};
         }
     }
 
