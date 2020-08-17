@@ -61,6 +61,28 @@ export default class FlowerLogic extends Laya.Script {
         } 
     }
 
+    getBulletPosOff(owner) {
+        console.debug(owner.rotation);
+        console.debug(owner.scaleX);
+        if (owner.scaleX < 0) {
+            if (owner.rotation == 0) {
+                return {x: 10, y: 35};
+            } else if (owner.rotation == 30) {
+                return {x: 10, y: 35};
+            } else if (owner.rotation == -30) {
+                return {x: 10, y: 50};
+            }
+        } else {
+            if (owner.rotation == 0) {
+                return {x: 70, y: 35};
+            } else if (owner.rotation == 30) {
+                return {x: 70, y: 45};
+            } else if (owner.rotation == -30) {
+                return {x: 70, y: 40};
+            }
+        }
+    }
+
     shootBullet() {
         let owner = this.owner;
         if (!owner) {
@@ -74,11 +96,18 @@ export default class FlowerLogic extends Laya.Script {
         Laya.loader.create("prefab/FlowerBullet.prefab", Laya.Handler.create(this, function (prefabDef) {
             let bullet = prefabDef.create();
             parent.addChild(bullet);
-            let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, GameContext.role.height/2));
+            let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
             let flowerGlobalPos = owner.redFlower.localToGlobal(new Laya.Point(0, 0));
             let direct = Utils.getDirect(roleGlobalPos.x, roleGlobalPos.y, flowerGlobalPos.x, flowerGlobalPos.y);
-            bullet.x = x + Utils.getSign(direct.x) * 25;
-            bullet.y = y + 60;
+            let flower = null;
+            if (this.owner.flowerType == 2) {
+                flower = this.owner.redFlower;
+            } else {
+                flower = this.owner.greenFlower;
+            }
+            let pos = this.getBulletPosOff(flower);
+            bullet.x = x + pos.x;
+            bullet.y = y + pos.y;
             EventMgr.getInstance().postEvent(Events.Monster_Shoot_Bullet, {owner: bullet, direct: direct});
         }));
     }

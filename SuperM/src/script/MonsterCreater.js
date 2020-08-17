@@ -33,7 +33,7 @@ export default class MonsterCreater extends Laya.Script {
                 if (distance > area) {
                     cell.canCreate = true;
                 }
-                if (distance <= area && cell.monster == null && (cell.canCreate == true || cell.canCreate == null)) {
+                if (distance <= area && cell.monster == null && (cell.canCreate == true || cell.canCreate == null) && cell.monster != "loading") {
                     cell.monster = "loading";
                     cell.canCreate = false;
                     Laya.loader.create(cell.prefabFile, Laya.Handler.create(null, function (prefabDef) {

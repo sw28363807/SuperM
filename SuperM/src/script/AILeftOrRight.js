@@ -57,11 +57,4 @@ export default class AILeftOrRight extends Laya.Script {
 
     onDisable() {
     }
-
-    onMonsterFootDead(data) {
-        if (data.owner != this.owner) {
-            return;
-        }
-        this.owner.rigidBody.enabled = false;
-    }
 }

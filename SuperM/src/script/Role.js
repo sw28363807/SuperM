@@ -64,11 +64,11 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
-        Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100, null, Laya.Handler.create(this, function() {
-            Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.5, scaleY: GameContext.bodyBigScale * 0.5}, 100, null, Laya.Handler.create(this, function() {
-                Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.9, scaleY: GameContext.bodyBigScale * 0.9}, 100,null, Laya.Handler.create(this, function() {
-                    Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 100,null, Laya.Handler.create(this, function() {
-                        Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale, scaleY: GameContext.bodyBigScale}, 100,null, Laya.Handler.create(this, function() {
+        Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 70, null, Laya.Handler.create(this, function() {
+            Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.5, scaleY: GameContext.bodyBigScale * 0.5}, 70, null, Laya.Handler.create(this, function() {
+                Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.9, scaleY: GameContext.bodyBigScale * 0.9}, 70,null, Laya.Handler.create(this, function() {
+                    Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 70,null, Laya.Handler.create(this, function() {
+                        Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale, scaleY: GameContext.bodyBigScale}, 70,null, Laya.Handler.create(this, function() {
                         }));
                     }));
                 }));
@@ -198,7 +198,7 @@ export default class Role extends Laya.Script {
         if (!self || !self.owner) {
             return;
         }
-        if (!other || !other.owner) {
+        if (!other) {
             return;
         }
         if (GameContext.isDie) {
@@ -220,7 +220,7 @@ export default class Role extends Laya.Script {
         if (GameContext.roleIsDrop == true) {
             return;
         }
-        if (other.label == "Hole") {
+        if (other.label == "Hole" && other.owner) {
             GameContext.triggerGotoHole(other.owner);
             GameContext.roleIsDrop = true;
             return;
@@ -228,12 +228,12 @@ export default class Role extends Laya.Script {
         if (GameContext.roleIsDrop) {
             return;
         }
-        if (other.label == "KeBody") {
+        if (other.owner && other.label == "KeBody") {
             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
             GameContext.keSpr.visible = true;
             GameContext.roleCurAni = "";
             GameContext.playRoleAni(GameContext.roleCurAni);
-        } else if (self.label == "RoleFoot" &&
+        } else if (other.owner && self.label == "RoleFoot" &&
             (other.label == "MonsterBody")) {
                 if (self.owner) {
                     if (other.owner.name == "Flower") {
@@ -243,14 +243,13 @@ export default class Role extends Laya.Script {
                         }
                     }
                 }
-        } else if (self.label == "RoleBody" && (other.label == "MonsterBody") && GameContext.curFootMonster == null) {
+        } else if (other.owner && self.label == "RoleBody" && (other.label == "MonsterBody") && GameContext.curFootMonster == null) {
             if (other.owner && other.owner.name == "Flower") {
             } else {
                 if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
                     GameContext.hurtRole();
                 }
             }
-
         } else if (other.label == "FlowerBullet") {
             GameContext.hurtRole();
         } else if ((other.label != "TanLiBrick" || other.label != "Hole") && self.label =="RoleFoot") {
