@@ -23,16 +23,12 @@ export default class MonsterCreater extends Laya.Script {
     }
 
     monsterTick() {
-        let toMoveArray = [];
         let owner = this.owner;
         let area = 1500;
         if (GameContext.role) {
             for (let index = 0; index < GameContext.monsters.length; index++) {
                 let cell = GameContext.monsters[index];
                 let distance = Math.abs(GameContext.role.x - cell.x);
-                if (distance > area) {
-                    cell.canCreate = true;
-                }
                 if (distance <= area && cell.monster == null && (cell.canCreate == true || cell.canCreate == null) && cell.monster != "loading") {
                     cell.monster = "loading";
                     cell.canCreate = false;
@@ -46,20 +42,8 @@ export default class MonsterCreater extends Laya.Script {
                         }
                     }));
                 }
-
-                if (cell.monster != "loading" &&
-                cell.monster != null && cell.monster!= undefined) {
-                    let distance2 = Math.abs(GameContext.role.x - cell.monster.x);
-                    if (distance2 > area) {
-                        toMoveArray.push(cell.monster);
-                        cell.monster = null;
-                   }
-                }
             }
-            for (let index = 0; index < toMoveArray.length; index++) {
-                let monster = toMoveArray[index];
-                Utils.removeThis(monster);
-            }
+            Laya.Resource.destroyUnusedResources();
         }
     }
 

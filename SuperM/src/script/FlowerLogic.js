@@ -186,6 +186,7 @@ export default class FlowerLogic extends Laya.Script {
             this.owner.canShootBullet = true;
             this.owner.inGround = true;
         }
+        Utils.tryRemoveThis(this.owner);
     }
 
     switchFlowerState() {

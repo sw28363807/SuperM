@@ -217,22 +217,6 @@ export default class GameContext extends Laya.Script {
         Laya.Tween.to(GameContext.roleSpr, {alpha: alpha}, 100, Laya.Ease.elasticOut, handler, 0);
     }
 
-    static footMonster(other) {
-        if (GameContext.roleShuiGuanState == 1) {
-            GameContext.roleShuiGuanState = 0;
-        }
-        if (GameContext.curFootMonster == other.owner) {
-            return;
-        }
-        GameContext.curFootMonster = other.owner;
-        Laya.timer.once(100, this, function() {
-            GameContext.curFootMonster = null;
-        });
-        GameContext.roleInGround = false;
-        GameContext.setRoleSpeed(0, GameContext.footMonsterSpeed.y);
-        EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
-    }
-
     static showHurtEffect() {
         if (!GameContext.role) {
             return;

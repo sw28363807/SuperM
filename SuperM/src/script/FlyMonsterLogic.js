@@ -62,4 +62,8 @@ export default class FlyMonsterLogic extends Laya.Script {
 
     onDisable() {
     }
+
+    onUpdate() {
+        Utils.tryRemoveThis(this.owner);
+    }
 }

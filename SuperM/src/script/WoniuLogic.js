@@ -127,6 +127,7 @@ export default class WoniuLogic extends Laya.Script {
             let linearVelocity = this.owner.rigidBody.linearVelocity;
             this.owner.rigidBody.setVelocity({x: this.owner.currentVelocity.x, y: linearVelocity.y});
         }
+        Utils.tryRemoveThis(this.owner);
     }
     
     onMonsterKeBulletDead(data) {

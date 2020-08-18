@@ -51,22 +51,15 @@ export default class HanbaoLogic extends Laya.Script {
         } else if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
-            let reward = null;
-            if (contact.m_fixtureA.collider.label == "Reward") {
-                reward = contact.m_nodeA;
-            } else if (contact.m_fixtureB.collider.label == "Reward") {
-                reward = contact.m_nodeB;
+            if (GameContext.gameRoleBodyState == 0) {
+                GameContext.setBodyState(1);
+                EventMgr.getInstance().postEvent(Events.Role_Change_Big);
+            } else if (GameContext.gameRoleBodyState == 1) {
+                // EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
             }
-            if (reward) {
-                if (GameContext.gameRoleBodyState == 0) {
-                    GameContext.setBodyState(1);
-                    EventMgr.getInstance().postEvent(Events.Role_Change_Big);
-                } else if (GameContext.gameRoleBodyState == 1) {
-                    EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
-                }
-                Utils.removeThis(this.owner);
-                return;
-            }
+            Utils.removeThis(this.owner);
+            Laya.Resource
+            return;
         }
         if (other.label != "Ground") {
             if (this.owner.directTime > 50) {

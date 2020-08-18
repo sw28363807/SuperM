@@ -35,10 +35,19 @@ export default class FlowerBulletLogic extends Laya.Script {
         if (!data.owner) {
             return;
         }
+        if (data.owner != this.owner) {
+            return;
+        }
         this.owner.direct = data.direct;
         let rigidBody = this.owner.getComponent(Laya.RigidBody);
         rigidBody.setVelocity({x: this.owner.direct.x * 5, y: this.owner.direct.y * 5});
         rigidBody.angularVelocity = 10;
+        let owner = this.owner;
+        Laya.timer.once(100, null, function() {
+            if (owner) {
+                owner.zOrder = 65538;
+            }
+        });
     }
 
     onTriggerEnter(other, self, contact) {

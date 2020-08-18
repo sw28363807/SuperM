@@ -121,4 +121,8 @@ export default class MonsterLogic extends Laya.Script {
         }
         Utils.removeThis(this.owner);
     }
+
+    onUpdate() {
+        Utils.tryRemoveThis(this.owner);
+    }
 }

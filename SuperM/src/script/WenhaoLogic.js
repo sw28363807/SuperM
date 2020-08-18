@@ -21,11 +21,17 @@ export default class WenhaoLogic extends Laya.Script {
                 } else if (this.owner.wenhaoType == 2) {
                     if (this.owner.state == 0) {
                         this.owner.state = 1;
+                        let owner = this.owner;
                         let render = this.owner.getChildByName("render");
                         if (render) {
-                            render.play(0, true, "ani2");
+                            render.play(0, true, "ani3");
+                            Laya.timer.once(100, null, function() {
+                                if (render && owner) {
+                                    render.play(0, true, "ani2");
+                                    Utils.createGoldEffect(owner, false);
+                                }
+                            });
                         }
-                        Utils.createGoldEffect(this.owner, false);
                     }
                 }
                 Utils.createHeadBullet(this.owner);

@@ -68,6 +68,38 @@ export default class Utils extends Laya.Script {
         }
     }
 
+    static footMonster(other) {
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
+        if (GameContext.curFootMonster == other.owner) {
+            return;
+        }
+        GameContext.curFootMonster = other.owner;
+        Laya.timer.once(100, this, function() {
+            GameContext.curFootMonster = null;
+        });
+        GameContext.roleInGround = false;
+        GameContext.setRoleSpeed(0, GameContext.footMonsterSpeed.y);
+
+        let owner = other.owner;
+        let parent = owner.parent;
+
+        let label = new Laya.Text();
+        label.text = String(100);
+        label.color = "#dbdb2b";
+        label.fontSize = 24;
+        parent.addChild(label);
+        label.x = owner.x;
+        label.y = owner.y - 50;
+
+        Laya.Tween.to(label, {y: label.y - 60}, 500, null, Laya.Handler.create(null, function() {
+            Utils.removeThis(label);
+        }));
+
+        EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
+    }
+
     static roleInCeil(monster) {
         if (GameContext.role) {
             let offx = 40;
@@ -92,6 +124,15 @@ export default class Utils extends Laya.Script {
             }
         }
         return false;
+    }
+
+
+    static tryRemoveThis(owner) {
+        if (owner && GameContext.role) {
+            if (GameContext.role.x - owner.x > 1500) {
+                Utils.removeThis(owner);
+            }
+        }
     }
 
     static removeThis(owner) {

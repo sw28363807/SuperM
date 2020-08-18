@@ -239,7 +239,7 @@ export default class Role extends Laya.Script {
                     if (other.owner.name == "Flower") {
                     } else {
                         if (Utils.roleInCeil(other.owner)) {
-                            GameContext.footMonster(other);
+                            Utils.footMonster(other);
                         }
                     }
                 }
