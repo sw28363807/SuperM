@@ -361,3 +361,4 @@ GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
 
 GameContext.monsters = [];
+GameContext.monsterArea = 1500;

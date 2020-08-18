@@ -19,7 +19,7 @@ export default class Utils extends Laya.Script {
             return;
         }
         let x = owner.x;
-        let y = owner.y - owner.height;
+        let y = owner.y - owner.height * owner.scaleY + 20;
         let parent = owner.parent;
         Laya.loader.create("prefab/HeadBullet.prefab", Laya.Handler.create(null, function (prefabDef) {
             let headBullet = prefabDef.create();
@@ -76,7 +76,7 @@ export default class Utils extends Laya.Script {
             return;
         }
         GameContext.curFootMonster = other.owner;
-        Laya.timer.once(100, this, function() {
+        Laya.timer.once(50, null, function() {
             GameContext.curFootMonster = null;
         });
         GameContext.roleInGround = false;
@@ -129,20 +129,25 @@ export default class Utils extends Laya.Script {
 
     static tryRemoveThis(owner) {
         if (owner && GameContext.role) {
-            if (GameContext.role.x - owner.x > 1500) {
-                Utils.removeThis(owner);
+            let distance = Math.abs(GameContext.role.x - owner.x);
+            if (distance > GameContext.monsterArea) {
+                Utils.removeThis(owner, true);
             }
         }
     }
 
-    static removeThis(owner) {
+    static removeThis(owner, resetCanAdd) {
         if (!owner) {
             return;
+        }
+        if (resetCanAdd == null || resetCanAdd == undefined) {
+            resetCanAdd = false;
         }
         for (let index = 0; index < GameContext.monsters.length; index++) {
             let cell = GameContext.monsters[index];
             if (cell.monster == owner) {
                 cell.monster = null;
+                cell.canAdd = resetCanAdd;
                 break;
             }
         }

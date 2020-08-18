@@ -252,7 +252,10 @@ export default class Role extends Laya.Script {
             }
         } else if (other.label == "FlowerBullet") {
             GameContext.hurtRole();
-        } else if ((other.label != "TanLiBrick" || other.label != "Hole") && self.label =="RoleFoot") {
+        } else if ((other.label != "TanLiBrick" || other.label != "Hole") && self.label =="RoleFoot" &&
+         other.label != "MonsterBody" &&
+          other.label != "MonsterHead" && 
+          other.label != "MonsterFoot") {
             if (contact.m_manifold.localNormal >= 0) {
                 return;
             }

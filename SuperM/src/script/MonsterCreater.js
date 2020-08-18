@@ -13,7 +13,7 @@ export default class MonsterCreater extends Laya.Script {
     }
 
     onStart() {
-        Laya.timer.loop(500, this, this.monsterTick);
+        Laya.timer.loop(1000, this, this.monsterTick);
         this.initMonsters();
     }
 
@@ -24,31 +24,40 @@ export default class MonsterCreater extends Laya.Script {
 
     monsterTick() {
         let owner = this.owner;
-        let area = 1500;
+        let area = GameContext.monsterArea;
         if (GameContext.role) {
             for (let index = 0; index < GameContext.monsters.length; index++) {
                 let cell = GameContext.monsters[index];
                 let distance = Math.abs(GameContext.role.x - cell.x);
-                if (distance <= area && cell.monster == null && (cell.canCreate == true || cell.canCreate == null) && cell.monster != "loading") {
+                if (distance <= area && cell.monster == null && cell.monster != "loading" && cell.canAdd == true) {
                     cell.monster = "loading";
-                    cell.canCreate = false;
                     Laya.loader.create(cell.prefabFile, Laya.Handler.create(null, function (prefabDef) {
-                        let monster = prefabDef.create();
-                        owner.addChild(monster);
-                        monster.x = cell.x;
-                        monster.y = cell.y;
                         if (cell.monster == "loading") {
+                            let monster = prefabDef.create();
+                            owner.addChild(monster);
+                            monster.x = cell.x;
+                            monster.y = cell.y;
                             cell.monster = monster;
                         }
                     }));
                 }
             }
+            
+            for (let index = 0; index < GameContext.monsters.length; index++) {
+                let cell = GameContext.monsters[index];
+                let distance = Math.abs(GameContext.role.x - cell.x);
+                if (distance > GameContext.monsterArea) {
+                    cell.canAdd = true;
+                }
+            }
+
             Laya.Resource.destroyUnusedResources();
         }
     }
 
     initMonsters() {
         let monstersToMove = [];
+        GameContext.monsters = [];
         for (let i = 0; i < this.owner.numChildren; i++) {
             let monster = this.owner.getChildAt(i);
             let script = monster.getComponent(MonsterIdLogic);
@@ -57,8 +66,8 @@ export default class MonsterCreater extends Laya.Script {
                     prefabFile: monster.prefabFile,
                     x: monster.x,
                     y: monster.y,
-                    monster: null,
-                    canCreate: null
+                    monster: null, 
+                    canAdd: true
                 }
                 GameContext.monsters.push(cell);
                 monstersToMove.push(monster);

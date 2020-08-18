@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5046,
+    "selecteID":4450,
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":5061,
+    "maxID":5067,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -20026,14 +20026,13 @@
             "nodeParent":2,
             "maxID":1678,
             "label":"ShuiguanEnter",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":2813,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20051,7 +20050,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -20069,7 +20067,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20087,7 +20084,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -20103,7 +20099,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -20119,7 +20114,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/ShuiGuanLogic.js",
@@ -20138,7 +20132,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20174,14 +20167,13 @@
             "props":{"y":22,"x":26192,"presetID":1,"preset":"laya/pages/prefab/oo/Obs6.prefab"},
             "nodeParent":2,
             "label":"Obs6",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":2821,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/oo/Obs6.prefab"},
@@ -20197,7 +20189,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20216,7 +20207,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20235,7 +20225,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20253,7 +20242,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -20272,7 +20260,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -20300,14 +20287,13 @@
             "props":{"y":70,"x":26791,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "label":"BrickGold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":2828,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20326,7 +20312,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -20345,7 +20330,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickGoldLogic.js",
@@ -20364,7 +20348,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":537,
                     "selecteID":540,
@@ -20402,14 +20385,13 @@
             "props":{"y":126,"x":27407,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "label":"BrickGold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":2836,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -20428,7 +20410,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -20447,7 +20428,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickGoldLogic.js",
@@ -20466,7 +20446,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":537,
                     "selecteID":540,
@@ -35923,7 +35902,7 @@
             "selectedBox":1688,
             "selecteID":1690,
             "searchKey":"Box",
-            "props":{"y":70,"x":15783,"presetID":1,"preset":"laya/pages/prefab/oo/ObsExt13.prefab"},
+            "props":{"y":98,"x":15774.5,"presetID":1,"preset":"laya/pages/prefab/oo/ObsExt13.prefab"},
             "nodeParent":2,
             "maxID":1691,
             "label":"ObsExt13",
@@ -36051,7 +36030,7 @@
             "selectedBox":1673,
             "selecteID":1676,
             "searchKey":"Box",
-            "props":{"y":-32.5,"x":16888,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
+            "props":{"y":-30,"x":16891,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
             "nodeParent":2,
             "maxID":1681,
             "label":"ShuiguanEnter",
@@ -36339,7 +36318,7 @@
             "selectedBox":1673,
             "selecteID":1676,
             "searchKey":"Box",
-            "props":{"y":582,"x":19297,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
+            "props":{"y":580,"x":19297,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
             "nodeParent":2,
             "maxID":1681,
             "label":"ShuiguanEnter",
@@ -36483,7 +36462,7 @@
             "selectedBox":1673,
             "selecteID":1676,
             "searchKey":"Box",
-            "props":{"y":575,"x":20097,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
+            "props":{"y":576,"x":20097,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
             "nodeParent":2,
             "maxID":1681,
             "label":"ShuiguanEnter",
@@ -39213,7 +39192,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"zOrder":9,"y":-30.5,"x":16891,"texture":"other/shuiguan2.png"},
+            "props":{"zOrder":9,"y":-30,"x":16891,"texture":"other/shuiguan2.png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -39273,7 +39252,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"zOrder":9,"y":576.5,"x":20097,"texture":"other/shuiguan2.png"},
+            "props":{"zOrder":9,"y":576,"x":20097,"texture":"other/shuiguan2.png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -39947,7 +39926,7 @@
             "selectedBox":54,
             "selecteID":115,
             "searchKey":"Box",
-            "props":{"y":643,"x":855,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":641,"x":906,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -47403,6 +47382,120 @@
                     "action":0
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4555,
+            "searchKey":"Box",
+            "props":{"y":-72.5,"x":15748,"presetID":1,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+            "nodeParent":2,
+            "maxID":4562,
+            "label":"AILeft",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":5061,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+                    "nodeParent":5061,
+                    "label":"BoxCollider(AILeft)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5062,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+                    "nodeParent":5061,
+                    "label":"RigidBody(AILeft)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5063,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4557,
+            "searchKey":"Box",
+            "props":{"y":-72.5,"x":16130,"presetID":1,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+            "nodeParent":2,
+            "maxID":4564,
+            "label":"AIRight",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":5064,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+                    "nodeParent":5064,
+                    "label":"BoxCollider(AIRight)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5065,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+                    "nodeParent":5064,
+                    "label":"RigidBody(AIRight)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5066,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
         }],
     "animations":[
         {

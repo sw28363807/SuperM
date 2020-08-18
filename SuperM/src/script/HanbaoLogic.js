@@ -20,10 +20,12 @@ export default class HanbaoLogic extends Laya.Script {
         this.owner.isMove = true;
         let aniA = "ani1";
         let aniB = "ani2";
+        this.owner.rewardType = 1;
         if (GameContext.gameRoleBodyState == 0) {
         } else {
             aniA = "ani11";
             aniB = "ani22";
+            this.owner.rewardType = 2;
             this.owner.isMove = false;
         }
         this.owner.play(0, false, aniA);
@@ -55,10 +57,11 @@ export default class HanbaoLogic extends Laya.Script {
                 GameContext.setBodyState(1);
                 EventMgr.getInstance().postEvent(Events.Role_Change_Big);
             } else if (GameContext.gameRoleBodyState == 1) {
-                // EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
+                if (this.owner.rewardType == 2) {
+                    EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
+                }
             }
             Utils.removeThis(this.owner);
-            Laya.Resource
             return;
         }
         if (other.label != "Ground") {
