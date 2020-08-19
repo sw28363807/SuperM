@@ -18,16 +18,27 @@ export default class HanbaoLogic extends Laya.Script {
         }
         this.owner.directTime = 0;
         this.owner.isMove = true;
-        let aniA = "ani1";
-        let aniB = "ani2";
-        this.owner.rewardType = 1;
-        if (GameContext.gameRoleBodyState == 0) {
-        } else {
-            aniA = "ani11";
-            aniB = "ani22";
-            this.owner.rewardType = 2;
+        let aniA = "";
+        let aniB = "";
+        if (this.owner.wenhaoType == 1) {
+            // 1 蘑菇 2 金币 3蓝瓶子
+            aniA = "ani1";
+            aniB = "ani2";
+            this.owner.rewardType = 1;
+            if (GameContext.gameRoleBodyState == 0) {
+            } else {
+                aniA = "ani11";
+                aniB = "ani22";
+                this.owner.rewardType = 2;
+                this.owner.isMove = false;
+            }
+        } else if (this.owner.wenhaoType == 3) {
+            aniA = "ani111";
+            aniB = "ani222";
+            this.owner.rewardType = 3;
             this.owner.isMove = false;
         }
+
         this.owner.play(0, false, aniA);
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.rigidBody.enabled = false;
@@ -53,7 +64,10 @@ export default class HanbaoLogic extends Laya.Script {
         } else if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
-            if (GameContext.gameRoleBodyState == 0) {
+             if (this.owner.rewardType == 3) {
+                GameContext.gameRoleNumber++;
+                EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+             } else if (GameContext.gameRoleBodyState == 0) {
                 GameContext.setBodyState(1);
                 EventMgr.getInstance().postEvent(Events.Role_Change_Big);
             } else if (GameContext.gameRoleBodyState == 1) {

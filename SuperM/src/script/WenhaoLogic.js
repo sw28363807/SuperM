@@ -5,8 +5,8 @@ export default class WenhaoLogic extends Laya.Script {
 
     constructor() { 
         super();
-        // 1 蘑菇 2 金币
-        /** @prop {name:wenhaoType, tips:"问号类型1 蘑菇 2 金币", type:Number, default:1}*/
+        // 1 蘑菇 2 金币 3蓝瓶子
+        /** @prop {name:wenhaoType, tips:"问号类型1 蘑菇 2 金币 3 蓝瓶子", type:Number, default:1}*/
         let wenhaoType = 1;
     }
 
@@ -32,6 +32,10 @@ export default class WenhaoLogic extends Laya.Script {
                                 }
                             });
                         }
+                    }
+                } else if (this.owner.wenhaoType == 3) {
+                    if (this.owner.state == 0) {
+                        this.triggerMoGu();
                     }
                 }
                 Utils.createHeadBullet(this.owner);
@@ -63,6 +67,7 @@ export default class WenhaoLogic extends Laya.Script {
                 Laya.loader.create("prefab/Reward.prefab", Laya.Handler.create(null, function (prefabDef) {
                     if (parent && owner) {
                         let wenhao = prefabDef.create();
+                        wenhao.wenhaoType = owner.wenhaoType;
                         parent.addChild(wenhao);
                         wenhao.x = x + 5;
                         wenhao.y = y - wenhao.height * wenhao.scaleX - 10;

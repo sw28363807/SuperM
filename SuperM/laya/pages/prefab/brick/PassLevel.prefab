@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":1565,
-    "selecteID":1566,
+    "selecteID":1598,
     "searchKey":"Box,PassLevel",
     "props":{"y":0,"x":0,"width":3000,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevel.prefab","name":"PassLevel","isPresetRoot":true,"height":2000,"bgColor":"#080404"},
     "nodeParent":-1,
-    "maxID":1584,
+    "maxID":1599,
     "label":"PassLevel",
     "isOpen":true,
     "isDirectory":true,
@@ -18,249 +18,211 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":441,"x":-31,"texture":"other/pass.png","presetID":2,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1851,"x":-35,"texture":"other/pass.png","presetID":2,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1566,
+            "compId":1584,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":337,"x":-31,"texture":"other/pass.png","presetID":3,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1750,"x":-35,"texture":"other/pass.png","presetID":3,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
-            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1567,
+            "compId":1585,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":545,"x":-31,"texture":"other/pass.png","presetID":4,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1648,"x":-35,"texture":"other/pass.png","presetID":4,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
-            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1569,
+            "compId":1586,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":648,"x":-31,"texture":"other/pass.png","presetID":5,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1546,"x":-35,"texture":"other/pass.png","presetID":5,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1570,
+            "compId":1587,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":854,"x":-31,"texture":"other/pass.png","presetID":6,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1441,"x":-35,"texture":"other/pass.png","presetID":6,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1571,
+            "compId":1588,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":751,"x":-31,"texture":"other/pass.png","presetID":7,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1340,"x":-37,"texture":"other/pass.png","presetID":7,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
-            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1572,
+            "compId":1589,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":959,"x":-31,"texture":"other/pass.png","presetID":8,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1236,"x":-37,"texture":"other/pass.png","presetID":8,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
-            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1573,
+            "compId":1590,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1063,"x":-31,"texture":"other/pass.png","presetID":9,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1133,"x":-35,"texture":"other/pass.png","presetID":9,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1574,
+            "compId":1591,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1168,"x":-31,"texture":"other/pass.png","presetID":10,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":1030,"x":-37,"texture":"other/pass.png","presetID":10,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
-            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1576,
+            "compId":1592,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1272,"x":-31,"width":31,"texture":"other/pass.png","rotation":0,"presetID":11,"preset":"laya/pages/prefab/brick/PassLevel.prefab","height":105},
+            "props":{"y":925.5,"x":-37,"texture":"other/pass.png","presetID":11,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1575,
+            "compId":1593,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1377,"x":-31,"texture":"other/pass.png","presetID":12,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":825,"x":-37,"texture":"other/pass.png","presetID":12,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
-            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1577,
+            "compId":1594,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1480,"x":-31,"texture":"other/pass.png","presetID":13,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":722,"x":-37,"texture":"other/pass.png","presetID":13,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1578,
+            "compId":1595,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1688,"x":-31,"texture":"other/pass.png","presetID":14,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":615,"x":-37,"texture":"other/pass.png","presetID":14,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1579,
+            "compId":1596,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1585,"x":-31,"texture":"other/pass.png","presetID":15,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":504,"x":-37,"texture":"other/pass.png","presetID":15,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
-            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1580,
+            "compId":1597,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":1793,"x":-31,"texture":"other/pass.png","presetID":16,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
-            "nodeParent":1565,
-            "label":"Sprite(PassLevel)",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":1581,
-            "child":[
-                ],
-            "$LOCKED":false
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite",
-            "props":{"y":1895,"x":-31,"texture":"other/pass.png","presetID":17,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":389,"x":-37,"texture":"other/pass.png","presetID":16,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":1565,
             "label":"Sprite(PassLevel)",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":1582,
+            "compId":1598,
             "child":[
-                ],
-            "$LOCKED":false
+                ]
         }],
     "animations":[
         {

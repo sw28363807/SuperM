@@ -136,6 +136,25 @@ export default class Utils extends Laya.Script {
         }
     }
 
+    static createBulletEffect(bulletOwner) {
+        if (!bulletOwner) {
+            return;
+        }
+        let parent = bulletOwner.parent;
+        let x = parent.x;
+        let y = parent.y;
+        Laya.loader.create("prefab/BulletEffect.prefab", Laya.Handler.create(null, function (prefabDef) {
+            let effect = prefabDef.create();
+            effect.x = x;
+            effect.y = y;
+            effect.zOrder = 65599;
+            parent.addChild(effect);
+            Laya.timer.once(500, null, function() {
+                Utils.removeThis(effect);
+            });
+        }));
+    }
+
     static removeThis(owner, resetCanAdd) {
         if (!owner) {
             return;

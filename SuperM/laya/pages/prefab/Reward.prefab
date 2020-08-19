@@ -2,7 +2,7 @@
     "x":0,
     "type":"Animation",
     "selectedBox":180,
-    "selecteID":185,
+    "selecteID":183,
     "searchKey":"Animation,Reward",
     "props":{"zOrder":65535,"y":0,"x":0,"width":130,"source":"anim/Reward.ani","scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/Reward.prefab","name":"Reward","isPresetRoot":true,"height":90,"autoPlay":true,"autoAnimation":"ani2"},
     "nodeParent":-1,

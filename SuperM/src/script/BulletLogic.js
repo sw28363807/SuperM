@@ -98,8 +98,10 @@ export default class BulletLogic extends Laya.Script {
                         });
                         return;
                     } else if (other.label == "Brick" || other.label == "TanLiBrick" || other.label == "Wall") {
+                        Utils.createBulletEffect(self.owner);
                         Utils.removeThis(this.owner);
                     } else if (other.label == "MonsterBody") {
+                        Utils.createBulletEffect(self.owner);
                         EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
                         Utils.removeThis(this.owner);
                     } else if (other.label == "KeBody") {
