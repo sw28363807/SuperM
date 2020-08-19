@@ -47,7 +47,7 @@ export default class GameContext extends Laya.Script {
     static setRoleSpeed(x, y) {
         if (GameContext.roleRigidBody) {
             GameContext.roleRigidBody.setVelocity({x: x, y: y});
-        }        
+        }
     }
 
     static setRolePosition(x, y) {
@@ -314,6 +314,7 @@ export default class GameContext extends Laya.Script {
 
 GameContext.role = null;
 GameContext.roleInGround = false;
+GameContext.roleInMoveGround = false;
 GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
 GameContext.roleShuiGuanState = 0; // 0 不在水管 1 进水管 2 正在播放过度动画

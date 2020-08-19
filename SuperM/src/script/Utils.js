@@ -68,6 +68,32 @@ export default class Utils extends Laya.Script {
         }
     }
 
+    static createFootEffect(owner) {
+        let deadMove = owner.deadMove;
+        if (deadMove != "") {
+            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
+            let x = owner.x;
+            let y = owner.y;
+            let parent = owner.parent;
+            let faceUp = Utils.getFaceUp(owner);
+            Laya.loader.create(deadMove, Laya.Handler.create(this, function (prefabDef) {
+                let dead = prefabDef.create();
+                dead.x = x;
+                dead.y = y;
+                dead.scaleX = faceUp * Math.abs(dead.scaleX);
+                parent.addChild(dead);
+                let rigid = dead.getComponent(Laya.RigidBody);
+                rigid.enabled = false;
+                Laya.Tween.to(dead, {scaleY: 0.2}, 100, null, Laya.Handler.create(this, function () {
+                    Laya.timer.once(200, dead, function() {
+                        Utils.removeThis(dead);
+                    });
+                }));
+            }));
+        }
+        Utils.removeThis(owner);
+    }
+
     static footMonster(other) {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;

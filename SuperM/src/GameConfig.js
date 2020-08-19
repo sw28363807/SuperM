@@ -22,9 +22,11 @@ import AITopOrBottom from "./script/AITopOrBottom"
 import FlowerLogic from "./script/FlowerLogic"
 import Role from "./script/Role"
 import MonsterCreater from "./script/MonsterCreater"
+import BrickMonsterLogic from "./script/BrickMonsterLogic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
+import MoveBrickLogic from "./script/MoveBrickLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import BulletLogic from "./script/BulletLogic"
 import FlowerBulletLogic from "./script/FlowerBulletLogic"
@@ -59,9 +61,11 @@ export default class GameConfig {
 		reg("script/FlowerLogic.js",FlowerLogic);
 		reg("script/Role.js",Role);
 		reg("script/MonsterCreater.js",MonsterCreater);
+		reg("script/BrickMonsterLogic.js",BrickMonsterLogic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);
+		reg("script/MoveBrickLogic.js",MoveBrickLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/FlowerBulletLogic.js",FlowerBulletLogic);
