@@ -19,7 +19,7 @@
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"type":"kinematic","presetID":7,"preset":"laya/pages/prefab/monster/Flower.prefab","mask":159,"label":"Flower","gravityScale":0,"category":32,"allowRotation":false},
+            "props":{"type":"kinematic","presetID":7,"preset":"laya/pages/prefab/monster/Flower.prefab","mask":191,"label":"Flower","gravityScale":0,"category":32,"allowRotation":false},
             "nodeParent":1687,
             "label":"RigidBody(Flower)",
             "isDirectory":false,

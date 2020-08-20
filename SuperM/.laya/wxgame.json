@@ -63,13 +63,13 @@
         ""
     ],
     "clearReleaseDir": true,
-    "compile": false,
+    "compile": true,
     "forceCompile": false,
     "onlyIndexJS": true,
     "useMinJsLibs": true,
     "es6toes5": false,
     "projectType": "js",
-    "pubTime": 1597930687383,
+    "pubTime": 1597947945216,
     "uesEnginePlugin": false,
     "wxOptimize": {
         "useOptimizeOpen": false,

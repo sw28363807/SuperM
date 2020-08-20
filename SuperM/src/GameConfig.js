@@ -13,6 +13,7 @@ import GoldLogic from "./script/GoldLogic"
 import WenhaoLogic from "./script/WenhaoLogic"
 import SingleObsLogic from "./script/SingleObsLogic"
 import ShuiGuanLogic from "./script/ShuiGuanLogic"
+import PassLevelBrickLogic from "./script/PassLevelBrickLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import MonsterLogic from "./script/MonsterLogic"
 import MonsterIdLogic from "./script/MonsterIdLogic"
@@ -53,6 +54,7 @@ export default class GameConfig {
 		reg("script/WenhaoLogic.js",WenhaoLogic);
 		reg("script/SingleObsLogic.js",SingleObsLogic);
 		reg("script/ShuiGuanLogic.js",ShuiGuanLogic);
+		reg("script/PassLevelBrickLogic.js",PassLevelBrickLogic);
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/MonsterLogic.js",MonsterLogic);
 		reg("script/MonsterIdLogic.js",MonsterIdLogic);

@@ -1,43 +1,4 @@
 D .
-D comp
-P 316AD948 btn_close.png
-P 5B258D17 button.png
-P 3C493DD4 check_circle.png
-P 98E54F0D checkbox.png
-P 6B7AB858 clip_num.png
-P 63A22FAC clip_tree_arrow.png
-P D749C312 clip_tree_folder.png
-P 704C5D70 combobox.png
-P D566AE8B fontClip.png
-P 38AB8F3F fontClip_num.png
-P 6EF336AE hscroll$bar.png
-P 7FF47AC5 hscroll$down.png
-P 3D7B147A hscroll$up.png
-P 750BD445 hscroll.png
-P 9A5EF899 hslider$bar.png
-P 9CED7132 hslider.png
-P BA2A0579 html.png
-P 8236CD48 image.png
-P 4ACB7AEF img_bg.png
-P FCD04607 img_bg2.png
-P 23FB4D29 img_bg3.png
-P 5FD17798 img_bg4.png
-P 2BE22124 img_bg5.png
-P BA28BD65 img_blank.png
-P BA2A0579 label.png
-P B017E53E progress$bar.png
-P C05839CD progress.png
-P 3C493DD4 radio.png
-P 3C493DD4 radiogroup.png
-P 5BA25C15 tab.png
-P A3D7A036 textarea.png
-P A3D7A036 textinput.png
-P 2DCE1DF9 vscroll$bar.png
-P 6FE7EA34 vscroll$down.png
-P 0587871F vscroll$up.png
-P 5FD17798 vscroll.png
-P DDDDFB9E vslider$bar.png
-P 01BAE7F5 vslider.png
 D joystick
 P B31F2F57 btn1.png
 P 4D71BC1E btn2.png
@@ -157,6 +118,7 @@ P 4A6F9A67 reward2.png
 P AB0386F2 rewardFrame.png
 P 3098888C rewardpingzi (1).png
 P 8F9CAC1D rewardpingzi (2).png
+P 45F408BE rewardpingzi (3).png
 P 8C4B19FE Shuiguan.png
 P E3043DC1 shuiguan2.png
 P D3338000 tlzhuan (1).png
@@ -192,8 +154,6 @@ R C52C888C some (6).png
 P 89F08C92 some (7).png
 R 7715F4C0 some (8).png
 P E79ED536 some (9).png
-D review
-S FEA43D64 mission.jpg
 D role
 P 16FD743A groudnstand.png
 P EB8EBCED ground_run (1).png
@@ -216,3 +176,17 @@ P 9A8B8689 zhuajump.png
 P DD95955A zhuarun1.png
 P 2B95E511 zhuarun2.png
 P AF179E70 zhuastand.png
+D yanhua1
+P 285EDB6D yanhua (1).png
+P 590BC910 yanhua (10).png
+P 61A0445A yanhua (11).png
+P 461BEEED yanhua (12).png
+P 0836E4C6 yanhua (13).png
+P D7D98FBA yanhua (2).png
+P FA21465A yanhua (3).png
+P 9A939CF3 yanhua (4).png
+P B5F3C045 yanhua (5).png
+P A789EA20 yanhua (6).png
+P D8E266B6 yanhua (7).png
+P 62A0C40E yanhua (8).png
+P 3AEB6FC4 yanhua (9).png

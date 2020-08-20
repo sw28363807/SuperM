@@ -1,1 +1,0 @@
-{"type":"Box","props":{"x":0,"y":0,"width":80,"height":71,"bgColor":"#9c4745","pivotX":40,"pivotY":71,"presetID":1,"isPresetRoot":true},"compId":1474,"child":[{"type":"Animation","props":{"source":"anim/GreenWoNiu.ani","x":44,"y":37.5,"presetID":2},"compId":1475}],"loadList":["anim/GreenWoNiu.ani"],"loadList3D":[]}

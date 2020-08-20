@@ -92,6 +92,9 @@ export default class WoniuLogic extends Laya.Script {
         } else if (other.label == "AIRight") {
             this.owner.currentVelocity = {x: -this.speed, y: 0};
             this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
+        } else if (other.label == "MonsterBody") {
+            this.owner.currentVelocity = {x: -this.owner.currentVelocity.x, y: 0};
+            this.owner.renderMonster.scaleX = Utils.getSign(this.owner.currentVelocity.x) * Math.abs(this.owner.renderMonster.scaleX); 
         } else if (other.label == "Hole") {
             let colls = self.owner.getComponents(Laya.ColliderBase);
             for (let index = 0; index < colls.length; index++) {

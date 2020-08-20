@@ -1,1 +1,0 @@
-{"type":"Box","props":{"y":0,"x":0,"width":67,"presetID":1,"name":"BullectEffect","isPresetRoot":true,"height":67},"compId":5067,"child":[{"type":"Animation","props":{"source":"anim/BulletEffect.ani","presetID":2,"name":"render","autoPlay":true},"compId":5068}],"loadList":["anim/BulletEffect.ani"],"loadList3D":[]}

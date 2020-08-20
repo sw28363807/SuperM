@@ -1,6 +1,7 @@
 import Events from "./Events";
 import EventMgr from "./EventMgr";
 import GameContext from "../GameContext";
+import Utils from "./Utils";
 
 export default class AILeftOrRight extends Laya.Script {
 
@@ -48,7 +49,10 @@ export default class AILeftOrRight extends Laya.Script {
             if (other.label == "AILeft") {
                 this.owner.currentVelocity = {x: 2, y: 0};
                 this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
-            } else if (other.label == "AIRight") {
+            } else if (other.label == "MonsterBody") {
+                this.owner.currentVelocity = {x: -this.owner.currentVelocity.x, y: 0};
+                this.owner.renderMonster.scaleX = Utils.getSign(this.owner.currentVelocity.x) * Math.abs(this.owner.renderMonster.scaleX); 
+            }  else if (other.label == "AIRight") {
                 this.owner.currentVelocity = {x: -2, y: 0};
                 this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
             }

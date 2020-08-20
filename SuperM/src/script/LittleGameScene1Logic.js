@@ -1,4 +1,5 @@
 import Utils from "./Utils";
+import GameContext from "../GameContext";
 
 export default class LittleGameScene1Logic extends Laya.Script {
 
@@ -24,18 +25,39 @@ export default class LittleGameScene1Logic extends Laya.Script {
 
             beizi.on(Laya.Event.CLICK, this, function() {
                 if (this.running == false) {
-                    let spr1 = beizi.getChildByName("spr1");
-                    let y = spr1.y;
-                    let offY = 100;
-                    Laya.Tween.to(spr1, {y:y - offY }, 500, null, Laya.Handler.create(this, function() {
-    
-                    }));
+                    this.running = true;
                 }
+                this.open(index, Laya.Handler.create(this, function() {
+                    Laya.timer.once(1000, this, function() {
+                        if (index == 0) {
+                            this.open(1);
+                            this.open(2);
+                            GameContext.gameRoleNumber = GameContext.gameRoleNumber + 1;
+                        } else if (index == 1) {
+                            this.open(0);
+                            this.open(2);
+                            GameContext.gameRoleNumber = GameContext.gameRoleNumber + 2;
+                        } else if (index == 2) {
+                            this.open(0);
+                            this.open(1);
+                            GameContext.gameRoleNumber = GameContext.gameRoleNumber + 3;
+                        }
+                    });
+                }));
             });
         }
 
         this.count = 0;
         this.running = true;
+        this.time = 1200;
+    }
+
+    open(index, handler) {
+        let beizi =  this.beizis[index];
+        let spr1 = beizi.getChildByName("spr1");
+        let y = spr1.y;
+        let offY = 100;
+        Laya.Tween.to(spr1, {y:y - offY }, 500, null, handler);
     }
 
 
@@ -76,16 +98,16 @@ export default class LittleGameScene1Logic extends Laya.Script {
             }
         }
 
-        let time = 300;
+        this.time = this.time - 110;
         let srcX = srcBeizi.x;
         let destX = destBeizi.x;
-        Laya.Tween.to(srcBeizi, {x: destX}, time, null, Laya.Handler.create(this, function() {
+        Laya.Tween.to(srcBeizi, {x: destX}, this.time, null, Laya.Handler.create(this, function() {
             srcBeizi.pointIndex = destIndex;
         }));
 
-        Laya.Tween.to(destBeizi, {x: srcX}, time, null, Laya.Handler.create(this, function() {
+        Laya.Tween.to(destBeizi, {x: srcX}, this.time, null, Laya.Handler.create(this, function() {
             destBeizi.pointIndex = srcIndex;
-            if (this.count < 5) {
+            if (this.count < 8) {
                 this.moveBeizi();
                 this.count++;
             } else {
@@ -100,9 +122,9 @@ export default class LittleGameScene1Logic extends Laya.Script {
             let beizi = this.beizis[index];
             let spr1 = beizi.getChildByName("spr1");
             let y = spr1.y;
-            let offY = 100;
-            Laya.Tween.to(spr1, {y:y - offY }, 500, null, Laya.Handler.create(this, function() {
-                Laya.Tween.to(spr1, {y:y }, 500, null, Laya.Handler.create(this, function() {
+            let offY = 300;
+            Laya.Tween.to(spr1, {y:y - offY }, 1000, null, Laya.Handler.create(this, function() {
+                Laya.Tween.to(spr1, {y:y }, 1000, null, Laya.Handler.create(this, function() {
                     if (index == 1) {
                         this.moveBeizi();
                     }

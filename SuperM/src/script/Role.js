@@ -406,8 +406,7 @@ export default class Role extends Laya.Script {
     }
 
     onRoleCButton() {
-        // Laya.Scene.open("scene/Level1_1.scene");
-        Laya.Scene.open("scene/LittleGameScene1.scene");
+        Laya.Scene.open("scene/Level1_1.scene");
     }
 
     onDisable() {
