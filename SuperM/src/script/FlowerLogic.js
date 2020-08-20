@@ -62,8 +62,6 @@ export default class FlowerLogic extends Laya.Script {
     }
 
     getBulletPosOff(owner) {
-        console.debug(owner.rotation);
-        console.debug(owner.scaleX);
         if (owner.scaleX < 0) {
             if (owner.rotation == 0) {
                 return {x: 10, y: 35};

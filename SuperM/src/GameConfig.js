@@ -23,6 +23,7 @@ import FlowerLogic from "./script/FlowerLogic"
 import Role from "./script/Role"
 import MonsterCreater from "./script/MonsterCreater"
 import BrickMonsterLogic from "./script/BrickMonsterLogic"
+import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
@@ -62,6 +63,7 @@ export default class GameConfig {
 		reg("script/Role.js",Role);
 		reg("script/MonsterCreater.js",MonsterCreater);
 		reg("script/BrickMonsterLogic.js",BrickMonsterLogic);
+		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);
