@@ -6,7 +6,7 @@
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":5115,
+    "maxID":5144,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -21996,7 +21996,7 @@
             "selectedBox":1584,
             "selecteID":1585,
             "searchKey":"Sprite",
-            "props":{"y":399,"x":28796,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+            "props":{"y":415,"x":29184,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
             "nodeParent":2,
             "maxID":1587,
             "label":"PassLevelBrick",
@@ -22007,7 +22007,6 @@
             "compId":2914,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -22025,7 +22024,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -22043,7 +22041,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":4,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
@@ -22057,7 +22054,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/PassLevelBrickLogic.js",
@@ -22070,6 +22066,84 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":5113,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":2914,
+                    "label":"yanhua1",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5127,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":2914,
+                    "label":"yanhua2",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5128,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":2914,
+                    "label":"yanhua3",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5129,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":2914,
+                    "label":"yanhua4",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5130,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":11,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":2914,
+                    "label":"yanhua5",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5131,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":12,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":2914,
+                    "label":"yanhua6",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5132,
                     "child":[
                         ]
                 }],
@@ -27670,7 +27744,7 @@
             "type":"Box",
             "selectedBox":1491,
             "searchKey":"Box",
-            "props":{"y":544,"x":8204,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
+            "props":{"y":542,"x":8195.5,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
             "nodeParent":2,
             "maxID":1500,
             "label":"GreenMonster",
@@ -27823,7 +27897,7 @@
             "type":"Box",
             "selectedBox":1491,
             "searchKey":"Box",
-            "props":{"y":544,"x":8323,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
+            "props":{"y":543,"x":8348,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
             "nodeParent":2,
             "maxID":1500,
             "label":"GreenMonster",

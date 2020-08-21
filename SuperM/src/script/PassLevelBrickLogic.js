@@ -7,6 +7,15 @@ export default class PassLevelBrickLogic extends Laya.Script {
         super();
     }
 
+    randomYanhua() {
+        let a =  (Math.ceil(Math.random() * 10) )% 7;
+        if (a == 0) {
+            a = 1;
+        }
+        return a;
+    }
+
+
     onTriggerEnter(other, self, contact) {
         if (other.label == "RoleHead") {
             let a = Math.random();
@@ -34,10 +43,19 @@ export default class PassLevelBrickLogic extends Laya.Script {
                 this.ani.removeSelf();
             }));
             this.ani.visible = false;
+            
+            for (let index = 0; index < 6; index++) {
+                let anim =  this.owner.getChildByName("yanhua"+String(index + 1));
+                anim.visible = true;
+            }
         }
     }
     
     onEnable() {
+        for (let index = 0; index < 6; index++) {
+            let anim =  this.owner.getChildByName("yanhua"+String(index + 1));
+            anim.visible = false;
+        }
     }
 
     onDisable() {

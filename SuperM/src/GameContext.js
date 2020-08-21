@@ -151,6 +151,7 @@ export default class GameContext extends Laya.Script {
                 GameContext.isWin = false;
                 GameContext.playRoleAni("stand");
                 Laya.Scene.open("scene/LittleGameScene1.scene");
+                // Laya.Scene.open("scene/Level1_1.scene");
             });
             GameContext.playRoleAni("run");
         }

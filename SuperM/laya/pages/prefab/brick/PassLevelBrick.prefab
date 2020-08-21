@@ -2,11 +2,11 @@
     "x":0,
     "type":"Sprite",
     "selectedBox":1584,
-    "selecteID":1588,
+    "selecteID":1594,
     "searchKey":"Sprite,PassLevelBrick",
-    "props":{"y":0,"x":0,"texture":"other/rewardFrame.png","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"PassLevelBrick","isPresetRoot":true},
+    "props":{"y":0,"texture":"other/rewardFrame.png","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"PassLevelBrick","isPresetRoot":true},
     "nodeParent":-1,
-    "maxID":1590,
+    "maxID":1599,
     "label":"PassLevelBrick",
     "isOpen":true,
     "isDirectory":true,
@@ -76,6 +76,90 @@
             "compId":1589,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation,yanhua1",
+            "props":{"y":-156,"x":-353,"width":100,"source":"anim/YanHua1.ani","rotation":107,"presetID":7,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"yanhua1","height":100,"autoPlay":true},
+            "nodeParent":1584,
+            "label":"yanhua1",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1593,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation,yanhua2",
+            "props":{"y":-406,"x":-205,"width":100,"source":"anim/YanHua2.ani","presetID":8,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"yanhua2","height":100,"autoPlay":true},
+            "nodeParent":1584,
+            "label":"yanhua2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1594,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation,yanhua3",
+            "props":{"y":-178,"x":135,"width":100,"source":"anim/YanHua3.ani","presetID":9,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"yanhua3","height":100,"autoPlay":true},
+            "nodeParent":1584,
+            "label":"yanhua3",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1595,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation,yanhua4",
+            "props":{"y":-318,"x":267,"width":100,"source":"anim/YanHua4.ani","presetID":10,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"yanhua4","height":100,"autoPlay":true},
+            "nodeParent":1584,
+            "label":"yanhua4",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1596,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation,yanhua5",
+            "props":{"y":-168,"x":570,"width":100,"source":"anim/YanHua5.ani","presetID":11,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"yanhua5","height":100,"autoPlay":true},
+            "nodeParent":1584,
+            "label":"yanhua5",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1597,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation,yanhua6",
+            "props":{"y":-256,"x":-36,"width":100,"source":"anim/YanHua6.ani","presetID":12,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab","name":"yanhua6","height":100,"autoPlay":true},
+            "nodeParent":1584,
+            "label":"yanhua6",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1598,
+            "child":[
+                ]
         }],
     "animations":[
         {
@@ -85,5 +169,6 @@
             "id":1,
             "frameRate":24,
             "action":0
-        }]
+        }],
+    "$LOCKED":false
 }

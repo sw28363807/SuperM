@@ -8,6 +8,12 @@ export default class LittleGameScene1Logic extends Laya.Script {
     }
     
     onEnable() {
+        this.gameEnd = false;
+        for (let index = 0; index < 10; index++) {
+            let ani = this.owner.getChildByName("y"+String(index + 1));
+            ani.visible = false;
+        }
+
         this.points = [];
         this.beizis = [];
         for (let index = 0; index < 3; index++) {
@@ -42,6 +48,11 @@ export default class LittleGameScene1Logic extends Laya.Script {
                             this.open(1);
                             GameContext.gameRoleNumber = GameContext.gameRoleNumber + 3;
                         }
+                        this.gameEnd = true;
+                        for (let index = 0; index < 10; index++) {
+                            let ani = this.owner.getChildByName("y"+String(index + 1));
+                            ani.visible = true;
+                        }
                     });
                 }));
             });
@@ -50,6 +61,12 @@ export default class LittleGameScene1Logic extends Laya.Script {
         this.count = 0;
         this.running = true;
         this.time = 1200;
+
+        this.owner.on(Laya.Event.CLICK, this, function() {
+            if (this.gameEnd == true) {
+                Laya.Scene.open("scene/Level2_1.scene");
+            }
+        });
     }
 
     open(index, handler) {
