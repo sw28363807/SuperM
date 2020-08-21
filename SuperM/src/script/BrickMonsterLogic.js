@@ -15,7 +15,7 @@ export default class BrickMonsterLogic extends Laya.Script {
         if (script.lookArea) {
             this.owner.lookArea = script.lookArea;
         } else {
-            this.owner.lookArea = 200;
+            this.owner.lookArea = 400;
         }
 
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
@@ -40,8 +40,8 @@ export default class BrickMonsterLogic extends Laya.Script {
         }
         if (Math.abs(GameContext.role.x - this.owner.startPoint.x) < this.owner.lookArea) {
             this.owner.attackRole = true;
-            let dx = Utils.getSign(GameContext.role.x - this.owner.startPoint.x);
-            this.owner.rigidBody.setVelocity({x: dx * 10, y: -20});
+            let dx = Utils.getSign(GameContext.role.x - this.owner.x);
+            this.owner.rigidBody.setVelocity({x: dx * 5, y: -35});
         } else {
             this.owner.rigidBody.setVelocity({x: 0, y: 0});
         }
@@ -58,6 +58,14 @@ export default class BrickMonsterLogic extends Laya.Script {
             for (let index = 0; index < colls.length; index++) {
                 let coll = colls[index];
                 coll.isSensor = true;
+            }
+        } else {
+            if (self.label == "MonsterFoot") {
+                if (other.label == "MonsterFoot" || other.label == "MonsterBody") {
+                    this.searchRole();
+                } else {
+                    this.owner.rigidBody.setVelocity({x: 0, y: 0});
+                }
             }
         }
     }

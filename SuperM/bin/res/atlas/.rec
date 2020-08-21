@@ -40,6 +40,7 @@ P B84970AE new_red_woniu (4).png
 P 6781EE6D new_woniu_chibang (1).png
 P 9DBC62EF new_woniu_chibang (2).png
 P E8829B14 new_woniu_chibang (3).png
+P 42DC9BE9 yanjing.png
 D other
 P 2CFEAA96 blue.png
 P EC63A357 bullet.png
@@ -93,6 +94,7 @@ R 2E514569 grass (5).png
 P 4ED1A165 grass (6).png
 R FFCF77BF grass (7).png
 P E72D5BAE ground.png
+P 9FFE84F2 ground1.png
 P 79B4E213 jb (1).png
 P EF6A1239 jb (11).png
 P 5081154B jb (13).png
@@ -154,6 +156,14 @@ R C52C888C some (6).png
 P 89F08C92 some (7).png
 R 7715F4C0 some (8).png
 P E79ED536 some (9).png
+D po
+R B7B5E6DC liusha1.png
+R CA6F5A25 liusha2.png
+R 8BD8E1D8 po1.png
+R 36DB3A75 po2.png
+R ACE1A9E0 po3.png
+R 460FC5A1 popo1 (1).png
+R EF0BDA5C popo1 (2).png
 D role
 P 16FD743A groudnstand.png
 P EB8EBCED ground_run (1).png

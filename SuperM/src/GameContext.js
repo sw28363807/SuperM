@@ -46,7 +46,8 @@ export default class GameContext extends Laya.Script {
 
     static setRoleSpeed(x, y) {
         if (GameContext.roleRigidBody) {
-            GameContext.roleRigidBody.setVelocity({x: x, y: y});
+            let body = GameContext.roleRigidBody.getBody();
+            body.SetLinearVelocity({x: x, y: y});
         }
     }
 

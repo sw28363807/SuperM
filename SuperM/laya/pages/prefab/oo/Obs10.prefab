@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":2287,
-    "selecteID":2294,
+    "selecteID":2288,
     "searchKey":"Box,Obs10",
     "props":{"zOrder":1,"y":0,"x":0,"width":309,"presetID":1,"preset":"laya/pages/prefab/oo/Obs10.prefab","name":"Obs10","isPresetRoot":true,"height":148},
     "nodeParent":-1,

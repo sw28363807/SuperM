@@ -54,7 +54,9 @@ export default class Role extends Laya.Script {
     }
 
     onTriggerExit(other, self, contact) {
-
+        if (self.label == "RoleFoot") {
+            // GameContext.roleInGround = false;
+        }
     }
 
     changeBigEffect() {
@@ -179,14 +181,11 @@ export default class Role extends Laya.Script {
                     GameContext.playRoleAni("stand");
                 } else {
                     if (GameContext.commandWalk) {
-                        if (Math.abs(linearVelocity.y) < 1) {
-                            GameContext.playRoleAni("run");
-                        } else {
-                            GameContext.roleInGround = false;
-                            GameContext.playRoleAni("jump");
-                        }
+                        GameContext.playRoleAni("run");
                     }
                 }
+            } else {
+                GameContext.playRoleAni("jump");
             }
         }
     }
@@ -233,9 +232,12 @@ export default class Role extends Laya.Script {
             GameContext.keSpr.visible = true;
             GameContext.roleCurAni = "";
             GameContext.playRoleAni(GameContext.roleCurAni);
-        } else if (other.owner && self.label == "RoleFoot" &&
+        } else if (other.owner && self.label == "RoleFoot" &
             (other.label == "MonsterBody")) {
                 if (self.owner) {
+                    GameContext.roleInGround = true;
+                    GameContext.setRoleMove(0, 0);
+                    GameContext.playRoleAni("stand");
                     if (other.owner.name == "Flower") {
                     } else {
                         if (Utils.roleInCeil(other.owner)) {
@@ -252,7 +254,7 @@ export default class Role extends Laya.Script {
             }
         } else if (other.label == "FlowerBullet") {
             GameContext.hurtRole();
-        } else if ((other.label != "TanLiBrick" || other.label != "Hole") && self.label =="RoleFoot" &&
+        } else if ((other.label != "TanLiBrick" && other.label != "Hole") && self.label =="RoleFoot" &&
          other.label != "MonsterBody" &&
           other.label != "MonsterHead" && 
           other.label != "MonsterFoot") {
