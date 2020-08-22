@@ -21,7 +21,7 @@ class Main {
 
 
 		
-		Laya.URL.basePath = "";
+		Laya.URL.basePath = "https://raw.githubusercontent.com/sw28363807/SuperM/master/remote/";
 		Laya["MiniAdpter"].nativefiles = [
 			"anim/",
 			"prefab/",
