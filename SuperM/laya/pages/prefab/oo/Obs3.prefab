@@ -2,7 +2,6 @@
     "x":0,
     "type":"Box",
     "selectedBox":1729,
-    "selecteID":1736,
     "searchKey":"Box,Obs3",
     "props":{"zOrder":1,"y":0,"x":0,"width":250,"presetID":1,"preset":"laya/pages/prefab/oo/Obs3.prefab","name":"Obs3","isPresetRoot":true,"height":245},
     "nodeParent":-1,
@@ -27,7 +26,7 @@
             "compId":1730,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -45,7 +44,8 @@
             "hasChild":false,
             "compId":1731,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -62,7 +62,8 @@
             "hasChild":false,
             "compId":1732,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -78,7 +79,8 @@
             "hasChild":false,
             "compId":1733,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -95,7 +97,8 @@
             "hasChild":false,
             "compId":1734,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -112,7 +115,8 @@
             "hasChild":false,
             "compId":1735,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         }],
     "animations":[
         {
@@ -123,5 +127,5 @@
             "frameRate":24,
             "action":0
         }],
-    "$LOCKED":true
+    "$LOCKED":false
 }

@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1876,
-    "selecteID":1883,
+    "selecteID":1877,
     "searchKey":"Box,Obs6",
     "props":{"zOrder":1,"y":0,"x":0,"width":342,"presetID":1,"preset":"laya/pages/prefab/oo/Obs6.prefab","name":"Obs6","isPresetRoot":true,"height":104},
     "nodeParent":-1,
@@ -27,7 +27,7 @@
             "compId":1877,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -123,6 +123,6 @@
             "frameRate":24,
             "action":0
         }],
-    "$LOCKED":true,
+    "$LOCKED":false,
     "$HIDDEN":false
 }

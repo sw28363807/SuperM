@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1687,
-    "selecteID":1691,
+    "selecteID":1636,
     "searchKey":"Box,Obs2",
     "props":{"zOrder":1,"y":0,"x":0,"width":328,"presetID":1,"preset":"laya/pages/prefab/oo/Obs2.prefab","name":"Obs2","isPresetRoot":true,"height":246},
     "nodeParent":-1,
@@ -27,7 +27,7 @@
             "compId":1636,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -45,7 +45,8 @@
             "hasChild":false,
             "compId":1638,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -62,7 +63,8 @@
             "hasChild":false,
             "compId":1642,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -78,7 +80,8 @@
             "hasChild":false,
             "compId":1646,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -95,7 +98,8 @@
             "hasChild":false,
             "compId":1643,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -112,7 +116,8 @@
             "hasChild":false,
             "compId":1644,
             "child":[
-                ]
+                ],
+            "$LOCKED":false
         }],
     "animations":[
         {
@@ -123,5 +128,5 @@
             "frameRate":24,
             "action":0
         }],
-    "$LOCKED":true
+    "$LOCKED":false
 }

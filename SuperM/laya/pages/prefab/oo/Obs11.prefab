@@ -27,7 +27,7 @@
             "compId":2345,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -123,6 +123,6 @@
             "frameRate":24,
             "action":0
         }],
-    "$LOCKED":true,
+    "$LOCKED":false,
     "$HIDDEN":false
 }

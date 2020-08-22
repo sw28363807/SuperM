@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1736,
-    "selecteID":1743,
+    "selecteID":1737,
     "searchKey":"Box,Obs4",
     "props":{"zOrder":1,"y":0,"x":0,"width":583,"presetID":1,"preset":"laya/pages/prefab/oo/Obs4.prefab","name":"Obs4","isPresetRoot":true,"height":303},
     "nodeParent":-1,
@@ -27,7 +27,7 @@
             "compId":1737,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {

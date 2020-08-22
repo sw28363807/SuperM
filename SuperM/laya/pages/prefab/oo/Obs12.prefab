@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":2418,
-    "selecteID":2420,
+    "selecteID":2419,
     "searchKey":"Box,Obs12",
     "props":{"zOrder":1,"y":0,"x":0,"width":252,"presetID":1,"preset":"laya/pages/prefab/oo/Obs12.prefab","name":"Obs12","isPresetRoot":true,"height":251},
     "nodeParent":-1,
@@ -27,7 +27,7 @@
             "compId":2419,
             "child":[
                 ],
-            "$LOCKED":true
+            "$LOCKED":false
         },
         {
             "x":15,
@@ -122,5 +122,5 @@
             "frameRate":24,
             "action":0
         }],
-    "$LOCKED":true
+    "$LOCKED":false
 }
