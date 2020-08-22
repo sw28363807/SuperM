@@ -68,10 +68,6 @@ export default class GameJoyStick extends Laya.Script {
         
         let joyStickButton = this.owner.joyStickButton.getComponent(JoyStickButton);
         joyStickButton.setHandler(this.aButtonHandler, this.bButtonHandler, this.cButtonHandler);
-
-        let spr =  new Laya.Sprite();
-        spr.loadImage("https://gitee.com/sun-wen-sky/sunwen/raw/master/other1/blueZ-fcf4dfb8f3.png");
-        this.owner.addChild(spr);
     }
 
     onDisable() {

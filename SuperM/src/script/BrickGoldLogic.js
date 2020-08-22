@@ -37,26 +37,11 @@ export default class BrickGoldLogic extends Laya.Script {
         }
     }
 
-    createBrokenCell(path) {
-        let x = this.owner.x;
-        let y = this.owner.y;
-        let parent = this.owner.parent;
-        Laya.loader.create(path, Laya.Handler.create(this, function (prefabDef) {
-            let brokenBrick = prefabDef.create();
-            parent.addChild(brokenBrick);
-            brokenBrick.x = x;   
-            brokenBrick.y = y;
-        }));
-    }
-
     onCreateBrokenBrick() {
         if (!this.owner) {
            return; 
         }
-        for (let index = 0; index < 4; index++) {
-            this.createBrokenCell("prefab/bb/b"+ String(index + 1)+".prefab");
-        }
-
+        Utils.createBrickBrokenEffect(this.owner);
         Utils.createGoldEffect(this.owner);
     }
     

@@ -2,7 +2,7 @@
     "x":0,
     "type":"Sprite",
     "selectedBox":62,
-    "selecteID":70,
+    "selecteID":71,
     "searchKey":"Sprite,b1,b1",
     "props":{"y":0,"x":0,"var":"b1","texture":"other/posui (1).png","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/bb/b1.prefab","name":"b1","isPresetRoot":true},
     "nodeParent":-1,

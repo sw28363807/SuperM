@@ -245,15 +245,15 @@ export default class Role extends Laya.Script {
                         }
                     }
                 }
-        } else if (other.owner && self.label == "RoleBody" && (other.label == "MonsterBody") && GameContext.curFootMonster == null) {
+        } else if (other.owner && self.label == "RoleBody" && (other.label == "MonsterBody" || other.label == "MonsterFoot") && GameContext.curFootMonster == null) {
             if (other.owner && other.owner.name == "Flower") {
             } else {
                 if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
-                    GameContext.hurtRole();
+                    Utils.hurtRole(other.owner);
                 }
             }
         } else if (other.label == "FlowerBullet") {
-            GameContext.hurtRole();
+            Utils.hurtRole(other.owner);
         } else if ((other.label != "TanLiBrick" && other.label != "Hole") && self.label =="RoleFoot" &&
          other.label != "MonsterBody" &&
           other.label != "MonsterHead" && 

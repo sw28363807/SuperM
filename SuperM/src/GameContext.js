@@ -1,5 +1,3 @@
-import EventMgr from "./script/EventMgr";
-import Events from "./script/Events";
 
 export default class GameContext extends Laya.Script {
 
@@ -44,11 +42,34 @@ export default class GameContext extends Laya.Script {
         });
     }
 
+    static triggerInLiuSha(liusha) {
+        if (!liusha) {
+            return;
+        }
+        if (GameContext.gameRoleState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(1);
+        } else if (GameContext.bodyState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(0);
+            GameContext.changeSmallEffect();
+        }
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
+        GameContext.setRoleSpeedX(0.01);
+        GameContext.setRolePosition(liusha.x - 200, 300);
+    }
+
     static setRoleSpeed(x, y) {
         if (GameContext.roleRigidBody) {
-            let body = GameContext.roleRigidBody.getBody();
-            body.SetLinearVelocity({x: x, y: y});
+            GameContext.roleRigidBody.setVelocity({x: x, y: y});
         }
+    }
+
+    static setRoleSpeedX(x) {
+        let linearVelocity = GameContext.roleRigidBody.linearVelocity;
+        GameContext.roleRigidBody.setVelocity({x: x, y: linearVelocity.y});
     }
 
     static setRolePosition(x, y) {
@@ -169,42 +190,6 @@ export default class GameContext extends Laya.Script {
         return {x: 0, y: 0};
     }
 
-    static hurtRole() {
-        if (!GameContext.role) {
-            return;
-        }
-        if (GameContext.isDie) {
-            return;
-        }
-        if (GameContext.roleHurting) {
-            return;
-        }
-        GameContext.setRoleSpeed(-GameContext.getRoleFaceup() * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
-        GameContext.showHurtEffect();
-        if (GameContext.gameRoleState == 1) {
-            GameContext.setRoleState(0);
-            GameContext.setBodyState(1);
-        } else if (GameContext.bodyState == 1) {
-            GameContext.setRoleState(0);
-            GameContext.setBodyState(0);
-            GameContext.changeSmallEffect();
-        }
-        if (GameContext.roleShuiGuanState == 1) {
-            GameContext.roleShuiGuanState = 0;
-        }
-        GameContext.playRoleAni("stand");
-        GameContext.roleInGround = false;
-        GameContext.walkDirect = null;
-        GameContext.roleHurting = true;
-        GameContext.gameRoleNumber--;
-        if (GameContext.gameRoleNumber == 0) {
-            GameContext.playRoleAni("die", false);
-            GameContext.isDie = true;
-        }
-        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
-
-    }
-
     static getRoleFaceup() {
         if (GameContext.roleSpr.scaleX > 0) {
             return 1
@@ -321,6 +306,8 @@ GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
 GameContext.roleShuiGuanState = 0; // 0 不在水管 1 进水管 2 正在播放过度动画
 GameContext.roleCurrentShuiguan = null;
+GameContext.roleInLiuSha = false;
+GameContext.curRoleLiuSha = null;
 GameContext.sgOutIndex = 0;
 GameContext.ShuiguanIndex = 0;
 GameContext.roleRigidBody = null;

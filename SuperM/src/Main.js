@@ -20,26 +20,26 @@ class Main {
 		Laya.alertGlobalError(true);
 
 
-		
-		Laya.URL.basePath = "https://7375-sunwen-5w22q-1302935665.tcb.qcloud.la/";
-		Laya["MiniAdpter"].nativefiles = [
-			"anim/",
-			"prefab/",
-			"res/",
-			"scene",
-			"js/",
-			"libs/",
-			"fileconfig.json",
-			"game.js",
-			"game.json",
-			"index.js",
-			"project.config.json",
-			"unpack.json",
-			"version.json",
-			"weapp-adapter.js"
-		  ];
+		if (Laya.Browser.onMiniGame) {
+			Laya.URL.basePath = "https://7375-sunwen-5w22q-1302935665.tcb.qcloud.la/";
+			Laya["MiniAdpter"].nativefiles = [
+				"anim/",
+				"prefab/",
+				"res/",
+				"scene",
+				"js/",
+				"libs/",
+				"fileconfig.json",
+				"game.js",
+				"game.json",
+				"index.js",
+				"project.config.json",
+				"unpack.json",
+				"version.json",
+				"weapp-adapter.js"
+			  ];
+		}
 
-		
 		//激活资源版本控制，version.json由IDE发布功能自动生成，如果没有也不影响后续流程
 		Laya.ResourceVersion.enable("version.json", Laya.Handler.create(this, this.onVersionLoaded), Laya.ResourceVersion.FILENAME_VERSION);
 	}

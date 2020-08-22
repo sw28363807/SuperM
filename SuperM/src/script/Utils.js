@@ -282,4 +282,54 @@ export default class Utils extends Laya.Script {
         }
         Utils.removeThis(owner);
     }
+
+    static hurtRole(other) {
+        if (!GameContext.role) {
+            return;
+        }
+        if (GameContext.isDie) {
+            return;
+        }
+        if (GameContext.roleHurting) {
+            return;
+        }
+        GameContext.showHurtEffect();
+        GameContext.setRoleSpeed(Utils.getSign(GameContext.role.x - other.x) * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
+        if (GameContext.gameRoleState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(1);
+        } else if (GameContext.bodyState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(0);
+            GameContext.changeSmallEffect();
+        }
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
+        GameContext.playRoleAni("stand");
+        GameContext.roleInGround = false;
+        GameContext.walkDirect = null;
+        GameContext.roleHurting = true;
+        GameContext.gameRoleNumber--;
+        if (GameContext.gameRoleNumber == 0) {
+            GameContext.playRoleAni("die", false);
+            GameContext.isDie = true;
+        }
+        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+
+    }
+
+    static createBrickBrokenEffect(owner) {
+        let x = owner.x;
+        let y = owner.y;
+        let parent = owner.parent;
+        for (let index = 0; index < 4; index++) {
+            Laya.loader.create("prefab/bb/b"+ String(index + 1)+".prefab", Laya.Handler.create(this, function (prefabDef) {
+                let brokenBrick = prefabDef.create();
+                parent.addChild(brokenBrick);
+                brokenBrick.x = x;   
+                brokenBrick.y = y;
+            }));
+        }
+    }
 }
