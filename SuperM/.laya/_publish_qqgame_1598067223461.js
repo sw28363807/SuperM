@@ -1,4 +1,4 @@
-// v1.8.0
+// v1.7.0
 const ideModuleDir = global.ideModuleDir;
 const workSpaceDir = global.workSpaceDir;
 
@@ -9,21 +9,20 @@ const path = require("path");
 const crypto = require("crypto");
 const del = require(ideModuleDir + "del");
 const revCollector = require(ideModuleDir + 'gulp-rev-collector');
-const provider = "wx70d8aa25ec591f7a";
-let fullRemoteEngineList = ["laya.core.js", "laya.webgl.js", "laya.filter.js", "laya.ani.js", "laya.d3.js", "laya.html.js", "laya.particle.js", "laya.ui.js", "laya.d3Plugin.js"];
+const provider = "1109625052";
+let fullRemoteEngineList = ["laya.core.js", "laya.webgl.js", "laya.filter.js", "laya.ani.js", "laya.d3.js", "laya.html.js", "laya.particle.js", "laya.ui.js", "bytebuffer.js"];
 
 let copyLibsTask = ["copyPlatformLibsJsFile"];
-let versiontask = ["version2"];
+let packfiletask = ["packfile"];
 
 let 
     config,
     releaseDir;
-let isOpendataProj;
 let versionCon; // 版本管理version.json
 let commandSuffix,
 	layarepublicPath;
 
-gulp.task("preCreate_WX", copyLibsTask, function() {
+gulp.task("preCreate_QQ", copyLibsTask, function() {
 	releaseDir = global.releaseDir;
 	config = global.config;
 	commandSuffix = global.commandSuffix;
@@ -34,109 +33,33 @@ gulp.task("preCreate_WX", copyLibsTask, function() {
 			return item.replace(".js", ".min.js");
 		})
 	}
-
-	// 是否是开放域项目
-	let projInfoPath = path.join(workSpaceDir, path.basename(workSpaceDir) + ".laya");
-	let isExist = fs.existsSync(projInfoPath);
-	if (isExist) {
-		try {
-			let projInfo = fs.readFileSync(projInfoPath, "utf8");
-			projInfo = projInfo && JSON.parse(projInfo);
-			isOpendataProj = projInfo.layaProType === 12;
-		} catch (e) {}
-	}
 });
 
-gulp.task("copyPlatformFile_WX", ["preCreate_WX"], function() {
-	let adapterPath = path.join(layarepublicPath, "LayaAirProjectPack", "lib", "data", "wxfiles");
-	// 开放域项目
-	if (isOpendataProj) {
-		let platformDir = path.join(adapterPath, "weapp-adapter.js");
-		let stream = gulp.src(platformDir);
-		return stream.pipe(gulp.dest(releaseDir));
-	}
-	// 如果新建项目时已经点击了"微信/百度小游戏bin目录快速调试"，不再拷贝
-	let hasPlatform =
-		fs.existsSync(path.join(workSpaceDir, "bin", "game.js")) &&
-		fs.existsSync(path.join(workSpaceDir, "bin", "game.json")) &&
-		fs.existsSync(path.join(workSpaceDir, "bin", "project.config.json"));
-	let hasPublishPlatform = 
+gulp.task("copyPlatformFile_QQ", ["preCreate_QQ"], function() {
+	let isHasPublish = 
 		fs.existsSync(path.join(releaseDir, "game.js")) &&
 		fs.existsSync(path.join(releaseDir, "game.json")) &&
-		fs.existsSync(path.join(releaseDir, "project.config.json"));
-	let copyLibsList;
-	if (hasPlatform || hasPublishPlatform) {
-		copyLibsList = [`${adapterPath}/weapp-adapter.js`];
-	} else {
-		copyLibsList = [`${adapterPath}/*.*`];
+		fs.existsSync(path.join(releaseDir, "project.config.json")) &&
+		fs.existsSync(path.join(releaseDir, "weapp-adapter.js"));
+	if (isHasPublish) {
+		return;
 	}
-	var stream = gulp.src(copyLibsList);
+	let adapterPath = path.join(layarepublicPath, "LayaAirProjectPack", "lib", "data", "qqfiles");
+	let stream = gulp.src(adapterPath + "/*.*");
 	return stream.pipe(gulp.dest(releaseDir));
 });
 
-// 开放域的情况下，合并game.js和index.js，并删除game.js
-gulp.task("openData_WX", versiontask, function (cb) {
-	if (config.openDataZone) {
-		let versionCon;
-		if (config.version) {
-			let versionPath = releaseDir + "/version.json";
-			versionCon = fs.readFileSync(versionPath, "utf8");
-			versionCon = JSON.parse(versionCon);
-		}
-		let indexJsStr = (versionCon && versionCon["index.js"]) ? versionCon["index.js"] :  "index.js";
-		let indexPath = path.join(releaseDir, indexJsStr);
-		let indexjs = readFile(indexPath);
-		let gamejs = readFile(releaseDir + "/game.js");
-		if (gamejs && indexjs) {
-			gamejs = gamejs.replace(`require("index.js")`, indexjs);
-			fs.writeFileSync(indexPath, gamejs, 'utf-8');
-		}
-		if (isOpendataProj) {
-			// 开放域项目，将game.js删掉，发布最小包
-			del(`${releaseDir}/game.js`, { force: true }).then(paths => {
-				cb();
-			});
-		} else {
-			cb();
-		}
-	} else {
-		cb();
-	}
-});
-
-function readFile(path) {
-	if (fs.existsSync(path)) {
-		return fs.readFileSync(path, "utf-8");
-	}
-	return null;
-}
-
-gulp.task("modifyMinJs_WX", ["openData_WX"], function() {
-	// 如果保留了平台文件，如果同时取消使用min类库，就会出现文件引用不正确的问题
-	if (config.keepPlatformFile) {
-		let fileJsPath = path.join(releaseDir, "game.js");
-		let content = fs.readFileSync(fileJsPath, "utf-8");
-		content = content.replace(/min\/laya(-[\w\d]+)?\.wxmini\.min\.js/gm, "laya.wxmini.js");
-		fs.writeFileSync(fileJsPath, content, 'utf-8');
-	}
+gulp.task("modifyMinJs_QQ", packfiletask, function() {
 	if (!config.useMinJsLibs) {
 		return;
 	}
 	let fileJsPath = path.join(releaseDir, "game.js");
 	let content = fs.readFileSync(fileJsPath, "utf-8");
-	content = content.replace(/(min\/)?laya(-[\w\d]+)?\.wxmini(\.min)?\.js/gm, "min/laya.wxmini.min.js");
+	content = content.replace("laya.qqmini.js", "min/laya.qqmini.min.js");
 	fs.writeFileSync(fileJsPath, content, 'utf-8');
 });
 
-gulp.task("version_WX", ["modifyMinJs_WX"], function() {
-	// 如果保留了平台文件，如果同时开启版本管理，就会出现文件引用不正确的问题
-	if (config.keepPlatformFile) {
-		let fileJsPath = path.join(releaseDir, "game.js");
-		let content = fs.readFileSync(fileJsPath, "utf-8");
-		content = content.replace(/laya(-[\w\d]+)?\.wxmini/gm, "laya.wxmini");
-		content = content.replace(/index(-[\w\d]+)?\.js/gm, "index.js");
-		fs.writeFileSync(fileJsPath, content, 'utf-8');
-	}
+gulp.task("version_QQ", ["modifyMinJs_QQ"], function() {
 	if (config.version) {
 		let versionPath = releaseDir + "/version.json";
 		let gameJSPath = releaseDir + "/game.js";
@@ -147,33 +70,7 @@ gulp.task("version_WX", ["modifyMinJs_WX"], function() {
 	}
 });
 
-gulp.task("optimizeOpen_WX", ["version_WX"], function(cb) {
-	let wxOptimize = config.wxOptimize;
-	if (!wxOptimize || !wxOptimize.useOptimizeOpen) { // 没有使用微信引擎插件，还是像以前一样发布
-		return cb();
-	}
-	// 首屏加载优化(秒开)，修改game.json
-	let filePath = path.join(releaseDir, "game.json");
-	if (!fs.existsSync(filePath)) {
-		return cb();
-	}
-	let fileContent = fs.readFileSync(filePath, "utf8");
-	let fileConObj = JSON.parse(fileContent);
-	if (wxOptimize.preloadRes) {
-		fileConObj.preloadResources = wxOptimize.preloadResList;
-	} else {
-		delete fileConObj.preloadResources;
-	}
-	if (wxOptimize.preloadSubpack) {
-		fileConObj.preloadSubpackages = wxOptimize.preloadSubpackList;
-	} else {
-		delete fileConObj.preloadSubpackages;
-	}
-	fs.writeFileSync(filePath, JSON.stringify(fileConObj, null, 4), "utf8");
-	return cb();
-});
-
-gulp.task("pluginEngin_WX", ["optimizeOpen_WX"], function(cb) {
+gulp.task("pluginEngin_QQ", ["version_QQ"], function(cb) {
 	if (!config.uesEnginePlugin) { // 没有使用微信引擎插件，还是像以前一样发布
 		return cb();
 	}
@@ -205,7 +102,7 @@ gulp.task("pluginEngin_WX", ["optimizeOpen_WX"], function(cb) {
 		// 1) 修改game.js和game.json
 		// 修改game.js
 		let gameJsPath = path.join(releaseDir, "game.js");
-		let platformJs = config.useMinJsLibs ? `require("./libs/min/laya.wxmini.min.js");` : `require("./libs/laya.wxmini.js");`;
+		let platformJs = config.useMinJsLibs ? `require("./libs/min/laya.qqmini.min.js");` : `require("./libs/laya.qqmini.js");`;
 		let gameJscontent = `require("weapp-adapter.js");\n${platformJs}\nrequirePlugin('layaPlugin');\nwindow.loadLib = require;\nrequire("./${indexJsStr}");`;
 		fs.writeFileSync(gameJsPath, gameJscontent, "utf8");
 		// 修改game.json，使其支持引擎插件
@@ -221,6 +118,14 @@ gulp.task("pluginEngin_WX", ["optimizeOpen_WX"], function(cb) {
 		}
 		gameJsonContent = JSON.stringify(conJson, null, 4);
 		fs.writeFileSync(gameJsonPath, gameJsonContent, "utf8");
+		// 修改project.config.json
+		let projConfigPath = path.join(releaseDir, "project.config.json");
+		let projConfigcontent = fs.readFileSync(projConfigPath, "utf8");
+		let projConfigConJson = JSON.parse(projConfigcontent);
+		projConfigConJson.compileType = "gamePlugin";
+		projConfigConJson.pluginRoot = "laya-libs";
+		projConfigcontent = JSON.stringify(projConfigConJson, null, 4);
+		fs.writeFileSync(projConfigPath, projConfigcontent, "utf8");
 		resolve();
 	}).then(function() {
 		return new Promise(function(resolve, reject) {
@@ -388,7 +293,7 @@ function getFileMd5(filePath) {
 }
 
 function canUsePluginEngine(version) {
-	const minVersionNum = "2.0.1";
+	const minVersionNum = "2.1.1";
 	let compileMacthList = minVersionNum.match(/^(\d+)\.(\d+)\.(\d+)/);
 	let matchList = version.match(/^(\d+)\.(\d+)\.(\d+)/);
     if (matchList[1] > compileMacthList[1]) {
@@ -403,6 +308,6 @@ function canUsePluginEngine(version) {
     return false;
 }
 
-gulp.task("buildWXProj", ["pluginEngin_WX"], function() {
+gulp.task("buildQQProj", ["pluginEngin_QQ"], function() {
 	console.log("all tasks completed");
 });

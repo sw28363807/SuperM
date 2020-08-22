@@ -1,4 +1,4 @@
-// v1.8.0
+// v1.7.0
 const ideModuleDir = global.ideModuleDir;
 const workSpaceDir = global.workSpaceDir;
 
@@ -11,16 +11,17 @@ const del = require(ideModuleDir + "del");
 const revCollector = require(ideModuleDir + 'gulp-rev-collector');
 
 let copyLibsTask = ["copyPlatformLibsJsFile"];
-let versiontask = ["version2"];
+let packfiletask = ["packfile"];
 
 let 
     config,
 	releaseDir,
     tempReleaseDir, // 小米临时拷贝目录
 	projDir; // 小米快游戏工程目录
+let IDEXMProjPath,
+	isUpdateIDEXMProj = false;
 let versionCon; // 版本管理version.json
 let commandSuffix,
-	opensslPath,
 	layarepublicPath;
 
 // 创建小米项目前，拷贝小米引擎库、修改index.js
@@ -28,7 +29,6 @@ gulp.task("preCreate_XM", copyLibsTask, function() {
 	releaseDir = global.releaseDir;
 	config = global.config;
 	commandSuffix = global.commandSuffix;
-	opensslPath = global.opensslPath;
 	layarepublicPath = global.layarepublicPath;
 	tempReleaseDir = global.tempReleaseDir;
 });
@@ -40,7 +40,7 @@ gulp.task("copyPlatformFile_XM", ["preCreate_XM"], function() {
 	return stream.pipe(gulp.dest(tempReleaseDir));
 });
 
-gulp.task("createProj_XM", versiontask, function() {
+gulp.task("createProj_XM", packfiletask, function() {
 	releaseDir = path.dirname(releaseDir);
 	projDir = path.join(releaseDir, config.xmInfo.projName);
 	// 如果有即存项目，不再新建
@@ -57,6 +57,7 @@ gulp.task("createProj_XM", versiontask, function() {
 					`package=${config.xmInfo.package}`, `versionName=${config.xmInfo.versionName}`,
 					`versionCode=${config.xmInfo.versionCode}`, `minPlatformVersion=${config.xmInfo.minPlatformVersion}`,
                     `icon=/layaicon/${path.basename(config.xmInfo.icon)}`, `name=${config.xmInfo.name}`, `rebuild=true`];
+        console.log(JSON.stringify(args));
         let opts = {
 			shell: true
 		};
@@ -106,7 +107,7 @@ gulp.task("generateSign_XM", ["clearTempDir_XM"], function() {
     }
 	// https://doc.quickapp.cn/tools/compiling-tools.html
 	return new Promise((resolve, reject) => {
-		let cmd = `${opensslPath}`;
+		let cmd = "openssl";
 		let args = ["req", "-newkey", "rsa:2048", "-nodes", "-keyout", "private.pem", 
 					"-x509", "-days", "3650", "-out", "certificate.pem"];
 		let opts = {
@@ -226,14 +227,10 @@ gulp.task("modifyFile_XM", ["deleteSignFile_XM"], function() {
 	}
 	let indexJsStr = (versionCon && versionCon["index.js"]) ? versionCon["index.js"] :  "index.js";
 	// 修改main.js文件
+	let content = 'require("./qg-adapter.js");\nrequire("./libs/laya.xmmini.js");\nrequire("./index.js");';
 	let mainJsPath = path.join(projDir, "main.js");
-	let mainJsCon = fs.existsSync(mainJsPath) && fs.readFileSync(mainJsPath, "utf8");
-	let reWriteMainJs = !fs.existsSync(mainJsPath) || !mainJsCon.includes("xmmini");
-	if (reWriteMainJs) {
-		mainJsCon = 'require("./qg-adapter.js");\nrequire("./libs/laya.xmmini.js");\nrequire("./index.js");';
-		fs.writeFileSync(mainJsPath, mainJsCon, "utf8");
-	}
-	
+	fs.writeFileSync(mainJsPath, content, "utf8");
+
 	// 小米项目，修改index.js
 	let filePath = path.join(projDir, indexJsStr);
 	if (!fs.existsSync(filePath)) {
@@ -245,24 +242,16 @@ gulp.task("modifyFile_XM", ["deleteSignFile_XM"], function() {
 })
 
 gulp.task("modifyMinJs_XM", ["modifyFile_XM"], function() {
+	if (!config.useMinJsLibs) {
+		return;
+	}
 	let fileJsPath = path.join(projDir, "main.js");
 	let content = fs.readFileSync(fileJsPath, "utf-8");
-	if (!config.useMinJsLibs) { // 默认保留了平台文件，如果同时取消使用min类库，就会出现文件引用不正确的问题
-		content = content.replace(/min\/laya(-[\w\d]+)?\.xmmini\.min\.js/gm, "laya.xmmini.js");
-	} else {
-		content = content.replace(/(min\/)?laya(-[\w\d]+)?\.xmmini(\.min)?\.js/gm, "min/laya.xmmini.min.js");
-	}
+	content = content.replace("laya.xmmini.js", "min/laya.xmmini.min.js");
 	fs.writeFileSync(fileJsPath, content, 'utf-8');
 });
 
 gulp.task("version_XM", ["modifyMinJs_XM"], function () {
-	// main.js默认不覆盖，如果同时开启版本管理，就会出现文件引用不正确的问题
-	let fileJsPath = path.join(projDir, "main.js");
-	let content = fs.readFileSync(fileJsPath, "utf-8");
-	content = content.replace(/laya(-[\w\d]+)?\.xmmini/gm, "laya.xmmini");
-	content = content.replace(/index(-[\w\d]+)?\.js/gm, "index.js");
-	fs.writeFileSync(fileJsPath, content, 'utf-8');
-
 	if (config.version) {
 		let versionPath = projDir + "/version.json";
 		let mainJSPath = projDir + "/main.js";
