@@ -26,14 +26,26 @@
         "",
         ""
     ],
-    "version": false,
+    "version": true,
     "versionFilter": [
         "$basePath/**/*.*",
         "!$basePath/*.html",
-        "!$basePath/{version.json,game.js,game.json,project.config.json,weapp-adapter.js,project.swan.json,swan-game-adapter.js,main.js,gameConfig.json,my-adapter.js}",
-        "!$basePath/layaforqq/**/*.*"
+        "!$basePath/{version.json,game.js,game.json,project.config.json,weapp-adapter.js,project.swan.json,swan-game-adapter.js,main.js,gameConfig.json,my-adapter.js,fileconfig.json,unpack.json,index.js}",
+        "!$basePath/layaforqq/**/*.*",
+        "!$basePath/anim/**/*.*",
+        "!$basePath/js/**/*.*",
+        "!$basePath/libs/**/*.*",
+        "!$basePath/prefab/**/*.*",
+        "!$basePath/res/**/*.*",
+        "!$basePath/scene/**/*.*"
     ],
     "versionNoteList": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
         "",
         "",
         "",
@@ -69,7 +81,7 @@
     "useMinJsLibs": true,
     "es6toes5": false,
     "projectType": "js",
-    "pubTime": 1598012310889,
+    "pubTime": 1598063397287,
     "uesEnginePlugin": false,
     "wxOptimize": {
         "useOptimizeOpen": false,

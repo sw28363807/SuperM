@@ -19,6 +19,27 @@ class Main {
 		if (GameConfig.stat) Laya.Stat.show();
 		Laya.alertGlobalError(true);
 
+
+		
+		Laya.URL.basePath = "";
+		Laya["MiniAdpter"].nativefiles = [
+			"anim/",
+			"prefab/",
+			"res/",
+			"scene",
+			"js/",
+			"libs/",
+			"fileconfig.json",
+			"game.js",
+			"game.json",
+			"index.js",
+			"project.config.json",
+			"unpack.json",
+			"version.json",
+			"weapp-adapter.js"
+		  ];
+
+
 		//激活资源版本控制，version.json由IDE发布功能自动生成，如果没有也不影响后续流程
 		Laya.ResourceVersion.enable("version.json", Laya.Handler.create(this, this.onVersionLoaded), Laya.ResourceVersion.FILENAME_VERSION);
 	}

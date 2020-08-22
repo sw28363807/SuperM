@@ -12,4 +12,12 @@
    <item name="other1/some (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="other1/some (6).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="other1/some (8).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="yanhua1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="yanhua2" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="yanhua3" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="yanhua4" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="yanhua5" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="yanhua6" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="po" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
 </res>
