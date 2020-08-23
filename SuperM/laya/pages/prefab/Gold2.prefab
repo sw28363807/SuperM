@@ -3,7 +3,7 @@
     "type":"Animation",
     "selectedBox":283,
     "searchKey":"Animation,Gold2",
-    "props":{"y":0,"x":0,"width":100,"source":"anim/Reward2.ani","scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/Gold2.prefab","name":"Gold2","isPresetRoot":true,"height":93,"autoPlay":true},
+    "props":{"zOrder":10,"y":0,"x":0,"width":100,"source":"anim/Reward2.ani","scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/Gold2.prefab","name":"Gold2","isPresetRoot":true,"height":93,"autoPlay":true},
     "nodeParent":-1,
     "maxID":284,
     "label":"Gold2",

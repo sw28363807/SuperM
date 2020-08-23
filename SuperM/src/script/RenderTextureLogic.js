@@ -1,3 +1,5 @@
+import GameContext from "../GameContext";
+
 export default class RenderTextureLogic extends Laya.Script {
 
     constructor() { 
@@ -33,10 +35,25 @@ export default class RenderTextureLogic extends Laya.Script {
         let tex = Laya.loader.getRes(this.imagePath);
         for (let j = 0; j < this.hang; j++) {
             for (let i = 0; i < this.lie; i++) {
-                spr.graphics.drawImage(tex, spr.x + i * this.renderWidth, j * this.renderCellH);
+                spr.graphics.drawImage(tex, spr.x + i * this.renderCellW, spr.y + j * this.renderCellH);
             }
         }
         this.owner.addChild(spr);
+        spr.zOrder = 0;
+    }
+
+    onStart() {
+        // let spr = new Laya.Sprite();
+        // spr.loadImage(this.imagePath);
+        // spr.x = GameContext.role.x;
+        // spr.y = GameContext.role.y;
+        // let tex = Laya.loader.getRes(this.imagePath);
+        // for (let j = 0; j < this.hang; j++) {
+        //     for (let i = 0; i < this.lie; i++) {
+        //         spr.graphics.drawImage(tex, GameContext.role.x + i * this.renderCellW, GameContext.role.y + j * this.renderCellH);
+        //     }
+        // }
+        // this.owner.addChild(spr);
     }
 
     onDisable() {

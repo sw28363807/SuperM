@@ -1,1 +1,25 @@
-{"type":"Animation","props":{"source":"anim/BrickGoldEffect.ani","x":0,"y":0,"name":"BrickGoldEffect","preset":"laya/pages/prefab/brick/BrickGoldEffect.prefab","presetID":1,"isPresetRoot":true},"compId":2954,"child":[],"isAniNode":true,"nodeParent":2,"searchKey":"Animation,BrickGoldEffect","label":"BrickGoldEffect","isDirectory":false,"hasChild":false,"x":15}
+{
+    "x":0,
+    "type":"Animation",
+    "selectedBox":2954,
+    "searchKey":"Animation,BrickGoldEffect",
+    "props":{"zOrder":10,"y":0,"x":0,"source":"anim/BrickGoldEffect.ani","presetID":1,"preset":"laya/pages/prefab/brick/BrickGoldEffect.prefab","name":"BrickGoldEffect","isPresetRoot":true},
+    "nodeParent":-1,
+    "maxID":2955,
+    "label":"BrickGoldEffect",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":2954,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}
