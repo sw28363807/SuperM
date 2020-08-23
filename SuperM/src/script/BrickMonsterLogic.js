@@ -60,7 +60,7 @@ export default class BrickMonsterLogic extends Laya.Script {
             this.playAttackAni();
             this.owner.state = 2;
             this.owner.rigidBody.setVelocity({x: 0, y: -30});
-            Laya.timer.once(200, this, function() {
+            Laya.timer.once(300, this, function() {
                 if (!this.owner) {
                     return;
                 }
@@ -97,12 +97,16 @@ export default class BrickMonsterLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
+        if (other.label == "AITop" || other.label == "AIBottom" || other.label == "AILeft" || other.label == "AIRight") {
+            return;
+        }
         if (other.label == "Hole") {
             let colls = self.owner.getComponents(Laya.ColliderBase);
             for (let index = 0; index < colls.length; index++) {
                 let coll = colls[index];
                 coll.isSensor = true;
             }
+            this.owner.idleCount = 0;
         } else {
             if (self.label == "MonsterFoot") {
                 if (other.label == "RoleHead" ||other.label == "RoleBody" || other.label == "RoleFoot") {
@@ -116,13 +120,13 @@ export default class BrickMonsterLogic extends Laya.Script {
                     this.owner.state = 3;
                     this.playAttackAni();
                 } else if (other.label != "MonsterBody" && other.label != "MonsterFoot") {
-                     if (this.owner.state != 0 && contact.m_manifold.localNormal.y < 0) {
-                        this.owner.state = 4;
+                    if (this.owner.state != 0 && contact.m_manifold.localNormal.y < 0) {
                         this.owner.idlePoint = {x: this.owner.x, y: this.owner.y};
-                        this.owner.idleCount = 0;
-                     }
+                        this.owner.state = 4;
+                    }
+                    this.stopAttackAni();
                 }
-                
+                this.owner.idleCount = 0;
             }
         }
     }

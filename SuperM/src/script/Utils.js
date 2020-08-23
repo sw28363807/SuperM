@@ -155,8 +155,9 @@ export default class Utils extends Laya.Script {
 
     static tryRemoveThis(owner) {
         if (owner && GameContext.role) {
-            let distance = Math.abs(GameContext.role.x - owner.x);
-            if (distance > GameContext.monsterArea) {
+            let distanceX = Math.abs(GameContext.role.x - owner.x);
+            let distanceY = Math.abs(GameContext.role.y - owner.y);
+            if (distanceX > GameContext.monsterArea || distanceY > GameContext.monsterAreaY) {
                 Utils.removeThis(owner, true);
             }
         }
@@ -293,8 +294,14 @@ export default class Utils extends Laya.Script {
         if (GameContext.roleHurting) {
             return;
         }
+        let x = -1;
+        if (other) {
+            x = Utils.getSign(GameContext.role.x - other.x);
+        } else {
+            x = GameContext.getRoleFaceup();
+        }
         GameContext.showHurtEffect();
-        GameContext.setRoleSpeed(Utils.getSign(GameContext.role.x - other.x) * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
+        GameContext.setRoleSpeed( x * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
         if (GameContext.gameRoleState == 1) {
             GameContext.setRoleState(0);
             GameContext.setBodyState(1);

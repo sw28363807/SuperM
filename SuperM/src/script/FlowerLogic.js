@@ -47,7 +47,7 @@ export default class FlowerLogic extends Laya.Script {
         other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
             this.owner.outSpeed = 0;
         } else if ((other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") && self.label != "FlowerNoOut") {
-            Utils.hurtRole();
+            Utils.hurtRole(this.owner);
         } else if (other.label == "Bullet" || other.label == "KeBullet") {
             if (this.owner) {
                 Utils.removeThis(this.owner);   

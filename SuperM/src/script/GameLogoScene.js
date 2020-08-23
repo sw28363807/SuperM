@@ -5,7 +5,7 @@ export default class GameLogoScene extends Laya.Script {
     }
     
     onEnable() {
-        Laya.Scene.open("scene/Level1_1.scene");
+        Laya.Scene.open("scene/Level3_1.scene");
     }
 
     onDisable() {

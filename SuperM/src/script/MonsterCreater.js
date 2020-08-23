@@ -25,11 +25,13 @@ export default class MonsterCreater extends Laya.Script {
     monsterTick() {
         let owner = this.owner;
         let area = GameContext.monsterArea;
+        let areaY = GameContext.monsterAreaY;
         if (GameContext.role) {
             for (let index = 0; index < GameContext.monsters.length; index++) {
                 let cell = GameContext.monsters[index];
                 let distance = Math.abs(GameContext.role.x - cell.x);
-                if (distance <= area && cell.monster == null && cell.monster != "loading" && cell.canAdd == true) {
+                let distanceY = Math.abs(GameContext.role.y - cell.y);
+                if (distance <= area && distanceY <= areaY && cell.monster == null && cell.monster != "loading" && cell.canAdd == true) {
                     cell.monster = "loading";
                     Laya.loader.create(cell.prefabFile, Laya.Handler.create(null, function (prefabDef) {
                         if (cell.monster == "loading") {
@@ -45,8 +47,9 @@ export default class MonsterCreater extends Laya.Script {
             
             for (let index = 0; index < GameContext.monsters.length; index++) {
                 let cell = GameContext.monsters[index];
-                let distance = Math.abs(GameContext.role.x - cell.x);
-                if (distance > GameContext.monsterArea) {
+                let distanceX = Math.abs(GameContext.role.x - cell.x);
+                let distanceY = Math.abs(GameContext.role.y - cell.y);
+                if (distanceX > GameContext.monsterArea || distanceY > GameContext.monsterAreaY)  {
                     cell.canAdd = true;
                 }
             }

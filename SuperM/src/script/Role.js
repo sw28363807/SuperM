@@ -11,6 +11,7 @@ export default class Role extends Laya.Script {
         GameContext.commandWalk = false;
         GameContext.roleIsDrop = false;
         GameContext.roleInGround = false;
+        GameContext.roleInWater = false;
         GameContext.roleShuiGuanState = 0;
         GameContext.roleHurting = false;
         GameContext.bodyBigScale = 1;
@@ -36,6 +37,7 @@ export default class Role extends Laya.Script {
         
         GameContext.roleCurAni = "";
         GameContext.roleRigidBody = this.owner.getComponent(Laya.RigidBody);
+        GameContext.roleGravityScale = GameContext.roleRigidBody.gravityScale;
 
         GameContext.roleRoot = this.owner.getChildByName("root");
         GameContext.roleNormal = GameContext.roleRoot.getChildByName("roleSpr");
@@ -50,12 +52,6 @@ export default class Role extends Laya.Script {
         if (GameContext.sgOutIndex != 0 && GameContext.gameSceneType == 1) {
             EventMgr.getInstance().postEvent(Events.Role_Exit_Shuiguan);
             GameContext.sgOutIndex = 0;
-        }
-    }
-
-    onTriggerExit(other, self, contact) {
-        if (self.label == "RoleFoot") {
-            // GameContext.roleInGround = false;
         }
     }
 
@@ -172,20 +168,38 @@ export default class Role extends Laya.Script {
                 if (GameContext.walkDirect.x != 0) {
                     let linearVelocity = GameContext.getLineSpeed();
                     let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
-                    GameContext.setRoleMove(speedX, linearVelocity.y);
-                }
-            }
-            let linearVelocity = GameContext.getLineSpeed();
-            if (GameContext.roleInGround) {
-                if (Math.abs(linearVelocity.x) <= 0.0000001) {
-                    GameContext.playRoleAni("stand");
-                } else {
-                    if (GameContext.commandWalk) {
-                        GameContext.playRoleAni("run");
+                    if (GameContext.roleInWater == true) {
+                        let speedY = GameContext.walkDirect.y
+                        if (speedY == 0) {
+                            speedY = 2;
+                        }
+                        GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
+                    } else {
+                        GameContext.setRoleMove(speedX, linearVelocity.y);
                     }
                 }
             } else {
-                GameContext.playRoleAni("jump");
+                if (GameContext.roleInWater == true) {
+                    if (GameContext.commandWalk == false) {
+                        GameContext.setRoleMove(0, 2);
+                    }
+                }
+            }
+            if (GameContext.roleInWater == true) {
+                GameContext.playRoleAni("run");
+            } else {
+                let linearVelocity = GameContext.getLineSpeed();
+                if (GameContext.roleInGround) {
+                    if (Math.abs(linearVelocity.x) <= 0.0000001) {
+                        GameContext.playRoleAni("stand");
+                    } else {
+                        if (GameContext.commandWalk) {
+                            GameContext.playRoleAni("run");
+                        }
+                    }
+                } else {
+                    GameContext.playRoleAni("jump");
+                }
             }
         }
     }
@@ -280,7 +294,9 @@ export default class Role extends Laya.Script {
                 GameContext.playRoleAni("stand");
             } else {
                 if (GameContext.commandWalk == false) {
-                    GameContext.setRoleMove(0, 0);
+                    if (GameContext.roleInWater == false) {
+                        GameContext.setRoleMove(0, 0);
+                    }
                     GameContext.playRoleAni("");
                 }
             }
@@ -294,29 +310,55 @@ export default class Role extends Laya.Script {
         if (!this.owner) {
             return;
         }
+
         if (GameContext.roleShuiGuanState == 2) {
             return;
         }
-        if (GameContext.roleInGround == true) {
+        if (GameContext.roleInWater == true) {
+            this.triggerRoleInWaterJump();
+        } else if (GameContext.roleInGround == true) {
             GameContext.roleInGround = false;
-            GameContext.playRoleAni("jump");
-            this.shuiguanTime = 0;
-            GameContext.roleShuiGuanState = 0;
-            let xSpeed = 0;
-            if (GameContext.walkDirect && GameContext.commandWalk) {
-                xSpeed = GameContext.walkDirect.x * 7;
-                if (GameContext.gameRoleBodyState == 0) {
-                    xSpeed = xSpeed * 0.9;
-                }
-            }
-            let ySpeed = GameContext.roleJumpSpeed;
-            if (GameContext.gameRoleBodyState == 0) {
-                ySpeed = GameContext.roleSmallJumpSpeed;
-            }
-            GameContext.setRoleSpeed(xSpeed, ySpeed);
-
+            this.triggerRoleGroundJump();
         }
     }
+
+    triggerRoleInWaterJump() {
+        this.shuiguanTime = 0;
+        GameContext.roleShuiGuanState = 0;
+        let xSpeed = 0;
+        if (GameContext.walkDirect && GameContext.commandWalk) {
+            xSpeed = GameContext.walkDirect.x * 7;
+            if (GameContext.gameRoleBodyState == 0) {
+                xSpeed = xSpeed * 0.9;
+            }
+        }
+        let ySpeed = GameContext.roleJumpSpeed;
+        if (GameContext.gameRoleBodyState == 0) {
+            ySpeed = GameContext.roleSmallJumpSpeed;
+        }
+        GameContext.setRoleSpeed(xSpeed, -5);
+    }
+
+
+    triggerRoleGroundJump() {
+        this.shuiguanTime = 0;
+        GameContext.playRoleAni("jump");
+        GameContext.roleShuiGuanState = 0;
+        let xSpeed = 0;
+        if (GameContext.walkDirect && GameContext.commandWalk) {
+            xSpeed = GameContext.walkDirect.x * 7;
+            if (GameContext.gameRoleBodyState == 0) {
+                xSpeed = xSpeed * 0.9;
+            }
+        }
+        let ySpeed = GameContext.roleJumpSpeed;
+        if (GameContext.gameRoleBodyState == 0) {
+            ySpeed = GameContext.roleSmallJumpSpeed;
+        }
+        GameContext.setRoleSpeed(xSpeed, ySpeed);
+    }
+
+
 
     onRoleHasBullet() {
         if (!this.owner) {

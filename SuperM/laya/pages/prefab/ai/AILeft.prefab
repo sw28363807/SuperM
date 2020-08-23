@@ -3,7 +3,7 @@
     "type":"Box",
     "selectedBox":4555,
     "searchKey":"Box,AILeft",
-    "props":{"zOrder":1111,"y":0,"x":0,"width":30,"presetID":1,"preset":"laya/pages/prefab/ai/AILeft.prefab","name":"AILeft","isPresetRoot":true,"height":200,"bgColor":"#e8e831"},
+    "props":{"zOrder":999999,"y":0,"x":0,"width":30,"presetID":1,"preset":"laya/pages/prefab/ai/AILeft.prefab","name":"AILeft","isPresetRoot":true,"height":200,"bgColor":"#e8e831"},
     "nodeParent":-1,
     "maxID":4562,
     "label":"AILeft",

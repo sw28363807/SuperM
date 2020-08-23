@@ -2,6 +2,7 @@
     "x":0,
     "type":"Panel",
     "selectedBox":13,
+    "selecteID":14,
     "searchKey":"Panel,LiuSha",
     "props":{"zOrder":65578,"y":0,"x":0,"width":1060,"presetID":1,"preset":"laya/pages/prefab/oo/LiuSha.prefab","name":"LiuSha","isPresetRoot":true,"height":267},
     "nodeParent":-1,

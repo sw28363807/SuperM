@@ -72,6 +72,11 @@ export default class GameContext extends Laya.Script {
         GameContext.roleRigidBody.setVelocity({x: x, y: linearVelocity.y});
     }
 
+    static setRoleSpeedY(y) {
+        let linearVelocity = GameContext.roleRigidBody.linearVelocity;
+        GameContext.roleRigidBody.setVelocity({x: linearVelocity.x, y: y});
+    }
+
     static setRolePosition(x, y) {
         if (GameContext.roleRigidBody) {
             GameContext.roleRigidBody.getBody().SetPositionXY(x/50, y/50);
@@ -292,6 +297,13 @@ export default class GameContext extends Laya.Script {
         GameContext.roleSpeed = GameContext.roleSpeedBase;
     }
 
+    static setRoleGravityScale(value) {
+        GameContext.roleTempGravityScale = GameContext.roleGravityScale;
+        GameContext.roleGravityScale = value;
+        GameContext.roleRigidBody.gravityScale = value;
+        GameContext.roleRigidBody.gravityScale = GameContext.roleGravityScale;
+    }
+
     onEnable() {
     }
 
@@ -300,7 +312,11 @@ export default class GameContext extends Laya.Script {
 }
 
 GameContext.role = null;
+GameContext.roleGravityScale = 1;
+GameContext.roleTempGravityScale = 1;
 GameContext.roleInGround = false;
+GameContext.roleInWater = false;
+GameContext.roleInWaterObject = null;
 GameContext.roleInMoveGround = false;
 GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
@@ -352,4 +368,5 @@ GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
 
 GameContext.monsters = [];
-GameContext.monsterArea = 1500;
+GameContext.monsterArea = 1300;
+GameContext.monsterAreaY = 1000;
