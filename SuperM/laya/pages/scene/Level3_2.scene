@@ -269,7 +269,7 @@
             "source":"src/script/RenderTextureLogic.js",
             "searchKey":"Script,RenderTextureLogic",
             "removeAble":true,
-            "props":{"renderStartY":-1000,"renderStartX":-500,"renderCellW":320,"renderCellH":320,"lie":90,"imagePath":"other/tu.png","hang":90},
+            "props":{"renderStartY":-1000,"renderStartX":-500,"renderCellW":1920,"renderCellH":1920,"lie":12,"imagePath":"other1/tu.png","hang":12},
             "nodeParent":2,
             "label":"RenderTextureLogic",
             "isDirectory":false,
