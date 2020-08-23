@@ -83,7 +83,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"po/liusha2.png",
+                                "value":"other1/liusha2.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -91,7 +91,7 @@
                                 "index":0
                             },
                             {
-                                "value":"po/liusha2.png",
+                                "value":"other1/liusha2.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -142,7 +142,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"po/liusha2.png",
+                                "value":"other1/liusha2.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -150,7 +150,7 @@
                                 "index":0
                             },
                             {
-                                "value":"po/liusha2.png",
+                                "value":"other1/liusha2.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

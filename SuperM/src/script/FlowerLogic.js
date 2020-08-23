@@ -5,10 +5,10 @@ import Events from "./Events";
 
 export default class FlowerLogic extends Laya.Script {
 
-    constructor() { 
+    constructor() {
         super();
-        /** @prop {name:flowerType, tips:"花类型", type:Int, default:0}*/
-        let flowerType = 0; //1 绿色花 2 红色花
+        /** @prop {name:flowerType, tips:"花类型: 1 绿色花 2 红色花", type:Int, default:1}*/
+        let flowerType = 1; //1 绿色花 2 红色花
     }
     
     onEnable() {

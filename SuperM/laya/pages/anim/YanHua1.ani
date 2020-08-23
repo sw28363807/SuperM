@@ -52,7 +52,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"yanhua1/yanhua (1).png",
+                                "value":"other1/yanhua1 (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -60,7 +60,7 @@
                                 "index":0
                             },
                             {
-                                "value":"yanhua1/yanhua (2).png",
+                                "value":"other1/yanhua1 (2).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -68,7 +68,7 @@
                                 "index":2
                             },
                             {
-                                "value":"yanhua1/yanhua (3).png",
+                                "value":"other1/yanhua1 (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -76,7 +76,7 @@
                                 "index":4
                             },
                             {
-                                "value":"yanhua1/yanhua (4).png",
+                                "value":"other1/yanhua1 (4).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -84,7 +84,7 @@
                                 "index":6
                             },
                             {
-                                "value":"yanhua1/yanhua (5).png",
+                                "value":"other1/yanhua1 (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -92,7 +92,7 @@
                                 "index":8
                             },
                             {
-                                "value":"yanhua1/yanhua (6).png",
+                                "value":"other1/yanhua1 (6).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -100,7 +100,7 @@
                                 "index":10
                             },
                             {
-                                "value":"yanhua1/yanhua (7).png",
+                                "value":"other1/yanhua1 (7).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -108,7 +108,7 @@
                                 "index":12
                             },
                             {
-                                "value":"yanhua1/yanhua (8).png",
+                                "value":"other1/yanhua1 (8).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -116,7 +116,7 @@
                                 "index":14
                             },
                             {
-                                "value":"yanhua1/yanhua (9).png",
+                                "value":"other1/yanhua1 (9).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -124,7 +124,7 @@
                                 "index":16
                             },
                             {
-                                "value":"yanhua1/yanhua (10).png",
+                                "value":"other1/yanhua1 (10).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -132,7 +132,7 @@
                                 "index":18
                             },
                             {
-                                "value":"yanhua1/yanhua (11).png",
+                                "value":"other1/yanhua1 (11).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -140,7 +140,7 @@
                                 "index":20
                             },
                             {
-                                "value":"yanhua1/yanhua (11).png",
+                                "value":"other1/yanhua1 (11).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -149,7 +149,7 @@
                                 "index":21
                             },
                             {
-                                "value":"yanhua1/yanhua (11).png",
+                                "value":"other1/yanhua1 (11).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

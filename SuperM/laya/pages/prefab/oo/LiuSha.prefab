@@ -31,7 +31,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"zOrder":2,"y":0,"x":2,"texture":"po/liusha1.png","presetID":3,"preset":"laya/pages/prefab/oo/LiuSha.prefab"},
+            "props":{"zOrder":2,"y":0,"x":2,"texture":"other1/liusha1.png","presetID":3,"preset":"laya/pages/prefab/oo/LiuSha.prefab"},
             "nodeParent":13,
             "label":"Sprite(LiuSha)",
             "isDirectory":false,

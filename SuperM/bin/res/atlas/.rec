@@ -93,13 +93,6 @@ P 1C5CF736 goldBrick (6).png
 P A58A04DF goldBrick (7).png
 P 6B98DD20 goldBrick (8).png
 P 0441F45A goldBrick (9).png
-R BCA99FEF grass (1).png
-R F1CD0B8F grass (2).png
-R 5D5BD761 grass (3).png
-R 0BE523D8 grass (4).png
-R 2E514569 grass (5).png
-P 4ED1A165 grass (6).png
-R FFCF77BF grass (7).png
 P E72D5BAE ground.png
 P 9FFE84F2 ground1.png
 P 79B4E213 jb (1).png
@@ -146,7 +139,6 @@ P 7C622836 zhuan (3).png
 P 3B46225F zhuan (4).png
 P A1D62BA9 zhuan (5).png
 D other1
-D po
 D role
 P 16FD743A groudnstand.png
 P EB8EBCED ground_run (1).png
@@ -169,9 +161,3 @@ P 9A8B8689 zhuajump.png
 P DD95955A zhuarun1.png
 P 2B95E511 zhuarun2.png
 P AF179E70 zhuastand.png
-D yanhua1
-D yanhua2
-D yanhua3
-D yanhua4
-D yanhua5
-D yanhua6

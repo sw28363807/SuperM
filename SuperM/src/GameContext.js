@@ -172,7 +172,7 @@ export default class GameContext extends Laya.Script {
             Laya.timer.once(2000, null, function() {
                 GameContext.isWin = false;
                 GameContext.playRoleAni("stand");
-                Laya.Scene.open("scene/LittleGameScene1.scene");
+                Laya.Scene.open(GameContext.gameGotoScene);
                 // Laya.Scene.open("scene/Level1_1.scene");
             });
             GameContext.playRoleAni("run");
@@ -344,6 +344,7 @@ GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 0;
 GameContext.gameRoleState = 0;
 
+GameContext.gameGotoScene = "";
 GameContext.gameScene = null;
 GameContext.gameSceneType = 0;
 
