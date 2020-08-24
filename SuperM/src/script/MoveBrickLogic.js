@@ -5,7 +5,7 @@ export default class MoveBrickLogic extends Laya.Script {
 
     constructor() { 
         super(); 
-        /** @prop {name:moveType, tips:"1 固定移动 2 路径移动", type:Int, default:1}*/
+        /** @prop {name:moveType, tips:"1 固定移动 2 路径移动 3 AI碰撞转向", type:Int, default:1}*/
         let moveType = 1;
         /** @prop {name:moveTime, tips:"移动时间", type:Int, default:2000}*/
         let moveTime = 2000;
@@ -43,28 +43,47 @@ export default class MoveBrickLogic extends Laya.Script {
 
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.direct = 1;
+        this.owner.isStart = false;
 
         // this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
     }
 
     onStart() {
+
+    }
+
+    startMove() {
         if (this.owner.moveType == 1) {
             Laya.timer.loop(this.owner.moveTime, this, this.onSwitchDirect);
+        } else if (this.owner.moveType == 3) {
+            this.owner.rigidBody.setVelocity({x: this.owner.direct * this.owner.moveSpeed, y: 0});
+            this.refreshSpeed();
         }
     }
 
     onSwitchDirect() {
-        if (this.owner.moveDirect == 1) {
-            this.owner.rigidBody.setVelocity({x: this.owner.direct * this.owner.moveSpeed, y: 0});
+        if (this.owner.moveDirect == 1 || this.owner.moveDirect == 3) {
             this.owner.direct = -this.owner.direct;
+            this.owner.rigidBody.setVelocity({x: this.owner.direct * this.owner.moveSpeed, y: 0});
             this.refreshSpeed();
         }
     }
 
     onTriggerEnter(other, self, contact) {
-        if (other.label == "RoleFoot") {
+        if (other.label == "RoleFoot" && self.label == "MoveBrickStartArea" && this.owner.isStart == false) {
+            this.owner.isStart = true;
+            this.startMove();
+        } else if (other.label == "RoleFoot") {
             GameContext.roleInMoveGround = true;
             this.refreshSpeed();
+        } else if (other.label == "AILeft") {
+            if (this.owner.direct == -1) {
+                this.onSwitchDirect();
+            }
+        } else if (other.label == "AIRight") {
+            if (this.owner.direct == 1) {
+                this.onSwitchDirect();
+            }
         }
     }
 
@@ -79,7 +98,7 @@ export default class MoveBrickLogic extends Laya.Script {
             if (this.owner.moveDirect == 1) {
                 if (GameContext.commandWalk == false) {
                     let lineSpeed =  GameContext.getLineSpeed();
-                    GameContext.setRoleSpeed(-this.owner.direct * this.owner.moveSpeed, lineSpeed.y);
+                    GameContext.setRoleSpeed(this.owner.direct * this.owner.moveSpeed, lineSpeed.y);
                 }
             } else if (this.owner.moveDirect == 2) {
                 GamepadEvent.roleOutSpeed = {x: 0, y: this.owner.direct * this.owner.moveSpeed};

@@ -301,7 +301,11 @@ export default class Utils extends Laya.Script {
             x = GameContext.getRoleFaceup();
         }
         GameContext.showHurtEffect();
-        GameContext.setRoleSpeed( x * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
+        if (GameContext.roleInWater) {
+            GameContext.setRoleSpeed( x * 5, 0);
+        } else {
+            GameContext.setRoleSpeed( x * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
+        }
         if (GameContext.gameRoleState == 1) {
             GameContext.setRoleState(0);
             GameContext.setBodyState(1);
@@ -313,10 +317,17 @@ export default class Utils extends Laya.Script {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
-        GameContext.playRoleAni("stand");
-        GameContext.roleInGround = false;
-        GameContext.walkDirect = null;
+        if (!GameContext.roleInWater) {
+            GameContext.playRoleAni("stand");
+            GameContext.roleInGround = false;
+            GameContext.walkDirect = null;
+        }
         GameContext.roleHurting = true;
+        if (GameContext.roleInWater) {
+            Laya.timer.once(200, null, function() {
+                GameContext.roleHurting = false;
+            });
+        }
         GameContext.gameRoleNumber--;
         if (GameContext.gameRoleNumber == 0) {
             GameContext.playRoleAni("die", false);

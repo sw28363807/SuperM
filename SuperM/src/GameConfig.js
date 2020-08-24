@@ -27,12 +27,12 @@ import BrickMonsterLogic from "./script/BrickMonsterLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import LiuShaLogic from "./script/LiuShaLogic"
 import WaterLogic from "./script/WaterLogic"
+import MoveBrickLogic from "./script/MoveBrickLogic"
 import RenderTextureLogic from "./script/RenderTextureLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
 import MoreTimeBrick from "./script/MoreTimeBrick"
-import MoveBrickLogic from "./script/MoveBrickLogic"
 import BulletLogic from "./script/BulletLogic"
 import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import HeadBulletLogic from "./script/HeadBulletLogic"
@@ -71,12 +71,12 @@ export default class GameConfig {
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/LiuShaLogic.js",LiuShaLogic);
 		reg("script/WaterLogic.js",WaterLogic);
+		reg("script/MoveBrickLogic.js",MoveBrickLogic);
 		reg("script/RenderTextureLogic.js",RenderTextureLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
 		reg("script/MoreTimeBrick.js",MoreTimeBrick);
-		reg("script/MoveBrickLogic.js",MoveBrickLogic);
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/FlowerBulletLogic.js",FlowerBulletLogic);
 		reg("script/HeadBulletLogic.js",HeadBulletLogic);

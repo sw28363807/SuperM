@@ -2,36 +2,25 @@
     "x":0,
     "type":"Box",
     "selectedBox":5097,
+    "selecteID":5100,
     "searchKey":"Box,MoveBrick",
-    "props":{"zOrder":10,"y":0,"x":0,"width":300,"presetID":1,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","name":"MoveBrick","isPresetRoot":true,"height":20},
+    "props":{"zOrder":10,"y":0,"x":0,"width":202,"presetID":1,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","name":"MoveBrick","isPresetRoot":true,"height":54},
     "nodeParent":-1,
-    "maxID":5102,
+    "maxID":5104,
     "label":"MoveBrick",
-    "isOpen":false,
+    "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
     "hasChild":true,
     "compId":5097,
     "child":[
         {
-            "type":"Box",
-            "searchKey":"Box,render",
-            "props":{"y":0,"x":0,"width":300,"presetID":2,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","name":"render","height":20,"bgColor":"#cc3330"},
-            "nodeParent":5097,
-            "label":"render",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":5098,
-            "child":[
-                ]
-        },
-        {
+            "x":15,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"width":300,"presetID":3,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","height":20,"friction":0},
+            "props":{"y":0,"x":0,"width":202,"presetID":3,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","height":54,"friction":0},
             "nodeParent":5097,
             "label":"BoxCollider(MoveBrick)",
             "isDirectory":false,
@@ -42,11 +31,12 @@
                 ]
         },
         {
+            "x":15,
             "type":"RigidBody",
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"type":"kinematic","presetID":4,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","mask":62,"label":"Ground","gravityScale":0,"category":1,"allowRotation":false},
+            "props":{"type":"kinematic","presetID":4,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","label":"Ground","gravityScale":0,"allowRotation":false},
             "nodeParent":5097,
             "label":"RigidBody(MoveBrick)",
             "isDirectory":false,
@@ -57,6 +47,7 @@
                 ]
         },
         {
+            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/MoveBrickLogic.js",
@@ -69,6 +60,36 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":5101,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation,render",
+            "props":{"y":27,"x":101,"width":202,"source":"anim/MoveBrickAni.ani","presetID":6,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","name":"render","height":54,"autoPlay":true,"autoAnimation":"ani1"},
+            "nodeParent":5097,
+            "label":"render",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":5102,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":-54,"x":0,"width":202,"presetID":7,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","label":"MoveBrickStartArea","isSensor":true,"height":54},
+            "nodeParent":5097,
+            "label":"BoxCollider(MoveBrick)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":5103,
             "child":[
                 ]
         }],

@@ -249,13 +249,17 @@ export default class Role extends Laya.Script {
         } else if (other.owner && self.label == "RoleFoot" &
             (other.label == "MonsterBody")) {
                 if (self.owner) {
-                    GameContext.roleInGround = true;
-                    GameContext.setRoleMove(0, 0);
-                    GameContext.playRoleAni("stand");
-                    if (other.owner.name == "Flower") {
+                    if (GameContext.roleInWater) {
+                        Utils.hurtRole(other.owner);
                     } else {
-                        if (Utils.roleInCeil(other.owner)) {
-                            Utils.footMonster(other);
+                        GameContext.roleInGround = true;
+                        GameContext.setRoleMove(0, 0);
+                        GameContext.playRoleAni("stand");
+                        if (other.owner.name == "Flower") {
+                        } else {
+                            if (Utils.roleInCeil(other.owner)) {
+                                Utils.footMonster(other);
+                            }
                         }
                     }
                 }

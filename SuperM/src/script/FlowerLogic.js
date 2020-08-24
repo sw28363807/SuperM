@@ -32,7 +32,7 @@ export default class FlowerLogic extends Laya.Script {
         this.owner.redFlower.visible = this.owner.flowerType == 2;
 
         this.owner.downPos = {x: this.owner.x, y: this.owner.y};
-        this.owner.upPos = {x: this.owner.x, y: this.owner.y - 110};
+        this.owner.upPos = {x: this.owner.x, y: this.owner.y - 110 * this.owner.scaleY};
         this.owner.canShootBullet = true;
         
         this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
