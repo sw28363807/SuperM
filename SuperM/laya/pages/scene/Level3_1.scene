@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":369,
+    "selecteID":8940,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":8938,
+    "maxID":8948,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -484,7 +484,7 @@
             "selectedBox":54,
             "selecteID":115,
             "searchKey":"Box",
-            "props":{"y":-82,"x":18645,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":20,"x":18631,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -557,7 +557,6 @@
                     "compId":115,
                     "child":[
                         {
-                            "x":0,
                             "type":"Animation",
                             "searchKey":"Animation",
                             "props":{"presetID":10,"preset":"laya/pages/prefab/Role.prefab"},
@@ -574,7 +573,6 @@
                             "$HIDDEN":false
                         },
                         {
-                            "x":0,
                             "type":"Animation",
                             "searchKey":"Animation",
                             "props":{"presetID":25,"preset":"laya/pages/prefab/Role.prefab"},
@@ -707,7 +705,6 @@
             "compId":7932,
             "child":[
                 {
-                    "x":0,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/oo/LiuSha2.prefab"},
@@ -722,7 +719,6 @@
                         ]
                 },
                 {
-                    "x":0,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":3,"preset":"laya/pages/prefab/oo/LiuSha2.prefab"},
@@ -1254,20 +1250,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/oo/po6.prefab"},
-                    "nodeParent":7955,
-                    "label":"Sprite(po6)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":7957,
-                    "child":[
-                        ]
-                },
-                {
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1342,6 +1324,32 @@
                     "compId":65,
                     "child":[
                         ]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/oo/po6.prefab"},
+                    "nodeParent":7955,
+                    "label":"Sprite(po6)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8938,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/oo/po6.prefab"},
+                    "nodeParent":7955,
+                    "label":"Sprite(po6)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8939,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {
@@ -1371,7 +1379,6 @@
             "compId":7959,
             "child":[
                 {
-                    "x":0,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/oo/LiuSha.prefab"},
@@ -1873,7 +1880,6 @@
                         ]
                 },
                 {
-                    "x":0,
                     "type":"Animation",
                     "selectedBox":537,
                     "selecteID":540,
@@ -1926,7 +1932,6 @@
             "compId":8004,
             "child":[
                 {
-                    "x":0,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
@@ -2018,7 +2023,6 @@
                         ]
                 },
                 {
-                    "x":0,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":11,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},

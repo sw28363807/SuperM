@@ -33,8 +33,10 @@ export default class AILeftOrRight extends Laya.Script {
     startAI() {
         EventMgr.getInstance().registEvent(Events.Monster_Stop_AI, this, this.onStopAI);
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.currentVelocity = {x: this.speed, y: 0};
+        let a = Utils.randomSign();
+        this.owner.currentVelocity = {x:  a * this.speed, y: 0};
         this.owner.renderMonster = this.owner.getChildByName("render");
+        this.owner.renderMonster.scaleX = a * Math.abs(this.owner.renderMonster.scaleX);
     }
 
     processMove() {

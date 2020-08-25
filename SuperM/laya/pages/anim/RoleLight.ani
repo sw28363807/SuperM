@@ -353,5 +353,60 @@
             "id":8,
             "frameRate":24,
             "action":0
+        },
+        {
+            "nodes":[
+                {
+                    "target":4,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":-60,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"y",
+                                "index":0
+                            }],
+                        "x":[
+                            {
+                                "value":-68,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"x",
+                                "index":0
+                            }],
+                        "skin":[
+                            {
+                                "value":"role1/light_youyong (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"role1/light_youyong (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":3
+                            },
+                            {
+                                "value":"role1/light_youyong (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":4,
+                                "key":"skin",
+                                "index":6
+                            }]
+                    }
+                }],
+            "name":"youyong",
+            "id":9,
+            "frameRate":24,
+            "action":0
         }]
 }

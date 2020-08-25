@@ -186,7 +186,7 @@ export default class Role extends Laya.Script {
                 }
             }
             if (GameContext.roleInWater == true) {
-                GameContext.playRoleAni("run");
+                GameContext.playRoleAni("youyong");
             } else {
                 let linearVelocity = GameContext.getLineSpeed();
                 if (GameContext.roleInGround) {

@@ -92,6 +92,12 @@ export default class MonsterLogic extends Laya.Script {
                 coll.isSensor = true;
             }
         }
+        else if (other.label == "Water") {
+            let rigidBody = this.owner.getComponent(Laya.RigidBody);
+            if (rigidBody.label != "Fish") {
+                Utils.createMonsterDropDeadEffect(this.owner);
+            }
+        }
     }
 
     onUpdate() {

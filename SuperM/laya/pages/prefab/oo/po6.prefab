@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":48,
-    "selecteID":66,
+    "selecteID":69,
     "searchKey":"Box,po6",
     "props":{"y":0,"x":0,"width":3281,"presetID":1,"preset":"laya/pages/prefab/oo/po6.prefab","name":"po6","isPresetRoot":true,"height":724},
     "nodeParent":-1,
-    "maxID":68,
+    "maxID":70,
     "label":"po6",
     "isOpen":true,
     "isDirectory":true,
@@ -30,21 +30,6 @@
             "child":[
                 ],
             "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite",
-            "props":{"y":-249,"x":248,"texture":"other1/shamo2po (3).png","presetID":3,"preset":"laya/pages/prefab/oo/po6.prefab"},
-            "nodeParent":48,
-            "label":"Sprite(po6)",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":39,
-            "child":[
-                ]
         },
         {
             "x":15,
@@ -124,6 +109,34 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":65,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":-249,"x":247.5,"texture":"other1/shamo2po-(3)_01.png","presetID":9,"preset":"laya/pages/prefab/oo/po6.prefab"},
+            "nodeParent":48,
+            "label":"Sprite(po6)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":68,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":-249,"x":1888.5,"texture":"other1/shamo2po-(3)_02.png","presetID":10,"preset":"laya/pages/prefab/oo/po6.prefab"},
+            "nodeParent":48,
+            "label":"Sprite(po6)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":69,
             "child":[
                 ]
         }],

@@ -156,6 +156,8 @@ export default class GameContext extends Laya.Script {
                 GameContext.roleSpr.play(0, loop, "zhuarun");
             } else if (GameContext.roleCurAni =="jump") {
                 GameContext.roleSpr.play(0, loop, "zhuajump");
+            } else if (GameContext.roleCurAni =="youyong") {
+                GameContext.roleSpr.play(0, loop, "youyong");
             }
         } else {
             GameContext.roleSpr.play(0, loop, ani);
@@ -368,5 +370,5 @@ GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
 
 GameContext.monsters = [];
-GameContext.monsterArea = 1300;
-GameContext.monsterAreaY = 1000;
+GameContext.monsterArea = 1000;
+GameContext.monsterAreaY = 800;
