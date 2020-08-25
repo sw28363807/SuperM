@@ -53,14 +53,14 @@ export default class GameJoyStick extends Laya.Script {
             EventMgr.getInstance().postEvent(Events.Role_B_Button);
         }, null, false);
         
-        this.cButtonHandler = Laya.Handler.create(this, function(){
+        this.cButtonHandler = Laya.Handler.create(this, function(data){
             if (GameContext.isDie) {
                 return;
             }
             if (GameContext.isWin) {
                 return;
             }
-            EventMgr.getInstance().postEvent(Events.Role_C_Button);
+            EventMgr.getInstance().postEvent(Events.Role_C_Button, data);
         }, null, false);
         
         let joyStickCom = this.owner.joyStick.getComponent(JoyStick);

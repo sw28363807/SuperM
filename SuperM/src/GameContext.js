@@ -318,6 +318,7 @@ GameContext.roleGravityScale = 1;
 GameContext.roleTempGravityScale = 1;
 GameContext.roleInGround = false;
 GameContext.roleInWater = false;
+GameContext.roleInFly = false;
 GameContext.roleInWaterObject = null;
 GameContext.roleInMoveGround = false;
 GameContext.roleIsDrop = false;

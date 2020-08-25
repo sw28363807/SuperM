@@ -1,5 +1,4 @@
 import GameContext from "../GameContext";
-import Role from "./Role";
 
 export default class MoveBrickLogic extends Laya.Script {
 

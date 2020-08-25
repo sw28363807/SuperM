@@ -31,7 +31,6 @@ export default class Role extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Role_A_Button, this, this.onRoleAButton);
         EventMgr.getInstance().registEvent(Events.Role_B_Button, this, this.onRoleBButton);
         EventMgr.getInstance().registEvent(Events.Role_C_Button, this, this.onRoleCButton);
-        // EventMgr.getInstance().registEvent(Events.Role_Give_Speed, this, this.onRoleGiveSpeed);
         EventMgr.getInstance().registEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
         EventMgr.getInstance().registEvent(Events.Role_Change_Big, this, this.onRoleChangeBig);
         
@@ -168,11 +167,14 @@ export default class Role extends Laya.Script {
                 if (GameContext.walkDirect.x != 0) {
                     let linearVelocity = GameContext.getLineSpeed();
                     let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
+                    let speedY =  GameContext.walkDirect.y * GameContext.roleSpeed;
                     if (GameContext.roleInWater == true) {
-                        let speedY = GameContext.walkDirect.y
+                        speedY = GameContext.walkDirect.y
                         if (speedY == 0) {
                             speedY = 2;
                         }
+                        GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
+                    } else if (GameContext.roleInFly == true) {
                         GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
                     } else {
                         GameContext.setRoleMove(speedX, linearVelocity.y);
@@ -453,10 +455,14 @@ export default class Role extends Laya.Script {
         }
     }
 
-    onRoleCButton() {
-        Laya.Scene.open("scene/Level2_1.scene");
+    onRoleCButton(data) {
+        if (data == "up") {
+            GameContext.roleInFly = true;
+        } else {
+            GameContext.roleInFly = true;
+        }
+        // Laya.Scene.open("scene/Level2_1.scene");
         // Laya.Scene.open("scene/LittleGameScene1.scene");
-        Laya.Scene
     }
 
     onDisable() {
@@ -465,7 +471,6 @@ export default class Role extends Laya.Script {
         EventMgr.getInstance().removeEvent(Events.Role_A_Button, this, this.onRoleAButton);
         EventMgr.getInstance().removeEvent(Events.Role_B_Button, this, this.onRoleBButton);
         EventMgr.getInstance().removeEvent(Events.Role_C_Button, this, this.onRoleCButton);
-        EventMgr.getInstance().removeEvent(Events.Role_Give_Speed, this, this.onRoleGiveSpeed);
         EventMgr.getInstance().removeEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
         EventMgr.getInstance().removeEvent(Events.Role_Change_Big, this, this.onRoleChangeBig);
         if (GameContext.roleRigidBody) {

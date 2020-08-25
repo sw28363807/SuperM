@@ -25,7 +25,19 @@ export default class JoyStickButton extends Laya.Script {
 
         this.buttonC.on(Laya.Event.MOUSE_DOWN, this, function(){
             if(this.cHandler) {
-                this.cHandler.run();
+                this.cHandler.runWith("down");
+            }
+        });
+
+        this.buttonC.on(Laya.Event.MOUSE_UP, this, function(){
+            if(this.cHandler) {
+                this.cHandler.runWith("up");
+            }
+        });
+
+        this.buttonC.on(Laya.Event.MOUSE_OUT, this, function(){
+            if(this.cHandler) {
+                this.cHandler.runWith("up");
             }
         });
     }
