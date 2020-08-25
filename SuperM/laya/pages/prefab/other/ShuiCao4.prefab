@@ -1,0 +1,25 @@
+{
+    "x":0,
+    "type":"Animation",
+    "selectedBox":1531,
+    "searchKey":"Animation,ShuiCao4",
+    "props":{"y":0,"x":0,"width":200,"source":"anim/shuicao/ShuiCao4.ani","presetID":1,"preset":"laya/pages/prefab/other/ShuiCao4.prefab","name":"ShuiCao4","isPresetRoot":true,"height":200,"autoPlay":true,"autoAnimation":"ani1"},
+    "nodeParent":-1,
+    "maxID":1532,
+    "label":"ShuiCao4",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":1531,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

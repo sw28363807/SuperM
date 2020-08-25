@@ -146,7 +146,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/flyjump.png",
+                                "value":"role/jump (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

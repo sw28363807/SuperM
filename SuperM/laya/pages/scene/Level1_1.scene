@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":3833,
+    "selecteID":4,
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -21,13 +21,14 @@
             "props":{"y":751,"x":0,"width":30000,"name":"bottom","height":1000,"bgColor":"#e52c2c"},
             "nodeParent":2,
             "label":"bottom",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":4,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -45,6 +46,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -21758,7 +21760,7 @@
             "selectedBox":1565,
             "selecteID":1583,
             "searchKey":"Box",
-            "props":{"y":-1247.5,"x":28109,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
+            "props":{"y":-2231,"x":28208,"presetID":1,"preset":"laya/pages/prefab/brick/PassLevel.prefab"},
             "nodeParent":2,
             "maxID":1584,
             "label":"PassLevel",
