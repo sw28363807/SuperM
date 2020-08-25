@@ -174,7 +174,7 @@ export default class Role extends Laya.Script {
                             speedY = 2;
                         }
                         GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
-                    } else if (GameContext.roleInFly == true) {
+                    } else if (GameContext.roleCommandFly == true) {
                         GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
                     } else {
                         GameContext.setRoleMove(speedX, linearVelocity.y);
@@ -187,7 +187,9 @@ export default class Role extends Laya.Script {
                     }
                 }
             }
-            if (GameContext.roleInWater == true) {
+            if (GameContext.roleCommandFly == true) {
+                GameContext.playRoleAni("fly");
+            } else if (GameContext.roleInWater == true) {
                 GameContext.playRoleAni("youyong");
             } else {
                 let linearVelocity = GameContext.getLineSpeed();
@@ -457,9 +459,10 @@ export default class Role extends Laya.Script {
 
     onRoleCButton(data) {
         if (data == "up") {
-            GameContext.roleInFly = true;
+            GameContext.roleCommandFly = true;
+            GameContext.roleFlyState = true;
         } else {
-            GameContext.roleInFly = true;
+            GameContext.roleCommandFly = false;
         }
         // Laya.Scene.open("scene/Level2_1.scene");
         // Laya.Scene.open("scene/LittleGameScene1.scene");

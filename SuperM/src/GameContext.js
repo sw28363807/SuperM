@@ -149,18 +149,22 @@ export default class GameContext extends Laya.Script {
             loop = true;
         }
         GameContext.roleCurAni = ani;
+        let pref = "";
+        if (GameContext.roleFlyState &&
+            ani != "fly" &&
+             ani != "youyong") {
+            pref = "fly";
+        }
         if (GameContext.keSpr.visible) {
             if (GameContext.roleCurAni =="stand") {
-                GameContext.roleSpr.play(0, loop, "zhuastand");
+                GameContext.roleSpr.play(0, loop, pref+"zhuastand");
             } else if (GameContext.roleCurAni =="run") {
-                GameContext.roleSpr.play(0, loop, "zhuarun");
+                GameContext.roleSpr.play(0, loop, pref+"zhuarun");
             } else if (GameContext.roleCurAni =="jump") {
-                GameContext.roleSpr.play(0, loop, "zhuajump");
-            } else if (GameContext.roleCurAni =="youyong") {
-                GameContext.roleSpr.play(0, loop, "youyong");
+                GameContext.roleSpr.play(0, loop, pref+"zhuajump");
             }
         } else {
-            GameContext.roleSpr.play(0, loop, ani);
+            GameContext.roleSpr.play(0, loop, pref+ani);
         }
 
         // Laya.timer.once(1000, null, function() {
@@ -318,7 +322,8 @@ GameContext.roleGravityScale = 1;
 GameContext.roleTempGravityScale = 1;
 GameContext.roleInGround = false;
 GameContext.roleInWater = false;
-GameContext.roleInFly = false;
+GameContext.roleCommandFly = false;
+GameContext.roleFlyState = false;
 GameContext.roleInWaterObject = null;
 GameContext.roleInMoveGround = false;
 GameContext.roleIsDrop = false;
