@@ -1,0 +1,188 @@
+{
+    "x":0,
+    "type":"View",
+    "selectedBox":2,
+    "searchKey":"View",
+    "props":{"sceneWidth":386,"sceneHeight":295,"sceneColor":"#000000"},
+    "nodeParent":-1,
+    "maxID":3,
+    "label":"View",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":2,
+    "child":[
+        {
+            "type":"GraphicNode",
+            "searchKey":"GraphicNode",
+            "props":{},
+            "nodeParent":2,
+            "label":"GraphicNode",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3,
+            "child":[
+                ]
+        }],
+    "animations":[
+        {
+            "nodes":[
+                {
+                    "target":3,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":-147.5,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":0
+                            }],
+                        "x":[
+                            {
+                                "value":-193,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"x",
+                                "index":0
+                            }],
+                        "skin":[
+                            {
+                                "value":"other1/qingzhu (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"other1/qingzhu (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":2
+                            },
+                            {
+                                "value":"other1/qingzhu (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":4
+                            },
+                            {
+                                "value":"other1/qingzhu (4).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":6
+                            },
+                            {
+                                "value":"other1/qingzhu (5).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":8
+                            },
+                            {
+                                "value":"other1/qingzhu (6).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":10
+                            },
+                            {
+                                "value":"other1/qingzhu (7).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":12
+                            },
+                            {
+                                "value":"other1/qingzhu (8).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":14
+                            },
+                            {
+                                "value":"other1/qingzhu (9).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":16
+                            },
+                            {
+                                "value":"other1/qingzhu (10).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":18
+                            },
+                            {
+                                "value":"other1/qingzhu (11).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":20
+                            },
+                            {
+                                "value":"other1/qingzhu (12).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":22
+                            },
+                            {
+                                "value":"other1/qingzhu (13).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":24
+                            },
+                            {
+                                "value":"other1/qingzhu (14).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":26
+                            },
+                            {
+                                "value":"other1/qingzhu (15).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":28
+                            },
+                            {
+                                "value":"other1/qingzhu (16).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":30
+                            }]
+                    }
+                }],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}
