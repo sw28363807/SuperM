@@ -46,17 +46,29 @@ export default class BrickGoldLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.isStartAI = false;
+        // this.owner.isStartAI = false;
+    }
+
+    onStart() {
+        this.owner.isPlayingAni = false;
+        this.owner.renderBrick = this.owner.getChildByName("render");
     }
 
     onUpdate() {
-        if (this.owner.isStartAI == false) {
-            if (this.owner && GameContext.role) {
-                if (this.owner.x < GameContext.role.x + 1500 && this.owner.x > GameContext.role.x) {
-                    this.owner.isStartAI = true;
-                    let render = this.owner.getChildByName("render");
-                    render.play(0, true, "ani1");
-                    return;
+        if (this.owner && GameContext.role && this.owner.renderBrick) {
+            let distanceX = Math.abs(GameContext.role.x - this.owner.x);
+            let distanceY = Math.abs(GameContext.role.y - this.owner.y);
+            if (distanceX <= 1000 && distanceY <= 1000) {
+                if (this.owner.isPlayingAni == false) {
+                    this.owner.isPlayingAni = true;
+                    this.owner.renderBrick.play(0, true, "ani1");
+                    this.owner.renderBrick.visible = true;
+                }
+            } else {
+                if (this.owner.isPlayingAni == true) {
+                    this.owner.renderBrick.stop();
+                    this.owner.renderBrick.visible = false;
+                    this.owner.isPlayingAni = false;
                 }
             }
         }

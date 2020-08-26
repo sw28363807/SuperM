@@ -1,6 +1,7 @@
 import GameContext from "../GameContext";
 import Events from "./Events";
 import EventMgr from "./EventMgr";
+import LoadingLogic from "./LoadingLogic";
 
 export default class Utils extends Laya.Script {
 
@@ -71,7 +72,7 @@ export default class Utils extends Laya.Script {
     static createFootEffect(owner) {
         let deadMove = owner.deadMove;
         if (deadMove != "") {
-            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
+            // EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
             let x = owner.x;
             let y = owner.y;
             let parent = owner.parent;
@@ -257,28 +258,60 @@ export default class Utils extends Laya.Script {
         return d;
     }
 
+    static triggerRoleWinGotoDoor() {
+        if (GameContext.role) {
+            if (GameContext.isWin) {
+                GameContext.setRoleMove(GameContext.roleSpeed, 0);
+            }
+            Laya.timer.once(2000, null, function() {
+                GameContext.isWin = false;
+                GameContext.playRoleAni("stand");
+                let loadingBgIndex = 0;
+                if (GameContext.gameGotoScene == "scene/Level1_1.scene") {
+                    loadingBgIndex = 1;
+                } else if (GameContext.gameGotoScene == "scene/Level2_1.scene") {
+                    loadingBgIndex = 2;
+                } else if (GameContext.gameGotoScene == "scene/Level3_1.scene") {
+                    loadingBgIndex = 3;
+                } else if (GameContext.gameGotoScene == "scene/Level4_1.scene") {
+                    loadingBgIndex = 4;
+                }
+                if (loadingBgIndex == 0) {
+                    loadingBgIndex = 1;
+                }
+                LoadingLogic.loadScene(GameContext.gameGotoScene, loadingBgIndex);
+                // Laya.Scene.open(GameContext.gameGotoScene);
+                // Laya.Scene.open("scene/Level1_1.scene");
+            });
+            GameContext.playRoleAni("run");
+            GameContext.initRolePoint = null;
+        }
+    }
+
     static createMonsterDropDeadEffect(owner) {
         if (!owner) {
             return;
         }
         let deadMove = owner.deadMove;
         if (deadMove != "") {
-            EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
+            // EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
             let x = owner.x;
             let y = owner.y;
             let parent = owner.parent;
             Laya.loader.create(deadMove, Laya.Handler.create(null, function (prefabDef) {
-                let dead = prefabDef.create();
-                dead.x = x;
-                dead.y = y;
-                parent.addChild(dead);
-                let rigid = dead.getComponent(Laya.RigidBody);
-                rigid.setAngle(owner.deadAngle);
-                rigid.setVelocity({x: 3, y: -15});
-                rigid.gravityScale = 5;
-                Laya.timer.once(3000, null, function() {
-                    Utils.removeThis(dead);
-                });
+                if (parent) {
+                    let dead = prefabDef.create();
+                    dead.x = x;
+                    dead.y = y;
+                    parent.addChild(dead);
+                    let rigid = dead.getComponent(Laya.RigidBody);
+                    rigid.setAngle(owner.deadAngle);
+                    rigid.setVelocity({x: 3, y: -15});
+                    rigid.gravityScale = 5;
+                    Laya.timer.once(3000, null, function() {
+                        Utils.removeThis(dead);
+                    });
+                }
             }));
         }
         Utils.removeThis(owner);

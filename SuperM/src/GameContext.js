@@ -1,4 +1,3 @@
-
 export default class GameContext extends Laya.Script {
 
     constructor() { 
@@ -173,21 +172,6 @@ export default class GameContext extends Laya.Script {
         //     }
         // });
 
-    }
-
-    static triggerRoleWinGotoDoor() {
-        if (GameContext.role) {
-            if (GameContext.isWin) {
-                GameContext.setRoleMove(GameContext.roleSpeed, 0);
-            }
-            Laya.timer.once(2000, null, function() {
-                GameContext.isWin = false;
-                GameContext.playRoleAni("stand");
-                Laya.Scene.open(GameContext.gameGotoScene);
-                // Laya.Scene.open("scene/Level1_1.scene");
-            });
-            GameContext.playRoleAni("run");
-        }
     }
 
     static getLineSpeed() {

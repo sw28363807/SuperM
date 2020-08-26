@@ -1,4 +1,4 @@
-import GameContext from "./GameContext";
+import GameContext from "../GameContext";
 
 export default class ShuiMuLogic extends Laya.Script {
 

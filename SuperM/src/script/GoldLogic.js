@@ -24,6 +24,30 @@ export default class GoldLogic extends Laya.Script {
             }
         }
     }
+
+    onStart() {
+        this.owner.isPlayingAni = false;
+    }
+
+    onUpdate() {
+        if (this.owner && GameContext.role) {
+            let distanceX = Math.abs(GameContext.role.x - this.owner.x);
+            let distanceY = Math.abs(GameContext.role.y - this.owner.y);
+            if (distanceX <= 1000 && distanceY <= 1000) {
+                if (this.owner.isPlayingAni == false) {
+                    this.owner.isPlayingAni = true;
+                    this.owner.play(0, true, "ani1");
+                    this.owner.visible = true;
+                }
+            } else {
+                if (this.owner.isPlayingAni == true) {
+                    this.owner.stop();
+                    this.owner.visible = false;
+                    this.owner.isPlayingAni = false;
+                }
+            }
+        }
+    }
     
     onEnable() {
     }

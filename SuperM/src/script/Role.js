@@ -24,7 +24,6 @@ export default class Role extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.zOrder = 65535;
         GameContext.role = this.owner;
         EventMgr.getInstance().registEvent(Events.Role_Move, this, this.onRoleWalk);
         EventMgr.getInstance().registEvent(Events.Role_Move_Stop, this, this.onRoleStopWalk);
@@ -309,7 +308,7 @@ export default class Role extends Laya.Script {
                 }
             }
             if (GameContext.isWin) {
-                GameContext.triggerRoleWinGotoDoor();
+                Utils.triggerRoleWinGotoDoor();
             }
         }
     }

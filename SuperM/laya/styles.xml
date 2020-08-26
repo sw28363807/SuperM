@@ -21,4 +21,5 @@
    <item name="po" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="other1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="role/flyrun (1).png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="loading" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
 </res>

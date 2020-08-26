@@ -45,7 +45,6 @@ export default class Camera extends Laya.Script {
             this.role.x = GameContext.initRolePoint.x;
             this.role.y = GameContext.initRolePoint.y;
         }
-        GameContext.initRolePoint
         let w =  Laya.Browser.width;
         let h =  Laya.Browser.height;
         Laya.Physics.I.positionIterations = 3;

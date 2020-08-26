@@ -1,5 +1,6 @@
 import Utils from "./Utils";
 import GameContext from "../GameContext";
+import LoadingLogic from "./LoadingLogic";
 
 export default class LittleGameScene1Logic extends Laya.Script {
 
@@ -64,7 +65,8 @@ export default class LittleGameScene1Logic extends Laya.Script {
 
         this.owner.on(Laya.Event.CLICK, this, function() {
             if (this.gameEnd == true) {
-                Laya.Scene.open("scene/Level2_1.scene");
+                LoadingLogic.loadScene("scene/Level2_1.scene", 2);
+                // Laya.Scene.open("scene/Level2_1.scene");
             }
         });
     }

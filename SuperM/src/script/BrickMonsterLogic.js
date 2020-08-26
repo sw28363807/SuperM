@@ -125,6 +125,8 @@ export default class BrickMonsterLogic extends Laya.Script {
                         this.owner.state = 4;
                     }
                     this.stopAttackAni();
+                    let linearVelocity = this.owner.rigidBody.linearVelocity;
+                    this.owner.rigidBody.setVelocity({x: 0, y: linearVelocity.y});
                 }
                 this.owner.idleCount = 0;
             }

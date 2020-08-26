@@ -1,0 +1,218 @@
+{
+    "x":0,
+    "type":"View",
+    "selectedBox":2,
+    "searchKey":"View",
+    "props":{"sceneWidth":612,"sceneHeight":107,"sceneColor":"#000000"},
+    "nodeParent":-1,
+    "maxID":3,
+    "label":"View",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":2,
+    "child":[
+        {
+            "type":"GraphicNode",
+            "searchKey":"GraphicNode",
+            "props":{},
+            "nodeParent":2,
+            "label":"GraphicNode",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3,
+            "child":[
+                ]
+        }],
+    "animations":[
+        {
+            "nodes":[
+                {
+                    "target":3,
+                    "keyframes":{
+                        "skin":[
+                            {
+                                "value":"loading/loading (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"loading/loading (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":1
+                            },
+                            {
+                                "value":"loading/loading (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":2
+                            },
+                            {
+                                "value":"loading/loading (4).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":3
+                            },
+                            {
+                                "value":"loading/loading (5).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":4
+                            },
+                            {
+                                "value":"loading/loading (6).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":5
+                            },
+                            {
+                                "value":"loading/loading (7).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":6
+                            },
+                            {
+                                "value":"loading/loading (8).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":7
+                            },
+                            {
+                                "value":"loading/loading (9).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":8
+                            },
+                            {
+                                "value":"loading/loading (10).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":9
+                            },
+                            {
+                                "value":"loading/loading (11).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":10
+                            },
+                            {
+                                "value":"loading/loading (12).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":11
+                            },
+                            {
+                                "value":"loading/loading (13).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":12
+                            },
+                            {
+                                "value":"loading/loading (14).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":13
+                            },
+                            {
+                                "value":"loading/loading (15).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":14
+                            },
+                            {
+                                "value":"loading/loading (16).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":15
+                            },
+                            {
+                                "value":"loading/loading (17).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":16
+                            },
+                            {
+                                "value":"loading/loading (18).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":17
+                            },
+                            {
+                                "value":"loading/loading (19).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":18
+                            },
+                            {
+                                "value":"loading/loading (20).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":19
+                            },
+                            {
+                                "value":"loading/loading (21).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":20
+                            },
+                            {
+                                "value":"loading/loading (22).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":21
+                            }]
+                    }
+                }],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

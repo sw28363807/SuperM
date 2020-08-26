@@ -37,7 +37,7 @@
         "!$basePath/libs/**/*.*",
         "!$basePath/prefab/**/*.*",
         "!$basePath/res/**/*.*",
-        "!$basePath/scene/**/*.*"
+        "!$basePath/loading/**/*.*"
     ],
     "versionNoteList": [
         "",
@@ -81,7 +81,7 @@
     "useMinJsLibs": true,
     "es6toes5": false,
     "projectType": "js",
-    "pubTime": 1598443153109,
+    "pubTime": 1598462602828,
     "uesEnginePlugin": false,
     "wxOptimize": {
         "useOptimizeOpen": false,
