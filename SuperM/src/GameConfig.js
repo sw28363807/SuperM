@@ -29,6 +29,7 @@ import LiuShaLogic from "./script/LiuShaLogic"
 import WaterLogic from "./script/WaterLogic"
 import MoveBrickLogic from "./script/MoveBrickLogic"
 import RenderTextureLogic from "./script/RenderTextureLogic"
+import ShuiMuLogic from "./ShuiMuLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -73,6 +74,7 @@ export default class GameConfig {
 		reg("script/WaterLogic.js",WaterLogic);
 		reg("script/MoveBrickLogic.js",MoveBrickLogic);
 		reg("script/RenderTextureLogic.js",RenderTextureLogic);
+		reg("ShuiMuLogic.js",ShuiMuLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);

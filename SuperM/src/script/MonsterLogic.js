@@ -94,7 +94,7 @@ export default class MonsterLogic extends Laya.Script {
         }
         else if (other.label == "Water") {
             let rigidBody = this.owner.getComponent(Laya.RigidBody);
-            if (rigidBody.label != "Fish") {
+            if (rigidBody.label != "Fish" && rigidBody.label != "ShuiMu") {
                 Utils.createMonsterDropDeadEffect(this.owner);
             }
         }

@@ -2,7 +2,6 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":9336,
     "searchKey":"Scene,gameScene",
     "props":{"width":1336,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,

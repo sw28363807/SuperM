@@ -1,0 +1,25 @@
+{
+    "x":0,
+    "type":"Animation",
+    "selectedBox":1535,
+    "searchKey":"Animation,QiZhu",
+    "props":{"y":0,"x":0,"source":"anim/shuicao/QiZhu.ani","presetID":1,"preset":"laya/pages/prefab/other/QiZhu.prefab","name":"QiZhu","isPresetRoot":true,"autoPlay":true,"autoAnimation":"ani1"},
+    "nodeParent":-1,
+    "maxID":1536,
+    "label":"QiZhu",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":1535,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

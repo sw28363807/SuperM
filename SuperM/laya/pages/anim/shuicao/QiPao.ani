@@ -1,0 +1,122 @@
+{
+    "x":0,
+    "type":"View",
+    "selectedBox":2,
+    "searchKey":"View",
+    "props":{"sceneWidth":171,"sceneHeight":480,"sceneColor":"#000000"},
+    "nodeParent":-1,
+    "maxID":3,
+    "label":"View",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":2,
+    "child":[
+        {
+            "type":"GraphicNode",
+            "searchKey":"GraphicNode",
+            "props":{},
+            "nodeParent":2,
+            "label":"GraphicNode",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3,
+            "child":[
+                ]
+        }],
+    "animations":[
+        {
+            "nodes":[
+                {
+                    "target":3,
+                    "keyframes":{
+                        "skin":[
+                            {
+                                "value":"other1/qipao (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"other1/qipao (2).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":2
+                            },
+                            {
+                                "value":"other1/qipao (3).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":4
+                            },
+                            {
+                                "value":"other1/qipao (4).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":6
+                            },
+                            {
+                                "value":"other1/qipao (5).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":8
+                            },
+                            {
+                                "value":"other1/qipao (6).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":10
+                            },
+                            {
+                                "value":"other1/qipao (7).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":12
+                            },
+                            {
+                                "value":"other1/qipao (8).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":14
+                            },
+                            {
+                                "value":"other1/qipao (9).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":16
+                            },
+                            {
+                                "value":"other1/qipao (10).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":18
+                            }]
+                    }
+                }],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}
