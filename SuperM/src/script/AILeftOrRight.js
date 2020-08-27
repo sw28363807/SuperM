@@ -13,14 +13,6 @@ export default class AILeftOrRight extends Laya.Script {
         this.speed = 2;
     }
 
-    // onStopAI(data) {
-    //     if (this.owner != data.owner) {
-    //         return;
-    //     }
-    //     this.owner.currentVelocity = null;
-    //     this.owner.rigidBody.setVelocity({x: 0, y: 0});
-    // }
-
     onStart() {
         this.startAI();
     }
@@ -31,7 +23,6 @@ export default class AILeftOrRight extends Laya.Script {
 
 
     startAI() {
-        // EventMgr.getInstance().registEvent(Events.Monster_Stop_AI, this, this.onStopAI);
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         let a = Utils.randomSign();
         this.owner.currentVelocity = {x:  a * this.speed, y: 0};
@@ -51,7 +42,7 @@ export default class AILeftOrRight extends Laya.Script {
             if (other.label == "AILeft") {
                 this.owner.currentVelocity = {x: this.speed, y: 0};
                 this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
-            } else if (other.label == "MonsterBody") {
+            } else if (other.label == "MonsterBody" || other.label == "MonsterFoot") {
                 let dx =  Utils.getSign(this.owner.x - other.owner.x);
                 this.owner.currentVelocity = {x: dx * this.owner.currentVelocity.x, y: 0};
                 this.owner.renderMonster.scaleX = Utils.getSign(this.owner.currentVelocity.x) * Math.abs(this.owner.renderMonster.scaleX); 
