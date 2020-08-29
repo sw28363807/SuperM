@@ -17,7 +17,10 @@ export default class GameContext extends Laya.Script {
         }
     }
 
-    static triggerGotoHole(hole) {
+    static triggerGotoHole(hole, height) {
+        if (height == undefined || height == null) {
+            height = 300;
+        }
         GameContext.roleIsDrop = true;
         GameContext.setRoleSensorEnabled(true);
         if (GameContext.gameRoleState == 1) {
@@ -36,7 +39,7 @@ export default class GameContext extends Laya.Script {
                 GameContext.roleIsDrop = false;
                 GameContext.setRoleSensorEnabled(false);
                 GameContext.setRoleSpeed(0, 0);
-                GameContext.setRolePosition(hole.x - 200, 300);
+                GameContext.setRolePosition(hole.x - 200, height);
             }
         });
     }
@@ -310,6 +313,7 @@ GameContext.roleCommandFly = false;
 GameContext.roleFlyState = false;
 GameContext.roleInWaterObject = null;
 GameContext.roleInMoveGround = false;
+GameContext.roleInMoveGroundObject = null;
 GameContext.roleIsDrop = false;
 GameContext.roleHurting = false;
 GameContext.roleShuiGuanState = 0; // 0 不在水管 1 进水管 2 正在播放过度动画

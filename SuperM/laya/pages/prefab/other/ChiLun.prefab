@@ -1,0 +1,1 @@
+{"type":"Animation","props":{"source":"anim/ChiLun.ani","name":"ChiLun","autoPlay":true,"autoAnimation":"ani1","preset":"laya/pages/prefab/other/ChiLun.prefab","presetID":1,"isPresetRoot":true,"x":0,"y":0},"compId":1557,"child":[],"isAniNode":true,"nodeParent":2,"searchKey":"Animation,ChiLun","label":"ChiLun","isDirectory":false,"hasChild":false,"x":15}

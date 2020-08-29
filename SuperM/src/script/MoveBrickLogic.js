@@ -1,4 +1,5 @@
 import GameContext from "../GameContext";
+import Utils from "./Utils";
 
 export default class MoveBrickLogic extends Laya.Script {
 
@@ -12,9 +13,18 @@ export default class MoveBrickLogic extends Laya.Script {
         let moveDirect = 1;
         /** @prop {name:moveSpeed, tips:"移动速度", type:Int, default:2}*/
         let moveSpeed = 2;
+        /** @prop {name:movePoints, tips:"移动路径", type:String, default:""}*/
+        let movePoints = "";
+        /** @prop {name:moveStartType, tips:"移动开始类型 1 站上去开始 2 随时开始", type:Int, default:1}*/
+        let moveStartType = 1;
+        /** @prop {name:moveDropType, tips:"移动掉落类型 1 不掉落 2 掉落", type:Int, default:1}*/
+        let moveDropType = 1;
     }
-    
+
     onEnable() {
+    }
+
+    onStart() {
         let script =  this.owner.getComponent(MoveBrickLogic);
         if (script.moveType) {
             this.owner.moveType = script.moveType;
@@ -40,47 +50,176 @@ export default class MoveBrickLogic extends Laya.Script {
             this.owner.moveSpeed = 2;
         }
 
-        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.direct = 1;
-        this.owner.isStart = false;
+        if (script.movePoints) {
+            this.owner.movePoints = script.movePoints;
+        } else {
+            this.owner.movePoints = "";
+        }
 
+        
+        if (script.moveStartType) {
+            this.owner.moveStartType = script.moveStartType;
+        } else {
+            this.owner.moveStartType = 1;
+        }
+
+        if (script.moveDropType) {
+            this.owner.moveDropType = script.moveDropType;
+        } else {
+            this.owner.moveDropType = 1;
+        }
+
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.renderBrick = this.owner.getChildByName("render");
+        this.owner.direct = {x: 0, y: 0};
+        this.owner.isStart = false;
+        let colls = this.owner.getComponents(Laya.ColliderBase);
+        for (let index = 0; index < colls.length; index++) {
+            let coll = colls[index];
+            if (coll.label == "MoveBrickArea") {
+                this.owner.moveBrickArea = coll;
+                break;
+            }
+        }
+
+        this.owner.movePointsIndex = 0;
+        this.owner.nextMovePointsIndex = 0;
+        this.owner.movePointsState = 1; // 1 正向 2反向
+        this.owner.pointsArray = [];
+        this.processPoints();
+        if (this.owner.moveStartType == 2) {
+            this.processNextMovePoints();
+            this.moveBoard();
+            this.owner.isStart = true;
+        }
         // this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
     }
 
-    onStart() {
+    setIsSensor(enabled) {
+        this.owner.moveBrickArea.isSensor = enabled;
+    }
 
+    processPoints() {
+        let str = this.owner.movePoints;
+        let arr = str.split("*");
+        for (let index = 0; index < arr.length; index++) {
+            let a = arr[index];
+            let b =  a.split(",");
+            let x = Number(b[0]);
+            let y = Number(b[1]);
+            this.owner.pointsArray.push({x: x, y: y});
+        }
+    }
+
+    processNextMovePoints() {
+        let curPintIndex = this.owner.movePointsIndex;
+        if (this.owner.movePointsState == 1) { 
+            curPintIndex++;
+            if (curPintIndex == this.owner.pointsArray.length) {
+                curPintIndex = curPintIndex - 2;
+                this.owner.movePointsState = 2;
+            }
+        } else if (this.owner.movePointsState == 2) {
+            curPintIndex--;
+            if (curPintIndex < 0) {
+                curPintIndex = 1;
+                this.owner.movePointsState = 1;
+            }
+        }
+        this.owner.nextMovePointsIndex = curPintIndex;
+    }
+
+    moveBoard() {
+        // let curPoint = this.owner.pointsArray[this.owner.movePointsIndex];
+        // this.owner.rigidBody.getBody().SetPositionXY(curPoint.x/50, curPoint.y/50);
+        this.processMoveSpeed();
+    }
+
+    processMoveSpeed() {
+        let x = this.owner.x;
+        let y = this.owner.y;
+        let nextPoint = this.owner.pointsArray[this.owner.nextMovePointsIndex];
+        this.owner.direct = Utils.getDirect(nextPoint.x, nextPoint.y, x, y);
+        this.owner.rigidBody.setVelocity({x: this.owner.direct.x * this.owner.moveSpeed,
+             y: this.owner.direct.y * this.owner.moveSpeed});
+    }
+
+    processReach() {
+        if (this.owner.moveType == 2) {
+            if (this.owner.isStart == false) {
+                return;
+            }
+            // this.processMoveSpeed();
+            // let curPoint = this.owner.pointsArray[this.owner.movePointsIndex];
+            let nextPoint = this.owner.pointsArray[this.owner.nextMovePointsIndex];
+            let delX = nextPoint.x - this.owner.x;
+            let delY = nextPoint.y - this.owner.y;
+            if (Utils.getSign(delX) != Utils.getSign(this.owner.direct.x) ||
+                Utils.getSign(delY) != Utils.getSign(this.owner.direct.y)) {
+                this.owner.movePointsIndex = this.owner.nextMovePointsIndex;
+                if (this.owner.moveDropType == 2) {
+                    if (this.owner.movePointsIndex == this.owner.pointsArray.length - 1) {
+                        this.owner.isStart = false;
+                        this.setIsSensor(true);
+                        this.owner.rigidBody.setVelocity({x: 0, y: 10});
+                        this.owner.movePointsIndex = 0;
+                        this.owner.nextMovePointsIndex = 0;
+                        Laya.timer.once(2000, this, function() {
+                            if (!this.owner) {
+                                return;
+                            }
+                            this.setIsSensor(false);
+                            let zeroPoint = this.owner.pointsArray[0];
+                            this.owner.direct = {x: 0, y: 0};
+                            this.owner.rigidBody.setVelocity({x: 0, y: 0});
+                            this.owner.rigidBody.getBody().SetPositionXY(zeroPoint.x/50, zeroPoint.y/50);
+                        });
+                        return;
+                    }
+                }
+                this.processNextMovePoints();
+                this.moveBoard();
+            }
+        }
     }
 
     startMove() {
         if (this.owner.moveType == 1) {
             Laya.timer.loop(this.owner.moveTime, this, this.onSwitchDirect);
+        } else if (this.owner.moveType == 2) {
+            this.setIsSensor(false);
+            this.processNextMovePoints();
+            this.moveBoard();
         } else if (this.owner.moveType == 3) {
-            this.owner.rigidBody.setVelocity({x: this.owner.direct * this.owner.moveSpeed, y: 0});
+            this.owner.rigidBody.setVelocity({x: this.owner.direct.x * this.owner.moveSpeed, y: 0});
             this.refreshSpeed();
         }
     }
 
     onSwitchDirect() {
         if (this.owner.moveDirect == 1 || this.owner.moveDirect == 3) {
-            this.owner.direct = -this.owner.direct;
-            this.owner.rigidBody.setVelocity({x: this.owner.direct * this.owner.moveSpeed, y: 0});
+            this.owner.direct.x = -this.owner.direct.x;
+            this.owner.rigidBody.setVelocity({x: this.owner.direct.x * this.owner.moveSpeed, y: 0});
             this.refreshSpeed();
         }
     }
 
     onTriggerEnter(other, self, contact) {
         if (other.label == "RoleFoot" && self.label == "MoveBrickStartArea" && this.owner.isStart == false) {
-            this.owner.isStart = true;
-            this.startMove();
+            if (this.owner.moveStartType == 1) {
+                this.owner.isStart = true;
+                this.startMove();
+            }
         } else if (other.label == "RoleFoot") {
             GameContext.roleInMoveGround = true;
+            GameContext.roleInMoveGroundObject = this.owner;
             this.refreshSpeed();
         } else if (other.label == "AILeft") {
-            if (this.owner.direct == -1) {
+            if (this.owner.direct.x == -1) {
                 this.onSwitchDirect();
             }
         } else if (other.label == "AIRight") {
-            if (this.owner.direct == 1) {
+            if (this.owner.direct.x == 1) {
                 this.onSwitchDirect();
             }
         }
@@ -88,25 +227,29 @@ export default class MoveBrickLogic extends Laya.Script {
 
     onTriggerExit(other, self, contact) {
         if (other.label == "RoleFoot") {
+            GameContext.roleInMoveGroundObject = null;
             GameContext.roleInMoveGround = false;
         }
     }
 
     refreshSpeed() {
-        if (GameContext.roleInMoveGround) {
+        if (GameContext.roleInMoveGround && GameContext.roleInMoveGroundObject == this.owner) {
             if (this.owner.moveDirect == 1) {
                 if (GameContext.commandWalk == false) {
                     let lineSpeed =  GameContext.getLineSpeed();
-                    GameContext.setRoleSpeed(this.owner.direct * this.owner.moveSpeed, lineSpeed.y);
+                    let lineSpeed2 = this.owner.rigidBody.linearVelocity;
+                    GameContext.setRoleSpeed(lineSpeed2.x, lineSpeed.y);
                 }
             } else if (this.owner.moveDirect == 2) {
-                GamepadEvent.roleOutSpeed = {x: 0, y: this.owner.direct * this.owner.moveSpeed};
+                GamepadEvent.roleOutSpeed = {x: 0, y: this.owner.direct.y * this.owner.moveSpeed};
             }
         }
     }
 
     onUpdate() {
         this.refreshSpeed();
+        this.processReach();
+
     }
     
     onDisable() {
