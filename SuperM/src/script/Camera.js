@@ -23,8 +23,8 @@ export default class Camera extends Laya.Script {
         }
         // this.owner.y = this.owner.y
         // let rp = this.role.parent.localToGlobal(new Laya.Point(this.role.x, this.role.y));
-        if (this.role.y < 300) {
-            this.owner.y = this.standY - (this.role.y - 300);
+        if (this.role.y < 200) {
+            this.owner.y = this.standY - (this.role.y - 200);
         } else {
             this.owner.y =  this.standY;
         }
