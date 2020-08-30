@@ -258,6 +258,9 @@ export default class Role extends Laya.Script {
                         GameContext.roleInGround = true;
                         GameContext.setRoleMove(0, 0);
                         GameContext.playRoleAni("stand");
+                        // if (other.owner.name != "CiQiu") {
+
+                        // }
                         if (other.owner.name == "Flower") {
                         } else {
                             if (Utils.roleInCeil(other.owner)) {
@@ -282,7 +285,8 @@ export default class Role extends Laya.Script {
             if (contact.m_manifold.localNormal >= 0) {
                 return;
             }
-            if (other.label == "obsGround") {
+
+            if (other.label == "obsGround" || other.label == "MoveBrickStartArea") {
                 if (other.isSensor == true) {
                     return;
                 }
@@ -291,21 +295,16 @@ export default class Role extends Laya.Script {
             if (other.label == "FlowerNoOut") {
                 return;
             }
+
             if (other.label != "ShuiguanHeadEnter") {
                 GameContext.roleShuiGuanState = 0;
             }
             GameContext.roleInGround = true;
-            if (GameContext.roleHurting == true) {
-                GameContext.roleHurting = false;
-                GameContext.setRoleMove(0, 0);
-                GameContext.playRoleAni("stand");
-            } else {
-                if (GameContext.commandWalk == false) {
-                    if (GameContext.roleInWater == false) {
-                        GameContext.setRoleMove(0, 0);
-                    }
-                    GameContext.playRoleAni("");
+            if (GameContext.commandWalk == false) {
+                if (GameContext.roleInWater == false) {
+                    GameContext.setRoleMove(0, 0);
                 }
+                GameContext.playRoleAni("stand");
             }
             if (GameContext.isWin) {
                 Utils.triggerRoleWinGotoDoor();

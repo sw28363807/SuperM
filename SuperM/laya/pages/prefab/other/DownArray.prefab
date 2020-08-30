@@ -1,0 +1,1 @@
+{"type":"Animation","props":{"source":"anim/DownArray.ani","name":"DownArray","autoPlay":true,"autoAnimation":"ani1","preset":"laya/pages/prefab/other/DownArray.prefab","presetID":1,"isPresetRoot":true,"x":0,"y":0},"compId":1612,"child":[],"isAniNode":true,"nodeParent":2,"searchKey":"Animation,DownArray","label":"DownArray","isDirectory":false,"hasChild":false,"x":15}

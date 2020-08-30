@@ -1,3 +1,6 @@
+import EventMgr from "./script/EventMgr";
+import Events from "./script/Events";
+
 export default class GameContext extends Laya.Script {
 
     constructor() { 
@@ -17,9 +20,12 @@ export default class GameContext extends Laya.Script {
         }
     }
 
-    static triggerGotoHole(hole, height) {
+    static triggerGotoHole(hole, height, widthOff) {
         if (height == undefined || height == null) {
             height = 300;
+        }
+        if (widthOff == undefined || widthOff == null) {
+            widthOff = -200;
         }
         GameContext.roleIsDrop = true;
         GameContext.setRoleSensorEnabled(true);
@@ -39,7 +45,8 @@ export default class GameContext extends Laya.Script {
                 GameContext.roleIsDrop = false;
                 GameContext.setRoleSensorEnabled(false);
                 GameContext.setRoleSpeed(0, 0);
-                GameContext.setRolePosition(hole.x - 200, height);
+                GameContext.setRolePosition(hole.x + widthOff, height);
+                EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
             }
         });
     }

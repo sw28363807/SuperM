@@ -33,6 +33,7 @@ import RenderTextureLogic from "./script/RenderTextureLogic"
 import ShuiMuLogic from "./script/ShuiMuLogic"
 import DisBrickLogic from "./script/DisBrickLogic"
 import CiQiuLogic from "./script/CiQiuLogic"
+import DeadWaterLogic from "./script/DeadWaterLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -42,7 +43,6 @@ import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import HeadBulletLogic from "./script/HeadBulletLogic"
 import KeLogic from "./script/KeLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
-import DeadWaterLogic from "./script/DeadWaterLogic"
 
 export default class GameConfig {
     static init() {
@@ -82,6 +82,7 @@ export default class GameConfig {
 		reg("script/ShuiMuLogic.js",ShuiMuLogic);
 		reg("script/DisBrickLogic.js",DisBrickLogic);
 		reg("script/CiQiuLogic.js",CiQiuLogic);
+		reg("script/DeadWaterLogic.js",DeadWaterLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
@@ -91,7 +92,6 @@ export default class GameConfig {
 		reg("script/HeadBulletLogic.js",HeadBulletLogic);
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
-		reg("script/DeadWaterLogic.js",DeadWaterLogic);
     }
 }
 GameConfig.width = 1336;

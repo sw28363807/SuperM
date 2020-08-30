@@ -8,8 +8,8 @@ export default class CiQiuLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.moveSpeed = 6;
-        this.jumpSpeed = 35;
+        this.moveSpeed = 2.1;
+        this.jumpSpeed = 28;
     }
 
     onDisable() {
@@ -18,14 +18,16 @@ export default class CiQiuLogic extends Laya.Script {
     }
 
     onStart() {
-        this.owner.state = 1; //1 搜索模式 2 攻击模式 3 下落模式
+        this.owner.state = 1; //1 搜索模式 2 攻击模式 3 等待模式
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.rigidBody.gravityScale = 0;
 
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
 
-        Laya.timer.loop(2000, this, this.onTriggerLookupRole);
+        Laya.timer.loop(3000, this, this.onTriggerLookupRole);
         Laya.timer.loop(1500, this, this.onTriggerAttackRole);
+        this.owner.renderAni.play(0, true, "ani1");
     }
 
     onTriggerEnter(other, self, contact) {
@@ -49,6 +51,7 @@ export default class CiQiuLogic extends Laya.Script {
             return;
         }
         if (this.owner.state == 1) {
+            this.owner.renderAni.play(0, true, "ani1");
             let roleX = GameContext.role.x;
             let x = this.owner.x;
             let direct = Utils.getSign(roleX - x);
@@ -69,7 +72,14 @@ export default class CiQiuLogic extends Laya.Script {
                 this.owner.state = 2;
                 this.owner.rigidBody.gravityScale = 5;
                 let direct = Utils.getDirect(roleX, roleY, x, y);
-                this.owner.rigidBody.setVelocity({x: direct.x * 5, y: direct.y * this.jumpSpeed});
+                let jspeed = this.jumpSpeed;
+                if (direct.y <  -0.5) {
+                    jspeed = this.jumpSpeed * 0.8;
+                } else {
+                    jspeed = this.jumpSpeed;
+                }
+                this.owner.rigidBody.setVelocity({x: direct.x * 5, y: direct.y * jspeed});
+                this.owner.renderAni.play(0, true, "ani2");
             }
         }
     }
@@ -87,8 +97,16 @@ export default class CiQiuLogic extends Laya.Script {
             if (linearVelocity.y > 0) {
                 if (this.owner.y > this.owner.startPoint.y) {
                     this.owner.rigidBody.gravityScale = 0;
-                    this.owner.state = 1;
-                    this.owner.rigidBody.getBody().SetPositionXY(this.owner.x/50, this.owner.startPoint.y/50);
+                    this.owner.state = 3;
+                    this.owner.rigidBody.getBody().SetPositionXY(this.owner.x/50, this.owner.startPoint.y/50)
+                    this.owner.rigidBody.setVelocity({x: 0, y: 0});
+                    this.owner.renderAni.play(0, true, "ani1");
+                    Laya.timer.once(2000, this, function() {
+                        if (!this.owner) {
+                            return;
+                        }
+                        this.owner.state = 1;
+                    });
                 }
             }
         }

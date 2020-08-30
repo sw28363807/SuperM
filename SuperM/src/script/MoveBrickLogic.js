@@ -1,5 +1,7 @@
 import GameContext from "../GameContext";
 import Utils from "./Utils";
+import EventMgr from "./EventMgr";
+import Events from "./Events";
 
 export default class MoveBrickLogic extends Laya.Script {
 
@@ -25,6 +27,7 @@ export default class MoveBrickLogic extends Laya.Script {
     }
 
     onStart() {
+        EventMgr.getInstance().registEvent(Events.Role_GoTo_Hole_Or_Water_Dead, this, this.onRoleGoToWaterDead);
         let script =  this.owner.getComponent(MoveBrickLogic);
         if (script.moveType) {
             this.owner.moveType = script.moveType;
@@ -95,6 +98,24 @@ export default class MoveBrickLogic extends Laya.Script {
         // this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
     }
 
+    resetMoveBrick() {
+        this.owner.isStart = false;
+        this.setIsSensor(true);
+        this.owner.rigidBody.setVelocity({x: 0, y: 10});
+        this.owner.movePointsIndex = 0;
+        this.owner.nextMovePointsIndex = 0;
+        Laya.timer.once(2000, this, function() {
+            if (!this.owner) {
+                return;
+            }
+            this.setIsSensor(false);
+            let zeroPoint = this.owner.pointsArray[0];
+            this.owner.direct = {x: 0, y: 0};
+            this.owner.rigidBody.setVelocity({x: 0, y: 0});
+            this.owner.rigidBody.getBody().SetPositionXY(zeroPoint.x/50, zeroPoint.y/50);
+        });
+    }
+
     setIsSensor(enabled) {
         this.owner.moveBrickArea.isSensor = enabled;
     }
@@ -159,21 +180,7 @@ export default class MoveBrickLogic extends Laya.Script {
                 this.owner.movePointsIndex = this.owner.nextMovePointsIndex;
                 if (this.owner.moveDropType == 2) {
                     if (this.owner.movePointsIndex == this.owner.pointsArray.length - 1) {
-                        this.owner.isStart = false;
-                        this.setIsSensor(true);
-                        this.owner.rigidBody.setVelocity({x: 0, y: 10});
-                        this.owner.movePointsIndex = 0;
-                        this.owner.nextMovePointsIndex = 0;
-                        Laya.timer.once(2000, this, function() {
-                            if (!this.owner) {
-                                return;
-                            }
-                            this.setIsSensor(false);
-                            let zeroPoint = this.owner.pointsArray[0];
-                            this.owner.direct = {x: 0, y: 0};
-                            this.owner.rigidBody.setVelocity({x: 0, y: 0});
-                            this.owner.rigidBody.getBody().SetPositionXY(zeroPoint.x/50, zeroPoint.y/50);
-                        });
+                        this.resetMoveBrick();
                         return;
                     }
                 }
@@ -253,6 +260,13 @@ export default class MoveBrickLogic extends Laya.Script {
     }
     
     onDisable() {
+        EventMgr.getInstance().removeEvent(Events.Role_GoTo_Hole_Or_Water_Dead, this, this.onRoleGoToWaterDead);
         Laya.timer.clear(this, this.onSwitchDirect);
+    }
+
+    onRoleGoToWaterDead() {
+        if (this.owner.moveDropType == 2) {
+            this.resetMoveBrick();   
+        }
     }
 }
