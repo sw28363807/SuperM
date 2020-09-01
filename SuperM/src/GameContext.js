@@ -373,3 +373,5 @@ GameContext.brokenBrickTick = 0;
 GameContext.monsters = [];
 GameContext.monsterArea = 1000;
 GameContext.monsterAreaY = 800;
+
+GameContext.DeadWaterY = 0;

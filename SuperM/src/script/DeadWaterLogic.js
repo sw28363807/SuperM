@@ -1,4 +1,6 @@
 import GameContext from "../GameContext";
+import EventMgr from "./EventMgr";
+import Events from "./Events";
 
 export default class DeadWaterLogic extends Laya.Script {
 
@@ -8,14 +10,13 @@ export default class DeadWaterLogic extends Laya.Script {
         let resetPosX = 0;
         /** @prop {name:upHeight, tips:"上浮位置", type:Int, default:0}*/
         let upHeight = 0;
-        /** @prop {name:upTime, tips:"上浮持续时间", type:Int, default:0}*/
-        let upTime = 0;
     }
     
     onEnable() {
     }
 
     onDisable() {
+        GameContext.DeadWaterY = 0;
     }
 
     onStart() {
@@ -32,10 +33,39 @@ export default class DeadWaterLogic extends Laya.Script {
             this.owner.upHeight = 0;
         }
 
-        if (script.upTime) {
-            this.owner.upTime = script.upTime;
-        } else {
-            this.owner.upTime = 0;
+        this.owner.state = 1; //1 退潮 2 退->涨 3 涨潮 4 涨->退
+        this.owner.tickCount = 0;
+        this.owner.downPosY = this.owner.y;
+        this.owner.upPosY = this.owner.y - this.owner.upHeight;
+        this.owner.upSpeed = -1;
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+    }
+
+    onUpdate() {
+        if (this.owner.upHeight != 0 &&
+             this.owner.upHeight != null &&
+              this.owner.upHeight != undefined) {
+                if (this.owner.state == 1) {
+                    this.owner.tickCount++;
+                    if (this.owner.tickCount >= 200) {
+                        this.owner.tickCount = 0;
+                        this.owner.state = 2;
+                    }
+                } else if (this.owner.state == 2) {
+                    this.owner.tickCount++;
+                    this.owner.rigidBody.setVelocity({x: 0, y: this.owner.upSpeed});
+                    if (this.owner.y <= this.owner.upPosY) {
+                        let body = this.owner.rigidBody.getBody();
+                        let p = body.GetPosition();
+                        body.SetPositionXY(p.x, this.owner.upPosY/50);
+                        this.owner.rigidBody.setVelocity({x: 0, y: 0});
+                        this.owner.state = 3;
+                    }
+                }
+                GameContext.DeadWaterY = this.owner.y - this.owner.downPosY;
+                if (Math.abs(GameContext.DeadWaterY) < 0.000001) {
+                    GameContext.DeadWaterY = 0;
+                }
         }
     }
 
@@ -46,4 +76,5 @@ export default class DeadWaterLogic extends Laya.Script {
             }
         }
     }
+
 }

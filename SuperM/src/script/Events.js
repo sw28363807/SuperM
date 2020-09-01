@@ -27,3 +27,4 @@ Events.Refresh_Role_Number = "Refresh_Role_Number";
 Events.Refresh_Gold_Number = "Refresh_Gold_Number";
 Events.Monster_Shoot_Bullet = "Monster_Shoot_Bullet";
 Events.Role_GoTo_Hole_Or_Water_Dead = "Role_GoTo_Hole_Or_Water_Dead";
+Events.Dead_Water_Up = "Dead_Water_Up";

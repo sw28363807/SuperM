@@ -1,5 +1,7 @@
 import Utils from "./Utils";
 import GameContext from "../GameContext";
+import EventMgr from "./EventMgr";
+import Events from "./Events";
 
 export default class BigRedFishLogic extends Laya.Script {
 
@@ -14,11 +16,13 @@ export default class BigRedFishLogic extends Laya.Script {
     }
 
     onStart() {
+
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.rigidBody.gravityScale = 0;
         this.owner.startPointX = this.owner.x;
         this.owner.startPointY = this.owner.y - this.owner.height/2;
+        this.owner.finalStartPointY = this.owner.startPointY + GameContext.DeadWaterY;
         this.owner.moveSpeedX = 6;
         this.owner.jumpSpeedX = 5;
         this.owner.jumpSpeedY = 30;
@@ -78,22 +82,25 @@ export default class BigRedFishLogic extends Laya.Script {
     }
 
     onUpdate() {
+        this.owner.finalStartPointY = this.owner.startPointY + GameContext.DeadWaterY;
+        console.debug(GameContext.DeadWaterY);
         if (this.owner.state == 1) {
             let distanceWithRole = this.getDistanceWithRoleX();
             let direct = this.getDirectWithRole();
             if (distanceWithRole > 200) {
                 let dx = Utils.getSign(direct.x);
                 this.setSpeed(dx * this.owner.moveSpeedX, 0);
+                this.setFishPositionY(this.owner.finalStartPointY);
             } else {
                 this.owner.state = 2;
                 this.jumpToRole();
             }
         } else if (this.owner.state == 2) {
             let linearVelocity = this.owner.rigidBody.linearVelocity;
-            if (this.owner.y >= this.owner.startPointY && linearVelocity.y > 0) {
+            if (this.owner.y >= this.owner.finalStartPointY && linearVelocity.y > 0) {
                 this.owner.state = 3;
                 this.owner.rigidBody.gravityScale = 0;
-                this.setFishPositionY(this.owner.startPointY);
+                this.setFishPositionY(this.owner.finalStartPointY);
                 this.setSpeed(0, 0);
                 let direct = this.getDirectWithRole();
                 this.owner.renderAni.scaleX = Utils.getSign(direct.x) * Math.abs(this.owner.renderAni.scaleX);

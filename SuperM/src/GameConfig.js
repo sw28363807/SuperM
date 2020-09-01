@@ -36,7 +36,6 @@ import CiQiuLogic from "./script/CiQiuLogic"
 import DeadWaterLogic from "./script/DeadWaterLogic"
 import JumpMonsterLogic from "./script/JumpMonsterLogic"
 import PenShuiMonsterLogic from "./script/PenShuiMonsterLogic"
-import BigRedFishLogic from "./script/BigRedFishLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -44,6 +43,7 @@ import MoreTimeBrick from "./script/MoreTimeBrick"
 import BulletLogic from "./script/BulletLogic"
 import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import HeadBulletLogic from "./script/HeadBulletLogic"
+import BigRedFishLogic from "./script/BigRedFishLogic"
 import PenShuiEffectLogic from "./script/PenShuiEffectLogic"
 import KeLogic from "./script/KeLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
@@ -89,7 +89,6 @@ export default class GameConfig {
 		reg("script/DeadWaterLogic.js",DeadWaterLogic);
 		reg("script/JumpMonsterLogic.js",JumpMonsterLogic);
 		reg("script/PenShuiMonsterLogic.js",PenShuiMonsterLogic);
-		reg("script/BigRedFishLogic.js",BigRedFishLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
@@ -97,6 +96,7 @@ export default class GameConfig {
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/FlowerBulletLogic.js",FlowerBulletLogic);
 		reg("script/HeadBulletLogic.js",HeadBulletLogic);
+		reg("script/BigRedFishLogic.js",BigRedFishLogic);
 		reg("script/PenShuiEffectLogic.js",PenShuiEffectLogic);
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
