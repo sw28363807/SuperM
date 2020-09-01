@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":9783,
+    "selecteID":9793,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":9793,
+    "maxID":9795,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -36774,6 +36774,114 @@
                     "action":0
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1699,
+            "selecteID":1494,
+            "searchKey":"Box",
+            "props":{"y":733,"x":1487,"presetID":1,"preset":"laya/pages/prefab/monster/BigRedFish.prefab"},
+            "nodeParent":2,
+            "maxID":1701,
+            "label":"BigRedFish",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":9793,
+            "child":[
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/BigRedFish.prefab"},
+                    "nodeParent":9793,
+                    "label":"RigidBody(BigRedFish)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1493,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/BigRedFish.prefab"},
+                    "nodeParent":9793,
+                    "label":"render",
+                    "isOpen":null,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1494,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/BigRedFish.prefab"},
+                    "nodeParent":9793,
+                    "label":"BoxCollider(BigRedFish)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1500,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/BigRedFish.prefab"},
+                    "nodeParent":9793,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1502,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/BigRedFishLogic.js",
+                    "searchKey":"Script,BigRedFishLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/BigRedFish.prefab"},
+                    "nodeParent":9793,
+                    "label":"BigRedFishLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9794,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
         }],
     "animations":[
         {
