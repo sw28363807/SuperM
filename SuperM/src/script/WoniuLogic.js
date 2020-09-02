@@ -16,28 +16,7 @@ export default class WoniuLogic extends Laya.Script {
     }
     
     onEnable() {
-        let script = this.owner.getComponent(WoniuLogic);
-        if (script && script.deadMove) {
-            this.owner.deadMove = script.deadMove;
-        } else {
-            this.owner.deadMove = "";
-        }
-
-        if (script && script.prefab) {
-            this.owner.prefab = script.prefab;
-        } else {
-            this.owner.prefab = "";
-        }
-
-        if (script && script.deadAngle) {
-            this.owner.deadAngle = script.deadAngle;
-        } else {
-            this.owner.deadAngle = -3.14;
-        }
-
-        this.speed = 2;
     }
-
     onDisable() {
         EventMgr.getInstance().removeEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().removeEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
@@ -62,7 +41,6 @@ export default class WoniuLogic extends Laya.Script {
     }
 
     removeThisMonster() {
-
         if (this.owner.monsterCount > 0) {
             this.owner.monsterCount--;
         }
@@ -105,10 +83,6 @@ export default class WoniuLogic extends Laya.Script {
     }
 
     onStart() {
-        this.startAI();
-    }
-
-    startAI() {
         if (!this.owner) {
             return;
         }
@@ -116,6 +90,27 @@ export default class WoniuLogic extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
         EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
 
+
+        let script = this.owner.getComponent(WoniuLogic);
+        if (script && script.deadMove) {
+            this.owner.deadMove = script.deadMove;
+        } else {
+            this.owner.deadMove = "";
+        }
+
+        if (script && script.prefab) {
+            this.owner.prefab = script.prefab;
+        } else {
+            this.owner.prefab = "";
+        }
+
+        if (script && script.deadAngle) {
+            this.owner.deadAngle = script.deadAngle;
+        } else {
+            this.owner.deadAngle = -3.14;
+        }
+
+        this.speed = 2;
         this.owner.currentVelocity = {x: this.speed, y: 0};
         this.owner.monsterCount = 2;
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);

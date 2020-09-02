@@ -39,6 +39,7 @@ import PenShuiMonsterLogic from "./script/PenShuiMonsterLogic"
 import BigRedFishLogic from "./script/BigRedFishLogic"
 import DropBrickLogic from "./script/DropBrickLogic"
 import CiBrickLogic from "./script/CiBrickLogic"
+import ShiWoNiuLogic from "./script/ShiWoNiuLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -94,6 +95,7 @@ export default class GameConfig {
 		reg("script/BigRedFishLogic.js",BigRedFishLogic);
 		reg("script/DropBrickLogic.js",DropBrickLogic);
 		reg("script/CiBrickLogic.js",CiBrickLogic);
+		reg("script/ShiWoNiuLogic.js",ShiWoNiuLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);

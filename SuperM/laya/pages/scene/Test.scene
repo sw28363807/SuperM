@@ -1,90 +1,20 @@
 {
+    "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1710,
+    "selecteID":1716,
     "searchKey":"Scene",
     "props":{"width":5000,"sceneColor":"#48ab30","height":5000},
     "nodeParent":-1,
-    "maxID":1715,
+    "maxID":1718,
     "label":"Scene",
     "isOpen":true,
-    "isDirectory":true,
+    "isDirectory":false,
     "isAniNode":true,
-    "hasChild":true,
+    "hasChild":false,
     "compId":2,
     "child":[
-        {
-            "type":"Box",
-            "searchKey":"Box",
-            "props":{"presetID":1,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
-            "nodeParent":2,
-            "label":"DropBrick",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":1710,
-            "child":[
-                {
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
-                    "nodeParent":1710,
-                    "label":"Sprite(DropBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1711,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
-                    "nodeParent":1710,
-                    "label":"BoxCollider(DropBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1712,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
-                    "nodeParent":1710,
-                    "label":"RigidBody(DropBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1713,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/DropBrickLogic.js",
-                    "searchKey":"Script,DropBrickLogic",
-                    "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
-                    "nodeParent":1710,
-                    "label":"DropBrickLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1714,
-                    "child":[
-                        ]
-                }]
-        }],
+        ],
     "animations":[
         {
             "nodes":[

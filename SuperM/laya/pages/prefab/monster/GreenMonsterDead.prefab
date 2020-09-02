@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1518,
-    "selecteID":1522,
+    "selecteID":1521,
     "searchKey":"Box,GreenMonsterDead",
     "props":{"zOrder":100,"y":0,"x":0,"width":69,"scaleY":1.5,"scaleX":1.5,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonsterDead.prefab","pivotY":47,"pivotX":35,"name":"GreenMonsterDead","isPresetRoot":true,"height":47},
     "nodeParent":-1,
