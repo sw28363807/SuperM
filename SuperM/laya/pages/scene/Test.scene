@@ -2,19 +2,78 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1716,
+    "selecteID":1718,
     "searchKey":"Scene",
     "props":{"width":5000,"sceneColor":"#48ab30","height":5000},
     "nodeParent":-1,
-    "maxID":1718,
+    "maxID":1722,
     "label":"Scene",
     "isOpen":true,
-    "isDirectory":false,
+    "isDirectory":true,
     "isAniNode":true,
-    "hasChild":false,
+    "hasChild":true,
     "compId":2,
     "child":[
-        ],
+        {
+            "x":15,
+            "type":"Box",
+            "searchKey":"Box",
+            "props":{"presetID":1,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+            "nodeParent":2,
+            "label":"HuoYanChi",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":1718,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "nodeParent":1718,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1719,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "nodeParent":1718,
+                    "label":"BoxCollider(HuoYanChi)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1720,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "nodeParent":1718,
+                    "label":"RigidBody(HuoYanChi)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1721,
+                    "child":[
+                        ]
+                }]
+        }],
     "animations":[
         {
             "nodes":[

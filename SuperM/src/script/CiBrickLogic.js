@@ -34,8 +34,8 @@ export default class CiBrickLogic extends Laya.Script {
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
         this.owner.upPoint = {x: this.owner.x, y: this.owner.y - this.owner.upDistance};
         this.owner.downPoint = {x: this.owner.x, y: this.owner.y + this.owner.downDistance};
-        this.owner.outSpeed = 6;
-        this.owner.inSpeed = 2;
+        this.owner.outSpeed = 7;
+        this.owner.inSpeed = 4;
         this.owner.moveType = 1; //1 向上 2 向下 3 上下都有 4 不动
         if (this.owner.upDistance != 0 && this.owner.downDistance != 0) {
             this.owner.moveType = 3;
