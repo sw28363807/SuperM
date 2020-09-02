@@ -2,6 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1699,
+    "selecteID":1500,
     "searchKey":"Box,BigRedFish",
     "props":{"zOrder":99998,"y":0,"x":0,"width":220,"presetID":1,"preset":"laya/pages/prefab/monster/BigRedFish.prefab","pivotY":71,"pivotX":110,"name":"BigRedFish","isPresetRoot":true,"height":142},
     "nodeParent":-1,

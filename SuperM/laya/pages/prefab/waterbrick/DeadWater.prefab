@@ -20,7 +20,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":-5,"x":0,"width":400,"presetID":2,"preset":"laya/pages/prefab/waterbrick/DeadWater.prefab","label":"DeadWater","isSensor":true,"height":1000},
+            "props":{"y":-14,"x":0,"width":400,"presetID":2,"preset":"laya/pages/prefab/waterbrick/DeadWater.prefab","label":"DeadWater","isSensor":true,"height":1000},
             "nodeParent":1542,
             "label":"BoxCollider(DeadWater)",
             "isDirectory":false,

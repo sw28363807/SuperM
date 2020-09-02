@@ -285,7 +285,9 @@ export default class Role extends Laya.Script {
             if (contact.m_manifold.localNormal >= 0) {
                 return;
             }
-
+            if (other.label == "CiBrickSensor") {
+                return;
+            }
             if (other.label == "obsGround" || other.label == "MoveBrickStartArea") {
                 if (other.isSensor == true) {
                     return;

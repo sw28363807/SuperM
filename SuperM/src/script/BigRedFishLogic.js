@@ -83,10 +83,10 @@ export default class BigRedFishLogic extends Laya.Script {
 
     onUpdate() {
         this.owner.finalStartPointY = this.owner.startPointY + GameContext.DeadWaterY;
-        console.debug(GameContext.DeadWaterY);
         if (this.owner.state == 1) {
             let distanceWithRole = this.getDistanceWithRoleX();
             let direct = this.getDirectWithRole();
+            this.owner.renderAni.rotation = 0;
             if (distanceWithRole > 200) {
                 let dx = Utils.getSign(direct.x);
                 this.setSpeed(dx * this.owner.moveSpeedX, 0);
@@ -97,6 +97,11 @@ export default class BigRedFishLogic extends Laya.Script {
             }
         } else if (this.owner.state == 2) {
             let linearVelocity = this.owner.rigidBody.linearVelocity;
+            if (linearVelocity.y < 0) {
+                this.owner.renderAni.rotation = -Utils.getSign(this.owner.renderAni.scaleX) * 30;
+            } else if (linearVelocity.y > 0) {
+                this.owner.renderAni.rotation = Utils.getSign(this.owner.renderAni.scaleX) * 30;
+            }
             if (this.owner.y >= this.owner.finalStartPointY && linearVelocity.y > 0) {
                 this.owner.state = 3;
                 this.owner.rigidBody.gravityScale = 0;
@@ -104,12 +109,14 @@ export default class BigRedFishLogic extends Laya.Script {
                 this.setSpeed(0, 0);
                 let direct = this.getDirectWithRole();
                 this.owner.renderAni.scaleX = Utils.getSign(direct.x) * Math.abs(this.owner.renderAni.scaleX);
+                this.owner.renderAni.rotation = 0;
             }
         } else if (this.owner.state == 3) {
             this.owner.idleCount++;
             if (this.owner.idleCount >= this.owner.idleCountMax) {
                 this.owner.state = 1;
                 this.owner.idleCount = 0;
+                this.owner.renderAni.rotation = 0;
             }
         }
         Utils.tryRemoveThis(this.owner);
