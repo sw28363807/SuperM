@@ -41,6 +41,7 @@ import DropBrickLogic from "./script/DropBrickLogic"
 import CiBrickLogic from "./script/CiBrickLogic"
 import HuoYanChiLogic from "./script/HuoYanChiLogic"
 import LaZhuLogic from "./script/LaZhuLogic"
+import ShiTou from "./script/ShiTou"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -99,6 +100,7 @@ export default class GameConfig {
 		reg("script/CiBrickLogic.js",CiBrickLogic);
 		reg("script/HuoYanChiLogic.js",HuoYanChiLogic);
 		reg("script/LaZhuLogic.js",LaZhuLogic);
+		reg("script/ShiTou.js",ShiTou);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
