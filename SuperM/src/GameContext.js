@@ -70,6 +70,25 @@ export default class GameContext extends Laya.Script {
         GameContext.setRolePosition(liusha.x - 200, 300);
     }
 
+    static triggerInHuoChi(huochi) {
+        if (!huochi) {
+            return;
+        }
+        if (GameContext.gameRoleState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(1);
+        } else if (GameContext.bodyState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(0);
+            GameContext.changeSmallEffect();
+        }
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
+        GameContext.setRoleSpeedX(0.01);
+        GameContext.setRolePosition(huochi.x - 200, 300);
+    }
+
     static setRoleSpeed(x, y) {
         if (GameContext.roleRigidBody) {
             GameContext.roleRigidBody.setVelocity({x: x, y: y});

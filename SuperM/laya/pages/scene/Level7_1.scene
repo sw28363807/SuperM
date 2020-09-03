@@ -1,12 +1,11 @@
 {
-    "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":8110,
+    "selecteID":8116,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":8115,
+    "maxID":8118,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -15,7 +14,6 @@
     "compId":2,
     "child":[
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,bottom",
             "props":{"y":752,"x":0,"width":35000,"name":"bottom","height":1000,"bgColor":"#e52c2c"},
@@ -65,7 +63,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,left",
             "props":{"y":-516,"x":7,"width":600,"name":"left","height":1800,"bgColor":"#93e52c"},
@@ -115,7 +112,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,right",
             "props":{"y":-1078,"x":31956,"width":400,"name":"right","height":2000,"bgColor":"#e52c2c"},
@@ -165,7 +161,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/Camera.js",
@@ -184,7 +179,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/LevelLogic.js",
@@ -203,7 +197,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel",
             "props":{"y":-2248,"x":-188,"width":30000,"height":3000,"bgColor":"#ffc8b9"},
@@ -219,7 +212,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":2,"x":-36,"width":30000,"height":750},
@@ -236,12 +228,11 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":54,
             "selecteID":115,
             "searchKey":"Box",
-            "props":{"y":345,"x":1177,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":345,"x":5361,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -428,7 +419,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1565,
             "selecteID":1598,
@@ -795,7 +785,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":1584,
             "selecteID":1594,
@@ -970,7 +959,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/MonsterCreater.js",
@@ -988,7 +976,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":457,"x":-880,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -1001,7 +988,6 @@
             "compId":7934,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1017,7 +1003,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1034,7 +1019,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":457,"x":601,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -1047,7 +1031,6 @@
             "compId":7935,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1063,7 +1046,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1080,7 +1062,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1095,7 +1076,6 @@
             "compId":7938,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1111,7 +1091,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1137,7 +1116,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1152,7 +1130,6 @@
             "compId":7939,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1168,7 +1145,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1194,7 +1170,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1209,7 +1184,6 @@
             "compId":7942,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1225,7 +1199,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1251,7 +1224,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1266,7 +1238,6 @@
             "compId":7945,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1282,7 +1253,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1308,7 +1278,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1323,7 +1292,6 @@
             "compId":7948,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1339,7 +1307,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1365,7 +1332,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1380,7 +1346,6 @@
             "compId":7951,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1396,7 +1361,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1422,7 +1386,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1437,7 +1400,6 @@
             "compId":7954,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1453,7 +1415,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1479,7 +1440,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1494,7 +1454,6 @@
             "compId":7957,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1510,7 +1469,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1536,7 +1494,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1551,7 +1508,6 @@
             "compId":7960,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1567,7 +1523,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1593,7 +1548,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1608,7 +1562,6 @@
             "compId":7961,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1624,7 +1577,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1650,7 +1602,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1665,7 +1616,6 @@
             "compId":7962,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1681,7 +1631,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1707,7 +1656,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1722,7 +1670,6 @@
             "compId":7969,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1738,7 +1685,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1764,7 +1710,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -1779,7 +1724,6 @@
             "compId":7970,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1795,7 +1739,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1821,7 +1764,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1703,
             "selecteID":1708,
@@ -1837,7 +1779,6 @@
             "compId":7983,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick3.prefab"},
@@ -1851,7 +1792,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1867,7 +1807,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1883,7 +1822,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1899,7 +1837,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -1926,7 +1863,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1703,
             "selecteID":1708,
@@ -1942,7 +1878,6 @@
             "compId":7984,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick3.prefab"},
@@ -1956,7 +1891,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1972,7 +1906,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1988,7 +1921,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2004,7 +1936,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2031,7 +1962,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -2047,7 +1977,6 @@
             "compId":7990,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2064,7 +1993,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2081,7 +2009,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -2099,7 +2026,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -2136,7 +2062,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":457,"x":2082,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -2149,7 +2074,6 @@
             "compId":7993,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2165,7 +2089,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2182,7 +2105,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Animation",
             "searchKey":"Animation",
             "props":{"y":80,"x":2789,"presetID":1,"preset":"laya/pages/prefab/other/DownArray.prefab"},
@@ -2196,7 +2118,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1703,
             "selecteID":1708,
@@ -2212,7 +2133,6 @@
             "compId":7997,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
@@ -2226,7 +2146,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2242,7 +2161,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2258,7 +2176,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2274,7 +2191,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2301,7 +2217,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":457,"x":3562,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -2314,7 +2229,6 @@
             "compId":8003,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2330,7 +2244,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2347,7 +2260,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -2362,7 +2274,6 @@
             "compId":8006,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2378,7 +2289,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2404,7 +2314,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":68,"x":3003,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2417,7 +2326,6 @@
             "compId":8009,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2431,7 +2339,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2447,7 +2354,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2463,7 +2369,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2479,7 +2384,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2496,7 +2400,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2513,7 +2416,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":68,"x":3087,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2526,7 +2428,6 @@
             "compId":8015,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2540,7 +2441,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2556,7 +2456,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2572,7 +2471,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2588,7 +2486,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2605,7 +2502,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2622,7 +2518,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":68,"x":3171,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2635,7 +2530,6 @@
             "compId":8022,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2649,7 +2543,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2665,7 +2558,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2681,7 +2573,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2697,7 +2588,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2714,7 +2604,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2731,7 +2620,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1703,
             "selecteID":1708,
@@ -2747,7 +2635,6 @@
             "compId":8029,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
@@ -2761,7 +2648,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2777,7 +2663,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2793,7 +2678,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2809,7 +2693,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2836,7 +2719,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -2851,7 +2733,6 @@
             "compId":8030,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2867,7 +2748,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2893,7 +2773,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":68,"x":3339,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2906,7 +2785,6 @@
             "compId":8038,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2920,7 +2798,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2936,7 +2813,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2952,7 +2828,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2968,7 +2843,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2985,7 +2859,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3002,7 +2875,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":68,"x":3423,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -3015,7 +2887,6 @@
             "compId":8039,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -3029,7 +2900,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3045,7 +2915,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3061,7 +2930,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3077,7 +2945,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -3094,7 +2961,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3111,7 +2977,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":68,"x":3507,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -3124,7 +2989,6 @@
             "compId":8040,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -3138,7 +3002,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3154,7 +3017,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3170,7 +3032,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3186,7 +3047,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -3203,7 +3063,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3220,7 +3079,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1703,
             "selecteID":1708,
@@ -3236,7 +3094,6 @@
             "compId":8059,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
@@ -3250,7 +3107,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3266,7 +3122,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3282,7 +3137,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3298,7 +3152,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -3325,7 +3178,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":270,
             "searchKey":"Sprite",
@@ -3340,7 +3192,6 @@
             "compId":8060,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3356,7 +3207,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3382,7 +3232,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
@@ -3397,7 +3246,6 @@
             "compId":8068,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3414,7 +3262,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3431,7 +3278,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickGoldLogic.js",
@@ -3448,7 +3294,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":537,
                     "selecteID":540,
@@ -3485,7 +3330,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
@@ -3500,7 +3344,6 @@
             "compId":8070,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3517,7 +3360,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3534,7 +3376,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickGoldLogic.js",
@@ -3551,7 +3392,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":537,
                     "selecteID":540,
@@ -3588,7 +3428,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
@@ -3603,7 +3442,6 @@
             "compId":8075,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3620,7 +3458,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3637,7 +3474,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BrickGoldLogic.js",
@@ -3654,7 +3490,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":537,
                     "selecteID":540,
@@ -3691,7 +3526,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Animation",
             "searchKey":"Animation",
             "props":{"y":101,"x":4199,"presetID":1,"preset":"laya/pages/prefab/other/DownArray.prefab"},
@@ -3705,7 +3539,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":71,"x":4271,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -3718,7 +3551,6 @@
             "compId":8081,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -3732,7 +3564,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3748,7 +3579,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3764,7 +3594,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3780,7 +3609,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -3797,7 +3625,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3814,7 +3641,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":457,"x":4182,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -3827,7 +3653,6 @@
             "compId":8088,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3843,7 +3668,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3860,7 +3684,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Animation",
             "searchKey":"Animation",
             "props":{"y":101,"x":4878,"presetID":1,"preset":"laya/pages/prefab/other/DownArray.prefab"},
@@ -3874,7 +3697,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1703,
             "selecteID":1708,
@@ -3890,7 +3712,6 @@
             "compId":8092,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
@@ -3904,7 +3725,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3920,7 +3740,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3936,7 +3755,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3952,7 +3770,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -3979,7 +3796,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1537,
             "selecteID":1538,
@@ -3995,7 +3811,6 @@
             "compId":8098,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
@@ -4009,7 +3824,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4025,7 +3839,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4041,7 +3854,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DisBrickLogic.js",
@@ -4068,7 +3880,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1710,
             "selecteID":1713,
@@ -4084,7 +3895,6 @@
             "compId":8099,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
@@ -4098,7 +3908,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4114,7 +3923,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4130,7 +3938,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DropBrickLogic.js",
@@ -4157,7 +3964,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1537,
             "selecteID":1538,
@@ -4173,7 +3979,6 @@
             "compId":8100,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
@@ -4187,7 +3992,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4203,7 +4007,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4219,7 +4022,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DisBrickLogic.js",
@@ -4246,7 +4048,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1537,
             "selecteID":1538,
@@ -4262,7 +4063,6 @@
             "compId":8105,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
@@ -4276,7 +4076,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4292,7 +4091,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4308,7 +4106,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DisBrickLogic.js",
@@ -4335,7 +4132,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1710,
             "selecteID":1713,
@@ -4351,7 +4147,6 @@
             "compId":8110,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
@@ -4365,7 +4160,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4381,7 +4175,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4397,7 +4190,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DropBrickLogic.js",
@@ -4410,6 +4202,194 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":8114,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "type":"Box",
+            "selectedBox":1718,
+            "selecteID":1719,
+            "searchKey":"Box",
+            "props":{"y":562,"x":5632,"presetID":1,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+            "nodeParent":2,
+            "maxID":1723,
+            "label":"HuoYanChi",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8115,
+            "child":[
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "nodeParent":8115,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1719,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "nodeParent":8115,
+                    "label":"BoxCollider(HuoYanChi)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1720,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "nodeParent":8115,
+                    "label":"RigidBody(HuoYanChi)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1721,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/HuoYanChiLogic.js",
+                    "searchKey":"Script,HuoYanChiLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "nodeParent":8115,
+                    "label":"HuoYanChiLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1722,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "type":"Box",
+            "selectedBox":1716,
+            "selecteID":328,
+            "searchKey":"Box",
+            "props":{"y":183.5,"x":5616,"presetID":1,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+            "nodeParent":2,
+            "maxID":1718,
+            "label":"LaZhuMonster",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8116,
+            "child":[
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8116,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":315,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8116,
+                    "label":"RigidBody(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":319,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8116,
+                    "label":"BoxCollider(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":334,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8116,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":335,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/LaZhuLogic.js",
+                    "searchKey":"Script,LaZhuLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8116,
+                    "label":"LaZhuLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8117,
                     "child":[
                         ]
                 }],
