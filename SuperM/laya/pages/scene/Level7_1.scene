@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":8118,
+    "selecteID":8124,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":8122,
+    "maxID":8125,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -4628,7 +4628,7 @@
             "selectedBox":1703,
             "selecteID":1706,
             "searchKey":"Box",
-            "props":{"y":59,"x":5468,"presetID":1,"preset":"laya/pages/prefab/monster/ShiTou.prefab"},
+            "props":{"y":30,"x":6188,"presetID":1,"preset":"laya/pages/prefab/monster/ShiTou.prefab"},
             "nodeParent":2,
             "maxID":1709,
             "label":"ShiTou",
@@ -4712,6 +4712,115 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":8121,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1729,
+            "selecteID":1494,
+            "searchKey":"Box",
+            "props":{"y":255,"x":5682,"presetID":1,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+            "nodeParent":2,
+            "maxID":1731,
+            "label":"YouLing",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8124,
+            "child":[
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8124,
+                    "label":"RigidBody(YouLing)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1493,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8124,
+                    "label":"render",
+                    "isOpen":null,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1494,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8124,
+                    "label":"BoxCollider(YouLing)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1500,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8124,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1502,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/YouLingLogic.js",
+                    "searchKey":"Script,YouLingLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8124,
+                    "label":"YouLingLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1730,
                     "child":[
                         ]
                 }],

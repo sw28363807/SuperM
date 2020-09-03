@@ -353,11 +353,12 @@ export default class Utils extends Laya.Script {
         if (!GameContext.roleInWater) {
             GameContext.playRoleAni("stand");
             GameContext.roleInGround = false;
-            GameContext.walkDirect = null;
+            GameContext.commandWalk = false;
         }
         GameContext.roleHurting = true;
-        Laya.timer.once(200, null, function() {
+        Laya.timer.once(500, null, function() {
             GameContext.roleHurting = false;
+            GameContext.commandWalk = true;
         });
         GameContext.gameRoleNumber--;
         if (GameContext.gameRoleNumber == 0) {
