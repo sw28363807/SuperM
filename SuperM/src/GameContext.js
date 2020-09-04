@@ -394,3 +394,6 @@ GameContext.monsterArea = 1000;
 GameContext.monsterAreaY = 800;
 
 GameContext.DeadWaterY = 0;
+
+GameContext.doors = [];
+GameContext.doorCount = 0;

@@ -21,7 +21,7 @@ export default class YouLingLogic extends Laya.Script {
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.maxAreaX = 800;
         this.owner.lookupAreaX = 400;
-        this.owner.speedX = 1;
+        this.owner.speed = 3;
     }
 
     onUpdate() {
@@ -37,9 +37,9 @@ export default class YouLingLogic extends Laya.Script {
                     this.owner.curAni = "ani1"
                     this.owner.renderAni.play(0, true, "ani1");
                 }
-                this.owner.rigidBody.setVelocity({x: 0, y: 0});
-                this.owner.rigidBody.getBody().SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
             }
+            this.owner.rigidBody.setVelocity({x: 0, y: 0});
+            this.owner.rigidBody.getBody().SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
         } else if (this.owner.state == 2) {
             let faceup = Utils.getSign(GameContext.roleSpr.scaleX);
             let faceup2 = Utils.getSign(this.owner.x - GameContext.role.x);
@@ -48,8 +48,9 @@ export default class YouLingLogic extends Laya.Script {
                     this.owner.curAni = "ani2"
                     this.owner.renderAni.play(0, true, "ani2");
                 }
-                let faceup = Utils.getSign(GameContext.role.x - this.owner.x)
-                this.owner.rigidBody.setVelocity({x: faceup * this.owner.speedX, y: 0});
+                let faceup = Utils.getSign(GameContext.role.x - this.owner.x);
+                let direct = Utils.getDirect(GameContext.role.x, GameContext.role.y - GameContext.role.height * GameContext.role.scaleY, this.owner.x, this.owner.y);
+                this.owner.rigidBody.setVelocity({x: direct.x * this.owner.speed, y: direct.y * this.owner.speed});
                 this.owner.renderAni.scaleX = faceup * Math.abs(this.owner.renderAni.scaleX);
             } else {
                 if (this.owner.curAni != "ani1") {

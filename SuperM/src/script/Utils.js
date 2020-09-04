@@ -369,6 +369,53 @@ export default class Utils extends Laya.Script {
 
     }
 
+    static triggerToRandomDoor(owner, destScene, loadingIndex) {
+        if (GameContext.doorCount >= 9) {
+            GameContext.doorCount = 0;
+            if (loadingIndex == null || loadingIndex == undefined) {
+                loadingIndex = 1;
+            }
+            LoadingLogic.loadScene(destScene, loadingIndex);
+            return;
+        }
+        let tempArray = [];
+        for (let index = 0; index < GameContext.doors.length; index++) {
+            let element = GameContext.doors[index];
+            if (element != owner) {
+                tempArray.push(element);
+            }
+        }
+        let a = Math.ceil(Math.random()*100);
+        let doorNum = tempArray.length;
+        let index = a%doorNum;
+        let outDoor = tempArray[index];
+        GameContext.roleRigidBody.getBody().SetActive(false);
+        Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+            let black = prefabDef.create();
+            Laya.stage.addChild(black);
+            black.x = 0;   
+            black.y = 0;
+            black.zOrder = 9999999;
+            black.alpha = 0;
+            Laya.Tween.to(black,{alpha: 1}, 500, null, Laya.Handler.create(null, function(){
+                let sign = 1;
+                let distance = 150;
+                if (GameContext.roleSpr.scaleX < 0) {
+                    sign = -1;
+                    distance = 60
+                }
+                GameContext.role.x = outDoor.x + sign * distance;
+                Laya.Tween.to(black,{alpha: 0}, 500, null, Laya.Handler.create(null, function() {
+                    GameContext.roleRigidBody.getBody().SetActive(true);
+                    black.visible = false;
+                    black.removeSelf();
+                    black.destroy();
+                    GameContext.doorCount++;
+                }));
+            }));
+        }));
+    }
+
     static createBrickBrokenEffect(owner) {
         let x = owner.x;
         let y = owner.y;

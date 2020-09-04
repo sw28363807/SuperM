@@ -1,0 +1,25 @@
+{
+    "x":0,
+    "type":"Box",
+    "selectedBox":1741,
+    "searchKey":"Box,BlackBox",
+    "props":{"width":100000,"presetID":1,"preset":"laya/pages/prefab/other/BlackBox.prefab","pivotY":50000,"pivotX":50000,"name":"BlackBox","isPresetRoot":true,"height":100000,"bgColor":"#000000"},
+    "nodeParent":-1,
+    "maxID":1742,
+    "label":"BlackBox",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":1741,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

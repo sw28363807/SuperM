@@ -2,6 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
+    "selecteID":5155,
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -1162,7 +1163,7 @@
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,

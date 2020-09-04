@@ -1,6 +1,7 @@
 import MonsterIdLogic from "./MonsterIdLogic";
 import GameContext from "../GameContext";
 import Utils from "./Utils";
+import DoorLogic from "./DoorLogic";
 
 export default class MonsterCreater extends Laya.Script {
 
@@ -9,12 +10,13 @@ export default class MonsterCreater extends Laya.Script {
     }
 
     onEnable() {
-        
+        GameContext.doors = [];
     }
 
     onStart() {
         Laya.timer.loop(1000, this, this.monsterTick);
         this.initMonsters();
+        this.initDoors();
     }
 
     onDisable() {
@@ -55,6 +57,18 @@ export default class MonsterCreater extends Laya.Script {
             }
 
             Laya.Resource.destroyUnusedResources();
+        }
+    }
+
+    initDoors() {
+        GameContext.doors = [];
+        GameContext.doorCount = 0;
+        for (let i = 0; i < this.owner.numChildren; i++) {
+            let control = this.owner.getChildAt(i);
+            let script = control.getComponent(DoorLogic);
+            if (script != null && script != undefined) {
+                GameContext.doors.push(control);
+            }
         }
     }
 

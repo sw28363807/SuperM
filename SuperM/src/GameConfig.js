@@ -40,9 +40,8 @@ import BigRedFishLogic from "./script/BigRedFishLogic"
 import DropBrickLogic from "./script/DropBrickLogic"
 import CiBrickLogic from "./script/CiBrickLogic"
 import HuoYanChiLogic from "./script/HuoYanChiLogic"
-import LaZhuLogic from "./script/LaZhuLogic"
 import ShiTou from "./script/ShiTou"
-import YouLingLogic from "./script/YouLingLogic"
+import DoorLogic from "./script/DoorLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -50,8 +49,11 @@ import MoreTimeBrick from "./script/MoreTimeBrick"
 import BulletLogic from "./script/BulletLogic"
 import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import HeadBulletLogic from "./script/HeadBulletLogic"
+import HuoQiuLogic from "./script/HuoQiuLogic"
+import LaZhuLogic from "./script/LaZhuLogic"
 import PenShuiEffectLogic from "./script/PenShuiEffectLogic"
 import ShiWoNiuLogic from "./script/ShiWoNiuLogic"
+import YouLingLogic from "./script/YouLingLogic"
 import KeLogic from "./script/KeLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 
@@ -100,9 +102,8 @@ export default class GameConfig {
 		reg("script/DropBrickLogic.js",DropBrickLogic);
 		reg("script/CiBrickLogic.js",CiBrickLogic);
 		reg("script/HuoYanChiLogic.js",HuoYanChiLogic);
-		reg("script/LaZhuLogic.js",LaZhuLogic);
 		reg("script/ShiTou.js",ShiTou);
-		reg("script/YouLingLogic.js",YouLingLogic);
+		reg("script/DoorLogic.js",DoorLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
@@ -110,8 +111,11 @@ export default class GameConfig {
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/FlowerBulletLogic.js",FlowerBulletLogic);
 		reg("script/HeadBulletLogic.js",HeadBulletLogic);
+		reg("script/HuoQiuLogic.js",HuoQiuLogic);
+		reg("script/LaZhuLogic.js",LaZhuLogic);
 		reg("script/PenShuiEffectLogic.js",PenShuiEffectLogic);
 		reg("script/ShiWoNiuLogic.js",ShiWoNiuLogic);
+		reg("script/YouLingLogic.js",YouLingLogic);
 		reg("script/KeLogic.js",KeLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
     }
