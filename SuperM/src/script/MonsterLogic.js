@@ -1,7 +1,6 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import Utils from "./Utils";
-import GameContext from "../GameContext";
 
 export default class MonsterLogic extends Laya.Script {
 

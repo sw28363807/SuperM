@@ -5,7 +5,6 @@ export default class DisBrickLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.aniRender = this.owner.getChildByName("render");
     }
 
     onStart() {

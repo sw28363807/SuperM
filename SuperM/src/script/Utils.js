@@ -369,7 +369,7 @@ export default class Utils extends Laya.Script {
 
     }
 
-    static triggerToRandomDoor(owner, destScene, loadingIndex) {
+    static triggerToRandomDoor(owner, destScene, loadingIndex, customX, customY) {
         if (GameContext.doorCount >= 9) {
             GameContext.doorCount = 0;
             if (loadingIndex == null || loadingIndex == undefined) {
@@ -404,7 +404,16 @@ export default class Utils extends Laya.Script {
                     sign = -1;
                     distance = 60
                 }
-                GameContext.role.x = outDoor.x + sign * distance;
+                if (condition) {
+                    
+                }
+                if (customX && customY) {
+                    GameContext.role.x = customX;
+                    GameContext.role.y = customY;
+                } else {
+                    GameContext.role.x = outDoor.x + sign * distance;
+                    GameContext.role.y = GameContext.role.y;
+                }
                 Laya.Tween.to(black,{alpha: 0}, 500, null, Laya.Handler.create(null, function() {
                     GameContext.roleRigidBody.getBody().SetActive(true);
                     black.visible = false;
