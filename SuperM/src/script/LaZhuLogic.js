@@ -21,7 +21,7 @@ export default class LaZhuLogic extends Laya.Script {
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.maxAreaX = 800;
         this.owner.lookupAreaX = 400;
-        this.owner.speedX = 1;
+        this.owner.speedX = 5;
     }
 
     onUpdate() {
@@ -30,16 +30,25 @@ export default class LaZhuLogic extends Laya.Script {
         }
 
         if (this.owner.state == 1) {
+
+            let distance2 = Math.abs(this.owner.x - this.owner.startPoint.x);
             let distance = Math.abs(GameContext.role.x - this.owner.startPoint.x);
-            if (distance <= this.owner.lookupAreaX) {
-                this.owner.state = 2;
-                if (this.owner.curAni != "ani1") {
-                    this.owner.curAni = "ani1"
-                    this.owner.renderAni.play(0, true, "ani1");
+            if (distance2 <= this.owner.maxAreaX) {
+                if (distance <= this.owner.lookupAreaX) {
+                    this.owner.state = 2;
+                    if (this.owner.curAni != "ani1") {
+                        this.owner.curAni = "ani1"
+                        this.owner.renderAni.play(0, true, "ani1");
+                    }
+    
                 }
                 this.owner.rigidBody.setVelocity({x: 0, y: 0});
                 this.owner.rigidBody.getBody().SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
+            } else {
+                this.owner.rigidBody.setVelocity({x: 0, y: 0});
+                this.owner.rigidBody.getBody().SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
             }
+
         } else if (this.owner.state == 2) {
             let faceup = Utils.getSign(GameContext.roleSpr.scaleX);
             let faceup2 = Utils.getSign(this.owner.x - GameContext.role.x);

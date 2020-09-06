@@ -70,7 +70,7 @@ export default class GameContext extends Laya.Script {
         GameContext.setRolePosition(liusha.x - 200, 300);
     }
 
-    static triggerInHuoChi(huochi) {
+    static triggerInHuoChi(huochi, customX, customY) {
         if (!huochi) {
             return;
         }
@@ -86,7 +86,14 @@ export default class GameContext extends Laya.Script {
             GameContext.roleShuiGuanState = 0;
         }
         GameContext.setRoleSpeedX(0.01);
-        GameContext.setRolePosition(huochi.x - 200, 300);
+        if (customX != null &&
+             customX != undefined &&
+              customY != null &&
+               customY != undefined) {
+                GameContext.setRolePosition(customX, customY);
+        } else {
+            GameContext.setRolePosition(huochi.x - 200, 300);
+        }
     }
 
     static setRoleSpeed(x, y) {
@@ -397,3 +404,4 @@ GameContext.DeadWaterY = 0;
 
 GameContext.doors = [];
 GameContext.doorCount = 0;
+GameContext.doorInitPoint = null;

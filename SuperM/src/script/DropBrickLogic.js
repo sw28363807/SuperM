@@ -8,7 +8,7 @@ export default class DropBrickLogic extends Laya.Script {
     }
 
     onDisable() {
-        Laya.timer.clear(this, this.onReset);
+        Laya.timer.clear(this, this.onResetDropBrick);
     }
 
     onStart() {
@@ -25,7 +25,7 @@ export default class DropBrickLogic extends Laya.Script {
         }
         if (other.label == "RoleFoot") {
             this.owner.state = 2;
-            Laya.timer.once(2000, this, this.onReset);
+            Laya.timer.once(2000, this, this.onResetDropBrick);
         }
     }
 
@@ -38,7 +38,7 @@ export default class DropBrickLogic extends Laya.Script {
         }
     }
 
-    onReset() {
+    onResetDropBrick() {
         if (!this.owner) {
             return;
         }

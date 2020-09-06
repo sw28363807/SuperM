@@ -4,6 +4,10 @@ export default class HuoYanChiLogic extends Laya.Script {
 
     constructor() { 
         super();
+        /** @prop {name:customX, tips:"自定义重置X", type:Number, default:-99999999}*/
+        let customX = -99999999;
+        /** @prop {name:customY, tips:"自定义重置Y", type:Number, default:-99999999}*/
+        let customY = -99999999;
     }
     
     onEnable() {
@@ -14,6 +18,18 @@ export default class HuoYanChiLogic extends Laya.Script {
     }
 
     onStart() {
+        let script = this.owner.getComponent(HuoYanChiLogic);
+        if (script && script.customX && script.customX != -99999999) {
+            this.owner.customX = script.customX;
+        } else {
+            this.owner.customX = null;
+        }
+
+        if (script && script.customY && script.customY != -99999999) {
+            this.owner.customY = script.customY;
+        } else {
+            this.owner.customY = null;
+        }
         this.owner.roleZOrder = GameContext.role.zOrder;
     }
 
@@ -22,7 +38,7 @@ export default class HuoYanChiLogic extends Laya.Script {
             GameContext.role.zOrder = this.owner.zOrder - 1;
             Laya.timer.once(1000, this, function() {
                 if (this.owner) {
-                    GameContext.triggerInHuoChi(this.owner);
+                    GameContext.triggerInHuoChi(this.owner, this.owner.customX, this.owner.customY);
                     GameContext.role.zOrder = this.owner.roleZOrder;
                 }
             });

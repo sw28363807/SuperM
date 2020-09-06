@@ -10,7 +10,7 @@ export default class ShuiGuanLogic extends Laya.Script {
         /** @prop {name:sgIndex, tips:"索引", type:Number, default:-1}*/
         let sgIndex = -1;
         /** @prop {name:sgType, tips:"类型", type:Number, default:0}*/
-        let sgType = 0; // 0 正常 1 场景入口 2 金币场景入口 3场景出口
+        let sgType = 0; // 0 正常 1 场景入口 2 金币场景入口 3场景出口 4 跳转场景
         /** @prop {name:sgOutIndex, tips:"出口", type:Number, default:0}*/
         let sgOutIndex = 0;
         /** @prop {name:sceneName, tips:"场景", type:String, default:""}*/
@@ -62,6 +62,9 @@ export default class ShuiGuanLogic extends Laya.Script {
             GameContext.sgOutIndex =  this.owner.sgOutIndex;
             this.inShuiguan();
         } else if (this.owner.sgType == 2) {
+            this.inShuiguan();
+        } else if (this.owner.sgType == 4) {
+            GameContext.sgOutIndex =  0;
             this.inShuiguan();
         }
     }

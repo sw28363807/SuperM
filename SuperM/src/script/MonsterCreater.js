@@ -62,7 +62,7 @@ export default class MonsterCreater extends Laya.Script {
 
     initDoors() {
         GameContext.doors = [];
-        GameContext.doorCount = 0;
+        // GameContext.doorCount = 0;
         for (let i = 0; i < this.owner.numChildren; i++) {
             let control = this.owner.getChildAt(i);
             let script = control.getComponent(DoorLogic);

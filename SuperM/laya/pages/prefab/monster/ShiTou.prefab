@@ -3,7 +3,7 @@
     "type":"Box",
     "selectedBox":1725,
     "searchKey":"Box,ShiTou",
-    "props":{"y":0,"x":0,"width":204,"scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/monster/ShiTou.prefab","name":"ShiTou","isPresetRoot":true,"height":164},
+    "props":{"zOrder":9,"y":0,"x":0,"width":204,"scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/monster/ShiTou.prefab","name":"ShiTou","isPresetRoot":true,"height":164},
     "nodeParent":-1,
     "maxID":1729,
     "label":"ShiTou",

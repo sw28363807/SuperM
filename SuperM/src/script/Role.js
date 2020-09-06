@@ -24,6 +24,10 @@ export default class Role extends Laya.Script {
     }
     
     onEnable() {
+    }
+
+    onStart() {
+
         GameContext.role = this.owner;
         EventMgr.getInstance().registEvent(Events.Role_Move, this, this.onRoleWalk);
         EventMgr.getInstance().registEvent(Events.Role_Move_Stop, this, this.onRoleStopWalk);
@@ -44,13 +48,18 @@ export default class Role extends Laya.Script {
         GameContext.keSpr.visible = false;
         GameContext.setBodyState(GameContext.gameRoleBodyState);
         GameContext.setRoleState(GameContext.gameRoleState);
-    }
 
-    onStart() {
         if (GameContext.sgOutIndex != 0 && GameContext.gameSceneType == 1) {
             EventMgr.getInstance().postEvent(Events.Role_Exit_Shuiguan);
             GameContext.sgOutIndex = 0;
         }
+
+        if (GameContext.doorInitPoint != null) {
+            GameContext.role.x = GameContext.doorInitPoint.x;
+            GameContext.role.y = GameContext.doorInitPoint.y;
+            GameContext.doorInitPoint = null;
+        }
+        
     }
 
     changeBigEffect() {
