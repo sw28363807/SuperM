@@ -1,5 +1,6 @@
 import Utils from "./Utils";
 import GameContext from "../GameContext";
+import LoadingLogic from "./LoadingLogic";
 
 export default class DoorLogic extends Laya.Script {
 
@@ -49,11 +50,15 @@ export default class DoorLogic extends Laya.Script {
             this.owner.doorInitPointStr = "";
         }
 
-        this.owner.doorFinalPoint = null;
+        this.owner.doorFinalPoint = [];
         if (script.doorFinalStr) {
             this.owner.doorFinalStr = script.doorFinalStr;
-            let point = this.owner.doorFinalStr.split(",");
-            this.owner.doorFinalPoint = {x: Number(point[0]), y: Number(point[1])};
+            let points = this.owner.doorFinalStr.split("*");
+            for (let index = 0; index < points.length; index++) {
+                let pointStr = points[index];
+                let p = pointStr.split(",");
+                this.owner.doorFinalPoint.push({x:Number(p[0]), y: Number(p[1])});
+            }
         } else {
             this.owner.doorFinalStr = "";
         }
@@ -78,7 +83,17 @@ export default class DoorLogic extends Laya.Script {
             let p = this.owner.doorInitPoint[index];
             return {x: p.x, y: p.y};
         }
-        return "";
+        return null;
+    }
+
+    getDoorFinalPoint() {
+        let pointNum = this.owner.doorFinalPoint.length;
+        if (pointNum != 0) {
+            let index = Math.ceil(Math.random() * 65535)%pointNum;
+            let p = this.owner.doorFinalPoint[index];
+            return {x: p.x, y: p.y};
+        }
+        return null;
     }
 
     onDisable() {
@@ -121,8 +136,9 @@ export default class DoorLogic extends Laya.Script {
             if (this.owner.goToType == 1) {
                 let scene = this.getScene();
                 let gotoPoint = this.getSceneGoToPoint();
-                if (GameContext.doorCount > 8) {
-                    gotoPoint = this.owner.doorFinalPoint;
+                let doorFinalPoint = this.getDoorFinalPoint();
+                if (GameContext.doorCount > 2) {
+                    gotoPoint = doorFinalPoint;
                 }
                 Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);
             }

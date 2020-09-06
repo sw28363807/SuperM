@@ -7,10 +7,30 @@ export default class HanbaoLogic extends Laya.Script {
 
     constructor() { 
         super();
-        this.speed = 5;
+        /** @prop {name:finalWenhaoType, tips:"1 蘑菇 2 金币 3蓝瓶子 4绿瓶子", type:Int, default:-1}*/
+        let finalWenhaoType = -1;
     }
     
     onEnable() {
+    }
+
+    onStart() {
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.rigidBody.enabled = false;
+        
+        let script = this.owner.getComponent(HanbaoLogic);
+        if (script.finalWenhaoType) {
+            this.owner.finalWenhaoType = script.finalWenhaoType;
+            this.owner.rigidBody.gravityScale = 0;
+        } else {
+            this.owner.finalWenhaoType = -1;
+        }
+
+        if (this.owner.finalWenhaoType != -1) {
+            this.owner.wenhaoType = this.owner.finalWenhaoType;
+        }
+        
+        this.speed = 5;
         if (GameContext.gameRoleBodyState == 0) {
             this.owner.direct = {x: -1, y: 0};
         } else {
@@ -37,11 +57,14 @@ export default class HanbaoLogic extends Laya.Script {
             aniB = "ani222";
             this.owner.rewardType = 3;
             this.owner.isMove = false;
+        } else if (this.owner.wenhaoType == 4) {
+            aniA = "ani1111";
+            aniB = "ani2222";
+            this.owner.rewardType = 4;
+            this.owner.isMove = false;
         }
 
         this.owner.play(0, false, aniA);
-        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.rigidBody.enabled = false;
         this.owner.coll = this.owner.getComponent(Laya.ColliderBase);;
         this.owner.on(Laya.Event.COMPLETE, this, function(){
             this.owner.rigidBody.enabled = true;
@@ -64,9 +87,12 @@ export default class HanbaoLogic extends Laya.Script {
         } else if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
-             if (this.owner.rewardType == 3) {
+             if (this.owner.rewardType == 4) {
                 GameContext.gameRoleNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+             } else if (this.owner.rewardType == 3) {
+                // GameContext.gameRoleNumber++;
+                // EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
              } else if (GameContext.gameRoleBodyState == 0) {
                 GameContext.setBodyState(1);
                 EventMgr.getInstance().postEvent(Events.Role_Change_Big);

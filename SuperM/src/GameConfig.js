@@ -46,6 +46,7 @@ import ShiWoNiuLogic from "./script/ShiWoNiuLogic"
 import LaZhuLogic from "./script/LaZhuLogic"
 import YouLingLogic from "./script/YouLingLogic"
 import HuoQiuLogic from "./script/HuoQiuLogic"
+import HanbaoLogic from "./script/HanbaoLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -55,7 +56,6 @@ import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import HeadBulletLogic from "./script/HeadBulletLogic"
 import PenShuiEffectLogic from "./script/PenShuiEffectLogic"
 import KeLogic from "./script/KeLogic"
-import HanbaoLogic from "./script/HanbaoLogic"
 
 export default class GameConfig {
     static init() {
@@ -108,6 +108,7 @@ export default class GameConfig {
 		reg("script/LaZhuLogic.js",LaZhuLogic);
 		reg("script/YouLingLogic.js",YouLingLogic);
 		reg("script/HuoQiuLogic.js",HuoQiuLogic);
+		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
@@ -117,7 +118,6 @@ export default class GameConfig {
 		reg("script/HeadBulletLogic.js",HeadBulletLogic);
 		reg("script/PenShuiEffectLogic.js",PenShuiEffectLogic);
 		reg("script/KeLogic.js",KeLogic);
-		reg("script/HanbaoLogic.js",HanbaoLogic);
     }
 }
 GameConfig.width = 1336;
