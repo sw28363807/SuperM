@@ -467,14 +467,14 @@ export default class Role extends Laya.Script {
     }
 
     onRoleCButton(data) {
-        if (data == "up") {
-            GameContext.roleCommandFly = true;
-            GameContext.roleFlyState = true;
-        } else {
+        if (data == "down") {
+            if (GameContext.flySliderState == 1) {
+                GameContext.flySliderState = 2;
+                GameContext.roleCommandFly = true;
+            }
+        } else if (data == "up") {
             GameContext.roleCommandFly = false;
         }
-        // Laya.Scene.open("scene/Level2_1.scene");
-        // Laya.Scene.open("scene/LittleGameScene1.scene");
     }
 
     onDisable() {

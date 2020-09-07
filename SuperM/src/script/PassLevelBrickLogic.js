@@ -58,16 +58,15 @@ export default class PassLevelBrickLogic extends Laya.Script {
     }
 
     onStart() {
-        for (let index = 0; index < 6; index++) {
-            let anim =  this.owner.getChildByName("yanhua"+String(index + 1));
-            anim.visible = false;
-        }
-
         let script = this.owner.getComponent(PassLevelBrickLogic);
         if (script.gotoScene && script.gotoScene != "") {
             GameContext.gameGotoScene = script.gotoScene;
         } else {
             GameContext.gameGotoScene = "";
+        }
+        for (let index = 0; index < 6; index++) {
+            let anim =  this.owner.getChildByName("yanhua"+String(index + 1));
+            anim.visible = false;
         }
     }
 

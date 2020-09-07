@@ -19,7 +19,21 @@ export default class JoyStick extends Laya.Script {
             {x: 0, y: 1},
             {x: -1, y: 1},
             {x: -1, y: 0}
-        ]
+        ];
+
+        if (!Laya.Browser.onMiniGame) {
+            this.A = 65;
+            this.S = 83;
+            this.W = 87;
+            this.D = 68;
+    
+            this.ADown = false;
+            this.SDown = false;
+            this.WDown = false;
+            this.DDown = false;
+
+            this.isStopWalk = false;
+        }
     }
 
     onAwake() {
@@ -132,7 +146,36 @@ export default class JoyStick extends Laya.Script {
     }
     
     onEnable() {
-    
+        if (!Laya.Browser.onMiniGame) {
+            Laya.stage.on(Laya.Event.KEY_DOWN, this, this.onKeyDown);
+            Laya.stage.on(Laya.Event.KEY_UP, this, this.onKeyUp);
+        }
+    }
+
+    onKeyDown(e) {
+        let keyCode = e.keyCode;
+        if (keyCode == this.A) {
+            this.ADown = true;
+        } else if (keyCode == this.S) {
+            this.SDown = true;
+        } else if (keyCode == this.W) {
+            this.WDown = true;
+        } else if (keyCode == this.D) {
+            this.DDown = true;
+        }
+    }
+
+    onKeyUp(e) {
+        let keyCode = e.keyCode;
+        if (keyCode == this.A) {
+            this.ADown = false;
+        } else if (keyCode == this.S) {
+            this.SDown = false;
+        } else if (keyCode == this.W) {
+            this.WDown = false;
+        } else if (keyCode == this.D) {
+            this.DDown = false;
+        }
     }
 
     processDirect(curX, curY) {
@@ -194,5 +237,55 @@ export default class JoyStick extends Laya.Script {
 
     onDisable() {
 
+    }
+
+    onUpdate() {
+        if (!Laya.Browser.onMiniGame) {
+            let direct = null;
+            if (this.WDown == true && this.ADown == false && this.SDown == false && this.DDown == false) {
+                //上
+                direct = {x: 0, y: -1};
+                this.isStopWalk = false;
+            } else if (this.WDown == false && this.ADown == false && this.SDown == true && this.DDown == false) {
+                //下
+                direct = {x: 0, y: 1};
+                this.isStopWalk = false;
+            } else if (this.WDown == false && this.ADown == true && this.SDown == false && this.DDown == false) {
+                //左
+                direct = {x: -1, y: 0};
+                this.isStopWalk = false;
+            } else if (this.WDown == false && this.ADown == false && this.SDown == false && this.DDown == true) {
+                //右
+                direct = {x: 1, y: 0};
+                this.isStopWalk = false;
+            } else if (this.WDown == true && this.ADown == true && this.SDown == false && this.DDown == false) {
+                //左上
+                direct = {x: -1, y: -1};
+                this.isStopWalk = false;
+            } else if (this.WDown == true && this.ADown == false && this.SDown == false && this.DDown == true) {
+                //右上
+                direct = {x: 1, y: -1};
+                this.isStopWalk = false;
+            } else if (this.WDown == false && this.ADown == true && this.SDown == true && this.DDown == false) {
+                //左下
+                direct = {x: -1, y: 1};
+                this.isStopWalk = false;
+            } else if (this.WDown == true && this.ADown == true && this.SDown == true && this.DDown == true) {
+                //右下
+                direct = {x: 1, y: 1};
+                this.isStopWalk = false;
+            }
+            if(this.directChangeHandler) {
+                this.directChangeHandler.runWith(direct);
+            }
+
+            if (this.WDown == false && this.ADown == false && this.SDown == false && this.DDown == false) {
+                if(this.stopHandler) {
+                    this.stopHandler.run();
+                }
+                this.direct = null;
+                GameContext.joyStickDirect = null;
+            }
+        }
     }
 }

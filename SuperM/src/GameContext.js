@@ -405,3 +405,8 @@ GameContext.DeadWaterY = 0;
 GameContext.doors = [];
 GameContext.doorCount = 0;
 GameContext.doorInitPoint = null;
+
+
+GameContext.curFlyPower = 0;
+GameContext.curFlyPowerMax = 200;
+GameContext.flySliderState = 1; //1 积蓄 2 释放

@@ -6,6 +6,7 @@ import JoyStick from "./script/JoyStick"
 import JoyStickButton from "./script/JoyStickButton"
 import GameJoyStick from "./script/GameJoyStick"
 import GameTopLogic from "./script/GameTopLogic"
+import SliderLogic from "./script/SliderLogic"
 import Camera from "./script/Camera"
 import LevelLogic from "./script/LevelLogic"
 import GroundImageLogic from "./script/GroundImageLogic"
@@ -68,6 +69,7 @@ export default class GameConfig {
 		reg("script/JoyStickButton.js",JoyStickButton);
 		reg("script/GameJoyStick.js",GameJoyStick);
 		reg("script/GameTopLogic.js",GameTopLogic);
+		reg("script/SliderLogic.js",SliderLogic);
 		reg("script/Camera.js",Camera);
 		reg("script/LevelLogic.js",LevelLogic);
 		reg("script/GroundImageLogic.js",GroundImageLogic);

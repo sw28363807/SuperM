@@ -18671,6 +18671,10 @@ window.Laya= (function (exports) {
             this.event(Event.ERROR, message);
         }
         onLoaded(data = null) {
+            if (data == null) {
+                console.debug("image is nil");
+                return;
+            }
             var type = this._type;
             if (type == Loader.PLFB) {
                 this.parsePLFBData(data);

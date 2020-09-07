@@ -2,10 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
+    "selecteID":96,
     "searchKey":"View",
     "props":{"width":1336,"height":750},
     "nodeParent":-1,
-    "maxID":96,
+    "maxID":99,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -85,6 +86,51 @@
             "compId":95,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "searchKey":"Box",
+            "props":{"y":102,"x":64,"presetID":1,"preset":"laya/pages/prefab/menu/SliderBg.prefab"},
+            "nodeParent":2,
+            "label":"SliderBg",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":96,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Box",
+                    "searchKey":"Box",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/menu/SliderBg.prefab"},
+                    "nodeParent":96,
+                    "label":"slider",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":97,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/SliderLogic.js",
+                    "searchKey":"Script,SliderLogic",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/menu/SliderBg.prefab"},
+                    "nodeParent":96,
+                    "label":"SliderLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":98,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

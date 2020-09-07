@@ -91,8 +91,14 @@ export default class HanbaoLogic extends Laya.Script {
                 GameContext.gameRoleNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
              } else if (this.owner.rewardType == 3) {
-                // GameContext.gameRoleNumber++;
-                // EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+                 if (GameContext.gameRoleBodyState == 1) {
+                    GameContext.roleFlyState = true;
+                    GameContext.playRoleAni("");
+                    GameContext.playRoleAni("stand");
+                 }
+                GameContext.roleFlyState = true;
+                GameContext.playRoleAni("");
+                GameContext.playRoleAni("stand");
              } else if (GameContext.gameRoleBodyState == 0) {
                 GameContext.setBodyState(1);
                 EventMgr.getInstance().postEvent(Events.Role_Change_Big);

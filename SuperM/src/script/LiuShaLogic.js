@@ -9,6 +9,9 @@ export default class LiuShaLogic extends Laya.Script {
     }
     
     onEnable() {
+    }
+
+    onStart() {
         EventMgr.getInstance().registEvent(Events.Role_A_Button, this, this.onRoleAButton);
         GameContext.roleInLiuSha = false;
         this.owner.keY =  GameContext.keSpr.y;
@@ -29,8 +32,10 @@ export default class LiuShaLogic extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         if (other.label == "RoleFoot") {
+            this.owner.roleZOrder = GameContext.role.zOrder;
             GameContext.roleInLiuSha = true;
             GameContext.curRoleLiuSha = this.owner;
+            GameContext.role.zOrder = this.owner.zOrder - 1;
         }
     }
 
@@ -40,6 +45,7 @@ export default class LiuShaLogic extends Laya.Script {
             GameContext.keSpr.y = this.owner.keY;
             GameContext.roleSpr.y = this.owner.roleSprY;
             GameContext.curRoleLiuSha = null;
+            GameContext.role.zOrder = this.owner.roleZOrder;
         }
     }
 

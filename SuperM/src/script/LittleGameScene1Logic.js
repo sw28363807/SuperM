@@ -33,6 +33,8 @@ export default class LittleGameScene1Logic extends Laya.Script {
             beizi.on(Laya.Event.CLICK, this, function() {
                 if (this.running == false) {
                     this.running = true;
+                } else {
+                    return;
                 }
                 this.open(index, Laya.Handler.create(this, function() {
                     Laya.timer.once(1000, this, function() {

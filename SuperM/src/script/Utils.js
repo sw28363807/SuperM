@@ -327,6 +327,9 @@ export default class Utils extends Laya.Script {
         if (GameContext.roleHurting) {
             return;
         }
+        GameContext.roleFlyState = false;
+        GameContext.playRoleAni("");
+        GameContext.playRoleAni("stand");
         let x = -1;
         if (other) {
             x = Utils.getSign(GameContext.role.x - other.x);

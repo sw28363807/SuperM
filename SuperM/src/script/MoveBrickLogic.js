@@ -248,7 +248,7 @@ export default class MoveBrickLogic extends Laya.Script {
                     GameContext.setRoleSpeed(lineSpeed2.x, lineSpeed.y);
                 }
             } else if (this.owner.moveDirect == 2) {
-                GamepadEvent.roleOutSpeed = {x: 0, y: this.owner.direct.y * this.owner.moveSpeed};
+                GameContext.roleOutSpeed = {x: 0, y: this.owner.direct.y * this.owner.moveSpeed};
             }
         }
     }

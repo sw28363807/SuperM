@@ -6,7 +6,7 @@ export default class WenhaoLogic extends Laya.Script {
     constructor() { 
         super();
         // 1 蘑菇 2 金币 3蓝瓶子
-        /** @prop {name:wenhaoType, tips:"问号类型1 蘑菇 2 金币 3 蓝瓶子", type:Number, default:1}*/
+        /** @prop {name:wenhaoType, tips:"问号类型1 蘑菇 2 金币 3 蓝瓶子 4 绿瓶子", type:Number, default:1}*/
         let wenhaoType = 1;
     }
 
@@ -33,7 +33,7 @@ export default class WenhaoLogic extends Laya.Script {
                             });
                         }
                     }
-                } else if (this.owner.wenhaoType == 3) {
+                } else if (this.owner.wenhaoType == 3 || this.owner.wenhaoType == 4) {
                     if (this.owner.state == 0) {
                         this.triggerMoGu();
                     }

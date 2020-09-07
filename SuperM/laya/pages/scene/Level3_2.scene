@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":9344,
+    "selecteID":5094,
     "searchKey":"Scene,gameScene",
     "props":{"width":1336,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -58,7 +58,7 @@
             "selectedBox":54,
             "selecteID":115,
             "searchKey":"Box",
-            "props":{"zOrder":10,"y":357,"x":12182,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"zOrder":10,"y":-182,"x":273,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -289,13 +289,14 @@
             "nodeParent":2,
             "maxID":1530,
             "label":"ditu",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7912,
             "child":[
                 {
+                    "x":30,
                     "type":"Box",
                     "searchKey":"Box",
                     "props":{"presetID":20,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -308,6 +309,7 @@
                     "compId":1525,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":2,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -321,6 +323,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":3,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -334,6 +337,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":4,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -347,6 +351,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":5,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -360,6 +365,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":6,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -373,6 +379,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":7,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -386,6 +393,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":8,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -399,6 +407,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":9,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -412,6 +421,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":10,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -425,6 +435,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":11,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -438,6 +449,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":12,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -451,6 +463,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":13,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -464,6 +477,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":14,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -477,6 +491,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":15,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -490,6 +505,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":16,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -503,6 +519,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":17,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -516,6 +533,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":18,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -529,6 +547,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"presetID":19,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -540,9 +559,11 @@
                             "compId":1524,
                             "child":[
                                 ]
-                        }]
+                        }],
+                    "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -558,6 +579,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -573,6 +595,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -588,6 +611,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -603,6 +627,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -618,6 +643,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -633,6 +659,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -648,6 +675,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -663,6 +691,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -678,6 +707,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -693,6 +723,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -708,6 +739,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -723,6 +755,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -738,6 +771,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -753,6 +787,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -768,6 +803,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -783,6 +819,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -798,6 +835,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -813,6 +851,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -828,6 +867,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -843,6 +883,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -858,6 +899,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -873,6 +915,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -888,6 +931,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -903,6 +947,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -918,6 +963,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -933,6 +979,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -948,6 +995,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -963,6 +1011,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -978,6 +1027,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -993,6 +1043,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1008,6 +1059,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1023,6 +1075,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1038,6 +1091,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1053,6 +1107,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1068,6 +1123,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1083,6 +1139,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1098,6 +1155,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1113,6 +1171,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1128,6 +1187,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1143,6 +1203,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1158,6 +1219,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1173,6 +1235,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1188,6 +1251,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1203,6 +1267,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1218,6 +1283,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1233,6 +1299,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1248,6 +1315,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1263,6 +1331,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1285,7 +1354,8 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -1443,14 +1513,13 @@
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7968,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1466,7 +1535,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1482,7 +1550,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5156,
+    "selecteID":5163,
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":5162,
+    "maxID":5168,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -1547,7 +1547,7 @@
                     "source":"src/script/WenhaoLogic.js",
                     "searchKey":"Script,WenhaoLogic",
                     "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "props":{"wenhaoType":3,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
                     "nodeParent":1693,
                     "label":"WenhaoLogic",
                     "isDirectory":false,
@@ -1654,7 +1654,7 @@
                     "source":"src/script/WenhaoLogic.js",
                     "searchKey":"Script,WenhaoLogic",
                     "removeAble":true,
-                    "props":{"wenhaoType":2,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
                     "nodeParent":1694,
                     "label":"WenhaoLogic",
                     "isDirectory":false,
@@ -46660,7 +46660,7 @@
             "type":"Box",
             "selectedBox":1491,
             "searchKey":"Box",
-            "props":{"y":753,"x":1613,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
+            "props":{"y":739.5,"x":2567.5,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
             "nodeParent":2,
             "maxID":1503,
             "label":"GreenMonster",
@@ -47541,7 +47541,7 @@
             "selectedBox":54,
             "selecteID":70,
             "searchKey":"Box",
-            "props":{"y":573,"x":28516,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":635,"x":788,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -47704,6 +47704,111 @@
                     "compId":114,
                     "child":[
                         ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1595,
+            "selecteID":1588,
+            "searchKey":"Box",
+            "props":{"y":501,"x":1038,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1596,
+            "label":"WenhaoBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":5163,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5163,
+                    "label":"BoxCollider(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5164,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5163,
+                    "label":"RigidBody(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5165,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/WenhaoLogic.js",
+                    "searchKey":"Script,WenhaoLogic",
+                    "removeAble":true,
+                    "props":{"wenhaoType":3,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5163,
+                    "label":"WenhaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5166,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "selectedBox":173,
+                    "searchKey":"Animation",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5163,
+                    "maxID":177,
+                    "label":"render",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5167,
+                    "child":[
+                        ],
+                    "animations":[
+                        {
+                            "nodes":[
+                                ],
+                            "name":"ani1",
+                            "id":1,
+                            "frameRate":24,
+                            "action":0
+                        }],
+                    "$LOCKED":false
                 }],
             "animations":[
                 {
