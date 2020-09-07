@@ -3,7 +3,7 @@
     "type":"Box",
     "selectedBox":4557,
     "searchKey":"Box,AIRight",
-    "props":{"zOrder":999999,"y":0,"x":0,"width":30,"presetID":1,"preset":"laya/pages/prefab/ai/AIRight.prefab","name":"AIRight","isPresetRoot":true,"height":200,"bgColor":"#b11ecd"},
+    "props":{"zOrder":999999,"y":0,"x":0,"width":30,"presetID":1,"preset":"laya/pages/prefab/ai/AIRight.prefab","name":"AIRight","isPresetRoot":true,"height":200},
     "nodeParent":-1,
     "maxID":4564,
     "label":"AIRight",
