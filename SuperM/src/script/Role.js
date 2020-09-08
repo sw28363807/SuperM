@@ -210,6 +210,10 @@ export default class Role extends Laya.Script {
                     GameContext.playRoleAni("jump");
                 }
             }
+            let linearVelocity = GameContext.getLineSpeed();
+            if (linearVelocity.y > 15) {
+                GameContext.setRoleSpeedY(15);
+            }
         }
     }
 
@@ -271,6 +275,8 @@ export default class Role extends Laya.Script {
                         } else {
                             if (Utils.roleInCeil(other.owner)) {
                                 Utils.footMonster(other);
+                            } else {
+                                Utils.hurtRole(other.owner);
                             }
                         }
                     }
