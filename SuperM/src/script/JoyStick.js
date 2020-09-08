@@ -270,7 +270,7 @@ export default class JoyStick extends Laya.Script {
                 //左下
                 direct = {x: -1, y: 1};
                 this.isStopWalk = false;
-            } else if (this.WDown == true && this.ADown == true && this.SDown == true && this.DDown == true) {
+            } else if (this.WDown == false && this.ADown == false && this.SDown == true && this.DDown == true) {
                 //右下
                 direct = {x: 1, y: 1};
                 this.isStopWalk = false;

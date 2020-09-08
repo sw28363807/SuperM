@@ -37,6 +37,9 @@ export default class LittleGameScene1Logic extends Laya.Script {
                     return;
                 }
                 this.open(index, Laya.Handler.create(this, function() {
+                    Laya.loader.load("other1/yaoping.mp3", Laya.Handler.create(this, function (data) {
+                        Laya.SoundManager.playSound("other1/yaoping.mp3");
+                    }), null, Laya.Loader.SOUND);
                     Laya.timer.once(1000, this, function() {
                         if (index == 0) {
                             this.open(1);
@@ -55,6 +58,9 @@ export default class LittleGameScene1Logic extends Laya.Script {
                         for (let index = 0; index < 10; index++) {
                             let ani = this.owner.getChildByName("y"+String(index + 1));
                             ani.visible = true;
+                            Laya.loader.load("other1/yanhua.mp3", Laya.Handler.create(this, function (data) {
+                                Laya.SoundManager.playSound("other1/yanhua.mp3");
+                            }), null, Laya.Loader.SOUND);
                         }
                     });
                 }));

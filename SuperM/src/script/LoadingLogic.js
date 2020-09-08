@@ -14,8 +14,8 @@ export default class LoadingLogic extends Laya.Script {
                 return;
             }
         }
-        if (scene == "scene/Level1_1.scene") {
-            Laya.Scene.open("loading/LoadingScene.scene", true, bgIndex, Laya.Handler.create(this, function() {
+        if (scene == "scene/Level1_1.scene" || scene == "scene/Level2_1.scene") {
+            Laya.Scene.open("loading/LoadingScene.scene", true, 2, Laya.Handler.create(this, function() {
                 Laya.Scene.open(scene, true, null, Laya.Handler.create(this, function() {
                     LoadingLogic.curScene = "";
                 }));

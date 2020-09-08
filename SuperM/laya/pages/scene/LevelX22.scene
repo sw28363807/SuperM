@@ -2,11 +2,10 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1686,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1834,
+    "maxID":1835,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -182,7 +181,7 @@
             "source":"src/script/LevelLogic.js",
             "searchKey":"Script,LevelLogic",
             "removeAble":true,
-            "props":{"sceneType":2},
+            "props":{"sceneType":2,"bgm":"other1/bgm (1).mp3"},
             "nodeParent":2,
             "label":"LevelLogic",
             "isDirectory":false,
@@ -1631,7 +1630,7 @@
             "selectedBox":102,
             "selecteID":103,
             "searchKey":"Animation",
-            "props":{"y":460,"x":1166,"width":100,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab","height":93},
+            "props":{"y":127,"x":1042,"width":100,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab","height":93},
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
@@ -4015,6 +4014,20 @@
                     "frameRate":24,
                     "action":0
                 }]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation",
+            "props":{"y":492.5,"x":1192,"presetID":1,"preset":"laya/pages/prefab/other/EnterArrow.prefab"},
+            "nodeParent":2,
+            "label":"EnterArrow",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1834,
+            "child":[
+                ]
         }],
     "animations":[
         {

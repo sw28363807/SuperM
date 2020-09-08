@@ -17,20 +17,6 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite,1",
-            "props":{"y":0,"x":0,"visible":false,"texture":"loading/loadingBg (1).jpg","name":"1"},
-            "nodeParent":2,
-            "label":"1",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
             "searchKey":"Sprite,2",
             "props":{"y":0,"x":0,"visible":false,"texture":"loading/loadingBg (2).jpg","name":"2"},
             "nodeParent":2,
@@ -39,48 +25,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":5,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,3",
-            "props":{"y":0,"x":0,"visible":false,"texture":"loading/loadingBg (3).jpg","name":"3"},
-            "nodeParent":2,
-            "label":"3",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":6,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,4",
-            "props":{"y":0,"x":0,"visible":false,"texture":"loading/loadingBg (4).jpg","name":"4"},
-            "nodeParent":2,
-            "label":"4",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":7,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,5",
-            "props":{"y":0,"x":0,"visible":false,"texture":"loading/loadingBg (5).jpg","name":"5"},
-            "nodeParent":2,
-            "label":"5",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":8,
             "child":[
                 ]
         },

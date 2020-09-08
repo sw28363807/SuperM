@@ -1,1 +1,25 @@
-{"type":"Animation","props":{"source":"anim/DownArray.ani","name":"DownArray","autoPlay":true,"autoAnimation":"ani1","preset":"laya/pages/prefab/other/DownArray.prefab","presetID":1,"isPresetRoot":true,"x":0,"y":0},"compId":1612,"child":[],"isAniNode":true,"nodeParent":2,"searchKey":"Animation,DownArray","label":"DownArray","isDirectory":false,"hasChild":false,"x":15}
+{
+    "x":0,
+    "type":"Animation",
+    "selectedBox":1612,
+    "searchKey":"Animation,DownArray",
+    "props":{"zOrder":9999,"y":0,"x":0,"source":"anim/DownArray.ani","presetID":1,"preset":"laya/pages/prefab/other/DownArray.prefab","name":"DownArray","isPresetRoot":true,"autoPlay":true,"autoAnimation":"ani1"},
+    "nodeParent":-1,
+    "maxID":1613,
+    "label":"DownArray",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":1612,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

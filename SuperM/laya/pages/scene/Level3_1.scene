@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":8240,
+    "selecteID":86,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":8954,
+    "maxID":8955,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -190,7 +190,7 @@
             "source":"src/script/LevelLogic.js",
             "searchKey":"Script,LevelLogic",
             "removeAble":true,
-            "props":{"sceneType":1},
+            "props":{"sceneType":1,"bgm":"other1/bgm (3).mp3"},
             "nodeParent":2,
             "label":"LevelLogic",
             "isDirectory":false,
@@ -20499,20 +20499,6 @@
         },
         {
             "x":15,
-            "type":"Animation",
-            "searchKey":"Animation",
-            "props":{"y":-121.5,"x":19007.5,"width":0,"source":"anim/ArrowAni.ani","rotation":0,"height":0,"autoPlay":true,"autoAnimation":"ani1"},
-            "nodeParent":2,
-            "label":"Animation",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":8936,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Box",
             "selectedBox":4403,
             "selecteID":4408,
@@ -20770,6 +20756,20 @@
                     "frameRate":24,
                     "action":0
                 }]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation",
+            "props":{"y":-117,"x":19007.5,"presetID":1,"preset":"laya/pages/prefab/other/EnterArrow.prefab"},
+            "nodeParent":2,
+            "label":"EnterArrow",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":8954,
+            "child":[
+                ]
         }],
     "animations":[
         {

@@ -1,0 +1,25 @@
+{
+    "x":0,
+    "type":"Animation",
+    "selectedBox":1751,
+    "searchKey":"Animation,EnterArrow",
+    "props":{"zOrder":9999,"y":0,"x":0,"source":"anim/ArrowAni.ani","presetID":1,"preset":"laya/pages/prefab/other/EnterArrow.prefab","name":"EnterArrow","isPresetRoot":true,"autoPlay":true,"autoAnimation":"ani1"},
+    "nodeParent":-1,
+    "maxID":1752,
+    "label":"EnterArrow",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":1751,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

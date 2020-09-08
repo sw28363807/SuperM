@@ -10,7 +10,7 @@ export default class AILeftOrRight extends Laya.Script {
     }
     
     onEnable() {
-        this.speed = 2;
+        this.speed = 2 + Math.random()* 0.2;
     }
 
     onStart() {
@@ -39,14 +39,14 @@ export default class AILeftOrRight extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         if (this.owner.renderMonster) {
-            if (other.label == "AILeft") {
+            if (other.label == "MonsterBody" || other.label == "MonsterFoot") {
+                let dx =  Utils.getSign(this.owner.x - other.owner.x);
+                this.owner.currentVelocity = {x: dx * Math.abs(this.owner.currentVelocity.x), y: 0};
+                this.owner.renderMonster.scaleX = Utils.getSign(this.owner.currentVelocity.x) * Math.abs(this.owner.renderMonster.scaleX); 
+            } else if (other.label == "AILeft") {
                 this.owner.currentVelocity = {x: this.speed, y: 0};
                 this.owner.renderMonster.scaleX = Math.abs(this.owner.renderMonster.scaleX);
-            } else if (other.label == "MonsterBody" || other.label == "MonsterFoot") {
-                let dx =  Utils.getSign(this.owner.x - other.owner.x);
-                this.owner.currentVelocity = {x: dx * this.owner.currentVelocity.x, y: 0};
-                this.owner.renderMonster.scaleX = Utils.getSign(this.owner.currentVelocity.x) * Math.abs(this.owner.renderMonster.scaleX); 
-            }  else if (other.label == "AIRight") {
+            } else if (other.label == "AIRight") {
                 this.owner.currentVelocity = {x: -this.speed, y: 0};
                 this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
             }

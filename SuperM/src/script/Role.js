@@ -177,11 +177,8 @@ export default class Role extends Laya.Script {
                     let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
                     let speedY =  GameContext.walkDirect.y * GameContext.roleSpeed;
                     if (GameContext.roleInWater == true) {
-                        speedY = GameContext.walkDirect.y
-                        if (speedY == 0) {
-                            speedY = 2;
-                        }
-                        GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
+                        GameContext.setRoleMove(GameContext.walkDirect.x * GameContext.roleInWaterSpeed,
+                             GameContext.walkDirect.y * GameContext.roleInWaterSpeed);
                     } else if (GameContext.roleCommandFly == true) {
                         GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
                     } else {
@@ -331,6 +328,9 @@ export default class Role extends Laya.Script {
         if (GameContext.roleShuiGuanState == 2) {
             return;
         }
+        Laya.loader.load("other1/jump.mp3", Laya.Handler.create(this, function (data) {
+            Laya.SoundManager.playSound("other1/jump.mp3");
+        }), null, Laya.Loader.SOUND);
         if (GameContext.roleInWater == true) {
             this.triggerRoleInWaterJump();
         } else if (GameContext.roleInGround == true) {
@@ -486,7 +486,7 @@ export default class Role extends Laya.Script {
         EventMgr.getInstance().removeEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
         EventMgr.getInstance().removeEvent(Events.Role_Change_Big, this, this.onRoleChangeBig);
         if (GameContext.roleRigidBody) {
-            GameContext.roleRigidBody.enabled = false;
+            GameContext.roleRigidBody.getBody().SetActive(false);
             GameContext.roleRigidBody.destroy();
         }
         GameContext.roleRigidBody = null;

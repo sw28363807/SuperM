@@ -52,7 +52,7 @@ export default class LiuShaLogic extends Laya.Script {
     onUpdate() {
         if (GameContext.roleSpr && GameContext.keSpr && GameContext.roleInLiuSha
              && GameContext.curRoleLiuSha == this.owner) {
-            let yOff = 0.5;
+            let yOff = 1;
             GameContext.keSpr.y += yOff;
             GameContext.roleSpr.y += yOff;
             this.owner.liuShaDieY += yOff;

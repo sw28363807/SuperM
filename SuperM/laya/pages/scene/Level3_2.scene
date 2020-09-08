@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5094,
+    "selecteID":86,
     "searchKey":"Scene,gameScene",
     "props":{"width":1336,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":9345,
+    "maxID":9347,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -21,7 +21,7 @@
             "source":"src/script/Camera.js",
             "searchKey":"Script,Camera",
             "removeAble":true,
-            "props":{"y":0,"x":0},
+            "props":{"yCenter":1,"y":0,"x":0},
             "nodeParent":2,
             "label":"Camera",
             "isDirectory":false,
@@ -40,7 +40,7 @@
             "source":"src/script/LevelLogic.js",
             "searchKey":"Script,LevelLogic",
             "removeAble":true,
-            "props":{"sceneType":1},
+            "props":{"sceneType":1,"bgm":"other1/bgm (2).mp3"},
             "nodeParent":2,
             "label":"LevelLogic",
             "isDirectory":false,
@@ -25228,14 +25228,13 @@
             "nodeParent":2,
             "maxID":4412,
             "label":"Flower2_06",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":9344,
             "child":[
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -25252,7 +25251,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/FlowerLogic.js",
@@ -25270,7 +25268,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -25287,7 +25284,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/monster/Flower2_06.prefab"},
@@ -25303,7 +25299,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/monster/Flower2_06.prefab"},
@@ -25319,7 +25314,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":7,"preset":"laya/pages/prefab/monster/Flower2_06.prefab"},
@@ -25334,7 +25328,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -25351,7 +25344,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -25377,6 +25369,20 @@
                     "action":0
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation",
+            "props":{"y":556,"x":12228,"presetID":1,"preset":"laya/pages/prefab/other/EnterArrow.prefab"},
+            "nodeParent":2,
+            "label":"EnterArrow",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":9346,
+            "child":[
+                ]
         }],
     "animations":[
         {

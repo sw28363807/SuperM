@@ -12,12 +12,11 @@ export default class HanbaoLogic extends Laya.Script {
     }
     
     onEnable() {
+        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
+        this.owner.rigidBody.getBody().SetActive(false);
     }
 
     onStart() {
-        this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.rigidBody.enabled = false;
-        
         let script = this.owner.getComponent(HanbaoLogic);
         if (script.finalWenhaoType) {
             this.owner.finalWenhaoType = script.finalWenhaoType;
@@ -67,7 +66,7 @@ export default class HanbaoLogic extends Laya.Script {
         this.owner.play(0, false, aniA);
         this.owner.coll = this.owner.getComponent(Laya.ColliderBase);;
         this.owner.on(Laya.Event.COMPLETE, this, function(){
-            this.owner.rigidBody.enabled = true;
+            this.owner.rigidBody.getBody().SetActive(true);
             this.owner.play(0, false, aniB);
         });
     }
@@ -87,6 +86,9 @@ export default class HanbaoLogic extends Laya.Script {
         } else if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
+            Laya.loader.load("other1/yaoping.mp3", Laya.Handler.create(this, function (data) {
+                Laya.SoundManager.playSound("other1/yaoping.mp3");
+            }), null, Laya.Loader.SOUND);
              if (this.owner.rewardType == 4) {
                 GameContext.gameRoleNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
@@ -122,6 +124,13 @@ export default class HanbaoLogic extends Laya.Script {
     }
 
     onUpdate() {
+        if (!this.owner) {
+            return;
+        }
+        if (Math.abs(this.owner.x - GameContext.role.x) > 3000) {
+            Utils.removeThis(this.owner);
+            return;
+        }
         if (this.owner.isMove == true) {
             this.owner.directTime++;
             this.owner.zOrder = 655351;

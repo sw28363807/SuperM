@@ -4,6 +4,8 @@ export default class Camera extends Laya.Script {
 
     constructor() { 
         super();
+        /** @prop {name:yCenter, tips:"是否居中", type:Number, default:0}*/
+        let yCenter = 0;
     }
 
     lookAt(x, y) {
@@ -23,11 +25,17 @@ export default class Camera extends Laya.Script {
         }
         // this.owner.y = this.owner.y
         // let rp = this.role.parent.localToGlobal(new Laya.Point(this.role.x, this.role.y));
-        if (this.role.y < 200) {
-            this.owner.y = this.standY - (this.role.y - 200);
+
+        if (this.owner.yCenter == 0) {
+            if (this.role.y < 200) {
+                this.owner.y = this.standY - (this.role.y - 200);
+            } else {
+                this.owner.y =  this.standY;
+            }
         } else {
-            this.owner.y =  this.standY;
+            this.owner.y =  750/2 - y;
         }
+
         
     }
 
@@ -38,6 +46,12 @@ export default class Camera extends Laya.Script {
     }
     
     onEnable() {
+        let script = this.owner.getComponent(Camera);
+        if (script && script.yCenter) {
+            this.owner.yCenter = script.yCenter;
+        } else {
+            this.owner.yCenter = 0;
+        }
         this.zeroY = 0;
         this.role =  this.owner.getChildByName("Role");
         GameContext.mapMaxX = this.role.x;

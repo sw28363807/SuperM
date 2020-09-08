@@ -16,6 +16,9 @@ export default class WenhaoLogic extends Laya.Script {
                 if (!Utils.roleInFloor(self.owner)) {
                     return;
                 }
+                Laya.loader.load("other1/dingchu.mp3", Laya.Handler.create(this, function (data) {
+                    Laya.SoundManager.playSound("other1/dingchu.mp3");
+                }), null, Laya.Loader.SOUND);
                 if (this.owner.wenhaoType == 1) {
                     this.triggerMoGu();
                 } else if (this.owner.wenhaoType == 2) {

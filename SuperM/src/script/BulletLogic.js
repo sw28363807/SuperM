@@ -1,6 +1,7 @@
 import Events from "./Events";
 import EventMgr from "./EventMgr";
 import Utils from "./Utils";
+import GameContext from "../GameContext";
 
 export default class BulletLogic extends Laya.Script {
 
@@ -47,6 +48,10 @@ export default class BulletLogic extends Laya.Script {
                 return;
             }
         } else if (this.owner.name == "KeBullet") {
+            if (Math.abs(this.owner.x - GameContext.role.x) > 3000) {
+                Utils.removeThis(this.owner);
+                return;
+            }
             let linearVelocity = this.rigidBody.linearVelocity;
             this.rigidBody.setVelocity({x: this.owner.directX * this.speed, y: linearVelocity.y});
         }

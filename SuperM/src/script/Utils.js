@@ -99,6 +99,9 @@ export default class Utils extends Laya.Script {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
+        if (GameContext.curFootMonster) {
+            return;
+        }
         if (GameContext.curFootMonster == other.owner) {
             return;
         }
@@ -213,6 +216,7 @@ export default class Utils extends Laya.Script {
         }
         owner.removeSelf();
         owner.destroy();
+        Laya.Resource.destroyUnusedResources();
     }
 
     static getFaceUp(owner) {
