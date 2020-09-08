@@ -103,7 +103,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":-5.5,"x":-10,"width":90,"presetID":10,"preset":"laya/pages/prefab/monster/RedMonster.prefab","label":"MonsterBody","height":35,"friction":0},
+            "props":{"y":-10.5,"x":-10.5,"width":90,"presetID":10,"preset":"laya/pages/prefab/monster/RedMonster.prefab","label":"MonsterBody","height":35,"friction":0},
             "nodeParent":1500,
             "label":"BoxCollider(RedMonster)",
             "isDirectory":false,

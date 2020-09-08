@@ -1,0 +1,25 @@
+{
+    "x":0,
+    "type":"Animation",
+    "selectedBox":4568,
+    "searchKey":"Animation,QingZhu",
+    "props":{"y":0,"x":0,"width":200,"source":"anim/QingZhu.ani","presetID":1,"preset":"laya/pages/prefab/other/QingZhu.prefab","name":"QingZhu","isPresetRoot":true,"height":200,"autoPlay":true,"autoAnimation":"ani1"},
+    "nodeParent":-1,
+    "maxID":4569,
+    "label":"QingZhu",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":4568,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

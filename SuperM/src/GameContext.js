@@ -40,15 +40,28 @@ export default class GameContext extends Laya.Script {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
-        Laya.timer.once(1000, null, function() {
-            if (GameContext.role) {
-                GameContext.roleIsDrop = false;
-                GameContext.setRoleSensorEnabled(false);
-                GameContext.setRoleSpeed(0, 0);
-                GameContext.setRolePosition(hole.x + widthOff, height);
-                EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
-            }
-        });
+
+        if (GameContext.role) {
+            GameContext.roleIsDrop = false;
+            GameContext.setRoleSensorEnabled(false);
+            GameContext.setRoleSpeed(0, 0);
+            EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
+            Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+                let black = prefabDef.create();
+                Laya.stage.addChild(black);
+                black.x = 0;   
+                black.y = 0;
+                black.zOrder = 9999999;
+                black.alpha = 0;
+                Laya.Tween.to(black,{alpha: 1}, 300, null, Laya.Handler.create(null, function(){
+                    GameContext.setRolePosition(hole.x + widthOff, height);
+                    Laya.Tween.to(black,{alpha: 0}, 300, null, Laya.Handler.create(null, function(){
+                        black.removeSelf();
+                        black.destroy();
+                    }));
+                }));
+            }));
+        }
     }
 
     static triggerInLiuSha(liusha) {
@@ -385,7 +398,8 @@ GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
 GameContext.initConstRolePoint = {x: 961, y: 638};
 GameContext.mapMaxX = 0;
-GameContext.gameRoleNumber = 998;
+GameContext.gameRoleNumberInit = 999;
+GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
 GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 0;
 GameContext.gameRoleState = 0;

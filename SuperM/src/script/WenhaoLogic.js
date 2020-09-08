@@ -13,6 +13,9 @@ export default class WenhaoLogic extends Laya.Script {
     onTriggerEnter(other, self, contact) {
         if (other) {
             if (other.label == "RoleHead") {
+                if (!self.owner) {
+                    return;
+                }
                 if (!Utils.roleInFloor(self.owner)) {
                     return;
                 }
@@ -60,6 +63,9 @@ export default class WenhaoLogic extends Laya.Script {
         if (GameContext.brokenBrickTick != 0) {
             return;
         }
+        if (!this.owner) {
+            return;
+        }
         let owner = this.owner;
         let render = owner.getChildByName("render");
         let x = owner.x;
@@ -67,6 +73,9 @@ export default class WenhaoLogic extends Laya.Script {
         let parent = owner.parent;
         let zOrder = this.owner.zOrder;
         let wenhaoType = owner.wenhaoType;
+        if (wenhaoType == null || wenhaoType == undefined) {
+            wenhaoType = 1;
+        }
         if (this.owner.state == 0 && render) {
             this.owner.state = 1;
             render.play(0, false, "ani3");

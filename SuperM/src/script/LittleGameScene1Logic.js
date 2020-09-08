@@ -37,6 +37,9 @@ export default class LittleGameScene1Logic extends Laya.Script {
                     return;
                 }
                 this.open(index, Laya.Handler.create(this, function() {
+                    let beizi =  this.beizis[index];
+                    let ani = beizi.getChildByName("qingzhu");
+                    ani.visible = true;
                     if (Laya.Browser.onMiniGame) {
                         Laya.SoundManager.playSound("other1/yaoping.mp3");
                     } else {
@@ -156,6 +159,8 @@ export default class LittleGameScene1Logic extends Laya.Script {
         for (let index = 0; index < this.beizis.length; index++) {
             let beizi = this.beizis[index];
             let spr1 = beizi.getChildByName("spr1");
+            let ani =  beizi.getChildByName("qingzhu");
+            ani.visible = false;
             let y = spr1.y;
             let offY = 300;
             Laya.Tween.to(spr1, {y:y - offY }, 1000, null, Laya.Handler.create(this, function() {
@@ -169,5 +174,6 @@ export default class LittleGameScene1Logic extends Laya.Script {
     }
 
     onDisable() {
+        Laya.SoundManager.stopAll();
     }
 }

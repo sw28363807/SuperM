@@ -25,7 +25,7 @@ export default class BigRedFishLogic extends Laya.Script {
         this.owner.finalStartPointY = this.owner.startPointY + GameContext.DeadWaterY;
         this.owner.moveSpeedX = 6;
         this.owner.jumpSpeedX = 5;
-        this.owner.jumpSpeedY = 30;
+        this.owner.jumpSpeedY = 20;
 
         this.owner.state = 1; // 1追击 2跳跃 3 等待模式
 
@@ -118,6 +118,7 @@ export default class BigRedFishLogic extends Laya.Script {
                 this.owner.idleCount = 0;
                 this.owner.renderAni.rotation = 0;
             }
+            this.setFishPositionY(this.owner.finalStartPointY);
         }
         Utils.tryRemoveThis(this.owner);
     }

@@ -118,12 +118,12 @@ export default class HanbaoLogic extends Laya.Script {
             return;
         }
         if (other.label != "Ground") {
-            if (this.owner.directTime > 50) {
+            if (this.owner && this.owner.directTime > 50) {
                 this.owner.direct.x = -1 * Utils.getSign(this.owner.direct.x);
                 this.owner.directTime = 0;
             }
         }
-        if (this.owner.isMove == true) {
+        if (this.owner && this.owner.isMove == true) {
             this.owner.rigidBody.setVelocity({x: this.owner.direct.x * this.speed, y: 0}); 
         }
     }

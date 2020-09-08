@@ -40,28 +40,32 @@ export default class Utils extends Laya.Script {
         let parent = owner.parent;
         if (parent && owner) {
             Laya.loader.create("prefab/brick/BrickGoldEffect.prefab", Laya.Handler.create(null, function (prefabDef) {
-                let BrickGoldEffect = prefabDef.create();
-                parent.addChild(BrickGoldEffect);
-                BrickGoldEffect.x = x;   
-                BrickGoldEffect.y = y;
-                BrickGoldEffect.play(0, false, "ani2");
-                BrickGoldEffect.on(Laya.Event.COMPLETE, null, function() {
-        
-                    let label = new Laya.Text();
-                    label.text = String(100);
-                    label.color = "#dbdb2b";
-                    label.fontSize = 24;
-                    parent.addChild(label);
-                    label.x = x + 20;
-                    label.y = y - 50;
-        
-                    Laya.Tween.to(label, {y: label.y - 60}, 1000, null, Laya.Handler.create(null, function() {
-                        Utils.removeThis(label);
-                    }));
-                    GameContext.gameGoldNumber++;
-                    EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
-                    Utils.removeThis(BrickGoldEffect);
-                });
+                if (parent && prefabDef) {
+                    let BrickGoldEffect = prefabDef.create();
+                    if (BrickGoldEffect) {
+                        parent.addChild(BrickGoldEffect);
+                        BrickGoldEffect.x = x;   
+                        BrickGoldEffect.y = y;
+                        BrickGoldEffect.play(0, false, "ani2");
+                        BrickGoldEffect.on(Laya.Event.COMPLETE, null, function() {
+                            let label = new Laya.Text();
+                            label.text = String(100);
+                            label.color = "#dbdb2b";
+                            label.fontSize = 24;
+                            parent.addChild(label);
+                            label.x = x + 20;
+                            label.y = y - 50;
+                            
+                            Laya.Tween.to(label, {y: label.y - 60}, 1000, null, Laya.Handler.create(null, function() {
+                                Utils.removeThis(label);
+                            }));
+                            GameContext.gameGoldNumber++;
+                            EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
+                            Utils.removeThis(BrickGoldEffect);
+                        });
+                    }
+                }
+
             }));
             if (removeThis) {
                 Utils.removeThis(owner);
@@ -132,7 +136,7 @@ export default class Utils extends Laya.Script {
 
     static roleInCeil(monster) {
         if (GameContext.role) {
-            let offx = 40;
+            let offx = 80;
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
@@ -283,7 +287,7 @@ export default class Utils extends Laya.Script {
                 if (loadingBgIndex == 0) {
                     loadingBgIndex = 1;
                 }
-                LoadingLogic.loadScene(GameContext.gameGotoScene, loadingBgIndex);
+                LoadingLogic.loadScene(GameContext.gameGotoScene);
                 // Laya.Scene.open(GameContext.gameGotoScene);
                 // Laya.Scene.open("scene/Level1_1.scene");
             });
@@ -303,18 +307,22 @@ export default class Utils extends Laya.Script {
             let y = owner.y;
             let parent = owner.parent;
             Laya.loader.create(deadMove, Laya.Handler.create(null, function (prefabDef) {
-                if (parent) {
+                if (parent && prefabDef && owner) {
                     let dead = prefabDef.create();
-                    dead.x = x;
-                    dead.y = y;
-                    parent.addChild(dead);
-                    let rigid = dead.getComponent(Laya.RigidBody);
-                    rigid.setAngle(owner.deadAngle);
-                    rigid.setVelocity({x: 3, y: -15});
-                    rigid.gravityScale = 5;
-                    Laya.timer.once(3000, null, function() {
-                        Utils.removeThis(dead);
-                    });
+                    if (dead) {
+                        dead.x = x;
+                        dead.y = y;
+                        parent.addChild(dead);
+                        let rigid = dead.getComponent(Laya.RigidBody);
+                        if (rigid && owner.deadAngle) {
+                            rigid.setAngle(owner.deadAngle);
+                            rigid.setVelocity({x: 3, y: -15});
+                            rigid.gravityScale = 5;
+                            Laya.timer.once(3000, null, function() {
+                                Utils.removeThis(dead);
+                            });
+                        }
+                    }
                 }
             }));
         }
@@ -367,6 +375,21 @@ export default class Utils extends Laya.Script {
         if (GameContext.gameRoleNumber == 0) {
             GameContext.playRoleAni("die", false);
             GameContext.isDie = true;
+            Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+                let black = prefabDef.create();
+                Laya.stage.addChild(black);
+                black.x = 0;   
+                black.y = 0;
+                black.zOrder = 9999999;
+                black.alpha = 0;
+                Laya.Tween.to(black,{alpha: 1}, 3000, null, Laya.Handler.create(null, function(){
+                    black.removeSelf();
+                    black.destroy();
+                    GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
+                    EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+                    LoadingLogic.loadScene("scene/Level1_1.scene");
+                }));
+            }));
         }
         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
     }
@@ -421,9 +444,30 @@ export default class Utils extends Laya.Script {
         if (GameContext.gameRoleNumber == 0) {
             GameContext.playRoleAni("die", false);
             GameContext.isDie = true;
+            Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+                let black = prefabDef.create();
+                Laya.stage.addChild(black);
+                black.x = 0;   
+                black.y = 0;
+                black.zOrder = 9999999;
+                black.alpha = 0;
+                Laya.Tween.to(black,{alpha: 1}, 3000, null, Laya.Handler.create(null, function(){
+                    black.removeSelf();
+                    black.destroy();
+                    GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
+                    EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+                    if (LoadingLogic.curSceneExt != "") {
+                        if (LoadingLogic.curScene == "scene/LevelBoss.scene") {
+                            LoadingLogic.loadScene("scene/Level1_1.scene");
+                        } else {
+                            LoadingLogic.loadScene(LoadingLogic.curSceneExt, true);
+                        }
+                    }
+                    
+                }));
+            }));
         }
         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
-
     }
 
     static triggerToRandomDoor(owner, destScene, loadingIndex, gotoPoint) {
@@ -432,7 +476,7 @@ export default class Utils extends Laya.Script {
             if (loadingIndex == null || loadingIndex == undefined) {
                 loadingIndex = 1;
             }
-            LoadingLogic.loadScene(destScene, loadingIndex);
+            LoadingLogic.loadScene(destScene);
             return;
         }
         GameContext.roleRigidBody.getBody().SetActive(false);
@@ -448,37 +492,26 @@ export default class Utils extends Laya.Script {
                 black.destroy();
                 GameContext.doorCount++;
                 GameContext.doorInitPoint = gotoPoint;
-                LoadingLogic.loadScene(destScene, loadingIndex);
+                LoadingLogic.loadScene(destScene);
             }));
-
-            // let sign = 1;
-            // let distance = 150;
-            // if (GameContext.roleSpr.scaleX < 0) {
-            //     sign = -1;
-            //     distance = 60
-            // }
-            // GameContext.role.x = outDoor.x + sign * distance;
-            // GameContext.role.y = GameContext.role.y;
-            // Laya.Tween.to(black,{alpha: 0}, 500, null, Laya.Handler.create(null, function() {
-            //     GameContext.roleRigidBody.getBody().SetActive(true);
-            //     black.visible = false;
-            //     black.removeSelf();
-            //     black.destroy();
-            //     GameContext.doorCount++;
-            // }));
         }));
     }
 
     static createBrickBrokenEffect(owner) {
+        if (!owner) {
+            return;
+        }
         let x = owner.x;
         let y = owner.y;
         let parent = owner.parent;
         for (let index = 0; index < 4; index++) {
             Laya.loader.create("prefab/bb/b"+ String(index + 1)+".prefab", Laya.Handler.create(this, function (prefabDef) {
-                let brokenBrick = prefabDef.create();
-                parent.addChild(brokenBrick);
-                brokenBrick.x = x;   
-                brokenBrick.y = y;
+                if (parent && prefabDef) {
+                    let brokenBrick = prefabDef.create();
+                    parent.addChild(brokenBrick);
+                    brokenBrick.x = x;   
+                    brokenBrick.y = y;
+                }
             }));
         }
     }

@@ -6,7 +6,7 @@ export default class DeadWaterLogic extends Laya.Script {
 
     constructor() { 
         super();
-        /** @prop {name:resetPosX, tips:"重置位置", type:Int, default:0}*/
+        /** @prop {name:resetPosX, tips:"重置位置X", type:Int, default:0}*/
         let resetPosX = 0;
         /** @prop {name:upHeight, tips:"上浮位置", type:Int, default:0}*/
         let upHeight = 0;
@@ -37,7 +37,7 @@ export default class DeadWaterLogic extends Laya.Script {
         this.owner.tickCount = 0;
         this.owner.downPosY = this.owner.y;
         this.owner.upPosY = this.owner.y - this.owner.upHeight;
-        this.owner.upSpeed = -1;
+        this.owner.upSpeed = -0.5;
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
     }
 
@@ -47,7 +47,7 @@ export default class DeadWaterLogic extends Laya.Script {
               this.owner.upHeight != undefined) {
                 if (this.owner.state == 1) {
                     this.owner.tickCount++;
-                    if (this.owner.tickCount >= 200) {
+                    if (this.owner.tickCount >= 500) {
                         this.owner.tickCount = 0;
                         this.owner.state = 2;
                     }
@@ -60,6 +60,24 @@ export default class DeadWaterLogic extends Laya.Script {
                         body.SetPositionXY(p.x, this.owner.upPosY/50);
                         this.owner.rigidBody.setVelocity({x: 0, y: 0});
                         this.owner.state = 3;
+                        this.owner.tickCount = 0;
+                    }
+                } else if (this.owner.state == 3) {
+                    this.owner.tickCount++;
+                    if (this.owner.tickCount >= 500) {
+                        this.owner.state = 4;
+                        this.owner.tickCount = 0;
+                    }
+                } else if (this.owner.state == 4) {
+                    this.owner.tickCount++;
+                    this.owner.rigidBody.setVelocity({x: 0, y: -this.owner.upSpeed});
+                    if (this.owner.y >= this.owner.downPosY) {
+                        let body = this.owner.rigidBody.getBody();
+                        let p = body.GetPosition();
+                        body.SetPositionXY(p.x, this.owner.downPosY/50);
+                        this.owner.rigidBody.setVelocity({x: 0, y: 0});
+                        this.owner.state = 1;
+                        this.owner.tickCount = 0;
                     }
                 }
                 GameContext.DeadWaterY = this.owner.y - this.owner.downPosY;
@@ -72,7 +90,7 @@ export default class DeadWaterLogic extends Laya.Script {
     onTriggerEnter(other, self, contact) {
         if (self.label == "DeadWater") {
             if (other.label == "RoleHead" || other.label == "RoleFoot" || other.label == "RoleBody" ) {
-                GameContext.triggerGotoHole(this.owner, null, this.owner.resetPosX);
+                GameContext.triggerGotoHole(this.owner, 100, this.owner.resetPosX);
             }
         }
     }

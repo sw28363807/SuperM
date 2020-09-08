@@ -18,6 +18,7 @@ class Main {
 		if (GameConfig.physicsDebug && Laya["PhysicsDebugDraw"]) Laya["PhysicsDebugDraw"].enable();
 		if (GameConfig.stat) Laya.Stat.show();
 		Laya.alertGlobalError(true);
+		Laya.SoundManager.autoStopMusic = false;
 
 
 		if (Laya.Browser.onMiniGame) {

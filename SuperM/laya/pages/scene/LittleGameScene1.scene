@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":41,
+    "selectedBox":14,
+    "selecteID":48,
     "searchKey":"Scene",
     "props":{"width":1336,"sceneColor":"#000000","height":750},
     "nodeParent":-1,
-    "maxID":42,
+    "maxID":49,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -92,7 +92,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box,point2",
-            "props":{"y":637,"x":846,"name":"point2"},
+            "props":{"y":637,"x":838,"name":"point2"},
             "nodeParent":2,
             "label":"point2",
             "isDirectory":false,
@@ -109,13 +109,14 @@
             "props":{"y":620,"x":423,"width":177,"pivotY":177,"pivotX":89,"name":"beizi0","height":177},
             "nodeParent":2,
             "label":"beizi0",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":8,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,spr1",
                     "props":{"zOrder":2,"texture":"other1/beizi.png","name":"spr1"},
@@ -127,9 +128,10 @@
                     "compId":9,
                     "child":[
                         ],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,spr2",
                     "props":{"y":-9,"x":-10,"texture":"other/rewardpingzi (3).png","name":"spr2"},
@@ -141,6 +143,46 @@
                     "compId":10,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "selectedBox":4568,
+                    "searchKey":"Animation,qingzhu",
+                    "props":{"y":52,"x":88.5,"presetID":1,"preset":"laya/pages/prefab/other/QingZhu.prefab","name":"qingzhu"},
+                    "nodeParent":8,
+                    "maxID":4569,
+                    "label":"qingzhu",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":42,
+                    "child":[
+                        ],
+                    "animations":[
+                        {
+                            "nodes":[
+                                ],
+                            "name":"ani1",
+                            "id":1,
+                            "frameRate":24,
+                            "action":0
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,roleLabel",
+                    "props":{"y":144,"x":83,"width":102,"valign":"middle","text":"x1","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
+                    "nodeParent":8,
+                    "label":"roleLabel",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":46,
+                    "child":[
+                        ]
                 }]
         },
         {
@@ -150,13 +192,14 @@
             "props":{"y":623,"x":635,"width":177,"pivotY":177,"pivotX":89,"name":"beizi1","height":177},
             "nodeParent":2,
             "label":"beizi1",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":11,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,spr1",
                     "props":{"zOrder":2,"texture":"other1/beizi.png","name":"spr1"},
@@ -167,9 +210,11 @@
                     "hasChild":false,
                     "compId":12,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,spr2",
                     "props":{"y":-9,"x":-10,"texture":"other/rewardpingzi (3).png","name":"spr2"},
@@ -181,13 +226,52 @@
                     "compId":13,
                     "child":[
                         ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "selectedBox":4568,
+                    "searchKey":"Animation,qingzhu",
+                    "props":{"y":54,"x":88.5,"presetID":1,"preset":"laya/pages/prefab/other/QingZhu.prefab","name":"qingzhu"},
+                    "nodeParent":11,
+                    "maxID":4569,
+                    "label":"qingzhu",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":44,
+                    "child":[
+                        ],
+                    "animations":[
+                        {
+                            "nodes":[
+                                ],
+                            "name":"ani1",
+                            "id":1,
+                            "frameRate":24,
+                            "action":0
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,roleLabel",
+                    "props":{"y":143,"x":83,"width":102,"valign":"middle","text":"x2","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
+                    "nodeParent":11,
+                    "label":"roleLabel",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":47,
+                    "child":[
+                        ]
                 }]
         },
         {
             "x":15,
             "type":"Box",
             "searchKey":"Box,beizi2",
-            "props":{"y":621,"x":850,"width":177,"pivotY":177,"pivotX":89,"name":"beizi2","height":177},
+            "props":{"y":621,"x":842,"width":177,"pivotY":177,"pivotX":89,"name":"beizi2","height":177},
             "nodeParent":2,
             "label":"beizi2",
             "isOpen":true,
@@ -208,7 +292,8 @@
                     "hasChild":false,
                     "compId":15,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
@@ -221,6 +306,45 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":16,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "selectedBox":4568,
+                    "searchKey":"Animation,qingzhu",
+                    "props":{"y":56,"x":91,"presetID":1,"preset":"laya/pages/prefab/other/QingZhu.prefab","name":"qingzhu"},
+                    "nodeParent":14,
+                    "maxID":4569,
+                    "label":"qingzhu",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":45,
+                    "child":[
+                        ],
+                    "animations":[
+                        {
+                            "nodes":[
+                                ],
+                            "name":"ani1",
+                            "id":1,
+                            "frameRate":24,
+                            "action":0
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,roleLabel",
+                    "props":{"y":146,"x":83,"width":102,"valign":"middle","text":"x3","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
+                    "nodeParent":14,
+                    "label":"roleLabel",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":48,
                     "child":[
                         ]
                 }]
@@ -285,7 +409,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation,y5",
-            "props":{"y":549,"x":928,"source":"anim/YanHua6.ani","name":"y5","autoPlay":true},
+            "props":{"y":549,"x":920,"source":"anim/YanHua6.ani","name":"y5","autoPlay":true},
             "nodeParent":2,
             "label":"y5",
             "isDirectory":false,

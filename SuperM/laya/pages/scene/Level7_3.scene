@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":10869,
+    "selecteID":369,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -64191,7 +64191,8 @@
             "hasChild":false,
             "compId":11547,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         }],
     "animations":[
         {

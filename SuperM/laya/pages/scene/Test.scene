@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":4565,
+    "selecteID":4568,
     "searchKey":"Scene",
     "props":{"width":5000,"sceneColor":"#48ab30","height":5000},
     "nodeParent":-1,
-    "maxID":4568,
+    "maxID":4569,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -59,6 +59,20 @@
                     "$HIDDEN":false
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation",
+            "props":{"y":2471,"x":2444,"presetID":1,"preset":"laya/pages/prefab/other/QingZhu.prefab"},
+            "nodeParent":2,
+            "label":"QingZhu",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":4568,
+            "child":[
+                ]
         }],
     "animations":[
         {

@@ -14,7 +14,7 @@ export default class JumpMonsterLogic extends Laya.Script {
     }
 
     onStart() {
-        this.owner.attackTime = 1500;
+        this.owner.attackTime = 3000;
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.state = 1;   //1 待机模式 2 跳跃模式

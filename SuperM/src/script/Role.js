@@ -69,6 +69,9 @@ export default class Role extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
+        let body = GameContext.roleRigidBody.getBody();
+        let pos = body.GetPosition();
+        body.SetPositionXY(pos.x, pos.y - 1);
         Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.7, scaleY: GameContext.bodyBigScale * 0.7}, 70, null, Laya.Handler.create(this, function() {
             Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.5, scaleY: GameContext.bodyBigScale * 0.5}, 70, null, Laya.Handler.create(this, function() {
                 Laya.Tween.to(GameContext.roleRoot, {scaleX: GameContext.bodyBigScale * 0.9, scaleY: GameContext.bodyBigScale * 0.9}, 70,null, Laya.Handler.create(this, function() {
@@ -175,12 +178,12 @@ export default class Role extends Laya.Script {
                 if (GameContext.walkDirect.x != 0) {
                     let linearVelocity = GameContext.getLineSpeed();
                     let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
-                    let speedY =  GameContext.walkDirect.y * GameContext.roleSpeed;
+                    // let speedY =  GameContext.walkDirect.y * GameContext.roleSpeed;
                     if (GameContext.roleInWater == true) {
                         GameContext.setRoleMove(GameContext.walkDirect.x * GameContext.roleInWaterSpeed,
                              GameContext.walkDirect.y * GameContext.roleInWaterSpeed);
                     } else if (GameContext.roleCommandFly == true) {
-                        GameContext.setRoleMove(GameContext.walkDirect.x * 5, speedY);
+                        GameContext.setRoleMove(GameContext.walkDirect.x * 5, GameContext.walkDirect.x * 5);
                     } else {
                         GameContext.setRoleMove(speedX, linearVelocity.y);
                     }
@@ -271,7 +274,7 @@ export default class Role extends Laya.Script {
                         // if (other.owner.name != "CiQiu") {
 
                         // }
-                        if (other.owner.name == "Flower") {
+                        if (other.owner.name == "Flower" || other.owner.name == "BrickMonster") {
                         } else {
                             if (Utils.roleInCeil(other.owner)) {
                                 Utils.footMonster(other);
@@ -484,6 +487,12 @@ export default class Role extends Laya.Script {
     }
 
     onRoleCButton(data) {
+        if (!this.owner) {
+            return;
+        }
+        if (GameContext.isDie) {
+            return;
+        }
         if (data == "down") {
             if (GameContext.flySliderState == 1) {
                 GameContext.flySliderState = 2;

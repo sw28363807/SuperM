@@ -31,6 +31,8 @@ export default class LevelLogic extends Laya.Script {
         }
         if (this.owner.bgm != "") {
             if (Laya.Browser.onMiniGame) {
+                Laya.SoundManager.stopAllSound();
+                Laya.SoundManager.stopMusic();
                 Laya.SoundManager.playMusic(this.owner.bgm);
             } else {
                 Laya.loader.load(this.owner.bgm, Laya.Handler.create(this, function (data) {
@@ -44,9 +46,9 @@ export default class LevelLogic extends Laya.Script {
     }
 
     onDisable() {
-        if (this.owner.bgm != "") {
-            Laya.SoundManager.stopMusic(this.owner.bgm);
-            // Laya.SoundManager.destroySound(this.owner.bgm);
-        }
+        // if (this.owner.bgm != "") {
+        //     // Laya.SoundManager.stopMusic(this.owner.bgm);
+        //     // Laya.SoundManager.destroySound(this.owner.bgm);
+        // }
     }
 }
