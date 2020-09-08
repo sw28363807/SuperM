@@ -94,7 +94,7 @@ export default class Utils extends Laya.Script {
         }
         Utils.removeThis(owner);
     }
-
+    
     static footMonster(other) {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
@@ -319,6 +319,56 @@ export default class Utils extends Laya.Script {
             }));
         }
         Utils.removeThis(owner);
+    }
+
+    static bossHurtRole(other) {
+        if (!GameContext.role) {
+            return;
+        }
+        if (GameContext.isDie) {
+            return;
+        }
+        if (GameContext.roleHurting) {
+            return;
+        }
+        GameContext.roleFlyState = false;
+        GameContext.playRoleAni("");
+        GameContext.playRoleAni("stand");
+        let x = -1;
+        if (other) {
+            x = Utils.getSign(GameContext.role.x - other.x - other.width/2 );
+        } else {
+            x = GameContext.getRoleFaceup();
+        }
+        GameContext.showHurtEffect();
+        if (GameContext.gameRoleState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(1);
+        } else if (GameContext.bodyState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(0);
+            GameContext.changeSmallEffect();
+        }
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
+        if (x > 0) {
+            GameContext.roleRigidBody.getBody().SetPositionXY((other.x + other.width + 100)/50, other.y/50);
+        } else {
+            GameContext.roleRigidBody.getBody().SetPositionXY((other.x - 100)/50, other.y/50);
+        }
+        GameContext.setRoleSpeed( x * 10, -10);
+        GameContext.roleHurting = true;
+        Laya.timer.once(1000, null, function() {
+            GameContext.roleHurting = false;
+            GameContext.commandWalk = true;
+        });
+        GameContext.gameRoleNumber--;
+        if (GameContext.gameRoleNumber == 0) {
+            GameContext.playRoleAni("die", false);
+            GameContext.isDie = true;
+        }
+        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
     }
 
     static hurtRole(other) {

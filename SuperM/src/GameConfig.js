@@ -48,6 +48,7 @@ import LaZhuLogic from "./script/LaZhuLogic"
 import YouLingLogic from "./script/YouLingLogic"
 import HuoQiuLogic from "./script/HuoQiuLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
+import BossLogic from "./script/BossLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
@@ -111,6 +112,7 @@ export default class GameConfig {
 		reg("script/YouLingLogic.js",YouLingLogic);
 		reg("script/HuoQiuLogic.js",HuoQiuLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
+		reg("script/BossLogic.js",BossLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);

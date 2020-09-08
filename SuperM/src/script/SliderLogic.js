@@ -33,6 +33,7 @@ export default class SliderLogic extends Laya.Script {
             if (GameContext.curFlyPower <= 0) {
                 GameContext.curFlyPower = 0;
                 GameContext.flySliderState = 1;
+                GameContext.roleCommandFly = false;
             }
         }
 

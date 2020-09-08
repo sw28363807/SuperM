@@ -21,10 +21,13 @@ export default class PassLevelBrickLogic extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         if (other.label == "RoleHead") {
-            
-            Laya.loader.load("other1/guoguan.mp3", Laya.Handler.create(this, function (data) {
+            if (Laya.Browser.onMiniGame) {
                 Laya.SoundManager.playSound("other1/guoguan.mp3");
-            }), null, Laya.Loader.SOUND);
+            } else {
+                Laya.loader.load("other1/guoguan.mp3", Laya.Handler.create(this, function (data) {
+                    Laya.SoundManager.playSound("other1/guoguan.mp3");
+                }), null, Laya.Loader.SOUND);
+            }
 
             let a = Math.random();
             let path = "";

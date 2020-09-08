@@ -16,9 +16,15 @@ export default class WenhaoLogic extends Laya.Script {
                 if (!Utils.roleInFloor(self.owner)) {
                     return;
                 }
-                Laya.loader.load("other1/dingchu.mp3", Laya.Handler.create(this, function (data) {
-                    Laya.SoundManager.playSound("other1/dingchu.mp3");
-                }), null, Laya.Loader.SOUND);
+                if (this.owner.state == 0) {
+                    if (Laya.Browser.onMiniGame) {
+                        Laya.SoundManager.playSound("other1/dingchu.mp3");
+                    } else {
+                        Laya.loader.load("other1/dingchu.mp3", Laya.Handler.create(this, function (data) {
+                            Laya.SoundManager.playSound("other1/dingchu.mp3");
+                        }), null, Laya.Loader.SOUND);
+                    }   
+                }
                 if (this.owner.wenhaoType == 1) {
                     this.triggerMoGu();
                 } else if (this.owner.wenhaoType == 2) {
@@ -60,6 +66,7 @@ export default class WenhaoLogic extends Laya.Script {
         let y = owner.y;
         let parent = owner.parent;
         let zOrder = this.owner.zOrder;
+        let wenhaoType = owner.wenhaoType;
         if (this.owner.state == 0 && render) {
             this.owner.state = 1;
             render.play(0, false, "ani3");
@@ -70,7 +77,12 @@ export default class WenhaoLogic extends Laya.Script {
                 Laya.loader.create("prefab/Reward.prefab", Laya.Handler.create(null, function (prefabDef) {
                     if (parent && owner) {
                         let wenhao = prefabDef.create();
-                        wenhao.wenhaoType = owner.wenhaoType;
+                        if (wenhaoType == 3) {
+                            if (GameContext.gameRoleBodyState == 0) {
+                                wenhaoType = 1;
+                            }
+                        }
+                        wenhao.wenhaoType = wenhaoType;
                         parent.addChild(wenhao);
                         wenhao.x = x + 5;
                         wenhao.y = y - wenhao.height * wenhao.scaleX - 10;

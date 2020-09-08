@@ -1,1 +1,0 @@
-{"type":"Scene","props":{"width":5000,"height":5000},"compId":2,"child":[{"type":"Animation","props":{"y":-111,"x":16979,"presetID":1,"zOrder":9999,"source":"anim/ArrowAni.ani","name":"EnterArrow","isPresetRoot":true,"autoPlay":true,"autoAnimation":"ani1"},"compId":1751}],"loadList":["prefab/other/EnterArrow.prefab"],"loadList3D":[]}

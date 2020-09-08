@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":8049,
+    "selecteID":8153,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":8054,
+    "maxID":8154,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -206,7 +206,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel",
-            "props":{"y":-2248,"x":-188,"width":30000,"height":3000,"bgColor":"#ffc8b9"},
+            "props":{"y":-2248,"x":-188,"width":30000,"height":3000,"bgColor":"#170605"},
             "nodeParent":2,
             "label":"Panel",
             "isDirectory":false,
@@ -241,7 +241,7 @@
             "selectedBox":54,
             "selecteID":115,
             "searchKey":"Box",
-            "props":{"y":471,"x":1887,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":484,"x":2055,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -997,14 +997,13 @@
             "nodeParent":2,
             "maxID":1723,
             "label":"HuoYanChi",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7911,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
@@ -1018,7 +1017,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1034,7 +1032,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1050,13 +1047,12 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/HuoYanChiLogic.js",
                     "searchKey":"Script,HuoYanChiLogic",
                     "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab","customY":471,"customX":1887},
                     "nodeParent":7911,
                     "label":"HuoYanChiLogic",
                     "isDirectory":false,
@@ -1237,7 +1233,7 @@
                     "source":"src/script/HuoYanChiLogic.js",
                     "searchKey":"Script,HuoYanChiLogic",
                     "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab","customY":471,"customX":1887},
                     "nodeParent":7918,
                     "label":"HuoYanChiLogic",
                     "isDirectory":false,
@@ -1499,7 +1495,7 @@
             "selectedBox":1820,
             "selecteID":1851,
             "searchKey":"Box",
-            "props":{"y":119,"x":2897,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
+            "props":{"y":33,"x":2897,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
             "nodeParent":2,
             "maxID":1852,
             "label":"CiBrick5",
@@ -2902,7 +2898,7 @@
                     "source":"src/script/HuoYanChiLogic.js",
                     "searchKey":"Script,HuoYanChiLogic",
                     "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab","customY":471,"customX":4631},
                     "nodeParent":8003,
                     "label":"HuoYanChiLogic",
                     "isDirectory":false,
@@ -2991,7 +2987,7 @@
                     "source":"src/script/HuoYanChiLogic.js",
                     "searchKey":"Script,HuoYanChiLogic",
                     "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/other/HuoYanChi.prefab","customY":471,"customX":4631},
                     "nodeParent":8008,
                     "label":"HuoYanChiLogic",
                     "isDirectory":false,
@@ -3021,14 +3017,13 @@
             "nodeParent":2,
             "maxID":5104,
             "label":"MoveBrick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":8013,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3044,7 +3039,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3060,7 +3054,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MoveBrickLogic.js",
@@ -3078,7 +3071,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/brick/MoveBrick.prefab"},
@@ -3092,7 +3084,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3169,14 +3160,13 @@
             "nodeParent":2,
             "maxID":1596,
             "label":"WenhaoBrick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":8022,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3193,7 +3183,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3210,7 +3199,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -3228,7 +3216,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -3274,14 +3261,13 @@
             "nodeParent":2,
             "maxID":1596,
             "label":"WenhaoBrick",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":8027,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3298,7 +3284,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3315,7 +3300,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -3333,7 +3317,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -3672,7 +3655,7 @@
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
-            "props":{"y":72.5,"x":1992,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "props":{"y":-195,"x":2907,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
@@ -3680,7 +3663,7 @@
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":8047,
+            "compId":8054,
             "child":[
                 {
                     "x":30,
@@ -3689,7 +3672,7 @@
                     "searchKey":"BoxCollider",
                     "removeAble":true,
                     "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
-                    "nodeParent":8047,
+                    "nodeParent":8054,
                     "label":"BoxCollider(Gold)",
                     "isDirectory":false,
                     "isAniNode":true,
@@ -3705,12 +3688,12 @@
                     "searchKey":"RigidBody",
                     "removeAble":true,
                     "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
-                    "nodeParent":8047,
+                    "nodeParent":8054,
                     "label":"RigidBody(Gold)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":8048,
+                    "compId":8055,
                     "child":[
                         ]
                 },
@@ -3722,7 +3705,7 @@
                     "searchKey":"Script,GoldLogic",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
-                    "nodeParent":8047,
+                    "nodeParent":8054,
                     "label":"GoldLogic",
                     "isDirectory":false,
                     "isAniNode":true,
@@ -3744,19 +3727,18 @@
         },
         {
             "x":15,
-            "type":"Box",
-            "selectedBox":1595,
-            "selecteID":1588,
-            "searchKey":"Box",
-            "props":{"y":374.5,"x":2059,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-271,"x":2907,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
             "nodeParent":2,
-            "maxID":1596,
-            "label":"WenhaoBrick",
+            "maxID":106,
+            "label":"Gold",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
-            "compId":8049,
+            "compId":8056,
             "child":[
                 {
                     "x":30,
@@ -3764,16 +3746,15 @@
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
-                    "nodeParent":8049,
-                    "label":"BoxCollider(WenhaoBrick)",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8056,
+                    "label":"BoxCollider(Gold)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":8050,
+                    "compId":8057,
                     "child":[
-                        ],
-                    "$LOCKED":false
+                        ]
                 },
                 {
                     "x":30,
@@ -3781,13 +3762,1626 @@
                     "switchAble":true,
                     "searchKey":"RigidBody",
                     "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
-                    "nodeParent":8049,
-                    "label":"RigidBody(WenhaoBrick)",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8056,
+                    "label":"RigidBody(Gold)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":8051,
+                    "compId":8058,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8056,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8059,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-195,"x":3243,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8060,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8060,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8062,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8060,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8063,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8060,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8064,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-271,"x":3243,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8061,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8061,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8065,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8061,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8066,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8061,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8067,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-195,"x":3581,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8068,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8068,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8070,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8068,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8071,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8068,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8072,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-271,"x":3582,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8069,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8069,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8073,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8069,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8074,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8069,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8075,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":205,"x":902,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8076,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8076,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8078,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8076,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8079,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8076,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8080,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":132,"x":903,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8077,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8077,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8081,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8077,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8082,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8077,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8083,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":199,"x":750,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8084,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8084,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8086,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8084,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8087,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8084,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8088,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":126,"x":751,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8085,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8085,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8089,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8085,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8090,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8085,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8091,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":180,
+            "selecteID":185,
+            "searchKey":"Animation",
+            "props":{"y":200.5,"x":814,"presetID":1,"preset":"laya/pages/prefab/Reward.prefab"},
+            "nodeParent":2,
+            "maxID":186,
+            "label":"Reward",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8092,
+            "child":[
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Reward.prefab"},
+                    "nodeParent":8092,
+                    "label":"RigidBody(Reward)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":182,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/HanbaoLogic.js",
+                    "searchKey":"Script,HanbaoLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Reward.prefab","finalWenhaoType":4},
+                    "nodeParent":8092,
+                    "label":"HanbaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":183,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/Reward.prefab"},
+                    "nodeParent":8092,
+                    "label":"CircleCollider(Reward)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":185,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-393,"x":5846,"width":100,"rotation":0,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab","height":93},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8093,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8093,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8097,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8093,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8098,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8093,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8099,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-464,"x":5846,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8094,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8094,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8100,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8094,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8101,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8094,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8102,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-393,"x":5694,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8095,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8095,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8103,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8095,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8104,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8095,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8105,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-466,"x":5695,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8096,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8096,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8106,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8096,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8107,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8096,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8108,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":180,
+            "selecteID":185,
+            "searchKey":"Animation",
+            "props":{"y":-373,"x":5757,"presetID":1,"preset":"laya/pages/prefab/Reward.prefab"},
+            "nodeParent":2,
+            "maxID":186,
+            "label":"Reward",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8109,
+            "child":[
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Reward.prefab"},
+                    "nodeParent":8109,
+                    "label":"RigidBody(Reward)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8110,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/HanbaoLogic.js",
+                    "searchKey":"Script,HanbaoLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Reward.prefab","finalWenhaoType":4},
+                    "nodeParent":8109,
+                    "label":"HanbaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8111,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/Reward.prefab"},
+                    "nodeParent":8109,
+                    "label":"CircleCollider(Reward)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8112,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "searchKey":"Box",
+            "props":{"y":384,"x":3030,"presetID":1,"preset":"laya/pages/prefab/monster/Boss.prefab"},
+            "nodeParent":2,
+            "label":"Boss",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8113,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/Boss.prefab"},
+                    "nodeParent":8113,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1753,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/Boss.prefab"},
+                    "nodeParent":8113,
+                    "label":"BoxCollider(Boss)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1754,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/Boss.prefab"},
+                    "nodeParent":8113,
+                    "label":"RigidBody(Boss)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1755,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/Boss.prefab"},
+                    "nodeParent":8113,
+                    "label":"BoxCollider(Boss)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1756,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/BossLogic.js",
+                    "searchKey":"Script,BossLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/Boss.prefab"},
+                    "nodeParent":8113,
+                    "label":"BossLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8116,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/Boss.prefab"},
+                    "nodeParent":8113,
+                    "label":"BoxCollider(Boss)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8117,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4555,
+            "selecteID":4560,
+            "searchKey":"Box",
+            "props":{"y":396,"x":1712,"presetID":1,"preset":"laya/pages/prefab/ai/AILeftBoss.prefab"},
+            "nodeParent":2,
+            "maxID":4562,
+            "label":"AILeftBoss",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8114,
+            "child":[
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AILeftBoss.prefab"},
+                    "nodeParent":8114,
+                    "label":"BoxCollider(AILeftBoss)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4560,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AILeftBoss.prefab"},
+                    "nodeParent":8114,
+                    "label":"RigidBody(AILeftBoss)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4561,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4557,
+            "searchKey":"Box",
+            "props":{"y":396,"x":4812,"presetID":1,"preset":"laya/pages/prefab/ai/AIRightBoss.prefab"},
+            "nodeParent":2,
+            "maxID":4564,
+            "label":"AIRightBoss",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8115,
+            "child":[
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AIRightBoss.prefab"},
+                    "nodeParent":8115,
+                    "label":"BoxCollider(AIRightBoss)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4564,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AIRightBoss.prefab"},
+                    "nodeParent":8115,
+                    "label":"RigidBody(AIRightBoss)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4563,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4555,
+            "selecteID":4560,
+            "searchKey":"Box",
+            "props":{"y":400,"x":1753,"presetID":1,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+            "nodeParent":2,
+            "maxID":4562,
+            "label":"AILeft",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8118,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+                    "nodeParent":8118,
+                    "label":"BoxCollider(AILeft)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8119,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+                    "nodeParent":8118,
+                    "label":"RigidBody(AILeft)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8120,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4557,
+            "searchKey":"Box",
+            "props":{"y":400,"x":2859,"presetID":1,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+            "nodeParent":2,
+            "maxID":4564,
+            "label":"AIRight",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8121,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+                    "nodeParent":8121,
+                    "label":"BoxCollider(AIRight)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4562,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+                    "nodeParent":8121,
+                    "label":"RigidBody(AIRight)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8122,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4555,
+            "selecteID":4560,
+            "searchKey":"Box",
+            "props":{"y":396,"x":3676,"presetID":1,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+            "nodeParent":2,
+            "maxID":4562,
+            "label":"AILeft",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8123,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+                    "nodeParent":8123,
+                    "label":"BoxCollider(AILeft)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8124,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AILeft.prefab"},
+                    "nodeParent":8123,
+                    "label":"RigidBody(AILeft)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8125,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":4557,
+            "searchKey":"Box",
+            "props":{"y":400,"x":4738,"presetID":1,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+            "nodeParent":2,
+            "maxID":4564,
+            "label":"AIRight",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8126,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+                    "nodeParent":8126,
+                    "label":"BoxCollider(AIRight)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8127,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AIRight.prefab"},
+                    "nodeParent":8126,
+                    "label":"RigidBody(AIRight)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8128,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1716,
+            "selecteID":328,
+            "searchKey":"Box",
+            "props":{"y":600,"x":2290,"presetID":1,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+            "nodeParent":2,
+            "maxID":1718,
+            "label":"ShiWoNiu",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8129,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8129,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":315,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8129,
+                    "label":"RigidBody(ShiWoNiu)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":319,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8129,
+                    "label":"CircleCollider(ShiWoNiu)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":330,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8129,
+                    "label":"BoxCollider(ShiWoNiu)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":334,
                     "child":[
                         ],
                     "$LOCKED":false
@@ -3796,46 +5390,667 @@
                     "x":30,
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/WenhaoLogic.js",
-                    "searchKey":"Script,WenhaoLogic",
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
                     "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
-                    "nodeParent":8049,
-                    "label":"WenhaoLogic",
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8129,
+                    "label":"MonsterIdLogic",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":8052,
+                    "compId":335,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/ShiWoNiuLogic.js",
+                    "searchKey":"Script,ShiWoNiuLogic",
+                    "removeAble":true,
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8129,
+                    "label":"ShiWoNiuLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1717,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1716,
+            "selecteID":328,
+            "searchKey":"Box",
+            "props":{"y":600,"x":4197,"presetID":1,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+            "nodeParent":2,
+            "maxID":1718,
+            "label":"ShiWoNiu",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8130,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8130,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8131,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8130,
+                    "label":"RigidBody(ShiWoNiu)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8132,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8130,
+                    "label":"CircleCollider(ShiWoNiu)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8133,
                     "child":[
                         ],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
-                    "type":"Animation",
-                    "selectedBox":173,
-                    "searchKey":"Animation",
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
-                    "nodeParent":8049,
-                    "maxID":177,
-                    "label":"render",
-                    "isOpen":true,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8130,
+                    "label":"BoxCollider(ShiWoNiu)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":8053,
+                    "compId":8134,
                     "child":[
                         ],
-                    "animations":[
-                        {
-                            "nodes":[
-                                ],
-                            "name":"ani1",
-                            "id":1,
-                            "frameRate":24,
-                            "action":0
-                        }],
                     "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8130,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8135,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/ShiWoNiuLogic.js",
+                    "searchKey":"Script,ShiWoNiuLogic",
+                    "removeAble":true,
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
+                    "nodeParent":8130,
+                    "label":"ShiWoNiuLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8136,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1723,
+            "selecteID":319,
+            "searchKey":"Box",
+            "props":{"y":264,"x":2330,"presetID":1,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+            "nodeParent":2,
+            "maxID":1725,
+            "label":"LaZhuMonster",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8137,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8137,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8139,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8137,
+                    "label":"RigidBody(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8140,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8137,
+                    "label":"BoxCollider(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8141,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8137,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8142,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/LaZhuLogic.js",
+                    "searchKey":"Script,LaZhuLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8137,
+                    "label":"LaZhuLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8143,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":369,"x":2317,"texture":"monster/zhutai.png"},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":8138,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1723,
+            "selecteID":319,
+            "searchKey":"Box",
+            "props":{"y":290.5,"x":4083,"presetID":1,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+            "nodeParent":2,
+            "maxID":1725,
+            "label":"LaZhuMonster",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8144,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8144,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8146,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8144,
+                    "label":"RigidBody(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8147,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8144,
+                    "label":"BoxCollider(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8148,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8144,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8149,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/LaZhuLogic.js",
+                    "searchKey":"Script,LaZhuLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8144,
+                    "label":"LaZhuLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8150,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":395,"x":4072,"texture":"monster/zhutai.png"},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":8145,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1537,
+            "selecteID":1538,
+            "searchKey":"Box",
+            "props":{"y":339,"x":3785,"presetID":1,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1542,
+            "label":"DisBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8151,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
+                    "nodeParent":8151,
+                    "label":"render",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1538,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
+                    "nodeParent":8151,
+                    "label":"BoxCollider(DisBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1539,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
+                    "nodeParent":8151,
+                    "label":"RigidBody(DisBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1540,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/DisBrickLogic.js",
+                    "searchKey":"Script,DisBrickLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
+                    "nodeParent":8151,
+                    "label":"DisBrickLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1541,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1650,
+            "selecteID":1651,
+            "searchKey":"Box,Hole1",
+            "props":{"zOrder":2,"y":659,"x":3093,"width":400,"name":"Hole1","height":1000},
+            "nodeParent":2,
+            "maxID":1653,
+            "label":"Hole1",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8152,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"y":-49,"x":5,"width":390,"label":"Hole","isSensor":true,"height":1000},
+                    "nodeParent":8152,
+                    "label":"BoxCollider",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1651,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"type":"static","bullet":true},
+                    "nodeParent":8152,
+                    "label":"RigidBody",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1652,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1729,
+            "selecteID":1494,
+            "searchKey":"Box",
+            "props":{"y":171.5,"x":2734,"presetID":1,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+            "nodeParent":2,
+            "maxID":1731,
+            "label":"YouLing",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8153,
+            "child":[
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8153,
+                    "label":"RigidBody(YouLing)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1493,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8153,
+                    "label":"render",
+                    "isOpen":null,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1494,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8153,
+                    "label":"BoxCollider(YouLing)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1500,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8153,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1502,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/YouLingLogic.js",
+                    "searchKey":"Script,YouLingLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/YouLing.prefab"},
+                    "nodeParent":8153,
+                    "label":"YouLingLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1730,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {

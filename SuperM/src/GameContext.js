@@ -411,3 +411,5 @@ GameContext.doorInitPoint = null;
 GameContext.curFlyPower = 0;
 GameContext.curFlyPowerMax = 200;
 GameContext.flySliderState = 1; //1 积蓄 2 释放
+
+GameContext.bossState = 0;

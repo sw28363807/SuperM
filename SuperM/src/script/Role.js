@@ -304,6 +304,12 @@ export default class Role extends Laya.Script {
                 return;
             }
 
+            if (other.label == "BossBody" || other.label == "BossHead") {
+                if (GameContext.bossState == 2) {
+                    return;
+                }
+            }
+
             if (other.label != "ShuiguanHeadEnter") {
                 GameContext.roleShuiGuanState = 0;
             }
@@ -328,9 +334,14 @@ export default class Role extends Laya.Script {
         if (GameContext.roleShuiGuanState == 2) {
             return;
         }
-        Laya.loader.load("other1/jump.mp3", Laya.Handler.create(this, function (data) {
+        if (Laya.Browser.onMiniGame) {
             Laya.SoundManager.playSound("other1/jump.mp3");
-        }), null, Laya.Loader.SOUND);
+        } else {
+            Laya.loader.load("other1/jump.mp3", Laya.Handler.create(this, function (data) {
+                Laya.SoundManager.playSound("other1/jump.mp3");
+            }), null, Laya.Loader.SOUND);
+        }
+
         if (GameContext.roleInWater == true) {
             this.triggerRoleInWaterJump();
         } else if (GameContext.roleInGround == true) {

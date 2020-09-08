@@ -86,9 +86,14 @@ export default class HanbaoLogic extends Laya.Script {
         } else if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
-            Laya.loader.load("other1/yaoping.mp3", Laya.Handler.create(this, function (data) {
+            if (Laya.Browser.onMiniGame) {
                 Laya.SoundManager.playSound("other1/yaoping.mp3");
-            }), null, Laya.Loader.SOUND);
+            } else {
+                Laya.loader.load("other1/yaoping.mp3", Laya.Handler.create(this, function (data) {
+                    Laya.SoundManager.playSound("other1/yaoping.mp3");
+                }), null, Laya.Loader.SOUND);
+            }
+
              if (this.owner.rewardType == 4) {
                 GameContext.gameRoleNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);

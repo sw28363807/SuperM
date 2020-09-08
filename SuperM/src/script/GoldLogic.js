@@ -18,9 +18,14 @@ export default class GoldLogic extends Laya.Script {
                 gold = contact.m_nodeB;
             }
             if (gold) {
-                Laya.loader.load("other1/gold.mp3", Laya.Handler.create(this, function (data) {
+                if (Laya.Browser.onMiniGame) {
                     Laya.SoundManager.playSound("other1/gold.mp3");
-                }), null, Laya.Loader.SOUND);
+                } else {
+                    Laya.loader.load("other1/gold.mp3", Laya.Handler.create(this, function (data) {
+                        Laya.SoundManager.playSound("other1/gold.mp3");
+                    }), null, Laya.Loader.SOUND);
+                }
+
                 Utils.removeThis(this.owner);
                 GameContext.gameGoldNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);
