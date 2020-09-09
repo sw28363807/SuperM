@@ -47712,63 +47712,6 @@
             "compId":5169,
             "child":[
                 ]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":4569,
-            "selecteID":4570,
-            "searchKey":"Box",
-            "props":{"y":546,"x":884,"presetID":1,"preset":"laya/pages/prefab/monster/BeKe.prefab"},
-            "nodeParent":2,
-            "maxID":4572,
-            "label":"BeKe",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":5184,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/BeKe.prefab"},
-                    "nodeParent":5184,
-                    "label":"render",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4570,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/BeiKe.js",
-                    "searchKey":"Script,BeiKe",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/BeKe.prefab"},
-                    "nodeParent":5184,
-                    "label":"BeiKe",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4571,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
         }],
     "animations":[
         {

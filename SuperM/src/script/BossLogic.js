@@ -23,13 +23,13 @@ export default class BossLogic extends Laya.Script {
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.monsterSpeed = 2;
         this.owner.monsterAttackSpeed = 3;
-        this.owner.moveCount = 5000;
+        this.owner.moveCount = 300;
         this.owner.attackCount = 200;
         this.owner.curMoveCount = 0;
         this.owner.curAttackCount = 0;
         this.owner.directX = Utils.randomSign();
         this.owner.hurtingBoss = false;
-        this.owner.bossNumber = 1;
+        this.owner.bossNumber = 50;
     }
 
     onUpdate() {

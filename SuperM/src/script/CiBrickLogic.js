@@ -1,4 +1,5 @@
 import Utils from "./Utils";
+import GameContext from "../GameContext";
 
 export default class CiBrickLogic extends Laya.Script {
 
@@ -68,6 +69,28 @@ export default class CiBrickLogic extends Laya.Script {
                     this.owner.state = 3;
                 }
                 Utils.hurtRole(this.owner);
+                let owner = this.owner;
+                Laya.timer.once(500, this, function() {
+                    if (GameContext.gameRoleNumber > 0) {
+                        Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+                            let black = prefabDef.create();
+                            Laya.stage.addChild(black);
+                            black.x = 0;   
+                            black.y = 0;
+                            black.zOrder = 9999999;
+                            black.alpha = 0;
+                            Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
+                                if (owner) {
+                                    GameContext.setRolePosition(owner.x - 50, owner.y);
+                                    Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
+                                        black.removeSelf();
+                                        black.destroy();
+                                    }));
+                                }
+                            }));
+                        }));
+                    }
+                });
             }
         }
     }
