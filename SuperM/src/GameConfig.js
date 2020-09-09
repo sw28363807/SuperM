@@ -25,6 +25,7 @@ import AITopOrBottom from "./script/AITopOrBottom"
 import FlowerLogic from "./script/FlowerLogic"
 import MonsterCreater from "./script/MonsterCreater"
 import Role from "./script/Role"
+import BeiKe from "./script/BeiKe"
 import BrickMonsterLogic from "./script/BrickMonsterLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import LiuShaLogic from "./script/LiuShaLogic"
@@ -89,6 +90,7 @@ export default class GameConfig {
 		reg("script/FlowerLogic.js",FlowerLogic);
 		reg("script/MonsterCreater.js",MonsterCreater);
 		reg("script/Role.js",Role);
+		reg("script/BeiKe.js",BeiKe);
 		reg("script/BrickMonsterLogic.js",BrickMonsterLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/LiuShaLogic.js",LiuShaLogic);

@@ -34,12 +34,13 @@ export default class LevelLogic extends Laya.Script {
                 Laya.SoundManager.stopAllSound();
                 Laya.SoundManager.stopMusic();
                 Laya.SoundManager.playMusic(this.owner.bgm);
+                GameContext.curBgm = this.owner.bgm;
             } else {
                 Laya.loader.load(this.owner.bgm, Laya.Handler.create(this, function (data) {
                     Laya.SoundManager.playMusic(this.owner.bgm);
                 }), null, Laya.Loader.SOUND);
+                GameContext.curBgm = this.owner.bgm;
             }
-
         }
         GameContext.gameSceneType = script.sceneType;
         GameContext.gameScene = this.owner;

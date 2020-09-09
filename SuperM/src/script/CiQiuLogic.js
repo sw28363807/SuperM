@@ -8,8 +8,8 @@ export default class CiQiuLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.moveSpeed = 2.1;
-        this.jumpSpeed = 28;
+        this.moveSpeed = 9;
+        this.jumpSpeed = 35;
     }
 
     onDisable() {
@@ -110,6 +110,6 @@ export default class CiQiuLogic extends Laya.Script {
                 }
             }
         }
-        Utils.tryRemoveThis(this.owner);
+        // Utils.tryRemoveThis(this.owner);
     }
 }

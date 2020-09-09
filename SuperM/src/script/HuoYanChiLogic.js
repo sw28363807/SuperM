@@ -35,8 +35,12 @@ export default class HuoYanChiLogic extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
+            if (GameContext.roleIsDrop == true) {
+                return;
+            }
             GameContext.role.zOrder = this.owner.zOrder - 1;
-            Laya.timer.once(1000, this, function() {
+            GameContext.roleIsDrop = true;
+            Laya.timer.once(300, this, function() {
                 if (this.owner) {
                     GameContext.triggerInHuoChi(this.owner, this.owner.customX, this.owner.customY);
                     GameContext.role.zOrder = this.owner.roleZOrder;

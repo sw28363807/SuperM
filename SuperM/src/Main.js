@@ -1,4 +1,5 @@
 ﻿import GameConfig from "./GameConfig";
+import GameContext from "./GameContext";
 class Main {
 	constructor() {
 		//根据IDE设置初始化引擎		
@@ -18,9 +19,20 @@ class Main {
 		if (GameConfig.physicsDebug && Laya["PhysicsDebugDraw"]) Laya["PhysicsDebugDraw"].enable();
 		if (GameConfig.stat) Laya.Stat.show();
 		Laya.alertGlobalError(true);
-		Laya.SoundManager.autoStopMusic = false;
-
-
+		if (Laya.Browser.onMiniGame) {
+			wx.onShow((res) => {
+				console.debug("+++++++++++++++++++++:" + GameContext.curBgm);
+				if (GameContext.curBgm != "") {
+					Laya.SoundManager.stopAllSound();
+					Laya.SoundManager.stopMusic();
+					Laya.SoundManager.playMusic(GameContext.curBgm);
+				}
+			});
+		} else {
+			Laya.loader.load(GameContext.curBgm, Laya.Handler.create(this, function (data) {
+				Laya.SoundManager.playMusic(GameContext.curBgm);
+			}), null, Laya.Loader.SOUND);
+		}
 		if (Laya.Browser.onMiniGame) {
 			Laya.URL.basePath = "https://7375-sunwen-5w22q-1302935665.tcb.qcloud.la/";
 			Laya["MiniAdpter"].nativefiles = [

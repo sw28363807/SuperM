@@ -109,6 +109,9 @@ export default class Utils extends Laya.Script {
         if (GameContext.curFootMonster == other.owner) {
             return;
         }
+        if (other.owner.createdMonster && other.owner.createdMonster == true) {
+            return;   
+        }
         GameContext.curFootMonster = other.owner;
         Laya.timer.once(50, null, function() {
             GameContext.curFootMonster = null;
@@ -460,7 +463,7 @@ export default class Utils extends Laya.Script {
                         if (LoadingLogic.curScene == "scene/LevelBoss.scene") {
                             LoadingLogic.loadScene("scene/Level1_1.scene");
                         } else {
-                            LoadingLogic.loadScene(LoadingLogic.curSceneExt, true);
+                            LoadingLogic.loadScene(LoadingLogic.curSceneExt);
                         }
                     }
                     
@@ -488,11 +491,12 @@ export default class Utils extends Laya.Script {
             black.zOrder = 9999999;
             black.alpha = 0;
             Laya.Tween.to(black,{alpha: 1}, 500, null, Laya.Handler.create(null, function(){
-                black.removeSelf();
-                black.destroy();
                 GameContext.doorCount++;
                 GameContext.doorInitPoint = gotoPoint;
-                LoadingLogic.loadScene(destScene);
+                LoadingLogic.loadScene(destScene, Laya.Handler.create(this, function() {
+                    black.removeSelf();
+                    black.destroy();
+                }));
             }));
         }));
     }

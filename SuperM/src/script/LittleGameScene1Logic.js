@@ -84,7 +84,7 @@ export default class LittleGameScene1Logic extends Laya.Script {
 
         this.owner.on(Laya.Event.CLICK, this, function() {
             if (this.gameEnd == true) {
-                LoadingLogic.loadScene("scene/Level2_1.scene", 2);
+                LoadingLogic.loadScene("scene/Level2_1.scene");
                 // Laya.Scene.open("scene/Level2_1.scene");
             }
         });

@@ -172,6 +172,9 @@ export default class Role extends Laya.Script {
         if (GameContext.roleFooting) {
             return;
         }
+        if (GameContext.roleIsDrop == true) {
+            return;
+        }
         GameContext.processRoleWalkSpeed();
         if (GameContext.roleHurting == false) {
             if (GameContext.walkDirect) {
@@ -340,6 +343,10 @@ export default class Role extends Laya.Script {
             return;
         }
 
+        if (GameContext.roleIsDrop == true) {
+            return;
+        }
+
         if (GameContext.roleShuiGuanState == 2) {
             return;
         }
@@ -383,7 +390,7 @@ export default class Role extends Laya.Script {
         GameContext.roleShuiGuanState = 0;
         let xSpeed = 0;
         if (GameContext.walkDirect && GameContext.commandWalk) {
-            xSpeed = GameContext.walkDirect.x * 7;
+            xSpeed = GameContext.walkDirect.x * 9;
             if (GameContext.gameRoleBodyState == 0) {
                 xSpeed = xSpeed * 0.9;
             }

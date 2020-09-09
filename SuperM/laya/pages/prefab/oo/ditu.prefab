@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1504,
-    "selecteID":1525,
+    "selecteID":1555,
     "searchKey":"Box,ditu",
     "props":{"zOrder":3,"y":0,"x":0,"width":12604,"presetID":1,"preset":"laya/pages/prefab/oo/ditu.prefab","name":"ditu","isPresetRoot":true,"height":2139},
     "nodeParent":-1,
@@ -15,20 +15,19 @@
     "compId":1504,
     "child":[
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "searchKey":"Box,render",
             "props":{"presetID":20,"preset":"laya/pages/prefab/oo/ditu.prefab","name":"render"},
             "nodeParent":1504,
             "label":"render",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":1525,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1101,"x":-12,"texture":"other1/dixia (1).png","presetID":2,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -39,10 +38,10 @@
                     "hasChild":false,
                     "compId":1503,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":794,"x":988,"texture":"other1/dixia (2).png","presetID":3,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -53,10 +52,10 @@
                     "hasChild":false,
                     "compId":1505,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":687,"x":1988,"texture":"other1/dixia (3).png","presetID":4,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -67,10 +66,10 @@
                     "hasChild":false,
                     "compId":1506,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":687,"x":2977,"texture":"other1/dixia (4).png","presetID":5,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -81,10 +80,10 @@
                     "hasChild":false,
                     "compId":1507,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":687,"x":3977,"texture":"other1/dixia (5).png","presetID":6,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -95,10 +94,10 @@
                     "hasChild":false,
                     "compId":1508,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":9,"x":4967,"texture":"other1/dixia (6).png","presetID":7,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -109,10 +108,10 @@
                     "hasChild":false,
                     "compId":1509,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":9,"x":5954,"texture":"other1/dixia (7).png","presetID":8,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -123,10 +122,10 @@
                     "hasChild":false,
                     "compId":1510,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1078,"x":5954,"texture":"other1/dixia (8).png","presetID":9,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -137,10 +136,10 @@
                     "hasChild":false,
                     "compId":1514,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":9,"x":6917,"texture":"other1/dixia (9).png","presetID":10,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -151,10 +150,10 @@
                     "hasChild":false,
                     "compId":1515,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1077,"x":6934,"texture":"other1/dixia (10).png","presetID":11,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -165,10 +164,10 @@
                     "hasChild":false,
                     "compId":1516,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":9,"x":7917,"texture":"other1/dixia (11).png","presetID":12,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -179,10 +178,10 @@
                     "hasChild":false,
                     "compId":1517,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1078,"x":7917,"texture":"other1/dixia (12).png","presetID":13,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -193,10 +192,10 @@
                     "hasChild":false,
                     "compId":1518,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":9,"x":8917,"texture":"other1/dixia (13).png","presetID":14,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -207,10 +206,10 @@
                     "hasChild":false,
                     "compId":1519,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1086,"x":8917,"texture":"other1/dixia (14).png","presetID":15,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -221,10 +220,10 @@
                     "hasChild":false,
                     "compId":1520,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":8,"x":9917,"texture":"other1/dixia (15).png","presetID":16,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -235,10 +234,10 @@
                     "hasChild":false,
                     "compId":1521,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1076,"x":9908,"texture":"other1/dixia (16).png","presetID":17,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -249,10 +248,10 @@
                     "hasChild":false,
                     "compId":1522,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1086,"x":10908,"texture":"other1/dixia (17).png","presetID":18,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -263,10 +262,10 @@
                     "hasChild":false,
                     "compId":1523,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1086,"x":11908,"texture":"other1/dixia (18).png","presetID":19,"preset":"laya/pages/prefab/oo/ditu.prefab"},
@@ -277,11 +276,13 @@
                     "hasChild":false,
                     "compId":1524,
                     "child":[
-                        ]
-                }]
+                        ],
+                    "$HIDDEN":false
+                }],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -294,10 +295,11 @@
             "hasChild":false,
             "compId":1526,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"RigidBody",
             "switchAble":true,
             "searchKey":"RigidBody",
@@ -310,10 +312,11 @@
             "hasChild":false,
             "compId":1527,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -326,10 +329,11 @@
             "hasChild":false,
             "compId":1528,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -342,7 +346,8 @@
             "hasChild":false,
             "compId":1529,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -359,7 +364,8 @@
             "hasChild":false,
             "compId":1530,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -375,10 +381,11 @@
             "hasChild":false,
             "compId":1531,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -391,10 +398,11 @@
             "hasChild":false,
             "compId":1532,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -407,7 +415,8 @@
             "hasChild":false,
             "compId":1533,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -423,7 +432,8 @@
             "hasChild":false,
             "compId":1534,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -439,7 +449,8 @@
             "hasChild":false,
             "compId":1535,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -455,7 +466,8 @@
             "hasChild":false,
             "compId":1536,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -471,10 +483,11 @@
             "hasChild":false,
             "compId":1537,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -487,10 +500,11 @@
             "hasChild":false,
             "compId":1538,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -503,7 +517,8 @@
             "hasChild":false,
             "compId":1539,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -519,7 +534,8 @@
             "hasChild":false,
             "compId":1540,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -535,7 +551,8 @@
             "hasChild":false,
             "compId":1541,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -551,10 +568,11 @@
             "hasChild":false,
             "compId":1542,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -567,15 +585,16 @@
             "hasChild":false,
             "compId":1543,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":2139,"x":6267,"width":4166,"presetID":39,"preset":"laya/pages/prefab/oo/ditu.prefab","label":"Ground","height":230},
+            "props":{"y":2143,"x":6269,"width":4166,"presetID":39,"preset":"laya/pages/prefab/oo/ditu.prefab","label":"Ground","height":230},
             "nodeParent":1504,
             "label":"BoxCollider(ditu)",
             "isDirectory":false,
@@ -583,7 +602,8 @@
             "hasChild":false,
             "compId":1544,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -599,7 +619,8 @@
             "hasChild":false,
             "compId":1545,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -615,7 +636,8 @@
             "hasChild":false,
             "compId":1546,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -631,7 +653,8 @@
             "hasChild":false,
             "compId":1547,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -647,10 +670,11 @@
             "hasChild":false,
             "compId":1548,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -663,10 +687,11 @@
             "hasChild":false,
             "compId":1549,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -679,10 +704,11 @@
             "hasChild":false,
             "compId":1550,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -695,10 +721,11 @@
             "hasChild":false,
             "compId":1551,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -711,7 +738,8 @@
             "hasChild":false,
             "compId":1552,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -727,10 +755,11 @@
             "hasChild":false,
             "compId":1554,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
-            "x":15,
+            "x":0,
             "type":"BoxCollider",
             "switchAble":true,
             "searchKey":"BoxCollider",
@@ -743,7 +772,8 @@
             "hasChild":false,
             "compId":1555,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         }],
     "animations":[
         {
@@ -753,5 +783,6 @@
             "id":1,
             "frameRate":24,
             "action":0
-        }]
+        }],
+    "$HIDDEN":false
 }

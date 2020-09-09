@@ -18,6 +18,8 @@ export default class FlyMonsterLogic extends Laya.Script {
             this.owner.createPrefab = "";
         }
 
+        this.owner.createdMonster = false;
+
 
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onCreateGroundMonster);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onCreateGroundMonster);
@@ -40,6 +42,10 @@ export default class FlyMonsterLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
+        if (this.owner.createdMonster == true) {
+            return;
+        }
+        this.owner.createdMonster = true;
         let owner = this.owner;
         let x = owner.x;
         let y = owner.y;

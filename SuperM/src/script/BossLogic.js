@@ -64,7 +64,7 @@ export default class BossLogic extends Laya.Script {
             }
             this.owner.rigidBody.getBody().SetActive(false);
             Laya.timer.once(3000, null, function() {
-                LoadingLogic.loadScene("scene/Level1_1.scene", 1);
+                LoadingLogic.loadScene("scene/Level1_1.scene");
             });
         }
     }

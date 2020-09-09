@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import Utils from "./Utils";
+import GameContext from "../GameContext";
 
 export default class FlowerBulletLogic extends Laya.Script {
 
@@ -52,6 +53,15 @@ export default class FlowerBulletLogic extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         if (this.owner) {
+            Utils.removeThis(this.owner);
+        }
+    }
+
+    onUpdate() {
+        if (!this.owner) {
+            return;
+        }
+        if (Math.abs(this.owner.x - GameContext.role.x) > 1500 || Math.abs(this.owner.y - GameContext.role.y) > 1500) {
             Utils.removeThis(this.owner);
         }
     }

@@ -6,6 +6,8 @@ export default class Camera extends Laya.Script {
         super();
         /** @prop {name:yCenter, tips:"是否居中", type:Number, default:0}*/
         let yCenter = 0;
+        /** @prop {name:yCenter, tips:"y轴偏移", type:Number, default:200}*/
+        let yOff = 200;
     }
 
     lookAt(x, y) {
@@ -27,8 +29,8 @@ export default class Camera extends Laya.Script {
         // let rp = this.role.parent.localToGlobal(new Laya.Point(this.role.x, this.role.y));
 
         if (this.owner.yCenter == 0) {
-            if (this.role.y < 200) {
-                this.owner.y = this.standY - (this.role.y - 200);
+            if (this.role.y < this.owner.yOff) {
+                this.owner.y = this.standY - (this.role.y - this.owner.yOff);
             } else {
                 this.owner.y =  this.standY;
             }
@@ -52,6 +54,13 @@ export default class Camera extends Laya.Script {
         } else {
             this.owner.yCenter = 0;
         }
+
+        if (script && script.yOff) {
+            this.owner.yOff = script.yOff;
+        } else {
+            this.owner.yOff = 200;
+        }
+
         this.zeroY = 0;
         this.role =  this.owner.getChildByName("Role");
         GameContext.mapMaxX = this.role.x;
@@ -63,7 +72,7 @@ export default class Camera extends Laya.Script {
         let h =  Laya.Browser.height;
         Laya.Physics.I.positionIterations = 3;
         Laya.Physics.I.worldRoot = this.owner;
-        this.zeroY = 250;
+        this.zeroY = this.owner.yOff;
         if(w/h > 2.0) {
             this.zeroY = 160;
         }

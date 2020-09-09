@@ -1,0 +1,1 @@
+{"type":"Box","props":{"zOrder":65537,"width":274,"presetID":1,"name":"BeKe","isPresetRoot":true,"height":202},"compId":4569,"child":[{"type":"Animation","props":{"y":101,"x":137,"source":"anim/BeiKe.ani","presetID":2,"name":"render"},"compId":4570},{"type":"Script","props":{"presetID":3,"runtime":"script/BeiKe.js"},"compId":4571}],"loadList":["anim/BeiKe.ani"],"loadList3D":[]}

@@ -40,10 +40,7 @@ export default class MonsterLogic extends Laya.Script {
     }
 
     onStart() {
-        let owner = this.owner;
-        Laya.timer.once(1000, null, function() {
-            owner.isStart = true;
-        });
+        this.owner.isStart = true;
     }
 
     onMonsterFootDead(data) {
@@ -53,6 +50,7 @@ export default class MonsterLogic extends Laya.Script {
         if (!this.owner.isStart) {
             return;
         }
+        let rigidBody = this.owner.getComponent(Laya.RigidBody);
         Utils.createFootEffect(this.owner);
     }
 

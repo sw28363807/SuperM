@@ -103,36 +103,11 @@ export default class DoorLogic extends Laya.Script {
         if (!this.owner) {
             return;
         }
-        if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
-            this.owner.inDoor = true;
-        }
-    }
-    
-    onTriggerExit(other, self, contact) {
-        if (!this.owner) {
+        if (this.owner.inDoor == true) {
             return;
         }
         if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
-            this.owner.inDoor = false;
-        }
-    }
-
-    onUpdate() {
-        // if (this.owner.inDoor == true) {
-        //     if (GameContext.walkDirect && GameContext.walkDirect.y != 0 && GameContext.commandWalk == true && GameContext.roleInGround == true) {
-        //         this.owner.enterCount++;
-        //         if (this.owner.enterCount > 60) {
-        //             this.owner.enterCount = 0;
-        //             this.owner.inDoor = false;
-        //             Utils.triggerToRandomDoor(this.owner, this.owner.customX, this.owner.customY);
-        //         }
-        //     } else {
-        //         this.owner.enterCount = 0;
-        //     }
-        // }
-
-        if (this.owner.inDoor == true) {
-            this.owner.inDoor = false;
+            this.owner.inDoor = true;
             if (this.owner.goToType == 1) {
                 let scene = this.getScene();
                 let gotoPoint = this.getSceneGoToPoint();
@@ -142,6 +117,21 @@ export default class DoorLogic extends Laya.Script {
                 }
                 Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);
             }
+        }
+    }
+    
+    onTriggerExit(other, self, contact) {
+        if (!this.owner) {
+            return;
+        }
+        if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
+            // this.owner.inDoor = false;
+        }
+    }
+
+    onUpdate() {
+        if (!this.owner) {
+            return;
         }
     }
 }

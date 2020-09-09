@@ -27,6 +27,9 @@ export default class GameContext extends Laya.Script {
         if (widthOff == undefined || widthOff == null) {
             widthOff = -200;
         }
+        if (GameContext.roleIsDrop == true) {
+            return;
+        }
         GameContext.roleIsDrop = true;
         GameContext.setRoleSensorEnabled(true);
         if (GameContext.gameRoleState == 1) {
@@ -42,7 +45,6 @@ export default class GameContext extends Laya.Script {
         }
 
         if (GameContext.role) {
-            GameContext.roleIsDrop = false;
             GameContext.setRoleSensorEnabled(false);
             GameContext.setRoleSpeed(0, 0);
             EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
@@ -53,11 +55,13 @@ export default class GameContext extends Laya.Script {
                 black.y = 0;
                 black.zOrder = 9999999;
                 black.alpha = 0;
+                GameContext.roleInGround = true;
                 Laya.Tween.to(black,{alpha: 1}, 300, null, Laya.Handler.create(null, function(){
                     GameContext.setRolePosition(hole.x + widthOff, height);
                     Laya.Tween.to(black,{alpha: 0}, 300, null, Laya.Handler.create(null, function(){
                         black.removeSelf();
                         black.destroy();
+                        GameContext.roleIsDrop = false;
                     }));
                 }));
             }));
@@ -98,15 +102,32 @@ export default class GameContext extends Laya.Script {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
+        GameContext.roleIsDrop = true;
+        GameContext.roleInGround = true;
         GameContext.setRoleSpeedX(0.01);
-        if (customX != null &&
-             customX != undefined &&
-              customY != null &&
-               customY != undefined) {
-                GameContext.setRolePosition(customX, customY);
-        } else {
-            GameContext.setRolePosition(huochi.x - 200, 300);
-        }
+        Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+            let black = prefabDef.create();
+            Laya.stage.addChild(black);
+            black.x = 0;
+            black.y = 0;
+            black.zOrder = 9999999;
+            black.alpha = 0;
+            Laya.Tween.to(black,{alpha: 1}, 300, null, Laya.Handler.create(null, function(){
+                if (customX != null &&
+                    customX != undefined &&
+                     customY != null &&
+                      customY != undefined) {
+                       GameContext.setRolePosition(customX, customY);
+               } else {
+                   GameContext.setRolePosition(huochi.x - 200, 300);
+               }
+                Laya.Tween.to(black,{alpha: 0}, 300, null, Laya.Handler.create(null, function(){
+                    black.removeSelf();
+                    black.destroy();
+                    GameContext.roleIsDrop = false;
+                }));
+            }));
+        }));
     }
 
     static setRoleSpeed(x, y) {
@@ -427,3 +448,5 @@ GameContext.curFlyPowerMax = 200;
 GameContext.flySliderState = 1; //1 积蓄 2 释放
 
 GameContext.bossState = 0;
+
+GameContext.curBgm = "";

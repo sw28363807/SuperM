@@ -4,8 +4,8 @@ export default class ShuiMuLogic extends Laya.Script {
 
     constructor() { 
         super();
-        this.area = 400;
-        this.speed = 5;
+        this.area = 500;
+        this.speed = 8;
     }
     
     onEnable() {

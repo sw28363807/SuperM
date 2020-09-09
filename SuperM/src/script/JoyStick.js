@@ -11,13 +11,13 @@ export default class JoyStick extends Laya.Script {
         this.canCommand = false;
         this.startPoint = null;
         this.dirMap = [
-            {x: -1, y: -1},
+            {x: -0.73, y: -0.73},
             {x: 0, y: -1},
-            {x: 1, y: -1},
+            {x: 0.73, y: -0.73},
             {x: 1, y: 0},
-            {x: 1, y: 1},
+            {x: 0.73, y: 0.73},
             {x: 0, y: 1},
-            {x: -1, y: 1},
+            {x: -0.73, y: 0.73},
             {x: -1, y: 0}
         ];
 
@@ -260,19 +260,19 @@ export default class JoyStick extends Laya.Script {
                 this.isStopWalk = false;
             } else if (this.WDown == true && this.ADown == true && this.SDown == false && this.DDown == false) {
                 //左上
-                direct = {x: -1, y: -1};
+                direct = {x: -0.73, y: -0.73};
                 this.isStopWalk = false;
             } else if (this.WDown == true && this.ADown == false && this.SDown == false && this.DDown == true) {
                 //右上
-                direct = {x: 1, y: -1};
+                direct = {x: 0.73, y: -0.73};
                 this.isStopWalk = false;
             } else if (this.WDown == false && this.ADown == true && this.SDown == true && this.DDown == false) {
                 //左下
-                direct = {x: -1, y: 1};
+                direct = {x: -0.73, y: 0.73};
                 this.isStopWalk = false;
             } else if (this.WDown == false && this.ADown == false && this.SDown == true && this.DDown == true) {
                 //右下
-                direct = {x: 1, y: 1};
+                direct = {x: 0.73, y: 0.73};
                 this.isStopWalk = false;
             }
             if(this.directChangeHandler) {

@@ -2,6 +2,7 @@ import Events from "./Events";
 import EventMgr from "./EventMgr";
 import Utils from "./Utils";
 import GameContext from "../GameContext";
+import LoadingLogic from "./LoadingLogic";
 
 export default class BulletLogic extends Laya.Script {
 
@@ -43,7 +44,10 @@ export default class BulletLogic extends Laya.Script {
                 Utils.removeThis(this.owner);
                 return;
             }
-            if (this.count > 3) {
+            else if (this.count > 3) {
+                Utils.removeThis(this.owner);
+                return;
+            } else if (Math.abs(this.owner.x - GameContext.role.x) > 1500 || Math.abs(this.owner.y - GameContext.role.y) > 1500) {
                 Utils.removeThis(this.owner);
                 return;
             }
@@ -67,6 +71,7 @@ export default class BulletLogic extends Laya.Script {
             if (other.label == "AITop" || other.label == "AIBottom" || other.label == "AILeft" || other.label == "AIRight") {
                 return;
             }
+            let scene = LoadingLogic.curSceneExt;
             if (self.label == "KeBulletFoot") {
                 if (other.label == "Hole") {
                     this.coll.isSensor = true;
@@ -80,7 +85,7 @@ export default class BulletLogic extends Laya.Script {
             } else if (self.label == "KeBullet") {
                 if (other.label == "Brick") {
                     this.owner.directX = -this.owner.directX;
-                } else if (other.label == "Wall") {
+                } else if (other.label == "Wall" || (scene != "" && scene == "scene/Level3_2.scene" && other.label == "Ground")) {
                     if (other.owner.name != "ShuiguanEnter") {
                         Utils.removeThis(this.owner);
                     } else {
