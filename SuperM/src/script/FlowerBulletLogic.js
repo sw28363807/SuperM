@@ -10,6 +10,7 @@ export default class FlowerBulletLogic extends Laya.Script {
     }
     
     onEnable() {
+        this.owner.speed = 5;
         EventMgr.getInstance().registEvent(Events.Monster_Shoot_Bullet,this, this.onMonsterShootBullet);
         Laya.timer.loop(10000, this, this.onRemoveBullet);
     }
@@ -41,7 +42,7 @@ export default class FlowerBulletLogic extends Laya.Script {
         }
         this.owner.direct = data.direct;
         let rigidBody = this.owner.getComponent(Laya.RigidBody);
-        rigidBody.setVelocity({x: this.owner.direct.x * 5, y: this.owner.direct.y * 5});
+        rigidBody.setVelocity({x: this.owner.direct.x * this.owner.speed, y: this.owner.direct.y * this.owner.speed});
         rigidBody.angularVelocity = 10;
         let owner = this.owner;
         Laya.timer.once(100, null, function() {

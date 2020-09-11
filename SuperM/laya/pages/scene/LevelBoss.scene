@@ -1,5 +1,4 @@
 {
-    "x":0,
     "type":"Scene",
     "selectedBox":2,
     "selecteID":8013,
@@ -15,7 +14,6 @@
     "compId":2,
     "child":[
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,bottom",
             "props":{"y":752,"x":0,"width":35000,"name":"bottom","height":1000},
@@ -65,7 +63,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,left",
             "props":{"y":-516,"x":7,"width":600,"name":"left","height":1800},
@@ -115,7 +112,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel,right",
             "props":{"y":-1078,"x":31956,"width":400,"name":"right","height":2000,"bgColor":"#e52c2c"},
@@ -165,7 +161,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/Camera.js",
@@ -184,7 +179,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/LevelLogic.js",
@@ -203,7 +197,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Panel",
             "searchKey":"Panel",
             "props":{"y":-2248,"x":-188,"width":30000,"height":3000,"bgColor":"#000000"},
@@ -219,7 +212,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":2,"x":-36,"width":30000,"height":750},
@@ -236,7 +228,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":54,
             "selecteID":115,
@@ -428,7 +419,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1565,
             "selecteID":1598,
@@ -795,7 +785,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Sprite",
             "selectedBox":1584,
             "selecteID":1594,
@@ -970,7 +959,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/MonsterCreater.js",
@@ -988,7 +976,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1718,
             "selecteID":1720,
@@ -1073,7 +1060,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":600,"x":1734,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -1086,7 +1072,6 @@
             "compId":7912,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1102,7 +1087,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1119,7 +1103,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":600,"x":3318,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -1132,7 +1115,6 @@
             "compId":7915,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1148,7 +1130,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1165,7 +1146,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1718,
             "selecteID":1720,
@@ -1181,7 +1161,6 @@
             "compId":7918,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
@@ -1195,7 +1174,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1211,7 +1189,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1227,7 +1204,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/HuoYanChiLogic.js",
@@ -1254,7 +1230,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":5097,
             "selecteID":5100,
@@ -1270,7 +1245,6 @@
             "compId":7923,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1286,7 +1260,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1302,7 +1275,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MoveBrickLogic.js",
@@ -1320,7 +1292,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/brick/MoveBrick.prefab"},
@@ -1334,7 +1305,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1360,7 +1330,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":-478,"x":1058,"presetID":1,"preset":"laya/pages/prefab/line/Line1.prefab"},
@@ -1374,7 +1343,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Animation",
             "searchKey":"Animation",
             "props":{"y":-556,"x":992,"presetID":1,"preset":"laya/pages/prefab/other/ChiLun.prefab"},
@@ -1388,7 +1356,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Animation",
             "searchKey":"Animation",
             "props":{"y":434,"x":1571,"presetID":1,"preset":"laya/pages/prefab/other/ChiLun.prefab"},
@@ -1402,7 +1369,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1710,
             "searchKey":"Box",
@@ -1417,7 +1383,6 @@
             "compId":7932,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
@@ -1431,7 +1396,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1447,7 +1411,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1463,7 +1426,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DropBrickLogic.js",
@@ -1490,7 +1452,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1820,
             "selecteID":1851,
@@ -1506,7 +1467,6 @@
             "compId":7933,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1520,7 +1480,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1536,7 +1495,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1552,7 +1510,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1568,7 +1525,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -1585,7 +1541,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":7,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1599,7 +1554,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":8,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1613,7 +1567,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":9,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1627,7 +1580,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":10,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1641,7 +1593,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":11,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1655,7 +1606,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":12,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1669,7 +1619,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":13,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1683,7 +1632,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":14,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1697,7 +1645,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":15,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1711,7 +1658,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":16,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1725,7 +1671,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":17,"preset":"laya/pages/prefab/brick/CiBrick5.prefab"},
@@ -1739,7 +1684,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1755,7 +1699,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1771,7 +1714,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1787,7 +1729,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1803,7 +1744,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1819,7 +1759,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1835,7 +1774,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1851,7 +1789,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1877,7 +1814,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -1893,7 +1829,6 @@
             "compId":7958,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1910,7 +1845,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1927,7 +1861,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -1945,7 +1878,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -1982,7 +1914,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -1998,7 +1929,6 @@
             "compId":7959,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2015,7 +1945,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2032,7 +1961,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -2050,7 +1978,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -2087,7 +2014,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -2103,7 +2029,6 @@
             "compId":7964,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2120,7 +2045,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2137,7 +2061,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -2155,7 +2078,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -2192,7 +2114,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -2208,7 +2129,6 @@
             "compId":7965,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2225,7 +2145,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2242,7 +2161,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -2260,7 +2178,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -2297,7 +2214,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":142,"x":2480,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2310,7 +2226,6 @@
             "compId":7974,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2324,7 +2239,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2340,7 +2254,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2356,7 +2269,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2372,7 +2284,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2389,7 +2300,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2406,7 +2316,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":142,"x":3983,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2419,7 +2328,6 @@
             "compId":7981,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick2.prefab"},
@@ -2433,7 +2341,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2449,7 +2356,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2465,7 +2371,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2481,7 +2386,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/CiBrickLogic.js",
@@ -2498,7 +2402,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2515,7 +2418,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -2531,7 +2433,6 @@
             "compId":7988,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2548,7 +2449,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2565,7 +2465,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -2583,7 +2482,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -2620,7 +2518,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -2636,7 +2533,6 @@
             "compId":7993,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2653,7 +2549,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2670,7 +2565,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -2688,7 +2582,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -2725,7 +2618,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -2741,7 +2633,6 @@
             "compId":7998,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2758,7 +2649,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2775,7 +2665,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -2793,7 +2682,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -2830,7 +2718,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1718,
             "selecteID":1720,
@@ -2846,7 +2733,6 @@
             "compId":8003,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
@@ -2860,7 +2746,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2876,7 +2761,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2892,7 +2776,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/HuoYanChiLogic.js",
@@ -2919,7 +2802,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1718,
             "selecteID":1720,
@@ -2935,7 +2817,6 @@
             "compId":8008,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/other/HuoYanChi.prefab"},
@@ -2949,7 +2830,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -2965,7 +2845,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2981,7 +2860,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/HuoYanChiLogic.js",
@@ -3008,7 +2886,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":5097,
             "selecteID":5100,
@@ -3109,7 +2986,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":-421,"x":4885,"presetID":1,"preset":"laya/pages/prefab/line/Line1.prefab"},
@@ -3123,7 +2999,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Animation",
             "searchKey":"Animation",
             "props":{"y":-499,"x":4819,"presetID":1,"preset":"laya/pages/prefab/other/ChiLun.prefab"},
@@ -3137,7 +3012,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Animation",
             "searchKey":"Animation",
             "props":{"y":491,"x":5398,"presetID":1,"preset":"laya/pages/prefab/other/ChiLun.prefab"},
@@ -3151,7 +3025,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -3252,7 +3125,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -3353,7 +3225,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1710,
             "searchKey":"Box",
@@ -3368,7 +3239,6 @@
             "compId":8032,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DropBrick.prefab"},
@@ -3382,7 +3252,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3398,7 +3267,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3414,7 +3282,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DropBrickLogic.js",
@@ -3441,7 +3308,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -3457,7 +3323,6 @@
             "compId":8037,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3474,7 +3339,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3491,7 +3355,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -3509,7 +3372,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -3546,7 +3408,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -3562,7 +3423,6 @@
             "compId":8038,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3579,7 +3439,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3596,7 +3455,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -3614,7 +3472,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Animation",
                     "selectedBox":173,
                     "searchKey":"Animation",
@@ -3651,7 +3508,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -3666,7 +3522,6 @@
             "compId":8054,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3682,7 +3537,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3698,7 +3552,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -3726,7 +3579,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -3741,7 +3593,6 @@
             "compId":8056,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3757,7 +3608,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3773,7 +3623,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -3801,7 +3650,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -3816,7 +3664,6 @@
             "compId":8060,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3832,7 +3679,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3848,7 +3694,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -3876,7 +3721,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -3891,7 +3735,6 @@
             "compId":8061,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3907,7 +3750,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3923,7 +3765,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -3951,7 +3792,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -3966,7 +3806,6 @@
             "compId":8068,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3982,7 +3821,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3998,7 +3836,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4026,7 +3863,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4041,7 +3877,6 @@
             "compId":8069,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4057,7 +3892,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4073,7 +3907,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4101,7 +3934,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4116,7 +3948,6 @@
             "compId":8076,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4132,7 +3963,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4148,7 +3978,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4176,7 +4005,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4191,7 +4019,6 @@
             "compId":8077,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4207,7 +4034,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4223,7 +4049,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4251,7 +4076,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4266,7 +4090,6 @@
             "compId":8084,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4282,7 +4105,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4298,7 +4120,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4326,7 +4147,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4341,7 +4161,6 @@
             "compId":8085,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4357,7 +4176,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4373,7 +4191,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4401,7 +4218,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":180,
             "selecteID":185,
@@ -4417,7 +4233,6 @@
             "compId":8092,
             "child":[
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4433,7 +4248,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/HanbaoLogic.js",
@@ -4450,7 +4264,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"CircleCollider",
                     "switchAble":true,
                     "searchKey":"CircleCollider",
@@ -4477,7 +4290,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4492,7 +4304,6 @@
             "compId":8093,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4508,7 +4319,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4524,7 +4334,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4552,7 +4361,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4567,7 +4375,6 @@
             "compId":8094,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4583,7 +4390,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4599,7 +4405,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4627,7 +4432,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4642,7 +4446,6 @@
             "compId":8095,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4658,7 +4461,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4674,7 +4476,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4702,7 +4503,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":102,
             "searchKey":"Animation",
@@ -4717,7 +4517,6 @@
             "compId":8096,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4733,7 +4532,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4749,7 +4547,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -4777,7 +4574,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Animation",
             "selectedBox":180,
             "selecteID":185,
@@ -4793,7 +4589,6 @@
             "compId":8109,
             "child":[
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4809,7 +4604,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/HanbaoLogic.js",
@@ -4826,7 +4620,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"CircleCollider",
                     "switchAble":true,
                     "searchKey":"CircleCollider",
@@ -4853,7 +4646,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":490,"x":3154,"presetID":1,"preset":"laya/pages/prefab/monster/Boss.prefab"},
@@ -4866,7 +4658,6 @@
             "compId":8113,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/monster/Boss.prefab"},
@@ -4880,7 +4671,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4896,7 +4686,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -4912,7 +4701,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4928,7 +4716,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/BossLogic.js",
@@ -4945,7 +4732,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -4963,7 +4749,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":4555,
             "selecteID":4560,
@@ -5019,7 +4804,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":4557,
             "searchKey":"Box",
@@ -5074,7 +4858,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":4555,
             "selecteID":4560,
@@ -5090,7 +4873,6 @@
             "compId":8118,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5106,7 +4888,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5132,7 +4913,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":4557,
             "searchKey":"Box",
@@ -5147,7 +4927,6 @@
             "compId":8121,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5163,7 +4942,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5189,7 +4967,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":4555,
             "selecteID":4560,
@@ -5205,7 +4982,6 @@
             "compId":8123,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5221,7 +4997,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5247,7 +5022,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":4557,
             "searchKey":"Box",
@@ -5262,7 +5036,6 @@
             "compId":8126,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5278,7 +5051,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5304,7 +5076,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1716,
             "selecteID":328,
@@ -5320,7 +5091,6 @@
             "compId":8129,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
@@ -5334,7 +5104,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5353,7 +5122,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"CircleCollider",
                     "switchAble":true,
                     "searchKey":"CircleCollider",
@@ -5370,7 +5138,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5387,7 +5154,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -5404,7 +5170,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/ShiWoNiuLogic.js",
@@ -5431,7 +5196,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1716,
             "selecteID":328,
@@ -5447,7 +5211,6 @@
             "compId":8130,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab"},
@@ -5461,7 +5224,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5480,7 +5242,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"CircleCollider",
                     "switchAble":true,
                     "searchKey":"CircleCollider",
@@ -5497,7 +5258,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5514,7 +5274,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -5531,7 +5290,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/ShiWoNiuLogic.js",
@@ -5558,7 +5316,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1723,
             "selecteID":319,
@@ -5574,7 +5331,6 @@
             "compId":8137,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
@@ -5588,7 +5344,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5607,7 +5362,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5624,7 +5378,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -5641,7 +5394,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/LaZhuLogic.js",
@@ -5656,6 +5408,22 @@
                     "compId":8143,
                     "child":[
                         ]
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8137,
+                    "label":"BoxCollider(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8160,
+                    "child":[
+                        ],
+                    "$LOCKED":false
                 }],
             "animations":[
                 {
@@ -5668,7 +5436,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":369,"x":2317,"texture":"monster/zhutai.png"},
@@ -5682,7 +5449,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1723,
             "selecteID":319,
@@ -5698,7 +5464,6 @@
             "compId":8144,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
@@ -5712,7 +5477,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5731,7 +5495,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5748,7 +5511,6 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -5765,7 +5527,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/LaZhuLogic.js",
@@ -5780,6 +5541,22 @@
                     "compId":8150,
                     "child":[
                         ]
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab"},
+                    "nodeParent":8144,
+                    "label":"BoxCollider(LaZhuMonster)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8161,
+                    "child":[
+                        ],
+                    "$LOCKED":false
                 }],
             "animations":[
                 {
@@ -5792,7 +5569,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":395,"x":4072,"texture":"monster/zhutai.png"},
@@ -5806,7 +5582,6 @@
                 ]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1537,
             "selecteID":1538,
@@ -5822,7 +5597,6 @@
             "compId":8151,
             "child":[
                 {
-                    "x":30,
                     "type":"Animation",
                     "searchKey":"Animation",
                     "props":{"presetID":2,"preset":"laya/pages/prefab/brick/DisBrick.prefab"},
@@ -5836,7 +5610,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5852,7 +5625,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5868,7 +5640,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/DisBrickLogic.js",
@@ -5895,7 +5666,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Box",
             "selectedBox":1650,
             "selecteID":1651,
@@ -5911,7 +5681,6 @@
             "compId":8152,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5927,7 +5696,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5954,7 +5722,6 @@
             "$HIDDEN":false
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":886,"x":1734,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -5967,7 +5734,6 @@
             "compId":8154,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -5983,7 +5749,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -6000,7 +5765,6 @@
                 }]
         },
         {
-            "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
             "props":{"y":886,"x":3318,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick9.prefab"},
@@ -6013,7 +5777,6 @@
             "compId":8157,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -6029,7 +5792,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",

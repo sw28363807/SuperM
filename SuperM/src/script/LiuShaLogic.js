@@ -42,6 +42,10 @@ export default class LiuShaLogic extends Laya.Script {
             if (other.owner) {
                 Utils.removeThis(other.owner);   
             }
+        } else if (other.label == "MonsterBody" || other.label == "MonsterHead" || other.label == "MonsterFoot") {
+            if (other) {
+                Utils.createMonsterDropDeadEffect(other.owner);   
+            }
         }
     }
 

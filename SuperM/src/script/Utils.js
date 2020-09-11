@@ -144,7 +144,27 @@ export default class Utils extends Laya.Script {
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
             let monsterH = monster.height * monster.scaleY;
-            if (myX > monster.x - monsterW/2 - offx - 20 && myX < monster.x + monsterW/2 + offx && myY < monster.y - monsterH/2) {
+            let c1 = myX > monster.x - monsterW/2 - offx - 20;
+            let c2 = myX < monster.x + monsterW/2 + offx;
+            let c3 = myY < monster.y - monsterH/2;
+            if (c1 && c2 && c3) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static roleInCeil2(monster) {
+        if (GameContext.role) {
+            let offx = 60;
+            let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
+            let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
+            let monsterW = monster.width * monster.scaleX;
+            let monsterH = monster.height * monster.scaleY;
+            let c1 = myX > monster.x - monsterW/2 - offx - 20;
+            let c2 = myX < monster.x + monsterW/2 + offx;
+            let c3 = myY < monster.y;
+            if (c1 && c2 && c3) {
                 return true;
             }
         }
@@ -174,17 +194,24 @@ export default class Utils extends Laya.Script {
         }
     }
 
-    static createBulletEffect(bulletOwner) {
+    static createBulletEffect(bulletOwner, customOffX, customOffY) {
         if (!bulletOwner) {
             return;
         }
         let parent = bulletOwner.parent;
         let x = bulletOwner.x;
         let y = bulletOwner.y;
+        if (customOffX == null || customOffX == undefined) {
+            customOffX = 30;
+        }
+
+        if (customOffY == null || customOffY == undefined) {
+            customOffY = 20;
+        }
         Laya.loader.create("prefab/BulletEffect.prefab", Laya.Handler.create(null, function (prefabDef) {
             let effect = prefabDef.create();
-            effect.x = x + 30;
-            effect.y = y + 20;
+            effect.x = x + customOffX;
+            effect.y = y + customOffY;
             effect.zOrder = 65599;
             parent.addChild(effect);
             Laya.timer.once(300, null, function() {
@@ -387,6 +414,28 @@ export default class Utils extends Laya.Script {
         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
     }
 
+    static dieResetRole() {
+        Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+            let black = prefabDef.create();
+            Laya.stage.addChild(black);
+            black.x = 0;   
+            black.y = 0;
+            black.zOrder = 9999999;
+            black.alpha = 0;
+            Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
+                if (GameContext.resetRolePoint) {
+                    GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
+                    GameContext.setRoleSpeed(0.01, 0.01);
+                    GameContext.gameRoleYaBian = false;
+                }
+                Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
+                    black.removeSelf();
+                    black.destroy();
+                }));
+            }));
+        }));
+    }
+
     static hurtRole(other) {
         if (!GameContext.role) {
             return;
@@ -459,6 +508,10 @@ export default class Utils extends Laya.Script {
                     
                 }));
             }));
+        } else {
+            if (other && other.name == "BrickMonster") {
+                Utils.yabianRole();
+            }
         }
         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
     }
@@ -489,6 +542,14 @@ export default class Utils extends Laya.Script {
                 }));
             }));
         }));
+    }
+
+    static yabianRole() {
+        GameContext.playRoleAni("yabian", false);
+        GameContext.gameRoleYaBian = true;
+        Laya.timer.once(500, null, function() {
+            Utils.dieResetRole();
+        });
     }
 
     static createBrickBrokenEffect(owner) {

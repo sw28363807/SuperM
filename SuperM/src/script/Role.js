@@ -281,13 +281,20 @@ export default class Role extends Laya.Script {
 
                         // }
                         if (other.owner.name == "Flower" ||
-                         other.owner.name == "BrickMonster" ||
                           other.owner.name == "Fish") {
                         } else {
-                            if (Utils.roleInCeil(other.owner)) {
-                                Utils.footMonster(other);
+                            if ( other.owner.name == "BrickMonster") {
+                                if (Utils.roleInCeil2(other.owner)) {
+                                    Utils.footMonster(other);
+                                } else {
+                                    Utils.hurtRole(other.owner);
+                                }
                             } else {
-                                Utils.hurtRole(other.owner);
+                                if (Utils.roleInCeil(other.owner)) {
+                                    Utils.footMonster(other);
+                                } else {
+                                    Utils.hurtRole(other.owner);
+                                }
                             }
                         }
                     }

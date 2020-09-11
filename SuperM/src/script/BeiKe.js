@@ -31,6 +31,11 @@ export default class BeiKe extends Laya.Script {
             this.shootBullet(x + 100, y + 25, 0, -1);
             this.shootBullet(x + 100, y + 25, -0.7, -0.7);
             this.shootBullet(x + 100, y + 25, 0.7, -0.7);
+
+            this.shootBullet(x + 100, y + 25, -1, -0.4);
+            this.shootBullet(x + 100, y + 25, 1, -0.4);
+            this.shootBullet(x + 100, y + 25, -0.5, -0.9);
+            this.shootBullet(x + 100, y + 25, 0.5, -0.9);
         } else {
             this.owner.renderAni.play(0, true, "ani1");
         }
@@ -49,8 +54,9 @@ export default class BeiKe extends Laya.Script {
             bullet.zOrder = 9999999;
             bullet.x = x;
             bullet.y = y;
+            bullet.speed = 2;
             EventMgr.getInstance().postEvent(Events.Monster_Shoot_Bullet, {owner: bullet, direct: {x: dx, y: dy}});
-            Laya.timer.once(1000, null, function() {
+            Laya.timer.once(3000, null, function() {
                 if (owner && owner.renderAni) {
                     owner.renderAni.play(0, true, "ani1");
                 }

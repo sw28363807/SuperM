@@ -14,6 +14,7 @@ export default class BrickMonsterLogic extends Laya.Script {
     
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
+        EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
        
         let script =  this.owner.getComponent(BrickMonsterLogic);
         if (script.lookArea) {
@@ -23,17 +24,26 @@ export default class BrickMonsterLogic extends Laya.Script {
         }
     }
 
+    onMonsterFootDead(data) {
+        if (data.owner != this.owner) {
+            return;
+        }
+        Utils.createBrickBrokenEffect(this.owner);
+        Utils.removeThis(this.owner);
+    }
+
     onStart() {
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.eye = this.owner.getChildByName("eye");
         this.owner.idlePoint = {x: this.owner.x, y: this.owner.y};
-        this.owner.state = 0; // 0 搜索 1 攻击 2 等待攻击结束 3 闪避玩家 4 休息状态 
+        this.owner.state = 0; // 0 搜索 1 攻击 2 等待攻击结束 3 闪避玩家 4 休息状态
         this.owner.idleCount = 0;
         this.owner.footAni = this.owner.getChildByName("foot");
         this.stopAttackAni();
     }
 
     onDisable() {
+        EventMgr.getInstance().removeEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().removeEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
     }
 

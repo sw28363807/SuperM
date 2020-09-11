@@ -15,27 +15,26 @@ export default class LaZhuLogic extends Laya.Script {
 
     onStart() {
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
-        this.owner.state = 1;      //1 待机模式 2 追逐模式 3 回归模式
+        this.owner.state = 1;      //1 待机模式 2 追逐模式 3 回归模式 4 掉落模式
         this.owner.curAni = "";
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.maxAreaX = 800;
         this.owner.lookupAreaX = 400;
-        this.owner.speedX = 5;
+        this.owner.speedX = 2;
     }
 
     onUpdate() {
         if (!this.owner) {
             return;
         }
-
+        let body = this.owner.rigidBody.getBody();
         if (this.owner.state == 1) {
-
             let distance2 = Math.abs(this.owner.x - this.owner.startPoint.x);
             let distance = Math.abs(GameContext.role.x - this.owner.startPoint.x);
             if (distance2 <= this.owner.maxAreaX) {
                 if (distance <= this.owner.lookupAreaX) {
-                    this.owner.state = 2;
+                    this.owner.state = 4;
                     if (this.owner.curAni != "ani1") {
                         this.owner.curAni = "ani1"
                         this.owner.renderAni.play(0, true, "ani1");
@@ -43,10 +42,10 @@ export default class LaZhuLogic extends Laya.Script {
     
                 }
                 this.owner.rigidBody.setVelocity({x: 0, y: 0});
-                this.owner.rigidBody.getBody().SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
+                body.SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
             } else {
                 this.owner.rigidBody.setVelocity({x: 0, y: 0});
-                this.owner.rigidBody.getBody().SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
+                body.SetPositionXY(this.owner.startPoint.x/50, this.owner.startPoint.y/50);
             }
 
         } else if (this.owner.state == 2) {
@@ -57,7 +56,7 @@ export default class LaZhuLogic extends Laya.Script {
                     this.owner.curAni = "ani2"
                     this.owner.renderAni.play(0, true, "ani2");
                 }
-                this.owner.rigidBody.setVelocity({x: Utils.getSign(GameContext.role.x - this.owner.x) * this.owner.speedX, y: 0});
+                this.owner.rigidBody.setVelocity({x: Utils.getSign(GameContext.role.x - this.owner.x) * this.owner.speedX, y: this.owner.rigidBody.linearVelocity.y});
             } else {
                 if (this.owner.curAni != "ani1") {
                     this.owner.curAni = "ani1";
@@ -77,9 +76,8 @@ export default class LaZhuLogic extends Laya.Script {
         if (!this.owner) {
             return;
         }
-        // if (other.label == "RoleFoot") {
-        //     this.owner.aniRender.play(0, true , "ani2");
-        //     Laya.timer.once(500,  this, this.onDisBrick);
-        // }
+        if (self.label == "MonsterBodySensor") {
+            this.owner.state = 2;
+        }
     }
 }

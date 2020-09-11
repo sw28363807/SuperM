@@ -2,6 +2,7 @@ import MonsterIdLogic from "./MonsterIdLogic";
 import GameContext from "../GameContext";
 import Utils from "./Utils";
 import DoorLogic from "./DoorLogic";
+import LoadingLogic from "./LoadingLogic";
 
 export default class MonsterCreater extends Laya.Script {
 

@@ -1,4 +1,5 @@
 import GameContext from "../GameContext";
+import LoadingLogic from "./LoadingLogic";
 
 export default class Camera extends Laya.Script {
 
@@ -47,6 +48,10 @@ export default class Camera extends Laya.Script {
             this.lookAt(this.role.x, this.role.y);
         }
     }
+
+    onStart() {
+        GameContext.resetRolePoint = {x: this.role.x, y: this.role.y};
+    }
     
     onEnable() {
         let script = this.owner.getComponent(Camera);
@@ -83,6 +88,12 @@ export default class Camera extends Laya.Script {
             this.zeroY = 160;
         }
         this.standY = 750/2.3 - 660 + this.zeroY;
+
+        GameContext.monsterArea = 3000;
+        GameContext.monsterAreaY = 800;
+        if (LoadingLogic.curSceneExt == "scene/Level3_2.scene") {
+            GameContext.monsterArea = 1000;
+        }
     }
 
     onDisable() {

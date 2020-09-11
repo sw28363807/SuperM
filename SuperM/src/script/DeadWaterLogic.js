@@ -1,6 +1,7 @@
 import GameContext from "../GameContext";
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import LoadingLogic from "./LoadingLogic";
 
 export default class DeadWaterLogic extends Laya.Script {
 
@@ -87,12 +88,14 @@ export default class DeadWaterLogic extends Laya.Script {
         }
     }
 
-    // onTriggerEnter(other, self, contact) {
-    //     if (self.label == "DeadWater") {
-    //         if (other.label == "RoleHead" || other.label == "RoleFoot" || other.label == "RoleBody" ) {
-    //             GameContext.triggerGotoHole(this.owner, 100, this.owner.resetPosX);
-    //         }
-    //     }
-    // }
-
+    onTriggerEnter(other, self, contact) {
+        if (LoadingLogic.curSceneExt == "scene/Level5_1.scene") {
+            if (self.label == "DeadWater") {
+                if (other.label == "RoleHead" || other.label == "RoleFoot" || other.label == "RoleBody" ) {
+    
+                    GameContext.triggerGotoHole(this.owner, 100, this.owner.resetPosX);
+                }
+            }
+        }
+    }
 }

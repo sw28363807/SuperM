@@ -50,7 +50,7 @@ export default class MoveBrickLogic extends Laya.Script {
         if (script.moveSpeed) {
             this.owner.moveSpeed = script.moveSpeed;
         } else {
-            this.owner.moveSpeed = 3;
+            this.owner.moveSpeed = 4;
         }
 
         if (script.movePoints) {
@@ -147,13 +147,20 @@ export default class MoveBrickLogic extends Laya.Script {
                 this.owner.movePointsState = 1;
             }
         }
+        let processSpeed = false;
+        if (this.owner.nextMovePointsIndex != curPintIndex) {
+            processSpeed = true;
+        }
         this.owner.nextMovePointsIndex = curPintIndex;
+        if (processSpeed) {
+            this.processMoveSpeed();
+        }
     }
 
     moveBoard() {
         // let curPoint = this.owner.pointsArray[this.owner.movePointsIndex];
         // this.owner.rigidBody.getBody().SetPositionXY(curPoint.x/50, curPoint.y/50);
-        this.processMoveSpeed();
+        // this.processMoveSpeed();
     }
 
     processMoveSpeed() {

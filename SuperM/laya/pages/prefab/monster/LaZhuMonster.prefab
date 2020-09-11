@@ -6,7 +6,7 @@
     "searchKey":"Box,LaZhuMonster",
     "props":{"zOrder":100,"y":0,"x":0,"width":66,"presetID":1,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab","name":"LaZhuMonster","isPresetRoot":true,"height":105},
     "nodeParent":-1,
-    "maxID":1725,
+    "maxID":1726,
     "label":"LaZhuMonster",
     "isOpen":true,
     "isDirectory":true,
@@ -34,7 +34,7 @@
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"type":"kinematic","presetID":3,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab","mask":191,"category":32,"allowRotation":false},
+            "props":{"type":"dynamic","presetID":3,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab","mask":191,"gravityScale":5,"category":32,"allowRotation":false},
             "nodeParent":1723,
             "label":"RigidBody(LaZhuMonster)",
             "isDirectory":false,
@@ -53,9 +53,10 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":0,"width":66,"presetID":4,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab","label":"MonsterBody","height":105},
+            "props":{"y":34,"x":0,"width":66,"presetID":4,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab","label":"MonsterBody","height":68},
             "nodeParent":1723,
             "label":"BoxCollider(LaZhuMonster)",
+            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -97,6 +98,23 @@
             "compId":1724,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":101,"x":15,"width":30,"presetID":7,"preset":"laya/pages/prefab/monster/LaZhuMonster.prefab","label":"MonsterBodySensor","isSensor":true,"height":6},
+            "nodeParent":1723,
+            "label":"BoxCollider(LaZhuMonster)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1725,
+            "child":[
+                ],
+            "$LOCKED":false
         }],
     "animations":[
         {

@@ -164,7 +164,6 @@ export default class GameContext extends Laya.Script {
 
     static triggerRoleWin() {
         if (GameContext.role) {
-            GameContext.initRolePoint = GameContext.initConstRolePoint;
             GameContext.isWin = true;
         }
     }
@@ -208,6 +207,9 @@ export default class GameContext extends Laya.Script {
     }
 
     static playRoleAni(ani, loop) {
+        if (GameContext.gameRoleYaBian) {
+            return;
+        }
         if (!GameContext.role) {
             return;
         }
@@ -420,7 +422,7 @@ GameContext.joyStickScene = null;
 GameContext.gameTopScene = null;
 GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
-GameContext.initConstRolePoint = {x: 961, y: 638};
+GameContext.resetRolePoint = null;
 GameContext.mapMaxX = 0;
 GameContext.gameRoleNumberInit = 999;
 GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
@@ -436,7 +438,7 @@ GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
 
 GameContext.monsters = [];
-GameContext.monsterArea = 2000;
+GameContext.monsterArea = 3000;
 GameContext.monsterAreaY = 800;
 
 GameContext.DeadWaterY = 0;
@@ -455,3 +457,5 @@ GameContext.bossState = 0;
 GameContext.curBgm = "";
 
 GameContext.curCiBrick = null;
+
+GameContext.gameRoleYaBian = false;
