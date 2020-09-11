@@ -25,6 +25,7 @@ import AITopOrBottom from "./script/AITopOrBottom"
 import FlowerLogic from "./script/FlowerLogic"
 import MonsterCreater from "./script/MonsterCreater"
 import Role from "./script/Role"
+import YouLingLogic from "./script/YouLingLogic"
 import BrickMonsterLogic from "./script/BrickMonsterLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import LiuShaLogic from "./script/LiuShaLogic"
@@ -46,7 +47,6 @@ import ShiTou from "./script/ShiTou"
 import DoorLogic from "./script/DoorLogic"
 import ShiWoNiuLogic from "./script/ShiWoNiuLogic"
 import LaZhuLogic from "./script/LaZhuLogic"
-import YouLingLogic from "./script/YouLingLogic"
 import HuoQiuLogic from "./script/HuoQiuLogic"
 import HanbaoLogic from "./script/HanbaoLogic"
 import BossLogic from "./script/BossLogic"
@@ -90,6 +90,7 @@ export default class GameConfig {
 		reg("script/FlowerLogic.js",FlowerLogic);
 		reg("script/MonsterCreater.js",MonsterCreater);
 		reg("script/Role.js",Role);
+		reg("script/YouLingLogic.js",YouLingLogic);
 		reg("script/BrickMonsterLogic.js",BrickMonsterLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/LiuShaLogic.js",LiuShaLogic);
@@ -111,7 +112,6 @@ export default class GameConfig {
 		reg("script/DoorLogic.js",DoorLogic);
 		reg("script/ShiWoNiuLogic.js",ShiWoNiuLogic);
 		reg("script/LaZhuLogic.js",LaZhuLogic);
-		reg("script/YouLingLogic.js",YouLingLogic);
 		reg("script/HuoQiuLogic.js",HuoQiuLogic);
 		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/BossLogic.js",BossLogic);

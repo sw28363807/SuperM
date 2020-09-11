@@ -18,6 +18,7 @@ export default class TanLiBrickLogic extends Laya.Script {
                 finalSpeed = -40
             }
             GameContext.setRoleSpeed(lineSpeed.x, finalSpeed);
+            this.owner.play(0, false, "ani2");
         }
     }
     

@@ -181,54 +181,6 @@
                                 "target":3,
                                 "key":"skin",
                                 "index":0
-                            },
-                            {
-                                "value":"monster/youling (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":2
-                            },
-                            {
-                                "value":"monster/youling (3).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":4
-                            },
-                            {
-                                "value":"monster/youling (4).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":6
-                            },
-                            {
-                                "value":"monster/youling (5).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":8
-                            },
-                            {
-                                "value":"monster/youling (6).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":10
-                            },
-                            {
-                                "value":"monster/youling (7).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":12
                             }]
                     }
                 },

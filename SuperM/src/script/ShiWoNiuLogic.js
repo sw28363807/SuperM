@@ -90,7 +90,7 @@ export default class ShiWoNiuLogic extends Laya.Script {
             this.owner.state = 2;
             this.owner.rigidBody.getBody().SetActive(false);
             this.owner.renderMonster.play(0, false, "die");
-            Laya.timer.once(2000, this, this.onMonsterLive);
+            Laya.timer.once(8000, this, this.onMonsterLive);
         }
     }
 

@@ -155,7 +155,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":1
+                                "index":5
                             },
                             {
                                 "value":"monster/shiDie (3).png",
@@ -163,7 +163,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":2
+                                "index":10
                             },
                             {
                                 "value":"monster/shiDie (4).png",
@@ -171,7 +171,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":3
+                                "index":15
                             },
                             {
                                 "value":"monster/shiDie (5).png",
@@ -179,7 +179,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":4
+                                "index":20
                             }],
                         "pivotY":[
                             {
@@ -262,7 +262,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":2
+                                "index":5
                             },
                             {
                                 "value":"monster/shiDie (3).png",
@@ -270,7 +270,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":4
+                                "index":10
                             },
                             {
                                 "value":"monster/shiDie (2).png",
@@ -278,7 +278,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":6
+                                "index":15
                             },
                             {
                                 "value":"monster/shiDie (1).png",
@@ -286,7 +286,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":8
+                                "index":20
                             }],
                         "pivotY":[
                             {

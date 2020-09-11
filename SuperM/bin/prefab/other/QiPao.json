@@ -1,1 +1,1 @@
-{"type":"Animation","props":{"y":0,"x":0,"source":"anim/shuicao/QiPao.ani","presetID":1,"name":"QiPao","isPresetRoot":true,"autoPlay":true,"autoAnimation":"ani1"},"compId":1536,"loadList":["anim/shuicao/QiPao.ani"],"loadList3D":[]}
+{"type":"Animation","props":{"y":0,"x":0,"width":100,"source":"anim/shuicao/QiPao.ani","presetID":1,"name":"QiPao","isPresetRoot":true,"height":100,"autoPlay":true,"autoAnimation":"ani1"},"compId":1536,"loadList":["anim/shuicao/QiPao.ani"],"loadList3D":[]}
