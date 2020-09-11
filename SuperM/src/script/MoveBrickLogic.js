@@ -13,8 +13,8 @@ export default class MoveBrickLogic extends Laya.Script {
         let moveTime = 2000;
         /** @prop {name:moveDirect, tips:"1 横向 2 纵向", type:Int, default:1}*/
         let moveDirect = 1;
-        /** @prop {name:moveSpeed, tips:"移动速度", type:Int, default:2}*/
-        let moveSpeed = 2;
+        /** @prop {name:moveSpeed, tips:"移动速度", type:Int, default:3}*/
+        let moveSpeed = 3;
         /** @prop {name:movePoints, tips:"移动路径", type:String, default:""}*/
         let movePoints = "";
         /** @prop {name:moveStartType, tips:"移动开始类型 1 站上去开始 2 随时开始", type:Int, default:1}*/

@@ -112,7 +112,7 @@ export default class GameContext extends Laya.Script {
             black.y = 0;
             black.zOrder = 9999999;
             black.alpha = 0;
-            Laya.Tween.to(black,{alpha: 1}, 300, null, Laya.Handler.create(null, function(){
+            Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
                 if (customX != null &&
                     customX != undefined &&
                      customY != null &&
@@ -121,7 +121,7 @@ export default class GameContext extends Laya.Script {
                } else {
                    GameContext.setRolePosition(huochi.x - 200, 300);
                }
-                Laya.Tween.to(black,{alpha: 0}, 300, null, Laya.Handler.create(null, function(){
+                Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
                     black.removeSelf();
                     black.destroy();
                     GameContext.roleIsDrop = false;
@@ -174,6 +174,9 @@ export default class GameContext extends Laya.Script {
             return;
         }
         if (GameContext.isDie) {
+            return;
+        }
+        if (GameContext.isWin) {
             return;
         }
         if (GameContext.walkDirect) {
@@ -433,7 +436,7 @@ GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
 
 GameContext.monsters = [];
-GameContext.monsterArea = 1000;
+GameContext.monsterArea = 2000;
 GameContext.monsterAreaY = 800;
 
 GameContext.DeadWaterY = 0;
@@ -450,3 +453,5 @@ GameContext.flySliderState = 1; //1 积蓄 2 释放
 GameContext.bossState = 0;
 
 GameContext.curBgm = "";
+
+GameContext.curCiBrick = null;

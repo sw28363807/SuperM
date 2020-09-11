@@ -1,5 +1,7 @@
 import Utils from "./Utils";
 import GameContext from "../GameContext";
+import EventMgr from "./EventMgr";
+import Events from "./Events";
 
 export default class PassLevelBrickLogic extends Laya.Script {
 
@@ -28,7 +30,8 @@ export default class PassLevelBrickLogic extends Laya.Script {
                     Laya.SoundManager.playSound("other1/guoguan.mp3");
                 }), null, Laya.Loader.SOUND);
             }
-
+            GameContext.gameRoleNumber++;
+            EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
             let a = Math.random();
             let path = "";
             if (a < 0.3) {

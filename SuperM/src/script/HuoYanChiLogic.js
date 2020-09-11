@@ -38,14 +38,12 @@ export default class HuoYanChiLogic extends Laya.Script {
             if (GameContext.roleIsDrop == true) {
                 return;
             }
-            GameContext.role.zOrder = this.owner.zOrder - 1;
+            GameContext.role.zOrder = this.owner.zOrder - 500;
             GameContext.roleIsDrop = true;
-            Laya.timer.once(300, this, function() {
-                if (this.owner) {
-                    GameContext.triggerInHuoChi(this.owner, this.owner.customX, this.owner.customY);
-                    GameContext.role.zOrder = this.owner.roleZOrder;
-                }
-            });
+            if (this.owner) {
+                GameContext.triggerInHuoChi(this.owner, this.owner.customX, this.owner.customY);
+                GameContext.role.zOrder = this.owner.roleZOrder;
+            }
         }
     }
 

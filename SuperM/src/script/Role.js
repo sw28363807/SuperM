@@ -175,6 +175,9 @@ export default class Role extends Laya.Script {
         if (GameContext.roleIsDrop == true) {
             return;
         }
+        if (GameContext.isWin == true) {
+            return;
+        }
         GameContext.processRoleWalkSpeed();
         if (GameContext.roleHurting == false) {
             if (GameContext.walkDirect) {
@@ -277,7 +280,9 @@ export default class Role extends Laya.Script {
                         // if (other.owner.name != "CiQiu") {
 
                         // }
-                        if (other.owner.name == "Flower" || other.owner.name == "BrickMonster") {
+                        if (other.owner.name == "Flower" ||
+                         other.owner.name == "BrickMonster" ||
+                          other.owner.name == "Fish") {
                         } else {
                             if (Utils.roleInCeil(other.owner)) {
                                 Utils.footMonster(other);

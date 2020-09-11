@@ -11,19 +11,18 @@ export default class AIFlyMonster extends Laya.Script {
     }
 
     onStart() {
-        this.startAI();
-    }
-
-    startAI() {
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.currentVelocity = {x: 0, y: this.speed};
         this.owner.renderMonster = this.owner.getChildByName("render");
+        this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
     }
 
     processMove() {
         if (this.owner.currentVelocity) {
             let linearVelocity = this.owner.rigidBody.linearVelocity;
             this.owner.rigidBody.setVelocity({x: linearVelocity.x, y: this.owner.currentVelocity.y});
+            let body =  this.owner.rigidBody.getBody();
+            body.SetPositionXY(body.x, this.owner.startPoint.y/50);
         }
     }
 

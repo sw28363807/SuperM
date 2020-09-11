@@ -1,6 +1,7 @@
 import EventMgr from "./EventMgr";
 import Events from "./Events";
 import GameContext from "../GameContext";
+import LoadingLogic from "./LoadingLogic";
 
 export default class ShuiGuanLogic extends Laya.Script {
 
@@ -76,7 +77,19 @@ export default class ShuiGuanLogic extends Laya.Script {
         this.owner.roleImg.scaleX = GameContext.curScaleFactor;
         this.owner.roleImg.scaleY = GameContext.curScaleFactor;
         Laya.Tween.to(this.owner.roleImg, {y: 115}, 500, null, Laya.Handler.create(null, function() {
-            Laya.Scene.open(sceneName);
+            Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+                let black = prefabDef.create();
+                Laya.stage.addChild(black);
+                black.x = 0;   
+                black.y = 0;
+                black.zOrder = 9999999;
+                black.alpha = 0;
+                Laya.Tween.to(black,{alpha: 1}, 400, null, Laya.Handler.create(null, function(){
+                    black.removeSelf();
+                    black.destroy();
+                    LoadingLogic.loadScene(sceneName);
+                }));
+            }));
         }));
     }
 

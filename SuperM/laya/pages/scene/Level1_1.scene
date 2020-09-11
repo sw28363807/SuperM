@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5184,
+    "selecteID":5185,
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":5185,
+    "maxID":5188,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -225,7 +225,7 @@
             "x":15,
             "type":"Panel",
             "searchKey":"Panel",
-            "props":{"y":-1248,"x":71,"width":30000,"height":2000,"bgColor":"#a0fff0"},
+            "props":{"y":-1245,"x":74,"width":30000,"height":2000,"bgColor":"#a0fff0"},
             "nodeParent":2,
             "label":"Panel",
             "isDirectory":false,
@@ -13675,7 +13675,7 @@
             "selectedBox":279,
             "selecteID":280,
             "searchKey":"Sprite",
-            "props":{"y":-6,"x":16612,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "props":{"y":-34,"x":16659,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
             "nodeParent":2,
             "maxID":282,
             "label":"CloudBrick",
@@ -13739,7 +13739,7 @@
             "selectedBox":102,
             "selecteID":103,
             "searchKey":"Animation",
-            "props":{"y":-73,"x":16625,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "props":{"y":-99,"x":16672,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
             "nodeParent":2,
             "maxID":106,
             "label":"Gold",
@@ -29057,163 +29057,10 @@
         {
             "x":15,
             "type":"Box",
-            "selectedBox":1491,
-            "selecteID":1494,
-            "searchKey":"Box",
-            "props":{"y":320,"x":12898,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-            "nodeParent":2,
-            "maxID":1503,
-            "label":"RedMonsterFly",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":3377,
-            "child":[
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3377,
-                    "label":"RigidBody(RedMonsterFly)",
-                    "isDirectory":false,
-                    "isClose":true,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3379,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3377,
-                    "label":"render",
-                    "isOpen":null,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3380,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"CircleCollider",
-                    "switchAble":true,
-                    "searchKey":"CircleCollider",
-                    "removeAble":true,
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3377,
-                    "label":"CircleCollider(RedMonsterFly)",
-                    "isDirectory":false,
-                    "isClose":true,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3382,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/FlyMonsterLogic.js",
-                    "searchKey":"Script,FlyMonsterLogic",
-                    "removeAble":true,
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3377,
-                    "label":"FlyMonsterLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3384,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":12,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3377,
-                    "label":"BoxCollider(RedMonsterFly)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4304,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterIdLogic.js",
-                    "searchKey":"Script,MonsterIdLogic",
-                    "removeAble":true,
-                    "props":{"presetID":13,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3377,
-                    "label":"MonsterIdLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4538,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/AITopOrBottom.js",
-                    "searchKey":"Script,AITopOrBottom",
-                    "removeAble":true,
-                    "props":{"presetID":14,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3377,
-                    "label":"AITopOrBottom",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4583,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }],
-            "$LOCKED":false,
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
             "searchKey":"Box",
-            "props":{"y":450.5,"x":12859,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+            "props":{"y":450.5,"x":12758,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
             "nodeParent":2,
             "maxID":1596,
             "label":"WenhaoBrick",
@@ -30503,159 +30350,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":4584,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }],
-            "$LOCKED":false,
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":1491,
-            "selecteID":1494,
-            "searchKey":"Box",
-            "props":{"y":14,"x":16360,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-            "nodeParent":2,
-            "maxID":1503,
-            "label":"RedMonsterFly",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":3463,
-            "child":[
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3463,
-                    "label":"RigidBody(RedMonsterFly)",
-                    "isDirectory":false,
-                    "isClose":true,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3465,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3463,
-                    "label":"render",
-                    "isOpen":null,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3466,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"CircleCollider",
-                    "switchAble":true,
-                    "searchKey":"CircleCollider",
-                    "removeAble":true,
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3463,
-                    "label":"CircleCollider(RedMonsterFly)",
-                    "isDirectory":false,
-                    "isClose":true,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3468,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/FlyMonsterLogic.js",
-                    "searchKey":"Script,FlyMonsterLogic",
-                    "removeAble":true,
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3463,
-                    "label":"FlyMonsterLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3470,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":12,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3463,
-                    "label":"BoxCollider(RedMonsterFly)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4306,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterIdLogic.js",
-                    "searchKey":"Script,MonsterIdLogic",
-                    "removeAble":true,
-                    "props":{"presetID":13,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3463,
-                    "label":"MonsterIdLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4540,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/AITopOrBottom.js",
-                    "searchKey":"Script,AITopOrBottom",
-                    "removeAble":true,
-                    "props":{"presetID":14,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
-                    "nodeParent":3463,
-                    "label":"AITopOrBottom",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4585,
                     "child":[
                         ]
                 }],
@@ -42254,116 +41948,6 @@
         {
             "x":15,
             "type":"Box",
-            "selectedBox":4559,
-            "searchKey":"Box",
-            "props":{"y":165,"x":12798,"presetID":1,"preset":"laya/pages/prefab/ai/AITop.prefab"},
-            "nodeParent":2,
-            "maxID":4566,
-            "label":"AITop",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":4702,
-            "child":[
-                {
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AITop.prefab"},
-                    "nodeParent":4702,
-                    "label":"BoxCollider(AITop)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4703,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AITop.prefab"},
-                    "nodeParent":4702,
-                    "label":"RigidBody(AITop)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4704,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":4558,
-            "searchKey":"Box",
-            "props":{"y":389.5,"x":12798,"presetID":1,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
-            "nodeParent":2,
-            "maxID":4568,
-            "label":"AIBottom",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":4705,
-            "child":[
-                {
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
-                    "nodeParent":4705,
-                    "label":"BoxCollider(AIBottom)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4706,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
-                    "nodeParent":4705,
-                    "label":"RigidBody(AIBottom)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4707,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
             "selectedBox":4555,
             "selecteID":4561,
             "searchKey":"Box",
@@ -43206,116 +42790,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":4752,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":4558,
-            "searchKey":"Box",
-            "props":{"y":79,"x":16258,"presetID":1,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
-            "nodeParent":2,
-            "maxID":4568,
-            "label":"AIBottom",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":4753,
-            "child":[
-                {
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
-                    "nodeParent":4753,
-                    "label":"BoxCollider(AIBottom)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4754,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
-                    "nodeParent":4753,
-                    "label":"RigidBody(AIBottom)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4755,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":4559,
-            "searchKey":"Box",
-            "props":{"y":-183,"x":16266.5,"presetID":1,"preset":"laya/pages/prefab/ai/AITop.prefab"},
-            "nodeParent":2,
-            "maxID":4566,
-            "label":"AITop",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":4756,
-            "child":[
-                {
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/ai/AITop.prefab"},
-                    "nodeParent":4756,
-                    "label":"BoxCollider(AITop)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4757,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/ai/AITop.prefab"},
-                    "nodeParent":4756,
-                    "label":"RigidBody(AITop)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4758,
                     "child":[
                         ]
                 }],
@@ -47511,7 +46985,7 @@
             "selectedBox":54,
             "selecteID":70,
             "searchKey":"Box",
-            "props":{"y":631,"x":722,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":637,"x":805,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -47712,6 +47186,70 @@
             "compId":5169,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":279,
+            "selecteID":280,
+            "searchKey":"Sprite",
+            "props":{"y":31,"x":16479,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "nodeParent":2,
+            "maxID":282,
+            "label":"CloudBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":5185,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":5185,
+                    "label":"BoxCollider(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5186,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":5185,
+                    "label":"RigidBody(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5187,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":false
         }],
     "animations":[
         {

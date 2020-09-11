@@ -1,6 +1,7 @@
 import GameContext from "../GameContext";
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import Utils from "./Utils";
 
 export default class LiuShaLogic extends Laya.Script {
 
@@ -17,6 +18,7 @@ export default class LiuShaLogic extends Laya.Script {
         this.owner.keY =  GameContext.keSpr.y;
         this.owner.roleSprY = GameContext.roleSpr.y;
         this.owner.liuShaDieY = 0;
+        this.owner.speed = 3;
     }
 
     onDisable() {
@@ -36,6 +38,10 @@ export default class LiuShaLogic extends Laya.Script {
             GameContext.roleInLiuSha = true;
             GameContext.curRoleLiuSha = this.owner;
             GameContext.role.zOrder = this.owner.zOrder - 1;
+        } else if (other.label == "KeBulletFoot") {
+            if (other.owner) {
+                Utils.removeThis(other.owner);   
+            }
         }
     }
 
@@ -52,10 +58,9 @@ export default class LiuShaLogic extends Laya.Script {
     onUpdate() {
         if (GameContext.roleSpr && GameContext.keSpr && GameContext.roleInLiuSha
              && GameContext.curRoleLiuSha == this.owner) {
-            let yOff = 1;
-            GameContext.keSpr.y += yOff;
-            GameContext.roleSpr.y += yOff;
-            this.owner.liuShaDieY += yOff;
+            GameContext.keSpr.y += this.owner.speed;
+            GameContext.roleSpr.y += this.owner.speed;
+            this.owner.liuShaDieY += this.owner.speed;
             if (this.owner.liuShaDieY > 112) {
                 GameContext.keSpr.y = this.owner.keY;
                 GameContext.roleSpr.y = this.owner.roleSprY;

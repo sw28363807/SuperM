@@ -11,28 +11,29 @@ export default class Camera extends Laya.Script {
     }
 
     lookAt(x, y) {
-        // let width = Laya.Browser.width;
-        // let widthScale = width/1336;
-        // console.debug(widthScale);
-        // let OffX = 1000;
-        // if (x >= GameContext.mapMaxX) {
-        //     GameContext.mapMaxX = x;
-        // }
-        // if (x < GameContext.mapMaxX - OffX) {
-        //     GameContext.setRolePositionX(GameContext.mapMaxX - OffX);
-        // }
         let curX = 1136/2.3 - x;
         if (!GameContext.isDie && !GameContext.isWin ) {
             this.owner.x = curX;
         }
-        // this.owner.y = this.owner.y
-        // let rp = this.role.parent.localToGlobal(new Laya.Point(this.role.x, this.role.y));
 
         if (this.owner.yCenter == 0) {
             if (this.role.y < this.owner.yOff) {
-                this.owner.y = this.standY - (this.role.y - this.owner.yOff);
+                if (this.curUpOffY < this.upOffY) {
+                    this.curUpOffY += this.upSpeed;
+                } else {
+                    this.curUpOffY = this.upOffY;
+                }
+                this.owner.y = this.standY - (this.role.y - this.curUpOffY);
+                this.curDownOffY = -(this.role.y - this.curUpOffY);
             } else {
-                this.owner.y =  this.standY;
+                this.curUpOffY = this.owner.yOff;
+                if (this.curDownOffY > 0) {
+                    this.curDownOffY -= this.upSpeed;
+                    if (this.curDownOffY <= 0) {
+                        this.curDownOffY = 0;
+                    }
+                }
+                this.owner.y =  this.standY + this.curDownOffY;
             }
         } else {
             this.owner.y =  750/2 - y;
@@ -60,6 +61,11 @@ export default class Camera extends Laya.Script {
         } else {
             this.owner.yOff = 200;
         }
+
+        this.curUpOffY = this.owner.yOff;
+        this.curDownOffY = 0;
+        this.upOffY = 500;
+        this.upSpeed = 10;
 
         this.zeroY = 0;
         this.role =  this.owner.getChildByName("Role");

@@ -11,6 +11,10 @@ export default class CiBrickLogic extends Laya.Script {
         let upDistance = 0;
         /** @prop {name:idleCountMax, tips:"移动休眠间隔count", type:Int, default:0}*/
         let idleCountMax = 0;
+        /** @prop {name:customResetX, tips:"自定义重置位置X", type:Int, default:-99999999}*/
+        let customResetX = -99999999;
+        /** @prop {name:customResetY, tips:"自定义重置位置Y", type:Int, default:-99999999}*/
+        let customResetY = -99999999;
     }
 
     onStart() {
@@ -31,6 +35,18 @@ export default class CiBrickLogic extends Laya.Script {
             this.owner.idleCountMax = script.idleCountMax;
         } else {
             this.owner.idleCountMax = 0;
+        }
+
+        if (script.customResetX) {
+            this.owner.customResetX = script.customResetX;
+        } else {
+            this.owner.customResetX = -99999999;
+        }
+
+        if (script.customResetY) {
+            this.owner.customResetY = script.customResetY;
+        } else {
+            this.owner.customResetY = -99999999;
         }
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
         this.owner.upPoint = {x: this.owner.x, y: this.owner.y - this.owner.upDistance};
@@ -68,6 +84,10 @@ export default class CiBrickLogic extends Laya.Script {
                 if (this.owner.state == 2) {
                     this.owner.state = 3;
                 }
+                if (GameContext.curCiBrick) {
+                    return;
+                }
+                GameContext.curCiBrick = this.owner;
                 Utils.hurtRole(this.owner);
                 let owner = this.owner;
                 Laya.timer.once(500, this, function() {
@@ -81,7 +101,12 @@ export default class CiBrickLogic extends Laya.Script {
                             black.alpha = 0;
                             Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
                                 if (owner) {
-                                    GameContext.setRolePosition(owner.x - 50, owner.y);
+                                    GameContext.curCiBrick = null;
+                                    if (owner.customResetX != -99999999 && owner.customResetY != -99999999) {
+                                        GameContext.setRolePosition(owner.customResetX, owner.customResetY);
+                                    } else {
+                                        GameContext.setRolePosition(owner.x -150, owner.y);
+                                    }
                                     Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
                                         black.removeSelf();
                                         black.destroy();

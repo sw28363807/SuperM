@@ -21,7 +21,6 @@ class Main {
 		Laya.alertGlobalError(true);
 		if (Laya.Browser.onMiniGame) {
 			wx.onShow((res) => {
-				console.debug("+++++++++++++++++++++:" + GameContext.curBgm);
 				if (GameContext.curBgm != "") {
 					Laya.SoundManager.stopAllSound();
 					Laya.SoundManager.stopMusic();

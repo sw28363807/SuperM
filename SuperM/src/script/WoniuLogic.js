@@ -79,6 +79,10 @@ export default class WoniuLogic extends Laya.Script {
                 let coll = colls[index];
                 coll.isSensor = true;
             }
+        }  else if (other.label == "RoleBody" || other.label == "RoleHead" || other.label == "RoleFoot") {
+            let dx = Utils.getSign(this.owner.x - GameContext.role.x);
+            this.owner.currentVelocity = {x: dx * Math.abs(this.owner.currentVelocity.x), y: 0};
+            this.owner.renderMonster.scaleX = Utils.getSign(this.owner.currentVelocity.x) * Math.abs(this.owner.renderMonster.scaleX);
         }
     }
 

@@ -49,6 +49,10 @@ export default class AILeftOrRight extends Laya.Script {
             } else if (other.label == "AIRight") {
                 this.owner.currentVelocity = {x: -this.speed, y: 0};
                 this.owner.renderMonster.scaleX = -1 * Math.abs(this.owner.renderMonster.scaleX);
+            } else if (other.label == "RoleBody" || other.label == "RoleHead" || other.label == "RoleFoot") {
+                let dx = Utils.getSign(this.owner.x - GameContext.role.x);
+                this.owner.currentVelocity = {x: dx * Math.abs(this.owner.currentVelocity.x), y: 0};
+                this.owner.renderMonster.scaleX = Utils.getSign(this.owner.currentVelocity.x) * Math.abs(this.owner.renderMonster.scaleX);
             }
         }
     }

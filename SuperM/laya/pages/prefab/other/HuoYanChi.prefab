@@ -34,7 +34,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":0,"width":1200,"presetID":3,"preset":"laya/pages/prefab/other/HuoYanChi.prefab","label":"HuoYanChi","isSensor":true,"height":200},
+            "props":{"y":30,"x":0,"width":1200,"presetID":3,"preset":"laya/pages/prefab/other/HuoYanChi.prefab","label":"HuoYanChi","isSensor":true,"height":170},
             "nodeParent":1718,
             "label":"BoxCollider(HuoYanChi)",
             "isDirectory":false,

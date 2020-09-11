@@ -139,7 +139,7 @@ export default class Utils extends Laya.Script {
 
     static roleInCeil(monster) {
         if (GameContext.role) {
-            let offx = 80;
+            let offx = 60;
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
@@ -272,27 +272,17 @@ export default class Utils extends Laya.Script {
     static triggerRoleWinGotoDoor() {
         if (GameContext.role) {
             if (GameContext.isWin) {
+                GameContext.playRoleAni("run");
+                let scaleX = Math.abs(GameContext.roleSpr.scaleX);
+                GameContext.roleSpr.scaleX = scaleX;
+                scaleX =  Math.abs(GameContext.keSpr.scaleX);
+                GameContext.keSpr.scaleX = scaleX;
                 GameContext.setRoleMove(GameContext.roleSpeed, 0);
             }
             Laya.timer.once(2000, null, function() {
                 GameContext.isWin = false;
                 GameContext.playRoleAni("stand");
-                let loadingBgIndex = 0;
-                if (GameContext.gameGotoScene == "scene/Level1_1.scene") {
-                    loadingBgIndex = 1;
-                } else if (GameContext.gameGotoScene == "scene/Level2_1.scene") {
-                    loadingBgIndex = 2;
-                } else if (GameContext.gameGotoScene == "scene/Level3_1.scene") {
-                    loadingBgIndex = 3;
-                } else if (GameContext.gameGotoScene == "scene/Level4_1.scene") {
-                    loadingBgIndex = 4;
-                }
-                if (loadingBgIndex == 0) {
-                    loadingBgIndex = 1;
-                }
                 LoadingLogic.loadScene(GameContext.gameGotoScene);
-                // Laya.Scene.open(GameContext.gameGotoScene);
-                // Laya.Scene.open("scene/Level1_1.scene");
             });
             GameContext.playRoleAni("run");
             GameContext.initRolePoint = null;
@@ -304,7 +294,7 @@ export default class Utils extends Laya.Script {
             return;
         }
         let deadMove = owner.deadMove;
-        if (deadMove != "") {
+        if (deadMove != "" && deadMove != undefined && deadMove != null) {
             // EventMgr.getInstance().postEvent(Events.Monster_Stop_AI, {owner: owner});
             let x = owner.x;
             let y = owner.y;

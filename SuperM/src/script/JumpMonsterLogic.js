@@ -14,14 +14,13 @@ export default class JumpMonsterLogic extends Laya.Script {
     }
 
     onStart() {
-        this.owner.attackTime = 3000;
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.state = 1;   //1 待机模式 2 跳跃模式
         this.owner.jumpSpeed = -20;
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.renderAni.play(0, true, "ani1");
-        Laya.timer.loop(1500, this, this.jump);
+        Laya.timer.loop(3000, this, this.jump);
     }
 
     jump() {
@@ -31,10 +30,6 @@ export default class JumpMonsterLogic extends Laya.Script {
             this.owner.renderAni.play(0, false, "ani2");
             this.owner.rigidBody.setVelocity({x: 0, y: this.owner.jumpSpeed});
         }
-    }
-
-    onTriggerEnter(other, self, contact) {
-
     }
 
     onUpdate() {

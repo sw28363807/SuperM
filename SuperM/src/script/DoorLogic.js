@@ -97,6 +97,7 @@ export default class DoorLogic extends Laya.Script {
     }
 
     onDisable() {
+        this.owner.inDoor = false;
     }
 
     onTriggerEnter(other, self, contact) {
@@ -114,6 +115,12 @@ export default class DoorLogic extends Laya.Script {
                 let doorFinalPoint = this.getDoorFinalPoint();
                 if (GameContext.doorCount > 2) {
                     gotoPoint = doorFinalPoint;
+                    let sign = Utils.randomSign();
+                    if (sign < 0) {
+                        scene = "scene/Level7_3.scene";
+                    } else {
+                        scene = "scene/Level7_2.scene";
+                    }
                 }
                 Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);
             }
