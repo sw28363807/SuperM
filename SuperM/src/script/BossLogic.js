@@ -29,7 +29,7 @@ export default class BossLogic extends Laya.Script {
         this.owner.curAttackCount = 0;
         this.owner.directX = Utils.randomSign();
         this.owner.hurtingBoss = false;
-        this.owner.bossNumber = 50;
+        this.owner.bossNumber = 20;
     }
 
     onUpdate() {

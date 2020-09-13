@@ -85,7 +85,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":4,"x":-10,"width":100,"presetID":10,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","label":"MonsterBody","height":51},
+            "props":{"y":4,"x":0,"width":78,"presetID":10,"preset":"laya/pages/prefab/monster/RedWoNiu.prefab","label":"MonsterBody","height":43},
             "nodeParent":1483,
             "label":"BoxCollider(RedWoNiu)",
             "isDirectory":false,

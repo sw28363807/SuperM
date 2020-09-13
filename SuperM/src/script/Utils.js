@@ -442,6 +442,7 @@ export default class Utils extends Laya.Script {
                     GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
                     GameContext.setRoleSpeed(0.01, 0.01);
                     GameContext.gameRoleYaBian = false;
+                    GameContext.curCiBrick = null;
                 }
                 Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
                     black.removeSelf();

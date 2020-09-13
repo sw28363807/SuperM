@@ -53,7 +53,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":0,"width":155,"presetID":4,"preset":"laya/pages/prefab/monster/YouLing.prefab","label":"MonsterBody","isSensor":true,"height":160},
+            "props":{"y":40,"x":56,"width":73,"presetID":4,"preset":"laya/pages/prefab/monster/YouLing.prefab","label":"MonsterBody","isSensor":true,"height":118},
             "nodeParent":1729,
             "label":"BoxCollider(YouLing)",
             "isDirectory":false,

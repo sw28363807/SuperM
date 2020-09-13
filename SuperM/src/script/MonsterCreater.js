@@ -77,6 +77,7 @@ export default class MonsterCreater extends Laya.Script {
     initMonsters() {
         let monstersToMove = [];
         GameContext.monsters = [];
+        let goldToMove = [];
         for (let i = 0; i < this.owner.numChildren; i++) {
             let monster = this.owner.getChildAt(i);
             let script = monster.getComponent(MonsterIdLogic);
@@ -99,7 +100,7 @@ export default class MonsterCreater extends Laya.Script {
                 if (scene != "") {
                     let key = scene+String(x)+String(y);
                     if (GameContext.golds.has(key)) {
-                        monstersToMove.push(monster);
+                        goldToMove.push(monster);
                     }
                 }
             }
@@ -107,6 +108,11 @@ export default class MonsterCreater extends Laya.Script {
 
         for (let index = 0; index < monstersToMove.length; index++) {
             let owner = monstersToMove[index];
+            Utils.removeThis(owner);
+        }
+
+        for (let index = 0; index < goldToMove.length; index++) {
+            let owner = goldToMove[index];
             Utils.removeThis(owner);
         }
     }

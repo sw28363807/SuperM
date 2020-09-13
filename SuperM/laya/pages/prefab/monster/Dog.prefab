@@ -104,7 +104,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":-7,"x":-6.5,"width":80,"presetID":11,"preset":"laya/pages/prefab/monster/Dog.prefab","label":"MonsterBody","height":60},
+            "props":{"y":2,"x":0,"width":66,"presetID":11,"preset":"laya/pages/prefab/monster/Dog.prefab","label":"MonsterBody","height":51},
             "nodeParent":138,
             "label":"BoxCollider(Dog)",
             "isDirectory":false,

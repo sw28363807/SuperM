@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1491,
-    "selecteID":1498,
+    "selecteID":1500,
     "searchKey":"Box,GreenMonster",
     "props":{"zOrder":100,"y":47,"x":35,"width":69,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab","pivotY":47,"pivotX":35,"name":"GreenMonster","isPresetRoot":true,"height":47},
     "nodeParent":-1,
@@ -30,7 +30,7 @@
             "compId":1493,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -47,7 +47,7 @@
             "compId":1494,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -67,7 +67,7 @@
             "compId":1495,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -86,7 +86,7 @@
             "compId":1497,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -105,7 +105,7 @@
             "compId":1498,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -114,7 +114,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":-8,"x":-5.5,"width":80,"presetID":10,"preset":"laya/pages/prefab/monster/GreenMonster.prefab","label":"MonsterBody","height":40},
+            "props":{"y":-8,"x":1,"width":69,"presetID":10,"preset":"laya/pages/prefab/monster/GreenMonster.prefab","label":"MonsterBody","height":40},
             "nodeParent":1491,
             "label":"BoxCollider(GreenMonster)",
             "isDirectory":false,
@@ -123,7 +123,7 @@
             "compId":1500,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         },
         {
@@ -142,7 +142,7 @@
             "compId":1502,
             "child":[
                 ],
-            "$LOCKED":true,
+            "$LOCKED":false,
             "$HIDDEN":false
         }],
     "animations":[
@@ -154,6 +154,6 @@
             "frameRate":24,
             "action":0
         }],
-    "$LOCKED":true,
+    "$LOCKED":false,
     "$HIDDEN":false
 }

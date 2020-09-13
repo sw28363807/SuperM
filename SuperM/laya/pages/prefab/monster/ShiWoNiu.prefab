@@ -70,7 +70,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":-3,"x":-15,"width":100,"presetID":6,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab","label":"MonsterBody","isSensor":true,"height":60},
+            "props":{"y":-3,"x":-4,"width":89,"presetID":6,"preset":"laya/pages/prefab/monster/ShiWoNiu.prefab","label":"MonsterBody","isSensor":true,"height":60},
             "nodeParent":1716,
             "label":"BoxCollider(ShiWoNiu)",
             "isDirectory":false,
