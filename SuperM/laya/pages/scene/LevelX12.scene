@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":86,
+    "selecteID":1835,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1835,
+    "maxID":1836,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -214,16 +214,17 @@
             "props":{"y":-84,"x":67},
             "nodeParent":2,
             "label":"Box",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":871,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-472,"x":-659,"texture":"other1/blueZ.png"},
+                    "props":{"y":-454,"x":-658,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -234,9 +235,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-189,"x":-659,"texture":"other1/blueZ.png"},
+                    "props":{"y":-175,"x":-658,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -247,9 +249,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":94,"x":-660,"texture":"other1/blueZ.png"},
+                    "props":{"y":105,"x":-658,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -260,9 +263,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-469,"x":-1332,"texture":"other1/blueZ.png"},
+                    "props":{"y":-454,"x":-1330,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -273,9 +277,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-186,"x":-1330,"texture":"other1/blueZ.png"},
+                    "props":{"y":-175,"x":-1330,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -286,9 +291,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":97,"x":-1331,"texture":"other1/blueZ.png"},
+                    "props":{"y":105,"x":-1330,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -299,9 +305,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":377,"x":-658,"texture":"other1/blueZ.png"},
+                    "props":{"y":384,"x":-658,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -312,9 +319,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":661,"x":-658,"texture":"other1/blueZ.png"},
+                    "props":{"y":664,"x":-658,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -325,9 +333,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":944,"x":-659,"texture":"other1/blueZ.png"},
+                    "props":{"y":947,"x":-658,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -338,9 +347,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":380,"x":-1331,"texture":"other1/blueZ.png"},
+                    "props":{"y":384,"x":-1330,"texture":"other1/blueZ.png"},
                     "nodeParent":871,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -351,6 +361,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":664,"x":-1329,"texture":"other1/blueZ.png"},
@@ -364,6 +375,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":947,"x":-1330,"texture":"other1/blueZ.png"},
@@ -554,16 +566,17 @@
             "props":{"y":-84,"x":2752},
             "nodeParent":2,
             "label":"Box",
-            "isOpen":null,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":885,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-472,"x":-659,"texture":"other1/blueZ.png"},
+                    "props":{"y":-457,"x":-660,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -574,9 +587,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-189,"x":-659,"texture":"other1/blueZ.png"},
+                    "props":{"y":-177,"x":-660,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -587,9 +601,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":94,"x":-660,"texture":"other1/blueZ.png"},
+                    "props":{"y":103,"x":-660,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -600,9 +615,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-469,"x":-1332,"texture":"other1/blueZ.png"},
+                    "props":{"y":-457,"x":-1332,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -613,9 +629,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-186,"x":-1330,"texture":"other1/blueZ.png"},
+                    "props":{"y":-177,"x":-1332,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -626,9 +643,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":97,"x":-1331,"texture":"other1/blueZ.png"},
+                    "props":{"y":103,"x":-1332,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -639,9 +657,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":377,"x":-658,"texture":"other1/blueZ.png"},
+                    "props":{"y":383,"x":-660,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -652,9 +671,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":661,"x":-658,"texture":"other1/blueZ.png"},
+                    "props":{"y":664,"x":-660,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -665,6 +685,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":944,"x":-659,"texture":"other1/blueZ.png"},
@@ -678,9 +699,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":380,"x":-1331,"texture":"other1/blueZ.png"},
+                    "props":{"y":383,"x":-1332,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -691,9 +713,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":664,"x":-1329,"texture":"other1/blueZ.png"},
+                    "props":{"y":664,"x":-1332,"texture":"other1/blueZ.png"},
                     "nodeParent":885,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -704,6 +727,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":947,"x":-1330,"texture":"other1/blueZ.png"},
@@ -4027,6 +4051,23 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1834,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/MonsterCreater.js",
+            "searchKey":"Script,MonsterCreater",
+            "removeAble":true,
+            "props":{"y":0,"x":0},
+            "nodeParent":2,
+            "label":"MonsterCreater",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1835,
             "child":[
                 ]
         }],

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":11137,
+    "selecteID":11092,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":11140,
+    "maxID":11176,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -4921,7 +4921,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":-1025.5,"x":3649,"texture":"other1/xuanfeng.png"},
+            "props":{"y":-1028.5,"x":3649,"texture":"other1/xuanfeng.png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -53657,7 +53657,7 @@
             "selectedBox":4569,
             "selecteID":4570,
             "searchKey":"Box",
-            "props":{"y":-3095,"x":14898,"presetID":1,"preset":"laya/pages/prefab/monster/BeKe.prefab"},
+            "props":{"y":-3080,"x":14898,"presetID":1,"preset":"laya/pages/prefab/monster/BeKe.prefab"},
             "nodeParent":2,
             "maxID":4572,
             "label":"BeKe",
@@ -53862,7 +53862,7 @@
             "type":"Animation",
             "selectedBox":1536,
             "searchKey":"Animation",
-            "props":{"y":-4900,"x":4714.5,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "props":{"y":-4922,"x":4624.5,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
             "nodeParent":2,
             "maxID":1537,
             "label":"QiPao",
@@ -54442,6 +54442,240 @@
             "compId":11139,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":-4878,"x":4810,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11158,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":-1415,"x":3634.5,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11160,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":-1364,"x":3821,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11161,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":88,"x":9904.5,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11164,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":120,"x":10068.5,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11166,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":-2968,"x":8943,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11168,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":-2926.5,"x":9091,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11170,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":-2976.5,"x":13509,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11172,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":1536,
+            "searchKey":"Animation",
+            "props":{"y":-2956,"x":13692,"presetID":1,"preset":"laya/pages/prefab/other/QiPao.prefab"},
+            "nodeParent":2,
+            "maxID":1537,
+            "label":"QiPao",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":11174,
+            "child":[
+                ],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
         }],
     "animations":[
         {

@@ -23,14 +23,15 @@ export default class BigRedFishLogic extends Laya.Script {
         this.owner.startPointX = this.owner.x;
         this.owner.startPointY = this.owner.y - this.owner.height/2;
         this.owner.finalStartPointY = this.owner.startPointY + GameContext.DeadWaterY;
-        this.owner.moveSpeedX = 6;
-        this.owner.jumpSpeedX = 5;
-        this.owner.jumpSpeedY = 20;
+        this.owner.moveSpeedX = 11;
+        this.owner.jumpSpeedX = 7;
+        this.owner.jumpSpeedY = 31;
+        this.owner.curAni = "";
 
-        this.owner.state = 1; // 1追击 2跳跃 3 等待模式
+        this.owner.state = 1; // 1追击 2跳跃 3 等待模式 4 露头
 
         this.owner.idleCount = 0;
-        this.owner.idleCountMax = 100;
+        this.owner.idleCountMax = 300;
 
         // this.owner.attackTickCount = 0;
 
@@ -43,7 +44,6 @@ export default class BigRedFishLogic extends Laya.Script {
 
     setSpeed(x, y) {
         this.owner.rigidBody.setVelocity({x: x, y: y});
-        this.owner.renderAni.scaleX = Utils.getSign(x) * Math.abs(this.owner.renderAni.scaleX);
     }
 
     setSpeedX(x) {
@@ -64,11 +64,11 @@ export default class BigRedFishLogic extends Laya.Script {
         return Utils.getDirect(GameContext.role.x,  GameContext.role.y, this.owner.x, this.owner.y);
     }
 
-    jumpToRole() {
+    jumpToRole(jumpX, jumpY) {
         this.owner.rigidBody.gravityScale = 5;
         let direct = this.getDirectWithRole();
-        this.owner.renderAni.scaleX = Utils.getSign(direct.x) * Math.abs(this.owner.renderAni.scaleX);
-        this.setSpeed(direct.x * this.owner.jumpSpeedX,  direct.y * this.owner.jumpSpeedY);
+        let sign = Utils.getSign(direct.x);
+        this.setSpeed(sign * jumpX, - jumpY);
     }
 
     setFishPosition(x, y) {
@@ -84,17 +84,45 @@ export default class BigRedFishLogic extends Laya.Script {
     onUpdate() {
         this.owner.finalStartPointY = this.owner.startPointY + GameContext.DeadWaterY;
         if (this.owner.state == 1) {
+            if ( this.owner.curAni != "ani1") {
+                this.owner.renderAni.play(0, true, "ani1");
+                this.owner.curAni = "ani1";
+            }
             let distanceWithRole = this.getDistanceWithRoleX();
             let direct = this.getDirectWithRole();
             this.owner.renderAni.rotation = 0;
-            if (distanceWithRole > 200) {
+            if (distanceWithRole < 500) {
+                // let dx = Utils.getSign(direct.x);
+                // this.setSpeed(dx * this.owner.moveSpeedX, 0);
+                this.owner.state = 4;
+            } else {
+                // this.owner.state = 2;
+                // this.jumpToRole();
                 let dx = Utils.getSign(direct.x);
                 this.setSpeed(dx * this.owner.moveSpeedX, 0);
-                this.setFishPositionY(this.owner.finalStartPointY);
-            } else {
-                this.owner.state = 2;
-                this.jumpToRole();
             }
+            this.owner.renderAni.scaleX = Utils.getSign(GameContext.role.x - this.owner.x) * Math.abs(this.owner.renderAni.scaleX);
+            this.setFishPositionY(this.owner.finalStartPointY);
+        } else if (this.owner.state == 4) {
+            if ( this.owner.curAni != "ani2") {
+                this.owner.renderAni.play(0, false, "ani2");
+                this.owner.curAni = "ani2";
+            }
+            this.setSpeed(0, 0);
+            this.setFishPositionY(this.owner.finalStartPointY);
+            this.owner.state = -1;
+            Laya.timer.once(700, this, function() {
+                this.owner.state = 2;
+                let distanceWithRole = this.getDistanceWithRoleX();
+                let jumpX = this.owner.jumpSpeedX;
+                let jumpY = this.owner.jumpSpeedY;
+                if (distanceWithRole < 200) {
+                    jumpY = jumpY * 1.3;
+                    jumpX = jumpX * 0.5;
+                }
+                this.jumpToRole(jumpX, jumpY);
+                this.owner.renderAni.scaleX = Utils.getSign(GameContext.role.x - this.owner.x) * Math.abs(this.owner.renderAni.scaleX);
+            });
         } else if (this.owner.state == 2) {
             let linearVelocity = this.owner.rigidBody.linearVelocity;
             if (linearVelocity.y < 0) {
@@ -107,19 +135,22 @@ export default class BigRedFishLogic extends Laya.Script {
                 this.owner.rigidBody.gravityScale = 0;
                 this.setFishPositionY(this.owner.finalStartPointY);
                 this.setSpeed(0, 0);
-                let direct = this.getDirectWithRole();
-                this.owner.renderAni.scaleX = Utils.getSign(direct.x) * Math.abs(this.owner.renderAni.scaleX);
                 this.owner.renderAni.rotation = 0;
             }
         } else if (this.owner.state == 3) {
+            if ( this.owner.curAni != "ani1") {
+                this.owner.renderAni.play(0, true, "ani1");
+                this.owner.curAni = "ani1";
+            }
             this.owner.idleCount++;
-            if (this.owner.idleCount >= this.owner.idleCountMax) {
+            let roleX = GameContext.role.x;
+            let x = this.owner.x;
+            if (this.owner.idleCount >= this.owner.idleCountMax || (Math.abs(roleX - x) > 1000)) {
                 this.owner.state = 1;
                 this.owner.idleCount = 0;
                 this.owner.renderAni.rotation = 0;
             }
             this.setFishPositionY(this.owner.finalStartPointY);
         }
-        Utils.tryRemoveThis(this.owner);
     }
 }

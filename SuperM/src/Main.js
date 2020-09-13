@@ -1,5 +1,6 @@
 ﻿import GameConfig from "./GameConfig";
 import GameContext from "./GameContext";
+import LoadingLogic from "./script/LoadingLogic";
 class Main {
 	constructor() {
 		//根据IDE设置初始化引擎		
@@ -11,6 +12,7 @@ class Main {
 		Laya.stage.screenMode = GameConfig.screenMode;
 		Laya.stage.alignV = GameConfig.alignV;
 		Laya.stage.alignH = GameConfig.alignH;
+		// Laya.stage.frameRate = Laya.Stage.FRAME_SLOW;
 		//兼容微信不支持加载scene后缀场景
 		Laya.URL.exportSceneToJson = GameConfig.exportSceneToJson;
 
@@ -26,10 +28,16 @@ class Main {
 					Laya.SoundManager.stopMusic();
 					Laya.SoundManager.playMusic(GameContext.curBgm);
 				}
+				if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
+					Laya.SoundManager.playSound("other1/bgm41.mp3", 0);
+				}
 			});
 		} else {
 			Laya.loader.load(GameContext.curBgm, Laya.Handler.create(this, function (data) {
 				Laya.SoundManager.playMusic(GameContext.curBgm);
+				if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
+					Laya.SoundManager.playSound("other1/bgm41.mp3", 0);
+				}
 			}), null, Laya.Loader.SOUND);
 		}
 		if (Laya.Browser.onMiniGame) {

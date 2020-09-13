@@ -15,6 +15,9 @@ export default class LittleGameScene1Logic extends Laya.Script {
             ani.visible = false;
         }
 
+        this.owner.winSpr = this.owner.getChildByName("win");
+        this.owner.winSpr.visible = false;
+
         this.points = [];
         this.beizis = [];
         for (let index = 0; index < 3; index++) {
@@ -36,6 +39,7 @@ export default class LittleGameScene1Logic extends Laya.Script {
                 } else {
                     return;
                 }
+                this.owner.winSpr.visible = true;
                 this.open(index, Laya.Handler.create(this, function() {
                     let beizi =  this.beizis[index];
                     let ani = beizi.getChildByName("qingzhu");

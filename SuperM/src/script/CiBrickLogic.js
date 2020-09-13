@@ -51,8 +51,8 @@ export default class CiBrickLogic extends Laya.Script {
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
         this.owner.upPoint = {x: this.owner.x, y: this.owner.y - this.owner.upDistance};
         this.owner.downPoint = {x: this.owner.x, y: this.owner.y + this.owner.downDistance};
-        this.owner.outSpeed = 7;
-        this.owner.inSpeed = 4;
+        this.owner.outSpeed = 16;
+        this.owner.inSpeed = 2;
         this.owner.moveType = 1; //1 向上 2 向下 3 上下都有 4 不动
         if (this.owner.upDistance != 0 && this.owner.downDistance != 0) {
             this.owner.moveType = 3;
@@ -63,7 +63,8 @@ export default class CiBrickLogic extends Laya.Script {
         } else {
             this.owner.moveType = 4;
         }
-        this.owner.state = 1;   //1 休息状态 2 攻击 3 回收状态
+        this.owner.state = 1;   //1 休息状态 2 攻击 3 回收状态 4 停留阶段
+        this.owner.toState = 0; 
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.idleCount = 0;
         // this.owner.lastDirect = 1; //1 向上 2 向下
@@ -81,41 +82,41 @@ export default class CiBrickLogic extends Laya.Script {
         }
         if (self.label == "CiBrickSensor") {
             if (other.label == "RoleBody" || other.label == "RoleHead" || other.label == "RoleFoot") {
-                if (this.owner.state == 2) {
-                    this.owner.state = 3;
-                }
                 if (GameContext.curCiBrick) {
                     return;
                 }
                 GameContext.curCiBrick = this.owner;
+                let lastRoleBodyState = GameContext.gameRoleBodyState;
                 Utils.hurtRole(this.owner);
                 let owner = this.owner;
-                Laya.timer.once(500, this, function() {
-                    if (GameContext.gameRoleNumber > 0) {
-                        Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
-                            let black = prefabDef.create();
-                            Laya.stage.addChild(black);
-                            black.x = 0;   
-                            black.y = 0;
-                            black.zOrder = 9999999;
-                            black.alpha = 0;
-                            Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
-                                if (owner) {
-                                    GameContext.curCiBrick = null;
-                                    if (owner.customResetX != -99999999 && owner.customResetY != -99999999) {
-                                        GameContext.setRolePosition(owner.customResetX, owner.customResetY);
-                                    } else {
-                                        GameContext.setRolePosition(owner.x -150, owner.y);
+                if (lastRoleBodyState == 1) {
+                    Laya.timer.once(500, this, function() {
+                        if (GameContext.gameRoleNumber > 0) {
+                            Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+                                let black = prefabDef.create();
+                                Laya.stage.addChild(black);
+                                black.x = 0;   
+                                black.y = 0;
+                                black.zOrder = 9999999;
+                                black.alpha = 0;
+                                Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
+                                    if (owner) {
+                                        GameContext.curCiBrick = null;
+                                        if (owner.customResetX != -99999999 && owner.customResetY != -99999999) {
+                                            GameContext.setRolePosition(owner.customResetX, owner.customResetY);
+                                        } else {
+                                            GameContext.setRolePosition(owner.x -150, owner.y);
+                                        }
+                                        Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
+                                            black.removeSelf();
+                                            black.destroy();
+                                        }));
                                     }
-                                    Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
-                                        black.removeSelf();
-                                        black.destroy();
-                                    }));
-                                }
+                                }));
                             }));
-                        }));
-                    }
-                });
+                        }
+                    });
+                }
             }
         }
     }
@@ -140,18 +141,31 @@ export default class CiBrickLogic extends Laya.Script {
         }
     }
 
+
+    processWait() {
+        this.owner.idleCount++;
+        if (this.owner.idleCount >= 150) {
+            this.owner.state = 3;
+            this.owner.idleCount = 0;
+        }
+        this.setYSpeed(0);
+    }
     processAttack() {
         let body = this.owner.rigidBody.getBody();
         let pos = body.GetPosition();
         if (this.owner.curDirect == 1) {
             if (this.owner.y <= this.owner.upPoint.y) {
-                this.owner.state = 3;
+                this.owner.state = 4;
+                this.owner.idleCount = 0;
                 body.SetPositionXY(pos.x, this.owner.upPoint.y/50);
+                this.setYSpeed(0);
             }
         } else if (this.owner.curDirect == 2) {
             if (this.owner.y >= this.owner.downPoint.y) {
-                this.owner.state = 3;
+                this.owner.state = 4;
+                this.owner.idleCount = 0;
                 body.SetPositionXY(pos.x, this.owner.downPoint.y/50);
+                this.setYSpeed(0);
             }
         }
     }
@@ -184,6 +198,8 @@ export default class CiBrickLogic extends Laya.Script {
             this.processAttack();
         } else if (this.owner.state == 3) {
             this.processShouQi();
+        } else if (this.owner.state == 4) {
+            this.processWait();
         }
     }
     

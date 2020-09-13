@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":9344,
+    "selecteID":9346,
     "searchKey":"Scene,gameScene",
     "props":{"width":1336,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -12431,149 +12431,6 @@
             "selectedBox":1491,
             "selecteID":1500,
             "searchKey":"Box",
-            "props":{"y":-70,"x":714,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-            "nodeParent":2,
-            "maxID":1503,
-            "label":"GreenMonster",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8569,
-            "child":[
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8569,
-                    "label":"RigidBody(GreenMonster)",
-                    "isDirectory":false,
-                    "isClose":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1493,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8569,
-                    "label":"render",
-                    "isOpen":null,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1494,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/AILeftOrRight.js",
-                    "searchKey":"Script,AILeftOrRight",
-                    "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8569,
-                    "label":"AILeftOrRight",
-                    "isDirectory":false,
-                    "isClose":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1495,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterLogic.js",
-                    "searchKey":"Script,MonsterLogic",
-                    "removeAble":true,
-                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8569,
-                    "label":"MonsterLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1497,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"CircleCollider",
-                    "switchAble":true,
-                    "searchKey":"CircleCollider",
-                    "removeAble":true,
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8569,
-                    "label":"CircleCollider(GreenMonster)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1498,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8569,
-                    "label":"BoxCollider(GreenMonster)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1500,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterIdLogic.js",
-                    "searchKey":"Script,MonsterIdLogic",
-                    "removeAble":true,
-                    "props":{"presetID":12,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8569,
-                    "label":"MonsterIdLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":1502,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":1491,
-            "selecteID":1500,
-            "searchKey":"Box",
             "props":{"y":-70,"x":934,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
             "nodeParent":2,
             "maxID":1503,
@@ -12698,149 +12555,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":8577,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":1491,
-            "selecteID":1500,
-            "searchKey":"Box",
-            "props":{"y":-66,"x":503,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-            "nodeParent":2,
-            "maxID":1503,
-            "label":"GreenMonster",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8578,
-            "child":[
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8578,
-                    "label":"RigidBody(GreenMonster)",
-                    "isDirectory":false,
-                    "isClose":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8579,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8578,
-                    "label":"render",
-                    "isOpen":null,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8580,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/AILeftOrRight.js",
-                    "searchKey":"Script,AILeftOrRight",
-                    "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8578,
-                    "label":"AILeftOrRight",
-                    "isDirectory":false,
-                    "isClose":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8581,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterLogic.js",
-                    "searchKey":"Script,MonsterLogic",
-                    "removeAble":true,
-                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8578,
-                    "label":"MonsterLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8582,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"CircleCollider",
-                    "switchAble":true,
-                    "searchKey":"CircleCollider",
-                    "removeAble":true,
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8578,
-                    "label":"CircleCollider(GreenMonster)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8583,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8578,
-                    "label":"BoxCollider(GreenMonster)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8584,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterIdLogic.js",
-                    "searchKey":"Script,MonsterIdLogic",
-                    "removeAble":true,
-                    "props":{"presetID":12,"preset":"laya/pages/prefab/monster/GreenMonster.prefab"},
-                    "nodeParent":8578,
-                    "label":"MonsterIdLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8585,
                     "child":[
                         ]
                 }],
@@ -15603,7 +15317,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"zOrder":9,"y":616,"x":12171,"texture":"other/shuiguan2.png","scaleY":0.6,"scaleX":0.6},
+            "props":{"zOrder":9,"y":616,"x":12212,"texture":"other/shuiguan2.png","scaleY":0.6,"scaleX":0.6},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -15782,6 +15496,7 @@
             "compId":8802,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -15799,6 +15514,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -15816,6 +15532,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -15833,6 +15550,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":6,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -15848,6 +15566,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
@@ -15863,6 +15582,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/ShuiGuanLogic.js",
@@ -15881,6 +15601,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -25087,7 +24808,7 @@
             "selectedBox":1673,
             "selecteID":1675,
             "searchKey":"Box",
-            "props":{"y":616,"x":12171,"scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
+            "props":{"y":617,"x":12212,"scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/ShuiguanEnter.prefab"},
             "nodeParent":2,
             "maxID":1681,
             "label":"ShuiguanEnter",
@@ -25222,7 +24943,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation",
-            "props":{"y":556,"x":12228,"presetID":1,"preset":"laya/pages/prefab/other/EnterArrow.prefab"},
+            "props":{"y":559.5,"x":12267,"presetID":1,"preset":"laya/pages/prefab/other/EnterArrow.prefab"},
             "nodeParent":2,
             "label":"EnterArrow",
             "isDirectory":false,

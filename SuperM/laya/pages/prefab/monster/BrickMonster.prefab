@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":5106,
-    "selecteID":5109,
+    "selecteID":5117,
     "searchKey":"Box,BrickMonster",
     "props":{"zOrder":100,"width":120,"scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab","name":"BrickMonster","isPresetRoot":true,"height":80},
     "nodeParent":-1,
@@ -26,7 +26,8 @@
             "hasChild":false,
             "compId":5107,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -34,7 +35,7 @@
             "switchAble":true,
             "searchKey":"RigidBody",
             "removeAble":true,
-            "props":{"presetID":4,"preset":"laya/pages/prefab/monster/BrickMonster.prefab","mask":191,"label":"BrickMonster","gravityScale":9,"category":32,"bullet":true,"allowRotation":false},
+            "props":{"presetID":4,"preset":"laya/pages/prefab/monster/BrickMonster.prefab","mask":191,"label":"BrickMonster","gravityScale":5,"category":32,"allowRotation":false},
             "nodeParent":5106,
             "label":"RigidBody(BrickMonster)",
             "isDirectory":false,
@@ -68,7 +69,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":0,"x":0,"width":120,"presetID":8,"preset":"laya/pages/prefab/monster/BrickMonster.prefab","label":"MonsterBody","height":38,"friction":0},
+            "props":{"y":7,"x":0,"width":120,"presetID":8,"preset":"laya/pages/prefab/monster/BrickMonster.prefab","label":"MonsterBody","height":31,"friction":0},
             "nodeParent":5106,
             "label":"BoxCollider(BrickMonster)",
             "isDirectory":false,
@@ -92,6 +93,7 @@
             "compId":5114,
             "child":[
                 ],
+            "$LOCKED":true,
             "$HIDDEN":false
         },
         {
@@ -100,7 +102,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":37,"x":0,"width":120,"presetID":10,"preset":"laya/pages/prefab/monster/BrickMonster.prefab","label":"MonsterFoot","height":43,"friction":0},
+            "props":{"y":37,"x":0,"width":120,"presetID":10,"preset":"laya/pages/prefab/monster/BrickMonster.prefab","label":"MonsterFoot","height":41,"friction":0},
             "nodeParent":5106,
             "label":"BoxCollider(BrickMonster)",
             "isOpen":false,

@@ -32,6 +32,32 @@
                 {
                     "target":3,
                     "keyframes":{
+                        "y":[
+                            {
+                                "value":30,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":20
+                            },
+                            {
+                                "value":30,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "label":null,
+                                "key":"y",
+                                "index":30
+                            }],
                         "skin":[
                             {
                                 "value":"monster/bigFish (1).png",
@@ -47,7 +73,7 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":5
+                                "index":10
                             },
                             {
                                 "value":"monster/bigFish (3).png",
@@ -55,11 +81,66 @@
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
-                                "index":10
+                                "index":20
+                            },
+                            {
+                                "value":"monster/bigFish (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "label":null,
+                                "key":"skin",
+                                "index":30
                             }]
                     }
                 }],
             "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        },
+        {
+            "nodes":[
+                {
+                    "target":3,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":0,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":-50,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"y",
+                                "index":15
+                            }],
+                        "skin":[
+                            {
+                                "value":"monster/bigFish (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":0
+                            },
+                            {
+                                "value":"monster/bigFish (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":15
+                            }]
+                    }
+                }],
+            "name":"ani2",
             "id":1,
             "frameRate":24,
             "action":0

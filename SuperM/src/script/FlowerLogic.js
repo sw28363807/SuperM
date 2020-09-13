@@ -2,6 +2,7 @@ import GameContext from "../GameContext";
 import Utils from "./Utils";
 import EventMgr from "./EventMgr";
 import Events from "./Events";
+import LoadingLogic from "./LoadingLogic";
 
 export default class FlowerLogic extends Laya.Script {
 
@@ -32,11 +33,15 @@ export default class FlowerLogic extends Laya.Script {
         this.owner.redFlower.visible = this.owner.flowerType == 2;
 
         this.owner.downPos = {x: this.owner.x, y: this.owner.y};
-        this.owner.upPos = {x: this.owner.x, y: this.owner.y - 110 * this.owner.scaleY};
+        if (LoadingLogic.curSceneExt == "scene/Level3_1.scene") {
+            this.owner.upPos = this.owner.downPos;
+        } else {
+            this.owner.upPos = {x: this.owner.x, y: this.owner.y - 110 * this.owner.scaleY};
+        }
         this.owner.canShootBullet = true;
         
         this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
-        Laya.timer.loop(4000, this, this.switchFlowerState);
+        Laya.timer.loop(2000, this, this.switchFlowerState);
         this.owner.shootTickCount = 0;
         this.owner.inGround = false;
         this.owner.outSpeed = -6;
@@ -162,10 +167,10 @@ export default class FlowerLogic extends Laya.Script {
             this.owner.flowerState = 1;
             if (this.owner.flowerType == 2 || this.owner.flowerType == 1) {
                 this.owner.shootTickCount++;
-                if (this.owner.shootTickCount > 60) {
+                if (this.owner.shootTickCount > 20) {
                     let roleGlobalPos = GameContext.role.localToGlobal(new Laya.Point(0, 0));
                     let flowerGlobalPos = this.owner.redFlower.localToGlobal(new Laya.Point(0, 0));
-                    if (Math.abs(roleGlobalPos.x - flowerGlobalPos.x) < 400) {
+                    if (Math.abs(roleGlobalPos.x - flowerGlobalPos.x) < 600) {
                         if (this.owner.canShootBullet == true) {
                             this.owner.canShootBullet = false;
                             this.shootBullet();

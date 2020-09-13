@@ -43,9 +43,14 @@ export default class LiuShaLogic extends Laya.Script {
                 Utils.removeThis(other.owner);   
             }
         } else if (other.label == "MonsterBody" || other.label == "MonsterHead" || other.label == "MonsterFoot") {
-            if (other) {
+            if (other && other.owner && other.owner.name != "Flower" && other.owner.name != "Flower2"
+             && other.owner.name != "Flower_06" && other.owner.name != "Flower2_06") {
                 Utils.createMonsterDropDeadEffect(other.owner);   
             }
+        }
+        if (other && other.owner && (other.owner.name == "Flower" || other.owner.name == "Flower2"
+        || other.owner.name == "Flower_06" || other.owner.name == "Flower2_06") ) {
+            other.owner.zOrder = this.owner.zOrder - 1;
         }
     }
 

@@ -37,7 +37,7 @@ export default class WenhaoLogic extends Laya.Script {
                         let render = this.owner.getChildByName("render");
                         if (render) {
                             render.play(0, true, "ani3");
-                            Laya.timer.once(100, null, function() {
+                            Laya.timer.once(100, this, function() {
                                 if (render && owner) {
                                     render.play(0, true, "ani2");
                                     Utils.createGoldEffect(owner, false);
@@ -79,7 +79,7 @@ export default class WenhaoLogic extends Laya.Script {
         if (this.owner.state == 0 && render) {
             this.owner.state = 1;
             render.play(0, false, "ani3");
-            Laya.timer.once(100, null, function() {
+            Laya.timer.once(100, this, function() {
                 if (render) {
                     render.play(0, true, "ani2");
                 }
@@ -114,5 +114,6 @@ export default class WenhaoLogic extends Laya.Script {
     }
 
     onDisable() {
+        Laya.timer.clearAll(this);
     }
 }

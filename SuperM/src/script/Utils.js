@@ -163,7 +163,7 @@ export default class Utils extends Laya.Script {
             let monsterH = monster.height * monster.scaleY;
             let c1 = myX > monster.x - monsterW/2 - offx - 20;
             let c2 = myX < monster.x + monsterW/2 + offx;
-            let c3 = myY < monster.y;
+            let c3 = myY < monster.y + 10;
             if (c1 && c2 && c3) {
                 return true;
             }
@@ -177,6 +177,21 @@ export default class Utils extends Laya.Script {
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y;
             if (myX > brick.x - offx && myX < brick.x + brick.width * brick.scaleX + offx && myY > brick.y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static roleInFloor2(brick) {
+        if (GameContext.role) {
+            let offx = 10;
+            let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
+            let myY = GameContext.role.y;
+            let c1 = myX > brick.x - offx;
+            let c2 = myX < brick.x + brick.width * brick.scaleX + offx;
+            let c3 = myY > brick.y + brick.height/2 * brick.scaleY;
+            if (c3 && c1 && c2) {
                 return true;
             }
         }
@@ -418,7 +433,7 @@ export default class Utils extends Laya.Script {
         Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
             let black = prefabDef.create();
             Laya.stage.addChild(black);
-            black.x = 0;   
+            black.x = 0;
             black.y = 0;
             black.zOrder = 9999999;
             black.alpha = 0;
@@ -431,6 +446,7 @@ export default class Utils extends Laya.Script {
                 Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
                     black.removeSelf();
                     black.destroy();
+                    GameContext.roleHurting = false;
                 }));
             }));
         }));
@@ -445,6 +461,11 @@ export default class Utils extends Laya.Script {
         }
         if (GameContext.roleHurting) {
             return;
+        }
+        if (other && other.name == "BrickMonster") {
+            if (other.footAni.visible == false) {
+                return;
+            }
         }
         GameContext.roleFlyState = false;
         GameContext.playRoleAni("");
@@ -461,6 +482,7 @@ export default class Utils extends Laya.Script {
         } else {
             GameContext.setRoleSpeed( x * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
         }
+        let lastBodyState = GameContext.bodyState;
         if (GameContext.gameRoleState == 1) {
             GameContext.setRoleState(0);
             GameContext.setBodyState(1);
@@ -479,7 +501,9 @@ export default class Utils extends Laya.Script {
         }
         GameContext.roleHurting = true;
         Laya.timer.once(500, null, function() {
-            GameContext.roleHurting = false;
+            if (lastBodyState != 0) {
+                GameContext.roleHurting = false;
+            }
             GameContext.commandWalk = true;
         });
         GameContext.gameRoleNumber--;
@@ -510,7 +534,24 @@ export default class Utils extends Laya.Script {
             }));
         } else {
             if (other && other.name == "BrickMonster") {
-                Utils.yabianRole();
+                if (other.footAni.visible == true) {
+                    Laya.timer.once(500, this, function() {
+                        if (other) {
+                            other.state = 0;
+                            other.idlePoint.x = other.startPoint.x;
+                            other.idlePoint.y = other.startPoint.y;
+                            let body = other.rigidBody.getBody();
+                            body.SetPositionXY(other.idlePoint.x/50, other.idlePoint.y/50);
+                        }
+                    });
+                    Utils.yabianRole();
+                }
+            }
+            else if (other && (other.name == "CiQiu" || other.name == "BigRedFish")) {
+                Utils.dieResetRole();
+            }
+            else if (lastBodyState == 0) {
+                Utils.dieResetRole();
             }
         }
         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);

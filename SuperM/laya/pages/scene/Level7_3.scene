@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5094,
+    "selecteID":11566,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":11566,
+    "maxID":11572,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -52599,116 +52599,6 @@
         {
             "x":15,
             "type":"Box",
-            "selectedBox":1703,
-            "searchKey":"Box",
-            "props":{"y":-390,"x":8632,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
-            "nodeParent":2,
-            "maxID":1708,
-            "label":"CiBrick1",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":10842,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
-                    "nodeParent":10842,
-                    "label":"spr1",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":10843,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
-                    "nodeParent":10842,
-                    "label":"BoxCollider(CiBrick1)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":10844,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
-                    "nodeParent":10842,
-                    "label":"RigidBody(CiBrick1)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":10845,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
-                    "nodeParent":10842,
-                    "label":"BoxCollider(CiBrick1)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":10846,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/CiBrickLogic.js",
-                    "searchKey":"Script,CiBrickLogic",
-                    "removeAble":true,
-                    "props":{"presetID":6,"preset":"laya/pages/prefab/brick/CiBrick1.prefab","idleCountMax":100,"enabled":false,"downDistance":100},
-                    "nodeParent":10842,
-                    "label":"CiBrickLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":10847,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Box",
             "selectedBox":1537,
             "selecteID":1538,
             "searchKey":"Box",
@@ -64504,6 +64394,116 @@
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1703,
+            "searchKey":"Box",
+            "props":{"y":-748,"x":8780,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
+            "nodeParent":2,
+            "maxID":1708,
+            "label":"CiBrick1",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":11566,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
+                    "nodeParent":11566,
+                    "label":"spr1",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11567,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
+                    "nodeParent":11566,
+                    "label":"BoxCollider(CiBrick1)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11568,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
+                    "nodeParent":11566,
+                    "label":"RigidBody(CiBrick1)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11569,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/CiBrick1.prefab"},
+                    "nodeParent":11566,
+                    "label":"BoxCollider(CiBrick1)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11570,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/CiBrickLogic.js",
+                    "searchKey":"Script,CiBrickLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/brick/CiBrick1.prefab","idleCountMax":100,"enabled":true,"downDistance":800},
+                    "nodeParent":11566,
+                    "label":"CiBrickLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11571,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
             "$HIDDEN":false
         }],
     "animations":[

@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Box",
-    "selectedBox":38,
-    "selecteID":43,
+    "selectedBox":39,
+    "selecteID":61,
     "searchKey":"Box,po4",
     "props":{"zOrder":65599,"y":0,"x":0,"visible":true,"presetID":1,"preset":"laya/pages/prefab/oo/po4.prefab","name":"po4","isPresetRoot":true},
     "nodeParent":-1,
-    "maxID":61,
+    "maxID":62,
     "label":"po4",
     "isOpen":true,
     "isDirectory":true,
@@ -38,16 +38,17 @@
             "props":{"y":265,"x":-48,"texture":"other1/shamo2po (1).png","presetID":3,"preset":"laya/pages/prefab/oo/po4.prefab"},
             "nodeParent":38,
             "label":"Sprite(po4)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":39,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-113,"texture":"other/ground1.png","presetID":7,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-112,"texture":"other/ground1.png","presetID":7,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -59,9 +60,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-226,"texture":"other/ground1.png","presetID":8,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-224,"texture":"other/ground1.png","presetID":8,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -73,9 +75,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-339,"texture":"other/ground1.png","presetID":9,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-336,"texture":"other/ground1.png","presetID":9,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -87,9 +90,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-452,"texture":"other/ground1.png","presetID":10,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-447,"texture":"other/ground1.png","presetID":10,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -101,9 +105,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-565,"texture":"other/ground1.png","presetID":11,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-557,"texture":"other/ground1.png","presetID":11,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -115,9 +120,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-678,"texture":"other/ground1.png","presetID":13,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-668,"texture":"other/ground1.png","presetID":13,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -129,9 +135,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-791,"texture":"other/ground1.png","presetID":14,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-779,"texture":"other/ground1.png","presetID":14,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -143,9 +150,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-904,"texture":"other/ground1.png","presetID":16,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-888,"texture":"other/ground1.png","presetID":16,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -157,9 +165,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-1017,"texture":"other/ground1.png","presetID":17,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-997,"texture":"other/ground1.png","presetID":17,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -171,9 +180,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-1130,"texture":"other/ground1.png","presetID":18,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-1107,"texture":"other/ground1.png","presetID":18,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -185,9 +195,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-1243,"texture":"other/ground1.png","presetID":19,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-1217,"texture":"other/ground1.png","presetID":19,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -199,9 +210,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-1356,"texture":"other/ground1.png","presetID":20,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-1325,"texture":"other/ground1.png","presetID":20,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -213,9 +225,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-1469,"texture":"other/ground1.png","presetID":21,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-1436,"texture":"other/ground1.png","presetID":21,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -227,9 +240,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-1582,"texture":"other/ground1.png","presetID":22,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-1546,"texture":"other/ground1.png","presetID":22,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -241,9 +255,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":159,"x":-1695,"texture":"other/ground1.png","presetID":23,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "props":{"y":159,"x":-1653,"texture":"other/ground1.png","presetID":23,"preset":"laya/pages/prefab/oo/po4.prefab"},
                     "nodeParent":39,
                     "label":"Sprite(po4)",
                     "isOpen":true,
@@ -251,6 +266,21 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":60,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":159,"x":-1763,"texture":"other/ground1.png","presetID":24,"preset":"laya/pages/prefab/oo/po4.prefab"},
+                    "nodeParent":39,
+                    "label":"Sprite(po4)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":61,
                     "child":[
                         ]
                 }]

@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1703,
-    "selecteID":1704,
+    "selecteID":1707,
     "searchKey":"Box,CiBrick1",
     "props":{"y":0,"x":0,"width":120,"scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick1.prefab","name":"CiBrick1","isPresetRoot":true,"height":143},
     "nodeParent":-1,

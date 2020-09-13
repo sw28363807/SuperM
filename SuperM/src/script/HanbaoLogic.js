@@ -2,6 +2,7 @@ import EventMgr from "./EventMgr";
 import Events from "./Events";
 import GameContext from "../GameContext";
 import Utils from "./Utils";
+import LoadingLogic from "./LoadingLogic";
 
 export default class HanbaoLogic extends Laya.Script {
 
@@ -28,10 +29,15 @@ export default class HanbaoLogic extends Laya.Script {
         if (this.owner.finalWenhaoType != -1) {
             this.owner.wenhaoType = this.owner.finalWenhaoType;
         }
-        
         this.speed = 5;
+        if (LoadingLogic.curSceneExt == "scene/Level4_1.scene" || LoadingLogic.curSceneExt == "scene/Level7_1.scene" ||
+         LoadingLogic.curSceneExt == "scene/Level7_2.scene" || LoadingLogic.curSceneExt == "scene/Level7_3.scene" || 
+         LoadingLogic.curSceneExt == "scene/Level8_1.scene" || LoadingLogic.curSceneExt == "scene/Level6_1.scene") {
+            this.speed = 0;
+        }
+        
         if (GameContext.gameRoleBodyState == 0) {
-            this.owner.direct = {x: -1, y: 0};
+            this.owner.direct = {x: 1, y: 0};
         } else {
             this.owner.direct = {x: 0, y: 0};
         }
@@ -75,6 +81,10 @@ export default class HanbaoLogic extends Laya.Script {
         if (other.label == "AITop" || other.label == "AIBottom" || other.label == "AILeft" || other.label == "AIRight") {
             return;
         }
+        if (other.label == "obsDown" || other.label == "obsUp") {
+            return;
+        }
+        
         if (other && other.label == "Hole") {
             this.owner.coll.isSensor = true;
             let owner = this.owner;

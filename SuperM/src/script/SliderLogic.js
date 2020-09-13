@@ -7,13 +7,18 @@ export default class SliderLogic extends Laya.Script {
     }
 
     onStart() {
-        this.owner.slider = this.owner.getChildByName("slider");
-        this.owner.slider.width = 0;
-        this.owner.sliderSpeed = 1;
-        GameContext.flySliderState = 1;
+        if (this.owner) {
+            this.owner.slider = this.owner.getChildByName("slider");
+            this.owner.slider.width = 0;
+            this.owner.sliderSpeed = 1;
+            GameContext.flySliderState = 1; 
+        }
     }
 
     refreshSlider() {
+        if (!this.owner) {
+            return;
+        }
         let cur = GameContext.curFlyPower;
         let max = GameContext.curFlyPowerMax;
         let p = cur/max;

@@ -2,6 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":54,
+    "selecteID":57,
     "searchKey":"Box,Role",
     "props":{"zOrder":65535,"y":0,"x":0,"width":88,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","name":"Role","isPresetRoot":true,"height":112},
     "nodeParent":-1,

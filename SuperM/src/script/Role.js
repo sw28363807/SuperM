@@ -145,7 +145,7 @@ export default class Role extends Laya.Script {
         }
         if (GameContext.roleShuiGuanState == 1) {
             this.shuiguanTime++;
-            if (this.shuiguanTime >= 100 && GameContext.walkDirect && GameContext.walkDirect.y > 0 && GameContext.commandWalk) {
+            if (this.shuiguanTime >= 50 && GameContext.walkDirect && GameContext.walkDirect.y > 0 && GameContext.commandWalk) {
                 EventMgr.getInstance().postEvent(Events.Role_Enter_Shuiguan);
                 GameContext.roleShuiGuanState = 2;
             }
@@ -184,27 +184,30 @@ export default class Role extends Laya.Script {
                 if (GameContext.walkDirect.x != 0) {
                     let linearVelocity = GameContext.getLineSpeed();
                     let speedX =  GameContext.walkDirect.x * GameContext.roleSpeed;
-                    // let speedY =  GameContext.walkDirect.y * GameContext.roleSpeed;
-                    if (GameContext.roleInWater == true) {
-                        GameContext.setRoleMove(GameContext.walkDirect.x * GameContext.roleInWaterSpeed,
-                             GameContext.walkDirect.y * GameContext.roleInWaterSpeed);
-                    } else if (GameContext.roleCommandFly == true) {
+                    if (GameContext.roleCommandFly == true) {
                         GameContext.setRoleMove(GameContext.walkDirect.x * 5, GameContext.walkDirect.x * 5);
                     } else {
                         GameContext.setRoleMove(speedX, linearVelocity.y);
                     }
                 }
-            } else {
-                if (GameContext.roleInWater == true) {
-                    if (GameContext.commandWalk == false) {
-                        GameContext.setRoleMove(0, 2);
-                    }
-                }
             }
-            if (GameContext.roleCommandFly == true) {
-                GameContext.playRoleAni("fly");
-            } else if (GameContext.roleInWater == true) {
+            if (GameContext.roleInWater == true) {
+                let speedX = 0;
+                if (GameContext.walkDirect) {
+                    speedX = GameContext.walkDirect.x;
+                }
+                if (GameContext.roleInWaterJump == false) {
+                    GameContext.setRoleMove(speedX * GameContext.roleInWaterSpeed, 3);  
+                }
                 GameContext.playRoleAni("youyong");
+            } else if ( GameContext.roleCommandFly ==true) {
+                if (GameContext.roleFlyState == true) {
+                    if (GameContext.walkDirect) {
+                        let speed = 7;
+                        GameContext.setRoleMove(speed * GameContext.walkDirect.x, speed * GameContext.walkDirect.y); 
+                    }
+                    GameContext.playRoleAni("fly");
+                }
             } else {
                 let linearVelocity = GameContext.getLineSpeed();
                 if (GameContext.roleInGround) {
@@ -287,7 +290,11 @@ export default class Role extends Laya.Script {
                                 if (Utils.roleInCeil2(other.owner)) {
                                     Utils.footMonster(other);
                                 } else {
-                                    Utils.hurtRole(other.owner);
+                                    if (other.label == "MonsterFoot") {
+                                        if (Utils.roleInFloor2(other.owner)) {
+                                            Utils.hurtRole(other.owner); 
+                                        }
+                                    }
                                 }
                             } else {
                                 if (Utils.roleInCeil(other.owner)) {
@@ -300,7 +307,12 @@ export default class Role extends Laya.Script {
                     }
                 }
         } else if (other.owner && self.label == "RoleBody" && (other.label == "MonsterBody" || other.label == "MonsterFoot") && GameContext.curFootMonster == null) {
-            if (other.owner && other.owner.name == "Flower") {
+            if (other.owner && (other.owner.name == "Flower" || other.owner.name == "BrickMonster" )) {
+                if (other.label == "MonsterFoot") {
+                    if (Utils.roleInFloor2(other.owner)) {
+                        Utils.hurtRole(other.owner); 
+                    }
+                }
             } else {
                 if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
                     Utils.hurtRole(other.owner);
@@ -379,20 +391,16 @@ export default class Role extends Laya.Script {
     }
 
     triggerRoleInWaterJump() {
+        if (GameContext.roleInWaterJump == true) {
+            return;
+        }
+        GameContext.roleInWaterJump = true;
         this.shuiguanTime = 0;
         GameContext.roleShuiGuanState = 0;
-        let xSpeed = 0;
-        if (GameContext.walkDirect && GameContext.commandWalk) {
-            xSpeed = GameContext.walkDirect.x * 7;
-            if (GameContext.gameRoleBodyState == 0) {
-                xSpeed = xSpeed * 0.9;
-            }
-        }
-        let ySpeed = GameContext.roleJumpSpeed;
-        if (GameContext.gameRoleBodyState == 0) {
-            ySpeed = GameContext.roleSmallJumpSpeed;
-        }
-        GameContext.setRoleSpeed(xSpeed, -5);
+        GameContext.setRoleSpeedY(-4);
+        Laya.timer.once(300, this, function() {
+            GameContext.roleInWaterJump = false;
+        });
     }
 
 
@@ -530,10 +538,6 @@ export default class Role extends Laya.Script {
         EventMgr.getInstance().removeEvent(Events.Role_C_Button, this, this.onRoleCButton);
         EventMgr.getInstance().removeEvent(Events.Role_Has_Bullet, this, this.onRoleHasBullet);
         EventMgr.getInstance().removeEvent(Events.Role_Change_Big, this, this.onRoleChangeBig);
-        if (GameContext.roleRigidBody) {
-            GameContext.roleRigidBody.getBody().SetActive(false);
-            GameContext.roleRigidBody.destroy();
-        }
         GameContext.roleRigidBody = null;
         GameContext.role = null;
         this.owner.destroy();

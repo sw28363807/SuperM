@@ -381,6 +381,7 @@ GameContext.roleGravityScale = 1;
 GameContext.roleTempGravityScale = 1;
 GameContext.roleInGround = false;
 GameContext.roleInWater = false;
+GameContext.roleInWaterJump = false;
 GameContext.roleInWaterSpeed = 4;
 GameContext.roleCommandFly = false;
 GameContext.roleFlyState = false;
@@ -459,3 +460,6 @@ GameContext.curBgm = "";
 GameContext.curCiBrick = null;
 
 GameContext.gameRoleYaBian = false;
+
+
+GameContext.golds = new Set();

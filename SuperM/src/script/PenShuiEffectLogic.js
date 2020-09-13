@@ -13,7 +13,7 @@ export default class PenShuiEffectLogic extends Laya.Script {
     }
 
     onStart() {
-        Laya.timer.once(3000, this, function() {
+        Laya.timer.once(500, this, function() {
             Utils.removeThis(this.owner);
         });
     }

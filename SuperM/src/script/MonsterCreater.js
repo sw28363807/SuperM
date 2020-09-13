@@ -3,6 +3,7 @@ import GameContext from "../GameContext";
 import Utils from "./Utils";
 import DoorLogic from "./DoorLogic";
 import LoadingLogic from "./LoadingLogic";
+import GoldLogic from "./GoldLogic";
 
 export default class MonsterCreater extends Laya.Script {
 
@@ -89,6 +90,18 @@ export default class MonsterCreater extends Laya.Script {
                 }
                 GameContext.monsters.push(cell);
                 monstersToMove.push(monster);
+            }
+            let script1 = monster.getComponent(GoldLogic);
+            if (script1 != null && script1 != undefined) {
+                let x = Math.round(monster.x);
+                let y = Math.round(monster.y);
+                let scene = LoadingLogic.curSceneExt;
+                if (scene != "") {
+                    let key = scene+String(x)+String(y);
+                    if (GameContext.golds.has(key)) {
+                        monstersToMove.push(monster);
+                    }
+                }
             }
         }
 

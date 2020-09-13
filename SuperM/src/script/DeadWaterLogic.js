@@ -48,7 +48,7 @@ export default class DeadWaterLogic extends Laya.Script {
               this.owner.upHeight != undefined) {
                 if (this.owner.state == 1) {
                     this.owner.tickCount++;
-                    if (this.owner.tickCount >= 500) {
+                    if (this.owner.tickCount >= 200) {
                         this.owner.tickCount = 0;
                         this.owner.state = 2;
                     }
@@ -89,10 +89,9 @@ export default class DeadWaterLogic extends Laya.Script {
     }
 
     onTriggerEnter(other, self, contact) {
-        if (LoadingLogic.curSceneExt == "scene/Level5_1.scene") {
+        if (LoadingLogic.curSceneExt == "scene/Level5_1.scene" || LoadingLogic.curSceneExt == "scene/Level6_1.scene") {
             if (self.label == "DeadWater") {
                 if (other.label == "RoleHead" || other.label == "RoleFoot" || other.label == "RoleBody" ) {
-    
                     GameContext.triggerGotoHole(this.owner, 100, this.owner.resetPosX);
                 }
             }

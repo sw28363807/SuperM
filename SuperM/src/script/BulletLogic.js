@@ -71,6 +71,9 @@ export default class BulletLogic extends Laya.Script {
             if (other.label == "AITop" || other.label == "AIBottom" || other.label == "AILeft" || other.label == "AIRight") {
                 return;
             }
+            if (other.label == "obsDown" || other.label == "obsUp") {
+                return;
+            }
             let scene = LoadingLogic.curSceneExt;
             if (self.label == "KeBulletFoot") {
                 if (other.label == "Hole") {

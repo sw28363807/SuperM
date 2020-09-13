@@ -2,6 +2,7 @@ import EventMgr from "./EventMgr";
 import Events from "./Events";
 import GameContext from "../GameContext";
 import Utils from "./Utils";
+import LoadingLogic from "./LoadingLogic";
 
 export default class GoldLogic extends Laya.Script {
 
@@ -25,7 +26,12 @@ export default class GoldLogic extends Laya.Script {
                         Laya.SoundManager.playSound("other1/gold.mp3");
                     }), null, Laya.Loader.SOUND);
                 }
-
+                let x = Math.round(this.owner.x);
+                let y = Math.round(this.owner.y);
+                let scene = LoadingLogic.curSceneExt;
+                if (scene != "") {
+                    GameContext.golds.add(scene+String(x)+String(y));     
+                }
                 Utils.removeThis(this.owner);
                 GameContext.gameGoldNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Gold_Number);

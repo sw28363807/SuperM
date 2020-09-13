@@ -71,9 +71,5 @@ export default class YouLingLogic extends Laya.Script {
         if (!this.owner) {
             return;
         }
-        // if (other.label == "RoleFoot") {
-        //     this.owner.aniRender.play(0, true , "ani2");
-        //     Laya.timer.once(500,  this, this.onDisBrick);
-        // }
     }
 }

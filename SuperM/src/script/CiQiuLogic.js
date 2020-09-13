@@ -8,80 +8,26 @@ export default class CiQiuLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.moveSpeed = 9;
-        this.jumpSpeed = 35;
     }
 
     onDisable() {
-        Laya.timer.clear(this, this.onTriggerLookupRole);
-        Laya.timer.clear(this, this.onTriggerAttackRole);
     }
 
     onStart() {
-        this.owner.state = 1; //1 搜索模式 2 攻击模式 3 等待模式
+        this.moveSpeed = 11;
+        this.jumpSpeed = 40;
+        this.owner.state = 1; //1 搜索模式 2 攻击模式 3 等待模式 4 等待模式 5 露头模式
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.rigidBody.gravityScale = 0;
+        this.owner.curAni = "";
 
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
-
-        Laya.timer.loop(3000, this, this.onTriggerLookupRole);
-        Laya.timer.loop(1500, this, this.onTriggerAttackRole);
         this.owner.renderAni.play(0, true, "ani1");
+        this.owner.idleCount = 0;
     }
 
     onTriggerEnter(other, self, contact) {
-        // if (other.label == "Hole") {
-        //     let colls = self.owner.getComponents(Laya.ColliderBase);
-        //     for (let index = 0; index < colls.length; index++) {
-        //         let coll = colls[index];
-        //         coll.isSensor = true;
-        //     }
-        // }
-        // else if (other.label == "Water") {
-        //     let rigidBody = this.owner.getComponent(Laya.RigidBody);
-        //     if (rigidBody.label != "Fish" && rigidBody.label != "ShuiMu") {
-        //         Utils.createMonsterDropDeadEffect(this.owner);
-        //     }
-        // }
-    }
-
-    onTriggerLookupRole() {
-        if (!this.owner) {
-            return;
-        }
-        if (this.owner.state == 1) {
-            this.owner.renderAni.play(0, true, "ani1");
-            let roleX = GameContext.role.x;
-            let x = this.owner.x;
-            let direct = Utils.getSign(roleX - x);
-            this.owner.rigidBody.setVelocity({x: direct * this.moveSpeed, y: 0});
-        }
-    }
-
-    onTriggerAttackRole() {
-        if (!this.owner) {
-            return;
-        }
-        if (this.owner.state == 1) {
-            let roleX = GameContext.role.x;
-            let roleY = GameContext.role.y;
-            let x = this.owner.x;
-            let y = this.owner.y;
-            if (Math.abs(roleX - x) < 300) {
-                this.owner.state = 2;
-                this.owner.rigidBody.gravityScale = 5;
-                let direct = Utils.getDirect(roleX, roleY, x, y);
-                let jspeed = this.jumpSpeed;
-                if (direct.y <  -0.5) {
-                    jspeed = this.jumpSpeed * 0.8;
-                } else {
-                    jspeed = this.jumpSpeed;
-                }
-                this.owner.rigidBody.setVelocity({x: direct.x * 5, y: direct.y * jspeed});
-                this.owner.renderAni.play(0, true, "ani2");
-            }
-        }
     }
 
     onUpdate() {
@@ -89,27 +35,79 @@ export default class CiQiuLogic extends Laya.Script {
             return;
         }
         if (this.owner.state == 1) {
-            let linearVelocity = this.owner.rigidBody.linearVelocity;
-            this.owner.rigidBody.setVelocity({x: linearVelocity.x, y: 0});
-        }
-        else if (this.owner.state == 2) {
-            let linearVelocity = this.owner.rigidBody.linearVelocity;
-            if (linearVelocity.y > 0) {
-                if (this.owner.y > this.owner.startPoint.y) {
-                    this.owner.rigidBody.gravityScale = 0;
-                    this.owner.state = 3;
-                    this.owner.rigidBody.getBody().SetPositionXY(this.owner.x/50, this.owner.startPoint.y/50)
-                    this.owner.rigidBody.setVelocity({x: 0, y: 0});
-                    this.owner.renderAni.play(0, true, "ani1");
-                    Laya.timer.once(2000, this, function() {
-                        if (!this.owner) {
-                            return;
-                        }
-                        this.owner.state = 1;
-                    });
-                }
+            if (this.owner.curAni != "ani1") {
+                this.owner.renderAni.play(0, true, "ani1");
+                this.owner.curAni = "ani1";
             }
+            let roleX = GameContext.role.x;
+            let x = this.owner.x;
+            this.owner.rigidBody.gravityScale = 0;
+            this.owner.rigidBody.getBody().SetPositionXY(x/50, this.owner.startPoint.y/50);
+            if (Math.abs(roleX - x) < 500) {
+                this.owner.state = 5;
+            } else {
+                let direct = Utils.getSign(roleX - x);
+                this.owner.rigidBody.setVelocity({x: direct * this.moveSpeed, y: 0});
+            }
+        } else if (this.owner.state == 5) {
+            if (this.owner.curAni != "ani3") {
+                this.owner.renderAni.play(0, false, "ani3");
+                this.owner.curAni = "ani3";
+            }
+            let x = this.owner.x;
+            this.owner.rigidBody.setVelocity({x: 0, y: 0});
+            this.owner.rigidBody.getBody().SetPositionXY(x/50, this.owner.startPoint.y/50);
+            this.owner.idleCount++;
+            if (this.owner.idleCount > 100) {
+                this.owner.idleCount = 0;
+                this.owner.state = 2;
+            }
+        } else if (this.owner.state == 2) {
+            if (this.owner.curAni != "ani2") {
+                this.owner.renderAni.play(0, true, "ani2");
+                this.owner.curAni = "ani2";
+            }
+            let roleX = GameContext.role.x;
+            let roleY = GameContext.role.y;
+            let x = this.owner.x;
+            let y = this.owner.y;
+            this.owner.rigidBody.gravityScale = 5;
+            let direct = Utils.getDirect(roleX, roleY, x, y);
+            let speedY = this.jumpSpeed;
+            let speedX = 7;
+            if (Math.abs(roleX - x) < 150) {
+                speedY = this.jumpSpeed * 0.8;
+                speedX = speedX * 0.4;
+            }
+            else if (Math.abs(roleX - x) < 300) {
+                speedY = this.jumpSpeed * 0.9;
+                speedX = speedX * 0.6;
+            }
+            this.owner.rigidBody.setVelocity({x: Utils.getSign(direct.x) * speedX, y:  -speedY});
+            this.owner.state = 3;
+        } else if (this.owner.state == 3) {
+            let x = this.owner.x;
+            let y = this.owner.y;
+            if (y > this.owner.startPoint.y) {
+                this.owner.rigidBody.gravityScale = 0;
+                this.owner.rigidBody.setVelocity({x: 0, y: 0});
+                this.owner.rigidBody.getBody().SetPositionXY(x/50, this.owner.startPoint.y/50);
+                this.owner.louTou = false;
+                this.owner.state = 4;
+            }
+        } else if (this.owner.state == 4) {
+            let roleX = GameContext.role.x;
+            let x = this.owner.x;
+            if (this.owner.curAni != "ani1") {
+                this.owner.renderAni.play(0, true, "ani1");
+                this.owner.curAni = "ani1";
+            }
+            this.owner.idleCount++;
+            if (this.owner.idleCount > 300 || (Math.abs(roleX - x) > 1000)) {
+                this.owner.idleCount = 0;
+                this.owner.state = 1;
+            }
+            Laya.SoundManager.playSound
         }
-        // Utils.tryRemoveThis(this.owner);
     }
 }

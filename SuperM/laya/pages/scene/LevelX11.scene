@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":1885,
+    "selecteID":1886,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":1886,
+    "maxID":1887,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -3693,6 +3693,23 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1885,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/MonsterCreater.js",
+            "searchKey":"Script,MonsterCreater",
+            "removeAble":true,
+            "props":{},
+            "nodeParent":2,
+            "label":"MonsterCreater",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1886,
             "child":[
                 ]
         }],

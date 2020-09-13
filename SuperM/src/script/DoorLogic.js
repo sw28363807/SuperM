@@ -17,10 +17,11 @@ export default class DoorLogic extends Laya.Script {
     }
     
     onEnable() {
-
+        this.owner.isHasGoto = false;
     }
 
     onStart() {
+        this.owner.inCount = 0;
         let script =  this.owner.getComponent(DoorLogic);
         if (script.goToType) {
             this.owner.goToType = script.goToType;
@@ -98,6 +99,7 @@ export default class DoorLogic extends Laya.Script {
 
     onDisable() {
         this.owner.inDoor = false;
+        this.owner.isHasGoto = false;
     }
 
     onTriggerEnter(other, self, contact) {
@@ -110,19 +112,7 @@ export default class DoorLogic extends Laya.Script {
         if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
             this.owner.inDoor = true;
             if (this.owner.goToType == 1) {
-                let scene = this.getScene();
-                let gotoPoint = this.getSceneGoToPoint();
-                let doorFinalPoint = this.getDoorFinalPoint();
-                if (GameContext.doorCount > 2) {
-                    gotoPoint = doorFinalPoint;
-                    let sign = Utils.randomSign();
-                    if (sign < 0) {
-                        scene = "scene/Level7_3.scene";
-                    } else {
-                        scene = "scene/Level7_2.scene";
-                    }
-                }
-                Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);
+                this.owner.inDoor = true;
             }
         }
     }
@@ -132,13 +122,43 @@ export default class DoorLogic extends Laya.Script {
             return;
         }
         if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
-            // this.owner.inDoor = false;
+            this.owner.inDoor = false;
+            this.owner.inCount = 0;
         }
     }
 
     onUpdate() {
         if (!this.owner) {
             return;
+        }
+        if (this.owner.isHasGoto == true) {
+            return;
+        }
+        if (this.owner.inDoor == true) {
+            if (GameContext.roleInGround == true && GameContext.walkDirect &&
+                GameContext.walkDirect.x == 0 &&
+                 GameContext.walkDirect.y < 0) {
+                this.owner.inCount++;
+                if (this.owner.inCount > 20) {
+                    this.owner.inCount = 0;
+                    let scene = this.getScene();
+                    let gotoPoint = this.getSceneGoToPoint();
+                    let doorFinalPoint = this.getDoorFinalPoint();
+                    if (GameContext.doorCount > 2) {
+                        gotoPoint = doorFinalPoint;
+                        let sign = Utils.randomSign();
+                        if (sign < 0) {
+                            scene = "scene/Level7_3.scene";
+                        } else {
+                            scene = "scene/Level7_2.scene";
+                        }
+                    }
+                    this.owner.isHasGoto = true;
+                    Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);
+                }
+            } else {
+                this.owner.inCount = 0;
+            }
         }
     }
 }
