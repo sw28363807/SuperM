@@ -2,11 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":1820,
-    "selecteID":1851,
+    "selecteID":1855,
     "searchKey":"Box,CiBrick5",
     "props":{"y":0,"x":0,"width":959,"scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/brick/CiBrick5.prefab","name":"CiBrick5","isPresetRoot":true,"height":231},
     "nodeParent":-1,
-    "maxID":1852,
+    "maxID":1856,
     "label":"CiBrick5",
     "isOpen":true,
     "isDirectory":true,
@@ -372,6 +372,66 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1851,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite,spr2",
+            "props":{"y":-111,"x":240,"texture":"other/green.png","presetID":26,"preset":"laya/pages/prefab/brick/CiBrick5.prefab","name":"spr2"},
+            "nodeParent":1820,
+            "label":"spr2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1852,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite,spr2",
+            "props":{"y":-111,"x":720,"texture":"other/green.png","presetID":27,"preset":"laya/pages/prefab/brick/CiBrick5.prefab","name":"spr2"},
+            "nodeParent":1820,
+            "label":"spr2",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1853,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":-110,"x":240,"width":120,"presetID":28,"preset":"laya/pages/prefab/brick/CiBrick5.prefab","label":"Brick","height":80},
+            "nodeParent":1820,
+            "label":"BoxCollider(CiBrick5)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1854,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":-110,"x":719,"width":120,"presetID":29,"preset":"laya/pages/prefab/brick/CiBrick5.prefab","label":"Brick","height":80},
+            "nodeParent":1820,
+            "label":"BoxCollider(CiBrick5)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1855,
             "child":[
                 ]
         }],

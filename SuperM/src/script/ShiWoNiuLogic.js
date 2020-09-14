@@ -81,6 +81,13 @@ export default class ShiWoNiuLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
+        if (Laya.Browser.onMiniGame) {
+            Laya.SoundManager.playSound("other1/posui.mp3");
+        } else {
+            Laya.loader.load("other1/posui.mp3", Laya.Handler.create(this, function (data) {
+                Laya.SoundManager.playSound("other1/posui.mp3");
+            }), null, Laya.Loader.SOUND);
+        }
         this.goDie();
     }
 

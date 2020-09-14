@@ -17,6 +17,13 @@ export default class BulletLogic extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Bullet_Shoot, this, this.onBulletShot);
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.coll = this.owner.getComponent(Laya.ColliderBase);
+        if (Laya.Browser.onMiniGame) {
+            Laya.SoundManager.playSound("other1/zidan.mp3");
+        } else {
+            Laya.loader.load("other1/zidan.mp3", Laya.Handler.create(this, function (data) {
+                Laya.SoundManager.playSound("other1/zidan.mp3");
+            }), null, Laya.Loader.SOUND);
+        }
     }
 
     onDisable() {

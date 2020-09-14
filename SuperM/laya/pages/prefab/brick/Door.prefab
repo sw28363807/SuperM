@@ -35,7 +35,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":67,"x":35,"width":56,"presetID":3,"preset":"laya/pages/prefab/brick/Door.prefab","label":"Door","isSensor":true,"height":69},
+            "props":{"y":0,"x":0,"width":127,"presetID":3,"preset":"laya/pages/prefab/brick/Door.prefab","label":"Door","isSensor":true,"height":139},
             "nodeParent":1733,
             "label":"BoxCollider(Door)",
             "isDirectory":false,

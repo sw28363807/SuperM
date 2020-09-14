@@ -120,8 +120,12 @@ export default class BigRedFishLogic extends Laya.Script {
                     jumpY = jumpY * 1.3;
                     jumpX = jumpX * 0.5;
                 }
-                this.jumpToRole(jumpX, jumpY);
-                this.owner.renderAni.scaleX = Utils.getSign(GameContext.role.x - this.owner.x) * Math.abs(this.owner.renderAni.scaleX);
+                if (GameContext.BigRedFishCanJump == false) {
+                    this.owner.state = 1;
+                } else {
+                    this.jumpToRole(jumpX, jumpY);
+                    this.owner.renderAni.scaleX = Utils.getSign(GameContext.role.x - this.owner.x) * Math.abs(this.owner.renderAni.scaleX);
+                }
             });
         } else if (this.owner.state == 2) {
             let linearVelocity = this.owner.rigidBody.linearVelocity;

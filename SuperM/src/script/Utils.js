@@ -460,6 +460,9 @@ export default class Utils extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
+        if (other && other.name == "PenShuiMonsterEffect") {
+            return;
+        }
         if (GameContext.roleHurting) {
             return;
         }
@@ -477,12 +480,12 @@ export default class Utils extends Laya.Script {
         } else {
             x = GameContext.getRoleFaceup();
         }
-        GameContext.showHurtEffect();
         if (GameContext.roleInWater) {
             GameContext.setRoleSpeed( x * 5, 0);
         } else {
             GameContext.setRoleSpeed( x * GameContext.roleHurtSpeed.x, GameContext.roleHurtSpeed.y);
         }
+        GameContext.showHurtEffect();
         let lastBodyState = GameContext.bodyState;
         if (GameContext.gameRoleState == 1) {
             GameContext.setRoleState(0);
@@ -508,7 +511,7 @@ export default class Utils extends Laya.Script {
             GameContext.commandWalk = true;
         });
         GameContext.gameRoleNumber--;
-        if (GameContext.gameRoleNumber == 0) {
+        if (lastBodyState == 0) {
             GameContext.playRoleAni("die", false);
             GameContext.isDie = true;
             Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
@@ -518,19 +521,21 @@ export default class Utils extends Laya.Script {
                 black.y = 0;
                 black.zOrder = 9999999;
                 black.alpha = 0;
-                Laya.Tween.to(black,{alpha: 1}, 3000, null, Laya.Handler.create(null, function(){
-                    black.removeSelf();
-                    black.destroy();
-                    GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
-                    EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
-                    if (LoadingLogic.curSceneExt != "") {
-                        if (LoadingLogic.curScene == "scene/LevelBoss.scene") {
-                            LoadingLogic.loadScene("scene/Level1_1.scene");
-                        } else {
-                            LoadingLogic.loadScene(LoadingLogic.curSceneExt);
-                        }
+                Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
+                    if (GameContext.resetRolePoint) {
+                        GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
+                        GameContext.setRoleSpeed(0.01, 0.01);
+                        GameContext.gameRoleYaBian = false;
+                        GameContext.curCiBrick = null;
+                        GameContext.roleHurting = false;
+                        GameContext.isDie = false;
+                        GameContext.playRoleAni("stand", true);
+                        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
                     }
-                    
+                    Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
+                        black.removeSelf();
+                        black.destroy();
+                    }));
                 }));
             }));
         } else {
@@ -554,8 +559,8 @@ export default class Utils extends Laya.Script {
             else if (lastBodyState == 0) {
                 Utils.dieResetRole();
             }
+            EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
         }
-        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
     }
 
     static triggerToRandomDoor(owner, destScene, loadingIndex, gotoPoint) {

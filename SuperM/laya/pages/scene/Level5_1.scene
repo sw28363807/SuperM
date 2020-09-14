@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":9248,
+    "selecteID":9254,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":9253,
+    "maxID":9255,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -243,7 +243,7 @@
             "selectedBox":54,
             "selecteID":115,
             "searchKey":"Box",
-            "props":{"y":388,"x":1560,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":379,"x":969,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -416,6 +416,21 @@
                         ],
                     "$LOCKED":false,
                     "$HIDDEN":false
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":33,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":5094,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9253,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {
@@ -25336,6 +25351,130 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":9252,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1697,
+            "selecteID":1700,
+            "searchKey":"Box",
+            "props":{"y":373,"x":1317.5,"presetID":1,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab"},
+            "nodeParent":2,
+            "maxID":1701,
+            "label":"PenShuiMonster",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":9254,
+            "child":[
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab"},
+                    "nodeParent":9254,
+                    "label":"RigidBody(PenShuiMonster)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":141,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab"},
+                    "nodeParent":9254,
+                    "label":"render",
+                    "isOpen":null,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":142,
+                    "child":[
+                        ],
+                    "$LOCKED":true
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab"},
+                    "nodeParent":9254,
+                    "label":"BoxCollider(PenShuiMonster)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":151,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab"},
+                    "nodeParent":9254,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":152,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/PenShuiMonsterLogic.js",
+                    "searchKey":"Script,PenShuiMonsterLogic",
+                    "removeAble":true,
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab"},
+                    "nodeParent":9254,
+                    "label":"PenShuiMonsterLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1699,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab"},
+                    "nodeParent":9254,
+                    "label":"penEffect",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":1700,
                     "child":[
                         ]
                 }],

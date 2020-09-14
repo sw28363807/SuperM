@@ -38,7 +38,7 @@ export default class DeadWaterLogic extends Laya.Script {
         this.owner.tickCount = 0;
         this.owner.downPosY = this.owner.y;
         this.owner.upPosY = this.owner.y - this.owner.upHeight;
-        this.owner.upSpeed = -0.5;
+        this.owner.upSpeed = -2;
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
     }
 
@@ -84,6 +84,12 @@ export default class DeadWaterLogic extends Laya.Script {
                 GameContext.DeadWaterY = this.owner.y - this.owner.downPosY;
                 if (Math.abs(GameContext.DeadWaterY) < 0.000001) {
                     GameContext.DeadWaterY = 0;
+                }
+                let yy = this.owner.y - this.owner.upPosY;
+                if (Math.abs(yy) < 0.000001) {
+                    GameContext.BigRedFishCanJump = true;
+                } else {
+                    GameContext.BigRedFishCanJump = false;
                 }
         }
     }

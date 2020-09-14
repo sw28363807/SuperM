@@ -154,6 +154,7 @@ export default class DoorLogic extends Laya.Script {
                         }
                     }
                     this.owner.isHasGoto = true;
+                    console.debug(this.owner.doorInitPoint);
                     Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);
                 }
             } else {

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":9051,
+    "selecteID":8119,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":9163,
+    "maxID":9173,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -682,6 +682,21 @@
                         ],
                     "$LOCKED":false,
                     "$HIDDEN":false
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":33,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":5094,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9163,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {
@@ -1266,13 +1281,14 @@
             "nodeParent":2,
             "maxID":61,
             "label":"po6",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7955,
             "child":[
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1289,6 +1305,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1305,6 +1322,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1320,6 +1338,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1335,6 +1354,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1350,6 +1370,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1365,6 +1386,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":9,"preset":"laya/pages/prefab/oo/po6.prefab"},
@@ -1378,6 +1400,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":10,"preset":"laya/pages/prefab/oo/po6.prefab"},
@@ -1399,7 +1422,7 @@
                     "frameRate":24,
                     "action":0
                 }],
-            "$LOCKED":false,
+            "$LOCKED":true,
             "$HIDDEN":false
         },
         {
@@ -1854,7 +1877,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":462,"x":2322,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":466,"x":2322,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -2099,7 +2122,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":462,"x":2405,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":466,"x":2405,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -2273,7 +2296,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":404.5,"x":2489,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":411,"x":2489,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -2377,7 +2400,7 @@
             "selectedBox":5106,
             "selecteID":5120,
             "searchKey":"Box",
-            "props":{"y":404.5,"x":2567,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
+            "props":{"y":411,"x":2567,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
             "nodeParent":2,
             "maxID":5122,
             "label":"BrickMonster",
@@ -2530,7 +2553,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":462,"x":2567,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":466,"x":2567,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -2633,7 +2656,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":462,"x":2651,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":466,"x":2651,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -2811,7 +2834,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":404.5,"x":2735,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":411,"x":2735,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -2915,7 +2938,7 @@
             "selectedBox":5106,
             "selecteID":5120,
             "searchKey":"Box",
-            "props":{"y":404.5,"x":2817,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
+            "props":{"y":411,"x":2817,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
             "nodeParent":2,
             "maxID":5122,
             "label":"BrickMonster",
@@ -3068,7 +3091,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":461,"x":2817,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":466,"x":2817,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -3171,7 +3194,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":462,"x":2900,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":466,"x":2900,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -3888,160 +3911,6 @@
             "selectedBox":5106,
             "selecteID":5120,
             "searchKey":"Box",
-            "props":{"y":570,"x":6092,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-            "nodeParent":2,
-            "maxID":5122,
-            "label":"BrickMonster",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8092,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"render",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8097,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"RigidBody(BrickMonster)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8098,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/BrickMonsterLogic.js",
-                    "searchKey":"Script,BrickMonsterLogic",
-                    "removeAble":true,
-                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"BrickMonsterLogic",
-                    "isDirectory":false,
-                    "isClose":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8099,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"BoxCollider(BrickMonster)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8100,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"presetID":9,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"eye",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8101,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"BoxCollider(BrickMonster)",
-                    "isOpen":false,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8102,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":11,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"foot",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8103,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterIdLogic.js",
-                    "searchKey":"Script,MonsterIdLogic",
-                    "removeAble":true,
-                    "props":{"presetID":12,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8092,
-                    "label":"MonsterIdLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8104,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":5106,
-            "selecteID":5120,
-            "searchKey":"Box",
             "props":{"y":628,"x":6246,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
             "nodeParent":2,
             "maxID":5122,
@@ -4282,160 +4151,6 @@
                             "frameRate":24,
                             "action":0
                         }]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "selectedBox":5106,
-            "selecteID":5120,
-            "searchKey":"Box",
-            "props":{"y":481,"x":7736,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-            "nodeParent":2,
-            "maxID":5122,
-            "label":"BrickMonster",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8119,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"render",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8120,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"RigidBody(BrickMonster)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8121,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/BrickMonsterLogic.js",
-                    "searchKey":"Script,BrickMonsterLogic",
-                    "removeAble":true,
-                    "props":{"presetID":6,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"BrickMonsterLogic",
-                    "isDirectory":false,
-                    "isClose":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8122,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"BoxCollider(BrickMonster)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8123,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"presetID":9,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"eye",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8124,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"BoxCollider(BrickMonster)",
-                    "isOpen":false,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8125,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Animation",
-                    "searchKey":"Animation",
-                    "props":{"presetID":11,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"foot",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8126,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/MonsterIdLogic.js",
-                    "searchKey":"Script,MonsterIdLogic",
-                    "removeAble":true,
-                    "props":{"presetID":12,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
-                    "nodeParent":8119,
-                    "label":"MonsterIdLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8127,
-                    "child":[
-                        ]
                 }],
             "animations":[
                 {
@@ -21789,7 +21504,6 @@
             "compId":9026,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -21805,7 +21519,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -21821,7 +21534,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/GoldLogic.js",
@@ -21865,7 +21577,6 @@
             "compId":9039,
             "child":[
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -21882,7 +21593,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/FlowerLogic.js",
@@ -21900,7 +21610,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -21917,7 +21626,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":3,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -21933,7 +21641,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":4,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -21949,7 +21656,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -21964,7 +21670,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -21981,7 +21686,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -22025,7 +21729,6 @@
             "compId":9042,
             "child":[
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -22042,7 +21745,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/FlowerLogic.js",
@@ -22060,7 +21762,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -22077,7 +21778,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":3,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -22093,7 +21793,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":4,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -22109,7 +21808,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -22124,7 +21822,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -22141,7 +21838,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -22185,7 +21881,6 @@
             "compId":9051,
             "child":[
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -22202,7 +21897,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/FlowerLogic.js",
@@ -22220,7 +21914,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -22237,7 +21930,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":3,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -22253,7 +21945,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":4,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -22269,7 +21960,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":5,"preset":"laya/pages/prefab/monster/Flower.prefab"},
@@ -22284,7 +21974,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -22301,7 +21990,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/MonsterIdLogic.js",
@@ -23208,6 +22896,158 @@
             "compId":9161,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1687,
+            "selecteID":1692,
+            "searchKey":"Box",
+            "props":{"y":623,"x":6902,"presetID":1,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+            "nodeParent":2,
+            "maxID":1699,
+            "label":"Flower",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":9164,
+            "child":[
+                {
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":7,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"RigidBody(Flower)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9165,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/FlowerLogic.js",
+                    "searchKey":"Script,FlowerLogic",
+                    "removeAble":true,
+                    "props":{"presetID":8,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"FlowerLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9166,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":9,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"BoxCollider(Flower)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9167,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"Sprite(Flower)",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9168,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"red",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9169,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"green",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9170,
+                    "child":[
+                        ],
+                    "$HIDDEN":true
+                },
+                {
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":10,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"BoxCollider(Flower)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9171,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/MonsterIdLogic.js",
+                    "searchKey":"Script,MonsterIdLogic",
+                    "removeAble":true,
+                    "props":{"presetID":11,"preset":"laya/pages/prefab/monster/Flower.prefab"},
+                    "nodeParent":9164,
+                    "label":"MonsterIdLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9172,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
         }],
     "animations":[
         {

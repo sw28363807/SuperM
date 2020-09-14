@@ -13,6 +13,9 @@ export default class BrickGoldLogic extends Laya.Script {
         if (!this.owner) {
             return;
         }
+        if (this.owner.hasBroken == true) {
+            return;
+        }
         if (GameContext.brokenBrickTick != 0) {
             return;
         }
@@ -28,7 +31,7 @@ export default class BrickGoldLogic extends Laya.Script {
                     let render = this.owner.getChildByName("render");
                     render.play(0, false, "ani3");
                 }
-                GameContext.brokenBrickTick = 10;
+                GameContext.brokenBrickTick = 5;
             }
         } else if (other && other.label == "KeBullet") {
             if (self) {
@@ -41,6 +44,17 @@ export default class BrickGoldLogic extends Laya.Script {
         if (!this.owner) {
            return; 
         }
+        if (this.owner.hasBroken == true) {
+            return;
+        }
+        this.owner.hasBroken = true;
+        if (Laya.Browser.onMiniGame) {
+            Laya.SoundManager.playSound("other1/posui.mp3");
+        } else {
+            Laya.loader.load("other1/posui.mp3", Laya.Handler.create(this, function (data) {
+                Laya.SoundManager.playSound("other1/posui.mp3");
+            }), null, Laya.Loader.SOUND);
+        }
         Utils.createBrickBrokenEffect(this.owner);
         Utils.createGoldEffect(this.owner);
     }
@@ -50,11 +64,18 @@ export default class BrickGoldLogic extends Laya.Script {
     }
 
     onStart() {
+        this.owner.hasBroken =- false;
         this.owner.isPlayingAni = false;
         this.owner.renderBrick = this.owner.getChildByName("render");
     }
 
     onUpdate() {
+        if (!this.owner) {
+            return;
+        }
+        if (this.owner.hasBroken == true) {
+            return;
+        }
         if (this.owner && GameContext.role && this.owner.renderBrick) {
             let distanceX = Math.abs(GameContext.role.x - this.owner.x);
             let distanceY = Math.abs(GameContext.role.y - this.owner.y);

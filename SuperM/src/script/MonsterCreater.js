@@ -16,7 +16,7 @@ export default class MonsterCreater extends Laya.Script {
     }
 
     onStart() {
-        Laya.timer.loop(1000, this, this.monsterTick);
+        Laya.timer.loop(50, this, this.monsterTick);
         this.initMonsters();
         this.initDoors();
     }

@@ -16,7 +16,7 @@ export default class BeiKe extends Laya.Script {
     }
 
     onStart() {
-        Laya.timer.loop(5000, this, this.onSootBullet);
+        Laya.timer.loop(8000, this, this.onSootBullet);
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.renderAni.play(0, true, "ani1");
     }

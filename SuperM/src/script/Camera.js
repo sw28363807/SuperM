@@ -90,7 +90,7 @@ export default class Camera extends Laya.Script {
         this.standY = 750/2.3 - 660 + this.zeroY;
 
         GameContext.monsterArea = 3000;
-        GameContext.monsterAreaY = 800;
+        GameContext.monsterAreaY = 5000;
         if (LoadingLogic.curSceneExt == "scene/Level3_2.scene") {
             GameContext.monsterArea = 1000;
         }

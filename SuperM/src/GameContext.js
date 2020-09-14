@@ -440,9 +440,10 @@ GameContext.brokenBrickTick = 0;
 
 GameContext.monsters = [];
 GameContext.monsterArea = 3000;
-GameContext.monsterAreaY = 800;
+GameContext.monsterAreaY = 5000;
 
 GameContext.DeadWaterY = 0;
+GameContext.BigRedFishCanJump = false;
 
 GameContext.doors = [];
 GameContext.doorCount = 0;
@@ -450,7 +451,7 @@ GameContext.doorInitPoint = null;
 
 
 GameContext.curFlyPower = 0;
-GameContext.curFlyPowerMax = 200;
+GameContext.curFlyPowerMax = 327;
 GameContext.flySliderState = 1; //1 积蓄 2 释放
 
 GameContext.bossState = 0;

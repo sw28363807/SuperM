@@ -17,7 +17,7 @@ export default class ShiTou extends Laya.Script {
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.owner.state = 1; //1 等待玩家 2 掉落 3 上升 4 休眠 5 等待
         // this.owner.downSpeed = 3;
-        this.owner.upSpeed = -3;
+        this.owner.upSpeed = -1;
         this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
         this.owner.areaX = 200;
         this.owner.spr1 = this.owner.getChildByName("spr1");
@@ -74,6 +74,8 @@ export default class ShiTou extends Laya.Script {
                 this.owner.idleCount = 0;
                 this.owner.state = 3;
             }
+            let body = this.owner.rigidBody.getBody();
+            body.SetPositionXY(this.owner.startPoint.x/50, body.GetPosition().y);
         }
     }
 

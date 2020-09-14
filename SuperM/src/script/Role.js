@@ -274,33 +274,41 @@ export default class Role extends Laya.Script {
         } else if (other.owner && self.label == "RoleFoot" &
             (other.label == "MonsterBody")) {
                 if (self.owner) {
-                    if (GameContext.roleInWater) {
-                        Utils.hurtRole(other.owner);
+                    if (other && other.owner && other.owner.name == "PenShuiMonsterEffect") {
+                        GameContext.setRoleSpeedX(-7);
+                        GameContext.roleHurting = true;
+                        Laya.timer.once(100, this, function() {
+                            GameContext.roleHurting = false;
+                        });
                     } else {
-                        GameContext.roleInGround = true;
-                        GameContext.setRoleMove(0, 0);
-                        GameContext.playRoleAni("stand");
-                        // if (other.owner.name != "CiQiu") {
-
-                        // }
-                        if (other.owner.name == "Flower" ||
-                          other.owner.name == "Fish") {
+                        if (GameContext.roleInWater) {
+                            Utils.hurtRole(other.owner);
                         } else {
-                            if ( other.owner.name == "BrickMonster") {
-                                if (Utils.roleInCeil2(other.owner)) {
-                                    Utils.footMonster(other);
-                                } else {
-                                    if (other.label == "MonsterFoot") {
-                                        if (Utils.roleInFloor2(other.owner)) {
-                                            Utils.hurtRole(other.owner); 
+                            GameContext.roleInGround = true;
+                            GameContext.setRoleMove(0, 0);
+                            GameContext.playRoleAni("stand");
+                            // if (other.owner.name != "CiQiu") {
+    
+                            // }
+                            if (other.owner.name == "Flower" ||
+                              other.owner.name == "Fish") {
+                            } else {
+                                if ( other.owner.name == "BrickMonster") {
+                                    if (Utils.roleInCeil2(other.owner)) {
+                                        Utils.footMonster(other);
+                                    } else {
+                                        if (other.label == "MonsterFoot") {
+                                            if (Utils.roleInFloor2(other.owner)) {
+                                                Utils.hurtRole(other.owner); 
+                                            }
                                         }
                                     }
-                                }
-                            } else {
-                                if (Utils.roleInCeil(other.owner)) {
-                                    Utils.footMonster(other);
                                 } else {
-                                    Utils.hurtRole(other.owner);
+                                    if (Utils.roleInCeil(other.owner)) {
+                                        Utils.footMonster(other);
+                                    } else {
+                                        Utils.hurtRole(other.owner);
+                                    }
                                 }
                             }
                         }
@@ -310,11 +318,17 @@ export default class Role extends Laya.Script {
             if (other.owner && (other.owner.name == "Flower" || other.owner.name == "BrickMonster" )) {
                 if (other.label == "MonsterFoot") {
                     if (Utils.roleInFloor2(other.owner)) {
-                        Utils.hurtRole(other.owner); 
+                        Utils.hurtRole(other.owner);
                     }
                 }
             } else {
-                if (self.owner.y + self.owner.height * self.owner.scaleY >= other.owner.y - 10) {
+                if (other && other.owner && other.owner.name == "PenShuiMonsterEffect") {
+                    GameContext.setRoleSpeedX(-7);
+                    GameContext.roleHurting = true;
+                    Laya.timer.once(100, this, function() {
+                        GameContext.roleHurting = false;
+                    });
+                } else {
                     Utils.hurtRole(other.owner);
                 }
             }

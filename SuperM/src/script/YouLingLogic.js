@@ -19,7 +19,7 @@ export default class YouLingLogic extends Laya.Script {
         this.owner.curAni = "";
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.maxAreaX = 800;
+        this.owner.maxAreaX = 5000;
         this.owner.lookupAreaX = 400;
         this.owner.speed = 3;
     }

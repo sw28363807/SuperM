@@ -36,8 +36,8 @@ import BeiKe from "./script/BeiKe"
 import DisBrickLogic from "./script/DisBrickLogic"
 import CiQiuLogic from "./script/CiQiuLogic"
 import DeadWaterLogic from "./script/DeadWaterLogic"
-import JumpMonsterLogic from "./script/JumpMonsterLogic"
 import PenShuiMonsterLogic from "./script/PenShuiMonsterLogic"
+import JumpMonsterLogic from "./script/JumpMonsterLogic"
 import BigRedFishLogic from "./script/BigRedFishLogic"
 import DropBrickLogic from "./script/DropBrickLogic"
 import CiBrickLogic from "./script/CiBrickLogic"
@@ -101,8 +101,8 @@ export default class GameConfig {
 		reg("script/DisBrickLogic.js",DisBrickLogic);
 		reg("script/CiQiuLogic.js",CiQiuLogic);
 		reg("script/DeadWaterLogic.js",DeadWaterLogic);
-		reg("script/JumpMonsterLogic.js",JumpMonsterLogic);
 		reg("script/PenShuiMonsterLogic.js",PenShuiMonsterLogic);
+		reg("script/JumpMonsterLogic.js",JumpMonsterLogic);
 		reg("script/BigRedFishLogic.js",BigRedFishLogic);
 		reg("script/DropBrickLogic.js",DropBrickLogic);
 		reg("script/CiBrickLogic.js",CiBrickLogic);

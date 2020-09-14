@@ -19,8 +19,8 @@ export default class LaZhuLogic extends Laya.Script {
         this.owner.curAni = "";
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
-        this.owner.maxAreaX = 800;
-        this.owner.lookupAreaX = 400;
+        this.owner.maxAreaX = 1500;
+        this.owner.lookupAreaX = 1000;
         this.owner.speedX = 2;
     }
 

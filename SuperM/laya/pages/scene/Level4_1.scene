@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":11092,
+    "selecteID":11176,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":11176,
+    "maxID":11179,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -337,6 +337,21 @@
                         ],
                     "$LOCKED":false,
                     "$HIDDEN":false
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":33,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":5094,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11175,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {
@@ -3354,7 +3369,7 @@
             "selectedBox":1525,
             "selecteID":1526,
             "searchKey":"Sprite",
-            "props":{"y":-4294,"x":5477,"scaleX":0.5,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick7.prefab"},
+            "props":{"y":-4294,"x":5476,"scaleX":0.5,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick7.prefab"},
             "nodeParent":2,
             "maxID":1528,
             "label":"WaterBrick7",
@@ -31633,7 +31648,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":-4213.5,"x":5305,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":-4213.5,"x":5309,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -31741,7 +31756,7 @@
             "type":"Box",
             "selectedBox":1602,
             "searchKey":"Box",
-            "props":{"y":-4213.5,"x":5388,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":-4213.5,"x":5392,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -54674,6 +54689,55 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":-5145,"x":15547,"rotation":90,"presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick1.prefab"},
+            "nodeParent":2,
+            "label":"WaterBrick1",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":11176,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/waterbrick/WaterBrick1.prefab"},
+                    "nodeParent":11176,
+                    "label":"BoxCollider(WaterBrick1)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11177,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/waterbrick/WaterBrick1.prefab"},
+                    "nodeParent":11176,
+                    "label":"RigidBody(WaterBrick1)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11178,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
                 }],
             "$HIDDEN":false
         }],
