@@ -530,6 +530,7 @@ export default class Utils extends Laya.Script {
                         GameContext.roleHurting = false;
                         GameContext.isDie = false;
                         GameContext.playRoleAni("stand", true);
+                        GameContext.walkDirect = null;
                         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
                     }
                     Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){

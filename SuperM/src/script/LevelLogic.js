@@ -30,6 +30,12 @@ export default class LevelLogic extends Laya.Script {
         } else {
             this.owner.bgm = "";
         }
+        GameContext.gameSceneType = script.sceneType;
+        GameContext.gameScene = this.owner;
+    }
+
+
+    onStart() {
         if (this.owner.bgm != "") {
             if (Laya.Browser.onMiniGame) {
                 Laya.SoundManager.stopAllSound();
@@ -49,8 +55,6 @@ export default class LevelLogic extends Laya.Script {
                 GameContext.curBgm = this.owner.bgm;
             }
         }
-        GameContext.gameSceneType = script.sceneType;
-        GameContext.gameScene = this.owner;
     }
 
     onDisable() {
