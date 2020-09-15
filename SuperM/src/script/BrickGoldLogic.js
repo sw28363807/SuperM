@@ -52,7 +52,7 @@ export default class BrickGoldLogic extends Laya.Script {
             Laya.SoundManager.playSound("other1/posui.mp3");
         } else {
             Laya.loader.load("other1/posui.mp3", Laya.Handler.create(this, function (data) {
-                Laya.SoundManager.playSound("other1/posui.mp3");
+                let channel = Laya.SoundManager.playSound("other1/posui.mp3");
             }), null, Laya.Loader.SOUND);
         }
         Utils.createBrickBrokenEffect(this.owner);

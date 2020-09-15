@@ -42,6 +42,8 @@ export default class GameJoyStick extends Laya.Script {
                 scene = "scene/Level8_1.scene";
             } else if (input.text == "91") {
                 scene = "scene/LevelBoss.scene";
+            } else if (input.text == "xx") {
+                scene = "scene/LittleGameScene1.scene";
             }
             LoadingLogic.loadScene(scene);
         });

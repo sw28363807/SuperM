@@ -42,7 +42,7 @@ export default class PenShuiMonsterLogic extends Laya.Script {
             let effect = prefabDef.create();
             parent.addChild(effect);
             effect.x = x - effect.width;
-            effect.y = y - effect.height/2;
+            effect.y = y;
             owner.penEffect.visible = true;
             owner.penEffect.play(0, false, "ani1");
         }));

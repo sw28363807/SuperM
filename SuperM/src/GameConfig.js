@@ -33,11 +33,12 @@ import MoveBrickLogic from "./script/MoveBrickLogic"
 import RenderTextureLogic from "./script/RenderTextureLogic"
 import ShuiMuLogic from "./script/ShuiMuLogic"
 import BeiKe from "./script/BeiKe"
+import HanbaoLogic from "./script/HanbaoLogic"
 import DisBrickLogic from "./script/DisBrickLogic"
 import CiQiuLogic from "./script/CiQiuLogic"
 import DeadWaterLogic from "./script/DeadWaterLogic"
-import PenShuiMonsterLogic from "./script/PenShuiMonsterLogic"
 import JumpMonsterLogic from "./script/JumpMonsterLogic"
+import PenShuiMonsterLogic from "./script/PenShuiMonsterLogic"
 import BigRedFishLogic from "./script/BigRedFishLogic"
 import DropBrickLogic from "./script/DropBrickLogic"
 import CiBrickLogic from "./script/CiBrickLogic"
@@ -48,7 +49,6 @@ import ShiWoNiuLogic from "./script/ShiWoNiuLogic"
 import LaZhuLogic from "./script/LaZhuLogic"
 import YouLingLogic from "./script/YouLingLogic"
 import HuoQiuLogic from "./script/HuoQiuLogic"
-import HanbaoLogic from "./script/HanbaoLogic"
 import BossLogic from "./script/BossLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
@@ -98,11 +98,12 @@ export default class GameConfig {
 		reg("script/RenderTextureLogic.js",RenderTextureLogic);
 		reg("script/ShuiMuLogic.js",ShuiMuLogic);
 		reg("script/BeiKe.js",BeiKe);
+		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/DisBrickLogic.js",DisBrickLogic);
 		reg("script/CiQiuLogic.js",CiQiuLogic);
 		reg("script/DeadWaterLogic.js",DeadWaterLogic);
-		reg("script/PenShuiMonsterLogic.js",PenShuiMonsterLogic);
 		reg("script/JumpMonsterLogic.js",JumpMonsterLogic);
+		reg("script/PenShuiMonsterLogic.js",PenShuiMonsterLogic);
 		reg("script/BigRedFishLogic.js",BigRedFishLogic);
 		reg("script/DropBrickLogic.js",DropBrickLogic);
 		reg("script/CiBrickLogic.js",CiBrickLogic);
@@ -113,7 +114,6 @@ export default class GameConfig {
 		reg("script/LaZhuLogic.js",LaZhuLogic);
 		reg("script/YouLingLogic.js",YouLingLogic);
 		reg("script/HuoQiuLogic.js",HuoQiuLogic);
-		reg("script/HanbaoLogic.js",HanbaoLogic);
 		reg("script/BossLogic.js",BossLogic);
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);

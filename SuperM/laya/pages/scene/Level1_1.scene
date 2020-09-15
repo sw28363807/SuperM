@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5236,
+    "selecteID":5157,
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":5239,
+    "maxID":5269,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -61,7 +61,7 @@
                     "$LOCKED":false,
                     "$HIDDEN":false
                 }],
-            "$LOCKED":false,
+            "$LOCKED":true,
             "$HIDDEN":false
         },
         {
@@ -234,7 +234,7 @@
             "compId":369,
             "child":[
                 ],
-            "$LOCKED":false,
+            "$LOCKED":true,
             "$HIDDEN":false
         },
         {
@@ -1170,18 +1170,19 @@
             "props":{"zOrder":2,"y":750,"x":10231,"width":400,"name":"Hole1","height":1000,"bgColor":"#a0fff0"},
             "nodeParent":2,
             "label":"Hole1",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":1650,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"y":-90,"x":16,"width":370,"label":"Hole","isSensor":true,"height":1000},
+                    "props":{"y":-40,"x":16,"width":370,"label":"Hole","isSensor":true,"height":1000},
                     "nodeParent":1650,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -1194,6 +1195,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2327,7 +2329,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":508,"x":4184,"presetID":1,"preset":"laya/pages/prefab/oo/Obs3.prefab"},
@@ -2408,7 +2410,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2427,7 +2428,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -2449,7 +2449,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":446,"x":4522,"presetID":1,"preset":"laya/pages/prefab/oo/Obs4.prefab"},
@@ -2530,7 +2530,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2549,7 +2548,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -2574,7 +2572,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box",
-            "props":{"y":159,"x":4893,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":220,"x":4893,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "label":"BrickGold",
             "isOpen":false,
@@ -2672,7 +2670,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box",
-            "props":{"y":159,"x":4976,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":220,"x":4976,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "label":"BrickGold",
             "isOpen":false,
@@ -2865,7 +2863,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":-192,"x":5341,"presetID":1,"preset":"laya/pages/prefab/oo/Obs5.prefab"},
@@ -2946,7 +2944,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -2965,7 +2962,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -5031,7 +5027,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":-4,"x":7372,"presetID":1,"preset":"laya/pages/prefab/oo/Obs6.prefab"},
@@ -5112,7 +5108,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -5131,7 +5126,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -7754,7 +7748,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":504,"x":9554,"presetID":1,"preset":"laya/pages/prefab/oo/Obs7.prefab"},
@@ -7835,7 +7829,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -7854,7 +7847,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -10441,7 +10433,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":221,"x":11985,"presetID":1,"preset":"laya/pages/prefab/oo/Obs8.prefab"},
@@ -10522,7 +10514,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -10541,7 +10532,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -10713,18 +10703,19 @@
             "props":{"zOrder":2,"y":750,"x":12853,"width":420,"name":"Hole2","height":1000,"bgColor":"#a0fff0"},
             "nodeParent":2,
             "label":"Hole2",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":2241,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"y":-60,"x":17,"width":380,"label":"Hole","isSensor":true,"height":1000},
+                    "props":{"y":-44,"x":17,"width":380,"label":"Hole","isSensor":true,"height":1000},
                     "nodeParent":2241,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -10737,6 +10728,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -10757,7 +10749,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":300.5,"x":12913,"presetID":1,"preset":"laya/pages/prefab/oo/Obs9.prefab"},
@@ -10838,7 +10830,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -10857,7 +10848,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -10879,7 +10869,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":504,"x":13710,"presetID":1,"preset":"laya/pages/prefab/oo/Obs3.prefab"},
@@ -10960,7 +10950,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -10979,7 +10968,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -11145,7 +11133,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":187,"x":13651,"presetID":1,"preset":"laya/pages/prefab/oo/Obs10.prefab"},
@@ -11226,7 +11214,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -11245,7 +11232,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -13252,7 +13238,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":-364,"x":15431,"presetID":1,"preset":"laya/pages/prefab/oo/Obs11.prefab"},
@@ -13333,7 +13319,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -13352,7 +13337,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -13374,7 +13358,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":502,"x":15227,"presetID":1,"preset":"laya/pages/prefab/oo/Obs12.prefab"},
@@ -13459,7 +13443,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -13478,7 +13462,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -13500,7 +13484,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":97.5,"x":15743,"presetID":1,"preset":"laya/pages/prefab/oo/Obs13.prefab"},
@@ -13585,7 +13569,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -13604,7 +13588,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -16199,7 +16183,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":300.5,"x":21006.5,"presetID":1,"preset":"laya/pages/prefab/oo/Obs14.prefab"},
@@ -16284,7 +16268,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -16303,7 +16287,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -18462,7 +18446,7 @@
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"y":-94,"x":14,"width":520,"label":"Hole","isSensor":true,"height":1000},
+                    "props":{"y":-13,"x":14,"width":520,"label":"Hole","isSensor":true,"height":1000},
                     "nodeParent":2727,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -20181,7 +20165,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "searchKey":"Box",
             "props":{"y":22,"x":26192,"presetID":1,"preset":"laya/pages/prefab/oo/Obs6.prefab"},
@@ -20262,7 +20246,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -20281,7 +20264,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -22731,7 +22713,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1635,
             "selecteID":1636,
@@ -22815,7 +22797,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -22834,7 +22815,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -34738,7 +34718,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1687,
             "selecteID":1691,
@@ -34822,7 +34802,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -34841,7 +34820,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/SingleObsLogic.js",
@@ -34872,7 +34850,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -34888,7 +34866,7 @@
             "compId":3811,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -34906,7 +34884,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -34936,7 +34914,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -34952,7 +34930,7 @@
             "compId":3812,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -34970,7 +34948,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -35000,7 +34978,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -35016,7 +34994,7 @@
             "compId":3815,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -35034,7 +35012,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -35064,7 +35042,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -35080,7 +35058,7 @@
             "compId":3818,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -35098,7 +35076,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -35128,7 +35106,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -35144,7 +35122,7 @@
             "compId":3821,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -35162,7 +35140,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -35192,7 +35170,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -35208,7 +35186,7 @@
             "compId":3824,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -35226,7 +35204,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -35256,7 +35234,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -35272,7 +35250,7 @@
             "compId":3827,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -35290,7 +35268,7 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -46076,7 +46054,7 @@
             "selectedBox":54,
             "selecteID":70,
             "searchKey":"Box",
-            "props":{"y":640,"x":758,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":645,"x":879,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -46498,7 +46476,7 @@
             "$HIDDEN":false
         },
         {
-            "x":0,
+            "x":15,
             "type":"Box",
             "selectedBox":1688,
             "selecteID":1690,
@@ -46514,7 +46492,7 @@
             "compId":5236,
             "child":[
                 {
-                    "x":0,
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -46530,7 +46508,7 @@
                         ]
                 },
                 {
-                    "x":0,
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -46544,6 +46522,111 @@
                     "compId":5238,
                     "child":[
                         ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1595,
+            "selecteID":1588,
+            "searchKey":"Box",
+            "props":{"y":510,"x":10015,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1596,
+            "label":"WenhaoBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":5264,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5264,
+                    "label":"BoxCollider(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5265,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5264,
+                    "label":"RigidBody(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5266,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/WenhaoLogic.js",
+                    "searchKey":"Script,WenhaoLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5264,
+                    "label":"WenhaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5267,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "selectedBox":173,
+                    "searchKey":"Animation",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":5264,
+                    "maxID":177,
+                    "label":"render",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5268,
+                    "child":[
+                        ],
+                    "animations":[
+                        {
+                            "nodes":[
+                                ],
+                            "name":"ani1",
+                            "id":1,
+                            "frameRate":24,
+                            "action":0
+                        }],
+                    "$LOCKED":false
                 }],
             "animations":[
                 {

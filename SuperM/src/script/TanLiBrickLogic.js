@@ -13,12 +13,13 @@ export default class TanLiBrickLogic extends Laya.Script {
         if (other && other.label == "RoleFoot" ) {
             GameContext.roleInGround = false;
             let lineSpeed =  GameContext.getLineSpeed();
-            let finalSpeed = lineSpeed.y - 30;
-            if (finalSpeed < -40) {
-                finalSpeed = -40
-            }
+            let finalSpeed = -30;
+            // if (finalSpeed < -40) {
+            //     finalSpeed = -40
+            // }
             GameContext.setRoleSpeed(lineSpeed.x, finalSpeed);
             this.owner.play(0, false, "ani2");
+            Laya.SoundManager.playSound("other1/tanli.mp3");
         }
     }
     

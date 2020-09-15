@@ -466,6 +466,9 @@ export default class Utils extends Laya.Script {
         if (GameContext.roleHurting) {
             return;
         }
+        if (GameContext.roleIsDrop) {
+            return;
+        }
         if (other && other.name == "BrickMonster") {
             if (other.footAni.visible == false) {
                 return;
@@ -514,6 +517,7 @@ export default class Utils extends Laya.Script {
         if (lastBodyState == 0) {
             GameContext.playRoleAni("die", false);
             GameContext.isDie = true;
+            Laya.SoundManager.playSound("other1/siwang.mp3");
             Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
                 let black = prefabDef.create();
                 Laya.stage.addChild(black);
@@ -531,6 +535,7 @@ export default class Utils extends Laya.Script {
                         GameContext.isDie = false;
                         GameContext.playRoleAni("stand", true);
                         GameContext.walkDirect = null;
+                        GameContext.roleIsDrop = false;
                         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
                     }
                     Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
@@ -563,6 +568,57 @@ export default class Utils extends Laya.Script {
             EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
         }
     }
+
+    static triggerInHuoChi(huochi, customX, customY) {
+        if (!huochi) {
+            return;
+        }
+        if (GameContext.bodyState == 0) {
+            Utils.hurtRole(this.owner);
+            return;   
+        }
+        Laya.SoundManager.playSound("other1/siwang.mp3");
+        if (GameContext.gameRoleState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(1);
+        } else if (GameContext.bodyState == 1) {
+            GameContext.setRoleState(0);
+            GameContext.setBodyState(0);
+            GameContext.changeSmallEffect();
+        }
+        if (GameContext.roleShuiGuanState == 1) {
+            GameContext.roleShuiGuanState = 0;
+        }
+        GameContext.gameRoleNumber--;
+        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+        GameContext.roleIsDrop = true;
+        GameContext.roleInGround = true;
+        GameContext.setRoleSpeedX(0.01);
+        Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+            let black = prefabDef.create();
+            Laya.stage.addChild(black);
+            black.x = 0;
+            black.y = 0;
+            black.zOrder = 9999999;
+            black.alpha = 0;
+            Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
+                if (customX != null &&
+                    customX != undefined &&
+                     customY != null &&
+                      customY != undefined) {
+                       GameContext.setRolePosition(customX, customY);
+               } else {
+                   GameContext.setRolePosition(huochi.x - 200, 300);
+               }
+                Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
+                    black.removeSelf();
+                    black.destroy();
+                    GameContext.roleIsDrop = false;
+                }));
+            }));
+        }));
+    }
+
 
     static triggerToRandomDoor(owner, destScene, loadingIndex, gotoPoint) {
         if (GameContext.doorCount >= 9) {

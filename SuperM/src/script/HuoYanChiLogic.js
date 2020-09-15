@@ -1,4 +1,5 @@
 import GameContext from "../GameContext";
+import Utils from "./Utils";
 
 export default class HuoYanChiLogic extends Laya.Script {
 
@@ -41,7 +42,7 @@ export default class HuoYanChiLogic extends Laya.Script {
             GameContext.role.zOrder = this.owner.zOrder - 500;
             GameContext.roleIsDrop = true;
             if (this.owner) {
-                GameContext.triggerInHuoChi(this.owner, this.owner.customX, this.owner.customY);
+                Utils.triggerInHuoChi(this.owner, this.owner.customX, this.owner.customY);
                 GameContext.role.zOrder = this.owner.roleZOrder;
             }
         }

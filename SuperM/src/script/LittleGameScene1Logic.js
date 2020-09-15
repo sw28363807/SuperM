@@ -147,10 +147,13 @@ export default class LittleGameScene1Logic extends Laya.Script {
         let srcX = srcBeizi.x;
         let destX = destBeizi.x;
         Laya.Tween.to(srcBeizi, {x: destX}, this.time, null, Laya.Handler.create(this, function() {
-            srcBeizi.pointIndex = destIndex;
         }));
 
         Laya.Tween.to(destBeizi, {x: srcX}, this.time, null, Laya.Handler.create(this, function() {
+        }));
+
+        Laya.timer.once(this.time + 20, this, function() {
+            srcBeizi.pointIndex = destIndex;
             destBeizi.pointIndex = srcIndex;
             if (this.count < 30) {
                 this.moveBeizi();
@@ -158,7 +161,7 @@ export default class LittleGameScene1Logic extends Laya.Script {
             } else {
                 this.running = false;
             }
-        }));
+        });
     }
 
 

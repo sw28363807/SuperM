@@ -21,11 +21,15 @@ export default class WenhaoLogic extends Laya.Script {
                 }
                 if (this.owner.state == 0) {
                     if (Laya.Browser.onMiniGame) {
-                        Laya.SoundManager.playSound("other1/dingchu.mp3");
-                    } else {
-                        Laya.loader.load("other1/dingchu.mp3", Laya.Handler.create(this, function (data) {
+                        if (this.owner.wenhaoType != 2) {
                             Laya.SoundManager.playSound("other1/dingchu.mp3");
-                        }), null, Laya.Loader.SOUND);
+                        }
+                    } else {
+                        if (this.owner.wenhaoType != 2) {
+                            Laya.loader.load("other1/dingchu.mp3", Laya.Handler.create(this, function (data) {
+                                Laya.SoundManager.playSound("other1/dingchu.mp3");
+                            }), null, Laya.Loader.SOUND);
+                        }
                     }   
                 }
                 if (this.owner.wenhaoType == 1) {
@@ -35,6 +39,7 @@ export default class WenhaoLogic extends Laya.Script {
                         this.owner.state = 1;
                         let owner = this.owner;
                         let render = this.owner.getChildByName("render");
+                        Laya.SoundManager.playSound("other1/gold.mp3");
                         if (render) {
                             render.play(0, true, "ani3");
                             Laya.timer.once(100, this, function() {

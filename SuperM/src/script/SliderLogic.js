@@ -28,20 +28,19 @@ export default class SliderLogic extends Laya.Script {
 
     onUpdate() {
         this.refreshSlider();
-        if (GameContext.flySliderState == 1) {
+        if (GameContext.roleCommandFly == false) {
             GameContext.curFlyPower = GameContext.curFlyPower + this.owner.sliderSpeed;
             if (GameContext.curFlyPower > GameContext.curFlyPowerMax) {
                 GameContext.curFlyPower = GameContext.curFlyPowerMax;
             }
-        } else if (GameContext.flySliderState == 2) {
-            GameContext.curFlyPower = GameContext.curFlyPower - 0.5;
+        } else {
+            GameContext.curFlyPower = GameContext.curFlyPower - 2;
             if (GameContext.curFlyPower <= 0) {
                 GameContext.curFlyPower = 0;
                 GameContext.flySliderState = 1;
                 GameContext.roleCommandFly = false;
             }
         }
-
     }
     
     onEnable() {

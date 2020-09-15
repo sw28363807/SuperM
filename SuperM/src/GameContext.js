@@ -31,6 +31,7 @@ export default class GameContext extends Laya.Script {
             return;
         }
         GameContext.roleIsDrop = true;
+        let lastBodyState = GameContext.bodyState;
         GameContext.setRoleSensorEnabled(true);
         if (GameContext.gameRoleState == 1) {
             GameContext.setRoleState(0);
@@ -43,11 +44,10 @@ export default class GameContext extends Laya.Script {
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
-
-        if (GameContext.role) {
-            GameContext.setRoleSensorEnabled(false);
-            GameContext.setRoleSpeed(0, 0);
-            EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
+        GameContext.gameRoleNumber--;
+        Laya.SoundManager.playSound("other1/siwang.mp3");
+        if (lastBodyState == 0) {
+            GameContext.isDie = true;
             Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
                 let black = prefabDef.create();
                 Laya.stage.addChild(black);
@@ -55,17 +55,50 @@ export default class GameContext extends Laya.Script {
                 black.y = 0;
                 black.zOrder = 9999999;
                 black.alpha = 0;
-                GameContext.roleInGround = true;
-                Laya.Tween.to(black,{alpha: 1}, 300, null, Laya.Handler.create(null, function(){
-                    GameContext.setRolePosition(hole.x + widthOff, height);
-                    Laya.Tween.to(black,{alpha: 0}, 300, null, Laya.Handler.create(null, function(){
+                Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
+                    if (GameContext.resetRolePoint) {
+                        GameContext.setRoleSensorEnabled(false);
+                        GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
+                        GameContext.setRoleSpeed(0.01, 0.01);
+                        GameContext.gameRoleYaBian = false;
+                        GameContext.curCiBrick = null;
+                        GameContext.roleHurting = false;
+                        GameContext.isDie = false;
+                        GameContext.playRoleAni("stand", true);
+                        GameContext.walkDirect = null;
+                        GameContext.roleIsDrop = false;
+                    }
+                    Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
                         black.removeSelf();
                         black.destroy();
-                        GameContext.roleIsDrop = false;
                     }));
                 }));
             }));
+        } else {
+            if (GameContext.role) {
+                EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
+                Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
+                    let black = prefabDef.create();
+                    Laya.stage.addChild(black);
+                    black.x = 0;   
+                    black.y = 0;
+                    black.zOrder = 9999999;
+                    black.alpha = 0;
+                    GameContext.roleInGround = true;
+                    Laya.Tween.to(black,{alpha: 1}, 300, null, Laya.Handler.create(null, function(){
+                        GameContext.setRoleSensorEnabled(false);
+                        GameContext.setRoleSpeed(0, 0);
+                        GameContext.setRolePosition(hole.x + widthOff, height);
+                        Laya.Tween.to(black,{alpha: 0}, 300, null, Laya.Handler.create(null, function(){
+                            black.removeSelf();
+                            black.destroy();
+                            GameContext.roleIsDrop = false;
+                        }));
+                    }));
+                }));
+            }
         }
+        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
     }
 
     static triggerInLiuSha(liusha) {
@@ -86,50 +119,7 @@ export default class GameContext extends Laya.Script {
         GameContext.setRoleSpeedX(0.01);
         GameContext.setRolePosition(liusha.x - 200, 300);
     }
-
-    static triggerInHuoChi(huochi, customX, customY) {
-        if (!huochi) {
-            return;
-        }
-        if (GameContext.gameRoleState == 1) {
-            GameContext.setRoleState(0);
-            GameContext.setBodyState(1);
-        } else if (GameContext.bodyState == 1) {
-            GameContext.setRoleState(0);
-            GameContext.setBodyState(0);
-            GameContext.changeSmallEffect();
-        }
-        if (GameContext.roleShuiGuanState == 1) {
-            GameContext.roleShuiGuanState = 0;
-        }
-        GameContext.roleIsDrop = true;
-        GameContext.roleInGround = true;
-        GameContext.setRoleSpeedX(0.01);
-        Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
-            let black = prefabDef.create();
-            Laya.stage.addChild(black);
-            black.x = 0;
-            black.y = 0;
-            black.zOrder = 9999999;
-            black.alpha = 0;
-            Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
-                if (customX != null &&
-                    customX != undefined &&
-                     customY != null &&
-                      customY != undefined) {
-                       GameContext.setRolePosition(customX, customY);
-               } else {
-                   GameContext.setRolePosition(huochi.x - 200, 300);
-               }
-                Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
-                    black.removeSelf();
-                    black.destroy();
-                    GameContext.roleIsDrop = false;
-                }));
-            }));
-        }));
-    }
-
+    
     static setRoleSpeed(x, y) {
         if (GameContext.roleRigidBody) {
             GameContext.roleRigidBody.setVelocity({x: x, y: y});

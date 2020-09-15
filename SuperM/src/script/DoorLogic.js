@@ -8,8 +8,8 @@ export default class DoorLogic extends Laya.Script {
         super();
         /** @prop {name:goToType, tips:"跳转类型 1 跳转场景 2 场景内跳转", type:Int, default:1}*/
         let goToType = 1;
-        /** @prop {name:sceneStr, tips:"跳转场景字符串", type:String, default:""}*/
-        let sceneStr = "";
+        // /** @prop {name:gotoSceneStr, tips:"跳转场景字符串", type:String, default:""}*/
+        // let gotoSceneStr = "";
         /** @prop {name:doorInitPointStr, tips:"跳转场景的初始化坐标", type:String, default:""}*/
         let doorInitPointStr = "";
         /** @prop {name:doorFinalStr, tips:"最终的结束跳转的场景坐标", type:String, default:""}*/
@@ -30,11 +30,11 @@ export default class DoorLogic extends Laya.Script {
         }
 
         this.owner.sceneArr = [];
-        if (script.sceneStr) {
-            this.owner.sceneStr = script.sceneStr;
-            this.owner.sceneArr = this.owner.sceneStr.split(",");
+        if (script.gotoSceneStr) {
+            this.owner.gotoSceneStr = script.gotoSceneStr;
+            this.owner.sceneArr = this.owner.gotoSceneStr.split(",");
         } else {
-            this.owner.sceneStr = "";
+            this.owner.gotoSceneStr = "";
         }
 
         this.owner.doorInitPoint = [];
@@ -144,7 +144,7 @@ export default class DoorLogic extends Laya.Script {
                     let scene = this.getScene();
                     let gotoPoint = this.getSceneGoToPoint();
                     let doorFinalPoint = this.getDoorFinalPoint();
-                    if (GameContext.doorCount > 2) {
+                    if (GameContext.doorCount > 3) {
                         gotoPoint = doorFinalPoint;
                         let sign = Utils.randomSign();
                         if (sign < 0) {

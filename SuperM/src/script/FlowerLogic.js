@@ -41,7 +41,7 @@ export default class FlowerLogic extends Laya.Script {
         this.owner.canShootBullet = true;
         
         this.owner.rigidBody.getBody().SetPositionXY(this.owner.downPos.x/50, this.owner.downPos.y/50);
-        Laya.timer.loop(2000, this, this.switchFlowerState);
+        Laya.timer.loop(4000, this, this.switchFlowerState);
         this.owner.shootTickCount = 0;
         this.owner.inGround = false;
         this.owner.outSpeed = -6;
