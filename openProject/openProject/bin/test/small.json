@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"width":675,"height":488},"compId":2,"child":[{"type":"Sprite","props":{"y":3,"x":0,"texture":"test/1.png"},"compId":5},{"type":"List","props":{"y":102,"width":660,"var":"_list","spaceY":0,"spaceX":0,"repeatY":1,"repeatX":3,"left":8,"height":376},"compId":3}],"loadList":["test/1.png"],"loadList3D":[]}

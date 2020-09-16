@@ -42,28 +42,12 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/qizhu (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":2
-                            },
-                            {
                                 "value":"other1/qizhu (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":4
-                            },
-                            {
-                                "value":"other1/qizhu (4).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":6
                             },
                             {
                                 "value":"other1/qizhu (5).png",
@@ -74,14 +58,6 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/qizhu (6).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":10
-                            },
-                            {
                                 "value":"other1/qizhu (7).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
@@ -90,28 +66,12 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/qizhu (8).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":14
-                            },
-                            {
                                 "value":"other1/qizhu (9).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":16
-                            },
-                            {
-                                "value":"other1/qizhu (10).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":18
                             },
                             {
                                 "value":"other1/qizhu (11).png",
