@@ -88,6 +88,7 @@ export default class ShiTou extends Laya.Script {
         } else if (other.label == "AIBottom") {
             this.owner.state = 5;
             this.owner.idleCount = 0;
+            Laya.SoundManager.playSound("other1/zadi.mp3");
         }
     }
 }

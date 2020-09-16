@@ -87,6 +87,7 @@ export default class ShuiGuanLogic extends Laya.Script {
                 Laya.Tween.to(black,{alpha: 1}, 400, null, Laya.Handler.create(null, function(){
                     black.removeSelf();
                     black.destroy();
+                    Laya.SoundManager.playSound("other1/shuiguan.mp3");
                     LoadingLogic.loadScene(sceneName);
                 }));
             }));

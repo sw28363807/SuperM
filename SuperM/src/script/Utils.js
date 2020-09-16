@@ -120,21 +120,32 @@ export default class Utils extends Laya.Script {
         GameContext.setRoleSpeed(0, GameContext.footMonsterSpeed.y);
 
         let owner = other.owner;
-        let parent = owner.parent;
-
-        let label = new Laya.Text();
-        label.text = String(100);
-        label.color = "#dbdb2b";
-        label.fontSize = 24;
-        parent.addChild(label);
-        label.x = owner.x;
-        label.y = owner.y - 50;
-
-        Laya.Tween.to(label, {y: label.y - 60}, 500, null, Laya.Handler.create(null, function() {
-            Utils.removeThis(label);
-        }));
-
+        Utils.createFen(owner);
         EventMgr.getInstance().postEvent(Events.Monster_Foot_Dead, {owner: other.owner});
+    }
+
+    static createFen(owner) {
+        if (!owner) {
+            return;
+        }
+        let parent = owner.parent;
+        if (!parent) {
+            return;
+        }
+        owner.fen = 100;
+        if (owner.fen != 0 && owner.fen != undefined && owner.fen != null) {
+            let label = new Laya.Text();
+            label.text = String(100);
+            label.color = "#ffffffff";
+            label.fontSize = 30;
+            parent.addChild(label);
+            label.x = owner.x;
+            label.y = owner.y - 80;
+    
+            Laya.Tween.to(label, {y: label.y - 60}, 500, null, Laya.Handler.create(null, function() {
+                Utils.removeThis(label);
+            }));
+        }
     }
 
     static roleInCeil(monster) {
@@ -368,13 +379,13 @@ export default class Utils extends Laya.Script {
         if (!GameContext.role) {
             return;
         }
+        GameContext.roleFlyState = false;
         if (GameContext.isDie) {
             return;
         }
         if (GameContext.roleHurting) {
             return;
         }
-        GameContext.roleFlyState = false;
         GameContext.playRoleAni("");
         GameContext.playRoleAni("stand");
         let x = -1;
@@ -402,11 +413,13 @@ export default class Utils extends Laya.Script {
         }
         GameContext.setRoleSpeed( x * 10, -10);
         GameContext.roleHurting = true;
+        GameContext.keSpr.visible = false;
         Laya.timer.once(1000, null, function() {
             GameContext.roleHurting = false;
             GameContext.commandWalk = true;
         });
         GameContext.gameRoleNumber--;
+        Laya.SoundManager.playSound("other1/siwang.mp3");
         if (GameContext.gameRoleNumber == 0) {
             GameContext.playRoleAni("die", false);
             GameContext.isDie = true;
@@ -454,6 +467,7 @@ export default class Utils extends Laya.Script {
     }
 
     static hurtRole(other) {
+        GameContext.roleFlyState = false;
         if (!GameContext.role) {
             return;
         }
@@ -474,7 +488,6 @@ export default class Utils extends Laya.Script {
                 return;
             }
         }
-        GameContext.roleFlyState = false;
         GameContext.playRoleAni("");
         GameContext.playRoleAni("stand");
         let x = -1;
@@ -507,6 +520,7 @@ export default class Utils extends Laya.Script {
             GameContext.commandWalk = false;
         }
         GameContext.roleHurting = true;
+        GameContext.keSpr.visible = false;
         Laya.timer.once(500, null, function() {
             if (lastBodyState != 0) {
                 GameContext.roleHurting = false;
@@ -514,10 +528,10 @@ export default class Utils extends Laya.Script {
             GameContext.commandWalk = true;
         });
         GameContext.gameRoleNumber--;
+        Laya.SoundManager.playSound("other1/siwang.mp3");
         if (lastBodyState == 0) {
             GameContext.playRoleAni("die", false);
             GameContext.isDie = true;
-            Laya.SoundManager.playSound("other1/siwang.mp3");
             Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
                 let black = prefabDef.create();
                 Laya.stage.addChild(black);

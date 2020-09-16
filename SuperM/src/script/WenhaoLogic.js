@@ -12,6 +12,19 @@ export default class WenhaoLogic extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         if (other) {
+            if (other && other.owner && other.label == "KeBullet") {
+                if (Math.abs(GameContext.role.x - other.owner.x) < 1500) {
+                    if (this.owner.state == 1) {
+                        Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+                    } else {
+                        if (this.owner.wenhaoType == 2) {
+                            Laya.SoundManager.playSound("other1/gold.mp3");
+                        } else {
+                            Laya.SoundManager.playSound("other1/dingchu.mp3");
+                        }
+                    }
+                }
+            }
             if (other.label == "RoleHead") {
                 if (!self.owner) {
                     return;
@@ -31,6 +44,8 @@ export default class WenhaoLogic extends Laya.Script {
                             }), null, Laya.Loader.SOUND);
                         }
                     }   
+                } else {
+                    Laya.SoundManager.playSound("other1/dingzhuang.mp3");
                 }
                 if (this.owner.wenhaoType == 1) {
                     this.triggerMoGu();

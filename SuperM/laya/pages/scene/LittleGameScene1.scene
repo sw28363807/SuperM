@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":49,
+    "selectedBox":14,
+    "selecteID":16,
     "searchKey":"Scene",
     "props":{"width":1336,"sceneColor":"#000000","height":750},
     "nodeParent":-1,
@@ -148,15 +148,30 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,spr2",
-                    "props":{"y":-9,"x":-10,"texture":"other/rewardpingzi (3).png","name":"spr2"},
+                    "props":{"y":151,"x":89,"width":197,"texture":"other/rewardpingzi (3).png","pivotY":160,"pivotX":99,"name":"spr2","height":243},
                     "nodeParent":8,
                     "label":"spr2",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":10,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label,roleLabel",
+                            "props":{"y":153,"x":93,"width":102,"valign":"middle","text":"x1","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
+                            "nodeParent":10,
+                            "label":"roleLabel",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":46,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "x":30,
@@ -182,21 +197,6 @@
                             "frameRate":24,
                             "action":0
                         }]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "searchKey":"Label,roleLabel",
-                    "props":{"y":144,"x":83,"width":102,"valign":"middle","text":"x1","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
-                    "nodeParent":8,
-                    "label":"roleLabel",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":46,
-                    "child":[
-                        ]
                 }]
         },
         {
@@ -231,15 +231,30 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,spr2",
-                    "props":{"y":-9,"x":-10,"texture":"other/rewardpingzi (3).png","name":"spr2"},
+                    "props":{"y":151,"x":89,"texture":"other/rewardpingzi (3).png","pivotY":160,"pivotX":99,"name":"spr2"},
                     "nodeParent":11,
                     "label":"spr2",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":13,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label,roleLabel",
+                            "props":{"y":152,"x":93,"width":102,"valign":"middle","text":"x2","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
+                            "nodeParent":13,
+                            "label":"roleLabel",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":47,
+                            "child":[
+                                ]
+                        }],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -265,20 +280,6 @@
                             "frameRate":24,
                             "action":0
                         }]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "searchKey":"Label,roleLabel",
-                    "props":{"y":143,"x":83,"width":102,"valign":"middle","text":"x2","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
-                    "nodeParent":11,
-                    "label":"roleLabel",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":47,
-                    "child":[
-                        ]
                 }]
         },
         {
@@ -313,15 +314,29 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,spr2",
-                    "props":{"y":-9,"x":-10,"texture":"other/rewardpingzi (3).png","name":"spr2"},
+                    "props":{"y":151,"x":89,"texture":"other/rewardpingzi (3).png","pivotY":160,"pivotX":99,"name":"spr2"},
                     "nodeParent":14,
                     "label":"spr2",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":16,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "searchKey":"Label,roleLabel",
+                            "props":{"y":155,"x":93,"width":102,"valign":"middle","text":"x3","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
+                            "nodeParent":16,
+                            "label":"roleLabel",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":48,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "x":30,
@@ -347,20 +362,6 @@
                             "frameRate":24,
                             "action":0
                         }]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "searchKey":"Label,roleLabel",
-                    "props":{"y":146,"x":83,"width":102,"valign":"middle","text":"x3","strokeColor":"#000000","stroke":5,"name":"roleLabel","height":43,"fontSize":24,"font":"Microsoft YaHei","color":"#c5e80d","bold":true,"align":"left"},
-                    "nodeParent":14,
-                    "label":"roleLabel",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":48,
-                    "child":[
-                        ]
                 }]
         },
         {

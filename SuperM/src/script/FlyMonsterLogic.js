@@ -50,6 +50,7 @@ export default class FlyMonsterLogic extends Laya.Script {
         let x = owner.x;
         let y = owner.y;
         let parent = owner.parent;
+        Laya.SoundManager.playSound("other1/caidiren.mp3");
         if (parent) {
             Laya.loader.create(owner.createPrefab, Laya.Handler.create(null, function (prefabDef) {
                 let monster = prefabDef.create();

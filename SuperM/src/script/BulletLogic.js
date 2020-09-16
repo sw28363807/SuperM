@@ -59,7 +59,7 @@ export default class BulletLogic extends Laya.Script {
                 return;
             }
         } else if (this.owner.name == "KeBullet") {
-            if (Math.abs(this.owner.x - GameContext.role.x) > 3000) {
+            if (Math.abs(this.owner.x - GameContext.role.x) > 1000) {
                 Utils.removeThis(this.owner);
                 return;
             }
@@ -93,6 +93,11 @@ export default class BulletLogic extends Laya.Script {
                     });
                 }
             } else if (self.label == "KeBullet") {
+                if (this.owner && Math.abs(GameContext.role.x - this.owner.x) < 1500) {
+                    if (other && other.label != "Wenhao") {
+                        Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+                    }
+                }
                 if (other.label == "Brick") {
                     this.owner.directX = -this.owner.directX;
                 } else if (other.label == "Wall" || (scene != "" && scene == "scene/Level3_2.scene" && other.label == "Ground")) {

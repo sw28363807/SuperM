@@ -53,7 +53,6 @@ import BossLogic from "./script/BossLogic"
 import LittleGameScene1Logic from "./script/LittleGameScene1Logic"
 import BrokenBrick from "./script/BrokenBrick"
 import BrickLogic from "./script/BrickLogic"
-import MoreTimeBrick from "./script/MoreTimeBrick"
 import BulletLogic from "./script/BulletLogic"
 import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import HeadBulletLogic from "./script/HeadBulletLogic"
@@ -118,7 +117,6 @@ export default class GameConfig {
 		reg("script/LittleGameScene1Logic.js",LittleGameScene1Logic);
 		reg("script/BrokenBrick.js",BrokenBrick);
 		reg("script/BrickLogic.js",BrickLogic);
-		reg("script/MoreTimeBrick.js",MoreTimeBrick);
 		reg("script/BulletLogic.js",BulletLogic);
 		reg("script/FlowerBulletLogic.js",FlowerBulletLogic);
 		reg("script/HeadBulletLogic.js",HeadBulletLogic);

@@ -11,7 +11,8 @@ export default class SliderLogic extends Laya.Script {
             this.owner.slider = this.owner.getChildByName("slider");
             this.owner.slider.width = 0;
             this.owner.sliderSpeed = 1;
-            GameContext.flySliderState = 1; 
+            GameContext.flySliderState = 1;
+            this.owner.visible = false;
         }
     }
 
@@ -38,7 +39,7 @@ export default class SliderLogic extends Laya.Script {
             if (GameContext.curFlyPower <= 0) {
                 GameContext.curFlyPower = 0;
                 GameContext.flySliderState = 1;
-                GameContext.roleCommandFly = false;
+                // GameContext.roleCommandFly = false;
             }
         }
     }

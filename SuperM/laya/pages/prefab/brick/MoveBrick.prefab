@@ -2,7 +2,6 @@
     "x":0,
     "type":"Box",
     "selectedBox":5097,
-    "selecteID":5099,
     "searchKey":"Box,MoveBrick",
     "props":{"zOrder":10,"y":0,"x":0,"width":202,"presetID":1,"preset":"laya/pages/prefab/brick/MoveBrick.prefab","name":"MoveBrick","isPresetRoot":true,"height":54},
     "nodeParent":-1,

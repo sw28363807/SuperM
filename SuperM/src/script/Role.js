@@ -16,6 +16,7 @@ export default class Role extends Laya.Script {
         GameContext.roleHurting = false;
         GameContext.bodyBigScale = 1;
         GameContext.bodySmallScale = 0.6;
+        GameContext.roleFlyDrop = false;
 
         GameContext.curScaleFactor = GameContext.bodySmallScale;
         GameContext.isDie = false;
@@ -198,24 +199,24 @@ export default class Role extends Laya.Script {
                     GameContext.setRoleMove(speedX * GameContext.roleInWaterSpeed, 3);  
                 }
                 GameContext.playRoleAni("youyong");
-            } else if ( GameContext.roleCommandFly ==true) {
+            } else if ( GameContext.roleCommandFly ==true && GameContext.roleFlyState == true) {
                 let upSpeed = -7;
-                if (GameContext.roleFlyState == true) {
-                    if (GameContext.commandWalk == true) {
-                        if (GameContext.walkDirect) {
-                            GameContext.setRoleMove(7 * GameContext.walkDirect.x, upSpeed);
-                        } else {
-                            GameContext.setRoleMove(0, -3);
-                        }
-
+                if (GameContext.commandWalk == true) {
+                    if (GameContext.walkDirect) {
+                        GameContext.setRoleMove(7 * GameContext.walkDirect.x, upSpeed);
                     } else {
-                        GameContext.setRoleMove(0, upSpeed);
+                        GameContext.setRoleMove(0, -3);
                     }
+
+                } else {
+                    GameContext.setRoleMove(0, upSpeed);
                 }
                 GameContext.playRoleAni("fly");
             } else {
                 let linearVelocity = GameContext.getLineSpeed();
-                if (GameContext.roleInGround) {
+                if (GameContext.roleFlyDrop == true) {
+                    GameContext.playRoleAni("fly");
+                } else if (GameContext.roleInGround) {
                     if (Math.abs(linearVelocity.x) <= 0.0000001) {
                         GameContext.playRoleAni("stand");
                     } else {
@@ -271,17 +272,24 @@ export default class Role extends Laya.Script {
         if (GameContext.roleIsDrop) {
             return;
         }
+        if (self && self.label == "RoleHead" && other && (other.label == "BigBlueBrick" || 
+        other.label == "BlueBrick" || other.label == "CiBrick3" || other.label == "CloudBrick" ||
+         other.label == "DisBrick" || other.label == "DropBrick" || other.label == "GreenBrick" || 
+         other.label == "MoveBrick" || other.label == "MuBrick" || other.label == "TanLiBrick")) {
+            Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+        }
         if (other.owner && other.label == "KeBody") {
             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
             GameContext.keSpr.visible = true;
             GameContext.roleCurAni = "";
             GameContext.playRoleAni(GameContext.roleCurAni);
         } else if (other.owner && self.label == "RoleFoot" &
-            (other.label == "MonsterBody")) {
+            (other.label == "MonsterBody" || other.label == "MonsterFoot")) {
                 if (self.owner) {
                     if (other && other.owner && other.owner.name == "PenShuiMonsterEffect") {
                         GameContext.setRoleSpeed(-15, -15);
                         GameContext.roleHurting = true;
+                        GameContext.keSpr.visible = false;
                         GameContext.roleInGround = false;
                         Laya.timer.once(100, this, function() {
                             GameContext.roleHurting = false;
@@ -293,9 +301,6 @@ export default class Role extends Laya.Script {
                             GameContext.roleInGround = true;
                             GameContext.setRoleMove(0, 0);
                             GameContext.playRoleAni("stand");
-                            // if (other.owner.name != "CiQiu") {
-    
-                            // }
                             if (other.owner.name == "Flower" ||
                               other.owner.name == "Fish") {
                             } else {
@@ -332,6 +337,7 @@ export default class Role extends Laya.Script {
                 if (other && other.owner && other.owner.name == "PenShuiMonsterEffect") {
                     GameContext.setRoleSpeed(-15, -15);
                     GameContext.roleHurting = true;
+                    GameContext.keSpr.visible = false;
                     GameContext.roleInGround = false;
                     Laya.timer.once(100, this, function() {
                         GameContext.roleHurting = false;
@@ -372,6 +378,7 @@ export default class Role extends Laya.Script {
                 GameContext.roleShuiGuanState = 0;
             }
             GameContext.roleInGround = true;
+            GameContext.roleFlyDrop = false;
             if (GameContext.commandWalk == false) {
                 if (GameContext.roleInWater == false) {
                     GameContext.setRoleMove(0, 0);
@@ -399,7 +406,7 @@ export default class Role extends Laya.Script {
 
         if (GameContext.roleInWater == true) {
             this.triggerRoleInWaterJump();
-            Laya.SoundManager.playSound("other1/jump.mp3");
+            Laya.SoundManager.playSound("other1/youyong.mp3");
         } 
         else if (GameContext.roleInGround == true) {
             GameContext.roleInGround = false;
@@ -539,14 +546,16 @@ export default class Role extends Laya.Script {
             return;
         }
         if (data == "down") {
-            if (GameContext.curFlyPower > 0 && GameContext.roleFlyState == true) {
+            if ((true || GameContext.curFlyPower > 0) && GameContext.roleFlyState == true) {
                 GameContext.roleCommandFly = true;
                 GameContext.roleInGround = false;
             } else {
                 GameContext.roleCommandFly = false;
+                GameContext.roleFlyDrop = true;
             }
         } else if (data == "up") {
             GameContext.roleCommandFly = false;
+            GameContext.roleFlyDrop = true;
         }
     }
 

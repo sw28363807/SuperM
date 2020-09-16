@@ -1,7 +1,4 @@
-import Events from "./Events";
-import EventMgr from "./EventMgr";
 import GameContext from "../GameContext";
-import Utils from "./Utils";
 
 export default class TanLiBrickLogic extends Laya.Script {
 

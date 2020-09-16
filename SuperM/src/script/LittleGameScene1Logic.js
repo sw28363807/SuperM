@@ -15,6 +15,8 @@ export default class LittleGameScene1Logic extends Laya.Script {
             ani.visible = false;
         }
 
+        this.gogoNext = 0;
+
         this.owner.winSpr = this.owner.getChildByName("win");
         this.owner.winSpr.visible = false;
 
@@ -44,13 +46,9 @@ export default class LittleGameScene1Logic extends Laya.Script {
                     let beizi =  this.beizis[index];
                     let ani = beizi.getChildByName("qingzhu");
                     ani.visible = true;
-                    if (Laya.Browser.onMiniGame) {
-                        Laya.SoundManager.playSound("other1/yaoping.mp3");
-                    } else {
-                        Laya.loader.load("other1/yaoping.mp3", Laya.Handler.create(this, function (data) {
-                            Laya.SoundManager.playSound("other1/yaoping.mp3");
-                        }), null, Laya.Loader.SOUND);
-                    }
+                    let spr2 = beizi.getChildByName("spr2");
+                    Laya.Tween.to(spr2, {scaleX: 1.5, scaleY: 1.5}, 1000);
+                    Laya.SoundManager.playSound("other1/yaoping.mp3");
                     Laya.timer.once(1000, this, function() {
                         if (index == 0) {
                             this.open(1);
@@ -98,7 +96,7 @@ export default class LittleGameScene1Logic extends Laya.Script {
         let beizi =  this.beizis[index];
         let spr1 = beizi.getChildByName("spr1");
         let y = spr1.y;
-        let offY = 100;
+        let offY = 120;
         Laya.Tween.to(spr1, {y:y - offY }, 500, null, handler);
     }
 
@@ -162,6 +160,17 @@ export default class LittleGameScene1Logic extends Laya.Script {
                 this.running = false;
             }
         });
+    }
+
+
+    onUpdate() {
+        if (this.gameEnd == true) {
+            this.gogoNext++;
+            if (this.gogoNext > 400) {
+                LoadingLogic.loadScene("scene/Level2_1.scene");
+                this.gameEnd = false;
+            }
+        }
     }
 
 

@@ -50,6 +50,7 @@ export default class MonsterLogic extends Laya.Script {
         if (!this.owner.isStart) {
             return;
         }
+        Laya.SoundManager.playSound("other1/caidiren.mp3");
         let rigidBody = this.owner.getComponent(Laya.RigidBody);
         Utils.createFootEffect(this.owner);
     }

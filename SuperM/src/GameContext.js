@@ -457,3 +457,7 @@ GameContext.gameRoleYaBian = false;
 
 
 GameContext.golds = new Set();
+
+GameContext.roleFlyDrop = false;
+
+GameContext.roleFen = 0;

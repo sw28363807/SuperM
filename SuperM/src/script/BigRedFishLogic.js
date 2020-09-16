@@ -69,6 +69,7 @@ export default class BigRedFishLogic extends Laya.Script {
         let direct = this.getDirectWithRole();
         let sign = Utils.getSign(direct.x);
         this.setSpeed(sign * jumpX, - jumpY);
+        Laya.SoundManager.playSound("other1/tiaoshui.mp3");
     }
 
     setFishPosition(x, y) {
@@ -140,6 +141,7 @@ export default class BigRedFishLogic extends Laya.Script {
                 this.setFishPositionY(this.owner.finalStartPointY);
                 this.setSpeed(0, 0);
                 this.owner.renderAni.rotation = 0;
+                Laya.SoundManager.playSound("other1/tiaoshui.mp3");
             }
         } else if (this.owner.state == 3) {
             if ( this.owner.curAni != "ani1") {

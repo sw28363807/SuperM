@@ -68,28 +68,12 @@
                                 "index":2
                             },
                             {
-                                "value":"other1/yanhua2 (3).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":4
-                            },
-                            {
                                 "value":"other1/yanhua2 (4).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":6
-                            },
-                            {
-                                "value":"other1/yanhua2 (5).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":8
                             },
                             {
                                 "value":"other1/yanhua2 (6).png",
@@ -100,28 +84,12 @@
                                 "index":10
                             },
                             {
-                                "value":"other1/yanhua2 (7).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":12
-                            },
-                            {
                                 "value":"other1/yanhua2 (8).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":14
-                            },
-                            {
-                                "value":"other1/yanhua2 (9).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":16
                             },
                             {
                                 "value":"other1/yanhua2 (10).png",

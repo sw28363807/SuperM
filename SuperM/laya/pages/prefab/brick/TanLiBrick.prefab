@@ -3,7 +3,7 @@
     "type":"Animation",
     "selectedBox":122,
     "searchKey":"Animation,TanLiBrick",
-    "props":{"zOrder":10,"y":0,"x":0,"width":120,"source":"anim/TanLiBrick.ani","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab","name":"TanLiBrick","isPresetRoot":true,"height":80,"autoPlay":true},
+    "props":{"zOrder":10,"y":0,"x":0,"width":120,"source":"anim/TanLiBrick.ani","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab","name":"TanLiBrick","isPresetRoot":true,"height":80,"autoPlay":true,"autoAnimation":"ani1"},
     "nodeParent":-1,
     "maxID":129,
     "label":"TanLiBrick",

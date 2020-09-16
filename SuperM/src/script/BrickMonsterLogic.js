@@ -65,7 +65,7 @@ export default class BrickMonsterLogic extends Laya.Script {
             } else {
                 this.owner.rigidBody.setVelocity({x: 0, y: 0});
                 let body = this.owner.rigidBody.getBody();
-                body.SetPositionXY(this.owner.idlePoint.x/50, body.GetPosition().y);
+                body.SetPositionXY(this.owner.idlePoint.x/50, this.owner.idlePoint.y/50);
             }
             this.owner.idleCount = 0;
             this.stopAttackAni();
@@ -83,7 +83,6 @@ export default class BrickMonsterLogic extends Laya.Script {
             });
             this.owner.idleCount = 0;
         } else if (this.owner.state == 5) {
-            this.owner.idleCount++;
             let distance = Math.abs(GameContext.role.x - this.owner.x);
             let dx = Utils.getSign(GameContext.role.x - this.owner.x);
             let linearVelocity = this.owner.rigidBody.linearVelocity;
@@ -101,12 +100,7 @@ export default class BrickMonsterLogic extends Laya.Script {
             this.owner.idleCount++;
             this.owner.rigidBody.setVelocity({x: 0, y: 0});
             let body = this.owner.rigidBody.getBody();
-            if (this.owner.isGround == true) {
-                body.SetPositionXY(this.owner.idlePoint.x/50, this.owner.idlePoint.y/50);
-            } else {
-                body.SetPositionXY(this.owner.idlePoint.x/50, body.GetPosition().y);
-            }
-
+            body.SetPositionXY(this.owner.idlePoint.x/50, body.GetPosition().y);
             if (this.owner.idleCount > 100) {
                 this.owner.state = 0;
                 this.owner.idleCount = 0;
@@ -144,6 +138,7 @@ export default class BrickMonsterLogic extends Laya.Script {
                     if (other.label == "RoleHead") {
                         this.owner.rigidBody.setVelocity({x: 0, y: 0});
                         this.owner.state = 3;
+                        Utils.hurtRole(this.owner);
                     }
                 } else if (other.label == "MonsterBody" || other.label == "MonsterFoot") {
                     let dx = Utils.getSign(this.owner.idlePoint.x - this.owner.x);
@@ -151,9 +146,10 @@ export default class BrickMonsterLogic extends Laya.Script {
                     this.owner.state = 3;
                     this.playAttackAni();
                 } else if (other.label != "MonsterBody" && other.label != "MonsterFoot") {
-                    if (this.owner.state != 0 && contact.m_manifold.localNormal.y < 0) {
+                    if (this.owner.state != 0) {
                         if (this.owner.footAni.visible == true) {
                             this.owner.idlePoint = {x: this.owner.x, y: this.owner.y + 10};
+                            Laya.SoundManager.playSound("other1/zadi.mp3");
                         }
                         this.owner.state = 4;
                     }
