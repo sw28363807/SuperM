@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":86,
+    "selectedBox":370,
+    "selecteID":8966,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -225,16 +225,17 @@
             "props":{"y":451,"x":-36,"width":30000,"scaleY":0.4,"height":750},
             "nodeParent":2,
             "label":"Box",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":370,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-657,"x":514,"texture":"other1/beijing (1).png"},
+                    "props":{"y":-657,"x":514,"texture":"other1/beijing (1).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -245,9 +246,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-132,"x":1740,"texture":"other1/beijing (2).png"},
+                    "props":{"y":-132,"x":1740,"texture":"other1/beijing (2).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -258,9 +260,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-132,"x":2967,"texture":"other1/beijing (3).png"},
+                    "props":{"y":-132,"x":2967,"texture":"other1/beijing (3).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -268,12 +271,14 @@
                     "hasChild":false,
                     "compId":7913,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-132,"x":4185,"texture":"other1/beijing (4).png"},
+                    "props":{"y":-132,"x":4185,"texture":"other1/beijing (4).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -284,9 +289,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-132,"x":5410,"texture":"other1/beijing (5).png"},
+                    "props":{"y":-132,"x":5410,"texture":"other1/beijing (5).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -297,9 +303,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-133,"x":6623,"texture":"other1/beijing (6).png"},
+                    "props":{"y":-133,"x":6623,"texture":"other1/beijing (6).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -307,12 +314,14 @@
                     "hasChild":false,
                     "compId":7916,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-132,"x":7846,"texture":"other1/beijing (7).png"},
+                    "props":{"y":-132,"x":7846,"texture":"other1/beijing (7).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -323,9 +332,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-956,"x":9112,"texture":"other1/beijingyou (1).png"},
+                    "props":{"y":-956,"x":9112,"texture":"other1/beijingyou (1).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -336,9 +346,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-955,"x":10153,"texture":"other1/beijingyou (2).png"},
+                    "props":{"y":-955,"x":10153,"texture":"other1/beijingyou (2).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -349,9 +360,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-955,"x":11203,"texture":"other1/beijingyou (3).png"},
+                    "props":{"y":-955,"x":11203,"texture":"other1/beijingyou (3).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -362,9 +374,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-955,"x":12249,"texture":"other1/beijingyou (4).png"},
+                    "props":{"y":-955,"x":12249,"texture":"other1/beijingyou (4).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -375,9 +388,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-955,"x":13297,"texture":"other1/beijingyou (5).png"},
+                    "props":{"y":-955,"x":13297,"texture":"other1/beijingyou (5).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -388,9 +402,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-955,"x":14347,"texture":"other1/beijingyou (6).png"},
+                    "props":{"y":-955,"x":14347,"texture":"other1/beijingyou (6).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -401,9 +416,10 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-956,"x":15397,"texture":"other1/beijingyou (7).png"},
+                    "props":{"y":-956,"x":15397,"texture":"other1/beijingyou (7).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -415,9 +431,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-956,"x":16443,"texture":"other1/beijingyou (8).png"},
+                    "props":{"y":-956,"x":16443,"texture":"other1/beijingyou (8).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -429,9 +446,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-956,"x":17491,"texture":"other1/beijingyou (9).png"},
+                    "props":{"y":-956,"x":17491,"texture":"other1/beijingyou (9).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -443,9 +461,10 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-956,"x":18541,"texture":"other1/beijingyou (10).png"},
+                    "props":{"y":-956,"x":18541,"texture":"other1/beijingyou (10).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
                     "isOpen":true,
@@ -458,46 +477,18 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-957,"x":21815,"texture":"other1/beijingyou (8).png","scaleX":-1},
+                    "props":{"y":-1999,"x":6592,"texture":"other1/beijingyou (9).png","scaleY":2,"scaleX":2},
                     "nodeParent":370,
                     "label":"Sprite",
-                    "isOpen":true,
-                    "isDirectory":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
-                    "compId":8965,
+                    "hasChild":false,
+                    "compId":8966,
                     "child":[
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":0,"x":1048,"texture":"other1/beijingyou (9).png"},
-                            "nodeParent":8965,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":8966,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":0,"x":2098,"texture":"other1/beijingyou (10).png"},
-                            "nodeParent":8965,
-                            "label":"Sprite",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":8967,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        }],
+                        ],
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
@@ -1382,14 +1373,13 @@
             "nodeParent":2,
             "maxID":61,
             "label":"po6",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":7955,
             "child":[
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1406,7 +1396,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1423,7 +1412,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1439,7 +1427,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1455,7 +1442,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1471,7 +1457,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"PolygonCollider",
                     "switchAble":true,
                     "searchKey":"PolygonCollider",
@@ -1487,7 +1472,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":9,"preset":"laya/pages/prefab/oo/po6.prefab"},
@@ -1501,7 +1485,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"presetID":10,"preset":"laya/pages/prefab/oo/po6.prefab"},

@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5314,
+    "selecteID":86,
     "searchKey":"Scene,gameScene",
     "props":{"width":30000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -190,7 +190,7 @@
             "source":"src/script/LevelLogic.js",
             "searchKey":"Script,LevelLogic",
             "removeAble":true,
-            "props":{"sceneType":1,"bgm":"loading/bgm23.mp3"},
+            "props":{"sceneType":1,"bgm":"loading/bgm11.mp3"},
             "nodeParent":2,
             "label":"LevelLogic",
             "isDirectory":false,
@@ -23819,7 +23819,6 @@
             "compId":3083,
             "child":[
                 {
-                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23837,7 +23836,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",

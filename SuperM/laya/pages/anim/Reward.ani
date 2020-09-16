@@ -124,6 +124,12 @@
                                 "index":0
                             }]
                     }
+                },
+                {
+                    "target":4,
+                    "keyframes":{
+
+                    }
                 }],
             "name":"ani2",
             "id":2,
@@ -329,14 +335,6 @@
                                 "target":4,
                                 "key":"y",
                                 "index":0
-                            },
-                            {
-                                "value":-183,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":4,
-                                "key":"y",
-                                "index":10
                             }],
                         "x":[
                             {
@@ -357,14 +355,6 @@
                                 "index":0
                             },
                             {
-                                "value":"other/effectpingzi (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":1
-                            },
-                            {
                                 "value":"other/effectpingzi (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
@@ -373,28 +363,12 @@
                                 "index":2
                             },
                             {
-                                "value":"other/effectpingzi (4).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":3
-                            },
-                            {
                                 "value":"other/effectpingzi (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
                                 "key":"skin",
                                 "index":4
-                            },
-                            {
-                                "value":"other/effectpingzi (6).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":5
                             },
                             {
                                 "value":"other/effectpingzi (7).png",
@@ -413,23 +387,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/effectpingzi (10).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":8
-                            },
-                            {
                                 "value":"other/effectpingzi (11).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":9
-                            },
-                            {
-                                "value":"other/effectpingzi (12).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -660,14 +618,6 @@
                                 "target":4,
                                 "key":"y",
                                 "index":0
-                            },
-                            {
-                                "value":-183,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":4,
-                                "key":"y",
-                                "index":10
                             }],
                         "x":[
                             {
@@ -688,14 +638,6 @@
                                 "index":0
                             },
                             {
-                                "value":"other/effectpingzi (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":1
-                            },
-                            {
                                 "value":"other/effectpingzi (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
@@ -704,28 +646,12 @@
                                 "index":2
                             },
                             {
-                                "value":"other/effectpingzi (4).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":3
-                            },
-                            {
                                 "value":"other/effectpingzi (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
                                 "key":"skin",
                                 "index":4
-                            },
-                            {
-                                "value":"other/effectpingzi (6).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":5
                             },
                             {
                                 "value":"other/effectpingzi (7).png",
@@ -744,23 +670,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/effectpingzi (10).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":8
-                            },
-                            {
                                 "value":"other/effectpingzi (11).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":9
-                            },
-                            {
-                                "value":"other/effectpingzi (12).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -991,14 +901,6 @@
                                 "target":4,
                                 "key":"y",
                                 "index":0
-                            },
-                            {
-                                "value":-183,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":4,
-                                "key":"y",
-                                "index":10
                             }],
                         "x":[
                             {
@@ -1019,14 +921,6 @@
                                 "index":0
                             },
                             {
-                                "value":"other/effectpingzi (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":1
-                            },
-                            {
                                 "value":"other/effectpingzi (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
@@ -1035,28 +929,12 @@
                                 "index":2
                             },
                             {
-                                "value":"other/effectpingzi (4).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":3
-                            },
-                            {
                                 "value":"other/effectpingzi (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
                                 "key":"skin",
                                 "index":4
-                            },
-                            {
-                                "value":"other/effectpingzi (6).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":5
                             },
                             {
                                 "value":"other/effectpingzi (7).png",
@@ -1075,23 +953,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/effectpingzi (10).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":8
-                            },
-                            {
                                 "value":"other/effectpingzi (11).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":4,
-                                "key":"skin",
-                                "index":9
-                            },
-                            {
-                                "value":"other/effectpingzi (12).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

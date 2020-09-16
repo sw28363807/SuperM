@@ -5,11 +5,12 @@
     "searchKey":"View",
     "props":{"sceneWidth":386,"sceneHeight":295,"sceneColor":"#000000"},
     "nodeParent":-1,
-    "maxID":3,
+    "maxID":4,
     "label":"View",
-    "isDirectory":false,
+    "isOpen":null,
+    "isDirectory":true,
     "isAniNode":true,
-    "hasChild":false,
+    "hasChild":true,
     "compId":2,
     "child":[
         {
@@ -59,28 +60,12 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/qingzhu (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":2
-                            },
-                            {
                                 "value":"other1/qingzhu (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":4
-                            },
-                            {
-                                "value":"other1/qingzhu (4).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":6
                             },
                             {
                                 "value":"other1/qingzhu (5).png",
@@ -91,28 +76,12 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/qingzhu (6).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":10
-                            },
-                            {
                                 "value":"other1/qingzhu (7).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":12
-                            },
-                            {
-                                "value":"other1/qingzhu (8).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":14
                             },
                             {
                                 "value":"other1/qingzhu (9).png",
@@ -123,28 +92,12 @@
                                 "index":16
                             },
                             {
-                                "value":"other1/qingzhu (10).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":18
-                            },
-                            {
                                 "value":"other1/qingzhu (11).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":20
-                            },
-                            {
-                                "value":"other1/qingzhu (12).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":22
                             },
                             {
                                 "value":"other1/qingzhu (13).png",
@@ -155,28 +108,12 @@
                                 "index":24
                             },
                             {
-                                "value":"other1/qingzhu (14).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":26
-                            },
-                            {
                                 "value":"other1/qingzhu (15).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":28
-                            },
-                            {
-                                "value":"other1/qingzhu (16).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":30
                             }]
                     }
                 }],
