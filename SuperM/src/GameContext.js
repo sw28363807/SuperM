@@ -21,6 +21,9 @@ export default class GameContext extends Laya.Script {
     }
 
     static triggerGotoHole(hole, height, widthOff) {
+        if (GameContext.isDie) {
+            return;
+        }
         if (height == undefined || height == null) {
             height = 300;
         }

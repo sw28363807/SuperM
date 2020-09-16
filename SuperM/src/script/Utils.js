@@ -144,8 +144,8 @@ export default class Utils extends Laya.Script {
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
             let monsterH = monster.height * monster.scaleY;
-            let c1 = myX > monster.x - monsterW/2 - offx - 20;
-            let c2 = myX < monster.x + monsterW/2 + offx;
+            let c1 = myX > monster.x - monsterW/2 - offx - 30;
+            let c2 = myX < monster.x + monsterW/2 + offx + 30;
             let c3 = myY < monster.y - monsterH/2;
             if (c1 && c2 && c3) {
                 return true;
@@ -161,8 +161,8 @@ export default class Utils extends Laya.Script {
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
             let monsterH = monster.height * monster.scaleY;
-            let c1 = myX > monster.x - monsterW/2 - offx - 20;
-            let c2 = myX < monster.x + monsterW/2 + offx;
+            let c1 = myX > monster.x - monsterW/2 - offx - 30;
+            let c2 = myX < monster.x + monsterW/2 + offx + 30;
             let c3 = myY < monster.y + 10;
             if (c1 && c2 && c3) {
                 return true;
@@ -575,8 +575,9 @@ export default class Utils extends Laya.Script {
         }
         if (GameContext.bodyState == 0) {
             Utils.hurtRole(this.owner);
-            return;   
+            return;
         }
+        GameContext.roleIsDrop = true;
         Laya.SoundManager.playSound("other1/siwang.mp3");
         if (GameContext.gameRoleState == 1) {
             GameContext.setRoleState(0);

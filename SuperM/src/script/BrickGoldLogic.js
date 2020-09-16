@@ -24,6 +24,8 @@ export default class BrickGoldLogic extends Laya.Script {
                 if (!Utils.roleInFloor(self.owner)) {
                     return;
                 }
+                let lineSpeed = GameContext.getLineSpeed();
+                GameContext.setRoleSpeed(lineSpeed.x, 0);
                 Utils.createHeadBullet(this.owner);
                 if (GameContext.gameRoleBodyState == 1) {
                     this.onCreateBrokenBrick();
@@ -48,13 +50,7 @@ export default class BrickGoldLogic extends Laya.Script {
             return;
         }
         this.owner.hasBroken = true;
-        if (Laya.Browser.onMiniGame) {
-            Laya.SoundManager.playSound("other1/posui.mp3");
-        } else {
-            Laya.loader.load("other1/posui.mp3", Laya.Handler.create(this, function (data) {
-                let channel = Laya.SoundManager.playSound("other1/posui.mp3");
-            }), null, Laya.Loader.SOUND);
-        }
+        Laya.SoundManager.playSound("other1/posui.mp3");
         Utils.createBrickBrokenEffect(this.owner);
         Utils.createGoldEffect(this.owner);
     }

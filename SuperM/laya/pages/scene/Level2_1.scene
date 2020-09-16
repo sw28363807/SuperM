@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":6366,
+    "selecteID":8066,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":8052,
+    "maxID":8069,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -192,7 +192,7 @@
             "source":"src/script/LevelLogic.js",
             "searchKey":"Script,LevelLogic",
             "removeAble":true,
-            "props":{"sceneType":1,"bgm":"other1/bgm (2).mp3"},
+            "props":{"sceneType":1,"bgm":"loading/bgm (2).mp3"},
             "nodeParent":2,
             "label":"LevelLogic",
             "isDirectory":false,
@@ -363,21 +363,6 @@
                     "switchAble":true,
                     "searchKey":"CircleCollider",
                     "removeAble":true,
-                    "props":{"presetID":21,"preset":"laya/pages/prefab/Role.prefab"},
-                    "nodeParent":7913,
-                    "label":"CircleCollider(Role)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":90,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"CircleCollider",
-                    "switchAble":true,
-                    "searchKey":"CircleCollider",
-                    "removeAble":true,
                     "props":{"presetID":28,"preset":"laya/pages/prefab/Role.prefab"},
                     "nodeParent":7913,
                     "label":"CircleCollider(Role)",
@@ -408,13 +393,13 @@
                     "switchAble":true,
                     "searchKey":"CircleCollider",
                     "removeAble":true,
-                    "props":{"presetID":31,"preset":"laya/pages/prefab/Role.prefab"},
+                    "props":{"presetID":33,"preset":"laya/pages/prefab/Role.prefab"},
                     "nodeParent":7913,
                     "label":"CircleCollider(Role)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":114,
+                    "compId":7969,
                     "child":[
                         ]
                 },
@@ -423,13 +408,13 @@
                     "switchAble":true,
                     "searchKey":"CircleCollider",
                     "removeAble":true,
-                    "props":{"presetID":33,"preset":"laya/pages/prefab/Role.prefab"},
+                    "props":{"presetID":34,"preset":"laya/pages/prefab/Role.prefab"},
                     "nodeParent":7913,
                     "label":"CircleCollider(Role)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":7969,
+                    "compId":8052,
                     "child":[
                         ]
                 }],
@@ -52861,7 +52846,7 @@
             "type":"Animation",
             "selectedBox":122,
             "searchKey":"Animation",
-            "props":{"y":-933.5,"x":11121,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
+            "props":{"y":-960,"x":10984,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
             "nodeParent":2,
             "maxID":129,
             "label":"TanLiBrick",
@@ -54323,6 +54308,344 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":8051,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1595,
+            "selecteID":1588,
+            "searchKey":"Box",
+            "props":{"y":539,"x":1723,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1596,
+            "label":"WenhaoBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8053,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8053,
+                    "label":"BoxCollider(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8054,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8053,
+                    "label":"RigidBody(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8055,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/WenhaoLogic.js",
+                    "searchKey":"Script,WenhaoLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8053,
+                    "label":"WenhaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8056,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "selectedBox":173,
+                    "searchKey":"Animation",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8053,
+                    "maxID":177,
+                    "label":"render",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8057,
+                    "child":[
+                        ],
+                    "animations":[
+                        {
+                            "nodes":[
+                                ],
+                            "name":"ani1",
+                            "id":1,
+                            "frameRate":24,
+                            "action":0
+                        }],
+                    "$LOCKED":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":1595,
+            "selecteID":1588,
+            "searchKey":"Box",
+            "props":{"y":432.5,"x":7439,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1596,
+            "label":"WenhaoBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8058,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8058,
+                    "label":"BoxCollider(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8059,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8058,
+                    "label":"RigidBody(WenhaoBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8060,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/WenhaoLogic.js",
+                    "searchKey":"Script,WenhaoLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8058,
+                    "label":"WenhaoLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8061,
+                    "child":[
+                        ],
+                    "$LOCKED":false
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "selectedBox":173,
+                    "searchKey":"Animation",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "nodeParent":8058,
+                    "maxID":177,
+                    "label":"render",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8062,
+                    "child":[
+                        ],
+                    "animations":[
+                        {
+                            "nodes":[
+                                ],
+                            "name":"ani1",
+                            "id":1,
+                            "frameRate":24,
+                            "action":0
+                        }],
+                    "$LOCKED":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":1818,
+            "selecteID":1819,
+            "searchKey":"Sprite",
+            "props":{"y":-268,"x":10810,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1821,
+            "label":"CloudBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8063,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8063,
+                    "label":"BoxCollider(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8064,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8063,
+                    "label":"RigidBody(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8065,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":1818,
+            "selecteID":1819,
+            "searchKey":"Sprite",
+            "props":{"y":-765,"x":11209.5,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1821,
+            "label":"CloudBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8066,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8066,
+                    "label":"BoxCollider(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8067,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8066,
+                    "label":"RigidBody(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8068,
                     "child":[
                         ],
                     "$LOCKED":false,

@@ -302,6 +302,7 @@ export default class Role extends Laya.Script {
                                 if ( other.owner.name == "BrickMonster") {
                                     if (Utils.roleInCeil2(other.owner)) {
                                         Utils.footMonster(other);
+                                        Laya.SoundManager.playSound("other1/posui.mp3");
                                     } else {
                                         if (other.label == "MonsterFoot") {
                                             if (Utils.roleInFloor2(other.owner)) {
@@ -395,19 +396,15 @@ export default class Role extends Laya.Script {
         if (GameContext.roleShuiGuanState == 2) {
             return;
         }
-        if (Laya.Browser.onMiniGame) {
-            Laya.SoundManager.playSound("other1/jump.mp3");
-        } else {
-            Laya.loader.load("other1/jump.mp3", Laya.Handler.create(this, function (data) {
-                Laya.SoundManager.playSound("other1/jump.mp3");
-            }), null, Laya.Loader.SOUND);
-        }
 
         if (GameContext.roleInWater == true) {
             this.triggerRoleInWaterJump();
-        } else if (GameContext.roleInGround == true) {
+            Laya.SoundManager.playSound("other1/jump.mp3");
+        } 
+        else if (GameContext.roleInGround == true) {
             GameContext.roleInGround = false;
             this.triggerRoleGroundJump();
+            Laya.SoundManager.playSound("other1/jump.mp3");
         }
     }
 

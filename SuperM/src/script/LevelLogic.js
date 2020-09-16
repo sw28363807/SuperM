@@ -36,24 +36,24 @@ export default class LevelLogic extends Laya.Script {
 
 
     onStart() {
+        Laya.SoundManager.stopAllSound();
+        GameContext.curBgm = this.owner.bgm;
         if (this.owner.bgm != "") {
-            if (Laya.Browser.onMiniGame) {
-                Laya.SoundManager.stopAllSound();
-                Laya.SoundManager.stopMusic();
-                Laya.SoundManager.playSound(this.owner.bgm, 0);
-                GameContext.curBgm = this.owner.bgm;
-                if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
-					Laya.SoundManager.playSound("other1/bgm41.mp3", 0);
-				}
-            } else {
-                Laya.loader.load(this.owner.bgm, Laya.Handler.create(this, function (data) {
-                    Laya.SoundManager.playSound(this.owner.bgm, 0);
+            Laya.timer.once(2000, this, function() {
+                if (Laya.Browser.onMiniGame) {
+                    Laya.SoundManager.playMusic(this.owner.bgm);
                     if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
-                        Laya.SoundManager.playSound("other1/bgm41.mp3", 0);
+                        Laya.SoundManager.playSound("loading/bgm41.mp3", 0);
                     }
-                }), null, Laya.Loader.SOUND);
-                GameContext.curBgm = this.owner.bgm;
-            }
+                } else {
+                    Laya.loader.load(this.owner.bgm, Laya.Handler.create(this, function (data) {
+                        Laya.SoundManager.playSound(this.owner.bgm, 0);
+                        if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
+                            Laya.SoundManager.playSound("loading/bgm41.mp3", 0);
+                        }
+                    }), null, Laya.Loader.SOUND);
+                }
+            });
         }
     }
 
