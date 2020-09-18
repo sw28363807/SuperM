@@ -9,7 +9,6 @@ export default class LittleGameScene1Logic extends Laya.Script {
     }
     
     onEnable() {
-        Laya.SoundManager.playSound("loading/little.mp3", 0);
         this.gameEnd = false;
         for (let index = 0; index < 10; index++) {
             let ani = this.owner.getChildByName("y"+String(index + 1));
@@ -170,6 +169,7 @@ export default class LittleGameScene1Logic extends Laya.Script {
 
 
     onStart() {
+        Laya.SoundManager.playSound("loading/little.mp3", 0);
         for (let index = 0; index < this.beizis.length; index++) {
             let beizi = this.beizis[index];
             let spr1 = beizi.getChildByName("spr1");
