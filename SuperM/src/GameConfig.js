@@ -3,8 +3,8 @@ import GameLogoScene from "./script/GameLogoScene"
 import LoadingBgLogic from "./script/LoadingBgLogic"
 import AdjustScene from "./script/AdjustScene"
 import JoyStick from "./script/JoyStick"
-import JoyStickButton from "./script/JoyStickButton"
 import GameJoyStick from "./script/GameJoyStick"
+import JoyStickButton from "./script/JoyStickButton"
 import GameTopLogic from "./script/GameTopLogic"
 import SliderLogic from "./script/SliderLogic"
 import Camera from "./script/Camera"
@@ -58,6 +58,7 @@ import FlowerBulletLogic from "./script/FlowerBulletLogic"
 import HeadBulletLogic from "./script/HeadBulletLogic"
 import PenShuiEffectLogic from "./script/PenShuiEffectLogic"
 import KeLogic from "./script/KeLogic"
+import BlackBoxLogic from "./script/BlackBoxLogic"
 
 export default class GameConfig {
     static init() {
@@ -67,8 +68,8 @@ export default class GameConfig {
 		reg("script/LoadingBgLogic.js",LoadingBgLogic);
 		reg("script/AdjustScene.js",AdjustScene);
 		reg("script/JoyStick.js",JoyStick);
-		reg("script/JoyStickButton.js",JoyStickButton);
 		reg("script/GameJoyStick.js",GameJoyStick);
+		reg("script/JoyStickButton.js",JoyStickButton);
 		reg("script/GameTopLogic.js",GameTopLogic);
 		reg("script/SliderLogic.js",SliderLogic);
 		reg("script/Camera.js",Camera);
@@ -122,6 +123,7 @@ export default class GameConfig {
 		reg("script/HeadBulletLogic.js",HeadBulletLogic);
 		reg("script/PenShuiEffectLogic.js",PenShuiEffectLogic);
 		reg("script/KeLogic.js",KeLogic);
+		reg("script/BlackBoxLogic.js",BlackBoxLogic);
     }
 }
 GameConfig.width = 1336;

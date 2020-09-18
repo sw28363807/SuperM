@@ -3,7 +3,7 @@
     "type":"Animation",
     "selectedBox":102,
     "searchKey":"Animation,Gold",
-    "props":{"zOrder":10,"y":0,"x":0,"width":100,"source":"anim/JinBi.ani","scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab","name":"Gold","isPresetRoot":true,"height":93,"autoPlay":true},
+    "props":{"zOrder":655981,"y":0,"x":0,"width":100,"source":"anim/JinBi.ani","scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab","name":"Gold","isPresetRoot":true,"height":93,"autoPlay":true},
     "nodeParent":-1,
     "maxID":106,
     "label":"Gold",

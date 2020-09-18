@@ -18,10 +18,10 @@ export default class BulletLogic extends Laya.Script {
         this.rigidBody = this.owner.getComponent(Laya.RigidBody);
         this.coll = this.owner.getComponent(Laya.ColliderBase);
         if (Laya.Browser.onMiniGame) {
-            Laya.SoundManager.playSound("other1/zidan.mp3");
+            Laya.SoundManager.playSound("loading/zidan.mp3");
         } else {
-            Laya.loader.load("other1/zidan.mp3", Laya.Handler.create(this, function (data) {
-                Laya.SoundManager.playSound("other1/zidan.mp3");
+            Laya.loader.load("loading/zidan.mp3", Laya.Handler.create(this, function (data) {
+                Laya.SoundManager.playSound("loading/zidan.mp3");
             }), null, Laya.Loader.SOUND);
         }
     }
@@ -95,7 +95,7 @@ export default class BulletLogic extends Laya.Script {
             } else if (self.label == "KeBullet") {
                 if (this.owner && Math.abs(GameContext.role.x - this.owner.x) < 1500) {
                     if (other && other.label != "Wenhao") {
-                        Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+                        Laya.SoundManager.playSound("loading/dingzhuang.mp3");
                     }
                 }
                 if (other.label == "Brick") {
@@ -129,7 +129,9 @@ export default class BulletLogic extends Laya.Script {
                         Utils.createBulletEffect(self.owner);
                         EventMgr.getInstance().postEvent(Events.Monster_Bullet_Dead, {owner: other.owner});
                         Utils.removeThis(this.owner);
+                        Laya.SoundManager.playSound("loading/zidan.mp3");
                     } else if (other.label == "KeBody") {
+                        Laya.SoundManager.playSound("loading/zidan.mp3");
                         if (other.owner) {
                             Utils.removeThis(other.owner);
                         }

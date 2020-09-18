@@ -37,6 +37,7 @@ export default class LevelLogic extends Laya.Script {
 
     onStart() {
         Laya.SoundManager.stopAllSound();
+        Laya.SoundManager.stopMusic();
         GameContext.curBgm = this.owner.bgm;
         if (this.owner.bgm != "") {
             if (Laya.Browser.onMiniGame) {
@@ -46,7 +47,7 @@ export default class LevelLogic extends Laya.Script {
                 }
             } else {
                 Laya.loader.load(this.owner.bgm, Laya.Handler.create(this, function (data) {
-                    Laya.SoundManager.playSound(this.owner.bgm, 0);
+                    Laya.SoundManager.playMusic(this.owner.bgm);
                     if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
                         Laya.SoundManager.playSound("loading/bgm41.mp3", 0);
                     }

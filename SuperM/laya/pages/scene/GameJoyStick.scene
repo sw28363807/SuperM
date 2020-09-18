@@ -2,11 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":90,
+    "selecteID":96,
     "searchKey":"View",
     "props":{"width":1336,"height":750},
     "nodeParent":-1,
-    "maxID":92,
+    "maxID":101,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -218,87 +218,6 @@
         },
         {
             "x":15,
-            "type":"Box",
-            "selectedBox":48,
-            "selecteID":50,
-            "searchKey":"Box,joyStickButton,joyStickButton",
-            "props":{"y":449,"x":911,"var":"joyStickButton","scaleY":1.5,"scaleX":1.5,"presetID":1,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab","name":"joyStickButton"},
-            "nodeParent":2,
-            "maxID":51,
-            "label":"joyStickButton",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":52,
-            "child":[
-                {
-                    "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
-                    "nodeParent":52,
-                    "label":"A",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":53,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
-                    "nodeParent":52,
-                    "label":"B",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":54,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"y":69,"x":132,"presetID":5,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
-                    "nodeParent":52,
-                    "label":"C",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":60,
-                    "child":[
-                        ]
-                },
-                {
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/JoyStickButton.js",
-                    "searchKey":"Script,JoyStickButton",
-                    "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
-                    "nodeParent":52,
-                    "label":"JoyStickButton",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":59,
-                    "child":[
-                        ]
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }]
-        },
-        {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/script/GameJoyStick.js",
@@ -341,6 +260,105 @@
             "compId":91,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":48,
+            "selecteID":50,
+            "searchKey":"Box,joyStickButton,joyStickButton",
+            "props":{"y":406,"x":940,"var":"joyStickButton","scaleY":0.8,"scaleX":0.8,"presetID":1,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab","name":"joyStickButton"},
+            "nodeParent":2,
+            "maxID":53,
+            "label":"joyStickButton",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":96,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
+                    "nodeParent":96,
+                    "label":"A",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":97,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
+                    "nodeParent":96,
+                    "label":"B",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":98,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
+                    "nodeParent":96,
+                    "label":"C",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":52,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/JoyStickButton.js",
+                    "searchKey":"Script,JoyStickButton",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
+                    "nodeParent":96,
+                    "label":"JoyStickButton",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":99,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":6,"preset":"laya/pages/prefab/menu/JoyStickButton.prefab"},
+                    "nodeParent":96,
+                    "label":"flyGray",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":100,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
         }],
     "animations":[
         {

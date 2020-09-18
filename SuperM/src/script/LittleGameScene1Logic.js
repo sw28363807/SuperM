@@ -9,6 +9,7 @@ export default class LittleGameScene1Logic extends Laya.Script {
     }
     
     onEnable() {
+        Laya.SoundManager.playSound("loading/little.mp3", 0);
         this.gameEnd = false;
         for (let index = 0; index < 10; index++) {
             let ani = this.owner.getChildByName("y"+String(index + 1));
@@ -47,8 +48,8 @@ export default class LittleGameScene1Logic extends Laya.Script {
                     let ani = beizi.getChildByName("qingzhu");
                     ani.visible = true;
                     let spr2 = beizi.getChildByName("spr2");
-                    Laya.Tween.to(spr2, {scaleX: 1.5, scaleY: 1.5}, 1000);
-                    Laya.SoundManager.playSound("other1/yaoping.mp3");
+                    Laya.Tween.to(spr2, {scaleX: 1.8, scaleY: 1.8}, 1000);
+                    Laya.SoundManager.playSound("loading/yaoping.mp3");
                     Laya.timer.once(1000, this, function() {
                         if (index == 0) {
                             this.open(1);
@@ -67,13 +68,7 @@ export default class LittleGameScene1Logic extends Laya.Script {
                         for (let index = 0; index < 10; index++) {
                             let ani = this.owner.getChildByName("y"+String(index + 1));
                             ani.visible = true;
-                            if (Laya.Browser.onMiniGame) {
-                                Laya.SoundManager.playSound("other1/yanhua.mp3");
-                            } else {
-                                Laya.loader.load("other1/yanhua.mp3", Laya.Handler.create(this, function (data) {
-                                    Laya.SoundManager.playSound("other1/yanhua.mp3");
-                                }), null, Laya.Loader.SOUND);
-                            }
+                            Laya.SoundManager.playSound("other1/yanhua.mp3");
                         }
                     });
                 }));

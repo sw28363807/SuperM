@@ -20,10 +20,10 @@ export default class GoldLogic extends Laya.Script {
             }
             if (gold) {
                 if (Laya.Browser.onMiniGame) {
-                    Laya.SoundManager.playSound("other1/gold.mp3");
+                    Laya.SoundManager.playSound("loading/gold.mp3");
                 } else {
-                    Laya.loader.load("other1/gold.mp3", Laya.Handler.create(this, function (data) {
-                        Laya.SoundManager.playSound("other1/gold.mp3");
+                    Laya.loader.load("loading/gold.mp3", Laya.Handler.create(this, function (data) {
+                        Laya.SoundManager.playSound("loading/gold.mp3");
                     }), null, Laya.Loader.SOUND);
                 }
                 let x = Math.round(this.owner.x);

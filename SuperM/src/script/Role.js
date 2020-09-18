@@ -214,7 +214,7 @@ export default class Role extends Laya.Script {
                 GameContext.playRoleAni("fly");
             } else {
                 let linearVelocity = GameContext.getLineSpeed();
-                if (GameContext.roleFlyDrop == true) {
+                if (GameContext.roleFlyDrop == true && GameContext.roleFlyState == true) {
                     GameContext.playRoleAni("fly");
                 } else if (GameContext.roleInGround) {
                     if (Math.abs(linearVelocity.x) <= 0.0000001) {
@@ -276,7 +276,7 @@ export default class Role extends Laya.Script {
         other.label == "BlueBrick" || other.label == "CiBrick3" || other.label == "CloudBrick" ||
          other.label == "DisBrick" || other.label == "DropBrick" || other.label == "GreenBrick" || 
          other.label == "MoveBrick" || other.label == "MuBrick" || other.label == "TanLiBrick")) {
-            Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+            Laya.SoundManager.playSound("loading/dingzhuang.mp3");
         }
         if (other.owner && other.label == "KeBody") {
             EventMgr.getInstance().postEvent(Events.Role_Get_Ke, {owner: other.owner});
@@ -306,8 +306,8 @@ export default class Role extends Laya.Script {
                             } else {
                                 if ( other.owner.name == "BrickMonster") {
                                     if (Utils.roleInCeil2(other.owner)) {
-                                        Utils.footMonster(other);
-                                        Laya.SoundManager.playSound("other1/posui.mp3");
+                                        // Utils.footMonster(other);
+                                        // Laya.SoundManager.playSound("loading/posui.mp3");
                                     } else {
                                         if (other.label == "MonsterFoot") {
                                             if (Utils.roleInFloor2(other.owner)) {
@@ -368,6 +368,10 @@ export default class Role extends Laya.Script {
                 return;
             }
 
+            if ( other.label == "Reward") {
+                return;
+            }
+
             if (other.label == "BossBody" || other.label == "BossHead") {
                 if (GameContext.bossState == 2) {
                     return;
@@ -406,12 +410,12 @@ export default class Role extends Laya.Script {
 
         if (GameContext.roleInWater == true) {
             this.triggerRoleInWaterJump();
-            Laya.SoundManager.playSound("other1/youyong.mp3");
+            Laya.SoundManager.playSound("loading/youyong.mp3");
         } 
         else if (GameContext.roleInGround == true) {
             GameContext.roleInGround = false;
             this.triggerRoleGroundJump();
-            Laya.SoundManager.playSound("other1/jump.mp3");
+            Laya.SoundManager.playSound("loading/jump.mp3");
         }
     }
 
@@ -547,6 +551,9 @@ export default class Role extends Laya.Script {
         }
         if (data == "down") {
             if ((true || GameContext.curFlyPower > 0) && GameContext.roleFlyState == true) {
+                if (GameContext.keSpr.visible) {
+                    this.shootKe();
+                }
                 GameContext.roleCommandFly = true;
                 GameContext.roleInGround = false;
             } else {

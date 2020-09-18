@@ -1,5 +1,4 @@
 {
-    "x":0,
     "type":"View",
     "selectedBox":2,
     "searchKey":"View",
@@ -199,6 +198,14 @@
                                 "target":3,
                                 "key":"skin",
                                 "index":0
+                            },
+                            {
+                                "value":"other/hongping (1).png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":3,
+                                "key":"skin",
+                                "index":7
                             }],
                         "scaleY":[
                             {
@@ -255,58 +262,34 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":-183,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"y",
                                 "index":0
-                            },
-                            {
-                                "value":-183,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"y",
-                                "index":10
                             }],
                         "x":[
                             {
-                                "value":-83.5,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"x",
                                 "index":0
-                            },
-                            {
-                                "value":-83.5,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"x",
-                                "index":10
                             }],
                         "skin":[
                             {
-                                "value":"other/rewardpingzi (1).png",
+                                "value":null,
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":0
-                            },
-                            {
-                                "value":"other/rewardpingzi (1).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":10
                             }],
                         "scaleY":[
                             {
-                                "value":1.5,
+                                "value":1,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -315,7 +298,7 @@
                             }],
                         "scaleX":[
                             {
-                                "value":1.5,
+                                "value":1,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -347,7 +330,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/effectpingzi (1).png",
+                                "value":"other/hongping (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -355,7 +338,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/effectpingzi (3).png",
+                                "value":"other/hongping (2).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -363,7 +346,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/effectpingzi (5).png",
+                                "value":"other/hongping (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -371,7 +354,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/effectpingzi (7).png",
+                                "value":"other/hongping (4).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -379,7 +362,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/effectpingzi (9).png",
+                                "value":"other/hongping (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -387,7 +370,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/effectpingzi (11).png",
+                                "value":"other/hongping (6).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -476,7 +459,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/rewardpingzi (2).png",
+                                "value":"other/lanping (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -538,58 +521,34 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":-183,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"y",
                                 "index":0
-                            },
-                            {
-                                "value":-183,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"y",
-                                "index":10
                             }],
                         "x":[
                             {
-                                "value":-83.5,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"x",
                                 "index":0
-                            },
-                            {
-                                "value":-83.5,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"x",
-                                "index":10
                             }],
                         "skin":[
                             {
-                                "value":"other/rewardpingzi (2).png",
+                                "value":null,
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":0
-                            },
-                            {
-                                "value":"other/rewardpingzi (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":10
                             }],
                         "scaleY":[
                             {
-                                "value":1.5,
+                                "value":1,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -598,7 +557,7 @@
                             }],
                         "scaleX":[
                             {
-                                "value":1.5,
+                                "value":1,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -630,7 +589,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/effectpingzi (1).png",
+                                "value":"other/lanping (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -638,7 +597,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/effectpingzi (3).png",
+                                "value":"other/lanping (2).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -646,7 +605,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/effectpingzi (5).png",
+                                "value":"other/lanping (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -654,7 +613,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/effectpingzi (7).png",
+                                "value":"other/lanping (4).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -662,7 +621,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/effectpingzi (9).png",
+                                "value":"other/lanping (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -670,7 +629,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/effectpingzi (11).png",
+                                "value":"other/lanping (6).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -759,7 +718,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/rewardpingzi (3).png",
+                                "value":"other/lvping (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -821,58 +780,34 @@
                     "keyframes":{
                         "y":[
                             {
-                                "value":-183,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"y",
                                 "index":0
-                            },
-                            {
-                                "value":-183,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"y",
-                                "index":10
                             }],
                         "x":[
                             {
-                                "value":-83.5,
+                                "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
                                 "key":"x",
                                 "index":0
-                            },
-                            {
-                                "value":-83.5,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"x",
-                                "index":10
                             }],
                         "skin":[
                             {
-                                "value":"other/rewardpingzi (3).png",
+                                "value":null,
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":0
-                            },
-                            {
-                                "value":"other/rewardpingzi (2).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":10
                             }],
                         "scaleY":[
                             {
-                                "value":1.5,
+                                "value":1,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -881,7 +816,7 @@
                             }],
                         "scaleX":[
                             {
-                                "value":1.5,
+                                "value":1,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
                                 "target":3,
@@ -913,7 +848,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/effectpingzi (1).png",
+                                "value":"other/lvping (1).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -921,7 +856,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/effectpingzi (3).png",
+                                "value":"other/lvping (2).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -929,7 +864,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/effectpingzi (5).png",
+                                "value":"other/lvping (3).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -937,7 +872,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/effectpingzi (7).png",
+                                "value":"other/lvping (4).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -945,7 +880,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/effectpingzi (9).png",
+                                "value":"other/lvping (5).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -953,7 +888,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/effectpingzi (11).png",
+                                "value":"other/lvping (6).png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

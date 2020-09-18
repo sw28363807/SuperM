@@ -1,3 +1,5 @@
+import GameContext from "../GameContext";
+
 export default class JoyStickButton extends Laya.Script {
 
     constructor() { 
@@ -8,7 +10,7 @@ export default class JoyStickButton extends Laya.Script {
         this.buttonA = this.owner.getChildByName("A");
         this.buttonB = this.owner.getChildByName("B");
         this.buttonC = this.owner.getChildByName("C");
-
+        this.flyGray = this.owner.getChildByName("flyGray");
         if (!Laya.Browser.onMiniGame) {
             this.J = 74;
             this.K = 75;
@@ -18,6 +20,17 @@ export default class JoyStickButton extends Laya.Script {
             this.KDown = false;
             this.LDown = false;
         }
+    }
+
+    onUpdate() {
+        if (GameContext.roleFlyState == true) {
+            this.buttonC.visible = true;
+            this.flyGray.visible = false;
+        } else {
+            this.buttonC.visible = false;
+            this.flyGray.visible = true;
+        }
+        
     }
 
     onKeyDown(e) {

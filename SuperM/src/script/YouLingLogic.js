@@ -22,6 +22,7 @@ export default class YouLingLogic extends Laya.Script {
         this.owner.maxAreaX = 5000;
         this.owner.lookupAreaX = 400;
         this.owner.speed = 3;
+        this.owner.renderAni.scaleX = -1 * Math.abs(this.owner.renderAni.scaleX);
     }
 
     onUpdate() {
@@ -49,7 +50,7 @@ export default class YouLingLogic extends Laya.Script {
                     this.owner.renderAni.play(0, true, "ani2");
                 }
                 let faceup = Utils.getSign(GameContext.role.x - this.owner.x);
-                let direct = Utils.getDirect(GameContext.role.x, GameContext.role.y - GameContext.role.height * GameContext.role.scaleY, this.owner.x, this.owner.y);
+                let direct = Utils.getDirect(GameContext.role.x, GameContext.role.y - GameContext.role.height/2 * GameContext.role.scaleY, this.owner.x, this.owner.y);
                 this.owner.rigidBody.setVelocity({x: direct.x * this.owner.speed, y: direct.y * this.owner.speed});
                 this.owner.renderAni.scaleX = faceup * Math.abs(this.owner.renderAni.scaleX);
             } else {

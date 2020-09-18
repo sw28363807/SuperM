@@ -16,7 +16,7 @@ export default class ShiWoNiuLogic extends Laya.Script {
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onMonsterFootDead);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onMonsterBulletDead);
         EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onMonsterKeBulletDead);
-
+        this.owner.isDie = false;
         this.speed = 2;
         this.owner.currentVelocity = {x: this.speed, y: 0};
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);
@@ -82,10 +82,10 @@ export default class ShiWoNiuLogic extends Laya.Script {
             return;
         }
         if (Laya.Browser.onMiniGame) {
-            Laya.SoundManager.playSound("other1/posui.mp3");
+            Laya.SoundManager.playSound("loading/posui.mp3");
         } else {
-            Laya.loader.load("other1/posui.mp3", Laya.Handler.create(this, function (data) {
-                Laya.SoundManager.playSound("other1/posui.mp3");
+            Laya.loader.load("loading/posui.mp3", Laya.Handler.create(this, function (data) {
+                Laya.SoundManager.playSound("loading/posui.mp3");
             }), null, Laya.Loader.SOUND);
         }
         this.goDie();
@@ -95,6 +95,7 @@ export default class ShiWoNiuLogic extends Laya.Script {
         if (this.owner.curAni != "die") {
             this.owner.curAni = "die";
             this.owner.state = 2;
+            this.owner.isDie = true;
             this.owner.rigidBody.getBody().SetActive(false);
             this.owner.renderMonster.play(0, false, "die");
             Laya.timer.once(8000, this, this.onMonsterLive);
@@ -104,6 +105,7 @@ export default class ShiWoNiuLogic extends Laya.Script {
     onMonsterLive() {
         if (this.owner.curAni != "live") {
             this.owner.curAni = "live";
+            this.owner.isDie = false;
             this.owner.renderMonster.play(0, false, "live");
             Laya.timer.once(1000, this, this.onResetMonster);
         }

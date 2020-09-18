@@ -1,5 +1,6 @@
 import EventMgr from "./script/EventMgr";
 import Events from "./script/Events";
+import LoadingLogic from "./script/LoadingLogic";
 
 export default class GameContext extends Laya.Script {
 
@@ -42,13 +43,13 @@ export default class GameContext extends Laya.Script {
         } else if (GameContext.bodyState == 1) {
             GameContext.setRoleState(0);
             GameContext.setBodyState(0);
-            GameContext.changeSmallEffect();
         }
+        GameContext.changeSmallEffect();
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
         GameContext.gameRoleNumber--;
-        Laya.SoundManager.playSound("other1/siwang.mp3");
+        Laya.SoundManager.playSound("loading/siwang.mp3");
         if (lastBodyState == 0) {
             GameContext.isDie = true;
             Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
@@ -58,7 +59,7 @@ export default class GameContext extends Laya.Script {
                 black.y = 0;
                 black.zOrder = 9999999;
                 black.alpha = 0;
-                Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
+                Laya.Tween.to(black,{alpha: 1}, 500, null, Laya.Handler.create(null, function(){
                     if (GameContext.resetRolePoint) {
                         GameContext.setRoleSensorEnabled(false);
                         GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
@@ -71,10 +72,22 @@ export default class GameContext extends Laya.Script {
                         GameContext.walkDirect = null;
                         GameContext.roleIsDrop = false;
                     }
-                    Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
-                        black.removeSelf();
-                        black.destroy();
-                    }));
+                    if (GameContext.gameRoleNumber <= 0) {
+                        GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
+                        GameContext.gameRoleBodyState = 0;
+                        GameContext.gameRoleState = 0;
+                        GameContext.gameGoldNumber = 0;
+                        GameContext.roleFen = 0;
+                        GameContext.roleFlyState = false;
+                        GameContext.roleFlyDrop = false;
+                        LoadingLogic.loadScene("scene/Level1_1.scene");
+                    }
+                    Laya.timer.once(1000, this, function() {
+                        Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
+                            black.removeSelf();
+                            black.destroy();
+                        }));
+                    });
                 }));
             }));
         } else {
@@ -114,8 +127,8 @@ export default class GameContext extends Laya.Script {
         } else if (GameContext.bodyState == 1) {
             GameContext.setRoleState(0);
             GameContext.setBodyState(0);
-            GameContext.changeSmallEffect();
         }
+        GameContext.changeSmallEffect();
         if (GameContext.roleShuiGuanState == 1) {
             GameContext.roleShuiGuanState = 0;
         }
@@ -211,6 +224,11 @@ export default class GameContext extends Laya.Script {
         }
         if (GameContext.roleCurAni == ani) {
             return;
+        }
+        if (ani == "fly") {
+            Laya.SoundManager.playSound("loading/youyong.mp3", 0);
+        } else {
+            Laya.SoundManager.stopSound("loading/youyong.mp3");
         }
         if (loop == null || loop == undefined) {
             loop = true;
@@ -418,7 +436,7 @@ GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
 GameContext.resetRolePoint = null;
 GameContext.mapMaxX = 0;
-GameContext.gameRoleNumberInit = 999;
+GameContext.gameRoleNumberInit = 10;
 GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
 GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 0;

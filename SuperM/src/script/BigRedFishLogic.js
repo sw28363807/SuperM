@@ -69,7 +69,7 @@ export default class BigRedFishLogic extends Laya.Script {
         let direct = this.getDirectWithRole();
         let sign = Utils.getSign(direct.x);
         this.setSpeed(sign * jumpX, - jumpY);
-        Laya.SoundManager.playSound("other1/tiaoshui.mp3");
+        Laya.SoundManager.playSound("loading/tiaoshui.mp3");
     }
 
     setFishPosition(x, y) {
@@ -117,10 +117,19 @@ export default class BigRedFishLogic extends Laya.Script {
                 let distanceWithRole = this.getDistanceWithRoleX();
                 let jumpX = this.owner.jumpSpeedX;
                 let jumpY = this.owner.jumpSpeedY;
-                if (distanceWithRole < 200) {
-                    jumpY = jumpY * 1.3;
+                if (distanceWithRole < 100) {
+                    jumpY = jumpY * 0.8;
+                    jumpX = jumpX * 0.2;
+                } else if (distanceWithRole < 200) {
+                    jumpY = jumpY * 0.9;
+                    jumpX = jumpX * 0.3;
+                } else if (distanceWithRole < 300) {
+                    jumpY = jumpY * 1;
+                    jumpX = jumpX * 0.4;
+                } else if (distanceWithRole < 400) {
+                    jumpY = jumpY * 1.1;
                     jumpX = jumpX * 0.5;
-                }
+                } 
                 if (GameContext.BigRedFishCanJump == false) {
                     this.owner.state = 1;
                 } else {
@@ -141,7 +150,7 @@ export default class BigRedFishLogic extends Laya.Script {
                 this.setFishPositionY(this.owner.finalStartPointY);
                 this.setSpeed(0, 0);
                 this.owner.renderAni.rotation = 0;
-                Laya.SoundManager.playSound("other1/tiaoshui.mp3");
+                Laya.SoundManager.playSound("loading/tiaoshui.mp3");
             }
         } else if (this.owner.state == 3) {
             if ( this.owner.curAni != "ani1") {

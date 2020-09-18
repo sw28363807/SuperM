@@ -50,7 +50,7 @@ export default class MoveBrickLogic extends Laya.Script {
         if (script.moveSpeed) {
             this.owner.moveSpeed = script.moveSpeed;
         } else {
-            this.owner.moveSpeed = 4;
+            this.owner.moveSpeed = 2.5;
         }
 
         if (script.movePoints) {
@@ -154,6 +154,7 @@ export default class MoveBrickLogic extends Laya.Script {
         this.owner.nextMovePointsIndex = curPintIndex;
         if (processSpeed) {
             this.processMoveSpeed();
+            GameContext.setRoleSpeed(0.01, 0.01);
         }
     }
 

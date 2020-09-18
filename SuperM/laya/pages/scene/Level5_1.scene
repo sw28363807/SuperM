@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":86,
+    "selecteID":15,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":9494,
+    "maxID":9497,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -71,13 +71,14 @@
             "props":{"y":-8312,"x":-44,"width":600,"name":"left","height":10000},
             "nodeParent":2,
             "label":"left",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":15,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -95,6 +96,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -528,6 +530,36 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":9490,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":43,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":5094,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9495,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":44,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":5094,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9496,
                     "child":[
                         ]
                 }],
@@ -1072,6 +1104,19 @@
                     "child":[
                         ],
                     "$HIDDEN":false
+                },
+                {
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":13,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":6386,
+                    "label":"Animation(PassLevelBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":9494,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {

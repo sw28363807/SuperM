@@ -6,7 +6,7 @@ export default class WenhaoLogic extends Laya.Script {
     constructor() { 
         super();
         // 1 蘑菇 2 金币 3蓝瓶子
-        /** @prop {name:wenhaoType, tips:"问号类型1 蘑菇 2 金币 3 蓝瓶子 4 绿瓶子", type:Number, default:1}*/
+        /** @prop {name:wenhaoType, tips:"问号类型1 蘑菇 2 金币 3 蓝瓶子 4 绿瓶子 5 强制蘑菇", type:Number, default:1}*/
         let wenhaoType = 1;
     }
 
@@ -15,12 +15,12 @@ export default class WenhaoLogic extends Laya.Script {
             if (other && other.owner && other.label == "KeBullet") {
                 if (Math.abs(GameContext.role.x - other.owner.x) < 1500) {
                     if (this.owner.state == 1) {
-                        Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+                        Laya.SoundManager.playSound("loading/dingzhuang.mp3");
                     } else {
                         if (this.owner.wenhaoType == 2) {
-                            Laya.SoundManager.playSound("other1/gold.mp3");
+                            Laya.SoundManager.playSound("loading/gold.mp3");
                         } else {
-                            Laya.SoundManager.playSound("other1/dingchu.mp3");
+                            Laya.SoundManager.playSound("loading/dingchu.mp3");
                         }
                     }
                 }
@@ -33,28 +33,20 @@ export default class WenhaoLogic extends Laya.Script {
                     return;
                 }
                 if (this.owner.state == 0) {
-                    if (Laya.Browser.onMiniGame) {
-                        if (this.owner.wenhaoType != 2) {
-                            Laya.SoundManager.playSound("other1/dingchu.mp3");
-                        }
-                    } else {
-                        if (this.owner.wenhaoType != 2) {
-                            Laya.loader.load("other1/dingchu.mp3", Laya.Handler.create(this, function (data) {
-                                Laya.SoundManager.playSound("other1/dingchu.mp3");
-                            }), null, Laya.Loader.SOUND);
-                        }
-                    }   
+                    if (this.owner.wenhaoType != 2) {
+                        Laya.SoundManager.playSound("loading/dingchu.mp3");
+                    }
                 } else {
-                    Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+                    Laya.SoundManager.playSound("loading/dingzhuang.mp3");
                 }
-                if (this.owner.wenhaoType == 1) {
+                if (this.owner.wenhaoType == 1 || this.owner.wenhaoType == 5) {
                     this.triggerMoGu();
                 } else if (this.owner.wenhaoType == 2) {
                     if (this.owner.state == 0) {
                         this.owner.state = 1;
                         let owner = this.owner;
                         let render = this.owner.getChildByName("render");
-                        Laya.SoundManager.playSound("other1/gold.mp3");
+                        Laya.SoundManager.playSound("loading/gold.mp3");
                         if (render) {
                             render.play(0, true, "ani3");
                             Laya.timer.once(100, this, function() {

@@ -1,12 +1,14 @@
 D .
 D joystick
 P B31F2F57 btn1.png
-P 4D71BC1E btn2.png
-P E06F1AD0 DP1.png
-P 7C5FFE97 feedback_btn.png
+P 7CC02A6A DP1.png
+P 74615949 flybtn (1).png
 P F29E0498 jindu (1).png
 P F2C63922 jindu (2).png
-P 576A263A yangan.png
+P 7EE08476 yangan.png
+P 4AA3FF56 zidanbtn (1).png
+P 9789B08A zidanbtn (2).png
+P 1DD3D264 zidanbtn (3).png
 D loading
 D monster
 P BC95C876 beike (1).png
@@ -118,12 +120,6 @@ P FB63EBF3 disBrick (2).png
 P F8EE521F disBrick (3).png
 P 201185A9 disBrick (4).png
 P 89E83E8B dropBrick.png
-P 5924DA2B effectpingzi (1).png
-P F79CA5A9 effectpingzi (11).png
-P 7DC7A1CC effectpingzi (3).png
-P C811FCC0 effectpingzi (5).png
-P 810DCFD1 effectpingzi (7).png
-P 3BCF70F6 effectpingzi (9).png
 P 74E5BAA1 goldBrick (1).png
 P 2D84AE1C goldBrick (10).png
 P 65EC531F goldBrick (11).png
@@ -138,6 +134,12 @@ P 0441F45A goldBrick (9).png
 P BB68797D green.png
 P E72D5BAE ground.png
 P 9FFE84F2 ground1.png
+P 93B21FB4 hongping (1).png
+P C7298045 hongping (2).png
+P 54189C38 hongping (3).png
+P 3D555312 hongping (4).png
+P 25B174C3 hongping (5).png
+P 52532D26 hongping (6).png
 P 79B4E213 jb (1).png
 P EF6A1239 jb (11).png
 P 5081154B jb (13).png
@@ -149,6 +151,18 @@ P 79B4E213 jb (3).png
 P FC96D6D9 jb (5).png
 P 29FEC5F9 jb (7).png
 P 016BDACD jb (9).png
+P B390A83E lanping (1).png
+P 3FD232B3 lanping (2).png
+P B19E30AA lanping (3).png
+P BA805C08 lanping (4).png
+P 17E121A7 lanping (5).png
+P 91249018 lanping (6).png
+P 86220A5E lvping (1).png
+P AADD8F5C lvping (2).png
+P 6E280363 lvping (3).png
+P 7D1A8E49 lvping (4).png
+P E06438A2 lvping (5).png
+P 8101CE0D lvping (6).png
 P 1EC77A66 mu.png
 P 7F04BFB9 pass.png
 P 50157026 posui (1).png
@@ -161,9 +175,6 @@ P A63DCF1F posui (7).png
 P 68749DDD reward.png
 P 4A6F9A67 reward2.png
 P AB0386F2 rewardFrame.png
-P 3098888C rewardpingzi (1).png
-P 8F9CAC1D rewardpingzi (2).png
-P 45F408BE rewardpingzi (3).png
 P 8C4B19FE Shuiguan.png
 P E3043DC1 shuiguan2.png
 P D3338000 tlzhuan (1).png

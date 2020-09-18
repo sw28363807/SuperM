@@ -8,7 +8,7 @@ export default class HanbaoLogic extends Laya.Script {
 
     constructor() { 
         super();
-        /** @prop {name:finalWenhaoType, tips:"1 蘑菇 2 金币 3蓝瓶子 4绿瓶子", type:Int, default:-1}*/
+        /** @prop {name:finalWenhaoType, tips:"1 蘑菇 2 金币 3蓝瓶子 4绿瓶子 5强制汉堡", type:Int, default:-1}*/
         let finalWenhaoType = -1;
     }
     
@@ -50,12 +50,14 @@ export default class HanbaoLogic extends Laya.Script {
             aniA = "ani1";
             aniB = "ani2";
             this.owner.rewardType = 1;
-            if (GameContext.gameRoleBodyState == 0) {
-            } else {
-                aniA = "ani11";
-                aniB = "ani22";
-                this.owner.rewardType = 2;
-                this.owner.isMove = false;
+            if (this.owner.finalWenhaoType != 5) {
+                if (GameContext.gameRoleBodyState == 0) {
+                } else {
+                    aniA = "ani11";
+                    aniB = "ani22";
+                    this.owner.rewardType = 2;
+                    this.owner.isMove = false;
+                }
             }
         } else if (this.owner.wenhaoType == 3) {
             aniA = "ani111";
@@ -96,7 +98,7 @@ export default class HanbaoLogic extends Laya.Script {
         } else if (other && other.label == "RoleHead" || 
         other.label == "RoleFoot" ||
          other.label == "RoleBody") {
-             Laya.SoundManager.playSound("other1/yaoping.mp3");
+             Laya.SoundManager.playSound("loading/yaoping.mp3");
              if (this.owner.rewardType == 4) {
                 GameContext.gameRoleNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);

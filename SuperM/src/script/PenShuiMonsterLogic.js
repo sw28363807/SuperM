@@ -21,7 +21,7 @@ export default class PenShuiMonsterLogic extends Laya.Script {
         this.owner.state = 1; // 1 等待状态 2 准备状态 3 发射状态
 
         this.owner.maxIdleCount = 50;
-        this.owner.maxPreCount = 50;
+        this.owner.maxPreCount = 100;
         this.owner.maxAttackCount = 80;
 
         this.resetCount();

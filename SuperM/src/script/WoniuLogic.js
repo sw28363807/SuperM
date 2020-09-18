@@ -30,7 +30,7 @@ export default class WoniuLogic extends Laya.Script {
         if (data.owner != this.owner) {
             return;
         }
-        Laya.SoundManager.playSound("other1/caidiren.mp3");
+        Laya.SoundManager.playSound("loading/caidiren.mp3");
         this.removeThisMonster();
     }
 

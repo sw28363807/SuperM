@@ -5,13 +5,19 @@ export default class LoadingLogic extends Laya.Script {
     }
     
     onEnable() {
-
+        
     }
 
+    onStart() {
+        Laya.SoundManager.playSound("loading/little.mp3", 0);
+    }
 
     static loadScene(scene, handler) {
         if (LoadingLogic.curScene != "") {
             if (LoadingLogic.curScene == scene) {
+                if (handler) {
+                    handler.run();
+                }
                 return;
             }
         }
@@ -32,6 +38,7 @@ export default class LoadingLogic extends Laya.Script {
     }
 
     onDisable() {
+        
     }
     
 }

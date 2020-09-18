@@ -102,7 +102,7 @@
             "x":15,
             "type":"Animation",
             "searchKey":"Animation,penEffect",
-            "props":{"y":-55,"x":-442,"source":"anim/PenEffect.ani","presetID":7,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab","name":"penEffect"},
+            "props":{"y":-56,"x":-219,"source":"anim/PenEffect.ani","scaleX":0.5,"presetID":7,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab","name":"penEffect"},
             "nodeParent":1697,
             "label":"penEffect",
             "isDirectory":false,

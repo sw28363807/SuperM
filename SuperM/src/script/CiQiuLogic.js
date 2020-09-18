@@ -85,7 +85,7 @@ export default class CiQiuLogic extends Laya.Script {
             }
             this.owner.rigidBody.setVelocity({x: Utils.getSign(direct.x) * speedX, y:  -speedY});
             this.owner.state = 3;
-            Laya.SoundManager.playSound("other1/tiaoshui.mp3");
+            Laya.SoundManager.playSound("loading/tiaoshui.mp3");
         } else if (this.owner.state == 3) {
             let x = this.owner.x;
             let y = this.owner.y;
@@ -95,7 +95,7 @@ export default class CiQiuLogic extends Laya.Script {
                 this.owner.rigidBody.getBody().SetPositionXY(x/50, this.owner.startPoint.y/50);
                 this.owner.louTou = false;
                 this.owner.state = 4;
-                Laya.SoundManager.playSound("other1/tiaoshui.mp3");
+                Laya.SoundManager.playSound("loading/tiaoshui.mp3");
             }
         } else if (this.owner.state == 4) {
             let roleX = GameContext.role.x;

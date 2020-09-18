@@ -23,41 +23,15 @@ export default class PassLevelBrickLogic extends Laya.Script {
 
     onTriggerEnter(other, self, contact) {
         if (other.label == "RoleHead") {
-            if (Laya.Browser.onMiniGame) {
-                Laya.SoundManager.playSound("other1/guoguan.mp3");
-            } else {
-                Laya.loader.load("other1/guoguan.mp3", Laya.Handler.create(this, function (data) {
-                    Laya.SoundManager.playSound("other1/guoguan.mp3");
-                }), null, Laya.Loader.SOUND);
-            }
+            Laya.SoundManager.stopMusic();
+            Laya.SoundManager.playSound("loading/guoguan.mp3");
             GameContext.gameRoleNumber++;
+            this.ani.play(0, false, "ani2");
+            Laya.timer.once(500, this, function() {
+                this.ani.play(0, true, "ani3");
+            });
             EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
-            let a = Math.random();
-            let path = "";
-            if (a < 0.3) {
-                path = "other/rewardpingzi (1).png";
-            } else if (a > 0.6) {
-                path = "other/rewardpingzi (2).png";
-            } else {
-                path = "other/rewardpingzi (3).png";
-            }
-
-            let spr = new Laya.Sprite();
-            spr.loadImage(path, Laya.Handler.create(this, function() {
-                
-            }));
-            this.ani = this.owner.getChildByName("render");
-            this.owner.parent.addChild(spr);
-            spr.x = this.owner.x + 50;
-            spr.y = this.owner.y + 50;
-            spr.pivotX = 90;
-            spr.pivotY = 125;
-            let y = spr.y;
-            Laya.Tween.to(spr, {y:y - 200, scaleX: 1.5, scaleY: 1.5 }, 500, null, Laya.Handler.create(this, function() {
-                this.ani.removeSelf();
-            }));
-            this.ani.visible = false;
-            
+            Laya.SoundManager.playSound("other1/yanhua.mp3");
             for (let index = 0; index < 6; index++) {
                 let anim =  this.owner.getChildByName("yanhua"+String(index + 1));
                 anim.visible = true;
@@ -66,6 +40,7 @@ export default class PassLevelBrickLogic extends Laya.Script {
     }
     
     onEnable() {
+        this.ani = this.owner.getChildByName("render");
     }
 
     onStart() {

@@ -71,6 +71,7 @@ export default class ShuiGuanLogic extends Laya.Script {
     }
 
     inShuiguan() {
+        Laya.SoundManager.playSound("loading/shuiguan.mp3");
         GameContext.role.visible = false;
         this.owner.roleImg.y = 0;
         let sceneName = this.owner.sceneName;
@@ -87,7 +88,6 @@ export default class ShuiGuanLogic extends Laya.Script {
                 Laya.Tween.to(black,{alpha: 1}, 400, null, Laya.Handler.create(null, function(){
                     black.removeSelf();
                     black.destroy();
-                    Laya.SoundManager.playSound("other1/shuiguan.mp3");
                     LoadingLogic.loadScene(sceneName);
                 }));
             }));

@@ -32,7 +32,7 @@ export default class BrickGoldLogic extends Laya.Script {
                 } else {
                     let render = this.owner.getChildByName("render");
                     render.play(0, false, "ani3");
-                    Laya.SoundManager.playSound("other1/dingzhuang.mp3");
+                    Laya.SoundManager.playSound("loading/dingzhuang.mp3");
                 }
                 GameContext.brokenBrickTick = 5;
             }
@@ -51,8 +51,8 @@ export default class BrickGoldLogic extends Laya.Script {
             return;
         }
         this.owner.hasBroken = true;
-        Laya.SoundManager.playSound("other1/posui.mp3");
-        Laya.SoundManager.playSound("other1/gold.mp3");
+        Laya.SoundManager.playSound("loading/posui.mp3");
+        Laya.SoundManager.playSound("loading/gold.mp3");
         Utils.createBrickBrokenEffect(this.owner);
         Utils.createGoldEffect(this.owner);
     }

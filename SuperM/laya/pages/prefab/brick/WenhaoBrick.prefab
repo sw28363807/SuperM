@@ -2,7 +2,6 @@
     "x":0,
     "type":"Box",
     "selectedBox":1595,
-    "selecteID":1588,
     "searchKey":"Box,WenhaoBrick",
     "props":{"zOrder":1,"y":0,"x":0,"width":120,"scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab","name":"WenhaoBrick","isPresetRoot":true,"height":80},
     "nodeParent":-1,

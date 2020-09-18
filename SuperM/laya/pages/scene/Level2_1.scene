@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":86,
+    "selecteID":15,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":8129,
+    "maxID":8167,
     "label":"gameScene",
     "isOpen":true,
     "isDirectory":true,
@@ -21,13 +21,14 @@
             "props":{"y":752,"x":0,"width":35000,"name":"bottom","height":1000},
             "nodeParent":2,
             "label":"bottom",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":4,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -45,6 +46,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -61,7 +63,7 @@
                     "$LOCKED":false,
                     "$HIDDEN":false
                 }],
-            "$LOCKED":false,
+            "$LOCKED":true,
             "$HIDDEN":false
         },
         {
@@ -83,7 +85,7 @@
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"y":0,"x":0,"width":600,"label":"Wall","height":1800},
+                    "props":{"y":0,"x":0,"width":600,"label":"Wall","height":10000},
                     "nodeParent":15,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -123,18 +125,19 @@
             "props":{"y":-5000,"x":31956,"width":400,"name":"right","height":10000},
             "nodeParent":2,
             "label":"right",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":70,
             "child":[
                 {
+                    "x":30,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
                     "removeAble":true,
-                    "props":{"y":0,"x":0,"width":400,"label":"Wall","height":2000},
+                    "props":{"y":0,"x":0,"width":400,"label":"Wall","height":10000},
                     "nodeParent":70,
                     "label":"BoxCollider",
                     "isDirectory":false,
@@ -147,6 +150,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -243,7 +247,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box",
-            "props":{"y":2,"x":-36,"width":30000,"height":750},
+            "props":{"y":-63,"x":-3448,"width":30000,"height":750},
             "nodeParent":2,
             "label":"Box",
             "isOpen":true,
@@ -262,7 +266,7 @@
             "selectedBox":54,
             "selecteID":70,
             "searchKey":"Box",
-            "props":{"y":631,"x":845,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":628,"x":808,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",
@@ -316,7 +320,8 @@
                     "hasChild":false,
                     "compId":7914,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"Box",
@@ -342,7 +347,8 @@
                             "hasChild":false,
                             "compId":7915,
                             "child":[
-                                ]
+                                ],
+                            "$HIDDEN":false
                         },
                         {
                             "type":"Animation",
@@ -355,8 +361,10 @@
                             "hasChild":false,
                             "compId":97,
                             "child":[
-                                ]
-                        }]
+                                ],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -371,7 +379,8 @@
                     "hasChild":false,
                     "compId":101,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -386,7 +395,8 @@
                     "hasChild":false,
                     "compId":104,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -401,7 +411,8 @@
                     "hasChild":false,
                     "compId":7969,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -416,7 +427,8 @@
                     "hasChild":false,
                     "compId":8088,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -431,7 +443,8 @@
                     "hasChild":false,
                     "compId":8089,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -446,7 +459,8 @@
                     "hasChild":false,
                     "compId":8090,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -461,7 +475,8 @@
                     "hasChild":false,
                     "compId":8091,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -476,7 +491,8 @@
                     "hasChild":false,
                     "compId":8092,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -491,7 +507,8 @@
                     "hasChild":false,
                     "compId":8093,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -506,7 +523,8 @@
                     "hasChild":false,
                     "compId":8094,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -521,7 +539,8 @@
                     "hasChild":false,
                     "compId":8095,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "type":"CircleCollider",
@@ -536,6 +555,37 @@
                     "hasChild":false,
                     "compId":8096,
                     "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":43,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":7913,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8165,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":44,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":7913,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8166,
+                    "child":[
                         ]
                 }],
             "animations":[
@@ -546,7 +596,8 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -2274,7 +2325,7 @@
             "selectedBox":1602,
             "selecteID":1601,
             "searchKey":"Box",
-            "props":{"y":466,"x":3414,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":518,"x":3414,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -2388,7 +2439,7 @@
             "selectedBox":1595,
             "selecteID":1588,
             "searchKey":"Box",
-            "props":{"y":466,"x":3497,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+            "props":{"y":518,"x":3497,"presetID":1,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
             "nodeParent":2,
             "maxID":1596,
             "label":"WenhaoBrick",
@@ -4291,7 +4342,7 @@
             "selectedBox":1602,
             "selecteID":1601,
             "searchKey":"Box",
-            "props":{"y":694,"x":6173,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":697,"x":6172,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -4405,7 +4456,7 @@
             "selectedBox":5106,
             "selecteID":5114,
             "searchKey":"Box",
-            "props":{"y":694,"x":6262,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
+            "props":{"y":697,"x":6343,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
             "nodeParent":2,
             "maxID":5117,
             "label":"BrickMonster",
@@ -4571,7 +4622,7 @@
             "selectedBox":1602,
             "selecteID":1601,
             "searchKey":"Box",
-            "props":{"y":695,"x":6350,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":697,"x":6257,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -5367,7 +5418,7 @@
             "selectedBox":279,
             "selecteID":280,
             "searchKey":"Sprite",
-            "props":{"y":-153,"x":6801,"presetID":1,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
+            "props":{"y":-77,"x":6786,"presetID":1,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
             "nodeParent":2,
             "maxID":282,
             "label":"MuBrick",
@@ -7646,7 +7697,7 @@
             "selectedBox":1602,
             "selecteID":1601,
             "searchKey":"Box",
-            "props":{"y":146,"x":9549,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
+            "props":{"y":146,"x":9634,"presetID":1,"preset":"laya/pages/prefab/brick/BrickGold.prefab"},
             "nodeParent":2,
             "maxID":1603,
             "label":"BrickGold",
@@ -7760,7 +7811,7 @@
             "selectedBox":5106,
             "selecteID":5114,
             "searchKey":"Box",
-            "props":{"y":146,"x":9634,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
+            "props":{"y":146,"x":9549,"presetID":1,"preset":"laya/pages/prefab/monster/BrickMonster.prefab"},
             "nodeParent":2,
             "maxID":5117,
             "label":"BrickMonster",
@@ -9676,7 +9727,7 @@
             "type":"Animation",
             "selectedBox":122,
             "searchKey":"Animation",
-            "props":{"y":-230,"x":11932,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
+            "props":{"y":-240,"x":11952,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
             "nodeParent":2,
             "maxID":129,
             "label":"TanLiBrick",
@@ -25802,7 +25853,7 @@
             "type":"Animation",
             "selectedBox":122,
             "searchKey":"Animation",
-            "props":{"y":228.5,"x":25018,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
+            "props":{"y":268.5,"x":24977,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
             "nodeParent":2,
             "maxID":129,
             "label":"TanLiBrick",
@@ -28067,6 +28118,20 @@
                     "child":[
                         ],
                     "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation",
+                    "props":{"presetID":13,"preset":"laya/pages/prefab/brick/PassLevelBrick.prefab"},
+                    "nodeParent":6386,
+                    "label":"Animation(PassLevelBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8145,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {
@@ -28086,7 +28151,7 @@
             "selectedBox":279,
             "selecteID":280,
             "searchKey":"Sprite",
-            "props":{"y":83,"x":25316,"presetID":1,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
+            "props":{"y":142,"x":25212,"presetID":1,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
             "nodeParent":2,
             "maxID":282,
             "label":"MuBrick",
@@ -28147,7 +28212,7 @@
             "selectedBox":279,
             "selecteID":280,
             "searchKey":"Sprite",
-            "props":{"y":-78,"x":25656,"presetID":1,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
+            "props":{"y":-113,"x":25711,"presetID":1,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
             "nodeParent":2,
             "maxID":282,
             "label":"MuBrick",
@@ -48114,7 +48179,7 @@
             "type":"Box",
             "selectedBox":1491,
             "searchKey":"Box",
-            "props":{"y":31,"x":25523,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
+            "props":{"y":119.5,"x":25400,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
             "nodeParent":2,
             "maxID":1506,
             "label":"RedMonsterFly",
@@ -48264,7 +48329,7 @@
             "type":"Box",
             "selectedBox":4559,
             "searchKey":"Box",
-            "props":{"y":-254,"x":25423,"presetID":1,"preset":"laya/pages/prefab/ai/AITop.prefab"},
+            "props":{"y":-165,"x":25300,"presetID":1,"preset":"laya/pages/prefab/ai/AITop.prefab"},
             "nodeParent":2,
             "maxID":4566,
             "label":"AITop",
@@ -48322,7 +48387,7 @@
             "type":"Box",
             "selectedBox":4558,
             "searchKey":"Box",
-            "props":{"y":202,"x":25435,"presetID":1,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
+            "props":{"y":291,"x":25312,"presetID":1,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
             "nodeParent":2,
             "maxID":4568,
             "label":"AIBottom",
@@ -48382,7 +48447,7 @@
             "type":"Box",
             "selectedBox":1491,
             "searchKey":"Box",
-            "props":{"y":-81,"x":25850,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
+            "props":{"y":-105,"x":25880,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonsterFly.prefab"},
             "nodeParent":2,
             "maxID":1506,
             "label":"RedMonsterFly",
@@ -48532,7 +48597,7 @@
             "type":"Box",
             "selectedBox":4559,
             "searchKey":"Box",
-            "props":{"y":-366,"x":25750,"presetID":1,"preset":"laya/pages/prefab/ai/AITop.prefab"},
+            "props":{"y":-390,"x":25780,"presetID":1,"preset":"laya/pages/prefab/ai/AITop.prefab"},
             "nodeParent":2,
             "maxID":4566,
             "label":"AITop",
@@ -48590,7 +48655,7 @@
             "type":"Box",
             "selectedBox":4558,
             "searchKey":"Box",
-            "props":{"y":90,"x":25762,"presetID":1,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
+            "props":{"y":66,"x":25792,"presetID":1,"preset":"laya/pages/prefab/ai/AIBottom.prefab"},
             "nodeParent":2,
             "maxID":4568,
             "label":"AIBottom",
@@ -52704,7 +52769,8 @@
             "hasChild":false,
             "compId":7916,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -52718,7 +52784,8 @@
             "hasChild":false,
             "compId":7917,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53063,7 +53130,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":35,"x":-367,"texture":"other1/po1.png"},
+                    "props":{"y":35,"x":-367,"texture":"other1/po1.png","scaleY":2,"scaleX":2},
                     "nodeParent":7950,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -53079,7 +53146,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-320,"x":632,"texture":"other1/po2.png"},
+                    "props":{"y":-320,"x":632,"texture":"other1/po2.png","scaleY":2,"scaleX":2},
                     "nodeParent":7950,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -53095,7 +53162,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-320,"x":1632,"texture":"other1/po3.png"},
+                    "props":{"y":-320,"x":1632,"texture":"other1/po3.png","scaleY":2,"scaleX":2},
                     "nodeParent":7950,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -53138,7 +53205,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":75,"x":0,"texture":"other1/popo1 (1).png"},
+                    "props":{"y":75,"x":0,"texture":"other1/popo1 (1).png","scaleY":2,"scaleX":2},
                     "nodeParent":7959,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -53154,7 +53221,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-1,"x":1000,"texture":"other1/popo1 (2).png"},
+                    "props":{"y":-1,"x":1000,"texture":"other1/popo1 (2).png","scaleY":2,"scaleX":2},
                     "nodeParent":7959,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -53197,7 +53264,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"texture":"other1/ppp3.png"},
+                    "props":{"texture":"other1/ppp3.png","scaleY":2,"scaleX":2},
                     "nodeParent":7967,
                     "label":"Sprite",
                     "isOpen":true,
@@ -53250,7 +53317,8 @@
                     "hasChild":false,
                     "compId":7972,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53267,7 +53335,8 @@
                     "hasChild":false,
                     "compId":7973,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53284,7 +53353,8 @@
                     "hasChild":false,
                     "compId":7974,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53311,7 +53381,8 @@
                             "id":1,
                             "frameRate":24,
                             "action":0
-                        }]
+                        }],
+                    "$HIDDEN":false
                 }],
             "animations":[
                 {
@@ -53321,7 +53392,8 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53353,7 +53425,8 @@
                     "hasChild":false,
                     "compId":7977,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53370,7 +53443,8 @@
                     "hasChild":false,
                     "compId":7978,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53387,7 +53461,8 @@
                     "hasChild":false,
                     "compId":7979,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53414,7 +53489,8 @@
                             "id":1,
                             "frameRate":24,
                             "action":0
-                        }]
+                        }],
+                    "$HIDDEN":false
                 }],
             "animations":[
                 {
@@ -53424,7 +53500,8 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53456,7 +53533,8 @@
                     "hasChild":false,
                     "compId":7982,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53473,7 +53551,8 @@
                     "hasChild":false,
                     "compId":7983,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53490,7 +53569,8 @@
                     "hasChild":false,
                     "compId":7984,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -53517,7 +53597,8 @@
                             "id":1,
                             "frameRate":24,
                             "action":0
-                        }]
+                        }],
+                    "$HIDDEN":false
                 }],
             "animations":[
                 {
@@ -53527,7 +53608,8 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53541,7 +53623,8 @@
             "hasChild":false,
             "compId":7986,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53555,7 +53638,8 @@
             "hasChild":false,
             "compId":7987,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53569,7 +53653,8 @@
             "hasChild":false,
             "compId":7988,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53583,7 +53668,8 @@
             "hasChild":false,
             "compId":7989,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53597,7 +53683,8 @@
             "hasChild":false,
             "compId":7990,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53611,7 +53698,8 @@
             "hasChild":false,
             "compId":7991,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53625,7 +53713,8 @@
             "hasChild":false,
             "compId":7992,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53639,7 +53728,8 @@
             "hasChild":false,
             "compId":7993,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53653,7 +53743,8 @@
             "hasChild":false,
             "compId":7994,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53667,7 +53758,8 @@
             "hasChild":false,
             "compId":7995,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53681,7 +53773,8 @@
             "hasChild":false,
             "compId":7996,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53695,7 +53788,8 @@
             "hasChild":false,
             "compId":7997,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53709,7 +53803,8 @@
             "hasChild":false,
             "compId":7998,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53723,7 +53818,8 @@
             "hasChild":false,
             "compId":7999,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53737,7 +53833,8 @@
             "hasChild":false,
             "compId":8000,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53751,7 +53848,8 @@
             "hasChild":false,
             "compId":8001,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53765,7 +53863,8 @@
             "hasChild":false,
             "compId":8002,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53779,7 +53878,8 @@
             "hasChild":false,
             "compId":8003,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53793,7 +53893,8 @@
             "hasChild":false,
             "compId":8004,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53807,7 +53908,8 @@
             "hasChild":false,
             "compId":8005,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53821,7 +53923,8 @@
             "hasChild":false,
             "compId":8006,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53835,7 +53938,8 @@
             "hasChild":false,
             "compId":8007,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53849,7 +53953,8 @@
             "hasChild":false,
             "compId":8008,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53863,7 +53968,8 @@
             "hasChild":false,
             "compId":8009,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53877,7 +53983,8 @@
             "hasChild":false,
             "compId":8010,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53891,7 +53998,8 @@
             "hasChild":false,
             "compId":8011,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53905,7 +54013,8 @@
             "hasChild":false,
             "compId":8012,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53919,7 +54028,8 @@
             "hasChild":false,
             "compId":8013,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53933,7 +54043,8 @@
             "hasChild":false,
             "compId":8014,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53947,7 +54058,8 @@
             "hasChild":false,
             "compId":8015,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53961,7 +54073,8 @@
             "hasChild":false,
             "compId":8016,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53975,7 +54088,8 @@
             "hasChild":false,
             "compId":8017,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -53989,7 +54103,8 @@
             "hasChild":false,
             "compId":8018,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54003,7 +54118,8 @@
             "hasChild":false,
             "compId":8019,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54017,7 +54133,8 @@
             "hasChild":false,
             "compId":8020,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54031,7 +54148,8 @@
             "hasChild":false,
             "compId":8022,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54045,7 +54163,8 @@
             "hasChild":false,
             "compId":8023,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54059,7 +54178,8 @@
             "hasChild":false,
             "compId":8024,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54476,7 +54596,8 @@
                     "compId":8054,
                     "child":[
                         ],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -54493,7 +54614,8 @@
                     "compId":8055,
                     "child":[
                         ],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -54511,7 +54633,8 @@
                     "compId":8056,
                     "child":[
                         ],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -54538,7 +54661,8 @@
                             "frameRate":24,
                             "action":0
                         }],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 }],
             "animations":[
                 {
@@ -54548,7 +54672,8 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54581,7 +54706,8 @@
                     "compId":8059,
                     "child":[
                         ],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -54598,7 +54724,8 @@
                     "compId":8060,
                     "child":[
                         ],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -54616,7 +54743,8 @@
                     "compId":8061,
                     "child":[
                         ],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -54643,7 +54771,8 @@
                             "frameRate":24,
                             "action":0
                         }],
-                    "$LOCKED":false
+                    "$LOCKED":false,
+                    "$HIDDEN":false
                 }],
             "animations":[
                 {
@@ -54653,7 +54782,8 @@
                     "id":1,
                     "frameRate":24,
                     "action":0
-                }]
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -54853,7 +54983,7 @@
             "selectedBox":1818,
             "selecteID":1819,
             "searchKey":"Sprite",
-            "props":{"y":-295.5,"x":6672,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "props":{"y":-205,"x":6971,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
             "nodeParent":2,
             "maxID":1821,
             "label":"CloudBrick",
@@ -54894,217 +55024,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":8077,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }],
-            "$LOCKED":false,
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "selectedBox":1818,
-            "selecteID":1819,
-            "searchKey":"Sprite",
-            "props":{"y":-356,"x":12077,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
-            "nodeParent":2,
-            "maxID":1821,
-            "label":"CloudBrick",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8078,
-            "child":[
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
-                    "nodeParent":8078,
-                    "label":"BoxCollider(CloudBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8080,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
-                    "nodeParent":8078,
-                    "label":"RigidBody(CloudBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8081,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }],
-            "$LOCKED":false,
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "selectedBox":1818,
-            "selecteID":1819,
-            "searchKey":"Sprite",
-            "props":{"y":-356,"x":12181,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
-            "nodeParent":2,
-            "maxID":1821,
-            "label":"CloudBrick",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8079,
-            "child":[
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
-                    "nodeParent":8079,
-                    "label":"BoxCollider(CloudBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8082,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
-                    "nodeParent":8079,
-                    "label":"RigidBody(CloudBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8083,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                }],
-            "animations":[
-                {
-                    "nodes":[
-                        ],
-                    "name":"ani1",
-                    "id":1,
-                    "frameRate":24,
-                    "action":0
-                }],
-            "$LOCKED":false,
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Animation",
-            "selectedBox":122,
-            "searchKey":"Animation",
-            "props":{"y":-488,"x":12301,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
-            "nodeParent":2,
-            "maxID":129,
-            "label":"TanLiBrick",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8084,
-            "child":[
-                {
-                    "x":30,
-                    "type":"RigidBody",
-                    "switchAble":true,
-                    "searchKey":"RigidBody",
-                    "removeAble":true,
-                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
-                    "nodeParent":8084,
-                    "label":"RigidBody(TanLiBrick)",
-                    "isDirectory":false,
-                    "isClose":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8085,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"BoxCollider",
-                    "switchAble":true,
-                    "searchKey":"BoxCollider",
-                    "removeAble":true,
-                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
-                    "nodeParent":8084,
-                    "label":"BoxCollider(TanLiBrick)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8086,
-                    "child":[
-                        ],
-                    "$LOCKED":false,
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/script/TanLiBrickLogic.js",
-                    "searchKey":"Script,TanLiBrickLogic",
-                    "removeAble":true,
-                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
-                    "nodeParent":8084,
-                    "label":"TanLiBrickLogic",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":8087,
                     "child":[
                         ],
                     "$LOCKED":false,
@@ -55170,6 +55089,642 @@
                     "$HIDDEN":false
                 }],
             "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":1818,
+            "selecteID":1819,
+            "searchKey":"Sprite",
+            "props":{"y":-398,"x":6801,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1821,
+            "label":"CloudBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8129,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8129,
+                    "label":"BoxCollider(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8130,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8129,
+                    "label":"RigidBody(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8131,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":1818,
+            "selecteID":1819,
+            "searchKey":"Sprite",
+            "props":{"y":-205,"x":7071,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1821,
+            "label":"CloudBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8135,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8135,
+                    "label":"BoxCollider(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8136,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8135,
+                    "label":"RigidBody(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8137,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":1818,
+            "selecteID":1819,
+            "searchKey":"Sprite",
+            "props":{"y":-398,"x":6896,"presetID":1,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+            "nodeParent":2,
+            "maxID":1821,
+            "label":"CloudBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8138,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8138,
+                    "label":"BoxCollider(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8139,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/CloudBrick.prefab"},
+                    "nodeParent":8138,
+                    "label":"RigidBody(CloudBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8140,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":122,
+            "searchKey":"Animation",
+            "props":{"y":-340,"x":12157,"presetID":1,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
+            "nodeParent":2,
+            "maxID":129,
+            "label":"TanLiBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8141,
+            "child":[
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
+                    "nodeParent":8141,
+                    "label":"RigidBody(TanLiBrick)",
+                    "isDirectory":false,
+                    "isClose":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8142,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
+                    "nodeParent":8141,
+                    "label":"BoxCollider(TanLiBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8143,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/TanLiBrickLogic.js",
+                    "searchKey":"Script,TanLiBrickLogic",
+                    "removeAble":true,
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/brick/TanLiBrick.prefab"},
+                    "nodeParent":8141,
+                    "label":"TanLiBrickLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8144,
+                    "child":[
+                        ],
+                    "$LOCKED":false,
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$LOCKED":false,
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "selectedBox":279,
+            "selecteID":280,
+            "searchKey":"Sprite",
+            "props":{"y":3,"x":25506,"presetID":1,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
+            "nodeParent":2,
+            "maxID":282,
+            "label":"MuBrick",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8146,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
+                    "nodeParent":8146,
+                    "label":"BoxCollider(MuBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8147,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/brick/MuBrick.prefab"},
+                    "nodeParent":8146,
+                    "label":"RigidBody(MuBrick)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8148,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":40.5,"x":25222,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8149,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8149,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8150,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8149,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8151,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8149,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8152,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-93,"x":25516,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8153,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8153,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8154,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8153,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8155,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8153,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8156,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-213.5,"x":25720,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8157,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8157,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8158,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8157,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8159,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8157,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8160,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "selectedBox":102,
+            "searchKey":"Animation",
+            "props":{"y":-304,"x":25980,"presetID":1,"preset":"laya/pages/prefab/Gold.prefab"},
+            "nodeParent":2,
+            "maxID":106,
+            "label":"Gold",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":8161,
+            "child":[
+                {
+                    "x":30,
+                    "type":"BoxCollider",
+                    "switchAble":true,
+                    "searchKey":"BoxCollider",
+                    "removeAble":true,
+                    "props":{"presetID":2,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8161,
+                    "label":"BoxCollider(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8162,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"RigidBody",
+                    "switchAble":true,
+                    "searchKey":"RigidBody",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8161,
+                    "label":"RigidBody(Gold)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8163,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/GoldLogic.js",
+                    "searchKey":"Script,GoldLogic",
+                    "removeAble":true,
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/Gold.prefab"},
+                    "nodeParent":8161,
+                    "label":"GoldLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8164,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }],
             "$HIDDEN":false
         }],
     "animations":[

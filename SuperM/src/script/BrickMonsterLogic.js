@@ -73,7 +73,7 @@ export default class BrickMonsterLogic extends Laya.Script {
             this.owner.isGround = false;
             this.playAttackAni();
             this.owner.state = 2;
-            this.owner.rigidBody.setVelocity({x: 0, y: -20});
+            this.owner.rigidBody.setVelocity({x: 0, y: -19});
             Laya.timer.once(300, this, function() {
                 if (!this.owner) {
                     return;
@@ -87,13 +87,11 @@ export default class BrickMonsterLogic extends Laya.Script {
             let dx = Utils.getSign(GameContext.role.x - this.owner.x);
             let linearVelocity = this.owner.rigidBody.linearVelocity;
             if (this.owner.footAni.visible == true) {
-                if (distance > 500) {
+                if (distance > 400) {
                     this.owner.rigidBody.setVelocity({x: dx*1, y: linearVelocity.y});
                 } else {
                     this.owner.rigidBody.setVelocity({x: dx * distance/250 * 20, y: linearVelocity.y});
                 }
-            } else {
-                this.owner.rigidBody.setVelocity({x: 0, y: 0});
             }
         } else if (this.owner.state == 4) {
             this.stopAttackAni();
@@ -101,7 +99,7 @@ export default class BrickMonsterLogic extends Laya.Script {
             this.owner.rigidBody.setVelocity({x: 0, y: 0});
             let body = this.owner.rigidBody.getBody();
             body.SetPositionXY(this.owner.idlePoint.x/50, body.GetPosition().y);
-            if (this.owner.idleCount > 100) {
+            if (this.owner.idleCount > 200) {
                 this.owner.state = 0;
                 this.owner.idleCount = 0;
             }
@@ -146,15 +144,22 @@ export default class BrickMonsterLogic extends Laya.Script {
                     this.owner.state = 3;
                     this.playAttackAni();
                 } else if (other.label != "MonsterBody" && other.label != "MonsterFoot") {
-                    if (this.owner.state != 0) {
+                    if (this.owner.state != 0 && other.isSensor == false) {
                         if (this.owner.footAni.visible == true) {
-                            this.owner.idlePoint = {x: this.owner.x, y: this.owner.y + 10};
-                            Laya.SoundManager.playSound("other1/zadi.mp3");
+                            if (other.label == "Ground" || (other && other.owner && (other.owner.name == "po1" || 
+                            other.owner.name == "po2" || other.owner.name == "po3" || other.owner.name == "po4" || 
+                            other.owner.name == "po5" || other.owner.name == "po6" || other.owner.name == "po7" || other.owner.name == "BrickGold"
+                            || other.owner.name == "Brick" || other.owner.name == "WenhaoBrick" || other.owner.name == "TanLiBrick" || other.owner.name == "CloudBrick"))) {
+                                this.owner.idlePoint = {x: this.owner.x, y: this.owner.y + 10};
+                                this.owner.isGround = true;
+                                this.owner.state = 4;
+                            }
+                            Laya.SoundManager.playSound("loading/zadi.mp3");
+                        } else {
+                            Laya.timer.once(5000, this, function() {
+                                this.owner.state = 1;
+                            });
                         }
-                        this.owner.state = 4;
-                    }
-                    if (other.label == "Brick" || other.label == "Ground") {
-                        this.owner.isGround = true;
                     }
                     this.stopAttackAni();
                     let linearVelocity = this.owner.rigidBody.linearVelocity;

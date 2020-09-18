@@ -16,7 +16,7 @@ export default class TanLiBrickLogic extends Laya.Script {
             // }
             GameContext.setRoleSpeed(lineSpeed.x, finalSpeed);
             this.owner.play(0, false, "ani2");
-            Laya.SoundManager.playSound("other1/tanli.mp3");
+            Laya.SoundManager.playSound("loading/tanli.mp3");
         }
     }
     

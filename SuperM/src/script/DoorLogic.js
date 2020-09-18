@@ -136,15 +136,14 @@ export default class DoorLogic extends Laya.Script {
         }
         if (this.owner.inDoor == true) {
             if (GameContext.roleInGround == true && GameContext.walkDirect &&
-                GameContext.walkDirect.x == 0 &&
-                 GameContext.walkDirect.y < 0) {
+                 GameContext.walkDirect.y > 0) {
                 this.owner.inCount++;
                 if (this.owner.inCount > 20) {
                     this.owner.inCount = 0;
                     let scene = this.getScene();
                     let gotoPoint = this.getSceneGoToPoint();
                     let doorFinalPoint = this.getDoorFinalPoint();
-                    if (GameContext.doorCount > 3) {
+                    if (GameContext.doorCount > 5) {
                         gotoPoint = doorFinalPoint;
                         let sign = Utils.randomSign();
                         if (sign < 0) {
@@ -153,6 +152,7 @@ export default class DoorLogic extends Laya.Script {
                             scene = "scene/Level7_2.scene";
                         }
                     }
+                    console.debug(scene);
                     this.owner.isHasGoto = true;
                     console.debug(this.owner.doorInitPoint);
                     Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);
