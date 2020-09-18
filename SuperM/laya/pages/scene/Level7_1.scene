@@ -2,7 +2,7 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5094,
+    "selecteID":9343,
     "searchKey":"Scene,gameScene",
     "props":{"width":35000,"name":"gameScene","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
@@ -1631,7 +1631,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -1647,7 +1647,7 @@
             "compId":7990,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -1664,7 +1664,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -1681,7 +1681,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -3078,7 +3078,7 @@
                 ]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -3094,7 +3094,7 @@
             "compId":8152,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -3111,7 +3111,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -3128,7 +3128,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -23058,7 +23058,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23074,7 +23074,7 @@
             "compId":9302,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23091,7 +23091,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23108,13 +23108,13 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
                     "searchKey":"Script,WenhaoLogic",
                     "removeAble":true,
-                    "props":{"wenhaoType":3,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "props":{"wenhaoType":4,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
                     "nodeParent":9302,
                     "label":"WenhaoLogic",
                     "isDirectory":false,
@@ -23163,7 +23163,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23179,7 +23179,7 @@
             "compId":9307,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23196,7 +23196,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23213,7 +23213,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -23268,7 +23268,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23284,7 +23284,7 @@
             "compId":9312,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23301,7 +23301,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23318,13 +23318,13 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
                     "searchKey":"Script,WenhaoLogic",
                     "removeAble":true,
-                    "props":{"wenhaoType":3,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "props":{"wenhaoType":4,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
                     "nodeParent":9312,
                     "label":"WenhaoLogic",
                     "isDirectory":false,
@@ -23373,7 +23373,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23389,7 +23389,7 @@
             "compId":9313,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23406,7 +23406,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23423,7 +23423,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -23478,7 +23478,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23494,7 +23494,7 @@
             "compId":9322,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23511,7 +23511,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23528,13 +23528,13 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
                     "searchKey":"Script,WenhaoLogic",
                     "removeAble":true,
-                    "props":{"wenhaoType":3,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "props":{"wenhaoType":4,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
                     "nodeParent":9322,
                     "label":"WenhaoLogic",
                     "isDirectory":false,
@@ -23583,7 +23583,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23599,7 +23599,7 @@
             "compId":9323,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23616,7 +23616,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23633,7 +23633,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -23688,7 +23688,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23704,7 +23704,7 @@
             "compId":9332,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23721,7 +23721,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23738,7 +23738,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -23793,7 +23793,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23809,7 +23809,7 @@
             "compId":9333,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23826,7 +23826,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23843,7 +23843,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -23898,7 +23898,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -23914,7 +23914,7 @@
             "compId":9342,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -23931,7 +23931,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -23948,13 +23948,13 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
                     "searchKey":"Script,WenhaoLogic",
                     "removeAble":true,
-                    "props":{"wenhaoType":3,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "props":{"wenhaoType":4,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
                     "nodeParent":9342,
                     "label":"WenhaoLogic",
                     "isDirectory":false,
@@ -24003,7 +24003,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24019,7 +24019,7 @@
             "compId":9343,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24036,7 +24036,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24053,13 +24053,13 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
                     "searchKey":"Script,WenhaoLogic",
                     "removeAble":true,
-                    "props":{"wenhaoType":3,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
+                    "props":{"wenhaoType":4,"presetID":4,"preset":"laya/pages/prefab/brick/WenhaoBrick.prefab"},
                     "nodeParent":9343,
                     "label":"WenhaoLogic",
                     "isDirectory":false,
@@ -24108,7 +24108,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24124,7 +24124,7 @@
             "compId":9352,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24141,7 +24141,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24158,7 +24158,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24213,7 +24213,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24229,7 +24229,7 @@
             "compId":9353,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24246,7 +24246,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24263,7 +24263,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24318,7 +24318,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24334,7 +24334,7 @@
             "compId":9362,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24351,7 +24351,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24368,7 +24368,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24423,7 +24423,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24439,7 +24439,7 @@
             "compId":9363,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24456,7 +24456,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24473,7 +24473,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24528,7 +24528,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24544,7 +24544,7 @@
             "compId":9372,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24561,7 +24561,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24578,7 +24578,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24633,7 +24633,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24649,7 +24649,7 @@
             "compId":9373,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24666,7 +24666,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24683,7 +24683,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24738,7 +24738,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24754,7 +24754,7 @@
             "compId":9382,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24771,7 +24771,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24788,7 +24788,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24843,7 +24843,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24859,7 +24859,7 @@
             "compId":9383,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24876,7 +24876,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24893,7 +24893,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -24948,7 +24948,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -24964,7 +24964,7 @@
             "compId":9392,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -24981,7 +24981,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -24998,7 +24998,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",
@@ -25053,7 +25053,7 @@
                 }]
         },
         {
-            "x":15,
+            "x":0,
             "type":"Box",
             "selectedBox":1595,
             "selecteID":1588,
@@ -25069,7 +25069,7 @@
             "compId":9393,
             "child":[
                 {
-                    "x":30,
+                    "x":0,
                     "type":"BoxCollider",
                     "switchAble":true,
                     "searchKey":"BoxCollider",
@@ -25086,7 +25086,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"RigidBody",
                     "switchAble":true,
                     "searchKey":"RigidBody",
@@ -25103,7 +25103,7 @@
                     "$LOCKED":false
                 },
                 {
-                    "x":30,
+                    "x":0,
                     "type":"Script",
                     "switchAble":true,
                     "source":"src/script/WenhaoLogic.js",

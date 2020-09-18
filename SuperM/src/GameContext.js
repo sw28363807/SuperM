@@ -225,11 +225,6 @@ export default class GameContext extends Laya.Script {
         if (GameContext.roleCurAni == ani) {
             return;
         }
-        if (ani == "fly") {
-            Laya.SoundManager.playSound("loading/youyong.mp3", 0);
-        } else {
-            Laya.SoundManager.stopSound("loading/youyong.mp3");
-        }
         if (loop == null || loop == undefined) {
             loop = true;
         }
