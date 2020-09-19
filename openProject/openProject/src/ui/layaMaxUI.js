@@ -13,7 +13,7 @@ export class BigUI extends View {
 	}
 	
 }
-BigUI.uiView={"type":"View","props":{"width":610,"height":757},"compId":2,"child":[{"type":"Sprite","props":{"y":0,"x":0,"texture":"test/2.png"},"compId":4},{"type":"List","props":{"y":107,"x":13,"width":585,"var":"_list","vScrollBarSkin":" ","spaceY":20,"repeatX":1,"height":639,"elasticEnabled":true},"compId":3,"child":[{"type":"bigItem","props":{"runtime":"view/BigItem.js","renderType":"render"},"compId":5}]}],"loadList":["test/2.png"],"loadList3D":[]};
+BigUI.uiView={"type":"View","props":{"width":1336,"height":750},"compId":2,"child":[{"type":"Sprite","props":{"y":-37,"x":345,"width":610,"height":757},"compId":4},{"type":"List","props":{"y":70,"x":358,"width":585,"var":"_list","vScrollBarSkin":" ","spaceY":20,"repeatX":1,"height":639,"elasticEnabled":true},"compId":3,"child":[{"type":"bigItem","props":{"runtime":"view/BigItem.js","renderType":"render"},"compId":5}]}],"loadList":[],"loadList3D":[]};
 REG("ui.test.BigUI",BigUI);
 export class BigItemUI extends View {
 	constructor(){ 
@@ -25,5 +25,5 @@ export class BigItemUI extends View {
 	}
 	
 }
-BigItemUI.uiView={"type":"View","props":{"width":580,"height":100},"compId":2,"child":[{"type":"Sprite","props":{"y":0,"x":0,"width":575,"texture":"test/3.png","height":99},"compId":7},{"type":"Image","props":{"y":6,"x":22,"width":80,"var":"img_head","skin":"test/4.png","height":80},"compId":3,"child":[{"type":"Sprite","props":{"y":-1,"x":-1,"width":82,"texture":"test/c1.png","renderType":"mask","height":82},"compId":10}]},{"type":"Label","props":{"y":38.5,"x":136,"width":259,"var":"text_name","text":"名字","overflow":"scroll","height":24,"fontSize":20,"font":"Microsoft YaHei","color":"#ffffff","align":"center"},"compId":4},{"type":"Label","props":{"y":42.5,"x":496,"var":"text_score","text":"分数","fontSize":20,"color":"#ffffff","align":"center"},"compId":5}],"loadList":["test/3.png","test/4.png","test/c1.png"],"loadList3D":[]};
+BigItemUI.uiView={"type":"View","props":{"width":580,"height":100},"compId":2,"child":[{"type":"Sprite","props":{"y":0,"x":0,"width":575,"height":99},"compId":7},{"type":"Image","props":{"y":6,"x":22,"width":80,"var":"img_head","height":80},"compId":3,"child":[{"type":"Sprite","props":{"y":-1,"x":-1,"width":82,"renderType":"mask","height":82},"compId":10}]},{"type":"Label","props":{"y":38.5,"x":136,"width":259,"var":"text_name","text":"名字","overflow":"scroll","height":24,"fontSize":20,"font":"Microsoft YaHei","color":"#ffffff","align":"center"},"compId":4},{"type":"Label","props":{"y":42.5,"x":496,"var":"text_score","text":"分数","fontSize":20,"color":"#ffffff","align":"center"},"compId":5}],"loadList":[],"loadList3D":[]};
 REG("ui.test.BigItemUI",BigItemUI);

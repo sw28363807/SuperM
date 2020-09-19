@@ -23,7 +23,7 @@ export default class BigRank extends BigUI {
             //接受来自主域的信息
             wx.onMessage(this.recevieData.bind(this));
             // 直接展示数据
-            this.getFriendData();
+            // this.getFriendData();
         }
     }
 

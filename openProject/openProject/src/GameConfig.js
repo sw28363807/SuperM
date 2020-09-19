@@ -8,8 +8,8 @@ export default class GameConfig {
 		reg("view/BigItem.js",BigItem);
     }
 }
-GameConfig.width = 640;
-GameConfig.height = 1136;
+GameConfig.width = 1336;
+GameConfig.height = 750;
 GameConfig.scaleMode ="fixedwidth";
 GameConfig.screenMode = "none";
 GameConfig.alignV = "top";

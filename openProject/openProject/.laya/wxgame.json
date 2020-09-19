@@ -2,7 +2,7 @@
     "copyFilesFilter": [
         "../bin/**/*.*"
     ],
-    "openDataZone": false,
+    "openDataZone": true,
     "compressJson": false,
     "compressJsonFilter": [
         "$basePath/**/*.{json,atlas}"
@@ -30,22 +30,10 @@
     "versionFilter": [
         "$basePath/**/*.*",
         "!$basePath/*.html",
-        "!$basePath/{version.json,game.js,game.json,project.config.json,weapp-adapter.js,project.swan.json,swan-game-adapter.js,main.js,gameConfig.json,my-adapter.js,fileconfig.json,unpack.json,index.js}",
-        "!$basePath/layaforqq/**/*.*",
-        "!$basePath/anim/**/*.*",
-        "!$basePath/js/**/*.*",
-        "!$basePath/libs/**/*.*",
-        "!$basePath/prefab/**/*.*",
-        "!$basePath/res/**/*.*",
-        "!$basePath/loading/**/*.*"
+        "!$basePath/{version.json,game.js,game.json,project.config.json,weapp-adapter.js,project.swan.json,swan-game-adapter.js,main.js,gameConfig.json,my-adapter.js,microgame-adapter.js,qg-adapter.js,huawei-adapter.js}",
+        "!$basePath/layaforqq/**/*.*"
     ],
     "versionNoteList": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
         "",
         "",
         "",
@@ -78,10 +66,10 @@
     "compile": true,
     "forceCompile": false,
     "onlyIndexJS": true,
-    "useMinJsLibs": true,
+    "useMinJsLibs": false,
     "es6toes5": false,
     "projectType": "js",
-    "pubTime": 1600520076418,
+    "pubTime": 1600520184042,
     "uesEnginePlugin": false,
     "wxOptimize": {
         "useOptimizeOpen": false,

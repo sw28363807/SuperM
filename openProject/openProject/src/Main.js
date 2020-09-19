@@ -13,13 +13,12 @@ class Main {
 		Laya.stage.alignH = GameConfig.alignH;
 		// 关于透传接口，请参考: https://ldc2.layabox.com/doc/?nav=zh-ts-5-0-7
 		if(Laya.Browser.onMiniGame)
-				wx.onMessage(function(data){
-					if(data.url == "res/atlas/test.atlas" ){
-							Laya.loader.load("res/atlas/test.atlas",Laya.Handler.create(this,this.onComplete));
-					}
+				wx.onMessage(function(data) {
+					this.onComplete();
 				}.bind(this));
-		else
-			Laya.loader.load("res/atlas/test.atlas",Laya.Handler.create(this,this.onComplete));
+		else {
+			this.onComplete();
+		}
 	}
 
 	onComplete() {
