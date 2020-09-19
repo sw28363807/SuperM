@@ -20,18 +20,28 @@ export default class Camera extends Laya.Script {
         if (this.owner.yCenter == 0) {
             if (this.role.y < this.owner.yOff) {
                 if (this.curUpOffY < this.upOffY) {
+                    this.upSpeed += this.aSpeed;
+                    if (this.upSpeed > 10) {
+                        this.upSpeed = 10;
+                    }
                     this.curUpOffY += this.upSpeed;
                 } else {
                     this.curUpOffY = this.upOffY;
+                    this.upSpeed = 0;
                 }
                 this.owner.y = this.standY - (this.role.y - this.curUpOffY);
                 this.curDownOffY = -(this.role.y - this.curUpOffY);
             } else {
                 this.curUpOffY = this.owner.yOff;
                 if (this.curDownOffY > 0) {
+                    this.upSpeed += this.aSpeed;
+                    if (this.upSpeed > 10) {
+                        this.upSpeed = 10;
+                    }
                     this.curDownOffY -= this.upSpeed;
                     if (this.curDownOffY <= 0) {
                         this.curDownOffY = 0;
+                        this.upSpeed = 0;
                     }
                 }
                 this.owner.y =  this.standY + this.curDownOffY;
@@ -70,7 +80,8 @@ export default class Camera extends Laya.Script {
         this.curUpOffY = this.owner.yOff;
         this.curDownOffY = 0;
         this.upOffY = 500;
-        this.upSpeed = 10;
+        this.upSpeed = 0;
+        this.aSpeed = 0.5;
 
         this.zeroY = 0;
         this.role =  this.owner.getChildByName("Role");

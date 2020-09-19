@@ -2,10 +2,11 @@
     "x":0,
     "type":"Box",
     "selectedBox":1752,
+    "selecteID":1760,
     "searchKey":"Box,Boss",
     "props":{"y":0,"x":0,"width":487,"scaleY":0.5,"scaleX":0.5,"presetID":1,"preset":"laya/pages/prefab/monster/Boss.prefab","name":"Boss","isPresetRoot":true,"height":212},
     "nodeParent":-1,
-    "maxID":1760,
+    "maxID":1761,
     "label":"Boss",
     "isOpen":true,
     "isDirectory":true,
@@ -107,6 +108,23 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1759,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/FenLogic.js",
+            "searchKey":"Script,FenLogic",
+            "removeAble":true,
+            "props":{"presetID":8,"preset":"laya/pages/prefab/monster/Boss.prefab","fen":1000},
+            "nodeParent":1752,
+            "label":"FenLogic",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1760,
             "child":[
                 ]
         }],

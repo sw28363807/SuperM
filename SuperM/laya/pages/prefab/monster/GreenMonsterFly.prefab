@@ -5,7 +5,7 @@
     "searchKey":"Box,GreenMonsterFly",
     "props":{"zOrder":100,"y":47,"x":35,"width":69,"presetID":1,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab","pivotY":47,"pivotX":35,"name":"GreenMonsterFly","isPresetRoot":true,"height":47},
     "nodeParent":-1,
-    "maxID":1506,
+    "maxID":1507,
     "label":"GreenMonsterFly",
     "isOpen":true,
     "isDirectory":true,
@@ -128,6 +128,23 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":1505,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/script/FenLogic.js",
+            "searchKey":"Script,FenLogic",
+            "removeAble":true,
+            "props":{"presetID":15,"preset":"laya/pages/prefab/monster/GreenMonsterFly.prefab","fen":200},
+            "nodeParent":1491,
+            "label":"FenLogic",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":1506,
             "child":[
                 ]
         }],

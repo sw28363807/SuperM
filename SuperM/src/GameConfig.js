@@ -19,6 +19,7 @@ import PassLevelBrickLogic from "./script/PassLevelBrickLogic"
 import AILeftOrRight from "./script/AILeftOrRight"
 import MonsterLogic from "./script/MonsterLogic"
 import MonsterIdLogic from "./script/MonsterIdLogic"
+import FenLogic from "./script/FenLogic"
 import WoniuLogic from "./script/WoniuLogic"
 import FlyMonsterLogic from "./script/FlyMonsterLogic"
 import AITopOrBottom from "./script/AITopOrBottom"
@@ -84,6 +85,7 @@ export default class GameConfig {
 		reg("script/AILeftOrRight.js",AILeftOrRight);
 		reg("script/MonsterLogic.js",MonsterLogic);
 		reg("script/MonsterIdLogic.js",MonsterIdLogic);
+		reg("script/FenLogic.js",FenLogic);
 		reg("script/WoniuLogic.js",WoniuLogic);
 		reg("script/FlyMonsterLogic.js",FlyMonsterLogic);
 		reg("script/AITopOrBottom.js",AITopOrBottom);

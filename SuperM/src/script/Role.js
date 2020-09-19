@@ -264,6 +264,11 @@ export default class Role extends Laya.Script {
         if (GameContext.roleIsDrop == true) {
             return;
         }
+        if (self.label == "RoleBody") {
+            if (other.label == "Ground" || other.label == "Wall") {
+                return;
+            }
+        }
         if (other.label == "Hole" && other.owner) {
             GameContext.triggerGotoHole(other.owner);
             GameContext.roleIsDrop = true;

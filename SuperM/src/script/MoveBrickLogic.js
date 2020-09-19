@@ -154,7 +154,9 @@ export default class MoveBrickLogic extends Laya.Script {
         this.owner.nextMovePointsIndex = curPintIndex;
         if (processSpeed) {
             this.processMoveSpeed();
-            GameContext.setRoleSpeed(0.01, 0.01);
+            if (GameContext.roleInMoveGround == true) {
+                GameContext.setRoleSpeed(0.01, 0.01);
+            }
         }
     }
 

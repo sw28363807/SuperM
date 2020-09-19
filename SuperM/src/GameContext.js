@@ -144,12 +144,12 @@ export default class GameContext extends Laya.Script {
 
     static setRoleSpeedX(x) {
         let linearVelocity = GameContext.roleRigidBody.linearVelocity;
-        GameContext.roleRigidBody.setVelocity({x: x, y: linearVelocity.y});
+        GameContext.setRoleSpeed(x, linearVelocity.y);
     }
 
     static setRoleSpeedY(y) {
         let linearVelocity = GameContext.roleRigidBody.linearVelocity;
-        GameContext.roleRigidBody.setVelocity({x: linearVelocity.x, y: y});
+        GameContext.setRoleSpeed(linearVelocity.x, y);
     }
 
     static setRolePosition(x, y) {
@@ -201,7 +201,7 @@ export default class GameContext extends Laya.Script {
             }
         }
     }
-
+    
     static setRoleMove(x, y) {
         if (!GameContext.role) {
             return;

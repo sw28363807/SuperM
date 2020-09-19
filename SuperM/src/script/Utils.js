@@ -106,7 +106,9 @@ export default class Utils extends Laya.Script {
         if (GameContext.curFootMonster) {
             return;
         }
-        if (GameContext.curFootMonster == other.owner) {
+        if (GameContext.curFootMonster == other.owner && 
+            GameContext.curFootMonster != undefined &&
+             GameContext.curFootMonster != null) {
             return;
         }
         if (other.owner.createdMonster && other.owner.createdMonster == true) {
@@ -132,15 +134,16 @@ export default class Utils extends Laya.Script {
         if (!parent) {
             return;
         }
-        owner.fen = 100;
         if (owner.fen != 0 && owner.fen != undefined && owner.fen != null) {
             let label = new Laya.Text();
-            label.text = String(100);
+            label.text = String(owner.fen);
             label.color = "#e8efd9";
             label.fontSize = 30;
             parent.addChild(label);
             label.x = owner.x;
             label.y = owner.y - 80;
+            GameContext.roleFen += Number(owner.fen);
+            EventMgr.getInstance().postEvent(Events.Refresh_Fen_Number);
     
             Laya.Tween.to(label, {y: label.y - 60}, 500, null, Laya.Handler.create(null, function() {
                 Utils.removeThis(label);
@@ -403,6 +406,14 @@ export default class Utils extends Laya.Script {
         if (GameContext.roleHurting) {
             return;
         }
+        if (GameContext.curFootMonster) {
+            return;
+        }
+        if (GameContext.curFootMonster == other.owner && 
+            GameContext.curFootMonster != undefined &&
+             GameContext.curFootMonster != null) {
+            return;
+        }
         GameContext.playRoleAni("");
         GameContext.playRoleAni("stand");
         let x = -1;
@@ -498,6 +509,14 @@ export default class Utils extends Laya.Script {
             return;
         }
         if (other && other.owner && other.owner.isDie == true) {
+            return;
+        }
+        if (GameContext.curFootMonster) {
+            return;
+        }
+        if (GameContext.curFootMonster == other.owner && 
+            GameContext.curFootMonster != undefined &&
+             GameContext.curFootMonster != null) {
             return;
         }
         if (other && other.name == "BrickMonster") {
