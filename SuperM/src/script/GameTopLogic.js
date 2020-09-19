@@ -22,7 +22,7 @@ export default class GameTopLogic extends Laya.Script {
 
         let rank = this.owner.getChildByName("rank");
         rank.on(Laya.Event.CLICK, this, function() {
-            Laya.Scene.open("scene/RankScene.scene", false);
+            Laya.Dialog.open("scene/RankScene.scene", false);
         });
     }
 

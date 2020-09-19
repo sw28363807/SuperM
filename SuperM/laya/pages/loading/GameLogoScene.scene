@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5,
+    "selecteID":8,
     "searchKey":"Scene",
     "props":{"width":1336,"height":750},
     "nodeParent":-1,
-    "maxID":8,
+    "maxID":9,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -87,6 +87,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":7,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"WXOpenDataViewer",
+            "searchKey":"WXOpenDataViewer,openView",
+            "props":{"width":1336,"name":"openView","iconSign":"wx","height":750},
+            "nodeParent":2,
+            "label":"openView",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":8,
             "child":[
                 ]
         }],
