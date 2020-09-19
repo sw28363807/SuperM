@@ -19,6 +19,11 @@ export default class GameTopLogic extends Laya.Script {
         this.oRefreshGold();
         this.onRefreshRole();
         this.onRefreshFen();
+
+        let rank = this.owner.getChildByName("rank");
+        rank.on(Laya.Event.CLICK, this, function() {
+            Laya.Scene.open("scene/RankScene.scene", false);
+        });
     }
 
     oRefreshGold() {

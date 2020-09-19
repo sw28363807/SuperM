@@ -474,3 +474,11 @@ GameContext.golds = new Set();
 GameContext.roleFlyDrop = false;
 
 GameContext.roleFen = 0;
+
+
+GameContext.nickName = "";
+GameContext.nickName = "";
+GameContext.city = "";
+GameContext.province = "";
+GameContext.country = "";
+GameContext.avatarUrl = "";

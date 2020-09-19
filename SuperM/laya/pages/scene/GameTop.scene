@@ -2,11 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":94,
+    "selecteID":109,
     "searchKey":"View",
-    "props":{"width":1336,"height":750},
+    "props":{"zOrder":1,"width":1336,"height":150},
     "nodeParent":-1,
-    "maxID":109,
+    "maxID":110,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -182,6 +182,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":108,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,rank",
+            "props":{"y":10,"x":520,"stateNum":"2","skin":"joystick/zidanbtn (2).png","scaleY":0.5,"scaleX":0.5,"name":"rank","labelSize":48},
+            "nodeParent":2,
+            "label":"rank",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":109,
             "child":[
                 ]
         }],

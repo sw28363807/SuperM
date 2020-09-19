@@ -24,11 +24,13 @@ export default class LoadingLogic extends Laya.Script {
                 return;
             }
         }
-        Laya.Resource.destroyUnusedResources();
-        for (let key in Laya.Loader.textureMap) {
-            Laya.Loader.clearTextureRes(key);
-        }
         LoadingLogic.curSceneExt = scene;
+        if (scene != "loading/GameLogoScene.scene" && scene != "scene/Level1_1.scene") {
+            Laya.Resource.destroyUnusedResources();
+            for (let key in Laya.Loader.textureMap) {
+                Laya.Loader.clearTextureRes(key);
+            }
+        }
         Laya.Scene.open("loading/LoadingScene.scene", true, 2, Laya.Handler.create(this, function() {
             Laya.Scene.open(scene, true, null, Laya.Handler.create(this, function() {
                 LoadingLogic.curScene = "";
