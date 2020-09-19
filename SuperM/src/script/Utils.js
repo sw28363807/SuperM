@@ -106,7 +106,7 @@ export default class Utils extends Laya.Script {
         if (GameContext.curFootMonster) {
             return;
         }
-        if (GameContext.curFootMonster == other.owner && 
+        if (other && GameContext.curFootMonster == other.owner && 
             GameContext.curFootMonster != undefined &&
              GameContext.curFootMonster != null) {
             return;
@@ -409,7 +409,7 @@ export default class Utils extends Laya.Script {
         if (GameContext.curFootMonster) {
             return;
         }
-        if (GameContext.curFootMonster == other.owner && 
+        if (other && GameContext.curFootMonster == other.owner && 
             GameContext.curFootMonster != undefined &&
              GameContext.curFootMonster != null) {
             return;
@@ -514,7 +514,7 @@ export default class Utils extends Laya.Script {
         if (GameContext.curFootMonster) {
             return;
         }
-        if (GameContext.curFootMonster == other.owner && 
+        if (other && GameContext.curFootMonster == other.owner && 
             GameContext.curFootMonster != undefined &&
              GameContext.curFootMonster != null) {
             return;
@@ -626,10 +626,7 @@ export default class Utils extends Laya.Script {
         if (!huochi) {
             return;
         }
-        if (GameContext.bodyState == 0) {
-            Utils.hurtRole(this.owner);
-            return;
-        }
+        let lastBodyState = GameContext.bodyState;
         GameContext.roleIsDrop = true;
         Laya.SoundManager.playSound("loading/siwang.mp3");
         Utils.changeRoleState();
@@ -645,31 +642,36 @@ export default class Utils extends Laya.Script {
             black.y = 0;
             black.zOrder = 9999999;
             black.alpha = 0;
-            Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
-                if (customX != null &&
-                    customX != undefined &&
-                     customY != null &&
-                      customY != undefined) {
-                       GameContext.setRolePosition(customX, customY);
-               } else {
-                   GameContext.setRolePosition(huochi.x - 200, 300);
-               }
-                Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
-                    black.removeSelf();
-                    black.destroy();
+            Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
+                if (GameContext.resetRolePoint) {
+                    GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
+                    GameContext.setRoleSpeed(0.01, 0.01);
+                    GameContext.gameRoleYaBian = false;
+                    GameContext.curCiBrick = null;
+                    GameContext.roleHurting = false;
+                    GameContext.isDie = false;
+                    GameContext.playRoleAni("stand", true);
+                    GameContext.walkDirect = null;
                     GameContext.roleIsDrop = false;
-                    if (GameContext.gameRoleNumber <= 0) {
-                        GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
-                        GameContext.gameRoleBodyState = 0;
-                        GameContext.gameRoleState = 0;
-                        GameContext.gameGoldNumber = 0;
-                        GameContext.roleFen = 0;
-                        GameContext.roleFlyState = false;
-                        GameContext.roleFlyDrop = false;
-                        LoadingLogic.loadScene("scene/Level1_1.scene");
-                        return;
-                    }
-                }));
+                    EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+                }
+                Laya.timer.once(1000, this, function() {
+                    Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
+                        black.removeSelf();
+                        black.destroy();
+                        if (GameContext.gameRoleNumber <= 0) {
+                            GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
+                            GameContext.gameRoleBodyState = 0;
+                            GameContext.gameRoleState = 0;
+                            GameContext.gameGoldNumber = 0;
+                            GameContext.roleFen = 0;
+                            GameContext.roleFlyState = false;
+                            GameContext.roleFlyDrop = false;
+                            LoadingLogic.loadScene("scene/Level1_1.scene");
+                            return;
+                        }
+                    }));
+                });
             }));
         }));
     }
