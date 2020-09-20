@@ -7,6 +7,10 @@ export default class LoadingLogic extends Laya.Script {
     onEnable() {
         this.owner.slider = this.owner.getChildByName("sliderBg");
         this.owner.sliderBar = this.owner.slider.getChildByName("slider");
+        this.owner.cur = 0;
+        this.owner.max = 100;
+        this.owner.sliderBar.width = 0;
+        this.owner.maxWidth = 327;
     }
 
     onStart() {
@@ -33,7 +37,8 @@ export default class LoadingLogic extends Laya.Script {
                 Laya.Loader.clearTextureRes(key);
             }
         }
-        Laya.Scene.open("loading/LoadingScene.scene", true, 2, Laya.Handler.create(this, function() {
+        Laya.Scene.open("loading/LoadingScene.scene", true, 2, Laya.Handler.create(this, function(sceneObj) {
+
             Laya.Scene.open(scene, true, null, Laya.Handler.create(this, function() {
                 LoadingLogic.curScene = "";
                 Laya.SoundManager.stopSound("loading/little.mp3");
