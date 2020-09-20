@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"loading/loading (1).png",
+                                "value":"loading/loadingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -42,7 +42,7 @@
                                 "index":0
                             },
                             {
-                                "value":"loading/loading (3).png",
+                                "value":"loading/loadingA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":2
                             },
                             {
-                                "value":"loading/loading (5).png",
+                                "value":"loading/loadingA9A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -58,7 +58,7 @@
                                 "index":4
                             },
                             {
-                                "value":"loading/loading (7).png",
+                                "value":"loading/loadingA11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -66,7 +66,7 @@
                                 "index":6
                             },
                             {
-                                "value":"loading/loading (9).png",
+                                "value":"loading/loadingA13A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -74,7 +74,7 @@
                                 "index":8
                             },
                             {
-                                "value":"loading/loading (11).png",
+                                "value":"loading/loadingA15A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -82,7 +82,7 @@
                                 "index":10
                             },
                             {
-                                "value":"loading/loading (13).png",
+                                "value":"loading/loadingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -90,7 +90,7 @@
                                 "index":12
                             },
                             {
-                                "value":"loading/loading (15).png",
+                                "value":"loading/loadingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -98,28 +98,12 @@
                                 "index":14
                             },
                             {
-                                "value":"loading/loading (17).png",
+                                "value":"loading/loadingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
                                 "key":"skin",
                                 "index":16
-                            },
-                            {
-                                "value":"loading/loading (19).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":18
-                            },
-                            {
-                                "value":"loading/loading (21).png",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":3,
-                                "key":"skin",
-                                "index":20
                             }]
                     }
                 }],

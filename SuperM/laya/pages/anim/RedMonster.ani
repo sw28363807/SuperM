@@ -65,7 +65,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/new_red_monster (1).png",
+                                "value":"monster/new_red_monsterA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -73,7 +73,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/new_red_monster (2).png",
+                                "value":"monster/new_red_monsterA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -81,7 +81,7 @@
                                 "index":5
                             },
                             {
-                                "value":"monster/new_red_monster (3).png",
+                                "value":"monster/new_red_monsterA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -89,7 +89,7 @@
                                 "index":10
                             },
                             {
-                                "value":"monster/new_red_monster (4).png",
+                                "value":"monster/new_red_monsterA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -97,7 +97,7 @@
                                 "index":15
                             },
                             {
-                                "value":"monster/new_red_monster (5).png",
+                                "value":"monster/new_red_monsterA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -136,7 +136,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/new_red_monster (1).png",
+                                "value":"monster/new_red_monsterA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -144,7 +144,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/new_red_monster (2).png",
+                                "value":"monster/new_red_monsterA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -152,7 +152,7 @@
                                 "index":5
                             },
                             {
-                                "value":"monster/new_red_monster (3).png",
+                                "value":"monster/new_red_monsterA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -160,7 +160,7 @@
                                 "index":10
                             },
                             {
-                                "value":"monster/new_red_monster (4).png",
+                                "value":"monster/new_red_monsterA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -168,7 +168,7 @@
                                 "index":15
                             },
                             {
-                                "value":"monster/new_red_monster (5).png",
+                                "value":"monster/new_red_monsterA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -216,7 +216,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/new_monster_chibang (1).png",
+                                "value":"monster/new_monster_chibangA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -224,7 +224,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/new_monster_chibang (2).png",
+                                "value":"monster/new_monster_chibangA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -232,7 +232,7 @@
                                 "index":5
                             },
                             {
-                                "value":"monster/new_monster_chibang (3).png",
+                                "value":"monster/new_monster_chibangA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -240,7 +240,7 @@
                                 "index":10
                             },
                             {
-                                "value":"monster/new_monster_chibang (4).png",
+                                "value":"monster/new_monster_chibangA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -248,7 +248,7 @@
                                 "index":15
                             },
                             {
-                                "value":"monster/new_monster_chibang (5).png",
+                                "value":"monster/new_monster_chibangA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

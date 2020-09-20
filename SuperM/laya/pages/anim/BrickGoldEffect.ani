@@ -68,7 +68,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/goldBrick (1).png",
+                                "value":"other/goldBrickA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -76,7 +76,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/goldBrick (2).png",
+                                "value":"other/goldBrickA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -84,7 +84,7 @@
                                 "index":1
                             },
                             {
-                                "value":"other/goldBrick (3).png",
+                                "value":"other/goldBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -92,7 +92,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/goldBrick (4).png",
+                                "value":"other/goldBrickA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -100,7 +100,7 @@
                                 "index":3
                             },
                             {
-                                "value":"other/goldBrick (6).png",
+                                "value":"other/goldBrickA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -108,7 +108,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/goldBrick (7).png",
+                                "value":"other/goldBrickA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -116,7 +116,7 @@
                                 "index":5
                             },
                             {
-                                "value":"other/goldBrick (8).png",
+                                "value":"other/goldBrickA8A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -124,7 +124,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/goldBrick (9).png",
+                                "value":"other/goldBrickA9A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -132,7 +132,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/goldBrick (10).png",
+                                "value":"other/goldBrickA10A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -140,7 +140,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other/goldBrick (11).png",
+                                "value":"other/goldBrickA11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -148,7 +148,7 @@
                                 "index":9
                             },
                             {
-                                "value":"other/goldBrick (1).png",
+                                "value":"other/goldBrickA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -156,7 +156,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other/goldBrick (2).png",
+                                "value":"other/goldBrickA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -164,7 +164,7 @@
                                 "index":11
                             },
                             {
-                                "value":"other/goldBrick (3).png",
+                                "value":"other/goldBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -172,7 +172,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other/goldBrick (4).png",
+                                "value":"other/goldBrickA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -180,7 +180,7 @@
                                 "index":13
                             },
                             {
-                                "value":"other/goldBrick (5).png",
+                                "value":"other/goldBrickA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -188,7 +188,7 @@
                                 "index":14
                             },
                             {
-                                "value":"other/goldBrick (6).png",
+                                "value":"other/goldBrickA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -196,7 +196,7 @@
                                 "index":15
                             },
                             {
-                                "value":"other/goldBrick (7).png",
+                                "value":"other/goldBrickA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -204,7 +204,7 @@
                                 "index":16
                             },
                             {
-                                "value":"other/goldBrick (8).png",
+                                "value":"other/goldBrickA8A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -212,7 +212,7 @@
                                 "index":17
                             },
                             {
-                                "value":"other/goldBrick (10).png",
+                                "value":"other/goldBrickA10A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -220,7 +220,7 @@
                                 "index":18
                             },
                             {
-                                "value":"other/goldBrick (11).png",
+                                "value":"other/goldBrickA11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

@@ -52,7 +52,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other1/yanhua6 (1).png",
+                                "value":"other1/yanhua6A1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -60,7 +60,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/yanhua6 (3).png",
+                                "value":"other1/yanhua6A3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -68,7 +68,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other1/yanhua6 (5).png",
+                                "value":"other1/yanhua6A5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -76,7 +76,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/yanhua6 (7).png",
+                                "value":"other1/yanhua6A7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -84,7 +84,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/yanhua6 (8).png",
+                                "value":"other1/yanhua6A8A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -92,7 +92,7 @@
                                 "index":14
                             },
                             {
-                                "value":"other1/yanhua6 (10).png",
+                                "value":"other1/yanhua6A10A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -100,7 +100,7 @@
                                 "index":18
                             },
                             {
-                                "value":"other1/yanhua6 (11).png",
+                                "value":"other1/yanhua6A11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -108,7 +108,7 @@
                                 "index":20
                             },
                             {
-                                "value":"other1/yanhua6 (11).png",
+                                "value":"other1/yanhua6A11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -117,7 +117,7 @@
                                 "index":21
                             },
                             {
-                                "value":"other1/yanhua6 (11).png",
+                                "value":"other1/yanhua6A11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

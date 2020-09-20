@@ -51,7 +51,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other1/HuoQiu (1).png",
+                                "value":"other1/HuoQiuA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -59,7 +59,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/HuoQiu (2).png",
+                                "value":"other1/HuoQiuA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -67,7 +67,7 @@
                                 "index":3
                             },
                             {
-                                "value":"other1/HuoQiu (3).png",
+                                "value":"other1/HuoQiuA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -75,7 +75,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other1/HuoQiu (4).png",
+                                "value":"other1/HuoQiuA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -83,7 +83,7 @@
                                 "index":9
                             },
                             {
-                                "value":"other1/HuoQiu (5).png",
+                                "value":"other1/HuoQiuA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -91,7 +91,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/HuoQiu (6).png",
+                                "value":"other1/HuoQiuA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

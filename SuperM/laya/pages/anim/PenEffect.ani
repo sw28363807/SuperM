@@ -33,7 +33,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other1/penEffect (1).png",
+                                "value":"other1/penEffectA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -41,7 +41,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/penEffect (2).png",
+                                "value":"other1/penEffectA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -49,7 +49,7 @@
                                 "index":1
                             },
                             {
-                                "value":"other1/penEffect (3).png",
+                                "value":"other1/penEffectA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -57,7 +57,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other1/penEffect (3).png",
+                                "value":"other1/penEffectA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -66,7 +66,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/penEffect (4).png",
+                                "value":"other1/penEffectA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -74,7 +74,7 @@
                                 "index":9
                             },
                             {
-                                "value":"other1/penEffect (5).png",
+                                "value":"other1/penEffectA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -82,7 +82,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other1/penEffect (6).png",
+                                "value":"other1/penEffectA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -90,7 +90,7 @@
                                 "index":11
                             },
                             {
-                                "value":"other1/penEffect (7).png",
+                                "value":"other1/penEffectA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -98,7 +98,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/penEffect (8).png",
+                                "value":"other1/penEffectA8A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -106,7 +106,7 @@
                                 "index":13
                             },
                             {
-                                "value":"other1/penEffect (9).png",
+                                "value":"other1/penEffectA9A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

@@ -51,15 +51,16 @@ class Main {
 				}
 			}), null, Laya.Loader.SOUND);
 		}
-		if (Laya.Browser.onMiniGame && false) {
-		// if (Laya.Browser.onMiniGame) {
-			Laya.URL.basePath = "https://7375-sunwen-5w22q-1302935665.tcb.qcloud.la/";
+		// if (Laya.Browser.onMiniGame && false) {
+		if (Laya.Browser.onMiniGame) {
+			Laya.URL.basePath = "https://7375-sunwen-5g5sew8lc92cf483-1302935665.tcb.qcloud.la/";
 			Laya["MiniAdpter"].nativefiles = [
 				"anim/",
 				"prefab/",
 				"res/",
 				// "scene",
 				"loading",
+				"open",
 				"js/",
 				"libs/",
 				"fileconfig.json",

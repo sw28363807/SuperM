@@ -33,7 +33,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"monster/ShuiMmu (2).png",
+                                "value":"monster/ShuiMmuA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -41,7 +41,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/ShuiMmu (2).png",
+                                "value":"monster/ShuiMmuA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":5
                             },
                             {
-                                "value":"monster/ShuiMmu (1).png",
+                                "value":"monster/ShuiMmuA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -58,7 +58,7 @@
                                 "index":10
                             },
                             {
-                                "value":"monster/ShuiMmu (1).png",
+                                "value":"monster/ShuiMmuA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -80,7 +80,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"monster/ShuiMmu (1).png",
+                                "value":"monster/ShuiMmuA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

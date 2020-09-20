@@ -51,7 +51,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/redFish (1).png",
+                                "value":"monster/redFishA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -59,7 +59,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/redFish (2).png",
+                                "value":"monster/redFishA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -67,7 +67,7 @@
                                 "index":5
                             },
                             {
-                                "value":"monster/redFish (3).png",
+                                "value":"monster/redFishA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

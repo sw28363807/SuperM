@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other1/qizhu (1).png",
+                                "value":"other1/qizhuA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -42,7 +42,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/qizhu (3).png",
+                                "value":"other1/qizhuA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other1/qizhu (5).png",
+                                "value":"other1/qizhuA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -58,7 +58,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/qizhu (7).png",
+                                "value":"other1/qizhuA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -66,7 +66,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/qizhu (9).png",
+                                "value":"other1/qizhuA9A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -74,7 +74,7 @@
                                 "index":16
                             },
                             {
-                                "value":"other1/qizhu (11).png",
+                                "value":"other1/qizhuA11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

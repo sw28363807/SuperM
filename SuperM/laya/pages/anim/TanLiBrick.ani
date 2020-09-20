@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other/tlzhuan (1).png",
+                                "value":"other/tlzhuanA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -42,7 +42,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/tlzhuan (2).png",
+                                "value":"other/tlzhuanA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other/tlzhuan (3).png",
+                                "value":"other/tlzhuanA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -96,7 +96,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/tlzhuan (1).png",
+                                "value":"other/tlzhuanA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -104,7 +104,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/tlzhuan (2).png",
+                                "value":"other/tlzhuanA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -112,7 +112,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other/tlzhuan (3).png",
+                                "value":"other/tlzhuanA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

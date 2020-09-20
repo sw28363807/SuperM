@@ -46,7 +46,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other/disBrick (1).png",
+                                "value":"other/disBrickA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -60,7 +60,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other/disBrick (2).png",
+                                "value":"other/disBrickA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -81,7 +81,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other/disBrick (1).png",
+                                "value":"other/disBrickA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -89,7 +89,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/disBrick (1).png",
+                                "value":"other/disBrickA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -104,7 +104,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other/disBrick (3).png",
+                                "value":"other/disBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -112,7 +112,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/disBrick (4).png",
+                                "value":"other/disBrickA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -120,7 +120,7 @@
                                 "index":1
                             },
                             {
-                                "value":"other/disBrick (3).png",
+                                "value":"other/disBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -129,7 +129,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/disBrick (4).png",
+                                "value":"other/disBrickA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -138,7 +138,7 @@
                                 "index":3
                             },
                             {
-                                "value":"other/disBrick (3).png",
+                                "value":"other/disBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -147,7 +147,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/disBrick (4).png",
+                                "value":"other/disBrickA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -156,7 +156,7 @@
                                 "index":5
                             },
                             {
-                                "value":"other/disBrick (3).png",
+                                "value":"other/disBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -165,7 +165,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/disBrick (4).png",
+                                "value":"other/disBrickA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -174,7 +174,7 @@
                                 "index":7
                             },
                             {
-                                "value":"other/disBrick (3).png",
+                                "value":"other/disBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -183,7 +183,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other/disBrick (4).png",
+                                "value":"other/disBrickA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -192,7 +192,7 @@
                                 "index":9
                             },
                             {
-                                "value":"other/disBrick (3).png",
+                                "value":"other/disBrickA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

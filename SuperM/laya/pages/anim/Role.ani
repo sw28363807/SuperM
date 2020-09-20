@@ -91,7 +91,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/ground_run (1).png",
+                                "value":"role/ground_runA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -99,7 +99,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role/ground_run (2).png",
+                                "value":"role/ground_runA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -107,7 +107,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role/ground_run (1).png",
+                                "value":"role/ground_runA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -146,7 +146,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/jump (1).png",
+                                "value":"role/jumpA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -488,7 +488,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/youyong (1).png",
+                                "value":"role/youyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -496,7 +496,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role/youyong (2).png",
+                                "value":"role/youyongA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -504,7 +504,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role/youyong (1).png",
+                                "value":"role/youyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -582,7 +582,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/flyrun (1).png",
+                                "value":"role/flyrunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -590,7 +590,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role/flyrun (2).png",
+                                "value":"role/flyrunA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -598,7 +598,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role/flyrun (1).png",
+                                "value":"role/flyrunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -637,7 +637,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/flyrun (3).png",
+                                "value":"role/flyrunA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -645,7 +645,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role/flyrun (4).png",
+                                "value":"role/flyrunA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -653,7 +653,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role/flyrun (3).png",
+                                "value":"role/flyrunA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -692,7 +692,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/flyyouyong (1).png",
+                                "value":"role/flyyouyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -700,7 +700,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role/flyyouyong (2).png",
+                                "value":"role/flyyouyongA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -708,7 +708,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role/flyyouyong (1).png",
+                                "value":"role/flyyouyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -786,7 +786,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role/flyzhuarun (1).png",
+                                "value":"role/flyzhuarunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -794,7 +794,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role/flyzhuarun (2).png",
+                                "value":"role/flyzhuarunA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -802,7 +802,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role/flyzhuarun (1).png",
+                                "value":"role/flyzhuarunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

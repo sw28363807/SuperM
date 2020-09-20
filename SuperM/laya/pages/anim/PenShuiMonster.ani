@@ -33,7 +33,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"monster/penshui (1).png",
+                                "value":"monster/penshuiA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -54,7 +54,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"monster/penshui (2).png",
+                                "value":"monster/penshuiA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -75,7 +75,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"monster/penshui (3).png",
+                                "value":"monster/penshuiA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

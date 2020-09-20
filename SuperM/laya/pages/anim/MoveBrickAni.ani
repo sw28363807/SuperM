@@ -52,7 +52,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other1/moveBoard (1).png",
+                                "value":"other1/moveBoardA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -60,7 +60,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/moveBoard (3).png",
+                                "value":"other1/moveBoardA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -68,7 +68,7 @@
                                 "index":1
                             },
                             {
-                                "value":"other1/moveBoard (5).png",
+                                "value":"other1/moveBoardA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -76,7 +76,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other1/moveBoard (7).png",
+                                "value":"other1/moveBoardA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -84,7 +84,7 @@
                                 "index":3
                             },
                             {
-                                "value":"other1/moveBoard (9).png",
+                                "value":"other1/moveBoardA9A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -92,7 +92,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other1/moveBoard (11).png",
+                                "value":"other1/moveBoardA11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -100,7 +100,7 @@
                                 "index":5
                             },
                             {
-                                "value":"other1/moveBoard (13).png",
+                                "value":"other1/moveBoardA13A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

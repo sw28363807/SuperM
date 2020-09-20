@@ -68,7 +68,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/gou (1).png",
+                                "value":"monster/gouA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -76,7 +76,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/gou (2).png",
+                                "value":"monster/gouA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -84,7 +84,7 @@
                                 "index":5
                             },
                             {
-                                "value":"monster/gou (3).png",
+                                "value":"monster/gouA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -92,7 +92,7 @@
                                 "index":10
                             },
                             {
-                                "value":"monster/gou (4).png",
+                                "value":"monster/gouA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other1/shuicao4 (1).png",
+                                "value":"other1/shuicao4A1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -42,7 +42,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/shuicao4 (3).png",
+                                "value":"other1/shuicao4A3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other1/shuicao4 (5).png",
+                                "value":"other1/shuicao4A5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -58,7 +58,7 @@
                                 "index":20
                             },
                             {
-                                "value":"other1/shuicao4 (7).png",
+                                "value":"other1/shuicao4A7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -66,7 +66,7 @@
                                 "index":30
                             },
                             {
-                                "value":"other1/shuicao4 (8).png",
+                                "value":"other1/shuicao4A8A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

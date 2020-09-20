@@ -52,7 +52,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/beike (1).png",
+                                "value":"monster/beikeA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -91,7 +91,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/beike (2).png",
+                                "value":"monster/beikeA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

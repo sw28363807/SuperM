@@ -65,7 +65,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/youling (1).png",
+                                "value":"monster/youlingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -73,7 +73,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/youling (2).png",
+                                "value":"monster/youlingA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -81,7 +81,7 @@
                                 "index":2
                             },
                             {
-                                "value":"monster/youling (3).png",
+                                "value":"monster/youlingA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -89,7 +89,7 @@
                                 "index":4
                             },
                             {
-                                "value":"monster/youling (4).png",
+                                "value":"monster/youlingA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -97,7 +97,7 @@
                                 "index":6
                             },
                             {
-                                "value":"monster/youling (5).png",
+                                "value":"monster/youlingA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -105,7 +105,7 @@
                                 "index":8
                             },
                             {
-                                "value":"monster/youling (6).png",
+                                "value":"monster/youlingA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -113,7 +113,7 @@
                                 "index":10
                             },
                             {
-                                "value":"monster/youling (7).png",
+                                "value":"monster/youlingA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -136,7 +136,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/youlingxxx (1).png",
+                                "value":"monster/youlingxxxA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -175,7 +175,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/youling (1).png",
+                                "value":"monster/youlingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -198,7 +198,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"monster/youlingxxx (2).png",
+                                "value":"monster/youlingxxxA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

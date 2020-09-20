@@ -52,7 +52,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other1/qingzhu (1).png",
+                                "value":"other1/qingzhuA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -60,7 +60,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/qingzhu (3).png",
+                                "value":"other1/qingzhuA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -68,7 +68,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other1/qingzhu (5).png",
+                                "value":"other1/qingzhuA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -76,7 +76,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/qingzhu (7).png",
+                                "value":"other1/qingzhuA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -84,7 +84,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/qingzhu (9).png",
+                                "value":"other1/qingzhuA9A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -92,7 +92,7 @@
                                 "index":16
                             },
                             {
-                                "value":"other1/qingzhu (11).png",
+                                "value":"other1/qingzhuA11A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -100,7 +100,7 @@
                                 "index":20
                             },
                             {
-                                "value":"other1/qingzhu (13).png",
+                                "value":"other1/qingzhuA13A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -108,7 +108,7 @@
                                 "index":24
                             },
                             {
-                                "value":"other1/qingzhu (15).png",
+                                "value":"other1/qingzhuA15A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

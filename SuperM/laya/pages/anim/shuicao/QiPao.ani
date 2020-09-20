@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other1/qipao (1).png",
+                                "value":"other1/qipaoA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -42,7 +42,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/qipao (2).png",
+                                "value":"other1/qipaoA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other1/qipao (3).png",
+                                "value":"other1/qipaoA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -58,7 +58,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other1/qipao (4).png",
+                                "value":"other1/qipaoA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -66,7 +66,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other1/qipao (5).png",
+                                "value":"other1/qipaoA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -74,7 +74,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/qipao (6).png",
+                                "value":"other1/qipaoA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -82,7 +82,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other1/qipao (7).png",
+                                "value":"other1/qipaoA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -90,7 +90,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/qipao (8).png",
+                                "value":"other1/qipaoA8A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -98,7 +98,7 @@
                                 "index":14
                             },
                             {
-                                "value":"other1/qipao (9).png",
+                                "value":"other1/qipaoA9A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -106,7 +106,7 @@
                                 "index":16
                             },
                             {
-                                "value":"other1/qipao (10).png",
+                                "value":"other1/qipaoA10A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -114,7 +114,7 @@
                                 "index":20
                             },
                             {
-                                "value":"other1/qipao (10).png",
+                                "value":"other1/qipaoA10A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

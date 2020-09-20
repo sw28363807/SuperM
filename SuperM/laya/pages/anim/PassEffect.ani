@@ -142,7 +142,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/lvping (1).png",
+                                "value":"other/lvpingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -150,7 +150,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/lvping (2).png",
+                                "value":"other/lvpingA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -159,7 +159,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/lvping (3).png",
+                                "value":"other/lvpingA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -168,7 +168,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/lvping (4).png",
+                                "value":"other/lvpingA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -177,7 +177,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/lvping (5).png",
+                                "value":"other/lvpingA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -186,7 +186,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other/lvping (6).png",
+                                "value":"other/lvpingA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -442,7 +442,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/lvping (1).png",
+                                "value":"other/lvpingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -450,7 +450,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/lvping (2).png",
+                                "value":"other/lvpingA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -459,7 +459,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/lvping (3).png",
+                                "value":"other/lvpingA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -468,7 +468,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/lvping (4).png",
+                                "value":"other/lvpingA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -477,7 +477,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/lvping (5).png",
+                                "value":"other/lvpingA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -486,7 +486,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other/lvping (6).png",
+                                "value":"other/lvpingA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -495,7 +495,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other/lvping (6).png",
+                                "value":"other/lvpingA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -805,7 +805,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other/lvping (1).png",
+                                "value":"other/lvpingA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -814,7 +814,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other/lvping (2).png",
+                                "value":"other/lvpingA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -823,7 +823,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other/lvping (3).png",
+                                "value":"other/lvpingA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -832,7 +832,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other/lvping (4).png",
+                                "value":"other/lvpingA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -841,7 +841,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other/lvping (5).png",
+                                "value":"other/lvpingA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -850,7 +850,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other/lvping (6).png",
+                                "value":"other/lvpingA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

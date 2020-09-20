@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"monster/jumpMonster (1).png",
+                                "value":"monster/jumpMonsterA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -42,7 +42,7 @@
                                 "index":0
                             },
                             {
-                                "value":"monster/jumpMonster (2).png",
+                                "value":"monster/jumpMonsterA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":2
                             },
                             {
-                                "value":"monster/jumpMonster (3).png",
+                                "value":"monster/jumpMonsterA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -71,7 +71,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"monster/jumpMonster (1).png",
+                                "value":"monster/jumpMonsterA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

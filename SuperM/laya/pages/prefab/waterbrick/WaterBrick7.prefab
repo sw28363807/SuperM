@@ -4,7 +4,7 @@
     "selectedBox":1525,
     "selecteID":1526,
     "searchKey":"Sprite,WaterBrick7",
-    "props":{"y":0,"x":0,"texture":"other1/waterBrick (7).png","presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick7.prefab","name":"WaterBrick7","isPresetRoot":true},
+    "props":{"y":0,"x":0,"texture":"other1/waterBrickA7A.png","presetID":1,"preset":"laya/pages/prefab/waterbrick/WaterBrick7.prefab","name":"WaterBrick7","isPresetRoot":true},
     "nodeParent":-1,
     "maxID":1528,
     "label":"WaterBrick7",

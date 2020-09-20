@@ -3,7 +3,7 @@
     "type":"Sprite",
     "selectedBox":67,
     "searchKey":"Sprite,b6,b6",
-    "props":{"zOrder":10,"y":0,"x":0,"var":"b6","texture":"other/posui (6).png","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/bb/b6.prefab","name":"b6","isPresetRoot":true},
+    "props":{"zOrder":10,"y":0,"x":0,"var":"b6","texture":"other/posuiA6A.png","scaleY":0.7,"scaleX":0.7,"presetID":1,"preset":"laya/pages/prefab/bb/b6.prefab","name":"b6","isPresetRoot":true},
     "nodeParent":-1,
     "maxID":82,
     "label":"b6",

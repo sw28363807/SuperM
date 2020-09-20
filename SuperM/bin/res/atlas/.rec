@@ -1,246 +1,102 @@
 D .
 D joystick
-P B31F2F57 btn1.png
-P 7CC02A6A DP1.png
-P 74615949 flybtn (1).png
-P F29E0498 jindu (1).png
-P F2C63922 jindu (2).png
-P 7EE08476 yangan.png
-P 4AA3FF56 zidanbtn (1).png
-P 9789B08A zidanbtn (2).png
-P 1DD3D264 zidanbtn (3).png
 D loading
 D monster
-P BC95C876 beike (1).png
-P EA3A499E beike (2).png
-P CC7B085C bigFish (1).png
-P 80423ABF bigFish (2).png
-P 6B40B08F bigFish (3).png
-P 1F74B56E ciqiuguai.png
-P 3B204743 gou (1).png
-P DA6C833E gou (2).png
-P 4B36A2A5 gou (3).png
-P E8010905 gou (4).png
-P 1557986E greenFish (1).png
-P B2481694 greenFish (2).png
-P 7FE37836 greenFish (3).png
-P 365B0CA5 hua (1).png
-P DF63E6F9 hua (2).png
-P 81B476BC hua (3).png
-P E61D50C3 jiaotanhuang (1).png
-P 5A858316 jiaotanhuang (2).png
-P 09FB5C68 jiaotanhuang (3).png
-P 277B33EB jiaotanhuang (4).png
-P 0272F0E8 jiaotanhuang (5).png
-P 36CE522F jiaotanhuang (6).png
-P E61D50C3 jiaotanhuang (7).png
-P 5BF2D310 jumpMonster (1).png
-P DCA2C9BF jumpMonster (2).png
-P 98BAB239 jumpMonster (3).png
-P E9EA17A1 ke.png
-P 5A06E049 lazhu (1).png
-P E22B01FF lazhu (2).png
-P 08AFEE83 lazhu (3).png
-P 4B5A094B new_green_monster (1).png
-P 5F634087 new_green_monster (2).png
-P 3FADC876 new_green_monster (3).png
-P DCD0C81E new_green_monster (4).png
-P 301AA4FF new_green_monster (5).png
-P 1BB27F95 new_green_woniu (1).png
-P 3F7CC08F new_green_woniu (2).png
-P 860D5808 new_green_woniu (3).png
-P 66163B56 new_green_woniu (4).png
-P DA72FC91 new_monster_chibang (1).png
-P 781D1FBE new_monster_chibang (2).png
-P 12B20C25 new_monster_chibang (3).png
-P 7D2CC66D new_monster_chibang (4).png
-P E5485519 new_monster_chibang (5).png
-P 5043414E new_red_monster (1).png
-P 5F9CEE2D new_red_monster (2).png
-P 70DDA250 new_red_monster (3).png
-P 3C4781FA new_red_monster (4).png
-P 6080799D new_red_monster (5).png
-P F7967456 new_red_woniu (1).png
-P 61CAA987 new_red_woniu (2).png
-P 22598160 new_red_woniu (3).png
-P B84970AE new_red_woniu (4).png
-P 6781EE6D new_woniu_chibang (1).png
-P 9DBC62EF new_woniu_chibang (2).png
-P E8829B14 new_woniu_chibang (3).png
-P 578FAD53 penshui (1).png
-P 15616172 penshui (2).png
-P 91B31789 penshui (3).png
-P 690E4EBA redFish (1).png
-P 3B581B96 redFish (2).png
-P 2B58D282 redFish (3).png
-P 912DC4A0 shiDie (1).png
-P D9FB02CD shiDie (2).png
-P AF3A60EF shiDie (3).png
-P 0374372C shiDie (4).png
-P 44F92553 shiDie (5).png
-P 69E6575B shiMove (1).png
-P 0DE0728C shiMove (2).png
-P EDC53898 shiMove (3).png
-P DC4C2EFC shiMove (4).png
-P 15AE6008 shitou (1).png
-P 5035552A shitou (2).png
-P 1A4A3CF3 ShuiMmu (1).png
-P F4AA646C ShuiMmu (2).png
-P 42DC9BE9 yanjing.png
-P 984378B5 youling (1).png
-P 767D1F61 youling (2).png
-P 200B205F youling (3).png
-P 9686E615 youling (4).png
-P 200B205F youling (5).png
-P 767D1F61 youling (6).png
-P 984378B5 youling (7).png
-P 5B344ACB youlingxxx (1).png
-P 22F30817 youlingxxx (2).png
-P 52D1CE90 zhutai.png
-P C229AAAB zidanbtn (xx).png
 D other
 P 2CFEAA96 blue.png
 P EC63A357 bullet.png
-P 62DDE881 bulletEffect (1).png
-P 81990A4B bulletEffect (11).png
-P 135F3E17 bulletEffect (13).png
-P 98F6F0E4 bulletEffect (3).png
-P D5AEACDF bulletEffect (5).png
-P AA7D07EE bulletEffect (7).png
-P BF025F1E bulletEffect (9).png
-P E321D054 CiZhuan (1).png
-P F1C0521A CiZhuan (2).png
+P 81990A4B bulletEffectA11A.png
+P 135F3E17 bulletEffectA13A.png
+P 62DDE881 bulletEffectA1A.png
+P 98F6F0E4 bulletEffectA3A.png
+P D5AEACDF bulletEffectA5A.png
+P AA7D07EE bulletEffectA7A.png
+P BF025F1E bulletEffectA9A.png
+P E321D054 CiZhuanA1A.png
+P F1C0521A CiZhuanA2A.png
 P 6CDF2F5A cizhuanxianxxx.png
-P 9C943681 cloud (1).png
-P 0F98E955 cloud (2).png
-P 5B41889C cloud (3).png
-P 2CF3D241 cloud (4).png
 P 381B485C cloud.png
-P 43878CCF disBrick (1).png
-P FB63EBF3 disBrick (2).png
-P F8EE521F disBrick (3).png
-P 201185A9 disBrick (4).png
+P 9C943681 cloudA1A.png
+P 0F98E955 cloudA2A.png
+P 5B41889C cloudA3A.png
+P 2CF3D241 cloudA4A.png
+P 43878CCF disBrickA1A.png
+P FB63EBF3 disBrickA2A.png
+P F8EE521F disBrickA3A.png
+P 201185A9 disBrickA4A.png
 P 89E83E8B dropBrick.png
-P 74E5BAA1 goldBrick (1).png
-P 2D84AE1C goldBrick (10).png
-P 65EC531F goldBrick (11).png
-P 0A7F8167 goldBrick (2).png
-P C8EB5926 goldBrick (3).png
-P 63D362C1 goldBrick (4).png
-P 1E9DFA27 goldBrick (5).png
-P 1C5CF736 goldBrick (6).png
-P A58A04DF goldBrick (7).png
-P 6B98DD20 goldBrick (8).png
-P 0441F45A goldBrick (9).png
+P 2D84AE1C goldBrickA10A.png
+P 65EC531F goldBrickA11A.png
+P 74E5BAA1 goldBrickA1A.png
+P 0A7F8167 goldBrickA2A.png
+P C8EB5926 goldBrickA3A.png
+P 63D362C1 goldBrickA4A.png
+P 1E9DFA27 goldBrickA5A.png
+P 1C5CF736 goldBrickA6A.png
+P A58A04DF goldBrickA7A.png
+P 6B98DD20 goldBrickA8A.png
+P 0441F45A goldBrickA9A.png
 P BB68797D green.png
 P E72D5BAE ground.png
 P 9FFE84F2 ground1.png
-P 93B21FB4 hongping (1).png
-P C7298045 hongping (2).png
-P 54189C38 hongping (3).png
-P 3D555312 hongping (4).png
-P 25B174C3 hongping (5).png
-P 52532D26 hongping (6).png
-P 79B4E213 jb (1).png
-P EF6A1239 jb (11).png
-P 5081154B jb (13).png
-P 457D3DD7 jb (15).png
-P 422217C1 jb (17).png
-P E274D9ED jb (19).png
-P D34DF4AB jb (21).png
-P 79B4E213 jb (3).png
-P FC96D6D9 jb (5).png
-P 29FEC5F9 jb (7).png
-P 016BDACD jb (9).png
-P B390A83E lanping (1).png
-P 3FD232B3 lanping (2).png
-P B19E30AA lanping (3).png
-P BA805C08 lanping (4).png
-P 17E121A7 lanping (5).png
-P 91249018 lanping (6).png
-P 86220A5E lvping (1).png
-P AADD8F5C lvping (2).png
-P 6E280363 lvping (3).png
-P 7D1A8E49 lvping (4).png
-P E06438A2 lvping (5).png
-P 8101CE0D lvping (6).png
+P 93B21FB4 hongpingA1A.png
+P C7298045 hongpingA2A.png
+P 54189C38 hongpingA3A.png
+P 3D555312 hongpingA4A.png
+P 25B174C3 hongpingA5A.png
+P 52532D26 hongpingA6A.png
+P EF6A1239 jbA11A.png
+P 5081154B jbA13A.png
+P 457D3DD7 jbA15A.png
+P 422217C1 jbA17A.png
+P E274D9ED jbA19A.png
+P 79B4E213 jbA1A.png
+P D34DF4AB jbA21A.png
+P 79B4E213 jbA31A.png
+P FC96D6D9 jbA5A.png
+P 29FEC5F9 jbA7A.png
+P 016BDACD jbA9A.png
+P B390A83E lanpingA1A.png
+P 3FD232B3 lanpingA2A.png
+P B19E30AA lanpingA3A.png
+P BA805C08 lanpingA4A.png
+P 17E121A7 lanpingA5A.png
+P 91249018 lanpingA6A.png
+P 86220A5E lvpingA1A.png
+P AADD8F5C lvpingA2A.png
+P 6E280363 lvpingA3A.png
+P 7D1A8E49 lvpingA4A.png
+P E06438A2 lvpingA5A.png
+P 8101CE0D lvpingA6A.png
 P 1EC77A66 mu.png
 P 7F04BFB9 pass.png
-P 50157026 posui (1).png
-P B3797641 posui (2).png
-P 3D048BAE posui (3).png
-P 7F91ADA6 posui (4).png
-P C649CCF0 posui (5).png
-P 1D6EEDFB posui (6).png
-P A63DCF1F posui (7).png
+P 50157026 posuiA1A.png
+P B3797641 posuiA2A.png
+P 3D048BAE posuiA3A.png
+P 7F91ADA6 posuiA4A.png
+P C649CCF0 posuiA5A.png
+P 1D6EEDFB posuiA6A.png
+P A63DCF1F posuiA7A.png
 P 68749DDD reward.png
 P 4A6F9A67 reward2.png
 P AB0386F2 rewardFrame.png
 P 8C4B19FE Shuiguan.png
 P E3043DC1 shuiguan2.png
-P D3338000 tlzhuan (1).png
-P C99AC8AF tlzhuan (2).png
-P 33B11907 tlzhuan (3).png
-P 22B58317 wenhao (1).png
-P B682A504 wenhao (11).png
-P B682A504 wenhao (3).png
-P 47ECAAF7 wenhao (5).png
-P D8BF9E36 wenhao (7).png
-P 47ECAAF7 wenhao (9).png
+P D3338000 tlzhuanA1A.png
+P C99AC8AF tlzhuanA2A.png
+P 33B11907 tlzhuanA3A.png
 P A6122106 Wenhao2.png
-P 956EB188 zhuan (1).png
-P 6CFF0122 zhuan (2).png
-P 7C622836 zhuan (3).png
-P 3B46225F zhuan (4).png
-P A1D62BA9 zhuan (5).png
+P B682A504 wenhaoA11A.png
+P 22B58317 wenhaoA1A.png
+P B682A504 wenhaoA3A.png
+P 47ECAAF7 wenhaoA5A.png
+P D8BF9E36 wenhaoA7A.png
+P 47ECAAF7 wenhaoA9A.png
+P 956EB188 zhuanA1A.png
+P 6CFF0122 zhuanA2A.png
+P 7C622836 zhuanA3A.png
+P 3B46225F zhuanA4A.png
+P A1D62BA9 zhuanA5A.png
 D other1
 D role
-P 482329B3 flyjump.png
-P 5E314C4C flyrun (1).png
-P BC967F50 flyrun (2).png
-P 667919F5 flyrun (3).png
-P E9F888A0 flyrun (4).png
-P 3801A163 flystand.png
-P 4F3CF345 flyyouyong (1).png
-P D3FC9004 flyyouyong (2).png
-P 1CE618F2 flyzhuajump.png
-P 1A6C00CA flyzhuarun (1).png
-P 628122FD flyzhuarun (2).png
-P 015DF454 flyzhuastand.png
-P 16FD743A groudnstand.png
-P EB8EBCED ground_run (1).png
-P FE3E6FA6 ground_run (2).png
-P 937EEB0B jump (1).png
-P B6B335AD jump (2).png
-P F1E1CDE0 stand2.png
-P 7C151965 stand3.png
-P 599E95C8 youyong (1).png
-P DA238884 youyong (2).png
-P 40AAEB14 zhuajump.png
-P 2758C5E8 zhuarun1.png
-P 2D5D6F68 zhuarun2.png
-P D832B22D zhuastand.png
 D role1
-P BABB1B20 fly (1).png
-P 15672FB4 fly (2).png
-P 4497D884 flyjump.png
-P EA027856 flyrun (1).png
-P 6B50C387 flyrun (2).png
-P 9F412A0E flystand.png
-P B46F3035 flyyouyong (1).png
-P BC94B0F8 flyyouyong (2).png
-P A65151DE flyzhuajump.png
-P BFA643D6 flyzhuarun (1).png
-P F2125056 flyzhuarun (2).png
-P ECE018EB flyzhuastand.png
-P 87D6C50A groundstand.png
-P 922FB939 light_die.png
-P 41EF621C light_jump.png
-P 1D916764 light_run (1).png
-P C9DD6A7C light_run (2).png
-P 982D48A0 light_youyong (1).png
-P E1D83B59 light_youyong (2).png
-P 9A8B8689 zhuajump.png
-P DD95955A zhuarun1.png
-P 2B95E511 zhuarun2.png
-P AF179E70 zhuastand.png

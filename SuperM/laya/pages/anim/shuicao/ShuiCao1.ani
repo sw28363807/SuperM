@@ -34,7 +34,7 @@
                     "keyframes":{
                         "skin":[
                             {
-                                "value":"other1/shuicao1 (1).png",
+                                "value":"other1/shuicao1A1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -42,7 +42,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/shuicao1 (3).png",
+                                "value":"other1/shuicao1A3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -50,7 +50,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other1/shuicao1 (5).png",
+                                "value":"other1/shuicao1A5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -58,7 +58,7 @@
                                 "index":20
                             },
                             {
-                                "value":"other1/shuicao1 (6).png",
+                                "value":"other1/shuicao1A6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

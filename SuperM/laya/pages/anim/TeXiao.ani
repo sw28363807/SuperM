@@ -51,7 +51,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"other1/texiaoguoguan (1).png",
+                                "value":"other1/texiaoguoguanA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -59,7 +59,7 @@
                                 "index":0
                             },
                             {
-                                "value":"other1/texiaoguoguan (2).png",
+                                "value":"other1/texiaoguoguanA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -67,7 +67,7 @@
                                 "index":2
                             },
                             {
-                                "value":"other1/texiaoguoguan (3).png",
+                                "value":"other1/texiaoguoguanA3A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -75,7 +75,7 @@
                                 "index":4
                             },
                             {
-                                "value":"other1/texiaoguoguan (4).png",
+                                "value":"other1/texiaoguoguanA4A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -83,7 +83,7 @@
                                 "index":6
                             },
                             {
-                                "value":"other1/texiaoguoguan (5).png",
+                                "value":"other1/texiaoguoguanA5A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -91,7 +91,7 @@
                                 "index":8
                             },
                             {
-                                "value":"other1/texiaoguoguan (6).png",
+                                "value":"other1/texiaoguoguanA6A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -99,7 +99,7 @@
                                 "index":10
                             },
                             {
-                                "value":"other1/texiaoguoguan (7).png",
+                                "value":"other1/texiaoguoguanA7A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,
@@ -107,7 +107,7 @@
                                 "index":12
                             },
                             {
-                                "value":"other1/texiaoguoguan (8).png",
+                                "value":"other1/texiaoguoguanA8A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":3,

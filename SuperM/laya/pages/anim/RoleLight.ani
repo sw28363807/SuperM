@@ -91,7 +91,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role1/light_run (1).png",
+                                "value":"role1/light_runA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -99,7 +99,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role1/light_run (2).png",
+                                "value":"role1/light_runA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -107,7 +107,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role1/light_run (1).png",
+                                "value":"role1/light_runA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -379,7 +379,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role1/light_youyong (1).png",
+                                "value":"role1/light_youyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -387,7 +387,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role1/light_youyong (2).png",
+                                "value":"role1/light_youyongA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -395,7 +395,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role1/light_youyong (1).png",
+                                "value":"role1/light_youyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -473,7 +473,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role1/flyrun (1).png",
+                                "value":"role1/flyrunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -481,7 +481,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role1/flyrun (2).png",
+                                "value":"role1/flyrunA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -489,7 +489,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role1/flyrun (1).png",
+                                "value":"role1/flyrunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -567,7 +567,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role1/flyzhuarun (1).png",
+                                "value":"role1/flyzhuarunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -575,7 +575,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role1/flyzhuarun (2).png",
+                                "value":"role1/flyzhuarunA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -583,7 +583,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role1/flyzhuarun (1).png",
+                                "value":"role1/flyzhuarunA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -708,7 +708,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role1/flyyouyong (1).png",
+                                "value":"role1/flyyouyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -716,7 +716,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role1/flyyouyong (2).png",
+                                "value":"role1/flyyouyongA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -724,7 +724,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role1/flyyouyong (1).png",
+                                "value":"role1/flyyouyongA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -763,7 +763,7 @@
                             }],
                         "skin":[
                             {
-                                "value":"role1/fly (1).png",
+                                "value":"role1/flyA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -771,7 +771,7 @@
                                 "index":0
                             },
                             {
-                                "value":"role1/fly (2).png",
+                                "value":"role1/flyA2A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,
@@ -779,7 +779,7 @@
                                 "index":3
                             },
                             {
-                                "value":"role1/fly (1).png",
+                                "value":"role1/flyA1A.png",
                                 "tweenMethod":"linearNone",
                                 "tween":false,
                                 "target":4,

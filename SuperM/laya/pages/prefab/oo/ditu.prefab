@@ -30,7 +30,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1101,"x":-12,"texture":"other1/dixia (1).png","presetID":2,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1101,"x":-12,"texture":"other1/dixiaA1A.png","presetID":2,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -44,7 +44,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":794,"x":988,"texture":"other1/dixia (2).png","presetID":3,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":794,"x":988,"texture":"other1/dixiaA2A.png","presetID":3,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -58,7 +58,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":687,"x":1988,"texture":"other1/dixia (3).png","presetID":4,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":687,"x":1988,"texture":"other1/dixiaA3A.png","presetID":4,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -72,7 +72,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":687,"x":2977,"texture":"other1/dixia (4).png","presetID":5,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":687,"x":2977,"texture":"other1/dixiaA4A.png","presetID":5,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -86,7 +86,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":687,"x":3977,"texture":"other1/dixia (5).png","presetID":6,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":687,"x":3977,"texture":"other1/dixiaA5A.png","presetID":6,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -100,7 +100,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":9,"x":4967,"texture":"other1/dixia (6).png","presetID":7,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":9,"x":4967,"texture":"other1/dixiaA6A.png","presetID":7,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -114,7 +114,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":9,"x":5954,"texture":"other1/dixia (7).png","presetID":8,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":9,"x":5954,"texture":"other1/dixiaA7A.png","presetID":8,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -128,7 +128,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1078,"x":5954,"texture":"other1/dixia (8).png","presetID":9,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1078,"x":5954,"texture":"other1/dixiaA8A.png","presetID":9,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -142,7 +142,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":9,"x":6917,"texture":"other1/dixia (9).png","presetID":10,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":9,"x":6917,"texture":"other1/dixiaA9A.png","presetID":10,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -156,7 +156,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1077,"x":6934,"texture":"other1/dixia (10).png","presetID":11,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1077,"x":6934,"texture":"other1/dixiaA10A.png","presetID":11,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -170,7 +170,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":9,"x":7917,"texture":"other1/dixia (11).png","presetID":12,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":9,"x":7917,"texture":"other1/dixiaA11A.png","presetID":12,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -184,7 +184,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1078,"x":7917,"texture":"other1/dixia (12).png","presetID":13,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1078,"x":7917,"texture":"other1/dixiaA12A.png","presetID":13,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -198,7 +198,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":9,"x":8917,"texture":"other1/dixia (13).png","presetID":14,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":9,"x":8917,"texture":"other1/dixiaA13A.png","presetID":14,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -212,7 +212,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1086,"x":8917,"texture":"other1/dixia (14).png","presetID":15,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1086,"x":8917,"texture":"other1/dixiaA14A.png","presetID":15,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -226,7 +226,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":8,"x":9917,"texture":"other1/dixia (15).png","presetID":16,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":8,"x":9917,"texture":"other1/dixiaA15A.png","presetID":16,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -240,7 +240,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1076,"x":9908,"texture":"other1/dixia (16).png","presetID":17,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1076,"x":9908,"texture":"other1/dixiaA16A.png","presetID":17,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -254,7 +254,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1086,"x":10908,"texture":"other1/dixia (17).png","presetID":18,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1086,"x":10908,"texture":"other1/dixiaA17A.png","presetID":18,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,
@@ -268,7 +268,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":1086,"x":11908,"texture":"other1/dixia (18).png","presetID":19,"preset":"laya/pages/prefab/oo/ditu.prefab"},
+                    "props":{"y":1086,"x":11908,"texture":"other1/dixiaA18A.png","presetID":19,"preset":"laya/pages/prefab/oo/ditu.prefab"},
                     "nodeParent":1525,
                     "label":"Sprite(ditu)",
                     "isDirectory":false,

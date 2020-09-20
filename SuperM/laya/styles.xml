@@ -1,17 +1,17 @@
 <res>
    <item name="other/ground.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="1" scale="0"/>
-   <item name="other1/grass (1).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grass (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grass (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grass (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grass (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/some (11).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/some (12).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/some (13).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/some (14).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/some (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/some (6).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/some (8).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA1A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA2A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA3A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA4A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA5A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA11A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA12A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA13A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA14A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA5A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA6A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA8A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="yanhua1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="yanhua2" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="yanhua3" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
@@ -20,6 +20,10 @@
    <item name="yanhua6" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="po" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="other1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="role/flyrun (1).png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="role/flyrunA1A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
    <item name="loading" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="role" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="role1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="joystick" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="monster" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
 </res>
