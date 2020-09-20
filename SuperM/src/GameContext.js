@@ -390,7 +390,7 @@ GameContext.roleInWater = false;
 GameContext.roleInWaterJump = false;
 GameContext.roleInWaterSpeed = 4;
 GameContext.roleCommandFly = false;
-GameContext.roleFlyState = false;
+GameContext.roleFlyState = true;
 GameContext.roleInWaterObject = null;
 GameContext.roleInMoveGround = false;
 GameContext.roleInMoveGroundObject = null;
@@ -477,8 +477,9 @@ GameContext.roleFen = 0;
 
 
 GameContext.nickName = "";
-GameContext.nickName = "";
 GameContext.city = "";
 GameContext.province = "";
 GameContext.country = "";
 GameContext.avatarUrl = "";
+
+GameContext.upSpeed = 0;

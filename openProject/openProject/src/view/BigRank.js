@@ -4,18 +4,20 @@ export default class BigRank extends BigUI {
     constructor() { 
         super(); 
         this._key = "test10086";
+        this.isdownLoadRank = false;
         //默认数据
         this.arr = [
-            {index:1,avatarIP:'test/4.png',UserName:"测试用户1",RankValue:100},
-            {index:2,avatarIP:'test/4.png',UserName:"测试用户2",RankValue:75},
-            {index:3,avatarIP:'test/4.png',UserName:"测试用户3",RankValue:50},
-            {index:4,avatarIP:'test/4.png',UserName:"测试用户4",RankValue:25}
+            // {index:1,avatarIP:'test/4.png',UserName:"测试用户1",RankValue:100},
+            // {index:2,avatarIP:'test/4.png',UserName:"测试用户2",RankValue:75},
+            // {index:3,avatarIP:'test/4.png',UserName:"测试用户3",RankValue:50},
+            // {index:4,avatarIP:'test/4.png',UserName:"测试用户4",RankValue:25}
         ];
     }
     
     init(){
         //将场景加到舞台上
         Laya.stage.addChild(this);
+        this.zOrder = 99999;
         //设置默认数据
         this.setlist(this.arr);
         // Laya.stage.visible  = false;
@@ -31,10 +33,16 @@ export default class BigRank extends BigUI {
      * 获取好友排行
      */
     getFriendData(){
+        if (this.isdownLoadRank == true) {
+            return;
+        }
+        this.isdownLoadRank = true;
         var _$this = this;
         wx.getFriendCloudStorage({
-            keyList:[this._key],
+            keyList:["fenRank"],
             success:function(res){
+                console.log("+++++++++++++++++++++++++++++");
+                console.log(res);
                 //关于拿到的数据详细情况可以产看微信文档
                 //https://developers.weixin.qq.com/minigame/dev/api/UserGameData.html
                 var listData;
@@ -50,7 +58,7 @@ export default class BigRank extends BigUI {
                         //拉取数据是，使用了多少个key- KVDataList的数组就有多少
                         //更详细的KVData可以查看微信文档:https://developers.weixin.qq.com/minigame/dev/api/KVData.html
                         kv = obj.KVDataList[0];
-                        if(kv.key!=_$this._key)
+                        if(kv.key!="fenRank")
                             continue
                         kv = JSON.parse(kv.value)
                         listData = {};
@@ -58,8 +66,10 @@ export default class BigRank extends BigUI {
                         listData.UserName = obj.nickname;
                         listData.openID = obj.openid;
                         listData.RankValue = kv.wxgame.value1;
-                        listData.update_time=kv.wxgame.update_time;
+                        listData.rankIndex = i;
+                        // listData.update_time=kv.wxgame.update_time;
                         arr.push(listData);
+                        console.debug(listData);
                     }
                     //根据RankValue排序
                     arr = arr.sort(function(a,b){
@@ -84,11 +94,10 @@ export default class BigRank extends BigUI {
          * @param message 收到的主域传过来的信息
          */
         recevieData(message){
-            var type = message.type;
-            switch(type)
-            {   
-                default:
-                    break;
+            if (message.fen != null && message.fen != undefined) {
+                this.fen = message.fen;
+                this.key = message.key;
+                this.setSelfData();
             }
         }
         /**
@@ -99,19 +108,24 @@ export default class BigRank extends BigUI {
             var kvDataList = [];
             var obj = {};
             obj.wxgame ={};
-            obj.wxgame.value1 =  data;
-            obj.wxgame.update_time  = Laya.Browser.now();
-            kvDataList.push({"key":this._key,"value":JSON.stringify(obj)});
-            this.wx.setUserCloudStorage({
+            obj.wxgame.value1 = String(this.fen);
+            console.log("MyData: " + obj.wxgame.value1);
+            let outSelf = this;
+            // obj.wxgame.update_time  = Laya.Browser.now();
+            kvDataList.push({"key":"fenRank","value":JSON.stringify(obj)});
+            wx.setUserCloudStorage({
                 KVDataList:kvDataList,
                 success:function(e){
                     console.log('-----success:' + JSON.stringify(e));
+                    outSelf.getFriendData();
                 },
                 fail:function(e){
                     console.log('-----fail:' + JSON.stringify(e));
+                    outSelf.getFriendData();
                 },
                 complete:function(e){
                     console.log('-----complete:' + JSON.stringify(e));
+                    outSelf.getFriendData();
                 }
             });
         }

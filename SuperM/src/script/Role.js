@@ -566,6 +566,7 @@ export default class Role extends Laya.Script {
                 GameContext.roleFlyDrop = true;
             }
         } else if (data == "up") {
+            GameContext.upSpeed = 0;
             GameContext.roleCommandFly = false;
             GameContext.roleFlyDrop = true;
         }

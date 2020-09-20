@@ -189,7 +189,7 @@
             "x":15,
             "type":"Button",
             "searchKey":"Button,rank",
-            "props":{"y":21.5,"x":539,"stateNum":"2","skin":"joystick/zidanbtn (xx).png","scaleY":0.5,"scaleX":0.5,"name":"rank","labelSize":48},
+            "props":{"y":14,"x":540,"stateNum":"2","skin":"loading/zidanbtn (xx).png","scaleY":0.5,"scaleX":0.5,"name":"rank","labelSize":48},
             "nodeParent":2,
             "label":"rank",
             "isDirectory":false,

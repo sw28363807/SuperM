@@ -29,10 +29,9 @@ export default class Camera extends Laya.Script {
                     this.curUpOffY = this.upOffY;
                     this.upSpeed = 0;
                 }
-                this.owner.y = this.standY - (this.role.y - this.curUpOffY);
                 this.curDownOffY = -(this.role.y - this.curUpOffY);
+                this.owner.y = this.standY - (this.role.y - this.curUpOffY);
             } else {
-                this.curUpOffY = this.owner.yOff;
                 if (this.curDownOffY > 0) {
                     this.upSpeed += this.aSpeed;
                     if (this.upSpeed > 10) {
@@ -44,6 +43,7 @@ export default class Camera extends Laya.Script {
                         this.upSpeed = 0;
                     }
                 }
+                this.curUpOffY = this.role.y + this.curDownOffY;
                 this.owner.y =  this.standY + this.curDownOffY;
             }
         } else {

@@ -143,6 +143,7 @@ export default class Utils extends Laya.Script {
             label.x = owner.x;
             label.y = owner.y - 80;
             GameContext.roleFen += Number(owner.fen);
+            Laya.LocalStorage.setItem("fen", String(GameContext.roleFen));
             EventMgr.getInstance().postEvent(Events.Refresh_Fen_Number);
     
             Laya.Tween.to(label, {y: label.y - 60}, 500, null, Laya.Handler.create(null, function() {
