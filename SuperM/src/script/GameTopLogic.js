@@ -9,19 +9,6 @@ export default class GameTopLogic extends Laya.Script {
     }
     
     onEnable() {
-
-        if (Laya.LocalStorage.support) {
-            let fen = Laya.LocalStorage.getItem("fen");
-            if (fen == undefined || fen == null) {
-                GameContext.roleFen = Number(0);
-                Laya.LocalStorage.setItem("fen", String(GameContext.roleFen));
-            } else {
-                GameContext.roleFen = Number(fen);
-            }
-        } else {
-            GameContext.roleFen = Number(0);
-        }
-
         EventMgr.getInstance().registEvent(Events.Refresh_Gold_Number, this, this.oRefreshGold);
         EventMgr.getInstance().registEvent(Events.Refresh_Role_Number, this, this.onRefreshRole);
         EventMgr.getInstance().registEvent(Events.Refresh_Fen_Number, this, this.onRefreshFen);

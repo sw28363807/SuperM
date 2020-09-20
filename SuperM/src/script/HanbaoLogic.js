@@ -72,8 +72,8 @@ export default class HanbaoLogic extends Laya.Script {
         }
 
         this.owner.play(0, false, aniA);
-        this.owner.coll = this.owner.getComponent(Laya.ColliderBase);;
-        this.owner.on(Laya.Event.COMPLETE, this, function(){
+        this.owner.coll = this.owner.getComponent(Laya.ColliderBase);
+        Laya.timer.once(400, this, function() {
             this.owner.rigidBody.getBody().SetActive(true);
             this.owner.play(0, false, aniB);
         });

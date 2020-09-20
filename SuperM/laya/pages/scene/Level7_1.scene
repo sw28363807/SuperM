@@ -241,7 +241,7 @@
             "selectedBox":54,
             "selecteID":115,
             "searchKey":"Box",
-            "props":{"y":416,"x":661,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
+            "props":{"y":416,"x":683,"presetID":1,"preset":"laya/pages/prefab/Role.prefab"},
             "nodeParent":2,
             "maxID":116,
             "label":"Role",

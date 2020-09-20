@@ -74,6 +74,17 @@ class Main {
 			  ];
 		}
 
+		if (Laya.LocalStorage.support) {
+			let fen = Laya.LocalStorage.getItem("fen");
+			console.debug("maxFen:" + String(fen));
+            if (fen == undefined || fen == null) {
+                GameContext.roleFen = Number(0);
+                Laya.LocalStorage.setItem("fen", String(GameContext.roleFen));
+            } else {
+                GameContext.maxRoleFen = Number(fen);
+            }
+        }
+
 		//激活资源版本控制，version.json由IDE发布功能自动生成，如果没有也不影响后续流程
 		Laya.ResourceVersion.enable("version.json", Laya.Handler.create(this, this.onVersionLoaded), Laya.ResourceVersion.FILENAME_VERSION);
 	}

@@ -270,7 +270,7 @@ export default class Role extends Laya.Script {
             }
         }
         if (other.label == "Hole" && other.owner) {
-            GameContext.triggerGotoHole(other.owner);
+            Utils.triggerGotoHole(other.owner);
             GameContext.roleIsDrop = true;
             return;
         }

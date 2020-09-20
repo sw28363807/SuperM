@@ -5,6 +5,8 @@ export default class LoadingLogic extends Laya.Script {
     }
     
     onEnable() {
+        this.owner.slider = this.owner.getChildByName("sliderBg");
+        this.owner.sliderBar = this.owner.slider.getChildByName("slider");
     }
 
     onStart() {

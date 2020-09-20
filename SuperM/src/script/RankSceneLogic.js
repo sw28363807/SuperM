@@ -15,7 +15,7 @@ export default class RankSceneLogic extends Laya.Script {
     onStart() {
         if (Laya.Browser.onMiniGame) {
             let openView = this.owner.getChildByName("open");
-            openView.postMsg({fen: GameContext.roleFen, key: GameContext.nickName});
+            openView.postMsg({fen: GameContext.maxRoleFen, key: GameContext.nickName});
         }
         let closeBtn1 =  this.owner.getChildByName("close1");
         closeBtn1.on(Laya.Event.CLICK, this, function() {

@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5,
+    "selecteID":10,
     "searchKey":"Scene",
     "props":{"width":1336,"sceneColor":"#000000","runtime":"script/LoadingBgLogic.js","height":750,"autoDestroyAtClosed":true},
     "nodeParent":-1,
-    "maxID":10,
+    "maxID":101,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -58,6 +58,78 @@
             "compId":9,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "selectedBox":96,
+            "selecteID":99,
+            "searchKey":"Box",
+            "props":{"y":498,"x":448,"presetID":1,"preset":"laya/pages/prefab/menu/SliderBg.prefab"},
+            "nodeParent":2,
+            "maxID":101,
+            "label":"SliderBg",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":10,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":5,"preset":"laya/pages/prefab/menu/SliderBg.prefab"},
+                    "nodeParent":10,
+                    "label":"slider",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":100,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"presetID":4,"preset":"laya/pages/prefab/menu/SliderBg.prefab"},
+                    "nodeParent":10,
+                    "label":"sliderBg",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":99,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/SliderLogic.js",
+                    "searchKey":"Script,SliderLogic",
+                    "removeAble":true,
+                    "props":{"presetID":3,"preset":"laya/pages/prefab/menu/SliderBg.prefab"},
+                    "nodeParent":10,
+                    "label":"SliderLogic",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":98,
+                    "child":[
+                        ]
+                }],
+            "animations":[
+                {
+                    "nodes":[
+                        ],
+                    "name":"ani1",
+                    "id":1,
+                    "frameRate":24,
+                    "action":0
+                }]
         }],
     "animations":[
         {

@@ -269,44 +269,7 @@
                 {
                     "target":3,
                     "keyframes":{
-                        "y":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"y",
-                                "index":0
-                            }],
-                        "x":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"x",
-                                "index":0
-                            }],
-                        "skin":[
-                            ],
-                        "scaleY":[
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"scaleY",
-                                "index":0
-                            }],
-                        "scaleX":[
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"scaleX",
-                                "index":0
-                            }]
+
                     }
                 },
                 {
@@ -521,44 +484,7 @@
                 {
                     "target":3,
                     "keyframes":{
-                        "y":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"y",
-                                "index":0
-                            }],
-                        "x":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"x",
-                                "index":0
-                            }],
-                        "skin":[
-                            ],
-                        "scaleY":[
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"scaleY",
-                                "index":0
-                            }],
-                        "scaleX":[
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"scaleX",
-                                "index":0
-                            }]
+
                     }
                 },
                 {
@@ -773,44 +699,7 @@
                 {
                     "target":3,
                     "keyframes":{
-                        "y":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"y",
-                                "index":0
-                            }],
-                        "x":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"x",
-                                "index":0
-                            }],
-                        "skin":[
-                            ],
-                        "scaleY":[
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"scaleY",
-                                "index":0
-                            }],
-                        "scaleX":[
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":3,
-                                "key":"scaleX",
-                                "index":0
-                            }]
+
                     }
                 },
                 {
