@@ -14,7 +14,7 @@ export default class LoadingBgLogic extends Laya.Script {
         this.owner.max = 100;
         this.owner.sliderBar.width = 0;
         this.owner.maxWidth = 327;
-        Laya.timer.loop(10, this, this.onTick);
+        Laya.timer.loop(500, this, this.onTick);
     }
 
     onTick() {

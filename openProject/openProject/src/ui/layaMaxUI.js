@@ -13,7 +13,7 @@ export class BigUI extends View {
 	}
 	
 }
-BigUI.uiView={"type":"View","props":{"width":1336,"height":750},"compId":2,"child":[{"type":"List","props":{"y":55,"x":375,"width":585,"var":"_list","vScrollBarSkin":" ","spaceY":10,"repeatX":1,"height":639,"elasticEnabled":true,"bgColor":"#6a8d87"},"compId":3,"child":[{"type":"bigItem","props":{"runtime":"view/BigItem.js","renderType":"render"},"compId":5}]}],"loadList":[],"loadList3D":[]};
+BigUI.uiView={"type":"View","props":{"width":1336,"height":750},"compId":2,"child":[{"type":"List","props":{"y":75,"x":375,"width":585,"var":"_list","vScrollBarSkin":" ","spaceY":10,"repeatX":1,"height":600,"elasticEnabled":true,"bgColor":"#6a8d87"},"compId":3,"child":[{"type":"bigItem","props":{"runtime":"view/BigItem.js","renderType":"render"},"compId":5}]}],"loadList":[],"loadList3D":[]};
 REG("ui.test.BigUI",BigUI);
 export class BigItemUI extends View {
 	constructor(){ 

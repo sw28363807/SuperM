@@ -769,6 +769,78 @@ export default class Utils extends Laya.Script {
         }
     }
 
+    static triggerInLiuSha(liusha) {
+        if (!liusha) {
+            return;
+        }
+
+        let lastBodyState = GameContext.bodyState;
+        GameContext.setRoleSensorEnabled(true);
+        Utils.changeRoleState();
+        Laya.SoundManager.playSound("loading/siwang.mp3");
+        GameContext.gameRoleNumber--;
+        if (GameContext.gameRoleNumber < 0) {
+            GameContext.gameRoleNumber = 0;
+        }
+        let path = "prefab/other/BlackBox.prefab";
+        if (GameContext.gameRoleNumber <= 0) {
+            path = "prefab/other/BlackBox2.prefab";
+        }
+        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+        GameContext.isDie = true;
+        Laya.loader.create(path, Laya.Handler.create(null, function (prefabDef) {
+            let black = prefabDef.create();
+            Laya.stage.addChild(black);
+            black.x = 0;   
+            black.y = 0;
+            black.zOrder = 9999999;
+            black.alpha = 0;
+            Laya.Tween.to(black,{alpha: 1}, 1000, null, Laya.Handler.create(null, function(){
+                if (GameContext.gameRoleNumber > 0) {
+                    if (GameContext.resetRolePoint) {
+                        GameContext.setRoleSensorEnabled(false);
+                        GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
+                        GameContext.setRoleSpeed(0.01, 0.01);
+                        GameContext.gameRoleYaBian = false;
+                        GameContext.curCiBrick = null;
+                        GameContext.roleHurting = false;
+                        GameContext.isDie = false;
+                        GameContext.playRoleAni("stand", true);
+                        GameContext.walkDirect = null;
+                        GameContext.roleIsDrop = false;
+                    }
+                    Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
+                        black.removeSelf();
+                        black.destroy();
+                    }));
+                } else {
+                    Laya.timer.once(1000, this, function() {
+                        Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
+                            black.removeSelf();
+                            black.destroy();
+                        }));
+                    });
+                    Utils.triggerGameOver();
+                }
+            }));
+        }));
+
+
+        // if (GameContext.gameRoleState == 1) {
+        //     GameContext.setRoleState(0);
+        //     GameContext.setBodyState(1);
+        // } else if (GameContext.bodyState == 1) {
+        //     GameContext.setRoleState(0);
+        //     GameContext.setBodyState(0);
+        // }
+        // GameContext.changeSmallEffect();
+        // if (GameContext.roleShuiGuanState == 1) {
+        //     GameContext.roleShuiGuanState = 0;
+        // }
+        // GameContext.setRoleSpeedX(0.01);
+        // GameContext.setRolePosition(liusha.x - 200, 300);
+    }
+
     static triggerGotoHole(hole, height, widthOff) {
         if (GameContext.isDie) {
             return;
@@ -819,6 +891,10 @@ export default class Utils extends Laya.Script {
                             GameContext.walkDirect = null;
                             GameContext.roleIsDrop = false;
                         }
+                        Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
+                            black.removeSelf();
+                            black.destroy();
+                        }));
                     } else {
                         Laya.timer.once(1000, this, function() {
                             Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){

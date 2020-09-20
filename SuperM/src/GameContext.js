@@ -20,25 +20,6 @@ export default class GameContext extends Laya.Script {
             
         }
     }
-
-    static triggerInLiuSha(liusha) {
-        if (!liusha) {
-            return;
-        }
-        if (GameContext.gameRoleState == 1) {
-            GameContext.setRoleState(0);
-            GameContext.setBodyState(1);
-        } else if (GameContext.bodyState == 1) {
-            GameContext.setRoleState(0);
-            GameContext.setBodyState(0);
-        }
-        GameContext.changeSmallEffect();
-        if (GameContext.roleShuiGuanState == 1) {
-            GameContext.roleShuiGuanState = 0;
-        }
-        GameContext.setRoleSpeedX(0.01);
-        GameContext.setRolePosition(liusha.x - 200, 300);
-    }
     
     static setRoleSpeed(x, y) {
         if (GameContext.roleRigidBody) {
@@ -294,7 +275,7 @@ GameContext.roleInWater = false;
 GameContext.roleInWaterJump = false;
 GameContext.roleInWaterSpeed = 4;
 GameContext.roleCommandFly = false;
-GameContext.roleFlyState = true;
+GameContext.roleFlyState = false;
 GameContext.roleInWaterObject = null;
 GameContext.roleInMoveGround = false;
 GameContext.roleInMoveGroundObject = null;
@@ -335,7 +316,7 @@ GameContext.joyStickDirect = null;
 GameContext.initRolePoint = null;
 GameContext.resetRolePoint = null;
 GameContext.mapMaxX = 0;
-GameContext.gameRoleNumberInit = 4;
+GameContext.gameRoleNumberInit = 10;
 GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
 GameContext.gameGoldNumber = 0;
 GameContext.gameRoleBodyState = 1;

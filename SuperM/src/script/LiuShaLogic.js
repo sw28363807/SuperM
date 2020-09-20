@@ -76,7 +76,7 @@ export default class LiuShaLogic extends Laya.Script {
                 this.owner.liuShaDieY = 0;
                 GameContext.roleInLiuSha = false;
                 GameContext.curRoleLiuSha = null;
-                GameContext.triggerInLiuSha(this.owner);
+                Utils.triggerInLiuSha(this.owner);
             }
         }
     }
