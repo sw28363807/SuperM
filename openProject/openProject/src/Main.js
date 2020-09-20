@@ -11,6 +11,7 @@ class Main {
 		Laya.stage.screenMode = GameConfig.screenMode;
 		Laya.stage.alignV = GameConfig.alignV;
 		Laya.stage.alignH = GameConfig.alignH;
+		this.isInit = false;
 		// 关于透传接口，请参考: https://ldc2.layabox.com/doc/?nav=zh-ts-5-0-7
 		if(Laya.Browser.onMiniGame)
 				wx.onMessage(function(data) {
@@ -22,6 +23,10 @@ class Main {
 	}
 
 	onComplete() {
+		if (this.isInit == true) {
+			return;
+		}
+		this.isInit = true;
 		//加载IDE指定的场景
 		var big = new BigRank();
 		big.init();

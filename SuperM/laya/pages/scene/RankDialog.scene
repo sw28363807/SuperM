@@ -2,7 +2,7 @@
     "x":0,
     "type":"Dialog",
     "selectedBox":2,
-    "selecteID":7,
+    "selecteID":4,
     "searchKey":"Dialog",
     "props":{"width":1336,"sceneColor":"#000000","isPopupCenter":true,"height":750},
     "nodeParent":-1,
@@ -17,22 +17,8 @@
         {
             "x":15,
             "type":"Box",
-            "searchKey":"Box",
-            "props":{"y":-604,"x":-14,"width":1336,"height":750,"bgColor":"#d75250"},
-            "nodeParent":2,
-            "label":"Box",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Box",
             "searchKey":"Box,close",
-            "props":{"y":-1986,"x":-1832,"width":5000,"name":"close","height":5000},
+            "props":{"y":-1990,"x":-1832,"width":5000,"name":"close","height":5000,"bgColor":"#0b0606","alpha":0.5},
             "nodeParent":2,
             "label":"close",
             "isOpen":true,
