@@ -2,7 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1697,
-    "selecteID":1700,
+    "selecteID":142,
     "searchKey":"Box,PenShuiMonster",
     "props":{"zOrder":100,"y":0,"x":0,"width":89,"presetID":1,"preset":"laya/pages/prefab/monster/PenShuiMonster.prefab","pivotY":0,"pivotX":0,"name":"PenShuiMonster","isPresetRoot":true,"height":127},
     "nodeParent":-1,
@@ -45,7 +45,7 @@
             "compId":142,
             "child":[
                 ],
-            "$LOCKED":true
+            "$LOCKED":false
         },
         {
             "x":15,

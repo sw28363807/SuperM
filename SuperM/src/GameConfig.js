@@ -26,6 +26,7 @@ import AITopOrBottom from "./script/AITopOrBottom"
 import FlowerLogic from "./script/FlowerLogic"
 import MonsterCreater from "./script/MonsterCreater"
 import Role from "./script/Role"
+import PenShuiMonsterLogic from "./script/PenShuiMonsterLogic"
 import BrickMonsterLogic from "./script/BrickMonsterLogic"
 import TanLiBrickLogic from "./script/TanLiBrickLogic"
 import LiuShaLogic from "./script/LiuShaLogic"
@@ -39,7 +40,6 @@ import DisBrickLogic from "./script/DisBrickLogic"
 import CiQiuLogic from "./script/CiQiuLogic"
 import DeadWaterLogic from "./script/DeadWaterLogic"
 import JumpMonsterLogic from "./script/JumpMonsterLogic"
-import PenShuiMonsterLogic from "./script/PenShuiMonsterLogic"
 import BigRedFishLogic from "./script/BigRedFishLogic"
 import DropBrickLogic from "./script/DropBrickLogic"
 import CiBrickLogic from "./script/CiBrickLogic"
@@ -93,6 +93,7 @@ export default class GameConfig {
 		reg("script/FlowerLogic.js",FlowerLogic);
 		reg("script/MonsterCreater.js",MonsterCreater);
 		reg("script/Role.js",Role);
+		reg("script/PenShuiMonsterLogic.js",PenShuiMonsterLogic);
 		reg("script/BrickMonsterLogic.js",BrickMonsterLogic);
 		reg("script/TanLiBrickLogic.js",TanLiBrickLogic);
 		reg("script/LiuShaLogic.js",LiuShaLogic);
@@ -106,7 +107,6 @@ export default class GameConfig {
 		reg("script/CiQiuLogic.js",CiQiuLogic);
 		reg("script/DeadWaterLogic.js",DeadWaterLogic);
 		reg("script/JumpMonsterLogic.js",JumpMonsterLogic);
-		reg("script/PenShuiMonsterLogic.js",PenShuiMonsterLogic);
 		reg("script/BigRedFishLogic.js",BigRedFishLogic);
 		reg("script/DropBrickLogic.js",DropBrickLogic);
 		reg("script/CiBrickLogic.js",CiBrickLogic);

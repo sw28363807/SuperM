@@ -16,31 +16,70 @@ export default class GameJoyStick extends Laya.Script {
         btn.on(Laya.Event.CLICK, this, function() {
             let input = this.owner.getChildByName("input");
             let scene = "";
-            if (input.text == "11") {
+// 第一关: 1
+// 第二关: 2
+// 第三关: 3.1   3.2
+// 第四关: 4
+// 第五关: 5
+// 第六关: 6
+// 第七关: 7
+// 第八关: 8
+// BOOSS关: booss
+            // if (input.text == "11") {
+            //     scene = "scene/Level1_1.scene";
+            // } else if (input.text == "21") {
+            //     scene = "scene/Level2_1.scene";
+            // } else if (input.text == "31") {
+            //     scene = "scene/Level3_1.scene";
+            // } else if (input.text == "32") {
+            //     scene = "scene/Level3_2.scene";
+            // } else if (input.text == "33") {
+            //     scene = "scene/Level3_3.scene";
+            // } else if (input.text == "41") {
+            //     scene = "scene/Level4_1.scene";
+            // } else if (input.text == "51") {
+            //     scene = "scene/Level5_1.scene";
+            // } else if (input.text == "61") {
+            //     scene = "scene/Level6_1.scene";
+            // } else if (input.text == "71") {
+            //     scene = "scene/Level7_1.scene";
+            // } else if (input.text == "72") {
+            //     scene = "scene/Level7_2.scene";
+            // } else if (input.text == "73") {
+            //     scene = "scene/Level7_3.scene";
+            // } else if (input.text == "81") {
+            //     scene = "scene/Level8_1.scene";
+            // } else if (input.text == "91") {
+            //     scene = "scene/LevelBoss.scene";
+            // } else if (input.text == "xx") {
+            //     scene = "scene/LittleGameScene1.scene";
+            // }
+
+            if (input.text == "1") {
                 scene = "scene/Level1_1.scene";
-            } else if (input.text == "21") {
+            } else if (input.text == "2") {
                 scene = "scene/Level2_1.scene";
-            } else if (input.text == "31") {
+            } else if (input.text == "3.1") {
                 scene = "scene/Level3_1.scene";
-            } else if (input.text == "32") {
+            } else if (input.text == "3.2") {
                 scene = "scene/Level3_2.scene";
-            } else if (input.text == "33") {
+            } else if (input.text == "3.3") {
                 scene = "scene/Level3_3.scene";
-            } else if (input.text == "41") {
+            } else if (input.text == "4") {
                 scene = "scene/Level4_1.scene";
-            } else if (input.text == "51") {
+            } else if (input.text == "5") {
                 scene = "scene/Level5_1.scene";
-            } else if (input.text == "61") {
+            } else if (input.text == "6") {
                 scene = "scene/Level6_1.scene";
-            } else if (input.text == "71") {
+            } else if (input.text == "7") {
                 scene = "scene/Level7_1.scene";
             } else if (input.text == "72") {
                 scene = "scene/Level7_2.scene";
             } else if (input.text == "73") {
                 scene = "scene/Level7_3.scene";
-            } else if (input.text == "81") {
+            } else if (input.text == "8") {
                 scene = "scene/Level8_1.scene";
-            } else if (input.text == "91") {
+            } else if (input.text == "boss") {
                 scene = "scene/LevelBoss.scene";
             } else if (input.text == "xx") {
                 scene = "scene/LittleGameScene1.scene";

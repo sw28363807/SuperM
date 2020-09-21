@@ -60,6 +60,8 @@ export default class Role extends Laya.Script {
             GameContext.role.y = GameContext.doorInitPoint.y;
             GameContext.doorInitPoint = null;
         }
+
+        GameContext.playRoleAni("run", true);
         
     }
 
@@ -331,7 +333,7 @@ export default class Role extends Laya.Script {
                         }
                     }
                 }
-        } else if (other.owner && self.label == "RoleBody" && (other.label == "MonsterBody" || other.label == "MonsterFoot") && GameContext.curFootMonster == null) {
+        } else if (other.owner && ( self.label == "RoleBody" || self.label == "RoleHead") && (other.label == "MonsterBody" || other.label == "MonsterFoot") && GameContext.curFootMonster == null) {
             if (other.owner && (other.owner.name == "Flower" || other.owner.name == "BrickMonster" )) {
                 if (other.label == "MonsterFoot") {
                     if (Utils.roleInFloor2(other.owner)) {

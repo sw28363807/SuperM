@@ -33,6 +33,9 @@ export default class BrickGoldLogic extends Laya.Script {
                     let render = this.owner.getChildByName("render");
                     render.play(0, false, "ani3");
                     Laya.SoundManager.playSound("loading/dingzhuang.mp3");
+                    Laya.timer.once(1000, this, function() {
+                        render.play(0, true, "ani1");
+                    });
                 }
                 GameContext.brokenBrickTick = 5;
             }

@@ -22,7 +22,7 @@ export default class PenShuiMonsterLogic extends Laya.Script {
 
         this.owner.maxIdleCount = 50;
         this.owner.maxPreCount = 100;
-        this.owner.maxAttackCount = 80;
+        this.owner.maxAttackCount = 120;
 
         this.resetCount();
     }
