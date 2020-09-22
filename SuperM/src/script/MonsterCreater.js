@@ -16,7 +16,7 @@ export default class MonsterCreater extends Laya.Script {
     }
 
     onStart() {
-        Laya.timer.loop(50, this, this.monsterTick);
+        Laya.timer.loop(100, this, this.monsterTick);
         this.initMonsters();
         this.initDoors();
     }
@@ -57,8 +57,6 @@ export default class MonsterCreater extends Laya.Script {
                     cell.canAdd = true;
                 }
             }
-
-            Laya.Resource.destroyUnusedResources();
         }
     }
 

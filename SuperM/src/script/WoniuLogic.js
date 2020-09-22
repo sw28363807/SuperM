@@ -53,7 +53,6 @@ export default class WoniuLogic extends Laya.Script {
             let parent = this.owner.parent;
             this.owner.rigidBody.enabled = false;
             Utils.removeThis(this.owner);
-
             Laya.loader.create("prefab/oo/Ke.prefab", Laya.Handler.create(this, function (prefabDef) {
                 let ke = prefabDef.create();
                 ke.prefab = prefab;

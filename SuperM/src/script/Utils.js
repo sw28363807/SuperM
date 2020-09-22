@@ -284,6 +284,8 @@ export default class Utils extends Laya.Script {
             rigidBody.enabled = false;
             rigidBody.destroy();
         }
+        Laya.timer.clearAll(owner);
+        owner.offAll();
         owner.removeSelf();
         owner.destroy();
         Laya.Resource.destroyUnusedResources();

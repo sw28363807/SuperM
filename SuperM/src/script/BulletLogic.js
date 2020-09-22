@@ -68,8 +68,6 @@ export default class BulletLogic extends Laya.Script {
         }
     }
 
-
-
     onTriggerEnter(other, self, contact) {
         if (this.isDrop == true) {
             return;

@@ -19,8 +19,6 @@ export default class FlyMonsterLogic extends Laya.Script {
         }
 
         this.owner.createdMonster = false;
-
-
         EventMgr.getInstance().registEvent(Events.Monster_Foot_Dead, this, this.onCreateGroundMonster);
         EventMgr.getInstance().registEvent(Events.Monster_Bullet_Dead, this, this.onCreateGroundMonster);
         EventMgr.getInstance().registEvent(Events.Monster_KeBullet_Dead, this, this.onCreateGroundMonster);

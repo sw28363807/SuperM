@@ -330,7 +330,7 @@ GameContext.curFootMonster = null;
 GameContext.brokenBrickTick = 0;
 
 GameContext.monsters = [];
-GameContext.monsterArea = 3000;
+GameContext.monsterArea = 2000;
 GameContext.monsterAreaY = 5000;
 
 GameContext.DeadWaterY = 0;
