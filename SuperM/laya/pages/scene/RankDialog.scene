@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Dialog",
-    "selectedBox":8,
-    "selecteID":11,
+    "selectedBox":2,
+    "selecteID":4,
     "searchKey":"Dialog",
     "props":{"width":1336,"sceneColor":"#000000","isShowEffect":false,"isPopupCenter":true,"height":750},
     "nodeParent":-1,
-    "maxID":20,
+    "maxID":21,
     "label":"Dialog",
     "isOpen":true,
     "isDirectory":true,
@@ -16,9 +16,23 @@
     "child":[
         {
             "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":-1899,"x":-1747,"width":5000,"texture":"loading/smallaaaa.png","height":5000},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":20,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
             "type":"Box",
             "searchKey":"Box,close",
-            "props":{"y":-1990,"x":-1832,"width":5000,"name":"close","height":5000,"bgColor":"#0b0606","alpha":0.7},
+            "props":{"y":-1990,"x":-1832,"width":5000,"name":"close","height":5000,"alpha":0.7},
             "nodeParent":2,
             "label":"close",
             "isOpen":true,
@@ -50,7 +64,7 @@
             "x":15,
             "type":"Box",
             "searchKey":"Box",
-            "props":{"y":55,"x":375,"width":585,"height":639,"bgColor":"#e1d6e8"},
+            "props":{"y":55,"x":375,"width":585,"height":639},
             "nodeParent":2,
             "label":"Box",
             "isOpen":true,
@@ -59,20 +73,6 @@
             "hasChild":true,
             "compId":8,
             "child":[
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":-60,"x":-58,"width":700,"texture":"other1/someA14A.png","height":800},
-                    "nodeParent":8,
-                    "label":"Sprite",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":11,
-                    "child":[
-                        ]
-                },
                 {
                     "x":30,
                     "type":"Sprite",
