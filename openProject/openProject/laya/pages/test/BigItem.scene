@@ -123,7 +123,8 @@
             "hasChild":false,
             "compId":13,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -137,7 +138,8 @@
             "hasChild":false,
             "compId":14,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -151,7 +153,8 @@
             "hasChild":false,
             "compId":16,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         }],
     "animations":[
         {
