@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Dialog",
-    "selectedBox":2,
-    "selecteID":4,
+    "selectedBox":8,
+    "selecteID":30,
     "searchKey":"Dialog",
     "props":{"width":1336,"sceneColor":"#000000","isShowEffect":false,"isPopupCenter":true,"height":750},
     "nodeParent":-1,
-    "maxID":21,
+    "maxID":33,
     "label":"Dialog",
     "isOpen":true,
     "isDirectory":true,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":-1899,"x":-1747,"width":5000,"texture":"loading/smallaaaa.png","height":5000},
+            "props":{"y":-1899,"x":-1747,"width":5000,"texture":"loading/smallaaaa.png","height":5000,"alpha":0},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -91,7 +91,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":105,"x":741,"texture":"monster/beikeA1A.png","scaleY":0.5,"scaleX":0.5},
+                    "props":{"y":167.5,"x":729,"texture":"monster/beikeA2A.png","scaleY":0.5,"scaleX":0.5},
                     "nodeParent":8,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -161,7 +161,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":24,"x":752,"texture":"monster/new_red_monsterA1A.png"},
+                    "props":{"y":47,"x":655,"texture":"monster/new_red_monsterA1A.png"},
                     "nodeParent":8,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -182,6 +182,118 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":19,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":164,"x":-219,"texture":"monster/youlingA6A.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":21,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":317,"x":845,"texture":"monster/lazhuA2A.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":23,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":217,"x":-136.5,"texture":"monster/youlingxxxA1A.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":24,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":111,"x":837,"texture":"other/bullet.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":25,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":111,"x":724,"texture":"other/bullet.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":26,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":94,"x":778,"texture":"other/bullet.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":28,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":151,"x":891,"texture":"other/bullet.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":29,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":151,"x":684,"texture":"other/bullet.png"},
+                    "nodeParent":8,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":32,
                     "child":[
                         ]
                 }]
@@ -227,7 +339,8 @@
             "hasChild":false,
             "compId":10,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         }],
     "animations":[
         {
