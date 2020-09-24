@@ -160,7 +160,7 @@ export default class Utils extends Laya.Script {
 
     static roleInCeil(monster) {
         if (GameContext.role) {
-            let offx = 110;
+            let offx = 150;
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
@@ -412,6 +412,9 @@ export default class Utils extends Laya.Script {
         if (GameContext.isDie) {
             return;
         }
+        if (GameContext.protectedRole) {
+            return;
+        }
         if (GameContext.roleHurting) {
             return;
         }
@@ -440,9 +443,15 @@ export default class Utils extends Laya.Script {
         GameContext.setRoleSpeed( x * 10, -10);
         GameContext.roleHurting = true;
         GameContext.keSpr.visible = false;
-        Laya.timer.once(1000, null, function() {
+        Laya.timer.once(500, null, function() {
             GameContext.roleHurting = false;
             GameContext.commandWalk = true;
+        });
+        GameContext.protectedRole = true;
+        GameContext.gameRoleWudi.visible = true;
+        Laya.timer.once(2000, null, function() {
+            GameContext.protectedRole = false;
+            GameContext.gameRoleWudi.visible = false;
         });
         GameContext.gameRoleNumber--;
         Laya.SoundManager.playSound("loading/siwang.mp3");
@@ -475,12 +484,11 @@ export default class Utils extends Laya.Script {
             black.zOrder = 9999999;
             black.alpha = 0;
             Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
-                if (GameContext.resetRolePoint) {
-                    GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
-                    GameContext.setRoleSpeed(0.01, 0.01);
-                    GameContext.gameRoleYaBian = false;
-                    GameContext.curCiBrick = null;
-                }
+                let resetPos = GameContext.getLifePoint();
+                GameContext.setRolePosition(resetPos.x, resetPos.y);
+                GameContext.setRoleSpeed(0.01, 0.01);
+                GameContext.gameRoleYaBian = false;
+                GameContext.curCiBrick = null;
                 Laya.Tween.to(black,{alpha: 0}, 100, null, Laya.Handler.create(null, function(){
                     black.removeSelf();
                     black.destroy();
@@ -493,6 +501,9 @@ export default class Utils extends Laya.Script {
     static hurtRole(other) {
         GameContext.roleFlyState = false;
         if (!GameContext.role) {
+            return;
+        }
+        if (GameContext.protectedRole) {
             return;
         }
         if (GameContext.isDie) {
@@ -544,12 +555,18 @@ export default class Utils extends Laya.Script {
             GameContext.commandWalk = false;
         }
         GameContext.roleHurting = true;
+        GameContext.protectedRole = true;
         GameContext.keSpr.visible = false;
+        GameContext.gameRoleWudi.visible = true;
         Laya.timer.once(500, null, function() {
             if (lastBodyState != 0) {
                 GameContext.roleHurting = false;
             }
             GameContext.commandWalk = true;
+        });
+        Laya.timer.once(2000, null, function() {
+            GameContext.protectedRole = false;
+            GameContext.gameRoleWudi.visible = false;
         });
         Laya.SoundManager.playSound("loading/siwang.mp3");
         if (lastBodyState == 0) {
@@ -573,23 +590,23 @@ export default class Utils extends Laya.Script {
                 black.alpha = 0;
                 Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
                     if (GameContext.gameRoleNumber > 0) {
-                        if (GameContext.resetRolePoint) {
-                            GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
-                            GameContext.setRoleSpeed(0.01, 0.01);
-                            GameContext.gameRoleYaBian = false;
-                            GameContext.curCiBrick = null;
-                            GameContext.roleHurting = false;
-                            GameContext.isDie = false;
-                            GameContext.playRoleAni("stand", true);
-                            GameContext.walkDirect = null;
-                            GameContext.roleIsDrop = false;
-                            Laya.timer.once(1000, this, function() {
-                                Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
-                                    black.removeSelf();
-                                    black.destroy();
-                                }));
-                            });
-                        }
+                        let resetPos = GameContext.getLifePoint();
+                        GameContext.setRolePosition(resetPos.x, resetPos.y);
+                        GameContext.setRoleSpeed(0.01, 0.01);
+                        GameContext.gameRoleYaBian = false;
+                        GameContext.curCiBrick = null;
+                        GameContext.roleHurting = false;
+                        GameContext.isDie = false;
+                        GameContext.playRoleAni("stand", true);
+                        GameContext.walkDirect = null;
+                        GameContext.roleIsDrop = false;
+                        GameContext.roleInGround = true;
+                        Laya.timer.once(1000, this, function() {
+                            Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
+                                black.removeSelf();
+                                black.destroy();
+                            }));
+                        });
                     } else {
                         Laya.timer.once(1000, this, function() {
                             black.removeSelf();
@@ -655,18 +672,17 @@ export default class Utils extends Laya.Script {
             black.alpha = 0;
             Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
                 if (GameContext.gameRoleNumber > 0) {
-                    if (GameContext.resetRolePoint) {
-                        GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
-                        GameContext.setRoleSpeed(0.01, 0.01);
-                        GameContext.gameRoleYaBian = false;
-                        GameContext.curCiBrick = null;
-                        GameContext.roleHurting = false;
-                        GameContext.isDie = false;
-                        GameContext.playRoleAni("stand", true);
-                        GameContext.walkDirect = null;
-                        GameContext.roleIsDrop = false;
-                        EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
-                    }
+                    let resetPos = GameContext.getLifePoint();
+                    GameContext.setRolePosition(resetPos.x, resetPos.y);
+                    GameContext.setRoleSpeed(0.01, 0.01);
+                    GameContext.gameRoleYaBian = false;
+                    GameContext.curCiBrick = null;
+                    GameContext.roleHurting = false;
+                    GameContext.isDie = false;
+                    GameContext.playRoleAni("stand", true);
+                    GameContext.walkDirect = null;
+                    GameContext.roleIsDrop = false;
+                    EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
                     Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
                         black.removeSelf();
                         black.destroy();
@@ -799,18 +815,17 @@ export default class Utils extends Laya.Script {
             black.alpha = 0;
             Laya.Tween.to(black,{alpha: 1}, 1000, null, Laya.Handler.create(null, function(){
                 if (GameContext.gameRoleNumber > 0) {
-                    if (GameContext.resetRolePoint) {
-                        GameContext.setRoleSensorEnabled(false);
-                        GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
-                        GameContext.setRoleSpeed(0.01, 0.01);
-                        GameContext.gameRoleYaBian = false;
-                        GameContext.curCiBrick = null;
-                        GameContext.roleHurting = false;
-                        GameContext.isDie = false;
-                        GameContext.playRoleAni("stand", true);
-                        GameContext.walkDirect = null;
-                        GameContext.roleIsDrop = false;
-                    }
+                    let resetPos = GameContext.getLifePoint();
+                    GameContext.setRoleSensorEnabled(false);
+                    GameContext.setRolePosition(resetPos.x, resetPos.y);
+                    GameContext.setRoleSpeed(0.01, 0.01);
+                    GameContext.gameRoleYaBian = false;
+                    GameContext.curCiBrick = null;
+                    GameContext.roleHurting = false;
+                    GameContext.isDie = false;
+                    GameContext.playRoleAni("stand", true);
+                    GameContext.walkDirect = null;
+                    GameContext.roleIsDrop = false;
                     Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
                         black.removeSelf();
                         black.destroy();
@@ -881,18 +896,17 @@ export default class Utils extends Laya.Script {
                 black.alpha = 0;
                 Laya.Tween.to(black,{alpha: 1}, 1000, null, Laya.Handler.create(null, function(){
                     if (GameContext.gameRoleNumber > 0) {
-                        if (GameContext.resetRolePoint) {
-                            GameContext.setRoleSensorEnabled(false);
-                            GameContext.setRolePosition(GameContext.resetRolePoint.x, GameContext.resetRolePoint.y);
-                            GameContext.setRoleSpeed(0.01, 0.01);
-                            GameContext.gameRoleYaBian = false;
-                            GameContext.curCiBrick = null;
-                            GameContext.roleHurting = false;
-                            GameContext.isDie = false;
-                            GameContext.playRoleAni("stand", true);
-                            GameContext.walkDirect = null;
-                            GameContext.roleIsDrop = false;
-                        }
+                        let resetPos = GameContext.getLifePoint();
+                        GameContext.setRoleSensorEnabled(false);
+                        GameContext.setRolePosition(resetPos.x, resetPos.y);
+                        GameContext.setRoleSpeed(0.01, 0.01);
+                        GameContext.gameRoleYaBian = false;
+                        GameContext.curCiBrick = null;
+                        GameContext.roleHurting = false;
+                        GameContext.isDie = false;
+                        GameContext.playRoleAni("stand", true);
+                        GameContext.walkDirect = null;
+                        GameContext.roleIsDrop = false;
                         Laya.Tween.to(black,{alpha: 0}, 1000, null, Laya.Handler.create(null, function(){
                             black.removeSelf();
                             black.destroy();

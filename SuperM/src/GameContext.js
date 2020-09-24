@@ -8,6 +8,28 @@ export default class GameContext extends Laya.Script {
         super();
     }
 
+    static getLifePoint() {
+        let ret = {x: GameContext.resetRolePoint.x, y: GameContext.resetRolePoint.y};
+        let distance = 99999999;
+        for (let index = 0; index < GameContext.lefePoint.length; index++) {
+            let point = GameContext.lefePoint[index];
+            let curDistance = Math.abs(GameContext.role.x - point.x);
+            let is = GameContext.role.x >= point.x;
+            if (LoadingLogic.curSceneExt == "scene/Level3_2.scene" ||
+             LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
+                let x = Math.abs(GameContext.role.x - point.x);
+                let y = Math.abs(GameContext.role.y - point.y)
+                curDistance = Math.sqrt(x*x+y*y);
+                is = true;
+            }
+            if (curDistance < distance && is) {
+                distance = curDistance;
+                ret = point;
+            }
+        }
+        return ret;
+    }
+
     static setRoleSensorEnabled(enabled) {
         let colls =  GameContext.role.getComponents(Laya.ColliderBase);
         for (let index = 0; index < colls.length; index++) {
@@ -340,6 +362,9 @@ GameContext.doors = [];
 GameContext.doorCount = 0;
 GameContext.doorInitPoint = null;
 
+GameContext.protectedRole = false;
+GameContext.gameRoleWudi = null;
+
 
 GameContext.curFlyPower = 0;
 GameContext.curFlyPowerMax = 327;
@@ -369,3 +394,5 @@ GameContext.avatarUrl = "";
 
 GameContext.upSpeed = 0;
 GameContext.maxRoleFen = 0;
+
+GameContext.lefePoint = [];

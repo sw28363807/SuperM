@@ -24,8 +24,10 @@ export default class DropBrickLogic extends Laya.Script {
             return;
         }
         if (other.label == "RoleFoot") {
-            this.owner.state = 2;
-            Laya.timer.once(2000, this, this.onResetDropBrick);
+            Laya.timer.once(1000, this, function() {
+                this.owner.state = 2;
+                Laya.timer.once(2000, this, this.onResetDropBrick);
+            });
         }
     }
 

@@ -36,6 +36,16 @@ export default class LevelLogic extends Laya.Script {
 
 
     onStart() {
+        GameContext.lefePoint = [];
+        for (let i = 0; i < this.owner.numChildren; i++) {
+            let control = this.owner.getChildAt(i);
+            if (control.name == "LifePoint") {
+                GameContext.lefePoint.push({
+                    x: control.x,
+                    y: control.y,
+                });
+            }
+        }
         Laya.SoundManager.stopAllSound();
         Laya.SoundManager.stopMusic();
         GameContext.curBgm = this.owner.bgm;

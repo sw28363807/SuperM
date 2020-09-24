@@ -23,6 +23,7 @@ export default class HeadBulletLogic extends Laya.Script {
     onTriggerEnter(other, self, contact) {
         if (other.label == "MonsterBody") {
             if (other && other.owner) {
+                Utils.createFen(other.owner);
                 Utils.createMonsterDropDeadEffect(other.owner);
             }
         }

@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Box",
-    "selectedBox":54,
-    "selecteID":137,
+    "selectedBox":115,
+    "selecteID":141,
     "searchKey":"Box,Role",
     "props":{"zOrder":65535,"y":0,"x":0,"width":88,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","name":"Role","isPresetRoot":true,"height":112},
     "nodeParent":-1,
-    "maxID":139,
+    "maxID":142,
     "label":"Role",
     "isOpen":true,
     "isDirectory":true,
@@ -98,10 +98,25 @@
                     "props":{"zOrder":1,"y":57,"x":43,"width":1,"source":"anim/RoleLight.ani","presetID":25,"preset":"laya/pages/prefab/Role.prefab","name":"roleSprLight","height":1},
                     "nodeParent":115,
                     "label":"roleSprLight",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":97,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Animation",
+                    "searchKey":"Animation,wudi",
+                    "props":{"zOrder":2,"y":69,"x":42,"source":"anim/YanHua4.ani","scaleY":0.6,"scaleX":0.6,"presetID":52,"preset":"laya/pages/prefab/Role.prefab","name":"wudi","interval":10,"autoPlay":true,"autoAnimation":"ani1"},
+                    "nodeParent":115,
+                    "label":"wudi",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":141,
                     "child":[
                         ]
                 }]

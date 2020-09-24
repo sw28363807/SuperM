@@ -2,11 +2,11 @@
     "x":0,
     "type":"Animation",
     "selectedBox":180,
-    "selecteID":185,
+    "selecteID":187,
     "searchKey":"Animation,Reward",
     "props":{"zOrder":65535,"y":0,"x":0,"width":130,"source":"anim/Reward.ani","scaleY":0.6,"scaleX":0.6,"presetID":1,"preset":"laya/pages/prefab/Reward.prefab","name":"Reward","isPresetRoot":true,"height":90,"autoPlay":true,"autoAnimation":"ani2"},
     "nodeParent":-1,
-    "maxID":186,
+    "maxID":188,
     "label":"Reward",
     "isOpen":true,
     "isDirectory":true,
@@ -61,6 +61,38 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":185,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":14,"x":-5,"width":38,"presetID":6,"preset":"laya/pages/prefab/Reward.prefab","label":"RewardSensor","isSensor":true,"height":48,"friction":0},
+            "nodeParent":180,
+            "label":"BoxCollider(Reward)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":186,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"BoxCollider",
+            "switchAble":true,
+            "searchKey":"BoxCollider",
+            "removeAble":true,
+            "props":{"y":14,"x":92,"width":38,"presetID":7,"preset":"laya/pages/prefab/Reward.prefab","label":"RewardSensor","isSensor":true,"height":48,"friction":0},
+            "nodeParent":180,
+            "label":"BoxCollider(Reward)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":187,
             "child":[
                 ]
         }],

@@ -84,7 +84,9 @@ export default class BossLogic extends Laya.Script {
             this.owner.directX = -1;
         } else if (other.label == "RoleHead" || other.label == "RoleBody" || other.label == "RoleFoot") {
             if (GameContext.bossState == 2) {
-                Utils.hurtRole(this.owner);
+                if (self.label == "BossBody" || self.label == "BossHead") {
+                    Utils.hurtRole(this.owner);
+                }
             } else if (GameContext.bossState == 1) {
                 if (other.label == "RoleFoot" && self.label == "BossHead") {
                     if (this.owner.hurtingBoss == false) {

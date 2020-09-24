@@ -10,7 +10,7 @@ export default class BrickMonsterLogic extends Laya.Script {
         super();
 
         /** @prop {name:lookArea, tips:"巡逻范围", type:Number, default:250}*/
-        let lookArea = 250;
+        let lookArea = 200;
     }
     
     onEnable() {

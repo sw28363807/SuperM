@@ -75,7 +75,7 @@ export default class HanbaoLogic extends Laya.Script {
         this.owner.coll = this.owner.getComponent(Laya.ColliderBase);
         Laya.timer.once(400, this, function() {
             this.owner.rigidBody.getBody().SetActive(true);
-            this.owner.play(0, false, aniB);
+            this.owner.play(0, true, aniB);
         });
     }
 
@@ -103,14 +103,14 @@ export default class HanbaoLogic extends Laya.Script {
                 GameContext.gameRoleNumber++;
                 EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
              } else if (this.owner.rewardType == 3) {
-                 if (GameContext.gameRoleBodyState == 1) {
+                 if (GameContext.roleFlyState == true) {
+                    this.owner.fen = 100;
+                    Utils.createFen(this.owner);
+                 } else {
                     GameContext.roleFlyState = true;
                     GameContext.playRoleAni("");
                     GameContext.playRoleAni("stand");
                  }
-                GameContext.roleFlyState = true;
-                GameContext.playRoleAni("");
-                GameContext.playRoleAni("stand");
              } else if (GameContext.gameRoleBodyState == 0) {
                 GameContext.setBodyState(1);
                 EventMgr.getInstance().postEvent(Events.Role_Change_Big);
@@ -123,7 +123,7 @@ export default class HanbaoLogic extends Laya.Script {
             return;
         }
         if (other.label != "Ground") {
-            if (this.owner && this.owner.directTime > 50) {
+            if (self.label == "RewardSensor") {
                 this.owner.direct.x = -1 * Utils.getSign(this.owner.direct.x);
                 this.owner.directTime = 0;
             }

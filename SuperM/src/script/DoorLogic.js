@@ -138,12 +138,13 @@ export default class DoorLogic extends Laya.Script {
             if (GameContext.roleInGround == true && GameContext.walkDirect &&
                  GameContext.walkDirect.y > 0) {
                 this.owner.inCount++;
-                if (this.owner.inCount > 20) {
+                if (this.owner.inCount > 5) {
                     this.owner.inCount = 0;
                     let scene = this.getScene();
                     let gotoPoint = this.getSceneGoToPoint();
                     let doorFinalPoint = this.getDoorFinalPoint();
                     if (GameContext.doorCount > 5) {
+                        Laya.SoundManager.playSound("loading/shuiguan.mp3");
                         gotoPoint = doorFinalPoint;
                         let sign = Utils.randomSign();
                         if (sign < 0) {
@@ -152,7 +153,6 @@ export default class DoorLogic extends Laya.Script {
                             scene = "scene/Level7_2.scene";
                         }
                     }
-                    console.debug(scene);
                     this.owner.isHasGoto = true;
                     console.debug(this.owner.doorInitPoint);
                     Utils.triggerToRandomDoor(this.owner, scene, 1, gotoPoint);

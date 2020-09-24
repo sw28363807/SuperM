@@ -1,0 +1,25 @@
+{
+    "x":0,
+    "type":"Box",
+    "selectedBox":3519,
+    "searchKey":"Box,LifePoint",
+    "props":{"y":0,"x":0,"width":100,"presetID":1,"preset":"laya/pages/prefab/ai/LifePoint.prefab","name":"LifePoint","isPresetRoot":true,"height":100},
+    "nodeParent":-1,
+    "maxID":3520,
+    "label":"LifePoint",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":3519,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

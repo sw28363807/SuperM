@@ -22,7 +22,7 @@ export default class DisBrickLogic extends Laya.Script {
         }
         if (other.label == "RoleFoot") {
             this.owner.aniRender.play(0, true , "ani2");
-            Laya.timer.once(500,  this, this.onDisBrick);
+            Laya.timer.once(2000,  this, this.onDisBrick);
         }
     }
 

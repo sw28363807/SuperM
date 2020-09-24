@@ -7,7 +7,7 @@ export default class AIFlyMonster extends Laya.Script {
     }
     
     onEnable() {
-        this.speed = 2;
+        this.speed = 1.4;
     }
 
     onStart() {

@@ -41,10 +41,13 @@ export default class Role extends Laya.Script {
         GameContext.roleCurAni = "";
         GameContext.roleRigidBody = this.owner.getComponent(Laya.RigidBody);
         GameContext.roleGravityScale = GameContext.roleRigidBody.gravityScale;
+        GameContext.protectedRole = false;
 
         GameContext.roleRoot = this.owner.getChildByName("root");
         GameContext.roleNormal = GameContext.roleRoot.getChildByName("roleSpr");
         GameContext.roleLight = GameContext.roleRoot.getChildByName("roleSprLight");
+        GameContext.gameRoleWudi = GameContext.roleRoot.getChildByName("wudi");
+        GameContext.gameRoleWudi.visible = false;
         GameContext.keSpr = this.owner.getChildByName("ke");
         GameContext.keSpr.visible = false;
         GameContext.setBodyState(GameContext.gameRoleBodyState);
@@ -417,7 +420,7 @@ export default class Role extends Laya.Script {
 
         if (GameContext.roleInWater == true) {
             this.triggerRoleInWaterJump();
-            Laya.SoundManager.playSound("loading/youyong.mp3");
+            Laya.SoundManager.playSound("loading/zidan.mp3");
         } 
         else if (GameContext.roleInGround == true) {
             GameContext.roleInGround = false;
