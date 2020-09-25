@@ -30,7 +30,7 @@ export default class DisBrickLogic extends Laya.Script {
         Laya.timer.clear(this, this.onDisBrick);
         let coll = this.owner.getComponent(Laya.ColliderBase);
         coll.isSensor = true;
-        Laya.timer.once(1000,  this, function() {
+        Laya.timer.once(500,  this, function() {
             this.owner.aniRender.play(0, true , "ani1");
             coll.isSensor = false;
         });

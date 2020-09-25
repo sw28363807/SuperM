@@ -12,7 +12,7 @@ export default class FlowerBulletLogic extends Laya.Script {
     onEnable() {
         this.owner.speed = 3;
         EventMgr.getInstance().registEvent(Events.Monster_Shoot_Bullet,this, this.onMonsterShootBullet);
-        Laya.timer.loop(10000, this, this.onRemoveBullet);
+        Laya.timer.loop(20000, this, this.onRemoveBullet);
     }
 
     onDisable() {

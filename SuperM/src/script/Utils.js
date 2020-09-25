@@ -457,6 +457,7 @@ export default class Utils extends Laya.Script {
         Laya.SoundManager.playSound("loading/siwang.mp3");
         if (GameContext.gameRoleNumber == 0) {
             GameContext.playRoleAni("die", false);
+            GameContext.gameRoleWudi.visible = false;
             GameContext.isDie = true;
             Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
                 let black = prefabDef.create();
@@ -576,6 +577,7 @@ export default class Utils extends Laya.Script {
             }
             EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
             GameContext.playRoleAni("die", false);
+            GameContext.gameRoleWudi.visible = false;
             GameContext.isDie = true;
             let path = "prefab/other/BlackBox.prefab";
             if (GameContext.gameRoleNumber <= 0) {
