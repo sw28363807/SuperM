@@ -79,7 +79,13 @@ export default class Camera extends Laya.Script {
 
         this.curUpOffY = this.owner.yOff;
         this.curDownOffY = 0;
-        this.upOffY = 500;
+        if (LoadingLogic.curSceneExt == "scene/Level5_1.scene" ||
+         LoadingLogic.curSceneExt == "scene/Level6_1.scene") {
+            this.upOffY = 200;
+        } else {
+            this.upOffY = 500;
+        }
+        
         this.upSpeed = 0;
         this.aSpeed = 0.5;
 

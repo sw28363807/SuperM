@@ -167,8 +167,9 @@ export default class Utils extends Laya.Script {
             let monsterH = monster.height * monster.scaleY;
             let c1 = myX > monster.x - monsterW/2 - offx;
             let c2 = myX < monster.x + monsterW/2 + offx;
-            let c3 = myY < monster.y - monsterH/2;
-            if (c1 && c2 && c3) {
+            let c3 = myY < monster.y - 10;
+            let lineSpeed =  GameContext.getLineSpeed()
+            if (c1 && c2 && c3 && lineSpeed.y >= 0) {
                 return true;
             }
         }
@@ -720,6 +721,9 @@ export default class Utils extends Laya.Script {
             GameContext.roleFlyState = false;
             GameContext.roleFlyDrop = false;
             LoadingLogic.curScene = "";
+            GameContext.wenhaos = new Set();
+            GameContext.rewards = new Set();
+            GameContext.golds = new Set();
             LoadingLogic.loadScene("scene/Level1_1.scene");
             return;
         }
@@ -946,7 +950,9 @@ export default class Utils extends Laya.Script {
                     Laya.Tween.to(black,{alpha: 1}, 300, null, Laya.Handler.create(null, function(){
                         GameContext.setRoleSensorEnabled(false);
                         GameContext.setRoleSpeed(0, 0);
-                        GameContext.setRolePosition(hole.x + widthOff, height);
+                        let resetPos = GameContext.getLifePoint();
+                        GameContext.setRolePosition(resetPos.x, resetPos.y);
+                        GameContext.setRoleSpeed(0.01, 0.01);
                         Laya.Tween.to(black,{alpha: 0}, 300, null, Laya.Handler.create(null, function(){
                             black.removeSelf();
                             black.destroy();

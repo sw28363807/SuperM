@@ -341,7 +341,7 @@ GameContext.mapMaxX = 0;
 GameContext.gameRoleNumberInit = 10;
 GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
 GameContext.gameGoldNumber = 0;
-GameContext.gameRoleBodyState = 1;
+GameContext.gameRoleBodyState = 0;
 GameContext.gameRoleState = 0;
 
 GameContext.gameGotoScene = "";

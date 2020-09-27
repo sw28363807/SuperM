@@ -112,8 +112,10 @@ export default class MoveBrickLogic extends Laya.Script {
             this.owner.rigidBody.getBody().SetPositionXY(zeroPoint.x/50, zeroPoint.y/50);
             this.owner.movePointsIndex = 0;
             this.owner.nextMovePointsIndex = 0;
-            this.owner.isStart = true;
-            this.processMoveSpeed();
+            if (this.moveStartType == 2) {
+                this.owner.isStart = true;
+                this.processMoveSpeed();
+            }
         });
     }
 
