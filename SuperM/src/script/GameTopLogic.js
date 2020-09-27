@@ -28,6 +28,7 @@ export default class GameTopLogic extends Laya.Script {
 
     oRefreshGold() {
         this.goldLabel.text = "x"+String( GameContext.gameGoldNumber);
+        this.onRefreshFen();
     }
 
     onRefreshRole() {
@@ -35,7 +36,7 @@ export default class GameTopLogic extends Laya.Script {
     }
 
     onRefreshFen() {
-        this.fenLabel.text = "x" + String(GameContext.roleFen);
+        this.fenLabel.text = "x" + String(GameContext.roleFen + GameContext.gameGoldNumber * 100);
     }
 
     onDisable() {

@@ -1,5 +1,6 @@
 import Utils from "./Utils";
 import GameContext from "../GameContext";
+import LoadingLogic from "./LoadingLogic";
 
 export default class WenhaoLogic extends Laya.Script {
 
@@ -44,6 +45,15 @@ export default class WenhaoLogic extends Laya.Script {
                 } else if (this.owner.wenhaoType == 2) {
                     if (this.owner.state == 0) {
                         this.owner.state = 1;
+
+                        let x = Math.round(this.owner.x);
+                        let y = Math.round(this.owner.y);
+                        let scene = LoadingLogic.curSceneExt;
+                        if (scene != "") {
+                            let key = scene+String(x)+String(y);
+                            GameContext.wenhaos.add(key);
+                        }
+
                         let owner = this.owner;
                         let render = this.owner.getChildByName("render");
                         Laya.SoundManager.playSound("loading/gold.mp3");
@@ -90,6 +100,13 @@ export default class WenhaoLogic extends Laya.Script {
         }
         if (this.owner.state == 0 && render) {
             this.owner.state = 1;
+            let x = Math.round(this.owner.x);
+            let y = Math.round(this.owner.y);
+            let scene = LoadingLogic.curSceneExt;
+            if (scene != "") {
+                let key = scene+String(x)+String(y);
+                GameContext.wenhaos.add(key);
+            }
             render.play(0, false, "ani3");
             Laya.timer.once(100, this, function() {
                 if (render) {

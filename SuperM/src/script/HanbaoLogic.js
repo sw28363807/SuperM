@@ -92,6 +92,15 @@ export default class HanbaoLogic extends Laya.Script {
             let owner = this.owner;
             this.owner.isMove = false;
             Laya.timer.once(2000, null, function() {
+                if (owner.isStand == true) {
+                    let x = Math.round(owner.x);
+                    let y = Math.round(owner.y);
+                    let scene = LoadingLogic.curSceneExt;
+                    if (scene != "") {
+                        let key = scene+String(x)+String(y);
+                        GameContext.rewards.add(key);
+                    }
+                }
                 Utils.removeThis(owner);
             });
             return;
@@ -121,6 +130,17 @@ export default class HanbaoLogic extends Laya.Script {
                         Utils.createFen(this.owner);
                     }
                     EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
+                }
+            }
+            if (this.owner.isStand == true) {
+                let x = Math.round(this.owner.x);
+                let y = Math.round(this.owner.y);
+                console.debug(x);
+                console.debug(y);
+                let scene = LoadingLogic.curSceneExt;
+                if (scene != "") {
+                    let key = scene+String(x)+String(y);
+                    GameContext.rewards.add(key);
                 }
             }
             Utils.removeThis(this.owner);

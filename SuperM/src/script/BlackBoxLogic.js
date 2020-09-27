@@ -12,7 +12,7 @@ export default class BlackBoxLogic extends Laya.Script {
         this.owner.fenLabel = this.owner.getChildByName("fenLabel");
         this.owner.goldLabel.text = "x"+String( GameContext.gameGoldNumber);
         this.owner.roleLabel.text = "x"+String(GameContext.gameRoleNumber);
-        this.owner.fenLabel.text = "x"+String(GameContext.roleFen);
+        this.owner.fenLabel.text = "x"+String(GameContext.roleFen + GameContext.gameGoldNumber * 100);
     }
 
     onDisable() {

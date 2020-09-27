@@ -145,10 +145,10 @@ export default class Utils extends Laya.Script {
             GameContext.roleFen += Number(owner.fen);
 
             if (Laya.LocalStorage.support) {
-                if (GameContext.roleFen > GameContext.maxRoleFen) {
-                    GameContext.maxRoleFen = GameContext.roleFen;
+                if ((GameContext.roleFen + GameContext.gameGoldNumber * 100) > GameContext.maxRoleFen) {
+                    GameContext.maxRoleFen = GameContext.roleFen + GameContext.gameGoldNumber * 100;
+                    Laya.LocalStorage.setItem("fen", String(GameContext.maxRoleFen));
                 }
-                Laya.LocalStorage.setItem("fen", String(GameContext.roleFen));
             }
             EventMgr.getInstance().postEvent(Events.Refresh_Fen_Number);
     
@@ -570,7 +570,7 @@ export default class Utils extends Laya.Script {
             GameContext.protectedRole = false;
             GameContext.gameRoleWudi.visible = false;
             if (GameContext.roleInGround) {
-                GameContext.setRoleSpeed(0.01, 0.01);
+                GameContext.setRolePosition(GameContext.role.x - 3, GameContext.role.y);
             }
         });
         Laya.SoundManager.playSound("loading/siwang.mp3");
@@ -957,5 +957,6 @@ export default class Utils extends Laya.Script {
             }
         }
         EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
+        EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
     }
 }

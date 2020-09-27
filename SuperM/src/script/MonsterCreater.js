@@ -4,6 +4,8 @@ import Utils from "./Utils";
 import DoorLogic from "./DoorLogic";
 import LoadingLogic from "./LoadingLogic";
 import GoldLogic from "./GoldLogic";
+import WenhaoLogic from "./WenhaoLogic";
+import HanbaoLogic from "./HanbaoLogic";
 
 export default class MonsterCreater extends Laya.Script {
 
@@ -76,6 +78,8 @@ export default class MonsterCreater extends Laya.Script {
         let monstersToMove = [];
         GameContext.monsters = [];
         let goldToMove = [];
+        let wenhaoStates = [];
+        let rewards = [];
         for (let i = 0; i < this.owner.numChildren; i++) {
             let monster = this.owner.getChildAt(i);
             let script = monster.getComponent(MonsterIdLogic);
@@ -102,6 +106,32 @@ export default class MonsterCreater extends Laya.Script {
                     }
                 }
             }
+            let script2 = monster.getComponent(WenhaoLogic);
+            if (script2 != null && script2 != undefined) {
+                let x = Math.round(monster.x);
+                let y = Math.round(monster.y);
+                let scene = LoadingLogic.curSceneExt;
+                if (scene != "") {
+                    let key = scene+String(x)+String(y);
+                    if (GameContext.wenhaos.has(key)) {
+                        wenhaoStates.push(monster);
+                    }
+                }
+            }
+
+            let script3 = monster.getComponent(HanbaoLogic);
+            if (script3 != null && script3 != undefined) {
+                let x = Math.round(monster.x);
+                let y = Math.round(monster.y);
+                monster.isStand = true;
+                let scene = LoadingLogic.curSceneExt;
+                if (scene != "") {
+                    let key = scene+String(x)+String(y);
+                    if (GameContext.rewards.has(key)) {
+                        rewards.push(monster);
+                    }
+                }
+            }
         }
 
         for (let index = 0; index < monstersToMove.length; index++) {
@@ -113,5 +143,20 @@ export default class MonsterCreater extends Laya.Script {
             let owner = goldToMove[index];
             Utils.removeThis(owner);
         }
+
+        for (let index = 0; index < rewards.length; index++) {
+            let owner = rewards[index];
+            Utils.removeThis(owner);
+        }
+
+        for (let index = 0; index < wenhaoStates.length; index++) {
+            let wenhao = wenhaoStates[index];
+            wenhao.state = 1;
+            let render = wenhao.getChildByName("render");
+            if (render) {
+                render.play(0, true, "ani2");
+            }
+        }
+        
     }
 }

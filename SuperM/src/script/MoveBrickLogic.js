@@ -92,7 +92,6 @@ export default class MoveBrickLogic extends Laya.Script {
         this.processPoints();
         if (this.owner.moveStartType == 2) {
             this.processNextMovePoints();
-            this.moveBoard();
             this.owner.isStart = true;
         }
         // this.owner.startPoint = {x: this.owner.x, y: this.owner.y};
@@ -102,9 +101,7 @@ export default class MoveBrickLogic extends Laya.Script {
         this.owner.isStart = false;
         this.setIsSensor(true);
         this.owner.rigidBody.setVelocity({x: 0, y: 10});
-        this.owner.movePointsIndex = 0;
-        this.owner.nextMovePointsIndex = 0;
-        Laya.timer.once(2000, this, function() {
+        Laya.timer.once(1000, this, function() {
             if (!this.owner) {
                 return;
             }
@@ -113,6 +110,10 @@ export default class MoveBrickLogic extends Laya.Script {
             this.owner.direct = {x: 0, y: 0};
             this.owner.rigidBody.setVelocity({x: 0, y: 0});
             this.owner.rigidBody.getBody().SetPositionXY(zeroPoint.x/50, zeroPoint.y/50);
+            this.owner.movePointsIndex = 0;
+            this.owner.nextMovePointsIndex = 0;
+            this.owner.isStart = true;
+            this.processMoveSpeed();
         });
     }
 
@@ -160,12 +161,6 @@ export default class MoveBrickLogic extends Laya.Script {
         }
     }
 
-    moveBoard() {
-        // let curPoint = this.owner.pointsArray[this.owner.movePointsIndex];
-        // this.owner.rigidBody.getBody().SetPositionXY(curPoint.x/50, curPoint.y/50);
-        // this.processMoveSpeed();
-    }
-
     processMoveSpeed() {
         let x = this.owner.x;
         let y = this.owner.y;
@@ -186,7 +181,7 @@ export default class MoveBrickLogic extends Laya.Script {
             let delX = nextPoint.x - this.owner.x;
             let delY = nextPoint.y - this.owner.y;
             if (Utils.getSign(delX) != Utils.getSign(this.owner.direct.x) ||
-                Utils.getSign(delY) != Utils.getSign(this.owner.direct.y)) {
+                Utils.getSign(delY) != Utils.getSign(this.owner.direct.y) && (this.owner.direct.x != 0 || this.owner.direct.y != 0)) {
                 this.owner.movePointsIndex = this.owner.nextMovePointsIndex;
                 if (this.owner.moveDropType == 2) {
                     if (this.owner.movePointsIndex == this.owner.pointsArray.length - 1) {
@@ -195,7 +190,6 @@ export default class MoveBrickLogic extends Laya.Script {
                     }
                 }
                 this.processNextMovePoints();
-                this.moveBoard();
             }
         }
     }
@@ -206,7 +200,6 @@ export default class MoveBrickLogic extends Laya.Script {
         } else if (this.owner.moveType == 2) {
             this.setIsSensor(false);
             this.processNextMovePoints();
-            this.moveBoard();
         } else if (this.owner.moveType == 3) {
             this.owner.rigidBody.setVelocity({x: this.owner.direct.x * this.owner.moveSpeed, y: 0});
             this.refreshSpeed();
@@ -277,6 +270,8 @@ export default class MoveBrickLogic extends Laya.Script {
     onRoleGoToWaterDead() {
         if (this.owner.moveDropType == 2) {
             this.resetMoveBrick();   
+        } else {
+            this.resetMoveBrick();
         }
     }
 }

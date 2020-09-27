@@ -365,6 +365,9 @@ GameContext.doorInitPoint = null;
 GameContext.protectedRole = false;
 GameContext.gameRoleWudi = null;
 
+GameContext.wenhaos = new Set();
+
+GameContext.rewards = new Set();
 
 GameContext.curFlyPower = 0;
 GameContext.curFlyPowerMax = 327;
