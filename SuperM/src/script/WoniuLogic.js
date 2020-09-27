@@ -114,7 +114,7 @@ export default class WoniuLogic extends Laya.Script {
             this.owner.deadAngle = -3.14;
         }
 
-        this.speed = 2;
+        this.speed = 1.2;
         this.owner.currentVelocity = {x: this.speed, y: 0};
         this.owner.monsterCount = 2;
         this.owner.rigidBody = this.owner.getComponent(Laya.RigidBody);

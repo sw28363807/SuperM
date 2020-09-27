@@ -18,7 +18,7 @@
             "x":15,
             "type":"List",
             "searchKey":"List,_list",
-            "props":{"y":75,"x":375,"width":585,"var":"_list","vScrollBarSkin":" ","spaceY":10,"repeatX":1,"height":600,"elasticEnabled":true,"bgColor":"#6a8d87"},
+            "props":{"y":75,"x":375,"width":585,"var":"_list","vScrollBarSkin":" ","spaceY":-5,"repeatX":1,"height":600,"elasticEnabled":true,"bgColor":"#6a8d87"},
             "nodeParent":2,
             "label":"_list",
             "isOpen":false,

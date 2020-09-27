@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Box",
-    "selectedBox":115,
-    "selecteID":141,
+    "selectedBox":54,
+    "selecteID":129,
     "searchKey":"Box,Role",
     "props":{"zOrder":65535,"y":0,"x":0,"width":88,"presetID":1,"preset":"laya/pages/prefab/Role.prefab","name":"Role","isPresetRoot":true,"height":112},
     "nodeParent":-1,
@@ -80,7 +80,7 @@
                     "x":30,
                     "type":"Animation",
                     "searchKey":"Animation,roleSpr",
-                    "props":{"zOrder":1,"y":55,"x":42,"width":1,"source":"anim/Role.ani","presetID":10,"preset":"laya/pages/prefab/Role.prefab","name":"roleSpr","height":1,"autoAnimation":"zhuarun"},
+                    "props":{"zOrder":1,"y":56,"x":42,"width":1,"source":"anim/Role.ani","presetID":10,"preset":"laya/pages/prefab/Role.prefab","name":"roleSpr","height":1,"autoAnimation":"zhuarun"},
                     "nodeParent":115,
                     "label":"roleSpr",
                     "isOpen":true,
@@ -143,7 +143,7 @@
             "switchAble":true,
             "searchKey":"CircleCollider",
             "removeAble":true,
-            "props":{"y":20,"x":21,"radius":20,"presetID":43,"preset":"laya/pages/prefab/Role.prefab","label":"RoleHead","isSensor":false,"friction":0},
+            "props":{"y":26,"x":21,"radius":20,"presetID":43,"preset":"laya/pages/prefab/Role.prefab","label":"RoleHead","isSensor":false,"friction":0},
             "nodeParent":54,
             "label":"CircleCollider(Role)",
             "isDirectory":false,
@@ -230,38 +230,6 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":136,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"CircleCollider",
-            "switchAble":true,
-            "searchKey":"CircleCollider",
-            "removeAble":true,
-            "props":{"y":94,"x":39,"radius":10,"presetID":50,"preset":"laya/pages/prefab/Role.prefab","label":"RoleFoot","friction":0},
-            "nodeParent":54,
-            "label":"CircleCollider(Role)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":137,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"CircleCollider",
-            "switchAble":true,
-            "searchKey":"CircleCollider",
-            "removeAble":true,
-            "props":{"y":94,"x":24,"radius":10,"presetID":51,"preset":"laya/pages/prefab/Role.prefab","label":"RoleFoot","friction":0},
-            "nodeParent":54,
-            "label":"CircleCollider(Role)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":138,
             "child":[
                 ]
         }],

@@ -240,6 +240,23 @@ export default class Role extends Laya.Script {
         }
     }
 
+
+    // onTriggerStay(other, self, contact) {
+    //     if (!this.owner) {
+    //         return;
+    //     }
+    //     if (!self || !self.owner) {
+    //         return;
+    //     }
+    //     if (!other) {
+    //         return;
+    //     }
+    //     if (GameContext.protectedRole) {
+    //         return;
+    //     }
+    //     // console.debug(other.label);
+    // }
+
     onTriggerEnter(other, self, contact) {
         if (!this.owner) {
             return;
@@ -309,7 +326,7 @@ export default class Role extends Laya.Script {
                             Utils.hurtRole(other.owner);
                         } else {
                             GameContext.roleInGround = true;
-                            GameContext.setRoleMove(0, 0);
+                            // GameContext.setRoleMove(0, 0);
                             GameContext.playRoleAni("stand");
                             if (other.owner.name == "Flower" ||
                               other.owner.name == "Fish") {

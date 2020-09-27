@@ -104,7 +104,7 @@ export default class HanbaoLogic extends Laya.Script {
                 EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
              } else if (this.owner.rewardType == 3) {
                  if (GameContext.roleFlyState == true) {
-                    this.owner.fen = 100;
+                    this.owner.fen = 500;
                     Utils.createFen(this.owner);
                  } else {
                     GameContext.roleFlyState = true;
@@ -116,6 +116,10 @@ export default class HanbaoLogic extends Laya.Script {
                 EventMgr.getInstance().postEvent(Events.Role_Change_Big);
             } else if (GameContext.gameRoleBodyState == 1) {
                 if (this.owner.rewardType == 2) {
+                    if (GameContext.gameRoleState == 1) {
+                        this.owner.fen = 500;
+                        Utils.createFen(this.owner);
+                    }
                     EventMgr.getInstance().postEvent(Events.Role_Has_Bullet);
                 }
             }

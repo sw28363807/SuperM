@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":16,
+    "selecteID":4,
     "searchKey":"View",
     "props":{"width":580,"sceneWidth":556,"sceneHeight":100,"sceneColor":"#000000","renderType":"render","height":100},
     "nodeParent":-1,
@@ -26,7 +26,8 @@
             "hasChild":false,
             "compId":7,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -52,14 +53,16 @@
                     "hasChild":false,
                     "compId":10,
                     "child":[
-                        ]
-                }]
+                        ],
+                    "$HIDDEN":false
+                }],
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Label",
             "searchKey":"Label,text_name",
-            "props":{"zOrder":2,"y":16,"x":275,"width":259,"var":"text_name","text":"名字","strokeColor":"#3e567f","stroke":1,"overflow":"scroll","height":36,"fontSize":36,"color":"#b9c622","align":"center"},
+            "props":{"zOrder":2,"y":16,"x":275,"width":259,"var":"text_name","text":"名字","strokeColor":"#797f3e","stroke":3,"overflow":"scroll","height":36,"fontSize":36,"color":"#b9c622","align":"center"},
             "nodeParent":2,
             "label":"text_name",
             "isDirectory":false,
@@ -67,13 +70,14 @@
             "hasChild":false,
             "compId":4,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Label",
             "searchKey":"Label,text_score",
-            "props":{"zOrder":2,"y":60,"x":408,"var":"text_score","text":"分数","fontSize":20,"color":"#c8dd30","align":"left"},
+            "props":{"zOrder":2,"y":60,"x":408,"var":"text_score","text":"分数","strokeColor":"#797f3e","stroke":3,"fontSize":20,"color":"#c8dd30","align":"left"},
             "nodeParent":2,
             "label":"text_score",
             "isDirectory":false,
@@ -81,13 +85,14 @@
             "hasChild":false,
             "compId":5,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Label",
             "searchKey":"Label,text_rank",
-            "props":{"zOrder":2,"y":36,"x":45,"width":50,"var":"text_rank","text":"999","fontSize":28,"color":"#c8dd30","align":"center"},
+            "props":{"zOrder":2,"y":36,"x":45,"width":50,"var":"text_rank","text":"999","strokeColor":"#797f3e","stroke":3,"fontSize":28,"color":"#c8dd30","align":"center"},
             "nodeParent":2,
             "label":"text_rank",
             "isDirectory":false,
@@ -95,13 +100,14 @@
             "hasChild":false,
             "compId":12,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Label",
             "searchKey":"Label",
-            "props":{"zOrder":2,"y":60,"x":357,"text":"分数:","fontSize":20,"color":"#ffffff","align":"center"},
+            "props":{"zOrder":2,"y":60,"x":357,"text":"分数:","strokeColor":"#797f3e","stroke":3,"fontSize":20,"color":"#ffffff","align":"center"},
             "nodeParent":2,
             "label":"Label",
             "isDirectory":false,
@@ -109,7 +115,8 @@
             "hasChild":false,
             "compId":11,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -164,5 +171,6 @@
             "id":1,
             "frameRate":24,
             "action":0
-        }]
+        }],
+    "$HIDDEN":false
 }

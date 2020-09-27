@@ -16,7 +16,7 @@ export default class BeiKe extends Laya.Script {
     }
 
     onStart() {
-        Laya.timer.loop(12000, this, this.onSootBullet);
+        Laya.timer.loop(7000, this, this.onSootBullet);
         this.owner.renderAni = this.owner.getChildByName("render");
         this.owner.renderAni.play(0, true, "ani1");
     }
@@ -56,7 +56,7 @@ export default class BeiKe extends Laya.Script {
             bullet.y = y;
             bullet.speed = 2;
             EventMgr.getInstance().postEvent(Events.Monster_Shoot_Bullet, {owner: bullet, direct: {x: dx, y: dy}});
-            Laya.timer.once(3000, null, function() {
+            Laya.timer.once(6000, null, function() {
                 if (owner && owner.renderAni) {
                     owner.renderAni.play(0, true, "ani1");
                 }

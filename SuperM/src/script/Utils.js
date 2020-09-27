@@ -485,6 +485,7 @@ export default class Utils extends Laya.Script {
             black.zOrder = 9999999;
             black.alpha = 0;
             Laya.Tween.to(black,{alpha: 1}, 100, null, Laya.Handler.create(null, function(){
+                EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
                 let resetPos = GameContext.getLifePoint();
                 GameContext.setRolePosition(resetPos.x, resetPos.y);
                 GameContext.setRoleSpeed(0.01, 0.01);
@@ -568,6 +569,9 @@ export default class Utils extends Laya.Script {
         Laya.timer.once(2000, null, function() {
             GameContext.protectedRole = false;
             GameContext.gameRoleWudi.visible = false;
+            if (GameContext.roleInGround) {
+                GameContext.setRoleSpeed(0.01, 0.01);
+            }
         });
         Laya.SoundManager.playSound("loading/siwang.mp3");
         if (lastBodyState == 0) {
@@ -592,6 +596,7 @@ export default class Utils extends Laya.Script {
                 black.alpha = 0;
                 Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
                     if (GameContext.gameRoleNumber > 0) {
+                        EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
                         let resetPos = GameContext.getLifePoint();
                         GameContext.setRolePosition(resetPos.x, resetPos.y);
                         GameContext.setRoleSpeed(0.01, 0.01);
@@ -674,6 +679,7 @@ export default class Utils extends Laya.Script {
             black.alpha = 0;
             Laya.Tween.to(black,{alpha: 1}, 1500, null, Laya.Handler.create(null, function(){
                 if (GameContext.gameRoleNumber > 0) {
+                    EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
                     let resetPos = GameContext.getLifePoint();
                     GameContext.setRolePosition(resetPos.x, resetPos.y);
                     GameContext.setRoleSpeed(0.01, 0.01);
@@ -705,6 +711,7 @@ export default class Utils extends Laya.Script {
 
     static triggerGameOver() {
         if (GameContext.gameRoleNumber <= 0) {
+            EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
             GameContext.gameRoleNumber = GameContext.gameRoleNumberInit;
             GameContext.gameRoleBodyState = 0;
             GameContext.gameRoleState = 0;
@@ -817,6 +824,7 @@ export default class Utils extends Laya.Script {
             black.alpha = 0;
             Laya.Tween.to(black,{alpha: 1}, 1000, null, Laya.Handler.create(null, function(){
                 if (GameContext.gameRoleNumber > 0) {
+                    EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
                     let resetPos = GameContext.getLifePoint();
                     GameContext.setRoleSensorEnabled(false);
                     GameContext.setRolePosition(resetPos.x, resetPos.y);
@@ -898,6 +906,7 @@ export default class Utils extends Laya.Script {
                 black.alpha = 0;
                 Laya.Tween.to(black,{alpha: 1}, 1000, null, Laya.Handler.create(null, function(){
                     if (GameContext.gameRoleNumber > 0) {
+                        EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
                         let resetPos = GameContext.getLifePoint();
                         GameContext.setRoleSensorEnabled(false);
                         GameContext.setRolePosition(resetPos.x, resetPos.y);
@@ -926,7 +935,6 @@ export default class Utils extends Laya.Script {
             }));
         } else {
             if (GameContext.role) {
-                EventMgr.getInstance().postEvent(Events.Role_GoTo_Hole_Or_Water_Dead);
                 Laya.loader.create("prefab/other/BlackBox.prefab", Laya.Handler.create(null, function (prefabDef) {
                     let black = prefabDef.create();
                     Laya.stage.addChild(black);
