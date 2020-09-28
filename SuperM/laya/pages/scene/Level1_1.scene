@@ -42076,6 +42076,36 @@
                     "compId":5536,
                     "child":[
                         ]
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":55,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":5157,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5537,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"CircleCollider",
+                    "switchAble":true,
+                    "searchKey":"CircleCollider",
+                    "removeAble":true,
+                    "props":{"presetID":57,"preset":"laya/pages/prefab/Role.prefab"},
+                    "nodeParent":5157,
+                    "label":"CircleCollider(Role)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5538,
+                    "child":[
+                        ]
                 }],
             "animations":[
                 {

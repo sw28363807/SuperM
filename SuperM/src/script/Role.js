@@ -310,7 +310,7 @@ export default class Role extends Laya.Script {
             GameContext.keSpr.visible = true;
             GameContext.roleCurAni = "";
             GameContext.playRoleAni(GameContext.roleCurAni);
-        } else if (other.owner && self.label == "RoleFoot" &
+        } else if (other.owner && (self.label == "RoleFoot" || other.label == "RoleFootSensor") &
             (other.label == "MonsterBody" || other.label == "MonsterFoot")) {
                 if (self.owner) {
                     if (other && other.owner && other.owner.name == "PenShuiMonsterEffect") {

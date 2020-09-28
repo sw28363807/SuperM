@@ -160,7 +160,7 @@ export default class Utils extends Laya.Script {
 
     static roleInCeil(monster) {
         if (GameContext.role) {
-            let offx = 150;
+            let offx = 200;
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;

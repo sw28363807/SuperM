@@ -5,12 +5,13 @@ export default class LoadingLogic extends Laya.Script {
     }
     
     onEnable() {
-        this.owner.slider = this.owner.getChildByName("sliderBg");
-        this.owner.sliderBar = this.owner.slider.getChildByName("slider");
-        this.owner.cur = 0;
-        this.owner.max = 100;
-        this.owner.sliderBar.width = 0;
-        this.owner.maxWidth = 327;
+        // this.owner.slider = this.owner.getChildByName("sliderBg");
+        // this.owner.sliderBar = this.owner.slider.getChildByName("slider");
+        // this.owner.dog = this.owner.slider.getChildByName("dog");
+        // this.owner.cur = 0;
+        // this.owner.max = 100;
+        // this.owner.sliderBar.width = 0;
+        // this.owner.maxWidth = 327;
     }
 
     onStart() {
