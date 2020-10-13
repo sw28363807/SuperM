@@ -160,7 +160,7 @@ export default class Utils extends Laya.Script {
 
     static roleInCeil(monster) {
         if (GameContext.role) {
-            let offx = 200;
+            let offx = 500;
             let myX = GameContext.role.x + GameContext.role.width/2 * GameContext.role.scaleX;
             let myY = GameContext.role.y + GameContext.role.height * GameContext.role.scaleY;
             let monsterW = monster.width * monster.scaleX;
@@ -169,7 +169,13 @@ export default class Utils extends Laya.Script {
             let c2 = myX < monster.x + monsterW/2 + offx;
             let c3 = myY < monster.y - 10;
             let lineSpeed =  GameContext.getLineSpeed()
-            if (c1 && c2 && c3 && lineSpeed.y >= 0) {
+            // console.debug("==================");
+            // console.debug(c1);
+            // console.debug(c2);
+            // console.debug(c3);
+            // console.debug(lineSpeed);
+            // console.debug("++++++++++++++++++");
+            if (c1 && c2 && c3) {
                 return true;
             }
         }
@@ -450,7 +456,7 @@ export default class Utils extends Laya.Script {
         });
         GameContext.protectedRole = true;
         GameContext.gameRoleWudi.visible = true;
-        Laya.timer.once(2000, null, function() {
+        Laya.timer.once(5000, null, function() {
             GameContext.protectedRole = false;
             GameContext.gameRoleWudi.visible = false;
         });
@@ -567,7 +573,7 @@ export default class Utils extends Laya.Script {
             }
             GameContext.commandWalk = true;
         });
-        Laya.timer.once(2000, null, function() {
+        Laya.timer.once(5000, null, function() {
             GameContext.protectedRole = false;
             GameContext.gameRoleWudi.visible = false;
             if (GameContext.roleInGround) {
@@ -582,7 +588,7 @@ export default class Utils extends Laya.Script {
             }
             EventMgr.getInstance().postEvent(Events.Refresh_Role_Number);
             GameContext.playRoleAni("die", false);
-            GameContext.gameRoleWudi.visible = false;
+            // GameContext.gameRoleWudi.visible = false;
             GameContext.isDie = true;
             let path = "prefab/other/BlackBox.prefab";
             if (GameContext.gameRoleNumber <= 0) {
@@ -888,6 +894,9 @@ export default class Utils extends Laya.Script {
         GameContext.roleIsDrop = true;
         let lastBodyState = GameContext.bodyState;
         GameContext.setRoleSensorEnabled(true);
+        GameContext.keSpr.visible = false;
+        GameContext.roleCurAni = "";
+        GameContext.playRoleAni(GameContext.roleCurAni);
         Utils.changeRoleState();
         Laya.SoundManager.playSound("loading/siwang.mp3");
         if (lastBodyState == 0) {

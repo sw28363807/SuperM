@@ -11,6 +11,8 @@ export default class KeLogic extends Laya.Script {
     
     onEnable() {
         EventMgr.getInstance().registEvent(Events.Role_Get_Ke, this, this.onRoleGetKe);
+        this.owner.coll = this.owner.getComponent(Laya.ColliderBase);
+        this.owner.isDrop = false;
         Laya.timer.once(11000, this, this.onCreateWoNiu);
     }
 
@@ -40,5 +42,22 @@ export default class KeLogic extends Laya.Script {
             return;
         }
         Utils.removeThis(this.owner);
+    }
+
+    onTriggerEnter(other, self, contact) {
+        if (!this.owner) {
+            return;
+        }
+        if (this.owner.isDrop == true) {
+            return;
+        }
+        if (other && other.label == "Hole") {
+            this.owner.coll.isSensor = true;
+            this.owner.isDrop = true;
+            Laya.timer.once(3000, this, function() {
+                Utils.removeThis(this.owner);
+            });
+            return;
+        }
     }
 }

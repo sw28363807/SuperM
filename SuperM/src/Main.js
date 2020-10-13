@@ -29,6 +29,7 @@ class Main {
 				Laya.SoundManager.playMusic(GameContext.curBgm, 0);
 			}
 			if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
+				Laya.SoundManager.stopAllSound();
 				Laya.SoundManager.playSound("loading/bgm41.mp3", 0);
 			}
 		});
@@ -40,6 +41,7 @@ class Main {
 					Laya.SoundManager.playMusic(GameContext.curBgm, 0);
 				}
 				if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
+					Laya.SoundManager.stopAllSound();
 					Laya.SoundManager.playSound("loading/bgm41.mp3", 0);
 				}
 			});
@@ -47,17 +49,18 @@ class Main {
 			Laya.loader.load(GameContext.curBgm, Laya.Handler.create(this, function (data) {
 				Laya.SoundManager.playMusic(GameContext.curBgm, 0);
 				if (LoadingLogic.curSceneExt == "scene/Level4_1.scene") {
+					Laya.SoundManager.stopAllSound();
 					Laya.SoundManager.playSound("loading/bgm41.mp3", 0);
 				}
 			}), null, Laya.Loader.SOUND);
 		}
 		// if (Laya.Browser.onMiniGame && false) {
 		if (Laya.Browser.onMiniGame) {
-			Laya.URL.basePath = "https://7375-sunwen-5g5sew8lc92cf483-1302935665.tcb.qcloud.la/";
+			Laya.URL.basePath = "https://7365-sever-6g1pq6lkac3fcf9a-1303822537.tcb.qcloud.la/";
 			Laya["MiniAdpter"].nativefiles = [
 				"anim/",
 				"prefab/",
-				"res/",
+				// "res/",
 				// "scene",
 				"loading",
 				"open",

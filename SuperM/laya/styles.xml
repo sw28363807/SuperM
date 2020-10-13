@@ -1,17 +1,17 @@
 <res>
    <item name="other/ground.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="1" scale="0"/>
-   <item name="other1/grassA1A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grassA2A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grassA3A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grassA4A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/grassA5A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/someA11A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/someA12A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/someA13A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/someA14A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/someA5A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/someA6A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1/someA8A.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA1A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA2A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA3A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA4A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA5A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA11A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA12A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA13A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA14A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA5A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA6A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA8A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="yanhua1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="yanhua2" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="yanhua3" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
@@ -19,11 +19,83 @@
    <item name="yanhua5" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="yanhua6" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="po" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="other1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1" type="" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="role/flyrunA1A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
    <item name="loading" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="role" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="role1" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="joystick" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="monster" type="" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="role" type="" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="role1" type="" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="joystick" type="" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="monster" type="" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/grassA7A.png" type="Sprite" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/hailang.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA10A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA12A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA14A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA16A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA3A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA5A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA6A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/huoyanchiA8A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/someA4A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/qizhuA11A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/qizhuA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/qizhuA3A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/qizhuA5A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/qizhuA7A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/qizhuA9A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/shamo2po-A3A_01.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/shamo2po-A3A_02.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/shamo2poA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/shamo2poA2A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/shamo2poA4A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterbei.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrickA8A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrickA7A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrickA6A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrickA5A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrickA4A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrickA2A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrickA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrick-A3A_02.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/waterBrick-A3A_01.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/myBrick.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA10A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA11A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA12A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA13A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA14A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA15A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA16A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA17A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA18A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA2A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA3A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA4A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA5A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA6A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA7A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA8A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/dixiaA9A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/blueZ.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/bigBrick.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingA2A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingA3A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingA4A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingA5A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingA6A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingA7A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA10A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA1A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA2A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA3A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA4A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA5A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA6A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA7A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA8A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="other1/beijingyouA9A.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
 </res>

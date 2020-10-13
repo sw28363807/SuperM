@@ -2,6 +2,7 @@
     "x":0,
     "type":"Box",
     "selectedBox":1500,
+    "selecteID":1509,
     "searchKey":"Box,RedMonster",
     "props":{"zOrder":100,"y":47,"x":35,"width":69,"presetID":1,"preset":"laya/pages/prefab/monster/RedMonster.prefab","pivotY":47,"pivotX":35,"name":"RedMonster","isPresetRoot":true,"height":47},
     "nodeParent":-1,
@@ -28,7 +29,8 @@
             "hasChild":false,
             "compId":1502,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -43,7 +45,8 @@
             "hasChild":false,
             "compId":1503,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -61,7 +64,8 @@
             "hasChild":false,
             "compId":1504,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -78,7 +82,8 @@
             "hasChild":false,
             "compId":1506,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -94,7 +99,8 @@
             "hasChild":false,
             "compId":1507,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -102,7 +108,7 @@
             "switchAble":true,
             "searchKey":"BoxCollider",
             "removeAble":true,
-            "props":{"y":-10,"x":0,"width":69,"presetID":10,"preset":"laya/pages/prefab/monster/RedMonster.prefab","label":"MonsterBody","height":35,"friction":0},
+            "props":{"y":-2,"x":0,"width":69,"presetID":10,"preset":"laya/pages/prefab/monster/RedMonster.prefab","label":"MonsterBody","height":35,"friction":0},
             "nodeParent":1500,
             "label":"BoxCollider(RedMonster)",
             "isDirectory":false,
@@ -110,7 +116,8 @@
             "hasChild":false,
             "compId":1509,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -119,7 +126,7 @@
             "source":"src/script/MonsterIdLogic.js",
             "searchKey":"Script,MonsterIdLogic",
             "removeAble":true,
-            "props":{"presetID":11,"preset":"laya/pages/prefab/monster/RedMonster.prefab","prefabFile":"prefab/monster/RedMonster.prefab"},
+            "props":{"y":1,"x":0,"presetID":11,"preset":"laya/pages/prefab/monster/RedMonster.prefab","prefabFile":"prefab/monster/RedMonster.prefab"},
             "nodeParent":1500,
             "label":"MonsterIdLogic",
             "isDirectory":false,
@@ -127,7 +134,8 @@
             "hasChild":false,
             "compId":1510,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         },
         {
             "x":15,
@@ -136,7 +144,7 @@
             "source":"src/script/FenLogic.js",
             "searchKey":"Script,FenLogic",
             "removeAble":true,
-            "props":{"presetID":12,"preset":"laya/pages/prefab/monster/RedMonster.prefab","fen":100},
+            "props":{"y":1,"x":0,"presetID":12,"preset":"laya/pages/prefab/monster/RedMonster.prefab","fen":100},
             "nodeParent":1500,
             "label":"FenLogic",
             "isDirectory":false,
@@ -144,7 +152,8 @@
             "hasChild":false,
             "compId":1511,
             "child":[
-                ]
+                ],
+            "$LOCKED":true
         }],
     "animations":[
         {
@@ -154,5 +163,6 @@
             "id":1,
             "frameRate":24,
             "action":0
-        }]
+        }],
+    "$LOCKED":true
 }

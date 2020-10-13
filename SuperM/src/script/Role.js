@@ -234,8 +234,8 @@ export default class Role extends Laya.Script {
                 }
             }
             let linearVelocity = GameContext.getLineSpeed();
-            if (linearVelocity.y > 15) {
-                GameContext.setRoleSpeedY(15);
+            if (linearVelocity.y > 12) {
+                GameContext.setRoleSpeedY(12);
             }
         }
     }
@@ -370,7 +370,15 @@ export default class Role extends Laya.Script {
                         GameContext.roleHurting = false;
                     });
                 } else {
-                    Utils.hurtRole(other.owner);
+                    if (self.label == "RoleBody") {
+                        if (Utils.roleInCeil(other.owner)) {
+                            Utils.footMonster(other);
+                        } else {
+                            Utils.hurtRole(other.owner);
+                        }
+                    } else {
+                        Utils.hurtRole(other.owner);
+                    }
                 }
             }
         } else if (other.label == "FlowerBullet") {

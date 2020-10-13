@@ -39,14 +39,16 @@ export default class LoadingLogic extends Laya.Script {
         Laya.SoundManager.stopMusic();
         Laya.SoundManager.playSound("loading/little.mp3", 0);
         Laya.Scene.open("loading/LoadingScene.scene", true, 2, Laya.Handler.create(this, function(sceneObj) {
-            Laya.Scene.open(scene, true, null, Laya.Handler.create(this, function() {
-                Laya.SoundManager.stopAllSound();
-                Laya.SoundManager.stopMusic();
-                LoadingLogic.curScene = "";
-                if (handler) {
-                    handler.run();
-                }
-            }));
+            Laya.timer.once(1000, null, function() {
+                Laya.Scene.open(scene, true, null, Laya.Handler.create(this, function() {
+                    Laya.SoundManager.stopAllSound();
+                    Laya.SoundManager.stopMusic();
+                    LoadingLogic.curScene = "";
+                    if (handler) {
+                        handler.run();
+                    }
+                }));
+            });
         })); 
         LoadingLogic.curScene = scene;
     }

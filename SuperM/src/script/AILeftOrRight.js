@@ -10,7 +10,7 @@ export default class AILeftOrRight extends Laya.Script {
     }
     
     onEnable() {
-        this.speed = 1.4 + Math.random()* 0.2;
+        this.speed = 1.6 + Math.random()* 0.2;
     }
 
     onStart() {
